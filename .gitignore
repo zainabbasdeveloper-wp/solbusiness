@@ -21,3 +21,4 @@ wp-content/backup*
 # OS generated files
 .DS_Store
 Thumbs.db
+wp-content/wflogs/
