@@ -1,0 +1,252 @@
+/* ==============================
+   TURBO LOGO CAROUSEL - FINAL (One-row + Multi-row supported)
+   ============================== */
+
+.trad-carousel-logo {
+    position: relative;
+    overflow: visible !important;
+}
+
+/* Swiper Container */
+.trad-carousel-logo .trad-main-swiper {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* ✅ Handle both single & multi-row cases */
+.trad-carousel-logo .trad-main-swiper .swiper-wrapper {
+    height: auto !important;
+}
+
+.trad-carousel-logo.has-multi-row .trad-main-swiper .swiper-wrapper {
+    flex-wrap: wrap !important;
+}
+
+/* Slides */
+.trad-carousel-logo .trad-carousel-item {
+    position: relative;
+}
+
+.trad-carousel-logo .trad-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.trad-carousel-logo .trad-carousel img {
+    transition: all 0.3s ease;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==============================
+   ✅ NAVIGATION ARROWS
+   ============================== */
+.trad-carousel-logo .swiper-navigation-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: #fff;
+    border-radius: 50%;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.trad-carousel-logo .swiper-navigation-button:hover {
+    background: #fff;
+    color: #fff;
+}
+
+/* inside/outside positioning */
+.trad-carousel-logo.arrow_inside .swiper-button-prev {
+    left: 10px;
+}
+.trad-carousel-logo.arrow_inside .swiper-button-next {
+    right: 10px;
+}
+
+/* ✅ OUTSIDE position */
+.trad-carousel-logo.arrow_outside .swiper-button-prev,
+.trad-carousel-logo.arrow_outside .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 15;
+}
+
+.trad-carousel-logo.arrow_outside .swiper-button-prev {
+    left: -55px;
+}
+.trad-carousel-logo.arrow_outside .swiper-button-next {
+    right: -55px;
+}
+
+.trad-carousel-logo.arrow_outside {
+    overflow: visible !important;
+}
+.trad-carousel-logo.arrow_outside .trad-main-swiper {
+    overflow: hidden !important;
+}
+
+/* ==============================
+   ✅ DOTS (PAGINATION)
+   ============================== */
+.trad-carousel-logo > .swiper-pagination {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 8px;
+    z-index: 10;
+}
+
+.trad-carousel-logo > .swiper-pagination span {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.trad-carousel-logo > .swiper-pagination span.swiper-pagination-bullet-active {
+    background-color: #000;
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+/* dashed/dotted styles */
+.trad-carousel-logo.dot_dotted > .swiper-pagination span,
+.trad-carousel-logo.dot_dashed > .swiper-pagination span {
+    background-color: #101010;
+}
+
+.trad-carousel-logo.dot_dotted > .swiper-pagination span.swiper-pagination-bullet-active,
+.trad-carousel-logo.dot_dashed > .swiper-pagination span.swiper-pagination-bullet-active {
+    transform: scale(2);
+    opacity: 1;
+}
+
+/* paginated (numbered) style */
+.trad-carousel-logo.dot_paginated > .swiper-pagination {
+    counter-reset: myCounter;
+}
+.trad-carousel-logo.dot_paginated > .swiper-pagination > span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); */
+    color: #565656;
+    font-weight: 600;
+    border-radius: 50%;
+}
+.trad-carousel-logo.dot_paginated > .swiper-pagination > span::before {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+}
+.trad-carousel-logo.dot_paginated > .swiper-pagination > span.swiper-pagination-bullet-active {
+    background-color: #2575fc;
+    color: #fff;
+}
+
+/* ==============================
+   ✅ SMOOTH HOVER LOGO SWITCH EFFECT (only when has-hover-logo class)
+   ============================== */
+.trad-carousel-logo .trad-carousel.has-hover-logo .content-image {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.trad-carousel-logo .trad-carousel.has-hover-logo .content-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    backface-visibility: hidden;
+}
+
+/* 🔹 Default (normal logo visible, hover hidden) */
+.trad-carousel-logo .trad-carousel.has-hover-logo .content-image img.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.05);
+    z-index: 3;
+}
+
+/* 🔹 Hover effect (only when has-hover-logo class present) */
+.trad-carousel-logo .trad-carousel.has-hover-logo:hover .content-image img.hover-image {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.trad-carousel-logo .trad-carousel.has-hover-logo:hover .content-image img:not(.hover-image) {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+}
+
+/* ==============================
+   ✅ SAME HEIGHT LOGOS
+   ============================== */
+.trad-carousel-logo.trad-logo-equal-height .swiper-wrapper {
+    align-items: stretch;
+}
+.trad-carousel-logo.trad-logo-equal-height .trad-carousel-item {
+    display: flex;
+}
+.trad-carousel-logo.trad-logo-equal-height .trad-carousel {
+    height: 100%;
+}
+.trad-carousel-logo.trad-logo-equal-height .content-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.trad-carousel-logo.trad-logo-equal-height .content-image img {
+    height: auto !important;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* ==============================
+   ✅ GRAYSCALE + HOVER ZOOM
+   ============================== */
+.trad-carousel-logo.trad-logo-grayscale .trad-carousel img {
+    filter: grayscale(1);
+}
+.trad-carousel-logo.trad-logo-grayscale .trad-carousel:hover img {
+    filter: grayscale(0);
+}
+.trad-carousel-logo.trad-logo-hover-zoom .trad-carousel .content-image {
+    transition: transform 0.3s ease;
+}
+.trad-carousel-logo.trad-logo-hover-zoom .trad-carousel:hover .content-image {
+    transform: scale(1.08);
+}
+

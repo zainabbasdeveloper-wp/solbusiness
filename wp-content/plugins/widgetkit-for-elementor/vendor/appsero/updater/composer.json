@@ -1,0 +1,30 @@
+{
+    "name": "appsero/updater",
+    "description": "Appsero client updater module",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Tareq Hasan",
+        "email": "tareq@appsero.com"
+      }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Appsero\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Appsero\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "brain/monkey": "^2.6",
+        "mockery/mockery": "^1.6"
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}

@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'storepress/woo-2checkout',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '0c594ebe19edf55472ff16a0323e94cff99b909e',
+        'type' => 'wordpress-plugin',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => false,
+    ),
+    'versions' => array(
+        'automattic/jetpack-autoloader' => array(
+            'pretty_version' => 'v5.0.3',
+            'version' => '5.0.3.0',
+            'reference' => '108cc708cfc7b7a0e730b2bf12f389593f56f0a5',
+            'type' => 'composer-plugin',
+            'install_path' => __DIR__ . '/../automattic/jetpack-autoloader',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'storepress/admin-utils' => array(
+            'pretty_version' => '1.8.10',
+            'version' => '1.8.10.0',
+            'reference' => 'ec593e9e23a4fbed90acee384b61b9846cb9d968',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../storepress/admin-utils',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'storepress/woo-2checkout' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '0c594ebe19edf55472ff16a0323e94cff99b909e',
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

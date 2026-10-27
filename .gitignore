@@ -1,0 +1,23 @@
+# Ignore sensitive config files
+wp-config.php
+wp-config-local.php
+
+# Ignore uploads and cache
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup*
+
+# Ignore core WordPress files (optional, but recommended)
+# If you only want to track your theme, uncomment the lines below:
+# wp-admin/
+# wp-includes/
+# wp-*.php
+# index.php
+# license.txt
+# readme.html
+# xmlrpc.php
+
+# OS generated files
+.DS_Store
+Thumbs.db

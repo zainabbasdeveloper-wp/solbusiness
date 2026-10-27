@@ -1,0 +1,94 @@
+.elementor-control-section_widgetkit_pro_box .elementor-panel-heading {
+  color: #d30a5c;
+}
+.elementor-control-section_widgetkit_pro_box .elementor-panel-heading .elementor-section-toggle i {
+  color: #d30a5c;
+}
+.elementor-control-section_widgetkit_pro_box .elementor-panel-heading .elementor-panel-heading-title {
+  color: #d30a5c;
+}
+
+.elementor-control-wkfe_control_go_pro .elementor-control-field {
+  display: none;
+}
+.elementor-control-wkfe_control_go_pro .elementor-control-field-description .elementor-nerd-box-message {
+  font-size: 14px;
+}
+.elementor-control-wkfe_control_go_pro .widgetkit-go-pro {
+  background: #d30a5c !important;
+}
+.elementor-control-wkfe_control_go_pro .elementor-nerd-box {
+  padding: 10px 0px 30px;
+}
+.elementor-control-wkfe_control_go_pro .elementor-nerd-box .elementor-nerd-box-message {
+  margin-top: 0px;
+}
+
+#elementor-panel-category-widgetkit_elementor .elementor-element,
+#elementor-panel-category-widgetkit_deprecated_elements .elementor-element,
+#elementor-panel-category-widgetkit_pro .elementor-element,
+#elementor-panel-category-widgetkit_pro_woo_single_product .elementor-element {
+  position: relative;
+}
+#elementor-panel-category-widgetkit_elementor .elementor-element .icon i:after,
+#elementor-panel-category-widgetkit_deprecated_elements .elementor-element .icon i:after,
+#elementor-panel-category-widgetkit_pro .elementor-element .icon i:after,
+#elementor-panel-category-widgetkit_pro_woo_single_product .elementor-element .icon i:after {
+  content: "WK";
+  font-size: 10px;
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  color: #b8860b;
+  background: rgba(184, 134, 11, 0.1215686275);
+  padding: 2px;
+  border-radius: 2px;
+}
+#elementor-panel-category-widgetkit_elementor .elementor-element:hover .icon, #elementor-panel-category-widgetkit_elementor .elementor-element:hover .title,
+#elementor-panel-category-widgetkit_deprecated_elements .elementor-element:hover .icon,
+#elementor-panel-category-widgetkit_deprecated_elements .elementor-element:hover .title,
+#elementor-panel-category-widgetkit_pro .elementor-element:hover .icon,
+#elementor-panel-category-widgetkit_pro .elementor-element:hover .title,
+#elementor-panel-category-widgetkit_pro_woo_single_product .elementor-element:hover .icon,
+#elementor-panel-category-widgetkit_pro_woo_single_product .elementor-element:hover .title {
+  color: #b8860b !important;
+}
+
+.elementor-control-content .wkpro_text {
+  background: linear-gradient(var(--angle, 90deg), #48F7C3 10%, #D2FE36 95%);
+  padding: 4px 10px;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  border-radius: 4px;
+}
+
+.wk-pro-notice-content {
+  text-align: center;
+}
+.wk-pro-notice-content h4 {
+  font-size: 16px !important;
+  line-height: 1.2;
+  font-weight: 700 !important;
+  margin-top: 18px;
+}
+.wk-pro-notice-content p {
+  padding: 8px 0 15px;
+  font-size: 14px;
+  max-width: 180px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.wk-pro-notice-content a {
+  display: inline-block;
+  color: #000;
+  background: linear-gradient(var(--angle, 90deg), #48F7C3 10%, #D2FE36 95%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: --angle 0.5s ease;
+}
+.wk-pro-notice-content a:hover {
+  --angle: 190deg;
+  color: #000;
+}

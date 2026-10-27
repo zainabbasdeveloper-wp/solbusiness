@@ -1,0 +1,52 @@
+[22-Oct-2023 18:52:33 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "ABSPATH" in /home/qaiszfoi/solbusinessconsultant.com.au/wp-includes/blocks/index.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/qaiszfoi/solbusinessconsultant.com.au/wp-includes/blocks/index.php on line 8
+[22-Oct-2023 18:54:52 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "ABSPATH" in /home/qaiszfoi/solbusinessconsultant.com.au/wp-includes/blocks/index.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/qaiszfoi/solbusinessconsultant.com.au/wp-includes/blocks/index.php on line 8
+[26-Apr-2024 01:03:23 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "ABSPATH" in /home/qaiszfoi/solbusinessconsultant.com.au/wp-includes/blocks/index.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/qaiszfoi/solbusinessconsultant.com.au/wp-includes/blocks/index.php on line 8
+[26-Apr-2024 01:04:46 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "ABSPATH" in /home/qaiszfoi/solbusinessconsultant.com.au/wp-includes/blocks/index.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/qaiszfoi/solbusinessconsultant.com.au/wp-includes/blocks/index.php on line 8
+[20-Mar-2026 00:26:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/solbnrue/public_html/wp-includes/blocks/latest-posts.php:237
+Stack trace:
+#0 {main}
+  thrown in /home/solbnrue/public_html/wp-includes/blocks/latest-posts.php on line 237
+[20-Mar-2026 00:26:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/solbnrue/public_html/wp-includes/blocks/rss.php:126
+Stack trace:
+#0 {main}
+  thrown in /home/solbnrue/public_html/wp-includes/blocks/rss.php on line 126
+[20-Mar-2026 00:26:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/solbnrue/public_html/wp-includes/blocks/search.php:210
+Stack trace:
+#0 {main}
+  thrown in /home/solbnrue/public_html/wp-includes/blocks/search.php on line 210
+[30-Mar-2026 19:33:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/solbnrue/public_html/wp-includes/blocks/latest-posts.php:237
+Stack trace:
+#0 {main}
+  thrown in /home/solbnrue/public_html/wp-includes/blocks/latest-posts.php on line 237
+[30-Mar-2026 19:33:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/solbnrue/public_html/wp-includes/blocks/rss.php:126
+Stack trace:
+#0 {main}
+  thrown in /home/solbnrue/public_html/wp-includes/blocks/rss.php on line 126
+[30-Mar-2026 19:33:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/solbnrue/public_html/wp-includes/blocks/search.php:210
+Stack trace:
+#0 {main}
+  thrown in /home/solbnrue/public_html/wp-includes/blocks/search.php on line 210
+[04-Apr-2026 07:05:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/solbnrue/public_html/wp-includes/blocks/latest-posts.php:237
+Stack trace:
+#0 {main}
+  thrown in /home/solbnrue/public_html/wp-includes/blocks/latest-posts.php on line 237
+[04-Apr-2026 07:05:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/solbnrue/public_html/wp-includes/blocks/rss.php:126
+Stack trace:
+#0 {main}
+  thrown in /home/solbnrue/public_html/wp-includes/blocks/rss.php on line 126
+[04-Apr-2026 07:05:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/solbnrue/public_html/wp-includes/blocks/search.php:210
+Stack trace:
+#0 {main}
+  thrown in /home/solbnrue/public_html/wp-includes/blocks/search.php on line 210
