@@ -1,6 +1,6 @@
 <?php
 /**
- * Site header for every page (replaces Hello Elementor / Elementor headers): top bar, menu with services mega menu, mobile drawer.
+ * Site header for every page (replaces any Elementor theme-builder header): top bar, menu with services mega menu, mobile drawer.
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -1,4 +1,4 @@
-# Sol-Business Consultant child theme
+# Sol-Business Consultant theme
 
 The WordPress marketing site in the **SOL Training Academy** design (training.solbusinessconsultant.com.au), built with **Secure Custom Fields** instead of Elementor.
 
@@ -7,7 +7,7 @@ The WordPress marketing site in the **SOL Training Academy** design (training.so
 ## Go live
 
 1. Install and activate **Secure Custom Fields** (Plugins → Add New).
-2. Make sure this child theme is active (parent: Hello Elementor).
+2. Activate this theme (Appearance → Themes). It is a standalone theme: no parent theme needed.
 3. **Appearance → SOL Setup**: check the page table, then **Run setup**.
 4. WooCommerce → Settings: turn on taxes (10% GST). Package prices are ex-GST.
 5. When happy, deactivate Elementor, Elementor Pro, Header Footer Elementor and their add-ons. Pages not converted (e.g. policy pages you keep) still need Elementor until they are rebuilt.
@@ -41,8 +41,10 @@ Every field, repeater and data type: [`_dev/FIELD-REFERENCE.md`](_dev/FIELD-REFE
 ## Files
 
 ```
-functions.php            loads inc/ (Child Theme Configurator block kept at the top)
+functions.php            loads inc/
 header.php, footer.php   SOL header/footer for every page
+page.php, index.php      default pages (cart, checkout, account, unconverted pages), archives, search
+404.php                  page not found
 page-templates/          SOL Page Builder, SOL Service Page
 template-parts/sections/ one PHP file per section type
 single.php, home.php     blog post + blog index

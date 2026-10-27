@@ -1,6 +1,6 @@
 <?php
 /**
- * Site footer for every page (replaces Hello Elementor / Elementor footers).
+ * Site footer for every page (replaces any Elementor theme-builder footer).
  */
 
 defined( 'ABSPATH' ) || exit;

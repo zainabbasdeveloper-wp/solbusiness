@@ -148,13 +148,6 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_localize_script( 'sol', 'SOL', array(
 		'success' => sol_opt( 'default_success', 'Thanks. The SOL team will contact you within one business day.' ),
 	) );
-	// Hello Elementor's own header/footer styles aren't needed with the SOL header/footer.
-	wp_dequeue_style( 'hello-elementor-header-footer' );
-	// Pages drawn fully by the theme don't need Hello Elementor's base styles either.
-	if ( sol_is_sol_view() ) {
-		wp_dequeue_style( 'hello-elementor' );
-		wp_dequeue_style( 'hello-elementor-theme-style' );
-	}
 }, 20 );
 
 /*
@@ -184,4 +177,24 @@ add_filter( 'acf/update_value/name=head_code', function ( $value ) {
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ) );
+	add_theme_support( 'custom-logo' );
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'responsive-embeds' );
+	// WooCommerce templates (shop, product, cart, checkout) render inside the SOL header/footer.
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
+} );
+
+// Content width for embeds and images in the editor.
+if ( ! isset( $content_width ) ) {
+	$content_width = 1180; // phpcs:ignore WordPress.WP.GlobalVariablesOverride
+}
+
+// Elementor: let pages that haven't been rebuilt yet keep working without Hello Elementor.
+add_action( 'elementor/theme/register_locations', function ( $manager ) {
+	$manager->register_all_core_location();
 } );

@@ -698,3 +698,18 @@ i.sol-icon { font-style: normal; }
 	.sol-reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 	.sol-reveal.is-visible { opacity: 1; transform: none; }
 }
+
+/* ---------- Default page / archive (cart, checkout, account, unconverted pages) ---------- */
+.sol-page-content { max-width: 1180px; margin: 0 auto; padding: 48px var(--sol-gutter) 72px; font-family: var(--sol-font); color: var(--sol-ink); }
+.sol-page-content.is-elementor { max-width: none; padding: 0; }
+.sol-page-content__header { margin-bottom: 28px; }
+.sol-page-content__header .entry-title { font-family: var(--sol-display); font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.15; margin: 0; }
+.sol-page-content .entry-content > * + * { margin-top: 1em; }
+.sol-page-content .entry-content a:not(.button):not(.sol-btn):not(.wc-block-components-button) { color: var(--sol-harvest-dark); }
+.sol-page-content .entry-content img { max-width: 100%; height: auto; }
+.sol-archive .sol-card { text-decoration: none; }
+.sol-pagination { margin-top: 32px; }
+.sol-pagination .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.sol-pagination .page-numbers { padding: 8px 14px; border-radius: 10px; border: 1px solid var(--sol-border); text-decoration: none; color: var(--sol-ink); }
+.sol-pagination .page-numbers.current { background: var(--sol-ink); color: #fff; border-color: var(--sol-ink); }
+body.sol-chrome:not(.sol-site) { margin: 0; }
