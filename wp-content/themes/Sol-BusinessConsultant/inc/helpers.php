@@ -127,6 +127,19 @@ function sol_buttons( $rows, $class = '' ) {
 function sol_icon( $name, $class = '' ) {
 	$name = strtolower( trim( (string) $name ) );
 	$name = preg_replace( '/[^a-z0-9-]/', '', $name );
+	// Short names used by the training site's service catalogue → real Lucide names.
+	$aliases = array(
+		'graduation' => 'graduation-cap',
+		'credit'     => 'credit-card',
+		'building'   => 'building-2',
+		'briefcase'  => 'briefcase-business',
+		'clipboard'  => 'clipboard-list',
+		'receipt'    => 'receipt-text',
+		'code'       => 'code-xml',
+	);
+	if ( isset( $aliases[ $name ] ) ) {
+		$name = $aliases[ $name ];
+	}
 	if ( '' === $name ) {
 		return '';
 	}

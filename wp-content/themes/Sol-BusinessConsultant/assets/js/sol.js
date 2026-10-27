@@ -5,7 +5,16 @@
 	var $ = function (sel, root) { return (root || document).querySelector(sel); };
 	var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 	var esc = function (s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; };
-	var icons = function () { if (window.lucide && window.lucide.createIcons) { window.lucide.createIcons({ attrs: { 'aria-hidden': 'true' } }); } };
+	var icons = function () {
+		if (!window.lucide || !window.lucide.createIcons) { return; }
+		window.lucide.createIcons({ attrs: { 'aria-hidden': 'true' } });
+		// Any name Lucide doesn't know (e.g. a typo in an icon field) gets a neutral icon instead of a blank space.
+		var unknown = $$('i[data-lucide]');
+		if (unknown.length) {
+			unknown.forEach(function (el) { el.setAttribute('data-lucide', 'circle-dot'); });
+			window.lucide.createIcons({ attrs: { 'aria-hidden': 'true' } });
+		}
+	};
 	var aud = function (n) { return new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' }).format(n || 0); };
 	var store = {
 		get: function (k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } },

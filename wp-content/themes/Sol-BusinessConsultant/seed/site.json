@@ -1927,7 +1927,24 @@
        }
       ],
       "image": "img:services/ndis-registration-documents.webp",
-      "buttons": [],
+      "buttons": [
+       {
+        "link": {
+         "title": "Find My NDIS Package",
+         "url": "/get-started/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "NDIS Registration Service",
+         "url": "/services/ndis-registration/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
       "note": ""
      },
      {
@@ -2244,7 +2261,32 @@
        }
       ],
       "image": "",
-      "buttons": [],
+      "buttons": [
+       {
+        "link": {
+         "title": "Explore Business Services",
+         "url": "/services/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Browse Training Courses",
+         "url": "/training-2/",
+         "target": ""
+        },
+        "style": "outline"
+       },
+       {
+        "link": {
+         "title": "Book a Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
       "note": ""
      }
     ]
@@ -2773,7 +2815,32 @@
       "columns": "3",
       "card_style": "numbered",
       "cards": [],
-      "buttons": [],
+      "buttons": [
+       {
+        "link": {
+         "title": "View All Services",
+         "url": "/services/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Browse Training Courses",
+         "url": "/training-2/",
+         "target": ""
+        },
+        "style": "outline"
+       },
+       {
+        "link": {
+         "title": "Book Free Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
       "note": ""
      },
      {
@@ -2823,6 +2890,24 @@
           "title": "Receive final work",
           "text": "Download handover files, reports, receipts, and next-step guidance from your portal."
          }
+        ],
+        "buttons": [
+         {
+          "link": {
+           "title": "Explore Business Services",
+           "url": "/services/",
+           "target": ""
+          },
+          "style": "primary"
+         },
+         {
+          "link": {
+           "title": "Make a Service Payment",
+           "url": "/sol-service-payment-form/",
+           "target": ""
+          },
+          "style": "outline"
+         }
         ]
        },
        {
@@ -2845,11 +2930,46 @@
           "title": "Keep records",
           "text": "Access certificates, progress, quiz history, and training documents from your student area."
          }
+        ],
+        "buttons": [
+         {
+          "link": {
+           "title": "Browse Training Courses",
+           "url": "/training-2/",
+           "target": ""
+          },
+          "style": "primary"
+         },
+         {
+          "link": {
+           "title": "Compare Training Packages",
+           "url": "/services/ndis-support-coordination-training/#training-pricing",
+           "target": ""
+          },
+          "style": "outline"
+         }
         ]
        }
       ],
       "image": "",
-      "buttons": [],
+      "buttons": [
+       {
+        "link": {
+         "title": "Book Free Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "View All Pricing",
+         "url": "/pricing/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
       "note": ""
      },
      {
@@ -7914,6 +8034,24 @@
           "title": "Deliverables and handover",
           "text": "Download reports, files, approvals, receipts, and final handover material from the portal."
          }
+        ],
+        "buttons": [
+         {
+          "link": {
+           "title": "Explore Business Services",
+           "url": "/services/",
+           "target": ""
+          },
+          "style": "primary"
+         },
+         {
+          "link": {
+           "title": "Make a Service Payment",
+           "url": "/sol-service-payment-form/",
+           "target": ""
+          },
+          "style": "outline"
+         }
         ]
        },
        {
@@ -7939,6 +8077,24 @@
           "icon": "receipt-text",
           "title": "Certificate and history",
           "text": "Completed learning records and certificates remain available in the student dashboard."
+         }
+        ],
+        "buttons": [
+         {
+          "link": {
+           "title": "Browse Training Courses",
+           "url": "/training-2/",
+           "target": ""
+          },
+          "style": "primary"
+         },
+         {
+          "link": {
+           "title": "Compare Training Packages",
+           "url": "/services/ndis-support-coordination-training/#training-pricing",
+           "target": ""
+          },
+          "style": "outline"
          }
         ]
        }
@@ -9448,7 +9604,7 @@
     "description": "12-module NDIS Support Coordinator training with 1,500+ quiz questions for individuals, teams and RTOs."
    },
    "fields": {
-    "card_icon": "graduation",
+    "card_icon": "graduation-cap",
     "card_text": "Practical online training covering the Support Coordinator role, NDIS funding categories, documentation, compliance, and participant-centred practice.",
     "card_url": "",
     "hide_in_grid": false,
@@ -10131,7 +10287,7 @@
     "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
    },
    "fields": {
-    "card_icon": "building",
+    "card_icon": "building-2",
     "card_text": "ASIC company setup with ABN, TFN, GST applications, structure guidance, and business-ready documentation.",
     "card_url": "",
     "hide_in_grid": false,
@@ -10298,7 +10454,7 @@
     "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
    },
    "fields": {
-    "card_icon": "receipt",
+    "card_icon": "receipt-text",
     "card_text": "QuickBooks, Xero, and MYOB bookkeeping support, reconciliations, monthly reporting, and BAS lodgement coordination.",
     "card_url": "",
     "hide_in_grid": false,
@@ -10848,7 +11004,7 @@
     "description": "Become loan-ready with organised financial packs, document preparation, credit guidance, and introductions to trusted lender and broker networks where appropriate."
    },
    "fields": {
-    "card_icon": "credit",
+    "card_icon": "credit-card",
     "card_text": "Loan-ready financial packs, document preparation, application guidance, and broker or lender connection support.",
     "card_url": "",
     "hide_in_grid": false,
@@ -11944,7 +12100,7 @@
     "description": "NDIS document automation, client intake systems, compliance dashboards and Easy Compliance setup."
    },
    "fields": {
-    "card_icon": "code",
+    "card_icon": "code-xml",
     "card_text": "Document automation, compliance dashboards, Easy Compliance setup, client intake systems, and custom workflow builds.",
     "card_url": "",
     "hide_in_grid": false,

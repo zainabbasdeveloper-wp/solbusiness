@@ -76,6 +76,7 @@ export const LAYOUTS = [
         text('title', 'Title'),
         textarea('text', 'Text'),
       ], { item: 'Step' }),
+      buttons(),
     ], { item: 'Group' }),
     image('image', 'Image'),
     buttons(),

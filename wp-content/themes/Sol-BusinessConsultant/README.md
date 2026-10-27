@@ -26,7 +26,7 @@ The WordPress marketing site in the **SOL Training Academy** design (training.so
 | Site settings | SOL Site → logo, top bar, menu, mega menu, footer columns, contact details, training-site address, service payment page. |
 | SEO | Yoast title/description filled only where empty. |
 
-Running setup again only fills in what's missing; tick *Overwrite* to reset.
+Running setup again only fills in what's missing; tick *Overwrite* to reset everything, or tick single pages / reusable sections in the table and press **Re-apply selected** to refresh just those after a theme update.
 
 ## Courses, cart and checkout
 

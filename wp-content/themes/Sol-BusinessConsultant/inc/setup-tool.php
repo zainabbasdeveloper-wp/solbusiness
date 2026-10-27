@@ -40,11 +40,13 @@ function sol_find_item( $item ) {
 function sol_setup_plan() {
 	$seed = sol_seed();
 	$rows = array();
-	foreach ( array_merge( (array) ( $seed['pages'] ?? array() ), (array) ( $seed['services'] ?? array() ) ) as $item ) {
+	foreach ( array_merge( (array) ( $seed['pages'] ?? array() ), (array) ( $seed['services'] ?? array() ), (array) ( $seed['blocks'] ?? array() ) ) as $item ) {
 		$id  = sol_find_item( $item );
-		$tpl = $id ? get_page_template_slug( $id ) : '';
+		$tpl = $id && 'page' === $item['post_type'] ? get_page_template_slug( $id ) : '';
 		if ( ! $id ) {
 			$state = 'new';
+		} elseif ( 'sol_block' === $item['post_type'] ) {
+			$state = 'exists';
 		} elseif ( $tpl === $item['template'] ) {
 			$state = 'done';
 		} else {
@@ -69,6 +71,14 @@ function sol_setup_page() {
 			'posts'     => ! empty( $_POST['opt_posts'] ),
 			'overwrite' => ! empty( $_POST['opt_overwrite'] ),
 		) );
+	} elseif ( isset( $_POST['sol_setup_reapply'] ) ) {
+		check_admin_referer( 'sol_setup' );
+		$keys = isset( $_POST['reapply'] ) ? array_map( function ( $k ) {
+			return preg_replace( '#[^a-z0-9_:/-]#', '', strtolower( (string) $k ) );
+		}, (array) wp_unslash( $_POST['reapply'] ) ) : array();
+		$report = $keys
+			? sol_run_setup( array( 'options' => false, 'products' => false, 'posts' => false, 'pages' => true, 'reapply' => $keys ) )
+			: array( 'log' => array(), 'errors' => array( 'Tick at least one page or reusable section to re-apply.' ) );
 	} elseif ( isset( $_POST['sol_setup_restore'] ) ) {
 		check_admin_referer( 'sol_setup' );
 		$report = sol_restore_templates();
@@ -76,7 +86,7 @@ function sol_setup_page() {
 	$scf   = function_exists( 'update_field' );
 	$woo   = class_exists( 'WooCommerce' );
 	$plan  = sol_setup_plan();
-	$label = array( 'new' => 'Will be created', 'elementor' => 'Elementor page → switched to SOL template (Elementor data kept)', 'switch' => 'Switched to SOL template', 'done' => 'Already using SOL template' );
+	$label = array( 'new' => 'Will be created', 'elementor' => 'Elementor page → switched to SOL template (Elementor data kept)', 'switch' => 'Switched to SOL template', 'done' => 'Already using SOL template', 'exists' => 'Already created' );
 	?>
 	<div class="wrap">
 		<h1>SOL Setup</h1>
@@ -115,20 +125,27 @@ function sol_setup_page() {
 			</p>
 		</form>
 
-		<h2>Pages</h2>
-		<table class="widefat striped" style="max-width:1000px">
-			<thead><tr><th>Page</th><th>URL</th><th>Template</th><th>What setup does</th></tr></thead>
+		<h2>Pages and reusable sections</h2>
+		<p>To refresh only some items with the latest theme content (for example after a theme update), tick them and press <strong>Re-apply selected</strong>. This resets their SCF fields to the theme defaults; everything else is left alone.</p>
+		<form method="post">
+		<?php wp_nonce_field( 'sol_setup' ); ?>
+		<table class="widefat striped" style="max-width:1100px">
+			<thead><tr><td class="check-column"><input type="checkbox" onclick="document.querySelectorAll('.sol-reapply').forEach(function(c){c.checked=this.checked}.bind(this))" aria-label="Select all"></td><th>Page</th><th>URL</th><th>Template</th><th>What setup does</th></tr></thead>
 			<tbody>
 				<?php foreach ( $plan as $r ) : ?>
+					<?php $rkey = $r['item']['post_type'] . ':' . $r['item']['path']; ?>
 					<tr>
+						<th scope="row" class="check-column"><?php if ( $r['id'] ) : ?><input type="checkbox" class="sol-reapply" name="reapply[]" value="<?php echo esc_attr( $rkey ); ?>" aria-label="<?php echo esc_attr( 'Re-apply ' . $r['item']['title'] ); ?>"><?php endif; ?></th>
 						<td><?php echo $r['id'] ? '<a href="' . esc_url( get_edit_post_link( $r['id'] ) ) . '">' . esc_html( get_the_title( $r['id'] ) ) . '</a>' : esc_html( $r['item']['title'] ); ?></td>
-						<td><code>/<?php echo esc_html( $r['item']['path'] ); ?>/</code></td>
-						<td><?php echo esc_html( SOL_TPL_SERVICE === $r['item']['template'] ? 'SOL Service Page' : 'SOL Page Builder' ); ?></td>
+						<td><?php echo 'sol_block' === $r['item']['post_type'] ? '<em>Reusable section</em>' : '<code>/' . esc_html( $r['item']['path'] ) . '/</code>'; ?></td>
+						<td><?php echo esc_html( 'sol_block' === $r['item']['post_type'] ? '—' : ( SOL_TPL_SERVICE === $r['item']['template'] ? 'SOL Service Page' : 'SOL Page Builder' ) ); ?></td>
 						<td><?php echo esc_html( $label[ $r['state'] ] ); ?></td>
 					</tr>
 				<?php endforeach; ?>
 			</tbody>
 		</table>
+		<p><?php submit_button( 'Re-apply selected', 'secondary', 'sol_setup_reapply', false, $scf ? array() : array( 'disabled' => 'disabled' ) ); ?></p>
+		</form>
 		<p class="description">Pages not in this list (cart, checkout, my account, policies you keep in Elementor…) keep their content and get the new header and footer.</p>
 	</div>
 	<?php
@@ -136,7 +153,7 @@ function sol_setup_page() {
 
 /** Run setup. Also: wp eval 'print_r( sol_run_setup() );' */
 function sol_run_setup( $opts = array() ) {
-	$opts   = wp_parse_args( $opts, array( 'options' => true, 'pages' => true, 'products' => true, 'posts' => true, 'overwrite' => false ) );
+	$opts   = wp_parse_args( $opts, array( 'options' => true, 'pages' => true, 'products' => true, 'posts' => true, 'overwrite' => false, 'reapply' => array() ) );
 	$seed   = sol_seed();
 	$report = array( 'log' => array(), 'errors' => array() );
 	if ( ! $seed || ! function_exists( 'update_field' ) ) {
@@ -216,7 +233,7 @@ function sol_run_setup( $opts = array() ) {
 				$counts[ $g ]['kept'] = ( $counts[ $g ]['kept'] ?? 0 ) + 1;
 				continue; // Never touch existing blog posts.
 			}
-			if ( ! $is_fresh && $set_up && ! $opts['overwrite'] ) {
+			if ( ! $is_fresh && $set_up && ! $opts['overwrite'] && ! in_array( $key, (array) $opts['reapply'], true ) ) {
 				$counts[ $g ]['kept'] = ( $counts[ $g ]['kept'] ?? 0 ) + 1;
 				continue;
 			}

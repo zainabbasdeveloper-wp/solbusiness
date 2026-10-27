@@ -46,6 +46,7 @@ sol_section_open( $s, 'steps', 'sol-steps--' . $style );
 							</li>
 						<?php endforeach; ?>
 					</ol>
+					<?php echo sol_buttons( sol_get( $g, 'buttons', array() ), 'sol-step-group__buttons' ); // phpcs:ignore ?>
 				</div>
 			<?php endforeach; ?>
 		</div>

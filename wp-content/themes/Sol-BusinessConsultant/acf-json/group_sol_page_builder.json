@@ -1523,6 +1523,75 @@
                                         }
                                     ],
                                     "collapsed": "field_9fb18231b022d"
+                                },
+                                {
+                                    "key": "field_726a26790b2ca",
+                                    "label": "Buttons",
+                                    "name": "buttons",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "layout": "table",
+                                    "button_label": "Add Button",
+                                    "min": 0,
+                                    "max": 0,
+                                    "pagination": 0,
+                                    "rows_per_page": 20,
+                                    "parent_repeater": "field_704f0d2610552",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_0430a5c2a52d2",
+                                            "label": "Link",
+                                            "name": "link",
+                                            "aria-label": "",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array",
+                                            "parent_repeater": "field_726a26790b2ca"
+                                        },
+                                        {
+                                            "key": "field_e58ed652ff954",
+                                            "label": "Style",
+                                            "name": "style",
+                                            "aria-label": "",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "primary": "Primary (amber)",
+                                                "outline": "Outline",
+                                                "dark": "Dark",
+                                                "light": "Light / on dark"
+                                            },
+                                            "return_format": "value",
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "default_value": "primary",
+                                            "parent_repeater": "field_726a26790b2ca"
+                                        }
+                                    ],
+                                    "collapsed": "field_0430a5c2a52d2"
                                 }
                             ],
                             "collapsed": "field_0421addc38320"

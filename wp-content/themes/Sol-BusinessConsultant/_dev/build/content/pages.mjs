@@ -44,16 +44,17 @@ const home = {
       logos: D.LogoCarousel.PLATFORMS.map((p) => ({ name: p.abbr.replace(/\n/g, '|'), image: '' })), animate: true,
       pills: items(['ABN-backed Australian business', 'NDIS-aware service guidance', 'Clear pricing before paid work', 'Privacy-conscious enquiry handling']),
     },
-    grid({ section_id: 'services', eyebrow: 'Our Services', heading: 'Comprehensive Solutions for Every Stage of Growth', source: 'services', card_style: 'numbered' }),
+    grid({ section_id: 'services', eyebrow: 'Our Services', heading: 'Comprehensive Solutions for Every Stage of Growth', source: 'services', card_style: 'numbered', buttons: [btn('View All Services', '/services/'), btn('Browse Training Courses', '/training-courses', 'outline'), btn('Book Free Consultation', '/book-consultation', 'outline')] }),
     block('service-comparison'),
     cta({ style: 'image', heading: 'Your One-Stop Business Partner', text: 'From startup to scale - every service connected under one roof', image: img('services/marketing-strategy-team.webp') }),
     steps({
       eyebrow: 'Clear Delivery Path', align: 'center', heading: 'Services and training stay organised from payment to completion',
       intro: 'SOL separates business service delivery from student training, so clients and learners each get the right portal, documents, updates, and support.',
       groups: [
-        { title: 'For Business Services', icon: 'briefcase-business', steps: D.ProcessPortalSection.serviceSteps.map((s) => ({ title: s.title, text: s.desc })) },
-        { title: 'For Training', icon: 'graduation-cap', steps: D.ProcessPortalSection.trainingSteps.map((s) => ({ title: s.title, text: s.desc })) },
+        { title: 'For Business Services', icon: 'briefcase-business', steps: D.ProcessPortalSection.serviceSteps.map((s) => ({ title: s.title, text: s.desc })), buttons: [btn('Explore Business Services', '/services/'), btn('Make a Service Payment', '/service-payment', 'outline')] },
+        { title: 'For Training', icon: 'graduation-cap', steps: D.ProcessPortalSection.trainingSteps.map((s) => ({ title: s.title, text: s.desc })), buttons: [btn('Browse Training Courses', '/training-courses'), btn('Compare Training Packages', '/services/support-coordination-training#training-pricing', 'outline')] },
       ],
+      buttons: [btn('Book Free Consultation', '/book-consultation'), btn('View All Pricing', '/pricing', 'outline')],
     }),
     grid({
       background: 'chalk', heading: 'Client portal included with service work', intro: 'After a service payment, clients can manage project communication and files from one secure place.',
@@ -405,8 +406,8 @@ const afterPayment = {
   sections: [
     header('After Payment', 'What happens after you pay or enrol?', 'SOL keeps business services and training separate so clients see service work in the client portal, while students continue learning in the student dashboard.', { buttons: [rbtn('Make Service Payment', '/service-payment'), btn('Explore Training', '/training-courses', 'outline')] }),
     steps({ background: 'chalk', style: 'cards', groups: [
-      { title: 'Service clients', icon: 'briefcase-business', steps: AP.serviceJourney.map((s) => ({ icon: ic(s.icon), title: s.title, text: s.desc })) },
-      { title: 'Training students', icon: 'graduation-cap', steps: AP.trainingJourney.map((s) => ({ icon: ic(s.icon), title: s.title, text: s.desc })) },
+      { title: 'Service clients', icon: 'briefcase-business', steps: AP.serviceJourney.map((s) => ({ icon: ic(s.icon), title: s.title, text: s.desc })), buttons: [btn('Explore Business Services', '/services/'), btn('Make a Service Payment', '/service-payment', 'outline')] },
+      { title: 'Training students', icon: 'graduation-cap', steps: AP.trainingJourney.map((s) => ({ icon: ic(s.icon), title: s.title, text: s.desc })), buttons: [btn('Browse Training Courses', '/training-courses'), btn('Compare Training Packages', '/services/support-coordination-training#training-pricing', 'outline')] },
     ] }),
     { acf_fc_layout: 'comparison_table', ...head({ align: 'center', heading: 'Client portal vs student dashboard', intro: 'Use the right portal for the right work.' }), first_column_label: '', columns: [{ name: 'Service clients', tagline: '', badge: '', price: '', link: null, highlight: false }, { name: 'Training students', tagline: '', badge: '', price: '', link: null, highlight: false }], groups: [{ category: '', rows: cmpRows(AP.comparison) }], footer_label: '', note: '' },
     cta({ heading: 'Need help choosing the right path?', text: 'If you are unsure whether you need service support, training, or both, book a consultation and we will point you to the correct portal and next step.', buttons: [btn('Book Consultation', '/book-consultation')] }),

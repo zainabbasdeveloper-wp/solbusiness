@@ -285,6 +285,9 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `icon` | Text | Icon — Lucide icon name, e.g. shield, graduation-cap, file-check. Browse: https://lucide.dev/icons |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `title` | Text | Title |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `text` | Text area | Text |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `buttons` | Repeater | Buttons |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
 | `image` | Image (attachment ID) | Image |
 | `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |

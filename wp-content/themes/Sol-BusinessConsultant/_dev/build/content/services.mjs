@@ -20,12 +20,15 @@ const grid = (o) => ({ acf_fc_layout: 'card_grid', section_id: '', eyebrow: '', 
 const textBlock = (o) => ({ acf_fc_layout: 'text_image', section_id: '', eyebrow: '', background: 'chalk', align: 'left', heading: '', intro: '', content: '', image: '', image_alt: '', image_position: 'left', image_badge: '', stats: [], checklist: [], buttons: [], callout: { icon: '', title: '', text: '' }, ...o });
 const features = (arr) => arr.map((f) => ({ icon: ic(f.icon), title: f.title, text: f.desc }));
 const card = (slug) => serviceCards.find((c) => c.slug === slug);
+// The training site uses short icon keys; these are the real Lucide names.
+const ICON = { graduation: 'graduation-cap', credit: 'credit-card', building: 'building-2', briefcase: 'briefcase-business', clipboard: 'clipboard-list', receipt: 'receipt-text', code: 'code-xml' };
+const lucide = (k) => ICON[k] || k;
 
 const base = (slug, o) => {
   const c = card(slug) || {};
   return {
     slug, title: c.title || o.title, menu_order: Math.max(0, serviceCards.findIndex((s) => s.slug === slug)),
-    fields: { card_icon: ic(c.icon), card_text: c.desc || '', card_url: '', hide_in_grid: false, show_enquiry: true, ...o.fields },
+    fields: { card_icon: lucide(ic(c.icon)), card_text: c.desc || '', card_url: '', hide_in_grid: false, show_enquiry: true, ...o.fields },
     seo: o.seo || {},
   };
 };

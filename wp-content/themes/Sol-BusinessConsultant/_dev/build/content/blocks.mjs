@@ -119,7 +119,7 @@ export const blocks = [
         intro: 'We help sole traders, small providers, and allied health professionals navigate the NDIS Commission audit with confidence.',
         style: 'timeline', columns: '2',
         groups: [{ title: '', icon: '', steps: D.NDISSection.roadmap.map((s) => ({ anchor_id: s.id, label: s.week, icon: ic(s.icon), title: s.title, text: s.desc })) }],
-        image: img('services/ndis-registration-documents.webp'), buttons: [], note: '',
+        image: img('services/ndis-registration-documents.webp'), buttons: [btn('Find My NDIS Package', '/get-started'), btn('NDIS Registration Service', '/services/ndis-registration', 'outline')], note: '',
       },
       {
         acf_fc_layout: 'pricing', section_id: '', eyebrow: '', background: 'white', align: 'center', heading: 'Simple, Transparent Pricing',
@@ -157,7 +157,7 @@ export const blocks = [
       intro: 'A simple professional path from enquiry to payment, portal access, document review, delivery, and support.',
       style: 'cards', columns: '3',
       groups: [{ title: '', icon: '', steps: D.ServiceJourneySection.steps.map((s) => ({ anchor_id: '', label: '', icon: ic(s.icon), title: s.title, text: s.desc })) }],
-      image: '', buttons: [], note: '',
+      image: '', buttons: [btn('Explore Business Services', '/services/'), btn('Browse Training Courses', '/training-courses', 'outline'), btn('Book a Consultation', '/book-consultation', 'outline')], note: '',
     }],
   },
   {
