@@ -1,0 +1,153 @@
+/* Courses, shop, product, cart and checkout in the SOL Training Academy style. */
+
+/* ---------- Course colours (Level 1 blue, Level 2 amber, Level 3 purple) ---------- */
+.sol-color-blue { --sol-level: #2563eb; --sol-level-soft: #eff6ff; --sol-level-line: #dbeafe; }
+.sol-color-amber { --sol-level: #f59e0b; --sol-level-soft: #fffbeb; --sol-level-line: #fef3c7; }
+.sol-color-purple { --sol-level: #9333ea; --sol-level-soft: #faf5ff; --sol-level-line: #f3e8ff; }
+.sol-level-pill { display: inline-block; padding: 4px 12px; border-radius: 999px; background: var(--sol-level, var(--sol-harvest)); color: #fff; font-size: .72rem; font-weight: 700; letter-spacing: .02em; }
+
+/* ---------- Header cart ---------- */
+.sol-cart-link { position: relative; display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--sol-border); color: var(--sol-ink) !important; background: #fff; flex-shrink: 0; }
+.sol-cart-link:hover { border-color: var(--sol-harvest); color: var(--sol-harvest-dark) !important; }
+.sol-cart-link .sol-icon { width: 20px; height: 20px; }
+.sol-cart-count { position: absolute; top: -6px; right: -6px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 999px; background: var(--sol-harvest); color: var(--sol-ink); font-size: .7rem; font-weight: 700; display: grid; place-items: center; line-height: 1; }
+.sol-cart-count.is-empty { display: none; }
+.sol-cart-link--mobile { margin-left: auto; }
+.sol-cart-link--mobile + .sol-burger { margin-left: 8px; }
+@media (min-width: 1180px) { .sol-cart-link--mobile { display: none; } }
+
+/* ---------- Single product ---------- */
+.sol-product-hero { background: var(--sol-ink); color: #fff; padding: 40px 0 48px; position: relative; overflow: hidden; }
+.sol-product-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 80% at 90% 10%, rgba(217, 119, 6, .18), transparent 70%); pointer-events: none; }
+.sol-product-hero .sol-container { position: relative; }
+.sol-back--light { color: rgba(255, 255, 255, .65) !important; }
+.sol-back--light:hover { color: #fff !important; }
+.sol-product-hero__badges { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0 0 14px !important; }
+.sol-product-hero__badge { color: var(--sol-level, var(--sol-harvest)); font-weight: 600; font-size: .9rem; filter: brightness(1.35); }
+.sol-product-hero__title { font-family: var(--sol-display); font-size: clamp(1.9rem, 4.5vw, 3rem); font-weight: 700; line-height: 1.1; color: #fff !important; margin: 0 0 14px !important; max-width: 860px; }
+.sol-product-hero__text { color: rgba(255, 255, 255, .72); font-size: 1.05rem; max-width: 760px; margin: 0 !important; }
+.sol-course__facts--light { margin-top: 20px !important; color: rgba(255, 255, 255, .8) !important; }
+.sol-course__facts--light .sol-icon { color: var(--sol-harvest); }
+
+.sol-product-body { padding: 48px 0 80px; }
+.sol-product-grid { display: grid; gap: 32px; align-items: start; }
+@media (min-width: 1024px) { .sol-product-grid { grid-template-columns: minmax(0, 1fr) 360px; gap: 48px; } }
+.sol-product-main { display: grid; gap: 36px; min-width: 0; }
+.sol-product-block h2 { font-family: var(--sol-display); font-size: 1.3rem; margin: 0 0 14px !important; }
+.sol-product-block .sol-muted { margin: -6px 0 14px !important; }
+.sol-checks--course .sol-checks__icon { color: var(--sol-level, var(--sol-harvest)); }
+.sol-curriculum .sol-accordion__item, .sol-curriculum .sol-accordion__item[open] { border-color: var(--sol-level-line, var(--sol-border)); overflow: hidden; }
+.sol-curriculum summary { align-items: flex-start; }
+.sol-curriculum .sol-course__num { background: var(--sol-level, var(--sol-ink)); border-radius: 50%; }
+.sol-curriculum__title { display: grid; font-family: var(--sol-font); font-weight: 500; font-size: .92rem; }
+.sol-curriculum__title small { margin: 2px 0 0 !important; font-size: .75rem; color: var(--sol-mist); font-weight: 400; }
+.sol-curriculum .sol-course__topics { background: var(--sol-level-soft, var(--sol-chalk)); border-top: 1px solid var(--sol-level-line, var(--sol-border)); padding: 12px 20px 16px; margin: 0; }
+.sol-curriculum .sol-course__topics li:nth-child(odd) { background: transparent; }
+.sol-curriculum .sol-course__topics .sol-icon { color: var(--sol-level, var(--sol-harvest)); }
+
+.sol-enrol-card { border-radius: var(--sol-radius-lg); background: #fff; border: 1px solid var(--sol-border); box-shadow: 0 24px 48px -24px rgba(15, 23, 42, .3); overflow: hidden; }
+@media (min-width: 1024px) { .sol-enrol-card { position: sticky; top: 130px; } }
+.sol-enrol-card__media { position: relative; height: 210px; background: var(--sol-ink); overflow: hidden; }
+.sol-enrol-card__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(15, 23, 42, .85), rgba(15, 23, 42, .1)); }
+.sol-enrol-card__img { width: 100%; height: 100% !important; object-fit: cover; }
+.sol-enrol-card__pill, .sol-enrol-card__popular { position: absolute; top: 12px; z-index: 1; margin: 0; }
+.sol-enrol-card__pill { left: 12px; }
+.sol-enrol-card__popular { right: 12px; }
+.sol-enrol-card__stats { position: absolute; left: 14px; right: 14px; bottom: 12px; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.sol-enrol-card__stats div { background: rgba(0, 0, 0, .3); backdrop-filter: blur(4px); border: 1px solid rgba(255, 255, 255, .12); border-radius: 10px; padding: 6px 4px; text-align: center; color: #fff; }
+.sol-enrol-card__stats strong { display: block; font-size: .95rem; line-height: 1.2; }
+.sol-enrol-card__stats span { display: block; font-size: .6rem; text-transform: uppercase; letter-spacing: .08em; color: rgba(255, 255, 255, .7); }
+.sol-enrol-card__body { padding: 22px; display: grid; gap: 12px; }
+.sol-enrol-card__price { margin: 0 !important; font-family: var(--sol-display); font-size: 1.9rem !important; font-weight: 700; color: var(--sol-ink) !important; }
+.sol-enrol-card__price del { font-size: 1rem; color: var(--sol-mist); font-weight: 500; }
+.sol-enrol-card__price ins { text-decoration: none; }
+.sol-enrol-card__terms { margin: -6px 0 4px !important; font-size: .78rem; }
+.sol-enrol-card__cart form.cart { display: flex; gap: 8px; margin: 0 !important; }
+.sol-enrol-card__cart .quantity { display: none; }
+.sol-enrol-card__cart .single_add_to_cart_button { flex: 1; width: 100%; }
+.sol-enrol-card__cart .stock { font-size: .85rem; }
+.sol-enrol-card__list { list-style: none; margin: 8px 0 0 !important; padding: 14px 0 0 !important; border-top: 1px solid var(--sol-border); display: grid; gap: 8px; }
+.sol-enrol-card__list li { display: flex; gap: 8px; align-items: center; font-size: .8rem; color: var(--sol-mist); }
+.sol-enrol-card__list .sol-icon { width: 15px; height: 15px; color: #22c55e; }
+.sol-enrol-card__after { display: flex; gap: 8px; align-items: flex-start; margin: 4px 0 0 !important; padding: 12px; border-radius: 10px; background: var(--sol-level-soft, var(--sol-chalk)); font-size: .8rem; color: var(--sol-ink-2); }
+.sol-enrol-card__after .sol-icon { color: var(--sol-level, var(--sol-harvest)); flex-shrink: 0; }
+.single-product div.sol-product { background: none; border: 0; padding: 0; }
+
+/* ---------- Shop / course cards ---------- */
+.sol-shop-hero { background: var(--sol-ink); color: #fff; padding: 64px 0 56px; text-align: center; }
+.sol-shop-hero .sol-pill { background: rgba(217, 119, 6, .2); color: var(--sol-harvest); text-transform: uppercase; letter-spacing: .14em; }
+.sol-shop-hero__title { font-family: var(--sol-display); font-size: clamp(2.2rem, 5.5vw, 3.8rem); font-weight: 700; line-height: 1.08; color: #fff !important; margin: 0 0 18px !important; }
+.sol-shop-hero__text { max-width: 680px; margin: 0 auto !important; color: rgba(255, 255, 255, .62); font-size: 1.05rem; }
+.sol-shop-hero__stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 760px; margin: 36px auto 0; }
+@media (min-width: 768px) { .sol-shop-hero__stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.sol-shop-hero__stats div { padding: 16px; border-radius: 16px; background: rgba(255, 255, 255, .05); border: 1px solid rgba(255, 255, 255, .1); display: grid; gap: 4px; justify-items: center; }
+.sol-shop-hero__stats .sol-icon { color: var(--sol-harvest); width: 22px; height: 22px; }
+.sol-shop-hero__stats strong { font-family: var(--sol-display); font-size: 1.05rem; }
+.sol-shop-hero__stats span { font-size: .75rem; color: rgba(255, 255, 255, .5); }
+.sol-shop__bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 24px; }
+.sol-shop__bar .woocommerce-result-count { margin: 0; color: var(--sol-mist); font-size: .9rem; }
+.sol-shop__bar .woocommerce-ordering { margin: 0; }
+.sol-shop__bar select { border: 1px solid var(--sol-border); border-radius: 10px; padding: 8px 12px; background: #fff; font-family: var(--sol-font); }
+
+.sol-course-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--sol-border); border-radius: var(--sol-radius-lg); overflow: hidden; transition: box-shadow .3s, transform .3s, border-color .3s; }
+.sol-course-card:hover { transform: translateY(-3px); border-color: var(--sol-level-line, var(--sol-border)); box-shadow: 0 24px 40px -24px rgba(15, 23, 42, .35); }
+.sol-course-card__media { position: relative; display: block; height: 200px; background: var(--sol-ink); overflow: hidden; }
+.sol-course-card__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(15, 23, 42, .6), transparent 60%); }
+.sol-course-card__media img { width: 100%; height: 100% !important; object-fit: cover; transition: transform .6s; }
+.sol-course-card:hover .sol-course-card__media img { transform: scale(1.05); }
+.sol-course-card__pill { position: absolute; left: 12px; top: 12px; z-index: 1; }
+.sol-course-card__popular { position: absolute; right: 12px; top: 12px; z-index: 1; margin: 0; }
+.sol-course-card__body { padding: 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.sol-course-card__title { font-family: var(--sol-display); font-size: 1.15rem; line-height: 1.25; margin: 0 !important; }
+.sol-course-card__title a { color: var(--sol-ink) !important; text-decoration: none; }
+.sol-course-card__title a:hover { color: var(--sol-level, var(--sol-harvest-dark)) !important; }
+.sol-course-card__text { margin: 0 !important; font-size: .9rem; color: var(--sol-mist); }
+.sol-course-card .sol-course__facts { font-size: .8rem; margin: 0 !important; color: var(--sol-mist) !important; }
+.sol-course-card .sol-course__facts .sol-icon { color: var(--sol-level, var(--sol-harvest)); }
+.sol-course-card__foot { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--sol-border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.sol-course-card__price { font-family: var(--sol-display); font-weight: 700; font-size: 1.35rem; color: var(--sol-ink) !important; }
+.sol-course-card__price del { font-size: .85rem; color: var(--sol-mist); font-weight: 500; }
+.sol-course-card__price ins { text-decoration: none; }
+.sol-course-card__actions { display: flex; gap: 8px; }
+.sol-course-card__actions .sol-btn--primary { box-shadow: none; }
+
+/* ---------- Cart & checkout ---------- */
+.sol-checkout-head { background: #fff; border-bottom: 1px solid var(--sol-border); padding: 32px 0 28px; }
+.sol-checkout-head .sol-container { max-width: 1180px; }
+.sol-checkout-head .sol-back { color: var(--sol-harvest-dark) !important; font-weight: 600; margin-bottom: 14px; }
+.sol-checkout-head__title { font-family: var(--sol-display); font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; margin: 0 0 6px !important; color: var(--sol-ink); }
+.sol-checkout-head__text { color: var(--sol-mist); margin: 0 0 20px !important; }
+.sol-steps-bar { list-style: none; margin: 0 0 16px !important; padding: 0 !important; display: flex; flex-wrap: wrap; gap: 8px 12px; }
+.sol-steps-bar li { display: flex; align-items: center; gap: 8px; font-size: .88rem; font-weight: 600; color: var(--sol-mist); }
+.sol-steps-bar li span { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-size: .78rem; border: 1px solid var(--sol-border); background: #fff; }
+.sol-steps-bar li span .sol-icon { width: 14px; height: 14px; }
+.sol-steps-bar li.is-current { color: var(--sol-ink); }
+.sol-steps-bar li.is-current span { background: var(--sol-harvest); border-color: var(--sol-harvest); color: var(--sol-ink); }
+.sol-steps-bar li.is-done span { background: var(--sol-ink); border-color: var(--sol-ink); color: #fff; }
+.sol-steps-bar li + li::before { content: ""; width: 24px; height: 1px; background: var(--sol-border); margin-right: 4px; }
+.sol-checkout-head__notice { margin-bottom: 16px; }
+.sol-checkout-trust { list-style: none; margin: 0 !important; padding: 0 !important; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: .82rem; color: var(--sol-mist); }
+.sol-checkout-trust li { display: inline-flex; gap: 6px; align-items: center; }
+.sol-checkout-trust .sol-icon { width: 16px; height: 16px; color: var(--sol-green); }
+
+.sol-woo-flow.sol-page-content { padding-top: 32px; }
+.sol-woo-flow .wp-block-woocommerce-checkout, .sol-woo-flow .wp-block-woocommerce-cart { background: transparent; border: 0; box-shadow: none; padding: 0; }
+.sol-woo-flow .wc-block-checkout__main .wc-block-components-checkout-step,
+.sol-woo-flow .wc-block-cart__main .wc-block-cart-items,
+.sol-woo-flow form.checkout #customer_details,
+.sol-woo-flow .woocommerce-cart-form { background: #fff; border: 1px solid var(--sol-border); border-radius: var(--sol-radius-lg); padding: 22px; margin-bottom: 18px; }
+.sol-woo-flow .wc-block-components-checkout-step__title, .sol-woo-flow .wc-block-components-title { font-family: var(--sol-display) !important; font-weight: 700 !important; color: var(--sol-ink); }
+.sol-woo-flow .wc-block-components-checkout-step::after { display: none !important; }
+.sol-woo-flow .wc-block-checkout__sidebar, .sol-woo-flow .wc-block-cart__sidebar,
+.sol-woo-flow #order_review, .sol-woo-flow .cart-collaterals .cart_totals { background: #fff; border: 1px solid var(--sol-border); border-radius: var(--sol-radius-lg); padding: 22px !important; box-shadow: var(--sol-shadow); }
+@media (min-width: 1024px) { .sol-woo-flow .wc-block-checkout__sidebar, .sol-woo-flow .wc-block-cart__sidebar { position: sticky; top: 130px; align-self: flex-start; } }
+.sol-woo-flow .wc-block-components-order-summary-item__image img, .sol-woo-flow .wc-block-cart-item__image img { border-radius: 10px; }
+.sol-woo-flow .wc-block-components-product-name { font-weight: 600; color: var(--sol-ink) !important; text-decoration: none; }
+.sol-woo-flow .wc-block-components-totals-footer-item .wc-block-components-totals-item__value,
+.sol-woo-flow .order-total .amount { color: var(--sol-harvest-dark) !important; font-family: var(--sol-display); font-size: 1.5rem; }
+.sol-woo-flow .wc-block-components-radio-control__option, .sol-woo-flow .wc-block-components-radio-control-accordion-option { border-radius: 12px !important; }
+.sol-woo-flow .wc-block-components-checkout-place-order-button { width: 100%; min-height: 52px; font-size: 1.05rem !important; }
+.sol-woo-flow a:not(.wc-block-components-button):not(.button) { color: var(--sol-harvest-dark); }
+.sol-woo-account .woocommerce-MyAccount-navigation ul { list-style: none; padding: 0; display: grid; gap: 4px; }
+.sol-woo-account .woocommerce-MyAccount-navigation a { display: block; padding: 10px 14px; border-radius: 10px; color: var(--sol-ink-2); text-decoration: none; }
+.sol-woo-account .woocommerce-MyAccount-navigation .is-active a { background: var(--sol-ink); color: #fff; }

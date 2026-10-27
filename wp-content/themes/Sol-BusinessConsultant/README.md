@@ -28,6 +28,15 @@ The WordPress marketing site in the **SOL Training Academy** design (training.so
 
 Running setup again only fills in what's missing; tick *Overwrite* to reset.
 
+## Courses, cart and checkout
+
+- **Course products** (WooCommerce products with *Course Details* filled in) use the training-site course page: level badge, curriculum, outcomes and a sticky Enrol card. **Enrol Now** adds the course and opens checkout.
+- **Shop and category pages** list products as course cards. Other products (packages) use the same card and page frame.
+- **Cart and checkout** get a branded header with steps (Cart → Checkout → Start learning), the non-accredited training notice when a course is in the cart, and styling for both the block and classic WooCommerce checkout.
+- **Header cart icon** shows the number of items.
+- Products without a featured image use the *Course Details → Thumbnail* image, also in cart, checkout and emails.
+- Templates: `woocommerce/single-product.php`, `woocommerce/archive-product.php`; styles: `assets/css/sol-shop.css`.
+
 ## Editing
 
 - **Pages:** edit the page → *Page Sections* (26 section types: hero, cards, pricing, comparison table, FAQ, steps, contact form, quiz, NDIS package finder, course levels…). Drag to reorder.
