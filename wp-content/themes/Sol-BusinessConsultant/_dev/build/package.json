@@ -1,0 +1,12 @@
+{
+  "name": "sol-wordpress-build",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "extract": "node extract-react.cjs",
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "@babel/parser": "7.26.3"
+  }
+}
