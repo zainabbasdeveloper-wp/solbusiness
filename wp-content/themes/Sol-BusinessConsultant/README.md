@@ -26,7 +26,21 @@ The WordPress marketing site in the **SOL Training Academy** design (training.so
 | Site settings | SOL Site → logo, top bar, menu, mega menu, footer columns, contact details, training-site address, service payment page. |
 | SEO | Yoast title/description filled only where empty. |
 
-Running setup again only fills in what's missing; tick *Overwrite* to reset everything, or tick single pages / reusable sections in the table and press **Re-apply selected** to refresh just those after a theme update.
+Running setup again only fills in what's missing; tick *Overwrite* to reset everything.
+
+## Theme updates after a git pull
+
+No page-by-page work is needed. After `git pull`, the **first time an administrator opens the dashboard** the theme compares its content with what is on the site and updates it:
+
+- Pages, service pages, reusable sections, blog posts, packages, course details and site settings that changed in the theme are **updated**.
+- New pages or sections in the theme are **created**.
+- Anything edited by hand in WordPress since it was last applied is **kept** and listed in a notice. To overwrite it, tick it under *Appearance → SOL Setup → Theme updates* and press **Apply theme updates**.
+- Yoast titles/descriptions are only replaced where they still hold the theme's earlier text.
+- The previous version of every updated item is saved. **Undo last update** on the same screen puts it back (and pauses automatic updates until you apply again). Pages also get a WordPress revision.
+
+Same thing from the command line: `wp sol update` (add `--force-all` to overwrite hand edits too). To switch the automatic run off: `add_filter( 'sol_auto_apply_theme_updates', '__return_false' );`
+
+How it knows: `npm run build` gives every item a fingerprint in `seed/site.json`; WordPress stores the fingerprint it applied plus a hash of the saved values, so it can tell "theme changed" from "someone edited it".
 
 ## Courses, cart and checkout
 
@@ -75,4 +89,4 @@ SOL_REACT_SRC=/path/to/sol-training-academy-main/src npm run extract
 npm run build
 ```
 
-`npm run build` checks every value against the field definitions (and every `woo:sku:` against the product list) before writing `acf-json`, `seed/site.json` and `FIELD-REFERENCE.md`. Then run SOL Setup with *Overwrite* ticked.
+`npm run build` checks every value against the field definitions (and every `woo:sku:` against the product list) before writing `acf-json`, `seed/site.json` and `FIELD-REFERENCE.md`. Commit and push; the sites pick the changes up on their next dashboard visit (see *Theme updates* above).

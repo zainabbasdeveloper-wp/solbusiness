@@ -13521,5 +13521,217 @@
     "post_sections": []
    }
   }
- ]
+ ],
+ "fingerprints": {
+  "sol_block:pricing-tabs": "d30f827c7699d52d",
+  "sol_block:consulting-packages": "91bf3a1ba5720c67",
+  "sol_block:marketing-packages": "9130dee6468a2a2e",
+  "sol_block:about-sol": "3fbd72bed978eb35",
+  "sol_block:compliance": "5dc4454f9f8750d5",
+  "sol_block:ndis-roadmap": "6eef4f3e4679b146",
+  "sol_block:service-trust": "0d5334ee42b53946",
+  "sol_block:service-journey": "e4db76f38f169e8b",
+  "sol_block:general-faq": "6a63958fff97089e",
+  "sol_block:training-faq": "97cab551a5635596",
+  "sol_block:contact": "d36d19b08a1b5038",
+  "sol_block:service-comparison": "93ae8fca5c000b7b",
+  "page:home": "eea177346d8ff45b",
+  "page:about": "448255dc13f307c0",
+  "page:contact": "b6cdbcb728e71e9a",
+  "page:faq": "1ba3d008872084b1",
+  "page:pricing": "321b4107765a974e",
+  "page:blog": "c2ec97ce0949ee5e",
+  "page:case-studies": "a067e019c3e2e95c",
+  "page:use-cases": "5c59b59de6f97354",
+  "page:marketing-packages": "151df300aaa2410b",
+  "page:training-2": "d9b571a3be95060d",
+  "page:ndis-packages": "e7d00842f5a3eec5",
+  "page:get-started": "25bebe3e1f701310",
+  "page:book-consultation": "9b0c043d1aab49f2",
+  "page:readiness-quiz": "dbdf916f8f0c0b9b",
+  "page:ndis-readiness-calculator": "0b991750b16011c1",
+  "page:data-privacy-and-security": "38b7d28be213219a",
+  "page:service-inclusions": "82c7777202be63ad",
+  "page:support-and-availability": "2df00884ad9cf5ba",
+  "page:after-payment": "c400d6d86e037216",
+  "page:privacy-policy": "8b635ec76ce7bcb2",
+  "page:refunds-cancellation-policy": "fe74ff57760c6f2c",
+  "page:terms-conditions": "7335038a79c6a56f",
+  "page:accessibility": "568eb24b729371b3",
+  "page:complaints-feedback": "7b5fc58245d7b5e3",
+  "page:services": "e52be39fa396a44c",
+  "page:services/ndis-registration": "f583c414262fdadd",
+  "page:services/ndis-support-coordination-training": "4331006dd9ac0982",
+  "page:services/company-business-registration": "73b380054bef3553",
+  "page:services/bookkeeping-bas-lodgement": "7ee3d9b20f92534a",
+  "page:services/payroll-services": "b8399440e49c59cd",
+  "page:services/website-development": "77a1d3f35649ed47",
+  "page:services/business-personal-loan-support": "5585d429e4a8cd7c",
+  "page:services/accountancy-partnerships": "defa7c91ccb6da05",
+  "page:services/search-engine-optimization": "a7e1d549789c34a3",
+  "page:services/google-adwords": "cd78cc491b684c28",
+  "page:services/social-media-marketing": "46fea9398fe92793",
+  "page:services/software-automation": "0f7182470e6ac511",
+  "page:services/accountancy": "ce186287eaee576a",
+  "post:ndis-provider-registration-australia": "09f568b9d325443d",
+  "post:bookkeeping-mistakes-small-business": "00a3e6f0bfd3cb55",
+  "post:what-is-support-coordination": "f155c03799817af1",
+  "post:website-development-ndis-providers": "a04192845486608b",
+  "post:automation-transform-ndis-business": "b745bcffc8bbfe43",
+  "post:client-portal-use-cases-service-businesses": "f1573288f8d14954",
+  "post:bas-lodgement-australian-businesses": "19f9b682a003b692",
+  "product:SOL-NDIS-START-DEPOSIT": "6bc76132d220ed62",
+  "product:SOL-NDIS-START-FULL": "3c854e9a78e79639",
+  "product:SOL-NDIS-CERTIFIED-DEPOSIT": "4677b8d12fbe3fb5",
+  "product:SOL-NDIS-CERTIFIED-FULL": "df6b9b8060faf0f1",
+  "product:SOL-NDIS-COMPLETE-DEPOSIT": "bff6085f3b88cc34",
+  "product:SOL-NDIS-COMPLETE-FULL": "631064a7309a910c",
+  "product:SOL-SCT-INDIVIDUAL": "af27bfa33f719c15",
+  "product:SOL-SCT-TEAM": "52a3a7fe43748c56",
+  "product:SOL-AUTO-STARTER": "145deff8ec325050",
+  "product:SOL-AUTO-PRO": "f4e957b3de4e1207",
+  "product:SOL-FIN-MONTHLY": "1d0f84d177f1a8bb",
+  "product:SOL-FIN-OPS": "f2d991ab9a8a8db7",
+  "product:SOL-FIN-NDIS": "d7253051a5ac03f2",
+  "product:SOL-MKT-STARTER": "2a06385e67d29a09",
+  "product:SOL-MKT-GROWTH": "7e2b3fba92f9e625",
+  "product:SOL-MKT-ENTERPRISE": "c2c243861903febb",
+  "course:3255": "81297261a501836e",
+  "course:495": "1d9b97b40389f2a0",
+  "course:499": "8c876b323c3e4823",
+  "option:logo": "5122052e9845dfcd",
+  "option:company_name": "c65cfe9a85a090fa",
+  "option:tagline": "9a74837a71a5076b",
+  "option:topbar_text": "dcd520a5d7befd70",
+  "option:topbar_link": "3e4a0cbb67e8a66d",
+  "option:phone": "464c3d8af93fec5d",
+  "option:phone_link": "5146eeaaa030b8c5",
+  "option:email": "ad8b98e0295b228f",
+  "option:whatsapp_url": "c5a518787a292b63",
+  "option:address": "f8fa04dc18846ff9",
+  "option:abn": "cd06de349f2488d1",
+  "option:website_label": "e5b69164fcf109f5",
+  "option:business_hours": "094a2010dc561f57",
+  "option:nav_items": "884337fb7d7e99f4",
+  "option:mega_menu": "cdd63d1ecec03dc4",
+  "option:mega_promo": "bc27efeb3b848a35",
+  "option:header_buttons": "ad19c15dd586ab4d",
+  "option:portal_links": "e4c41918dc71cb97",
+  "option:footer_cta_heading": "5d6c9884c5f9ca99",
+  "option:footer_cta_text": "f8e3a53762d3183f",
+  "option:footer_cta_link": "b307135cf59b05b6",
+  "option:newsletter_enabled": "5ffe533b830f08a0",
+  "option:newsletter_label": "79cdd94608dbbe77",
+  "option:newsletter_note": "9f05891958daa5b8",
+  "option:footer_columns": "00786a3c1c122e79",
+  "option:footer_copyright": "905f8f74802742f0",
+  "option:app_url": "015218d6fc454ec4",
+  "option:payment_page_url": "b3381b66f2a05d88",
+  "option:cookie_enabled": "5ffe533b830f08a0",
+  "option:cookie_text": "d79dbce9e1be0e40",
+  "option:cookie_link": "9da14cbc49b6eff1",
+  "option:floating_whatsapp": "5ffe533b830f08a0",
+  "option:back_to_top": "5ffe533b830f08a0",
+  "option:notification_email": "ad8b98e0295b228f",
+  "option:default_success": "86af238f7c0a78f6",
+  "option:head_code": "dd29ecf524b030a6"
+ },
+ "history": {
+  "sol_block:pricing-tabs": [
+   "74f4a589c432a1fc"
+  ],
+  "sol_block:service-comparison": [
+   "a8669c0d25ba0cea"
+  ],
+  "page:home": [
+   "806e6bbf05a6bb85",
+   "1199fbf5a0344c12"
+  ],
+  "page:ndis-packages": [
+   "037b60eca990f213"
+  ],
+  "page:accessibility": [
+   "102946aa2a4aead2"
+  ],
+  "page:services/ndis-registration": [
+   "ec6ab13fde3d07e8"
+  ],
+  "page:services/ndis-support-coordination-training": [
+   "fea3d25c24c9ec72",
+   "c0701a939035f13f"
+  ],
+  "page:services/google-adwords": [
+   "61f18e087557702f"
+  ],
+  "option:tagline": [
+   "bdc2327304a36dd9"
+  ],
+  "option:footer_columns": [
+   "c65563ed95e44410"
+  ],
+  "sol_block:ndis-roadmap": [
+   "32137992bedb053b"
+  ],
+  "sol_block:service-journey": [
+   "bd497c192ea57f5a"
+  ],
+  "page:after-payment": [
+   "1363f7fe8bd9d66a"
+  ],
+  "page:services/company-business-registration": [
+   "9a27c22564e357d9"
+  ],
+  "page:services/bookkeeping-bas-lodgement": [
+   "3cb647091465e925"
+  ],
+  "page:services/business-personal-loan-support": [
+   "89873b358d6e92ce"
+  ],
+  "page:services/software-automation": [
+   "1b24431ed9844130"
+  ]
+ },
+ "yoast_history": {
+  "page:home": [
+   {
+    "title": "SOL Business Consultant | NDIS Registration, Compliance & Business Services",
+    "description": "Australian business and NDIS consulting with practical systems, documentation, and support to move from setup to audit-ready operations."
+   },
+   {
+    "title": "SOL Business Consultant | NDIS Registration, Compliance & Business Services",
+    "description": "Australian business and NDIS consulting with practical systems, documentation, and support to move from setup to audit-ready operations."
+   }
+  ],
+  "page:accessibility": [
+   {
+    "title": "Accessibility Statement | SOL Business Consultant",
+    "description": "Our commitment to WCAG 2.1 Level AA accessibility and how to give feedback."
+   },
+   {
+    "title": "Accessibility Statement | SOL Business Consultant",
+    "description": "Our commitment to WCAG 2.1 Level AA accessibility and how to give feedback."
+   }
+  ],
+  "page:services/ndis-support-coordination-training": [
+   {
+    "title": "NDIS Support Coordination Training Australia | SOL",
+    "description": "12-module NDIS Support Coordinator training with 1,500+ quiz questions for individuals, teams and RTOs."
+   },
+   {
+    "title": "NDIS Support Coordination Training Australia | SOL",
+    "description": "12-module NDIS Support Coordinator training with 1,500+ quiz questions for individuals, teams and RTOs."
+   }
+  ],
+  "page:services/google-adwords": [
+   {
+    "title": "Google Adwords | SOL Business Consultant",
+    "description": "Reach the right audience quickly with paid advertising strategy, setup, monitoring, creative support, landing page optimisation, and campaign improvement."
+   },
+   {
+    "title": "Google Adwords | SOL Business Consultant",
+    "description": "Reach the right audience quickly with paid advertising strategy, setup, monitoring, creative support, landing page optimisation, and campaign improvement."
+   }
+  ]
+ },
+ "build": "1a579075b3e3c1a0"
 }

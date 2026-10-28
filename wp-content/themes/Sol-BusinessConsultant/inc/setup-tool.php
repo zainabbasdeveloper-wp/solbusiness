@@ -71,6 +71,14 @@ function sol_setup_page() {
 			'posts'     => ! empty( $_POST['opt_posts'] ),
 			'overwrite' => ! empty( $_POST['opt_overwrite'] ),
 		) );
+	} elseif ( isset( $_POST['sol_updates_apply'] ) ) {
+		check_admin_referer( 'sol_setup' );
+		$force = isset( $_POST['force'] ) ? array_map( 'sanitize_text_field', (array) wp_unslash( $_POST['force'] ) ) : array();
+		delete_option( 'sol_updates_paused' );
+		$report = sol_apply_theme_updates( $force );
+	} elseif ( isset( $_POST['sol_updates_undo'] ) ) {
+		check_admin_referer( 'sol_setup' );
+		$report = sol_undo_last_update();
 	} elseif ( isset( $_POST['sol_setup_reapply'] ) ) {
 		check_admin_referer( 'sol_setup' );
 		$keys = isset( $_POST['reapply'] ) ? array_map( function ( $k ) {
@@ -106,6 +114,9 @@ function sol_setup_page() {
 			<?php $plan = sol_setup_plan(); ?>
 		<?php endif; ?>
 
+		<?php sol_render_updates_panel( $scf ); ?>
+
+		<h2>Full setup</h2>
 		<form method="post">
 			<?php wp_nonce_field( 'sol_setup' ); ?>
 			<table class="form-table" role="presentation">
@@ -189,27 +200,8 @@ function sol_run_setup( $opts = array() ) {
 		foreach ( (array) ( $seed[ $g ] ?? array() ) as $item ) {
 			$id = sol_find_item( $item );
 			if ( ! $id ) {
-				$parent = 0;
-				if ( false !== strpos( $item['path'], '/' ) ) {
-					$pp     = get_page_by_path( dirname( $item['path'] ) );
-					$parent = $pp ? (int) $pp->ID : ( $services_parent ? (int) $services_parent->ID : 0 );
-				}
-				$postarr = array(
-					'post_type'    => $item['post_type'],
-					'post_name'    => basename( $item['path'] ),
-					'post_title'   => $item['title'],
-					'post_status'  => 'publish',
-					'post_parent'  => $parent,
-					'menu_order'   => isset( $item['menu_order'] ) ? (int) $item['menu_order'] : 0,
-					'post_content' => isset( $item['content'] ) ? $item['content'] : '',
-					'post_excerpt' => isset( $item['excerpt'] ) ? $item['excerpt'] : '',
-				);
-				if ( ! empty( $item['date'] ) ) {
-					$postarr['post_date'] = $item['date'];
-				}
-				$id = wp_insert_post( wp_slash( $postarr ), true );
-				if ( is_wp_error( $id ) ) {
-					$report['errors'][] = "Could not create {$item['path']}: " . $id->get_error_message();
+				$id = sol_create_seed_post( $item, $report );
+				if ( ! $id ) {
 					continue;
 				}
 				$fresh[ $id ] = true;
@@ -237,38 +229,7 @@ function sol_run_setup( $opts = array() ) {
 				$counts[ $g ]['kept'] = ( $counts[ $g ]['kept'] ?? 0 ) + 1;
 				continue;
 			}
-			if ( ! empty( $item['template'] ) ) {
-				$prev = get_post_meta( $id, '_wp_page_template', true );
-				if ( $prev !== $item['template'] && ! get_post_meta( $id, '_sol_previous_template', true ) ) {
-					update_post_meta( $id, '_sol_previous_template', $prev ? $prev : 'default' );
-				}
-				update_post_meta( $id, '_wp_page_template', $item['template'] );
-				// Keep the page title in line with the training site (service cards show it).
-				if ( ! empty( $item['title'] ) && get_the_title( $id ) !== $item['title'] ) {
-					if ( ! get_post_meta( $id, '_sol_previous_title', true ) ) {
-						update_post_meta( $id, '_sol_previous_title', get_post_field( 'post_title', $id ) );
-					}
-					wp_update_post( array( 'ID' => $id, 'post_title' => $item['title'] ) );
-				}
-			}
-			foreach ( (array) ( $item['fields'] ?? array() ) as $name => $value ) {
-				update_field( isset( $keys[ $name ] ) ? $keys[ $name ] : $name, sol_setup_resolve( $value, $ids, $report ), $id );
-			}
-			sol_setup_yoast( $id, $item );
-			if ( ! empty( $item['featured_image'] ) ) {
-				$att = sol_setup_image( substr( $item['featured_image'], 4 ), $report, isset( $item['featured_alt'] ) ? $item['featured_alt'] : '' );
-				if ( $att ) {
-					set_post_thumbnail( $id, $att );
-				}
-			}
-			if ( ! empty( $item['category'] ) ) {
-				$term = term_exists( $item['category'], 'category' );
-				$term = $term ? $term : wp_insert_term( $item['category'], 'category' );
-				if ( ! is_wp_error( $term ) ) {
-					wp_set_post_categories( $id, array( (int) $term['term_id'] ) );
-				}
-			}
-			update_post_meta( $id, '_sol_setup', 1 );
+			sol_apply_post_item( $id, $item, $keys, $ids, $report );
 			$counts[ $g ][ $is_fresh ? 'created' : 'updated' ] = ( $counts[ $g ][ $is_fresh ? 'created' : 'updated' ] ?? 0 ) + 1;
 		}
 	}
@@ -287,12 +248,18 @@ function sol_run_setup( $opts = array() ) {
 		if ( $opts['overwrite'] || ! get_option( 'sol_setup_options_done' ) ) {
 			foreach ( $seed['options'] as $name => $value ) {
 				update_field( isset( $keys[ $name ] ) ? $keys[ $name ] : $name, sol_setup_resolve( $value, $ids, $report ), 'option' );
+				sol_stamp_option( $name, $keys );
 			}
 			update_option( 'sol_setup_options_done', 1, false );
 			$report['log'][] = 'Site settings saved (header, menu, footer, contact details).';
 		} else {
 			$report['log'][] = 'Site settings already saved earlier — left as they are.';
 		}
+	}
+
+	if ( $opts['pages'] && ! empty( $seed['build'] ) ) {
+		update_option( 'sol_applied_build', $seed['build'], false );
+		delete_option( 'sol_updates_paused' );
 	}
 
 	$home = get_page_by_path( 'home' );
@@ -314,26 +281,10 @@ function sol_setup_products( $seed, $opts, $keys, &$report ) {
 			++$kept;
 			continue;
 		}
-		$product = $id ? wc_get_product( $id ) : new WC_Product_Simple();
-		$product->set_name( $p['name'] );
-		$product->set_sku( $p['sku'] );
-		$product->set_regular_price( (string) $p['price'] );
-		$product->set_short_description( $p['short'] );
-		$desc = $p['features'] ? '<ul><li>' . implode( '</li><li>', array_map( 'esc_html', $p['features'] ) ) . '</li></ul>' : '';
-		$product->set_description( $desc );
-		$product->set_virtual( true );
-		$product->set_sold_individually( true );
-		$product->set_catalog_visibility( 'hidden' );
-		$product->set_tax_status( 'taxable' );
-		$product->set_status( 'publish' );
-		$term = term_exists( $p['category'], 'product_cat' );
-		$term = $term ? $term : wp_insert_term( $p['category'], 'product_cat' );
-		if ( ! is_wp_error( $term ) ) {
-			$product->set_category_ids( array( (int) $term['term_id'] ) );
-		}
-		$product->save();
-		if ( ! empty( $p['pricing_code'] ) ) {
-			update_post_meta( $product->get_id(), '_sol_pricing_code', $p['pricing_code'] );
+		$pid = sol_save_package_product( $p, $id );
+		if ( $pid ) {
+			update_post_meta( $pid, '_sol_fp', $seed['fingerprints'][ 'product:' . $p['sku'] ] ?? '' );
+			update_post_meta( $pid, '_sol_values_hash', sol_product_values_hash( $pid ) );
 		}
 		++$made;
 	}
@@ -352,21 +303,132 @@ function sol_setup_products( $seed, $opts, $keys, &$report ) {
 		foreach ( $c['fields'] as $name => $value ) {
 			update_field( isset( $keys[ $name ] ) ? $keys[ $name ] : $name, sol_setup_resolve( $value, array(), $report ), $pid );
 		}
+		update_post_meta( $pid, '_sol_fp_course', $seed['fingerprints'][ 'course:' . $pid ] ?? '' );
+		update_post_meta( $pid, '_sol_values_hash_course', sol_course_values_hash( $pid, $c, $keys ) );
 		++$done;
 	}
 	$report['log'][] = sprintf( 'Course details added to %d training products.', $done );
 }
 
-/** Yoast title/description, only where Yoast has none yet. */
+/** Create a page / post / reusable section from the seed. Returns its ID or 0. */
+function sol_create_seed_post( $item, &$report ) {
+	$parent = 0;
+	if ( false !== strpos( $item['path'], '/' ) ) {
+		$pp     = get_page_by_path( dirname( $item['path'] ) );
+		$sp     = get_page_by_path( 'services' );
+		$parent = $pp ? (int) $pp->ID : ( $sp ? (int) $sp->ID : 0 );
+	}
+	$postarr = array(
+		'post_type'    => $item['post_type'],
+		'post_name'    => basename( $item['path'] ),
+		'post_title'   => $item['title'],
+		'post_status'  => 'publish',
+		'post_parent'  => $parent,
+		'menu_order'   => isset( $item['menu_order'] ) ? (int) $item['menu_order'] : 0,
+		'post_content' => isset( $item['content'] ) ? $item['content'] : '',
+		'post_excerpt' => isset( $item['excerpt'] ) ? $item['excerpt'] : '',
+	);
+	if ( ! empty( $item['date'] ) ) {
+		$postarr['post_date'] = $item['date'];
+	}
+	$id = wp_insert_post( wp_slash( $postarr ), true );
+	if ( is_wp_error( $id ) ) {
+		$report['errors'][] = "Could not create {$item['path']}: " . $id->get_error_message();
+		return 0;
+	}
+	return (int) $id;
+}
+
+/** Apply one seed item to a post: template, title, SCF fields, SEO, image, category. Then record its fingerprint. */
+function sol_apply_post_item( $id, $item, $keys, $ids, &$report ) {
+	if ( ! empty( $item['template'] ) ) {
+		$prev = get_post_meta( $id, '_wp_page_template', true );
+		if ( $prev !== $item['template'] && ! get_post_meta( $id, '_sol_previous_template', true ) ) {
+			update_post_meta( $id, '_sol_previous_template', $prev ? $prev : 'default' );
+		}
+		update_post_meta( $id, '_wp_page_template', $item['template'] );
+	}
+	// Keep the title in line with the training site (service cards show it).
+	if ( ! empty( $item['title'] ) && get_post_field( 'post_title', $id ) !== $item['title'] ) {
+		if ( ! empty( $item['template'] ) && ! get_post_meta( $id, '_sol_previous_title', true ) ) {
+			update_post_meta( $id, '_sol_previous_title', get_post_field( 'post_title', $id ) );
+		}
+		wp_update_post( array( 'ID' => $id, 'post_title' => $item['title'] ) );
+	}
+	foreach ( (array) ( $item['fields'] ?? array() ) as $name => $value ) {
+		update_field( isset( $keys[ $name ] ) ? $keys[ $name ] : $name, sol_setup_resolve( $value, $ids, $report ), $id );
+	}
+	sol_setup_yoast( $id, $item );
+	if ( ! empty( $item['featured_image'] ) ) {
+		$att = sol_setup_image( substr( $item['featured_image'], 4 ), $report, isset( $item['featured_alt'] ) ? $item['featured_alt'] : '' );
+		if ( $att ) {
+			set_post_thumbnail( $id, $att );
+		}
+	}
+	if ( ! empty( $item['category'] ) ) {
+		$term = term_exists( $item['category'], 'category' );
+		$term = $term ? $term : wp_insert_term( $item['category'], 'category' );
+		if ( ! is_wp_error( $term ) ) {
+			wp_set_post_categories( $id, array( (int) $term['term_id'] ) );
+		}
+	}
+	sol_stamp_post( $id, $item, $keys );
+}
+
+/** Create or update one WooCommerce package product. Returns its ID. */
+function sol_save_package_product( $p, $id = 0 ) {
+	$product = $id ? wc_get_product( $id ) : new WC_Product_Simple();
+	if ( ! $product ) {
+		return 0;
+	}
+	$product->set_name( $p['name'] );
+	$product->set_sku( $p['sku'] );
+	$product->set_regular_price( (string) $p['price'] );
+	$product->set_short_description( $p['short'] );
+	$product->set_description( $p['features'] ? '<ul><li>' . implode( '</li><li>', array_map( 'esc_html', $p['features'] ) ) . '</li></ul>' : '' );
+	$product->set_virtual( true );
+	$product->set_sold_individually( true );
+	$product->set_catalog_visibility( 'hidden' );
+	$product->set_tax_status( 'taxable' );
+	$product->set_status( 'publish' );
+	$term = term_exists( $p['category'], 'product_cat' );
+	$term = $term ? $term : wp_insert_term( $p['category'], 'product_cat' );
+	if ( ! is_wp_error( $term ) ) {
+		$product->set_category_ids( array( (int) $term['term_id'] ) );
+	}
+	$product->save();
+	if ( ! empty( $p['pricing_code'] ) ) {
+		update_post_meta( $product->get_id(), '_sol_pricing_code', $p['pricing_code'] );
+	}
+	return (int) $product->get_id();
+}
+
+/**
+ * Yoast title/description. Filled where empty, and updated where the current value is one
+ * the theme set before, so SEO text written by hand in Yoast is never replaced.
+ */
 function sol_setup_yoast( $id, $item ) {
 	if ( empty( $item['yoast'] ) ) {
 		return;
 	}
-	if ( ! empty( $item['yoast']['title'] ) && ! get_post_meta( $id, '_yoast_wpseo_title', true ) ) {
-		update_post_meta( $id, '_yoast_wpseo_title', $item['yoast']['title'] );
-	}
-	if ( ! empty( $item['yoast']['description'] ) && ! get_post_meta( $id, '_yoast_wpseo_metadesc', true ) ) {
-		update_post_meta( $id, '_yoast_wpseo_metadesc', $item['yoast']['description'] );
+	$seed = sol_seed();
+	$old  = $seed['yoast_history'][ sol_item_key( $item ) ] ?? array();
+	foreach ( array( 'title' => '_yoast_wpseo_title', 'description' => '_yoast_wpseo_metadesc' ) as $k => $meta ) {
+		if ( empty( $item['yoast'][ $k ] ) ) {
+			continue;
+		}
+		$cur  = (string) get_post_meta( $id, $meta, true );
+		$ours = (array) get_post_meta( $id, '_sol_yoast_' . $k, true );
+		$prev = array();
+		foreach ( (array) $old as $y ) {
+			if ( ! empty( $y[ $k ] ) ) {
+				$prev[] = $y[ $k ];
+			}
+		}
+		if ( '' === $cur || in_array( $cur, $ours, true ) || in_array( $cur, $prev, true ) ) {
+			update_post_meta( $id, $meta, $item['yoast'][ $k ] );
+			update_post_meta( $id, '_sol_yoast_' . $k, array( $item['yoast'][ $k ] ) );
+		}
 	}
 }
 
@@ -467,5 +529,75 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 			WP_CLI::warning( $e );
 		}
 		WP_CLI::success( 'SOL setup finished.' );
+	} );
+}
+
+/** "Theme updates" panel on the SOL Setup screen. */
+function sol_render_updates_panel( $scf ) {
+	if ( ! $scf || ! sol_setup_has_run() ) {
+		return;
+	}
+	$seed    = sol_seed();
+	$plan    = sol_updates_plan();
+	$pending = array_values( array_filter( $plan, function ( $r ) {
+		return in_array( $r['state'], array( 'update', 'new', 'edited' ), true );
+	} ) );
+	$backup  = get_option( 'sol_last_update_backup' );
+	$paused  = get_option( 'sol_updates_paused' );
+	$labels  = array( 'update' => 'Will be updated', 'new' => 'Will be created', 'edited' => 'Edited in WordPress since setup: kept unless ticked' );
+	?>
+	<div class="card" style="max-width:1100px;margin:16px 0;padding:16px 20px">
+		<h2 style="margin-top:0">Theme updates</h2>
+		<?php if ( ! $pending ) : ?>
+			<p><span class="dashicons dashicons-yes-alt" style="color:#00a32a"></span> Everything matches the current theme version. After the next <code>git pull</code>, changed pages, sections, products and settings are updated automatically the first time an administrator opens the dashboard.</p>
+		<?php else : ?>
+			<p><?php echo esc_html( $paused ? 'Automatic updates are paused after an undo. Review and apply below.' : 'This theme version changes the items below. They are applied automatically on the next dashboard visit, or right now with the button.' ); ?></p>
+		<?php endif; ?>
+		<form method="post">
+			<?php wp_nonce_field( 'sol_setup' ); ?>
+			<?php if ( $pending ) : ?>
+				<table class="widefat striped" style="margin:8px 0 12px">
+					<thead><tr><th style="width:28px"></th><th>Item</th><th>What happens</th></tr></thead>
+					<tbody>
+						<?php foreach ( $pending as $r ) : ?>
+							<tr>
+								<td><?php if ( 'edited' === $r['state'] ) : ?><input type="checkbox" name="force[]" value="<?php echo esc_attr( $r['key'] ); ?>" aria-label="<?php echo esc_attr( 'Overwrite ' . $r['label'] ); ?>"><?php endif; ?></td>
+								<td><?php echo esc_html( $r['label'] ); ?></td>
+								<td><?php echo esc_html( $labels[ $r['state'] ] ); ?></td>
+							</tr>
+						<?php endforeach; ?>
+					</tbody>
+				</table>
+				<?php submit_button( 'Apply theme updates', 'primary', 'sol_updates_apply', false ); ?>
+			<?php endif; ?>
+			<?php if ( is_array( $backup ) && ! empty( $backup['items'] ) ) : ?>
+				<?php submit_button( sprintf( 'Undo last update (%d items, %s)', count( $backup['items'] ), wp_date( 'j M Y H:i', $backup['time'] ) ), 'secondary', 'sol_updates_undo', false, array( 'onclick' => "return confirm('Put back the previous version of every item the last theme update changed?');" ) ); ?>
+			<?php endif; ?>
+		</form>
+		<p class="description" style="margin-bottom:0">Before an item is updated its previous version is saved: <em>Undo last update</em> restores it, and pages also keep a WordPress revision.</p>
+	</div>
+	<?php
+}
+
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+	// wp sol update [--force-all]
+	WP_CLI::add_command( 'sol update', function ( $args, $assoc ) {
+		$force = array();
+		if ( ! empty( $assoc['force-all'] ) ) {
+			foreach ( sol_updates_plan() as $r ) {
+				if ( 'edited' === $r['state'] ) {
+					$force[] = $r['key'];
+				}
+			}
+		}
+		delete_option( 'sol_updates_paused' );
+		$r = sol_apply_theme_updates( $force );
+		foreach ( array_merge( $r['log'], array_map( function ( $x ) { return 'updated: ' . $x; }, $r['updated'] ), array_map( function ( $x ) { return 'kept (edited): ' . $x; }, $r['kept'] ) ) as $l ) {
+			WP_CLI::log( $l );
+		}
+		foreach ( $r['errors'] as $e ) {
+			WP_CLI::warning( $e );
+		}
+		WP_CLI::success( 'SOL theme content is up to date.' );
 	} );
 }

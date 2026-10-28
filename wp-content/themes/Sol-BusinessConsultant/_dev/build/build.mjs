@@ -4,6 +4,8 @@
 //   _dev/FIELD-REFERENCE.md  every field, repeater and data type
 // Usage: npm run build   (run `npm run extract` first if the training site changed)
 import { mkdirSync, writeFileSync, rmSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { execSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { GROUPS, LAYOUTS, OPTIONS_SLUG, TPL_BUILDER, TPL_SERVICE, topLevelKeys } from './fields.mjs';
@@ -130,7 +132,50 @@ const seed = routeUrls({
   courses: courses.map((c) => ({ product_id: c.product_id, title: c.title, fields: c.fields })),
   posts: posts.map((p) => ({ post_type: 'post', path: p.slug, title: p.title, excerpt: p.excerpt, content: p.content, date: p.date, category: p.category, featured_image: p.featured_image, featured_alt: p.featured_alt, sticky: p.featured, yoast: yoast(p.seo), fields: p.fields })),
 });
+/* ---------- fingerprints: let WordPress apply only what changed after a git pull ---------- */
+// One hash per item (page, reusable section, post, product, course, site setting). WordPress stores the
+// hash it last applied; a different hash in a new theme version means that item needs updating.
+// "history" lists each item's hashes from earlier committed versions of this file, so sites set up
+// before fingerprints existed can still tell which items changed since.
+const sha = (v) => createHash('sha1').update(JSON.stringify(v)).digest('hex').slice(0, 16);
+function fingerprints(s) {
+  const fp = {};
+  for (const g of ['blocks', 'pages', 'services', 'posts']) {
+    for (const it of s[g] || []) fp[`${it.post_type}:${it.path}`] = sha({ title: it.title, template: it.template || '', fields: it.fields, content: it.content || '' });
+  }
+  for (const p of s.products || []) fp[`product:${p.sku}`] = sha(p);
+  for (const c of s.courses || []) fp[`course:${c.product_id}`] = sha(c.fields);
+  for (const [k, v] of Object.entries(s.options || {})) fp[`option:${k}`] = sha(v);
+  return fp;
+}
+seed.fingerprints = fingerprints(seed);
+seed.history = {};
+seed.yoast_history = {};
+try {
+  const rel = 'wp-content/themes/Sol-BusinessConsultant/seed/site.json';
+  const root = execSync('git rev-parse --show-toplevel', { cwd: THEME }).toString().trim();
+  const shas = execSync(`git log --format=%H -- ${rel}`, { cwd: root }).toString().split('\n').filter(Boolean);
+  for (const c of shas) {
+    let old;
+    try { old = JSON.parse(execSync(`git show ${c}:${rel}`, { cwd: root, maxBuffer: 64 * 1024 * 1024 }).toString()); } catch { continue; }
+    // Earlier SEO texts, so a site only gets its Yoast title replaced if the theme set it.
+    for (const g of ['pages', 'services', 'posts']) for (const it of old[g] || []) {
+      const k = `${it.post_type}:${it.path}`;
+      const cur = [...seed.pages, ...seed.services, ...seed.posts].find((x) => `${x.post_type}:${x.path}` === k);
+      if (it.yoast && JSON.stringify(it.yoast) !== JSON.stringify(cur && cur.yoast)) (seed.yoast_history[k] = seed.yoast_history[k] || []).push(it.yoast);
+    }
+    const ofp = old.fingerprints || fingerprints(old);
+    for (const [k, h] of Object.entries(ofp)) {
+      if (h === seed.fingerprints[k]) continue;
+      (seed.history[k] = seed.history[k] || []).includes(h) || seed.history[k].push(h);
+    }
+  }
+} catch (e) {
+  console.warn('  (no git history found; fingerprints written without history)');
+}
+seed.build = sha(seed.fingerprints);
 writeFileSync(join(THEME, 'seed', 'site.json'), JSON.stringify(seed, null, 1));
+console.log(`    ${Object.keys(seed.fingerprints).length} fingerprints, ${Object.keys(seed.history).length} items changed since earlier versions: ${Object.keys(seed.history).join(', ')}`);
 
 /* ---------- field reference ---------- */
 const TYPE_NOTE = {
