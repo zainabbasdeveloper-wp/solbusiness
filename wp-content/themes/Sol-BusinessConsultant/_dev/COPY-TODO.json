@@ -1,0 +1,5907 @@
+[
+ {
+  "id": "fbe32d1b",
+  "where": "page:home",
+  "text": "STRUCTURE.\nCOMPLIANCE.\n[SCALE.]"
+ },
+ {
+  "id": "d766e6bf",
+  "where": "page:home",
+  "text": "Book Free Consultation"
+ },
+ {
+  "id": "830d359a",
+  "where": "page:home",
+  "text": "Explore Services"
+ },
+ {
+  "id": "1023ba98",
+  "where": "page:home",
+  "text": "Audit Ready"
+ },
+ {
+  "id": "7a772597",
+  "where": "page:home",
+  "text": "Our Services"
+ },
+ {
+  "id": "33bf2fec",
+  "where": "page:home",
+  "text": "View All Services"
+ },
+ {
+  "id": "ab0e06d9",
+  "where": "page:home",
+  "text": "Browse Training Courses"
+ },
+ {
+  "id": "36ac3f83",
+  "where": "page:home",
+  "text": "Your One-Stop Business Partner"
+ },
+ {
+  "id": "0d32e39b",
+  "where": "page:home",
+  "text": "For Business Services"
+ },
+ {
+  "id": "6d433cb3",
+  "where": "page:home",
+  "text": "Choose a service"
+ },
+ {
+  "id": "403d9830",
+  "where": "page:home",
+  "text": "Pay securely"
+ },
+ {
+  "id": "f34e6796",
+  "where": "page:home",
+  "text": "Track in client portal"
+ },
+ {
+  "id": "4ff61d91",
+  "where": "page:home",
+  "text": "Receive final work"
+ },
+ {
+  "id": "4ecc2c68",
+  "where": "page:home",
+  "text": "Explore Business Services"
+ },
+ {
+  "id": "795675a6",
+  "where": "page:home",
+  "text": "Make a Service Payment"
+ },
+ {
+  "id": "64ae3621",
+  "where": "page:home",
+  "text": "For Training"
+ },
+ {
+  "id": "23ef7c9a",
+  "where": "page:home",
+  "text": "Select training"
+ },
+ {
+  "id": "43d6318e",
+  "where": "page:home",
+  "text": "Enrol online"
+ },
+ {
+  "id": "0533eb0a",
+  "where": "page:home",
+  "text": "Learn and complete"
+ },
+ {
+  "id": "88c13682",
+  "where": "page:home",
+  "text": "Keep records"
+ },
+ {
+  "id": "e0913d88",
+  "where": "page:home",
+  "text": "Compare Training Packages"
+ },
+ {
+  "id": "df99d2ee",
+  "where": "page:home",
+  "text": "View All Pricing"
+ },
+ {
+  "id": "52ef75ad",
+  "where": "page:home",
+  "text": "Live service status"
+ },
+ {
+  "id": "6fe670ec",
+  "where": "page:home",
+  "text": "Document requests"
+ },
+ {
+  "id": "46b7e6e0",
+  "where": "page:home",
+  "text": "Support tickets"
+ },
+ {
+  "id": "0f617fec",
+  "where": "page:home",
+  "text": "Already have a quote?"
+ },
+ {
+  "id": "7b1a7d19",
+  "where": "page:home",
+  "text": "Make Service Payment"
+ },
+ {
+  "id": "4f2f55c2",
+  "where": "page:home",
+  "text": "Explore Training"
+ },
+ {
+  "id": "c6314b6c",
+  "where": "page:home",
+  "text": "Client portal for service work"
+ },
+ {
+  "id": "94638ce7",
+  "where": "page:home",
+  "text": "Student dashboard for training"
+ },
+ {
+  "id": "2bd83c9b",
+  "where": "page:home",
+  "text": "NDIS Registration Intake"
+ },
+ {
+  "id": "5a324eb0",
+  "where": "page:home",
+  "text": "Website & Automation Brief"
+ },
+ {
+  "id": "27ca355c",
+  "where": "page:home",
+  "text": "Marketing & SEO Goals"
+ },
+ {
+  "id": "06148a0b",
+  "where": "page:home",
+  "text": "Finance & Payroll Setup"
+ },
+ {
+  "id": "dc064d50",
+  "where": "page:home",
+  "text": "Start Service Intake"
+ },
+ {
+  "id": "8d2c6975",
+  "where": "page:home",
+  "text": "Browse Training"
+ },
+ {
+  "id": "ef9f8efe",
+  "where": "page:home",
+  "text": "NDIS registration checklist"
+ },
+ {
+  "id": "431e3d39",
+  "where": "page:home",
+  "text": "NDIS readiness quiz"
+ },
+ {
+  "id": "4fe2191d",
+  "where": "page:home",
+  "text": "NDIS readiness calculator"
+ },
+ {
+  "id": "9e3f9017",
+  "where": "page:home",
+  "text": "Website launch checklist"
+ },
+ {
+  "id": "93969b9d",
+  "where": "page:home",
+  "text": "SEO readiness checklist"
+ },
+ {
+  "id": "938b0125",
+  "where": "page:home",
+  "text": "Training pathway guide"
+ },
+ {
+  "id": "03c8889a",
+  "where": "page:home",
+  "text": "After payment, everything is tracked"
+ },
+ {
+  "id": "af43c082",
+  "where": "page:home",
+  "text": "Choose Portal"
+ },
+ {
+  "id": "6b34648c",
+  "where": "page:home",
+  "text": "Free Tools"
+ },
+ {
+  "id": "c357de99",
+  "where": "page:home",
+  "text": "NDIS Registration Checklist"
+ },
+ {
+  "id": "400c956d",
+  "where": "page:home",
+  "text": "Website Launch Checklist"
+ },
+ {
+  "id": "9bd29b6c",
+  "where": "page:home",
+  "text": "SEO Readiness Checklist"
+ },
+ {
+  "id": "45224a3d",
+  "where": "page:home",
+  "text": "Payroll & BAS Prep Checklist"
+ },
+ {
+  "id": "563f98f6",
+  "where": "page:home",
+  "text": "Request Checklist"
+ },
+ {
+  "id": "7bd51128",
+  "where": "page:home",
+  "text": "Service selector quiz"
+ },
+ {
+  "id": "db5bb0eb",
+  "where": "page:home",
+  "text": "Find My Service"
+ },
+ {
+  "id": "a1cc63b9",
+  "where": "page:home",
+  "text": "Send me this recommendation and relevant SOL follow-up."
+ },
+ {
+  "id": "c6344f50",
+  "where": "page:home",
+  "text": "What do you need most right now?"
+ },
+ {
+  "id": "9ca66ea7",
+  "where": "page:home",
+  "text": "Which stage best matches you?"
+ },
+ {
+  "id": "e133534e",
+  "where": "page:home",
+  "text": "How urgent is this?"
+ },
+ {
+  "id": "d3e606d4",
+  "where": "page:home",
+  "text": "NDIS Registration Support"
+ },
+ {
+  "id": "5c4bc558",
+  "where": "page:home",
+  "text": "Recommended Pathway"
+ },
+ {
+  "id": "793b65b4",
+  "where": "page:home",
+  "text": "View NDIS Support"
+ },
+ {
+  "id": "c35e1dd9",
+  "where": "page:home",
+  "text": "Website Development"
+ },
+ {
+  "id": "32db90aa",
+  "where": "page:home",
+  "text": "View Website Service"
+ },
+ {
+  "id": "6ed2955a",
+  "where": "page:home",
+  "text": "Marketing & SEO Support"
+ },
+ {
+  "id": "c768d5ab",
+  "where": "page:home",
+  "text": "View Marketing Services"
+ },
+ {
+  "id": "7073e7ca",
+  "where": "page:home",
+  "text": "Bookkeeping, BAS & Payroll"
+ },
+ {
+  "id": "22fa395d",
+  "where": "page:home",
+  "text": "View Finance Support"
+ },
+ {
+  "id": "75f08ef6",
+  "where": "page:home",
+  "text": "Support Coordination Training"
+ },
+ {
+  "id": "2cc32eb6",
+  "where": "page:home",
+  "text": "Registration preparation pathway"
+ },
+ {
+  "id": "24c2be18",
+  "where": "page:home",
+  "text": "Support coordination training pathway"
+ },
+ {
+  "id": "6433023b",
+  "where": "page:home",
+  "text": "Operational clean-up pathway"
+ },
+ {
+  "id": "06dc37a7",
+  "where": "page:home",
+  "text": "View Examples"
+ },
+ {
+  "id": "6b8ba94e",
+  "where": "page:home",
+  "text": "Featured Offers"
+ },
+ {
+  "id": "6b408714",
+  "where": "page:home",
+  "text": "Training Courses"
+ },
+ {
+  "id": "ade54f01",
+  "where": "page:home",
+  "text": "View All Plans"
+ },
+ {
+  "id": "8bc38284",
+  "where": "page:home",
+  "text": "Service Standards"
+ },
+ {
+  "id": "9d86e46b",
+  "where": "page:home",
+  "text": "Human support"
+ },
+ {
+  "id": "693dc1de",
+  "where": "page:home",
+  "text": "Responsive follow-up"
+ },
+ {
+  "id": "738d204f",
+  "where": "page:about",
+  "text": "About SOL"
+ },
+ {
+  "id": "a91fe4ca",
+  "where": "page:blog",
+  "text": "View Use Cases"
+ },
+ {
+  "id": "68f2cd36",
+  "where": "page:blog",
+  "text": "Book Consultation"
+ },
+ {
+  "id": "85d418ca",
+  "where": "page:case-studies",
+  "text": "Explain verification or certification audit expectations where relevant"
+ },
+ {
+  "id": "ac3def10",
+  "where": "page:case-studies",
+  "text": "Typical Support"
+ },
+ {
+  "id": "aac9fa82",
+  "where": "page:case-studies",
+  "text": "Help maintain completion records for internal governance"
+ },
+ {
+  "id": "a1e38b6a",
+  "where": "page:case-studies",
+  "text": "Operational support for growing service providers"
+ },
+ {
+  "id": "e825933e",
+  "where": "page:case-studies",
+  "text": "Get My Free Assessment"
+ },
+ {
+  "id": "c5c0671a",
+  "where": "page:use-cases",
+  "text": "Use Cases"
+ },
+ {
+  "id": "54241689",
+  "where": "page:use-cases",
+  "text": "Service payments"
+ },
+ {
+  "id": "94421092",
+  "where": "page:use-cases",
+  "text": "Client profile"
+ },
+ {
+  "id": "83376f65",
+  "where": "page:use-cases",
+  "text": "Intake forms"
+ },
+ {
+  "id": "64cdf1f5",
+  "where": "page:use-cases",
+  "text": "Admin review"
+ },
+ {
+  "id": "7a026cfc",
+  "where": "page:use-cases",
+  "text": "Client notifications"
+ },
+ {
+  "id": "9e7e3aa4",
+  "where": "page:use-cases",
+  "text": "Paid service linked to client profile"
+ },
+ {
+  "id": "fcb0b30e",
+  "where": "page:use-cases",
+  "text": "Client profile and payment history"
+ },
+ {
+  "id": "db35cbb3",
+  "where": "page:use-cases",
+  "text": "Project board by service"
+ },
+ {
+  "id": "12a9ed84",
+  "where": "page:use-cases",
+  "text": "Status updates visible to client"
+ },
+ {
+  "id": "e97e9371",
+  "where": "page:use-cases",
+  "text": "Requested uploads"
+ },
+ {
+  "id": "d528d983",
+  "where": "page:use-cases",
+  "text": "Admin verification"
+ },
+ {
+  "id": "0bc07b59",
+  "where": "page:use-cases",
+  "text": "Final deliverables"
+ },
+ {
+  "id": "ee0cf015",
+  "where": "page:use-cases",
+  "text": "Client submits ticket"
+ },
+ {
+  "id": "20b30b1e",
+  "where": "page:use-cases",
+  "text": "Admin replies and updates status"
+ },
+ {
+  "id": "19ea0336",
+  "where": "page:use-cases",
+  "text": "Client sees resolution history"
+ },
+ {
+  "id": "fa492462",
+  "where": "page:use-cases",
+  "text": "Create plan or announcement"
+ },
+ {
+  "id": "604a0793",
+  "where": "page:use-cases",
+  "text": "Notify client"
+ },
+ {
+  "id": "27aac046",
+  "where": "page:use-cases",
+  "text": "Client can pay or book consultation"
+ },
+ {
+  "id": "79b15d6b",
+  "where": "page:use-cases",
+  "text": "Operational reminders and workflow visibility"
+ },
+ {
+  "id": "96bdc9be",
+  "where": "page:use-cases",
+  "text": "Trigger reminders"
+ },
+ {
+  "id": "b4fb5638",
+  "where": "page:use-cases",
+  "text": "Track status"
+ },
+ {
+  "id": "bc9abcc4",
+  "where": "page:use-cases",
+  "text": "Keep audit trail"
+ },
+ {
+  "id": "dc96a880",
+  "where": "page:use-cases",
+  "text": "Want this mapped to your business?"
+ },
+ {
+  "id": "3341a9b9",
+  "where": "page:use-cases",
+  "text": "View Automation Service"
+ },
+ {
+  "id": "135526e5",
+  "where": "page:marketing-packages",
+  "text": "Digital Marketing"
+ },
+ {
+  "id": "d551651c",
+  "where": "page:marketing-packages",
+  "text": "View Packages"
+ },
+ {
+  "id": "60018f07",
+  "where": "page:marketing-packages",
+  "text": "Talk to Us"
+ },
+ {
+  "id": "776b4535",
+  "where": "page:marketing-packages",
+  "text": "Buy a Package"
+ },
+ {
+  "id": "ea963548",
+  "where": "page:marketing-packages",
+  "text": "Compare Plans"
+ },
+ {
+  "id": "d7ca52e8",
+  "where": "page:marketing-packages",
+  "text": "Feature Comparison"
+ },
+ {
+  "id": "0f61ebc8",
+  "where": "page:marketing-packages",
+  "text": "2 | 4 | All platforms"
+ },
+ {
+  "id": "a0783d01",
+  "where": "page:marketing-packages",
+  "text": "8 | 20 + stories | Unlimited"
+ },
+ {
+  "id": "508457ba",
+  "where": "page:marketing-packages",
+  "text": "yes | yes | yes"
+ },
+ {
+  "id": "81a48354",
+  "where": "page:marketing-packages",
+  "text": "no | 4 blogs/mo | Unlimited"
+ },
+ {
+  "id": "3a7493fd",
+  "where": "page:marketing-packages",
+  "text": "no | Up to $2k spend | Up to $10k spend"
+ },
+ {
+  "id": "1338c2f9",
+  "where": "page:marketing-packages",
+  "text": "no | 2/mo | Weekly + automation"
+ },
+ {
+  "id": "cea00ae3",
+  "where": "page:marketing-packages",
+  "text": "no | no | yes"
+ },
+ {
+  "id": "889b08f1",
+  "where": "page:marketing-packages",
+  "text": "no | yes | yes"
+ },
+ {
+  "id": "ef37e179",
+  "where": "page:marketing-packages",
+  "text": "Ready to get started?"
+ },
+ {
+  "id": "c197d6ef",
+  "where": "page:marketing-packages",
+  "text": "Choose Your Plan"
+ },
+ {
+  "id": "f9a7343c",
+  "where": "page:marketing-packages",
+  "text": "Marketing Packages"
+ },
+ {
+  "id": "e9cd4e31",
+  "where": "page:marketing-packages",
+  "text": "Social media platforms: 2"
+ },
+ {
+  "id": "e90c7039",
+  "where": "page:marketing-packages",
+  "text": "Branded posts per month: 8"
+ },
+ {
+  "id": "413121ad",
+  "where": "page:marketing-packages",
+  "text": "Basic SEO audit & fixes"
+ },
+ {
+  "id": "10089b0b",
+  "where": "page:marketing-packages",
+  "text": "Google Business Profile setup"
+ },
+ {
+  "id": "4c98da63",
+  "where": "page:marketing-packages",
+  "text": "Monthly performance report"
+ },
+ {
+  "id": "16c2c52a",
+  "where": "page:marketing-packages",
+  "text": "Buy Now"
+ },
+ {
+  "id": "3a5ec3af",
+  "where": "page:marketing-packages",
+  "text": "Ask a Question"
+ },
+ {
+  "id": "8af9d69f",
+  "where": "page:marketing-packages",
+  "text": "Social media platforms: 4"
+ },
+ {
+  "id": "c9fe0ca2",
+  "where": "page:marketing-packages",
+  "text": "Branded posts per month: 20 + stories"
+ },
+ {
+  "id": "cfca1f55",
+  "where": "page:marketing-packages",
+  "text": "SEO blog content writing: 4 blogs/mo"
+ },
+ {
+  "id": "97bd2944",
+  "where": "page:marketing-packages",
+  "text": "Google Ads management: Up to $2k spend"
+ },
+ {
+  "id": "761ed990",
+  "where": "page:marketing-packages",
+  "text": "Email campaigns: 2/mo"
+ },
+ {
+  "id": "21926cc0",
+  "where": "page:marketing-packages",
+  "text": "Dedicated account manager"
+ },
+ {
+  "id": "d630609e",
+  "where": "page:marketing-packages",
+  "text": "Social media platforms: All platforms"
+ },
+ {
+  "id": "385ea875",
+  "where": "page:marketing-packages",
+  "text": "Branded posts per month: Unlimited"
+ },
+ {
+  "id": "a6b90ff7",
+  "where": "page:marketing-packages",
+  "text": "SEO blog content writing: Unlimited"
+ },
+ {
+  "id": "9b770be7",
+  "where": "page:marketing-packages",
+  "text": "Google Ads management: Up to $10k spend"
+ },
+ {
+  "id": "8d05fe9e",
+  "where": "page:marketing-packages",
+  "text": "Email campaigns: Weekly + automation"
+ },
+ {
+  "id": "136f3936",
+  "where": "page:marketing-packages",
+  "text": "Video / Reels content"
+ },
+ {
+  "id": "62b0276e",
+  "where": "page:marketing-packages",
+  "text": "Custom analytics dashboard"
+ },
+ {
+  "id": "4514e37a",
+  "where": "page:marketing-packages",
+  "text": "Full Service List"
+ },
+ {
+  "id": "57ef342f",
+  "where": "page:marketing-packages",
+  "text": "Search Engine Optimisation (SEO)"
+ },
+ {
+  "id": "c6733cd0",
+  "where": "page:marketing-packages",
+  "text": "Enquire Now"
+ },
+ {
+  "id": "cd20ef17",
+  "where": "page:marketing-packages",
+  "text": "Social Media Marketing"
+ },
+ {
+  "id": "f0f38dcb",
+  "where": "page:marketing-packages",
+  "text": "Google & Meta Ads"
+ },
+ {
+  "id": "87364a57",
+  "where": "page:marketing-packages",
+  "text": "Email Marketing & Automation"
+ },
+ {
+  "id": "7e8fd4d1",
+  "where": "page:marketing-packages",
+  "text": "Website & Landing Page Design"
+ },
+ {
+  "id": "9ff11cf5",
+  "where": "page:marketing-packages",
+  "text": "Analytics & Reporting"
+ },
+ {
+  "id": "b602890d",
+  "where": "page:marketing-packages",
+  "text": "Video & Reels Production"
+ },
+ {
+  "id": "7ff6076c",
+  "where": "page:marketing-packages",
+  "text": "Optional Add-Ons"
+ },
+ {
+  "id": "13184200",
+  "where": "page:marketing-packages",
+  "text": "Extra Blog Posts"
+ },
+ {
+  "id": "dfcfc797",
+  "where": "page:marketing-packages",
+  "text": "Add to My Plan"
+ },
+ {
+  "id": "1467b0f9",
+  "where": "page:marketing-packages",
+  "text": "Google Ads Top-Up"
+ },
+ {
+  "id": "614d7900",
+  "where": "page:marketing-packages",
+  "text": "Video Production Pack"
+ },
+ {
+  "id": "3c40f3a0",
+  "where": "page:marketing-packages",
+  "text": "PR & Media Outreach"
+ },
+ {
+  "id": "9176e0cd",
+  "where": "page:marketing-packages",
+  "text": "CRM Setup & Integration"
+ },
+ {
+  "id": "3fc78306",
+  "where": "page:marketing-packages",
+  "text": "Brand Identity Design"
+ },
+ {
+  "id": "825bdcc0",
+  "where": "page:marketing-packages",
+  "text": "Ready to Grow Your Business?"
+ },
+ {
+  "id": "dfd09c68",
+  "where": "page:marketing-packages",
+  "text": "Call SOL"
+ },
+ {
+  "id": "9fbdcba5",
+  "where": "page:marketing-packages",
+  "text": "Send an Enquiry"
+ },
+ {
+  "id": "d09cd023",
+  "where": "page:training-2",
+  "text": "Online LMS Training"
+ },
+ {
+  "id": "92d621a6",
+  "where": "page:training-2",
+  "text": "NDIS Support Coordinator\n[Training Courses]"
+ },
+ {
+  "id": "37d0ebdb",
+  "where": "page:training-2",
+  "text": "View Levels"
+ },
+ {
+  "id": "4cbb788c",
+  "where": "page:training-2",
+  "text": "Our Platform"
+ },
+ {
+  "id": "1e06fb45",
+  "where": "page:training-2",
+  "text": "Simple & Powerful Platform"
+ },
+ {
+  "id": "1277c60c",
+  "where": "page:training-2",
+  "text": "Mobile App Access"
+ },
+ {
+  "id": "b78e7ea5",
+  "where": "page:training-2",
+  "text": "Progress Tracking"
+ },
+ {
+  "id": "e90f0c7a",
+  "where": "page:training-2",
+  "text": "Certificates of Completion"
+ },
+ {
+  "id": "6404e1d1",
+  "where": "page:training-2",
+  "text": "Secure & Reliable"
+ },
+ {
+  "id": "abf81acc",
+  "where": "page:training-2",
+  "text": "Gamification & Engagement"
+ },
+ {
+  "id": "ca89f1f7",
+  "where": "page:training-2",
+  "text": "Best Value"
+ },
+ {
+  "id": "588a52f6",
+  "where": "page:training-2",
+  "text": "Buy on Website"
+ },
+ {
+  "id": "98371f92",
+  "where": "page:training-2",
+  "text": "Have questions? Contact Us"
+ },
+ {
+  "id": "cfe086e8",
+  "where": "page:training-2",
+  "text": "Save $200 with the full bundle"
+ },
+ {
+  "id": "9dd28b45",
+  "where": "page:training-2",
+  "text": "Lifetime access to all 3 levels"
+ },
+ {
+  "id": "fbea8933",
+  "where": "page:training-2",
+  "text": "Call +61 460 003 494"
+ },
+ {
+  "id": "c9e339b1",
+  "where": "page:ndis-packages",
+  "text": "Take the 8-question quiz"
+ },
+ {
+  "id": "11043603",
+  "where": "page:ndis-packages",
+  "text": "Open the 15-question calculator"
+ },
+ {
+  "id": "ea19337c",
+  "where": "page:ndis-packages",
+  "text": "AUD inc GST (ex GST: $1,990)"
+ },
+ {
+  "id": "269d2034",
+  "where": "page:ndis-packages",
+  "text": "Tailored verification policy and procedure set"
+ },
+ {
+  "id": "f8debc59",
+  "where": "page:ndis-packages",
+  "text": "Worker screening, insurance and evidence pack"
+ },
+ {
+  "id": "798fdc11",
+  "where": "page:ndis-packages",
+  "text": "Provider portal application support"
+ },
+ {
+  "id": "cc96fddd",
+  "where": "page:ndis-packages",
+  "text": "Auditor selection and audit booking support"
+ },
+ {
+  "id": "2c2dba7d",
+  "where": "page:ndis-packages",
+  "text": "Support through auditor questions and Commission decision"
+ },
+ {
+  "id": "bd2cb051",
+  "where": "page:ndis-packages",
+  "text": "Get Started"
+ },
+ {
+  "id": "378cbbf5",
+  "where": "page:ndis-packages",
+  "text": "Learn More"
+ },
+ {
+  "id": "7a45966e",
+  "where": "page:ndis-packages",
+  "text": "AUD inc GST (ex GST: $3,950)"
+ },
+ {
+  "id": "7cf6dc8a",
+  "where": "page:ndis-packages",
+  "text": "Everything in SOL START"
+ },
+ {
+  "id": "79b753e6",
+  "where": "page:ndis-packages",
+  "text": "Complete Core Module policy suite"
+ },
+ {
+  "id": "ecd1ff65",
+  "where": "page:ndis-packages",
+  "text": "NDIS Practice Standards self-assessment"
+ },
+ {
+  "id": "4f83a22e",
+  "where": "page:ndis-packages",
+  "text": "Participant forms, templates and compliance registers"
+ },
+ {
+  "id": "62a95ef7",
+  "where": "page:ndis-packages",
+  "text": "Stage 1 and Stage 2 audit preparation"
+ },
+ {
+  "id": "b9217533",
+  "where": "page:ndis-packages",
+  "text": "AUD inc GST (ex GST: $6,500)"
+ },
+ {
+  "id": "f351dd4e",
+  "where": "page:ndis-packages",
+  "text": "Everything in SOL CERTIFIED"
+ },
+ {
+  "id": "8c15e91c",
+  "where": "page:ndis-packages",
+  "text": "Applicable SIL, SDA and specialist module documentation"
+ },
+ {
+  "id": "2930ab03",
+  "where": "page:ndis-packages",
+  "text": "High intensity and behaviour support frameworks"
+ },
+ {
+  "id": "c8612553",
+  "where": "page:ndis-packages",
+  "text": "Operational SIL rostering and participant documentation"
+ },
+ {
+  "id": "727b3002",
+  "where": "page:ndis-packages",
+  "text": "12 months compliance platform access"
+ },
+ {
+  "id": "ee214f0d",
+  "where": "page:ndis-packages",
+  "text": "yes | no | no"
+ },
+ {
+  "id": "847839e8",
+  "where": "page:ndis-packages",
+  "text": "6-8 weeks | 8-12 weeks | 12-16 weeks"
+ },
+ {
+  "id": "c204de54",
+  "where": "page:ndis-packages",
+  "text": "2 business days | 2 business days | 2 business days"
+ },
+ {
+  "id": "d790b402",
+  "where": "page:ndis-packages",
+  "text": "Frequently Asked Questions"
+ },
+ {
+  "id": "e5491442",
+  "where": "page:ndis-packages",
+  "text": "Start Registration"
+ },
+ {
+  "id": "7e2a9a39",
+  "where": "page:ndis-packages",
+  "text": "Talk to Our Team"
+ },
+ {
+  "id": "fe7a33e9",
+  "where": "page:get-started",
+  "text": "NDIS Registration Package Finder"
+ },
+ {
+  "id": "24555fd8",
+  "where": "page:get-started",
+  "text": "Verification audit"
+ },
+ {
+  "id": "7a84ee49",
+  "where": "page:get-started",
+  "text": "Verification-only registration groups"
+ },
+ {
+  "id": "384349b8",
+  "where": "page:get-started",
+  "text": "Certification audit - Core Module"
+ },
+ {
+  "id": "b35b212c",
+  "where": "page:get-started",
+  "text": "Certification plus SIL, SDA or specialist modules"
+ },
+ {
+  "id": "f647cc19",
+  "where": "page:get-started",
+  "text": "SIL, SDA, high intensity and specialist support providers"
+ },
+ {
+  "id": "7ee8cf6e",
+  "where": "page:get-started",
+  "text": "Talk to an advisor"
+ },
+ {
+  "id": "586e4031",
+  "where": "page:book-consultation",
+  "text": "Free Consultation"
+ },
+ {
+  "id": "a726c0c7",
+  "where": "page:book-consultation",
+  "text": "Request a consultation"
+ },
+ {
+  "id": "cabade0d",
+  "where": "page:readiness-quiz",
+  "text": "Free Assessment Tool"
+ },
+ {
+  "id": "8391a880",
+  "where": "page:readiness-quiz",
+  "text": "8 questions"
+ },
+ {
+  "id": "1dd3e663",
+  "where": "page:readiness-quiz",
+  "text": "2 minutes"
+ },
+ {
+  "id": "ea03a275",
+  "where": "page:readiness-quiz",
+  "text": "Start Assessment"
+ },
+ {
+  "id": "72a97159",
+  "where": "page:readiness-quiz",
+  "text": "Does your organisation have a registered ABN?"
+ },
+ {
+  "id": "8354337c",
+  "where": "page:readiness-quiz",
+  "text": "What is your current business structure?"
+ },
+ {
+  "id": "4245557f",
+  "where": "page:readiness-quiz",
+  "text": "Have you identified which NDIS support categories you will deliver?"
+ },
+ {
+  "id": "60531853",
+  "where": "page:readiness-quiz",
+  "text": "Do you have documented policies and procedures relevant to NDIS practice standards?"
+ },
+ {
+  "id": "d55e887f",
+  "where": "page:readiness-quiz",
+  "text": "Do your key staff hold relevant qualifications or experience in disability/allied health services?"
+ },
+ {
+  "id": "b6c195d4",
+  "where": "page:readiness-quiz",
+  "text": "Do you have professional indemnity and public liability insurance?"
+ },
+ {
+  "id": "5c25e1fe",
+  "where": "page:readiness-quiz",
+  "text": "Are you aware that NDIS registration requires a third-party quality audit?"
+ },
+ {
+  "id": "dfd06adc",
+  "where": "page:readiness-quiz",
+  "text": "What is your target timeline to become NDIS registered?"
+ },
+ {
+  "id": "269a0c4d",
+  "where": "page:readiness-quiz",
+  "text": "Start Your Application"
+ },
+ {
+  "id": "802d177f",
+  "where": "page:readiness-quiz",
+  "text": "Get a Readiness Assessment"
+ },
+ {
+  "id": "5a1c5cef",
+  "where": "page:readiness-quiz",
+  "text": "Book a Free Planning Session"
+ },
+ {
+  "id": "7fd71953",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Free Compliance Tool"
+ },
+ {
+  "id": "6ddc327b",
+  "where": "page:ndis-readiness-calculator",
+  "text": "NDIS Registration\nReadiness Calculator"
+ },
+ {
+  "id": "22b0693e",
+  "where": "page:ndis-readiness-calculator",
+  "text": "15 questions"
+ },
+ {
+  "id": "5632bc7b",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Instant score"
+ },
+ {
+  "id": "abe9f9e5",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Start Calculator"
+ },
+ {
+  "id": "9bb67fe7",
+  "where": "page:ndis-readiness-calculator",
+  "text": "I agree to receive relevant service updates and marketing emails. I can unsubscribe at any time."
+ },
+ {
+  "id": "e57a13e2",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Legal & Business Structure"
+ },
+ {
+  "id": "236de6f5",
+  "where": "page:ndis-readiness-calculator",
+  "text": "What is your registered business structure?"
+ },
+ {
+  "id": "328aa311",
+  "where": "page:ndis-readiness-calculator",
+  "text": "If a charity/NFP, are you registered with ACNC or equivalent?"
+ },
+ {
+  "id": "ddeb33ce",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Governance & Leadership"
+ },
+ {
+  "id": "76743082",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Have your Key Personnel (directors, managers) been identified and verified via NDIS Worker Screening?"
+ },
+ {
+  "id": "6e2d3d84",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Does your organisation have a formal governance structure (board, committee, or designated management)?"
+ },
+ {
+  "id": "9e8c312e",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Do you have a documented complaints and feedback management process?"
+ },
+ {
+  "id": "674dd26a",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Policies & Procedures"
+ },
+ {
+  "id": "4c1fcebc",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Do you have a policy and procedure manual aligned to NDIS Practice Standards?"
+ },
+ {
+  "id": "cf7cbd74",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Do you have an incident management and reportable incidents policy?"
+ },
+ {
+  "id": "1a38f611",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Do you have participant rights, privacy, and consent documentation?"
+ },
+ {
+  "id": "0b3f8816",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Workforce & Qualifications"
+ },
+ {
+  "id": "35048236",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Do key staff hold relevant qualifications for the NDIS supports you plan to deliver?"
+ },
+ {
+  "id": "ada07e38",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Are all workers subject to NDIS Worker Screening Checks?"
+ },
+ {
+  "id": "5943a4c3",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Have staff completed mandatory training (e.g. NDIS orientation module, WHS, child safety)?"
+ },
+ {
+  "id": "3c5416b9",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Compliance & Insurance"
+ },
+ {
+  "id": "13b7a74b",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Do you hold professional indemnity AND public liability insurance at adequate levels?"
+ },
+ {
+  "id": "5bfbd3b8",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Are you prepared for a third-party quality audit (Certification or Verification)?"
+ },
+ {
+  "id": "d85d8533",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Have you identified your NDIS registration groups and support categories?"
+ },
+ {
+  "id": "8c271aff",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Highly Prepared"
+ },
+ {
+  "id": "cb3251db",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Good Progress"
+ },
+ {
+  "id": "71f11302",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Get a Readiness Plan"
+ },
+ {
+  "id": "386f0479",
+  "where": "page:ndis-readiness-calculator",
+  "text": "Not Yet Ready"
+ },
+ {
+  "id": "3426f9e6",
+  "where": "page:data-privacy-and-security",
+  "text": "Trust & Security"
+ },
+ {
+  "id": "fe7339c0",
+  "where": "page:data-privacy-and-security",
+  "text": "Data Privacy & Security"
+ },
+ {
+  "id": "9097b1c9",
+  "where": "page:data-privacy-and-security",
+  "text": "Security First"
+ },
+ {
+  "id": "7ee2904a",
+  "where": "page:data-privacy-and-security",
+  "text": "How We Protect Your Data"
+ },
+ {
+  "id": "1afa20cd",
+  "where": "page:data-privacy-and-security",
+  "text": "SSL/TLS Encryption"
+ },
+ {
+  "id": "f3f7a3e5",
+  "where": "page:data-privacy-and-security",
+  "text": "All data in transit is encrypted using industry-standard SSL/TLS protocols (HTTPS). Your data is protected while being transmitted to and from our servers."
+ },
+ {
+  "id": "91d48b25",
+  "where": "page:data-privacy-and-security",
+  "text": "Data at Rest Encryption"
+ },
+ {
+  "id": "a2f0b55c",
+  "where": "page:data-privacy-and-security",
+  "text": "Sensitive client data (documents, invoices, personal information) is encrypted at rest on our secure servers. Only authorised staff can decrypt and access."
+ },
+ {
+  "id": "7e0d9851",
+  "where": "page:data-privacy-and-security",
+  "text": "Secure Server Infrastructure"
+ },
+ {
+  "id": "2b8fd980",
+  "where": "page:data-privacy-and-security",
+  "text": "Servers are hosted on enterprise-grade infrastructure with redundant backups, firewalls, and DDoS protection. Regular security patches and updates applied."
+ },
+ {
+  "id": "e2539216",
+  "where": "page:data-privacy-and-security",
+  "text": "Access Controls"
+ },
+ {
+  "id": "22f7d0bb",
+  "where": "page:data-privacy-and-security",
+  "text": "Role-based access control ensures only authorised team members can view specific client data. Admin logs track all data access."
+ },
+ {
+  "id": "adb5feda",
+  "where": "page:data-privacy-and-security",
+  "text": "Data Handling"
+ },
+ {
+  "id": "a480b21d",
+  "where": "page:data-privacy-and-security",
+  "text": "How We Handle Your Information"
+ },
+ {
+  "id": "0a60a9aa",
+  "where": "page:data-privacy-and-security",
+  "text": "Data Collection"
+ },
+ {
+  "id": "798a40d2",
+  "where": "page:data-privacy-and-security",
+  "text": "We collect personal data only when you provide it (contact forms, portal registration, enquiries)."
+ },
+ {
+  "id": "bf65b1d1",
+  "where": "page:data-privacy-and-security",
+  "text": "We collect business data only for service delivery (NDIS documents, website content, payroll details)."
+ },
+ {
+  "id": "fbee2a0f",
+  "where": "page:data-privacy-and-security",
+  "text": "Cookies are used for session management and analytics (Google Analytics). You can opt out anytime."
+ },
+ {
+  "id": "dce43a00",
+  "where": "page:data-privacy-and-security",
+  "text": "No unnecessary personal data is collected or stored."
+ },
+ {
+  "id": "0bccc7fa",
+  "where": "page:data-privacy-and-security",
+  "text": "Data Storage"
+ },
+ {
+  "id": "733af1b7",
+  "where": "page:data-privacy-and-security",
+  "text": "Client data is stored on Australian-based servers (where possible) for compliance."
+ },
+ {
+  "id": "880cc5c0",
+  "where": "page:data-privacy-and-security",
+  "text": "Data is backed up daily to secure offsite locations."
+ },
+ {
+  "id": "9c819f3a",
+  "where": "page:data-privacy-and-security",
+  "text": "Backup copies are tested monthly for integrity and recoverability."
+ },
+ {
+  "id": "b1e2853c",
+  "where": "page:data-privacy-and-security",
+  "text": "Redundant systems ensure your data is safe even if primary servers fail."
+ },
+ {
+  "id": "1c344326",
+  "where": "page:data-privacy-and-security",
+  "text": "Data Access"
+ },
+ {
+  "id": "20a8b748",
+  "where": "page:data-privacy-and-security",
+  "text": "Only SOL staff involved in your project can access your data."
+ },
+ {
+  "id": "148688d0",
+  "where": "page:data-privacy-and-security",
+  "text": "Third-party integrations (e.g., Stripe for payments) access only necessary data."
+ },
+ {
+  "id": "2e53482f",
+  "where": "page:data-privacy-and-security",
+  "text": "Admin access is logged and audited regularly."
+ },
+ {
+  "id": "138a438b",
+  "where": "page:data-privacy-and-security",
+  "text": "No data is accessed without documented business reason."
+ },
+ {
+  "id": "3728798d",
+  "where": "page:data-privacy-and-security",
+  "text": "Data Retention"
+ },
+ {
+  "id": "6cd70ab5",
+  "where": "page:data-privacy-and-security",
+  "text": "Active project data is kept throughout service delivery and 1 year after completion."
+ },
+ {
+  "id": "be193c7c",
+  "where": "page:data-privacy-and-security",
+  "text": "Financial records (invoices, receipts) are kept for 7 years (Australian tax requirement)."
+ },
+ {
+  "id": "31e6394d",
+  "where": "page:data-privacy-and-security",
+  "text": "Training records (certificates, progress) are kept indefinitely if you request."
+ },
+ {
+  "id": "ae3b391d",
+  "where": "page:data-privacy-and-security",
+  "text": "You can request deletion of data at any time (within legal compliance limits)."
+ },
+ {
+  "id": "4bcb1fcf",
+  "where": "page:data-privacy-and-security",
+  "text": "Data Sharing"
+ },
+ {
+  "id": "84c7d30e",
+  "where": "page:data-privacy-and-security",
+  "text": "We never sell, rent, or share your data with marketing companies."
+ },
+ {
+  "id": "88063edc",
+  "where": "page:data-privacy-and-security",
+  "text": "We never share personal data publicly or on social media without explicit permission."
+ },
+ {
+  "id": "c6b11d53",
+  "where": "page:data-privacy-and-security",
+  "text": "Case studies are published only with written client approval."
+ },
+ {
+  "id": "bfd0c066",
+  "where": "page:data-privacy-and-security",
+  "text": "Integrations with payment processors (Stripe) share only transaction data."
+ },
+ {
+  "id": "c1a15013",
+  "where": "page:data-privacy-and-security",
+  "text": "NDIS Provider Privacy"
+ },
+ {
+  "id": "1fa91b24",
+  "where": "page:data-privacy-and-security",
+  "text": "NDIS Privacy Expectations"
+ },
+ {
+  "id": "9b32ffde",
+  "where": "page:data-privacy-and-security",
+  "text": "SOL understands that NDIS providers hold sensitive participant information. Our processes are designed to meet NDIS Commission expectations:"
+ },
+ {
+  "id": "247252fa",
+  "where": "page:data-privacy-and-security",
+  "text": "NDIS provider data is isolated from other service data."
+ },
+ {
+  "id": "2686dc19",
+  "where": "page:data-privacy-and-security",
+  "text": "Access to participant information is restricted to NDIS project team only."
+ },
+ {
+  "id": "25f33782",
+  "where": "page:data-privacy-and-security",
+  "text": "Data breaches involving NDIS information are reported to the NDIS Commission as required."
+ },
+ {
+  "id": "32858233",
+  "where": "page:data-privacy-and-security",
+  "text": "Documentation (policies, procedures, audit trails) is maintained for NDIS compliance audits."
+ },
+ {
+  "id": "130cffba",
+  "where": "page:data-privacy-and-security",
+  "text": "Incident Response"
+ },
+ {
+  "id": "d37ebf14",
+  "where": "page:data-privacy-and-security",
+  "text": "If a Data Breach Occurs"
+ },
+ {
+  "id": "dc2dedb4",
+  "where": "page:data-privacy-and-security",
+  "text": "1. Detection & Containment"
+ },
+ {
+  "id": "ac3b1cf5",
+  "where": "page:data-privacy-and-security",
+  "text": "If we detect unauthorized data access or breach, we immediately isolate affected systems and stop the breach."
+ },
+ {
+  "id": "f848dc15",
+  "where": "page:data-privacy-and-security",
+  "text": "2. Assessment"
+ },
+ {
+  "id": "fd50c2a3",
+  "where": "page:data-privacy-and-security",
+  "text": "We assess which data was accessed and which clients are affected within 24 hours."
+ },
+ {
+  "id": "4f1092e3",
+  "where": "page:data-privacy-and-security",
+  "text": "3. Client Notification"
+ },
+ {
+  "id": "582e2820",
+  "where": "page:data-privacy-and-security",
+  "text": "You will be notified immediately by phone and email, with details of what happened and what to do."
+ },
+ {
+  "id": "0906579b",
+  "where": "page:data-privacy-and-security",
+  "text": "4. Regulatory Reporting"
+ },
+ {
+  "id": "05c48518",
+  "where": "page:data-privacy-and-security",
+  "text": "If required by law (e.g., Privacy Act, NDIS Commission), we will report to relevant authorities."
+ },
+ {
+  "id": "97ebd8e6",
+  "where": "page:data-privacy-and-security",
+  "text": "5. Support & Remediation"
+ },
+ {
+  "id": "85a8b03c",
+  "where": "page:data-privacy-and-security",
+  "text": "We provide free credit monitoring or other support as appropriate. We also implement changes to prevent recurrence."
+ },
+ {
+  "id": "ae05b38e",
+  "where": "page:data-privacy-and-security",
+  "text": "Legal Framework"
+ },
+ {
+  "id": "181216fc",
+  "where": "page:data-privacy-and-security",
+  "text": "Privacy Act 1988 (Cth)"
+ },
+ {
+  "id": "ba0d2a30",
+  "where": "page:data-privacy-and-security",
+  "text": "SOL complies with Australian privacy law. Your personal information is handled according to the Australian Privacy Principles."
+ },
+ {
+  "id": "bdda9f9a",
+  "where": "page:data-privacy-and-security",
+  "text": "Learn more →"
+ },
+ {
+  "id": "a088223f",
+  "where": "page:data-privacy-and-security",
+  "text": "NDIS Act & Rules"
+ },
+ {
+  "id": "cb40ba6d",
+  "where": "page:data-privacy-and-security",
+  "text": "For NDIS-related data, we follow NDIS Commission rules on provider obligations and participant privacy."
+ },
+ {
+  "id": "b22d7a6f",
+  "where": "page:data-privacy-and-security",
+  "text": "Spam Act 2003"
+ },
+ {
+  "id": "9ab2f4f1",
+  "where": "page:data-privacy-and-security",
+  "text": "We send marketing emails only to opted-in contacts. You can unsubscribe anytime."
+ },
+ {
+  "id": "ff55c581",
+  "where": "page:data-privacy-and-security",
+  "text": "E-Commerce Act 1999"
+ },
+ {
+  "id": "b7300c8c",
+  "where": "page:data-privacy-and-security",
+  "text": "Our website and service portal comply with Australian e-commerce requirements for secure transactions."
+ },
+ {
+  "id": "e0047e25",
+  "where": "page:data-privacy-and-security",
+  "text": "Your Rights"
+ },
+ {
+  "id": "b15f047a",
+  "where": "page:data-privacy-and-security",
+  "text": "Can I see what data SOL has about me?"
+ },
+ {
+  "id": "113a8edc",
+  "where": "page:data-privacy-and-security",
+  "text": "Yes. You have the right to request a copy of your personal data. Email info@solbusinessconsultant.com.au with 'Data Access Request' in the subject. We will provide information within 30 days."
+ },
+ {
+  "id": "a3d6b817",
+  "where": "page:data-privacy-and-security",
+  "text": "Can I ask SOL to delete my data?"
+ },
+ {
+  "id": "0c3523cd",
+  "where": "page:data-privacy-and-security",
+  "text": "Yes, with limitations. We must keep financial records for 7 years (tax law). Training certificates may be kept on request. Contact us to discuss your specific situation."
+ },
+ {
+  "id": "b65df529",
+  "where": "page:data-privacy-and-security",
+  "text": "Can I correct wrong information?"
+ },
+ {
+  "id": "054d4ad6",
+  "where": "page:data-privacy-and-security",
+  "text": "Absolutely. If any personal data is incorrect, let us know and we will update it immediately. Email info@solbusinessconsultant.com.au with corrections."
+ },
+ {
+  "id": "8a1af442",
+  "where": "page:data-privacy-and-security",
+  "text": "Who can see my client portal?"
+ },
+ {
+  "id": "51c7af1a",
+  "where": "page:data-privacy-and-security",
+  "text": "Only you (and your authorized team members if granted access). SOL staff involved in your project can see project data only."
+ },
+ {
+  "id": "2c20ef4b",
+  "where": "page:data-privacy-and-security",
+  "text": "What if I don't agree to data practices?"
+ },
+ {
+  "id": "8deabb5e",
+  "where": "page:data-privacy-and-security",
+  "text": "You can opt out of non-essential data collection (e.g., marketing emails). However, essential data (payment, service delivery) is required for service use."
+ },
+ {
+  "id": "446efda4",
+  "where": "page:data-privacy-and-security",
+  "text": "How do I make a privacy complaint?"
+ },
+ {
+  "id": "b8b1cbf1",
+  "where": "page:data-privacy-and-security",
+  "text": "Contact us at info@solbusinessconsultant.com.au with 'Privacy Complaint' in the subject. If unsatisfied, you can lodge a complaint with the Office of the Australian Information Commissioner (OAIC)."
+ },
+ {
+  "id": "d60f6e51",
+  "where": "page:data-privacy-and-security",
+  "text": "Privacy Questions?"
+ },
+ {
+  "id": "be4e8e2d",
+  "where": "page:data-privacy-and-security",
+  "text": "Send Email"
+ },
+ {
+  "id": "f24b73fb",
+  "where": "page:data-privacy-and-security",
+  "text": "Support & Hours"
+ },
+ {
+  "id": "4aa95d60",
+  "where": "page:service-inclusions",
+  "text": "Clarity & Transparency"
+ },
+ {
+  "id": "841a5bc4",
+  "where": "page:service-inclusions",
+  "text": "Every Service Has"
+ },
+ {
+  "id": "5d473d06",
+  "where": "page:service-inclusions",
+  "text": "Realistic Timelines"
+ },
+ {
+  "id": "c799672c",
+  "where": "page:service-inclusions",
+  "text": "Support Included"
+ },
+ {
+  "id": "6edc6bd0",
+  "where": "page:service-inclusions",
+  "text": "Service-by-Service Breakdown"
+ },
+ {
+  "id": "040b3657",
+  "where": "page:service-inclusions",
+  "text": "Initial readiness consultation (1 hour)"
+ },
+ {
+  "id": "2d8c70dc",
+  "where": "page:service-inclusions",
+  "text": "Audit pathway assessment (Standard/Streamlined)"
+ },
+ {
+  "id": "ccc052d4",
+  "where": "page:service-inclusions",
+  "text": "Policy and procedure template pack"
+ },
+ {
+  "id": "1e1384e1",
+  "where": "page:service-inclusions",
+  "text": "Compliance documentation review"
+ },
+ {
+  "id": "3f0cc453",
+  "where": "page:service-inclusions",
+  "text": "Registration application preparation"
+ },
+ {
+  "id": "c1c3d42a",
+  "where": "page:service-inclusions",
+  "text": "ASIC, ABN, and insurance verification support"
+ },
+ {
+  "id": "8da1bf30",
+  "where": "page:service-inclusions",
+  "text": "Pre-audit readiness checklist"
+ },
+ {
+  "id": "da44fb1f",
+  "where": "page:service-inclusions",
+  "text": "Email support during process"
+ },
+ {
+  "id": "d680ed39",
+  "where": "page:service-inclusions",
+  "text": "Ongoing compliance monitoring (separate service)"
+ },
+ {
+  "id": "495321aa",
+  "where": "page:service-inclusions",
+  "text": "Mock audits (available as add-on)"
+ },
+ {
+  "id": "46867f54",
+  "where": "page:service-inclusions",
+  "text": "Legal advice (refer to compliance lawyer)"
+ },
+ {
+  "id": "7cc865df",
+  "where": "page:service-inclusions",
+  "text": "NDIS Commission representation"
+ },
+ {
+  "id": "870d3dcc",
+  "where": "page:service-inclusions",
+  "text": "6-8 weeks from start to ADA submission"
+ },
+ {
+  "id": "ecd48074",
+  "where": "page:service-inclusions",
+  "text": "Completed registration application"
+ },
+ {
+  "id": "5c9884c8",
+  "where": "page:service-inclusions",
+  "text": "Policy and procedure documentation pack (PDF)"
+ },
+ {
+  "id": "d40c6bc7",
+  "where": "page:service-inclusions",
+  "text": "Compliance checklist (signed-off)"
+ },
+ {
+  "id": "73d8433f",
+  "where": "page:service-inclusions",
+  "text": "Next steps summary document"
+ },
+ {
+  "id": "a46ac7a2",
+  "where": "page:service-inclusions",
+  "text": "Email + phone during business hours (Mon-Fri 9am-5pm AEST)"
+ },
+ {
+  "id": "176e0a54",
+  "where": "page:service-inclusions",
+  "text": "Get a quote for this service"
+ },
+ {
+  "id": "7c734048",
+  "where": "page:service-inclusions",
+  "text": "Discovery & strategy session (2 hours)"
+ },
+ {
+  "id": "40381a57",
+  "where": "page:service-inclusions",
+  "text": "User research & competitor analysis"
+ },
+ {
+  "id": "d90baff0",
+  "where": "page:service-inclusions",
+  "text": "Wireframe design (3 iterations included)"
+ },
+ {
+  "id": "9e5c7d9e",
+  "where": "page:service-inclusions",
+  "text": "Professional design (up to 15 pages)"
+ },
+ {
+  "id": "afff66a5",
+  "where": "page:service-inclusions",
+  "text": "Mobile-responsive development"
+ },
+ {
+  "id": "d188e802",
+  "where": "page:service-inclusions",
+  "text": "SEO-optimized technical setup"
+ },
+ {
+  "id": "1d97b254",
+  "where": "page:service-inclusions",
+  "text": "Contact forms + lead capture"
+ },
+ {
+  "id": "00fa1a4c",
+  "where": "page:service-inclusions",
+  "text": "Google Analytics integration"
+ },
+ {
+  "id": "d20ea1d9",
+  "where": "page:service-inclusions",
+  "text": "SSL certificate & security setup"
+ },
+ {
+  "id": "3b689570",
+  "where": "page:service-inclusions",
+  "text": "Basic on-page SEO per page"
+ },
+ {
+  "id": "63943160",
+  "where": "page:service-inclusions",
+  "text": "2 rounds of revision/feedback"
+ },
+ {
+  "id": "9e97d6e6",
+  "where": "page:service-inclusions",
+  "text": "Final testing and QA"
+ },
+ {
+  "id": "cff60fe6",
+  "where": "page:service-inclusions",
+  "text": "Deployment & launch support"
+ },
+ {
+  "id": "997c20a9",
+  "where": "page:service-inclusions",
+  "text": "Handover documentation"
+ },
+ {
+  "id": "30bc40c0",
+  "where": "page:service-inclusions",
+  "text": "Ongoing content updates (maintenance package available)"
+ },
+ {
+  "id": "c148e75c",
+  "where": "page:service-inclusions",
+  "text": "Advanced SEO (blog strategy, backlinks - separate service)"
+ },
+ {
+  "id": "9fc00e9e",
+  "where": "page:service-inclusions",
+  "text": "E-commerce integration (custom pricing)"
+ },
+ {
+  "id": "a51a967a",
+  "where": "page:service-inclusions",
+  "text": "Custom third-party integrations beyond basic setup"
+ },
+ {
+  "id": "e2188b6a",
+  "where": "page:service-inclusions",
+  "text": "12-16 weeks from kickoff to launch"
+ },
+ {
+  "id": "eed0aa27",
+  "where": "page:service-inclusions",
+  "text": "Live website (hosted on your chosen platform)"
+ },
+ {
+  "id": "62d08441",
+  "where": "page:service-inclusions",
+  "text": "Admin access + documentation"
+ },
+ {
+  "id": "0f0e3308",
+  "where": "page:service-inclusions",
+  "text": "SEO optimization report"
+ },
+ {
+  "id": "10d9fb23",
+  "where": "page:service-inclusions",
+  "text": "Analytics setup guide"
+ },
+ {
+  "id": "cc0e7234",
+  "where": "page:service-inclusions",
+  "text": "Content management guide"
+ },
+ {
+  "id": "3460ddc2",
+  "where": "page:service-inclusions",
+  "text": "Included during development. Ongoing support available via maintenance package."
+ },
+ {
+  "id": "8bc48225",
+  "where": "page:service-inclusions",
+  "text": "Get found by customers searching for your services"
+ },
+ {
+  "id": "f312fca1",
+  "where": "page:service-inclusions",
+  "text": "Technical SEO audit & fixes"
+ },
+ {
+  "id": "d5918627",
+  "where": "page:service-inclusions",
+  "text": "Keyword research (target locations & services)"
+ },
+ {
+  "id": "a4529df1",
+  "where": "page:service-inclusions",
+  "text": "On-page optimization (up to 10 priority pages)"
+ },
+ {
+  "id": "05dc932a",
+  "where": "page:service-inclusions",
+  "text": "Google Business Profile setup & optimization"
+ },
+ {
+  "id": "43a064a2",
+  "where": "page:service-inclusions",
+  "text": "Local citation building (directories, maps)"
+ },
+ {
+  "id": "0f04995f",
+  "where": "page:service-inclusions",
+  "text": "Monthly performance reporting"
+ },
+ {
+  "id": "e5432dbb",
+  "where": "page:service-inclusions",
+  "text": "Google Search Console setup"
+ },
+ {
+  "id": "3b723412",
+  "where": "page:service-inclusions",
+  "text": "Monthly strategy adjustment"
+ },
+ {
+  "id": "294bb5c3",
+  "where": "page:service-inclusions",
+  "text": "Blog writing (available as add-on at $120/post)"
+ },
+ {
+  "id": "c8583f2f",
+  "where": "page:service-inclusions",
+  "text": "Backlink outreach (custom pricing)"
+ },
+ {
+  "id": "68d3d948",
+  "where": "page:service-inclusions",
+  "text": "Paid Google Ads management (separate service)"
+ },
+ {
+  "id": "cef21a1a",
+  "where": "page:service-inclusions",
+  "text": "Video optimization (custom pricing)"
+ },
+ {
+  "id": "922ed46c",
+  "where": "page:service-inclusions",
+  "text": "Ongoing monthly service (3-6 months to see measurable results)"
+ },
+ {
+  "id": "d6c9cfa1",
+  "where": "page:service-inclusions",
+  "text": "SEO audit report (initial)"
+ },
+ {
+  "id": "1d52c5df",
+  "where": "page:service-inclusions",
+  "text": "Optimization checklist (completed)"
+ },
+ {
+  "id": "53b3d8d5",
+  "where": "page:service-inclusions",
+  "text": "Monthly performance reports (traffic, keywords, rankings)"
+ },
+ {
+  "id": "58431ede",
+  "where": "page:service-inclusions",
+  "text": "Monthly action items & recommendations"
+ },
+ {
+  "id": "8491e2ab",
+  "where": "page:service-inclusions",
+  "text": "Monthly email reports + quarterly strategy calls"
+ },
+ {
+  "id": "ba3aaa7b",
+  "where": "page:service-inclusions",
+  "text": "Xero/MYOB/QuickBooks setup & configuration"
+ },
+ {
+  "id": "4848fc92",
+  "where": "page:service-inclusions",
+  "text": "Chart of accounts setup (customized for your business)"
+ },
+ {
+  "id": "a7662f0b",
+  "where": "page:service-inclusions",
+  "text": "Bank & credit card reconciliation (monthly)"
+ },
+ {
+  "id": "ebddd2fa",
+  "where": "page:service-inclusions",
+  "text": "Invoice & expense processing"
+ },
+ {
+  "id": "fe6f29fe",
+  "where": "page:service-inclusions",
+  "text": "Monthly financial statements"
+ },
+ {
+  "id": "d47c3490",
+  "where": "page:service-inclusions",
+  "text": "BAS preparation & lodgement (quarterly)"
+ },
+ {
+  "id": "8a9ccc00",
+  "where": "page:service-inclusions",
+  "text": "Payroll integration setup (if applicable)"
+ },
+ {
+  "id": "75c9e89f",
+  "where": "page:service-inclusions",
+  "text": "Accountant handover package (end of year)"
+ },
+ {
+  "id": "73137fb2",
+  "where": "page:service-inclusions",
+  "text": "Email support for bookkeeping questions"
+ },
+ {
+  "id": "be7c98e2",
+  "where": "page:service-inclusions",
+  "text": "Tax advice (refer to accountant)"
+ },
+ {
+  "id": "05bcb4d0",
+  "where": "page:service-inclusions",
+  "text": "Income tax return preparation (accountant service)"
+ },
+ {
+  "id": "6923446c",
+  "where": "page:service-inclusions",
+  "text": "Grant application support (custom pricing)"
+ },
+ {
+  "id": "8c0f2553",
+  "where": "page:service-inclusions",
+  "text": "Audit/assurance services"
+ },
+ {
+  "id": "157406a7",
+  "where": "page:service-inclusions",
+  "text": "Ongoing monthly service (setup 1-2 weeks)"
+ },
+ {
+  "id": "342e7b20",
+  "where": "page:service-inclusions",
+  "text": "Monthly reconciliation reports"
+ },
+ {
+  "id": "4bc6f52e",
+  "where": "page:service-inclusions",
+  "text": "BAS preparation (ready to lodge)"
+ },
+ {
+  "id": "1c41e271",
+  "where": "page:service-inclusions",
+  "text": "Year-end financial summary"
+ },
+ {
+  "id": "6537f913",
+  "where": "page:service-inclusions",
+  "text": "Accountant handover file (for tax return)"
+ },
+ {
+  "id": "70402a23",
+  "where": "page:service-inclusions",
+  "text": "Email support + monthly check-in calls"
+ },
+ {
+  "id": "0b7baa35",
+  "where": "page:service-inclusions",
+  "text": "Payroll setup (weekly, fortnightly, or monthly)"
+ },
+ {
+  "id": "1f357360",
+  "where": "page:service-inclusions",
+  "text": "Employee master file configuration"
+ },
+ {
+  "id": "01a3030c",
+  "where": "page:service-inclusions",
+  "text": "Payroll processing & pay slip generation"
+ },
+ {
+  "id": "fe0eee26",
+  "where": "page:service-inclusions",
+  "text": "PAYG withholding calculation & lodgement"
+ },
+ {
+  "id": "8b482cc3",
+  "where": "page:service-inclusions",
+  "text": "Superannuation contributions + reporting"
+ },
+ {
+  "id": "e56386fe",
+  "where": "page:service-inclusions",
+  "text": "STP (Single Touch Payroll) lodgement"
+ },
+ {
+  "id": "77668f14",
+  "where": "page:service-inclusions",
+  "text": "Leave accrual tracking"
+ },
+ {
+  "id": "c63fee9a",
+  "where": "page:service-inclusions",
+  "text": "End-of-year PAYG summary & year-end processing"
+ },
+ {
+  "id": "441fd6fd",
+  "where": "page:service-inclusions",
+  "text": "Phone & email support for payroll queries"
+ },
+ {
+  "id": "9f9a3da4",
+  "where": "page:service-inclusions",
+  "text": "Employment law advice (refer to HR/legal counsel)"
+ },
+ {
+  "id": "22994828",
+  "where": "page:service-inclusions",
+  "text": "Disciplinary/termination support (custom consulting)"
+ },
+ {
+  "id": "4cba7e02",
+  "where": "page:service-inclusions",
+  "text": "Enterprise agreement negotiation"
+ },
+ {
+  "id": "16200d26",
+  "where": "page:service-inclusions",
+  "text": "Recruitment services"
+ },
+ {
+  "id": "6200f886",
+  "where": "page:service-inclusions",
+  "text": "Ongoing monthly service (setup 1 week)"
+ },
+ {
+  "id": "9224be1e",
+  "where": "page:service-inclusions",
+  "text": "Monthly pay slips (for all employees)"
+ },
+ {
+  "id": "f4c7038c",
+  "where": "page:service-inclusions",
+  "text": "Quarterly STP lodgement confirmation"
+ },
+ {
+  "id": "788ac516",
+  "where": "page:service-inclusions",
+  "text": "Annual PAYG & super reporting"
+ },
+ {
+  "id": "a9419098",
+  "where": "page:service-inclusions",
+  "text": "Year-end payroll summary"
+ },
+ {
+  "id": "9c3beca7",
+  "where": "page:service-inclusions",
+  "text": "Email + phone support (Mon-Fri 9am-5pm AEST)"
+ },
+ {
+  "id": "e45edfa0",
+  "where": "page:service-inclusions",
+  "text": "Business structure advice (sole trader, company, trust)"
+ },
+ {
+  "id": "b0731e29",
+  "where": "page:service-inclusions",
+  "text": "ASIC company registration + documentation"
+ },
+ {
+  "id": "bf96b614",
+  "where": "page:service-inclusions",
+  "text": "ABN application & setup"
+ },
+ {
+  "id": "bcc7969c",
+  "where": "page:service-inclusions",
+  "text": "Tax File Number (TFN) registration"
+ },
+ {
+  "id": "f8a5c120",
+  "where": "page:service-inclusions",
+  "text": "GST registration (if applicable)"
+ },
+ {
+  "id": "39be5215",
+  "where": "page:service-inclusions",
+  "text": "Business name registration (if not incorporated)"
+ },
+ {
+  "id": "8b393e0b",
+  "where": "page:service-inclusions",
+  "text": "Initial accounting system setup"
+ },
+ {
+  "id": "597df2d7",
+  "where": "page:service-inclusions",
+  "text": "Compliance calendar setup"
+ },
+ {
+  "id": "636da6e0",
+  "where": "page:service-inclusions",
+  "text": "Director/owner documentation"
+ },
+ {
+  "id": "57e64e5f",
+  "where": "page:service-inclusions",
+  "text": "Legal advice (refer to business lawyer)"
+ },
+ {
+  "id": "4250837f",
+  "where": "page:service-inclusions",
+  "text": "Trademark/IP registration (refer to IP attorney)"
+ },
+ {
+  "id": "ad9cd745",
+  "where": "page:service-inclusions",
+  "text": "Commercial premises setup"
+ },
+ {
+  "id": "3c69b6d1",
+  "where": "page:service-inclusions",
+  "text": "Ongoing compliance monitoring"
+ },
+ {
+  "id": "a881ac2d",
+  "where": "page:service-inclusions",
+  "text": "2-4 weeks from kickoff to registration approval"
+ },
+ {
+  "id": "227cd27d",
+  "where": "page:service-inclusions",
+  "text": "ASIC registration confirmation"
+ },
+ {
+  "id": "057fad64",
+  "where": "page:service-inclusions",
+  "text": "ABN approval letter"
+ },
+ {
+  "id": "9bb25adc",
+  "where": "page:service-inclusions",
+  "text": "Tax account setup confirmation"
+ },
+ {
+  "id": "46ad4ad9",
+  "where": "page:service-inclusions",
+  "text": "Compliance checklist & timeline"
+ },
+ {
+  "id": "75397264",
+  "where": "page:service-inclusions",
+  "text": "Ongoing support contact details"
+ },
+ {
+  "id": "8972cd35",
+  "where": "page:service-inclusions",
+  "text": "Email + phone support during setup period"
+ },
+ {
+  "id": "b42fd4f4",
+  "where": "page:service-inclusions",
+  "text": "Campaign strategy & audience research"
+ },
+ {
+  "id": "72403997",
+  "where": "page:service-inclusions",
+  "text": "Ad copy & creative development (3 variations)"
+ },
+ {
+  "id": "8420c856",
+  "where": "page:service-inclusions",
+  "text": "Platform setup (Google Ads, Facebook Ads Manager)"
+ },
+ {
+  "id": "95689871",
+  "where": "page:service-inclusions",
+  "text": "Campaign launch & initial optimization"
+ },
+ {
+  "id": "a20575d9",
+  "where": "page:service-inclusions",
+  "text": "Daily monitoring & bid adjustments"
+ },
+ {
+  "id": "d4841b9b",
+  "where": "page:service-inclusions",
+  "text": "Weekly performance reporting"
+ },
+ {
+  "id": "6d69824d",
+  "where": "page:service-inclusions",
+  "text": "Monthly strategy optimization"
+ },
+ {
+  "id": "82f643e0",
+  "where": "page:service-inclusions",
+  "text": "A/B testing implementation"
+ },
+ {
+  "id": "82b4ac5a",
+  "where": "page:service-inclusions",
+  "text": "Email marketing list setup (if applicable)"
+ },
+ {
+  "id": "7cfe325b",
+  "where": "page:service-inclusions",
+  "text": "Monthly performance review call"
+ },
+ {
+  "id": "82208743",
+  "where": "page:service-inclusions",
+  "text": "Video production (refer to videographer)"
+ },
+ {
+  "id": "76a89125",
+  "where": "page:service-inclusions",
+  "text": "Website updates for conversions (separate service)"
+ },
+ {
+  "id": "e6900b0f",
+  "where": "page:service-inclusions",
+  "text": "Design/creative production beyond ad copy"
+ },
+ {
+  "id": "6c28b918",
+  "where": "page:service-inclusions",
+  "text": "TV/radio/print media"
+ },
+ {
+  "id": "49968f3c",
+  "where": "page:service-inclusions",
+  "text": "Ongoing monthly campaigns (2-week initial setup)"
+ },
+ {
+  "id": "be135f26",
+  "where": "page:service-inclusions",
+  "text": "Active ad campaigns (across platforms)"
+ },
+ {
+  "id": "ff79a97b",
+  "where": "page:service-inclusions",
+  "text": "Weekly performance dashboards"
+ },
+ {
+  "id": "ed775f8d",
+  "where": "page:service-inclusions",
+  "text": "Monthly optimization report"
+ },
+ {
+  "id": "53db7be2",
+  "where": "page:service-inclusions",
+  "text": "Monthly ROI analysis"
+ },
+ {
+  "id": "16e8739d",
+  "where": "page:service-inclusions",
+  "text": "Email support + monthly strategy calls"
+ },
+ {
+  "id": "1f955b14",
+  "where": "page:service-inclusions",
+  "text": "Common Questions"
+ },
+ {
+  "id": "e946e4eb",
+  "where": "page:service-inclusions",
+  "text": "What if I need something not listed in my package?"
+ },
+ {
+  "id": "5c13ef45",
+  "where": "page:service-inclusions",
+  "text": "We offer hourly consulting at $150/hr for additional work. Let us know what you need and we'll provide a quote."
+ },
+ {
+  "id": "bfb06edb",
+  "where": "page:service-inclusions",
+  "text": "Can I change or cancel my service?"
+ },
+ {
+  "id": "f41fb17b",
+  "where": "page:service-inclusions",
+  "text": "Yes. For setup services (NDIS, website, business registration), cancellation is possible within the first week with a pro-rata refund. For ongoing services, 2 weeks' notice ends the engagement with final billing."
+ },
+ {
+  "id": "d1da2609",
+  "where": "page:service-inclusions",
+  "text": "What if I'm not satisfied with the service?"
+ },
+ {
+  "id": "dde7de39",
+  "where": "page:service-inclusions",
+  "text": "We offer a 14-day satisfaction guarantee for new services. If you're not satisfied, we'll revise the work or issue a full refund. Contact us immediately if there are issues."
+ },
+ {
+  "id": "161548dc",
+  "where": "page:service-inclusions",
+  "text": "Do you offer payment plans?"
+ },
+ {
+  "id": "38f4fb0b",
+  "where": "page:service-inclusions",
+  "text": "Yes. For services over $3,000, we offer 2-3 payment installments. Discuss options when receiving your quote."
+ },
+ {
+  "id": "01f39ed0",
+  "where": "page:service-inclusions",
+  "text": "What's included in 'support'?"
+ },
+ {
+  "id": "7c9ef9b3",
+  "where": "page:service-inclusions",
+  "text": "Support includes answering questions, clarifying next steps, and helping you use deliverables. It does NOT include re-doing entire sections or significant scope changes."
+ },
+ {
+  "id": "ac80b4b6",
+  "where": "page:service-inclusions",
+  "text": "Can I add services mid-project?"
+ },
+ {
+  "id": "4e0212a3",
+  "where": "page:service-inclusions",
+  "text": "Yes, but timeline may adjust. Email us with the additional scope and we'll provide an updated quote and timeline."
+ },
+ {
+  "id": "8028e8cd",
+  "where": "page:service-inclusions",
+  "text": "What happens after my service ends?"
+ },
+ {
+  "id": "14c97ad5",
+  "where": "page:service-inclusions",
+  "text": "You keep all deliverables (websites, documentation, accounts, etc.). We can discuss ongoing support or maintenance packages if needed."
+ },
+ {
+  "id": "a83b4312",
+  "where": "page:service-inclusions",
+  "text": "Request a Quote"
+ },
+ {
+  "id": "47e919ce",
+  "where": "page:support-and-availability",
+  "text": "Contact & Support"
+ },
+ {
+  "id": "7a75ceb0",
+  "where": "page:support-and-availability",
+  "text": "Support & Availability"
+ },
+ {
+  "id": "f9ee6a38",
+  "where": "page:support-and-availability",
+  "text": "How to Reach Us"
+ },
+ {
+  "id": "e76663bf",
+  "where": "page:support-and-availability",
+  "text": "Phone Support"
+ },
+ {
+  "id": "a9b9ca47",
+  "where": "page:support-and-availability",
+  "text": "Speak directly with our team"
+ },
+ {
+  "id": "07f664da",
+  "where": "page:support-and-availability",
+  "text": "Email Support"
+ },
+ {
+  "id": "e9ef3b28",
+  "where": "page:support-and-availability",
+  "text": "Send detailed enquiries"
+ },
+ {
+  "id": "41bb6092",
+  "where": "page:support-and-availability",
+  "text": "Portal Chat (Clients)"
+ },
+ {
+  "id": "35083c6b",
+  "where": "page:support-and-availability",
+  "text": "For active service clients only"
+ },
+ {
+  "id": "76d5f7f5",
+  "where": "page:support-and-availability",
+  "text": "Our Promise"
+ },
+ {
+  "id": "466eabf3",
+  "where": "page:support-and-availability",
+  "text": "Realistic Response Times"
+ },
+ {
+  "id": "30cbc619",
+  "where": "page:support-and-availability",
+  "text": "Urgent (Critical Issue)"
+ },
+ {
+  "id": "63625675",
+  "where": "page:support-and-availability",
+  "text": "Compliance deadline missed, registration blocked, payment issue"
+ },
+ {
+  "id": "c9ccd692",
+  "where": "page:support-and-availability",
+  "text": "High Priority"
+ },
+ {
+  "id": "ff524d0b",
+  "where": "page:support-and-availability",
+  "text": "Project clarification, document review, quote request"
+ },
+ {
+  "id": "bb4f1dd8",
+  "where": "page:support-and-availability",
+  "text": "General enquiry, future planning, resource request"
+ },
+ {
+  "id": "ecaeeec7",
+  "where": "page:support-and-availability",
+  "text": "Support Levels"
+ },
+ {
+  "id": "4a9d11d3",
+  "where": "page:support-and-availability",
+  "text": "Support Varies by Package"
+ },
+ {
+  "id": "42f5db77",
+  "where": "page:support-and-availability",
+  "text": "Starter Services"
+ },
+ {
+  "id": "ca4bdfc9",
+  "where": "page:support-and-availability",
+  "text": "Growth Services"
+ },
+ {
+  "id": "2e3a5f54",
+  "where": "page:support-and-availability",
+  "text": "Enterprise Services"
+ },
+ {
+  "id": "8398e624",
+  "where": "page:support-and-availability",
+  "text": "Not sure which tier you have? Check your contract or invoice, or email us at info@solbusinessconsultant.com.au with your service reference."
+ },
+ {
+  "id": "93cb5ed1",
+  "where": "page:support-and-availability",
+  "text": "What if I have an urgent issue outside business hours?"
+ },
+ {
+  "id": "cc725732",
+  "where": "page:support-and-availability",
+  "text": "For true emergencies, call our main line and leave a detailed message. Enterprise clients have after-hours emergency contact details in their portal. Standard clients should email and we will respond first thing the next business day."
+ },
+ {
+  "id": "9f2e9c17",
+  "where": "page:support-and-availability",
+  "text": "How long does a typical response take?"
+ },
+ {
+  "id": "e2332b93",
+  "where": "page:support-and-availability",
+  "text": "Most enquiries receive a response within 24 hours during business hours. Urgent issues are addressed by end of business the same day. Simple questions via portal chat are usually answered within 2-4 hours."
+ },
+ {
+  "id": "58fab240",
+  "where": "page:support-and-availability",
+  "text": "Can I schedule a call with my consultant?"
+ },
+ {
+  "id": "119cb002",
+  "where": "page:support-and-availability",
+  "text": "Yes. Book a free consultation or email us with preferred times. Enterprise clients can request their dedicated account liaison to schedule."
+ },
+ {
+  "id": "db9e80d6",
+  "where": "page:support-and-availability",
+  "text": "Do you offer weekend or after-hours support?"
+ },
+ {
+  "id": "4e7d833a",
+  "where": "page:support-and-availability",
+  "text": "Standard support is Monday-Friday 9 AM-5 PM AEST. Enterprise clients have after-hours emergency contact. For scheduled projects outside business hours, contact us to arrange."
+ },
+ {
+  "id": "cfd0168c",
+  "where": "page:support-and-availability",
+  "text": "How do I track my support request?"
+ },
+ {
+  "id": "b1481e04",
+  "where": "page:support-and-availability",
+  "text": "Service clients can track status in the Client Portal under Support Tickets. Email enquiries receive a reference number for tracking. Training students can message via the student dashboard."
+ },
+ {
+  "id": "31bff2d6",
+  "where": "page:support-and-availability",
+  "text": "What if I do not hear back within the promised time?"
+ },
+ {
+  "id": "5d9356f7",
+  "where": "page:support-and-availability",
+  "text": "Contact us directly at +61 460 003 494 or email info@solbusinessconsultant.com.au with URGENT in the subject line. We take response commitments seriously."
+ },
+ {
+  "id": "019b6092",
+  "where": "page:support-and-availability",
+  "text": "Ready to Get Started?"
+ },
+ {
+  "id": "8bf54730",
+  "where": "page:support-and-availability",
+  "text": "Call Now"
+ },
+ {
+  "id": "c974c9c4",
+  "where": "page:after-payment",
+  "text": "What Happens After You Pay or Enrol | SOL Business Consultant"
+ },
+ {
+  "id": "10f5fa72",
+  "where": "page:after-payment",
+  "text": "After Payment"
+ },
+ {
+  "id": "4069c84b",
+  "where": "page:after-payment",
+  "text": "What happens after you pay or enrol?"
+ },
+ {
+  "id": "87c81862",
+  "where": "page:after-payment",
+  "text": "Service clients"
+ },
+ {
+  "id": "ac3d7fd1",
+  "where": "page:after-payment",
+  "text": "Stripe payment confirmed"
+ },
+ {
+  "id": "890b31f5",
+  "where": "page:after-payment",
+  "text": "Client portal access"
+ },
+ {
+  "id": "11ab39a7",
+  "where": "page:after-payment",
+  "text": "Documents and requests"
+ },
+ {
+  "id": "b52f0164",
+  "where": "page:after-payment",
+  "text": "Deliverables and handover"
+ },
+ {
+  "id": "64af56d5",
+  "where": "page:after-payment",
+  "text": "Training students"
+ },
+ {
+  "id": "63686a27",
+  "where": "page:after-payment",
+  "text": "Course purchase or enrolment"
+ },
+ {
+  "id": "57f46f9a",
+  "where": "page:after-payment",
+  "text": "Training payments and enrolments are handled separately from service payments."
+ },
+ {
+  "id": "342d1a01",
+  "where": "page:after-payment",
+  "text": "Student dashboard"
+ },
+ {
+  "id": "80402f75",
+  "where": "page:after-payment",
+  "text": "Lessons, quizzes, resources"
+ },
+ {
+  "id": "bef24cfc",
+  "where": "page:after-payment",
+  "text": "Certificate and history"
+ },
+ {
+  "id": "712114a9",
+  "where": "page:after-payment",
+  "text": "Client portal vs student dashboard"
+ },
+ {
+  "id": "a9853123",
+  "where": "page:after-payment",
+  "text": "Use the right portal for the right work."
+ },
+ {
+  "id": "30842ec4",
+  "where": "page:after-payment",
+  "text": "Business services, website, NDIS registration, finance, marketing | Courses, support coordination training, quizzes, certificates"
+ },
+ {
+  "id": "f98bbdfd",
+  "where": "page:after-payment",
+  "text": "Client Portal | Student Dashboard"
+ },
+ {
+  "id": "f8353b74",
+  "where": "page:after-payment",
+  "text": "Payments, invoices, documents, deliverables, support tickets | Courses, lessons, quizzes, certificates, learning activity"
+ },
+ {
+  "id": "c99d8257",
+  "where": "page:after-payment",
+  "text": "Make Service Payment | Explore Training"
+ },
+ {
+  "id": "8614f4c6",
+  "where": "page:privacy-policy",
+  "text": "Privacy Policy | SOL Business Consultant"
+ },
+ {
+  "id": "8d4ff0e3",
+  "where": "page:refunds-cancellation-policy",
+  "text": "Refund & Cancellation Policy | SOL Business Consultant"
+ },
+ {
+  "id": "bf4cc43e",
+  "where": "page:terms-conditions",
+  "text": "Terms & Conditions | SOL Business Consultant"
+ },
+ {
+  "id": "6e74c26e",
+  "where": "page:accessibility",
+  "text": "Accessibility Statement | SOL Business Consultant"
+ },
+ {
+  "id": "fa7f56b9",
+  "where": "page:accessibility",
+  "text": "Accessibility Statement"
+ },
+ {
+  "id": "2d7ebe92",
+  "where": "page:accessibility",
+  "text": "Our Commitment"
+ },
+ {
+  "id": "be77ded5",
+  "where": "page:accessibility",
+  "text": "<p>We use the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> as a reference for ongoing accessibility improvements. This website has not been independently assessed or certified for WCAG conformance.</p><p>As a business providing services to NDIS participants, families, and carers, we recognise that accessible design is not just a legal requirement — it is fundamental to serving our community.</p>"
+ },
+ {
+  "id": "6b24c768",
+  "where": "page:accessibility",
+  "text": "Accessibility Features"
+ },
+ {
+  "id": "6d8a7398",
+  "where": "page:accessibility",
+  "text": "Text Resizing"
+ },
+ {
+  "id": "ade582f8",
+  "where": "page:accessibility",
+  "text": "Use your browser's zoom controls to enlarge text. Layout behavior may vary."
+ },
+ {
+  "id": "808906c6",
+  "where": "page:accessibility",
+  "text": "Contrast Preferences"
+ },
+ {
+  "id": "a77e4966",
+  "where": "page:accessibility",
+  "text": "We aim to support contrast preferences; behavior can vary by browser and page."
+ },
+ {
+  "id": "898cb7a5",
+  "where": "page:accessibility",
+  "text": "Screen Reader Support"
+ },
+ {
+  "id": "d6823a83",
+  "where": "page:accessibility",
+  "text": "We use semantic HTML and ARIA where appropriate and continue to improve assistive technology support."
+ },
+ {
+  "id": "1c40536b",
+  "where": "page:accessibility",
+  "text": "Keyboard Navigation"
+ },
+ {
+  "id": "1ae61e4e",
+  "where": "page:accessibility",
+  "text": "We aim to support keyboard navigation and are continuing to improve it."
+ },
+ {
+  "id": "1136e748",
+  "where": "page:accessibility",
+  "text": "WCAG 2.1 Accessibility Goals"
+ },
+ {
+  "id": "ad79218a",
+  "where": "page:accessibility",
+  "text": "The items below describe goals and work in progress, not verified conformance or certification."
+ },
+ {
+  "id": "ebec5a58",
+  "where": "page:accessibility",
+  "text": "A | Goal | We aim to provide text alternatives for meaningful images."
+ },
+ {
+  "id": "4eb00532",
+  "where": "page:accessibility",
+  "text": "A | Goal | We aim to use semantic structure to communicate content relationships."
+ },
+ {
+  "id": "77f695dc",
+  "where": "page:accessibility",
+  "text": "AA | Goal | We aim to provide sufficient contrast; this has not been independently assessed."
+ },
+ {
+  "id": "05d1ecdd",
+  "where": "page:accessibility",
+  "text": "AA | Goal | We aim to keep content usable when text is resized; behavior may vary."
+ },
+ {
+  "id": "e76bfd37",
+  "where": "page:accessibility",
+  "text": "A | Goal | We aim to support keyboard navigation and continue to improve it."
+ },
+ {
+  "id": "13265d80",
+  "where": "page:accessibility",
+  "text": "A | Partial | Skip navigation links are in progress."
+ },
+ {
+  "id": "35876951",
+  "where": "page:accessibility",
+  "text": "A | Goal | We aim to provide descriptive page titles throughout the site."
+ },
+ {
+  "id": "9323db97",
+  "where": "page:accessibility",
+  "text": "A | Goal | The document language is set to en-AU; content accessibility is not independently assessed."
+ },
+ {
+  "id": "9687baec",
+  "where": "page:accessibility",
+  "text": "A | Goal | We aim to provide clear names, roles, and states for interactive elements."
+ },
+ {
+  "id": "d40f0f4d",
+  "where": "page:accessibility",
+  "text": "Partial = in progress. Last reviewed: June 2026."
+ },
+ {
+  "id": "616ae0e5",
+  "where": "page:accessibility",
+  "text": "Known Limitations"
+ },
+ {
+  "id": "7a179e23",
+  "where": "page:accessibility",
+  "text": "<ul><li>Some older PDF documents may not be fully accessible. We are working to remediate these.</li><li>Third-party embedded content (e.g. Stripe payment pages) is outside our direct control.</li><li>Skip-to-content navigation links are being implemented.</li></ul>"
+ },
+ {
+  "id": "f5a27a5a",
+  "where": "page:accessibility",
+  "text": "Feedback & Contact"
+ },
+ {
+  "id": "ede47f6c",
+  "where": "page:accessibility",
+  "text": "<p>If you experience any barriers accessing our content, or if you require information in an alternative format, please contact us:</p><strong>Email:</strong> <a href=\"mailto:info@solbusinessconsultant.com.au\">info@solbusinessconsultant.com.au</a><br><strong>Phone:</strong> <a href=\"tel:+61460003494\">+61 460 003 494</a><br><strong>Post:</strong> SOL Business Consultant, Glenroy VIC 3046<p>We aim to respond to accessibility feedback within 5 business days.</p>"
+ },
+ {
+  "id": "c554ee50",
+  "where": "page:accessibility",
+  "text": "Formal Complaints"
+ },
+ {
+  "id": "bcb067ee",
+  "where": "page:accessibility",
+  "text": "<p>If you are not satisfied with our response, you may contact the <strong>Australian Human Rights Commission</strong>:</p><strong>Website:</strong> <a href=\"https://humanrights.gov.au\" target=\"_blank\" rel=\"noopener\">humanrights.gov.au</a><br><strong>Phone:</strong> 1300 656 419<p>This statement was last reviewed on 3 June 2026 and applies to the website at www.solbusinessconsultant.com.au.</p>"
+ },
+ {
+  "id": "86968bdf",
+  "where": "page:complaints-feedback",
+  "text": "Complaints & Feedback | SOL Business Consultant"
+ },
+ {
+  "id": "62354203",
+  "where": "page:complaints-feedback",
+  "text": "NDIS Practice Standards"
+ },
+ {
+  "id": "69abea0b",
+  "where": "page:complaints-feedback",
+  "text": "Complaints & Feedback"
+ },
+ {
+  "id": "6bac23c6",
+  "where": "page:complaints-feedback",
+  "text": "Step 1"
+ },
+ {
+  "id": "df53f1fa",
+  "where": "page:complaints-feedback",
+  "text": "Submit your complaint below or via email"
+ },
+ {
+  "id": "aefbadf9",
+  "where": "page:complaints-feedback",
+  "text": "Step 2"
+ },
+ {
+  "id": "ecc813c4",
+  "where": "page:complaints-feedback",
+  "text": "We acknowledge within 2 business days"
+ },
+ {
+  "id": "27030a62",
+  "where": "page:complaints-feedback",
+  "text": "Step 3"
+ },
+ {
+  "id": "bbf15fde",
+  "where": "page:complaints-feedback",
+  "text": "Resolution provided within 10 business days"
+ },
+ {
+  "id": "30d3a0f9",
+  "where": "page:complaints-feedback",
+  "text": "Your Rights — You have the right to have your complaint dealt with fairly, promptly, and confidentially. If you are unsatisfied with our response, you may contact the NDIS Quality and Safeguards Commission on 1800 035 544 (Monday–Friday 9am–5pm local time)."
+ },
+ {
+  "id": "34762617",
+  "where": "page:complaints-feedback",
+  "text": "Submit a complaint or feedback"
+ },
+ {
+  "id": "075c42a6",
+  "where": "page:complaints-feedback",
+  "text": "All complaints are treated confidentially and in accordance with the Privacy Act 1988."
+ },
+ {
+  "id": "b916cec3",
+  "where": "page:complaints-feedback",
+  "text": "Complaint received. Our team will respond within 2 business days. Not satisfied with our response? You may escalate to the NDIS Quality and Safeguards Commission: 1800 035 544."
+ },
+ {
+  "id": "66a38434",
+  "where": "page:services",
+  "text": "Make a Secure Payment"
+ },
+ {
+  "id": "c7552e4a",
+  "where": "page:services/ndis-registration",
+  "text": "NDIS Registration"
+ },
+ {
+  "id": "e561ebab",
+  "where": "page:services/ndis-registration",
+  "text": "Find Your Registration Package"
+ },
+ {
+  "id": "339cef9a",
+  "where": "page:services/ndis-registration",
+  "text": "Why Choose Sol"
+ },
+ {
+  "id": "70a7055b",
+  "where": "page:services/ndis-registration",
+  "text": "Registration Pathway"
+ },
+ {
+  "id": "73b87ece",
+  "where": "page:services/ndis-registration",
+  "text": "Policies, Procedures and Registers"
+ },
+ {
+  "id": "7b3651a9",
+  "where": "page:services/ndis-registration",
+  "text": "Also Available"
+ },
+ {
+  "id": "4f7b56ca",
+  "where": "page:services/ndis-registration",
+  "text": "NDIS Support Coordination Training"
+ },
+ {
+  "id": "d9988e11",
+  "where": "page:services/ndis-registration",
+  "text": "View Training Packages"
+ },
+ {
+  "id": "51c7e3e7",
+  "where": "page:services/ndis-registration",
+  "text": "Choose Your Path"
+ },
+ {
+  "id": "6564c6cd",
+  "where": "page:services/ndis-registration",
+  "text": "Register with SOL Support"
+ },
+ {
+  "id": "ff6466a5",
+  "where": "page:services/ndis-registration",
+  "text": "Start Your Registration"
+ },
+ {
+  "id": "c330f8d3",
+  "where": "page:services/ndis-registration",
+  "text": "Create Your Business Profile"
+ },
+ {
+  "id": "fbbf07d3",
+  "where": "page:services/ndis-registration",
+  "text": "Build My Business Profile"
+ },
+ {
+  "id": "9d0fbcb3",
+  "where": "page:services/ndis-registration",
+  "text": "Apply Independently"
+ },
+ {
+  "id": "313e71e3",
+  "where": "page:services/ndis-registration",
+  "text": "Visit NDIS Commission Portal"
+ },
+ {
+  "id": "d89bd178",
+  "where": "page:services/ndis-registration",
+  "text": "Get Started Now"
+ },
+ {
+  "id": "d46e3508",
+  "where": "page:services/ndis-registration",
+  "text": "Open Package Finder"
+ },
+ {
+  "id": "e0e7ce12",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "NDIS Training"
+ },
+ {
+  "id": "d8dec0e8",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Enrol Now"
+ },
+ {
+  "id": "18952c78",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "View All 12 Modules"
+ },
+ {
+  "id": "edcba263",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Full Curriculum"
+ },
+ {
+  "id": "f137a2c5",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Introduction to the NDIS"
+ },
+ {
+  "id": "01b8a919",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "NDIS Act 2013 — purpose, objects, and principles"
+ },
+ {
+  "id": "804512b9",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "How the NDIS differs from other disability support systems"
+ },
+ {
+  "id": "f87a02bd",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Participant eligibility criteria and access requirements"
+ },
+ {
+  "id": "c63fa5cf",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "The role of the NDIS Commission and Quality & Safeguards framework"
+ },
+ {
+  "id": "437b6d3b",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Key NDIS terminology and funding definitions"
+ },
+ {
+  "id": "6c3b7064",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Overview of NDIS participant planning and review cycles"
+ },
+ {
+  "id": "4cbff36b",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "The Role of a Support Coordinator"
+ },
+ {
+  "id": "73000787",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Difference between Support Coordinator, Specialist SC, and Plan Manager"
+ },
+ {
+  "id": "0f982601",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "NDIS Practice Standards — SC-specific obligations"
+ },
+ {
+  "id": "bf6d52a7",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "NDIS Code of Conduct — 7 requirements explained"
+ },
+ {
+  "id": "457840ec",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Conflict of interest identification and management"
+ },
+ {
+  "id": "7192a930",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Duty of care and professional boundaries"
+ },
+ {
+  "id": "f1e272d2",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Record-keeping and reporting obligations"
+ },
+ {
+  "id": "286d77d5",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Reading & Implementing NDIS Plans"
+ },
+ {
+  "id": "2b752b36",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Three NDIS budget types: Core, Capital, Capacity Building"
+ },
+ {
+  "id": "e6730c47",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Understanding support categories and line items"
+ },
+ {
+  "id": "4c768efd",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Navigating the NDIS Pricing Arrangements & Price Limits"
+ },
+ {
+  "id": "c2427909",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Creating a plan implementation roadmap with the participant"
+ },
+ {
+  "id": "cf3e9761",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Service bookings and budget tracking in the myplace portal"
+ },
+ {
+  "id": "46ea5cda",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Monitoring plan utilisation and managing underspend/overspend"
+ },
+ {
+  "id": "47613e92",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Participant-Centred Practice"
+ },
+ {
+  "id": "cc127949",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Principles of person-centred and strengths-based practice"
+ },
+ {
+  "id": "56339b7b",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Supporting genuine choice and control in decision-making"
+ },
+ {
+  "id": "6f12caa3",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Goal setting with participants — SMART goals for NDIS"
+ },
+ {
+  "id": "5350de66",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Cultural and linguistic diversity considerations"
+ },
+ {
+  "id": "6fe53116",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Trauma-informed practice in disability support"
+ },
+ {
+  "id": "fb75c23b",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Advocacy — when and how to act on behalf of participants"
+ },
+ {
+  "id": "44cf1381",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Risk, Safeguarding & Reportable Incidents"
+ },
+ {
+  "id": "a6465f2e",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Risk assessment frameworks for NDIS providers"
+ },
+ {
+  "id": "1e95d254",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "The 5 categories of NDIS reportable incidents"
+ },
+ {
+  "id": "92b34134",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Internal incident reporting — process and timelines"
+ },
+ {
+  "id": "b01377cb",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "External reporting to the NDIS Commission"
+ },
+ {
+  "id": "7663561f",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Worker screening — NDIS Worker Screening Check explained"
+ },
+ {
+  "id": "d0593192",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Preventing and responding to abuse, neglect, and exploitation"
+ },
+ {
+  "id": "18a92864",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Service Agreements & Provider Connections"
+ },
+ {
+  "id": "4d8316fc",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "What must be included in an NDIS service agreement"
+ },
+ {
+  "id": "fb448a8c",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Service agreement templates and customisation"
+ },
+ {
+  "id": "005b4b46",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Finding and vetting registered vs unregistered providers"
+ },
+ {
+  "id": "8a034320",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Navigating the NDIS provider marketplace"
+ },
+ {
+  "id": "d4c08904",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Monitoring provider performance and handling complaints"
+ },
+ {
+  "id": "5170ef4f",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Managing provider transitions and plan changes"
+ },
+ {
+  "id": "cb0f498b",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Documentation & Record Keeping"
+ },
+ {
+  "id": "09601a6a",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "NDIS case note standards — what to include and exclude"
+ },
+ {
+  "id": "6f7553ad",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Writing effective progress reports for NDIS planners"
+ },
+ {
+  "id": "6fd1e8ac",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "File management systems for audit readiness"
+ },
+ {
+  "id": "8b5db829",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Privacy Act obligations and consent requirements"
+ },
+ {
+  "id": "d17f69ce",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Confidentiality — what can and cannot be shared"
+ },
+ {
+  "id": "cfa8a0ac",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Retention periods for NDIS participant records"
+ },
+ {
+  "id": "1663b9b4",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Crisis & Complex Support"
+ },
+ {
+  "id": "7530b60c",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Identifying early warning signs of participant crisis"
+ },
+ {
+  "id": "9d57eac0",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Crisis response planning and documentation"
+ },
+ {
+  "id": "8e9f7992",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Mental health and psychosocial disability in the NDIS"
+ },
+ {
+  "id": "685fd564",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Behaviour Support Practitioners — role and referral"
+ },
+ {
+  "id": "c472d5d1",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Overview of restrictive practices and authorisation"
+ },
+ {
+  "id": "962fca88",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Escalation pathways and emergency contacts"
+ },
+ {
+  "id": "47d3fdfc",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Plan Reviews & Appeals"
+ },
+ {
+  "id": "e2a22713",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Types of NDIS plan reviews — scheduled and unscheduled"
+ },
+ {
+  "id": "52748813",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Preparing a plan review submission with evidence"
+ },
+ {
+  "id": "61090425",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Writing supporting letters for allied health and SC"
+ },
+ {
+  "id": "db76f4e1",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Internal NDIS review process — steps and timeframes"
+ },
+ {
+  "id": "3d9cd246",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "AAT appeals — when and how to apply"
+ },
+ {
+  "id": "090f2512",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Participant rights in the review and appeals process"
+ },
+ {
+  "id": "109f255b",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Working with Allied Health & Therapists"
+ },
+ {
+  "id": "34314e81",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Role of Allied Health in NDIS participant outcomes"
+ },
+ {
+  "id": "2e9bb1de",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Assistive Technology (AT) — low, mid, and high cost pathways"
+ },
+ {
+  "id": "c26e27ae",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "AT assessment, quotes, and portal approval process"
+ },
+ {
+  "id": "e26afcd7",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Specialist Disability Accommodation (SDA) overview"
+ },
+ {
+  "id": "e2f818e3",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Supported Independent Living (SIL) assessment and funding"
+ },
+ {
+  "id": "32d4ba37",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Building effective referral relationships with therapists"
+ },
+ {
+  "id": "2ff9f0e7",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Business Skills for Support Coordinators"
+ },
+ {
+  "id": "21a5ea16",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Setting up as an independent SC — ABN, registration, insurance"
+ },
+ {
+  "id": "74c4967c",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "NDIS Portal and myplace — essential navigation skills"
+ },
+ {
+  "id": "3bd4b698",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Claiming and invoicing correctly — avoiding common errors"
+ },
+ {
+  "id": "22cc7b9d",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Managing a SC caseload — tools and time management"
+ },
+ {
+  "id": "5f300757",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "CPD obligations and professional development planning"
+ },
+ {
+  "id": "3d5c3e6a",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Employment vs contractor models for SC workers"
+ },
+ {
+  "id": "aa2e59ca",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Competency Assessment & Certification"
+ },
+ {
+  "id": "7dfab783",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Written scenario assessments across all 11 prior modules"
+ },
+ {
+  "id": "95a95de1",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "1,500+ multiple-choice quiz questions with answer explanations"
+ },
+ {
+  "id": "ebc203cc",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Competency-based evaluation mapped to NDIS Practice Standards"
+ },
+ {
+  "id": "af2c8c5f",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Short-answer and case study responses"
+ },
+ {
+  "id": "11a67ef1",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Trainer-marked assessment (Team/Enterprise packages)"
+ },
+ {
+  "id": "e7d61da6",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Certificate of completion issued upon passing all assessments"
+ },
+ {
+  "id": "25728821",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Enquire About Training"
+ },
+ {
+  "id": "8124e2ac",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Training Packages"
+ },
+ {
+  "id": "5dbebe33",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Full 12-module online curriculum"
+ },
+ {
+  "id": "89417607",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "1,500+ quiz questions with answers"
+ },
+ {
+  "id": "b7ece283",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Self-paced flexible access (6 months)"
+ },
+ {
+  "id": "8d61f874",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Participant workbook (PDF)"
+ },
+ {
+  "id": "4c6153ce",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Certificate of completion"
+ },
+ {
+  "id": "522af085",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Email Q&A support"
+ },
+ {
+  "id": "473710d3",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "More details"
+ },
+ {
+  "id": "b04e72f3",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Full 12-module curriculum (up to 10 staff)"
+ },
+ {
+  "id": "7961cbd9",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Video scripts & PowerPoint slide decks"
+ },
+ {
+  "id": "26abde7d",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Trainer guides & facilitator notes"
+ },
+ {
+  "id": "4aea7931",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Participant workbooks (branded)"
+ },
+ {
+  "id": "535a2d4f",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "2 x live Q&A sessions with Sol trainer"
+ },
+ {
+  "id": "09589cf3",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "NDIS Code of Conduct alignment pack"
+ },
+ {
+  "id": "acf2d6bd",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Certificates for all completions"
+ },
+ {
+  "id": "606ed058",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Book Team Training"
+ },
+ {
+  "id": "4832e458",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Contact us"
+ },
+ {
+  "id": "9e9413c1",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Everything in Team package"
+ },
+ {
+  "id": "852ddfe9",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "White-label branding of all materials"
+ },
+ {
+  "id": "59640a55",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Full RTO-ready curriculum pack"
+ },
+ {
+  "id": "ccea8486",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Audit-ready competency assessments"
+ },
+ {
+  "id": "63f1c1ff",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Train-the-trainer program"
+ },
+ {
+  "id": "649f5cf0",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Ongoing content updates included"
+ },
+ {
+  "id": "965f6cd0",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "LMS integration support"
+ },
+ {
+  "id": "d8ef9a03",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Request Enterprise Quote"
+ },
+ {
+  "id": "2126f1e3",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "What's Included"
+ },
+ {
+  "id": "1d821ef7",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "Flexible Delivery"
+ },
+ {
+  "id": "ef5984e5",
+  "where": "page:services/ndis-support-coordination-training",
+  "text": "RTO-Ready Content"
+ },
+ {
+  "id": "7dbcc9b8",
+  "where": "page:services/company-business-registration",
+  "text": "Business Setup"
+ },
+ {
+  "id": "feb96dad",
+  "where": "page:services/company-business-registration",
+  "text": "Start Your Enquiry"
+ },
+ {
+  "id": "d96313f9",
+  "where": "page:services/company-business-registration",
+  "text": "Why Choose SOL"
+ },
+ {
+  "id": "630f28c7",
+  "where": "page:services/company-business-registration",
+  "text": "Initial setup review: within 1 business day."
+ },
+ {
+  "id": "cb608fc2",
+  "where": "page:services/bookkeeping-bas-lodgement",
+  "text": "Finance Operations"
+ },
+ {
+  "id": "a4fc0d4d",
+  "where": "page:services/bookkeeping-bas-lodgement",
+  "text": "Monthly or quarterly BAS"
+ },
+ {
+  "id": "113460a1",
+  "where": "page:services/bookkeeping-bas-lodgement",
+  "text": "Initial review: within 1 business day."
+ },
+ {
+  "id": "7fae3eb3",
+  "where": "page:services/payroll-services",
+  "text": "Payroll & Tax Process Support"
+ },
+ {
+  "id": "b3f251b0",
+  "where": "page:services/payroll-services",
+  "text": "Payroll scope review: within 1 business day."
+ },
+ {
+  "id": "cf2c44f9",
+  "where": "page:services/payroll-services",
+  "text": "Start Your Payroll Services Enquiry"
+ },
+ {
+  "id": "4c345616",
+  "where": "page:services/website-development",
+  "text": "What We Build"
+ },
+ {
+  "id": "63799960",
+  "where": "page:services/website-development",
+  "text": "Custom website design and development"
+ },
+ {
+  "id": "07c85ad0",
+  "where": "page:services/business-personal-loan-support",
+  "text": "Funding Readiness"
+ },
+ {
+  "id": "b05c9bec",
+  "where": "page:services/business-personal-loan-support",
+  "text": "Loan-ready financial packs"
+ },
+ {
+  "id": "f13dd90a",
+  "where": "page:services/business-personal-loan-support",
+  "text": "Application guidance and readiness review."
+ },
+ {
+  "id": "ffb7ca5e",
+  "where": "page:services/business-personal-loan-support",
+  "text": "Initial readiness review: within 1 business day."
+ },
+ {
+  "id": "320a6601",
+  "where": "page:services/accountancy-partnerships",
+  "text": "CPA Partner Network"
+ },
+ {
+  "id": "cd3ff3a8",
+  "where": "page:services/accountancy-partnerships",
+  "text": "Compliance reporting"
+ },
+ {
+  "id": "0e4af1a3",
+  "where": "page:services/search-engine-optimization",
+  "text": "Technical and on-page SEO"
+ },
+ {
+  "id": "77c9f792",
+  "where": "page:services/search-engine-optimization",
+  "text": "Content optimisation for new and existing pages."
+ },
+ {
+  "id": "f37f184e",
+  "where": "page:services/google-adwords",
+  "text": "Paid Advertising"
+ },
+ {
+  "id": "94a88158",
+  "where": "page:services/google-adwords",
+  "text": "Meta, YouTube and LinkedIn ads"
+ },
+ {
+  "id": "aab3bc6f",
+  "where": "page:services/google-adwords",
+  "text": "Landing page and conversion tracking guidance where included."
+ },
+ {
+  "id": "33de8dbe",
+  "where": "page:services/google-adwords",
+  "text": "Campaign scope review: within 1 business day."
+ },
+ {
+  "id": "1604559a",
+  "where": "page:services/social-media-marketing",
+  "text": "Marketing Services"
+ },
+ {
+  "id": "4cc47bcb",
+  "where": "page:services/social-media-marketing",
+  "text": "Get a Free Strategy Call"
+ },
+ {
+  "id": "b86fb2e9",
+  "where": "page:services/social-media-marketing",
+  "text": "No lock-in plans"
+ },
+ {
+  "id": "00bbb1cf",
+  "where": "page:services/social-media-marketing",
+  "text": "Australian contact"
+ },
+ {
+  "id": "7d4071e4",
+  "where": "page:services/social-media-marketing",
+  "text": "Monthly reporting"
+ },
+ {
+  "id": "26fdb642",
+  "where": "page:services/social-media-marketing",
+  "text": "Clear campaign scope"
+ },
+ {
+  "id": "2468577e",
+  "where": "page:services/social-media-marketing",
+  "text": "Transparent Pricing"
+ },
+ {
+  "id": "e5ef8653",
+  "where": "page:services/social-media-marketing",
+  "text": "Social media setup"
+ },
+ {
+  "id": "b1674881",
+  "where": "page:services/social-media-marketing",
+  "text": "8 branded posts per month"
+ },
+ {
+  "id": "492ae508",
+  "where": "page:services/social-media-marketing",
+  "text": "Basic SEO audit"
+ },
+ {
+  "id": "78ab2470",
+  "where": "page:services/social-media-marketing",
+  "text": "Google Business Profile optimisation"
+ },
+ {
+  "id": "572fc6cc",
+  "where": "page:services/social-media-marketing",
+  "text": "Social media management"
+ },
+ {
+  "id": "4766ff50",
+  "where": "page:services/social-media-marketing",
+  "text": "SEO content planning"
+ },
+ {
+  "id": "e24145cb",
+  "where": "page:services/social-media-marketing",
+  "text": "Google Ads management"
+ },
+ {
+  "id": "916f7dab",
+  "where": "page:services/social-media-marketing",
+  "text": "Email campaign support"
+ },
+ {
+  "id": "ec4eaf47",
+  "where": "page:services/social-media-marketing",
+  "text": "Monthly strategy call"
+ },
+ {
+  "id": "26e9dc94",
+  "where": "page:services/social-media-marketing",
+  "text": "Custom channel plan"
+ },
+ {
+  "id": "fbfd331c",
+  "where": "page:services/social-media-marketing",
+  "text": "Paid ads and SEO scope"
+ },
+ {
+  "id": "d52515f2",
+  "where": "page:services/social-media-marketing",
+  "text": "Content calendar"
+ },
+ {
+  "id": "14a5cc5e",
+  "where": "page:services/social-media-marketing",
+  "text": "Analytics dashboard options"
+ },
+ {
+  "id": "4194ad5f",
+  "where": "page:services/social-media-marketing",
+  "text": "Ongoing campaign review"
+ },
+ {
+  "id": "0686fe51",
+  "where": "page:services/social-media-marketing",
+  "text": "What We Do"
+ },
+ {
+  "id": "484de6d5",
+  "where": "page:services/social-media-marketing",
+  "text": "Search Engine Optimisation"
+ },
+ {
+  "id": "8bdbf8cc",
+  "where": "page:services/social-media-marketing",
+  "text": "Google and Meta Ads"
+ },
+ {
+  "id": "96ddece4",
+  "where": "page:services/social-media-marketing",
+  "text": "Email Marketing"
+ },
+ {
+  "id": "81ad3faf",
+  "where": "page:services/social-media-marketing",
+  "text": "Website and Landing Pages"
+ },
+ {
+  "id": "a855a72a",
+  "where": "page:services/social-media-marketing",
+  "text": "Analytics and Reporting"
+ },
+ {
+  "id": "ed0fcc5d",
+  "where": "page:services/social-media-marketing",
+  "text": "Book a Free Strategy Call"
+ },
+ {
+  "id": "56cddd34",
+  "where": "page:services/social-media-marketing",
+  "text": "Get in Touch"
+ },
+ {
+  "id": "2dfb7bb8",
+  "where": "page:services/social-media-marketing",
+  "text": "Optional: send me marketing updates and service information. I can unsubscribe at any time."
+ },
+ {
+  "id": "a258f776",
+  "where": "page:services/social-media-marketing",
+  "text": "We'll respond within 1 business day. No spam."
+ },
+ {
+  "id": "f0d40ea6",
+  "where": "page:services/social-media-marketing",
+  "text": "Thanks. A SOL team member will contact you within one business day."
+ },
+ {
+  "id": "6798f579",
+  "where": "page:services/software-automation",
+  "text": "Software & NDIS Automation"
+ },
+ {
+  "id": "02739abc",
+  "where": "page:services/software-automation",
+  "text": "Automate Your\nNDIS Compliance\n[Intelligently]"
+ },
+ {
+  "id": "a643cc37",
+  "where": "page:services/software-automation",
+  "text": "Larger software builds are delivered in agreed milestones."
+ },
+ {
+  "id": "479da7a7",
+  "where": "page:services/software-automation",
+  "text": "Tell Us What You Want to Automate"
+ },
+ {
+  "id": "6285a18a",
+  "where": "page:services/software-automation",
+  "text": "NDIS Document Automation"
+ },
+ {
+  "id": "0cc50b8a",
+  "where": "page:services/software-automation",
+  "text": "Client Intake Systems"
+ },
+ {
+  "id": "e64eafc0",
+  "where": "page:services/software-automation",
+  "text": "Compliance Dashboards"
+ },
+ {
+  "id": "22171a61",
+  "where": "page:services/software-automation",
+  "text": "Easy Compliance Integration"
+ },
+ {
+  "id": "a197979c",
+  "where": "page:services/software-automation",
+  "text": "What We Can Automate For You"
+ },
+ {
+  "id": "1f686f8e",
+  "where": "page:services/software-automation",
+  "text": "NDIS policy document generation (branded Word packs)"
+ },
+ {
+  "id": "76a229de",
+  "where": "page:services/software-automation",
+  "text": "Client intake and onboarding automation"
+ },
+ {
+  "id": "3f28cdce",
+  "where": "page:services/software-automation",
+  "text": "HR compliance tracking (NDIS checks, first aid, certifications)"
+ },
+ {
+  "id": "9024aae4",
+  "where": "page:services/software-automation",
+  "text": "Participant file management systems"
+ },
+ {
+  "id": "7a54499e",
+  "where": "page:services/software-automation",
+  "text": "Incident and complaint register automation"
+ },
+ {
+  "id": "3e6e3cf6",
+  "where": "page:services/software-automation",
+  "text": "Audit preparation workflows"
+ },
+ {
+  "id": "07a25368",
+  "where": "page:services/software-automation",
+  "text": "Easy Compliance platform setup and training"
+ },
+ {
+  "id": "9bd5efec",
+  "where": "page:services/software-automation",
+  "text": "Custom software builds for NDIS providers"
+ },
+ {
+  "id": "b933fa51",
+  "where": "page:services/software-automation",
+  "text": "Security & Compliance"
+ },
+ {
+  "id": "24c2ac41",
+  "where": "page:services/software-automation",
+  "text": "End-to-End Encryption"
+ },
+ {
+  "id": "51201eeb",
+  "where": "page:services/software-automation",
+  "text": "Australian-Hosted Data"
+ },
+ {
+  "id": "8cee105d",
+  "where": "page:services/software-automation",
+  "text": "Access Control"
+ },
+ {
+  "id": "344c7ffc",
+  "where": "page:services/software-automation",
+  "text": "Audit Logs"
+ },
+ {
+  "id": "a2fe4479",
+  "where": "page:services/software-automation",
+  "text": "Data Minimisation"
+ },
+ {
+  "id": "f27bc492",
+  "where": "page:services/admin-back-office-support",
+  "text": "Admin & Back-Office Support"
+ },
+ {
+  "id": "4b139267",
+  "where": "page:services/offshore-outsourcing-staff-solutions",
+  "text": "Offshore Outsourcing & Staffing"
+ },
+ {
+  "id": "f137763b",
+  "where": "page:services/offshore-outsourcing-staff-solutions",
+  "text": "End-to-end recruitment and onboarding"
+ },
+ {
+  "id": "c3c8db77",
+  "where": "page:services/offshore-outsourcing-staff-solutions",
+  "text": "Performance monitoring and reporting"
+ },
+ {
+  "id": "5f26621b",
+  "where": "page:services/offshore-outsourcing-staff-solutions",
+  "text": "Offshore Staffing Solutions"
+ },
+ {
+  "id": "73af1667",
+  "where": "page:ai-machine-learning",
+  "text": "Video labelling, data annotation and quality assurance for AI and machine learning teams."
+ },
+ {
+  "id": "10980a5e",
+  "where": "page:ai-machine-learning",
+  "text": "AI & Machine Learning"
+ },
+ {
+  "id": "76909aa6",
+  "where": "page:ai-machine-learning",
+  "text": "Human-in-the-loop quality control"
+ },
+ {
+  "id": "f9189f72",
+  "where": "page:ai-machine-learning",
+  "text": "Data annotation specialist labelling images for a machine learning model"
+ },
+ {
+  "id": "5b6d1986",
+  "where": "page:services/accountancy",
+  "text": "Accounting Consultancy"
+ },
+ {
+  "id": "31c052c8",
+  "where": "page:services/accountancy",
+  "text": "Accounting Consultancy\nfor [Australian Businesses]"
+ },
+ {
+  "id": "2ec567bb",
+  "where": "page:services/accountancy",
+  "text": "Start Your Accounting Consultancy Enquiry"
+ },
+ {
+  "id": "95c7ddc0",
+  "where": "page:services/accountancy",
+  "text": "Bookkeeping Referrals"
+ },
+ {
+  "id": "435ed7fd",
+  "where": "page:services/accountancy",
+  "text": "BAS & Tax Guidance"
+ },
+ {
+  "id": "5c995ce3",
+  "where": "page:services/accountancy",
+  "text": "Business Financial Consulting"
+ },
+ {
+  "id": "2f81d6f0",
+  "where": "page:services/accountancy",
+  "text": "Accounting Partner Network"
+ },
+ {
+  "id": "67e03682",
+  "where": "sol_block:pricing-tabs",
+  "text": "Find My Package"
+ },
+ {
+  "id": "8cd6878a",
+  "where": "sol_block:pricing-tabs",
+  "text": "6-month flexible access"
+ },
+ {
+  "id": "db4592de",
+  "where": "sol_block:pricing-tabs",
+  "text": "Full 12-module curriculum for up to 10 staff"
+ },
+ {
+  "id": "c29ea056",
+  "where": "sol_block:pricing-tabs",
+  "text": "Branded participant workbooks"
+ },
+ {
+  "id": "b3b25408",
+  "where": "sol_block:pricing-tabs",
+  "text": "Request Quote"
+ },
+ {
+  "id": "b196fc4b",
+  "where": "sol_block:pricing-tabs",
+  "text": "One automated process built & tested"
+ },
+ {
+  "id": "81d5d3d5",
+  "where": "sol_block:pricing-tabs",
+  "text": "e.g. document generation or intake flow"
+ },
+ {
+  "id": "12f20789",
+  "where": "sol_block:pricing-tabs",
+  "text": "Staff handover session"
+ },
+ {
+  "id": "874c7252",
+  "where": "sol_block:pricing-tabs",
+  "text": "System documentation"
+ },
+ {
+  "id": "16327809",
+  "where": "sol_block:pricing-tabs",
+  "text": "1-2 week delivery"
+ },
+ {
+  "id": "2910335d",
+  "where": "sol_block:pricing-tabs",
+  "text": "2-4 automated processes"
+ },
+ {
+  "id": "01f52740",
+  "where": "sol_block:pricing-tabs",
+  "text": "Easy Compliance setup & configuration"
+ },
+ {
+  "id": "8eb99704",
+  "where": "sol_block:pricing-tabs",
+  "text": "Staff training & onboarding session"
+ },
+ {
+  "id": "8883cb55",
+  "where": "sol_block:pricing-tabs",
+  "text": "Full system documentation"
+ },
+ {
+  "id": "70bf5aed",
+  "where": "sol_block:pricing-tabs",
+  "text": "30-day post-launch support"
+ },
+ {
+  "id": "ddcbafda",
+  "where": "sol_block:pricing-tabs",
+  "text": "Source code / admin access provided"
+ },
+ {
+  "id": "9bc8cab5",
+  "where": "sol_block:pricing-tabs",
+  "text": "Start Automation Pro"
+ },
+ {
+  "id": "8f7a68c6",
+  "where": "sol_block:pricing-tabs",
+  "text": "Fully scoped custom software"
+ },
+ {
+  "id": "3ddf9266",
+  "where": "sol_block:pricing-tabs",
+  "text": "Scoped processes & integrations"
+ },
+ {
+  "id": "db3bf43e",
+  "where": "sol_block:pricing-tabs",
+  "text": "Dedicated project manager"
+ },
+ {
+  "id": "4471d909",
+  "where": "sol_block:pricing-tabs",
+  "text": "Full handover training"
+ },
+ {
+  "id": "ab9d7cc5",
+  "where": "sol_block:pricing-tabs",
+  "text": "Ongoing maintenance available"
+ },
+ {
+  "id": "fa3b7ed6",
+  "where": "sol_block:pricing-tabs",
+  "text": "Priced after discovery session"
+ },
+ {
+  "id": "366a1d9c",
+  "where": "sol_block:pricing-tabs",
+  "text": "Request Scoping"
+ },
+ {
+  "id": "c5c0270a",
+  "where": "sol_block:pricing-tabs",
+  "text": "Bookkeeping setup and reconciliation support"
+ },
+ {
+  "id": "a497b392",
+  "where": "sol_block:pricing-tabs",
+  "text": "BAS/GST preparation support"
+ },
+ {
+  "id": "c9e72224",
+  "where": "sol_block:pricing-tabs",
+  "text": "Profit and loss reporting support"
+ },
+ {
+  "id": "8231b763",
+  "where": "sol_block:pricing-tabs",
+  "text": "Xero / MYOB / QuickBooks"
+ },
+ {
+  "id": "957aa072",
+  "where": "sol_block:pricing-tabs",
+  "text": "Billed monthly - no lock-in"
+ },
+ {
+  "id": "7a00b038",
+  "where": "sol_block:pricing-tabs",
+  "text": "Everything in Monthly Finance Support"
+ },
+ {
+  "id": "d9c73dc8",
+  "where": "sol_block:pricing-tabs",
+  "text": "Payroll/STP process support"
+ },
+ {
+  "id": "3a356c74",
+  "where": "sol_block:pricing-tabs",
+  "text": "Superannuation process guidance"
+ },
+ {
+  "id": "2546c5da",
+  "where": "sol_block:pricing-tabs",
+  "text": "Tax planning and annual return referrals"
+ },
+ {
+  "id": "78ce4cf5",
+  "where": "sol_block:pricing-tabs",
+  "text": "NDIS financial reporting"
+ },
+ {
+  "id": "00093aae",
+  "where": "sol_block:pricing-tabs",
+  "text": "Registered accountant referral pathway"
+ },
+ {
+  "id": "671e1fd5",
+  "where": "sol_block:pricing-tabs",
+  "text": "Start Finance Operations Support"
+ },
+ {
+  "id": "6d9e6461",
+  "where": "sol_block:pricing-tabs",
+  "text": "Everything in Finance Operations Support"
+ },
+ {
+  "id": "c1ba7f38",
+  "where": "sol_block:pricing-tabs",
+  "text": "NDIS price guide compliance review"
+ },
+ {
+  "id": "a25f34bf",
+  "where": "sol_block:pricing-tabs",
+  "text": "SDA/SIL financial reporting guidance"
+ },
+ {
+  "id": "f212a716",
+  "where": "sol_block:pricing-tabs",
+  "text": "Audit document support"
+ },
+ {
+  "id": "7e0f642b",
+  "where": "sol_block:pricing-tabs",
+  "text": "Participant financial reporting"
+ },
+ {
+  "id": "215abd1c",
+  "where": "sol_block:pricing-tabs",
+  "text": "Custom reporting dashboards"
+ },
+ {
+  "id": "bafdf3d0",
+  "where": "sol_block:pricing-tabs",
+  "text": "Not sure which package is right for you?"
+ },
+ {
+  "id": "5900337a",
+  "where": "sol_block:consulting-packages",
+  "text": "Business Consulting Packages"
+ },
+ {
+  "id": "bb88cf3c",
+  "where": "sol_block:consulting-packages",
+  "text": "The Right Package for Every Stage of Growth"
+ },
+ {
+  "id": "c12e30da",
+  "where": "sol_block:consulting-packages",
+  "text": "NDIS application preparation"
+ },
+ {
+  "id": "4963e37b",
+  "where": "sol_block:consulting-packages",
+  "text": "Policy & procedure template pack"
+ },
+ {
+  "id": "8a43e28f",
+  "where": "sol_block:consulting-packages",
+  "text": "Audit readiness guidance"
+ },
+ {
+  "id": "b4240104",
+  "where": "sol_block:consulting-packages",
+  "text": "ABN / company setup"
+ },
+ {
+  "id": "e149aeaa",
+  "where": "sol_block:consulting-packages",
+  "text": "Ongoing compliance support"
+ },
+ {
+  "id": "70fb6bc6",
+  "where": "sol_block:consulting-packages",
+  "text": "Get Registered"
+ },
+ {
+  "id": "1552ef2f",
+  "where": "sol_block:consulting-packages",
+  "text": "Custom compliance dashboard"
+ },
+ {
+  "id": "cb297555",
+  "where": "sol_block:consulting-packages",
+  "text": "Automated document generation"
+ },
+ {
+  "id": "fe25bfef",
+  "where": "sol_block:consulting-packages",
+  "text": "Staff training & onboarding portal"
+ },
+ {
+  "id": "a9ca9b6a",
+  "where": "sol_block:consulting-packages",
+  "text": "Incident & risk management tools"
+ },
+ {
+  "id": "76398ae6",
+  "where": "sol_block:consulting-packages",
+  "text": "Integration with your existing systems"
+ },
+ {
+  "id": "f0ef0b39",
+  "where": "sol_block:consulting-packages",
+  "text": "6 months ongoing support"
+ },
+ {
+  "id": "66c8093c",
+  "where": "sol_block:consulting-packages",
+  "text": "Start Automating"
+ },
+ {
+  "id": "0d966678",
+  "where": "sol_block:consulting-packages",
+  "text": "5–10 page responsive website"
+ },
+ {
+  "id": "affbd89a",
+  "where": "sol_block:consulting-packages",
+  "text": "SEO optimisation & setup"
+ },
+ {
+  "id": "6896e53b",
+  "where": "sol_block:consulting-packages",
+  "text": "Contact & enquiry forms"
+ },
+ {
+  "id": "aa108b8c",
+  "where": "sol_block:consulting-packages",
+  "text": "1-year hosting & maintenance"
+ },
+ {
+  "id": "a968b867",
+  "where": "sol_block:consulting-packages",
+  "text": "Build My Site"
+ },
+ {
+  "id": "fd608632",
+  "where": "sol_block:consulting-packages",
+  "text": "NDIS-aligned 12-module training packages for learners and teams."
+ },
+ {
+  "id": "45d0780e",
+  "where": "sol_block:consulting-packages",
+  "text": "12 comprehensive modules"
+ },
+ {
+  "id": "c276d9b6",
+  "where": "sol_block:consulting-packages",
+  "text": "1,500+ quiz questions"
+ },
+ {
+  "id": "db92a214",
+  "where": "sol_block:consulting-packages",
+  "text": "Video scripts & slide decks"
+ },
+ {
+  "id": "9fb65ff9",
+  "where": "sol_block:consulting-packages",
+  "text": "NDIS-aligned assessments"
+ },
+ {
+  "id": "8574f7f1",
+  "where": "sol_block:consulting-packages",
+  "text": "Certificate on completion"
+ },
+ {
+  "id": "20c76de2",
+  "where": "sol_block:consulting-packages",
+  "text": "Monthly bookkeeping support"
+ },
+ {
+  "id": "f455c1bd",
+  "where": "sol_block:consulting-packages",
+  "text": "Tax planning referrals where required"
+ },
+ {
+  "id": "217fb781",
+  "where": "sol_block:consulting-packages",
+  "text": "Get a Quote"
+ },
+ {
+  "id": "c6101303",
+  "where": "sol_block:consulting-packages",
+  "text": "SEO & Google Business"
+ },
+ {
+  "id": "70eb40df",
+  "where": "sol_block:consulting-packages",
+  "text": "Email marketing campaigns"
+ },
+ {
+  "id": "b8163a10",
+  "where": "sol_block:consulting-packages",
+  "text": "Monthly performance reports"
+ },
+ {
+  "id": "8a63fe8b",
+  "where": "sol_block:consulting-packages",
+  "text": "Grow My Business"
+ },
+ {
+  "id": "8f40ec02",
+  "where": "sol_block:marketing-packages",
+  "text": "Marketing Packages Built for Measurable Growth"
+ },
+ {
+  "id": "baa2eb50",
+  "where": "sol_block:marketing-packages",
+  "text": "Social media (2 platforms)"
+ },
+ {
+  "id": "8edc6aaf",
+  "where": "sol_block:marketing-packages",
+  "text": "8 branded posts/mo"
+ },
+ {
+  "id": "b3776811",
+  "where": "sol_block:marketing-packages",
+  "text": "Google Business Profile"
+ },
+ {
+  "id": "cd3d97d4",
+  "where": "sol_block:marketing-packages",
+  "text": "Monthly report"
+ },
+ {
+  "id": "d2329a49",
+  "where": "sol_block:marketing-packages",
+  "text": "Social media (4 platforms)"
+ },
+ {
+  "id": "0ba4db64",
+  "where": "sol_block:marketing-packages",
+  "text": "20 posts + stories/mo"
+ },
+ {
+  "id": "5507e2bb",
+  "where": "sol_block:marketing-packages",
+  "text": "SEO blog content (4/mo)"
+ },
+ {
+  "id": "1205b3bb",
+  "where": "sol_block:marketing-packages",
+  "text": "Email campaigns (2/mo)"
+ },
+ {
+  "id": "5381a934",
+  "where": "sol_block:marketing-packages",
+  "text": "All platforms managed"
+ },
+ {
+  "id": "fb2d20ac",
+  "where": "sol_block:marketing-packages",
+  "text": "Scoped content creation plan"
+ },
+ {
+  "id": "3863e150",
+  "where": "sol_block:marketing-packages",
+  "text": "Advanced SEO + link building"
+ },
+ {
+  "id": "ab77e1ac",
+  "where": "sol_block:marketing-packages",
+  "text": "Video reels & PR outreach"
+ },
+ {
+  "id": "6f81271c",
+  "where": "sol_block:marketing-packages",
+  "text": "View all marketing services & custom packages"
+ },
+ {
+  "id": "60688901",
+  "where": "sol_block:about-sol",
+  "text": "About Sol"
+ },
+ {
+  "id": "f0448943",
+  "where": "sol_block:about-sol",
+  "text": "The Foundation\nof Your Growth"
+ },
+ {
+  "id": "b3e9ddda",
+  "where": "sol_block:about-sol",
+  "text": "Practical Innovation"
+ },
+ {
+  "id": "a2ef86fd",
+  "where": "sol_block:compliance",
+  "text": "Powered by Easy Compliance"
+ },
+ {
+  "id": "7112d3e5",
+  "where": "sol_block:compliance",
+  "text": "Document Review Workflow Active"
+ },
+ {
+  "id": "ce703560",
+  "where": "sol_block:compliance",
+  "text": "Open Platform - sol.easycompliance.org"
+ },
+ {
+  "id": "755eca63",
+  "where": "sol_block:compliance",
+  "text": "The Compliance Lifecycle"
+ },
+ {
+  "id": "bd329f30",
+  "where": "sol_block:compliance",
+  "text": "Setup & Configuration"
+ },
+ {
+  "id": "984af44b",
+  "where": "sol_block:compliance",
+  "text": "Onboarding & Training"
+ },
+ {
+  "id": "71ee9730",
+  "where": "sol_block:compliance",
+  "text": "AI Document Validation"
+ },
+ {
+  "id": "d1ef1df3",
+  "where": "sol_block:compliance",
+  "text": "Expiry Alerts & Actions"
+ },
+ {
+  "id": "e8e38b3a",
+  "where": "sol_block:compliance",
+  "text": "Internal Audits Anytime"
+ },
+ {
+  "id": "d3ae9f7a",
+  "where": "sol_block:compliance",
+  "text": "Ongoing Compliance"
+ },
+ {
+  "id": "4781bee9",
+  "where": "sol_block:compliance",
+  "text": "Get Audit-Ready Now"
+ },
+ {
+  "id": "1d6c3d52",
+  "where": "sol_block:ndis-roadmap",
+  "text": "NDIS Registration Specialists"
+ },
+ {
+  "id": "8ada9998",
+  "where": "sol_block:ndis-roadmap",
+  "text": "Your Path to NDIS\nRegistration, Simplified"
+ },
+ {
+  "id": "71b07f21",
+  "where": "sol_block:ndis-roadmap",
+  "text": "Discovery Call"
+ },
+ {
+  "id": "8082691c",
+  "where": "sol_block:ndis-roadmap",
+  "text": "Documentation & Application"
+ },
+ {
+  "id": "da1906ed",
+  "where": "sol_block:ndis-roadmap",
+  "text": "Mock Audit & Training"
+ },
+ {
+  "id": "534d0b9e",
+  "where": "sol_block:ndis-roadmap",
+  "text": "Registration Decision & Beyond"
+ },
+ {
+  "id": "db5a1e59",
+  "where": "sol_block:ndis-roadmap",
+  "text": "Find My NDIS Package"
+ },
+ {
+  "id": "fcd71aa0",
+  "where": "sol_block:ndis-roadmap",
+  "text": "NDIS Registration Service"
+ },
+ {
+  "id": "d9c1c7ac",
+  "where": "sol_block:service-trust",
+  "text": "Clear scope before work starts"
+ },
+ {
+  "id": "db3edf73",
+  "where": "sol_block:service-trust",
+  "text": "Practical deliverables"
+ },
+ {
+  "id": "7534d75d",
+  "where": "sol_block:service-trust",
+  "text": "Client portal visibility"
+ },
+ {
+  "id": "0b25cf15",
+  "where": "sol_block:service-trust",
+  "text": "View Service Inclusions"
+ },
+ {
+  "id": "5f4b96ac",
+  "where": "sol_block:service-trust",
+  "text": "After Payment Guide"
+ },
+ {
+  "id": "04cac2e1",
+  "where": "sol_block:service-trust",
+  "text": "Australian business support"
+ },
+ {
+  "id": "7d423331",
+  "where": "sol_block:service-trust",
+  "text": "Secure payment workflow"
+ },
+ {
+  "id": "b6988158",
+  "where": "sol_block:service-trust",
+  "text": "Client document handling"
+ },
+ {
+  "id": "10f48d0c",
+  "where": "sol_block:service-trust",
+  "text": "Admin-reviewed service updates"
+ },
+ {
+  "id": "4e9f3095",
+  "where": "sol_block:service-trust",
+  "text": "Responsive website experience"
+ },
+ {
+  "id": "b48a5dd3",
+  "where": "sol_block:service-trust",
+  "text": "Need help choosing the right service?"
+ },
+ {
+  "id": "5ebacc46",
+  "where": "sol_block:service-journey",
+  "text": "Client Journey"
+ },
+ {
+  "id": "4daba100",
+  "where": "sol_block:service-journey",
+  "text": "1. Enquiry or consultation"
+ },
+ {
+  "id": "6438cdda",
+  "where": "sol_block:service-journey",
+  "text": "2. Scope confirmed"
+ },
+ {
+  "id": "36ace9bf",
+  "where": "sol_block:service-journey",
+  "text": "3. Service payment"
+ },
+ {
+  "id": "0a7a3d38",
+  "where": "sol_block:service-journey",
+  "text": "4. Portal access"
+ },
+ {
+  "id": "378b8df3",
+  "where": "sol_block:service-journey",
+  "text": "5. Documents and requests"
+ },
+ {
+  "id": "2649eb53",
+  "where": "sol_block:service-journey",
+  "text": "6. Delivery and follow-up"
+ },
+ {
+  "id": "fc1b6ec4",
+  "where": "sol_block:general-faq",
+  "text": "How long does NDIS registration take?"
+ },
+ {
+  "id": "a38995d8",
+  "where": "sol_block:general-faq",
+  "text": "Do I need to be a registered NDIS provider?"
+ },
+ {
+  "id": "0dada427",
+  "where": "sol_block:general-faq",
+  "text": "How does Easy Compliance work?"
+ },
+ {
+  "id": "48208f5f",
+  "where": "sol_block:general-faq",
+  "text": "Can I get help with just one service?"
+ },
+ {
+  "id": "b405e4d8",
+  "where": "sol_block:general-faq",
+  "text": "How are your consulting services delivered?"
+ },
+ {
+  "id": "faae061c",
+  "where": "sol_block:training-faq",
+  "text": "Who is this training designed for?"
+ },
+ {
+  "id": "48d2fe4d",
+  "where": "sol_block:training-faq",
+  "text": "What are the 12 modules and how long does each take?"
+ },
+ {
+  "id": "29c4c03d",
+  "where": "sol_block:training-faq",
+  "text": "The 12 modules cover: (1) Introduction to the NDIS, (2) Role & Responsibilities of a Support Coordinator, (3) NDIS Practice Standards & Code of Conduct, (4) Plan Implementation & Budget Management, (5) Goal Setting & Participant-Centred Practice, (6) Stakeholder & Provider Coordination, (7) Documentation & Reporting Requirements, (8) Risk Management & Incident Response, (9) Complex Needs & Specialist Support Coordination, (10) Cultural Safety & Diversity, (11) Workforce Development & Self-Care, and (12) Audit Readiness & Continuous Improvement. Each module is designed for approximately 2–3 hours of self-paced learning, totalling 24–36 hours across the full curriculum."
+ },
+ {
+  "id": "dd67c26f",
+  "where": "sol_block:training-faq",
+  "text": "Can we white-label the content for our RTO or organisation?"
+ },
+ {
+  "id": "c0780dac",
+  "where": "sol_block:training-faq",
+  "text": "Still have questions?"
+ },
+ {
+  "id": "fb1d1236",
+  "where": "sol_block:training-faq",
+  "text": "Email Us"
+ },
+ {
+  "id": "26e00b08",
+  "where": "sol_block:contact",
+  "text": "Get In Touch"
+ },
+ {
+  "id": "ced46a7d",
+  "where": "sol_block:contact",
+  "text": "Ready to Build\nYour Foundation?"
+ },
+ {
+  "id": "4af504af",
+  "where": "sol_block:contact",
+  "text": "WhatsApp Us"
+ },
+ {
+  "id": "aaf9a507",
+  "where": "sol_block:contact",
+  "text": "Start Online Enquiry"
+ },
+ {
+  "id": "6ef53c3e",
+  "where": "sol_block:service-comparison",
+  "text": "Compare Core Pathways"
+ },
+ {
+  "id": "e98b6468",
+  "where": "sol_block:service-comparison",
+  "text": "Choose the Right Path for Your Business"
+ },
+ {
+  "id": "6000da13",
+  "where": "sol_block:service-comparison",
+  "text": "no | yes | no"
+ },
+ {
+  "id": "cad53fff",
+  "where": "sol_block:service-comparison",
+  "text": "yes | no | yes"
+ },
+ {
+  "id": "50ee8c17",
+  "where": "sol_block:service-comparison",
+  "text": "yes | Team+ | yes"
+ },
+ {
+  "id": "8655a53d",
+  "where": "sol_block:service-comparison",
+  "text": "Add-on | no | yes"
+ },
+ {
+  "id": "63b75ce5",
+  "where": "sol_block:service-comparison",
+  "text": "Ultimate | no | no"
+ },
+ {
+  "id": "0d427384",
+  "where": "sol_block:service-comparison",
+  "text": "2–4 hrs | no | no"
+ },
+ {
+  "id": "75adf7f6",
+  "where": "sol_block:service-comparison",
+  "text": "no | Team+ | no"
+ },
+ {
+  "id": "34bd38dc",
+  "where": "post:ndis-provider-registration-australia",
+  "text": "SOL Business Team"
+ },
+ {
+  "id": "a9b91302",
+  "where": "post:ndis-provider-registration-australia",
+  "text": "May 2025"
+ },
+ {
+  "id": "c9d711fe",
+  "where": "post:bookkeeping-mistakes-small-business",
+  "text": "April 2025"
+ },
+ {
+  "id": "c54fcf5f",
+  "where": "post:what-is-support-coordination",
+  "text": "March 2025"
+ },
+ {
+  "id": "fe7ed3d5",
+  "where": "post:website-development-ndis-providers",
+  "text": "February 2025"
+ },
+ {
+  "id": "46c6ed8d",
+  "where": "post:automation-transform-ndis-business",
+  "text": "January 2026"
+ },
+ {
+  "id": "cf35ebb5",
+  "where": "post:automation-transform-ndis-business",
+  "text": "6 min read"
+ },
+ {
+  "id": "c94e85c5",
+  "where": "post:automation-transform-ndis-business",
+  "text": "Client intake forms that pre-fill known payment and profile details."
+ },
+ {
+  "id": "c2ac6909",
+  "where": "post:automation-transform-ndis-business",
+  "text": "Document request lists matched to the service purchased."
+ },
+ {
+  "id": "c2ebaba7",
+  "where": "post:client-portal-use-cases-service-businesses",
+  "text": "February 2026"
+ },
+ {
+  "id": "a78b94f5",
+  "where": "post:client-portal-use-cases-service-businesses",
+  "text": "5 min read"
+ },
+ {
+  "id": "35a284be",
+  "where": "post:client-portal-use-cases-service-businesses",
+  "text": "Use case 1: NDIS registration support"
+ },
+ {
+  "id": "6bd917e1",
+  "where": "post:client-portal-use-cases-service-businesses",
+  "text": "Use case 2: Website or automation project"
+ },
+ {
+  "id": "dfa84f8d",
+  "where": "post:bas-lodgement-australian-businesses",
+  "text": "December 2024"
+ },
+ {
+  "id": "40fd8039",
+  "where": "post:bas-lodgement-australian-businesses",
+  "text": "Business documents prepared for BAS lodgement and accounting review"
+ },
+ {
+  "id": "be2a3bdb",
+  "where": "course:3255",
+  "text": "Understand the NDIS history, structure and governance"
+ },
+ {
+  "id": "25b675cd",
+  "where": "course:3255",
+  "text": "Identify the role and responsibilities of a Support Coordinator"
+ },
+ {
+  "id": "420cd5eb",
+  "where": "course:3255",
+  "text": "Navigate and interpret NDIS plans and budget categories"
+ },
+ {
+  "id": "284e0e2f",
+  "where": "course:3255",
+  "text": "Apply person-centered practice principles in daily support"
+ },
+ {
+  "id": "b99a401b",
+  "where": "course:3255",
+  "text": "Support participant choice, control and dignity of risk"
+ },
+ {
+  "id": "285b97c8",
+  "where": "course:3255",
+  "text": "Uphold human rights and NDIS Code of Conduct"
+ },
+ {
+  "id": "40f786da",
+  "where": "course:3255",
+  "text": "Manage privacy, confidentiality and duty of care"
+ },
+ {
+  "id": "5b045a08",
+  "where": "course:3255",
+  "text": "Use person-centered planning tools (PATH, MAPs, One-Page Profiles)"
+ },
+ {
+  "id": "e47379cb",
+  "where": "course:3255",
+  "text": "Module 1: Introduction to the NDIS"
+ },
+ {
+  "id": "d60e4d34",
+  "where": "course:3255",
+  "text": "History and Purpose of the NDIS"
+ },
+ {
+  "id": "80b7e33b",
+  "where": "course:3255",
+  "text": "Purpose and Aims of the NDIS"
+ },
+ {
+  "id": "8ac90905",
+  "where": "course:3255",
+  "text": "Core Principles and Values of the NDIS"
+ },
+ {
+  "id": "3e47a0ec",
+  "where": "course:3255",
+  "text": "NDIS Structure and Governance"
+ },
+ {
+  "id": "f662914a",
+  "where": "course:3255",
+  "text": "NDIS Participant Pathway"
+ },
+ {
+  "id": "3e013524",
+  "where": "course:3255",
+  "text": "NDIS Support Budget Categories"
+ },
+ {
+  "id": "518d1381",
+  "where": "course:3255",
+  "text": "Real-World Scenario — Sarah's NDIS Journey"
+ },
+ {
+  "id": "5fce74ef",
+  "where": "course:3255",
+  "text": "Real-World Scenario — Amir's Early Intervention"
+ },
+ {
+  "id": "1f300c76",
+  "where": "course:3255",
+  "text": "Real-World Scenario — Robert's Plan Management"
+ },
+ {
+  "id": "e31e56b2",
+  "where": "course:3255",
+  "text": "Practical Exercise — NDIS Principles in Action"
+ },
+ {
+  "id": "0ab2dbcb",
+  "where": "course:3255",
+  "text": "Knowledge Assessment — Introduction to the NDIS"
+ },
+ {
+  "id": "83e03976",
+  "where": "course:3255",
+  "text": "Role-Play — Explaining the NDIS to a Participant"
+ },
+ {
+  "id": "8bec37d0",
+  "where": "course:3255",
+  "text": "Self-Reflection — Introduction to the NDIS"
+ },
+ {
+  "id": "bbfc1f1c",
+  "where": "course:3255",
+  "text": "Reference Materials — Introduction to the NDIS"
+ },
+ {
+  "id": "874c3fe0",
+  "where": "course:3255",
+  "text": "Module 2: Person-Centered Support Principles"
+ },
+ {
+  "id": "9cfbeecc",
+  "where": "course:3255",
+  "text": "Understanding Person-Centered Practice"
+ },
+ {
+  "id": "1bbbb1f1",
+  "where": "course:3255",
+  "text": "Core Elements of Person-Centered Practice"
+ },
+ {
+  "id": "d3a9ec53",
+  "where": "course:3255",
+  "text": "Supporting Choice and Control"
+ },
+ {
+  "id": "f7868c66",
+  "where": "course:3255",
+  "text": "The Support Worker's Role in Choice and Control"
+ },
+ {
+  "id": "d4d1ae81",
+  "where": "course:3255",
+  "text": "Dignity of Risk and Informed Decision-Making"
+ },
+ {
+  "id": "186ac8d8",
+  "where": "course:3255",
+  "text": "Principles of Dignity of Risk"
+ },
+ {
+  "id": "53fef44e",
+  "where": "course:3255",
+  "text": "Informed Decision-Making Process"
+ },
+ {
+  "id": "60270549",
+  "where": "course:3255",
+  "text": "Person-Centered Planning Tools"
+ },
+ {
+  "id": "5b4dec0b",
+  "where": "course:3255",
+  "text": "Benefits of Person-Centered Practice"
+ },
+ {
+  "id": "4f64a1e0",
+  "where": "course:3255",
+  "text": "Components of a Person-Centered Plan"
+ },
+ {
+  "id": "6042a9aa",
+  "where": "course:3255",
+  "text": "Positive Risk-Taking Framework"
+ },
+ {
+  "id": "655ea03c",
+  "where": "course:3255",
+  "text": "Real-World Scenario — Michael's Morning Routine"
+ },
+ {
+  "id": "20a7ea15",
+  "where": "course:3255",
+  "text": "Real-World Scenario — Leila's Housing Decision"
+ },
+ {
+  "id": "f47007b4",
+  "where": "course:3255",
+  "text": "Real-World Scenario — Sam's Communication Support"
+ },
+ {
+  "id": "f89ec14f",
+  "where": "course:3255",
+  "text": "Practical Exercise — Person-Centered Planning"
+ },
+ {
+  "id": "c2ba321a",
+  "where": "course:3255",
+  "text": "Knowledge Assessment — Person-Centered Practice"
+ },
+ {
+  "id": "e918e70a",
+  "where": "course:3255",
+  "text": "Role-Play — Supporting Choice in Everyday Activities"
+ },
+ {
+  "id": "0928f2f2",
+  "where": "course:3255",
+  "text": "Role-Play — Navigating Dignity of Risk with Jamila"
+ },
+ {
+  "id": "97a16eff",
+  "where": "course:3255",
+  "text": "Self-Reflection — Person-Centered Practice"
+ },
+ {
+  "id": "e124ac20",
+  "where": "course:3255",
+  "text": "Reference Materials — Person-Centered Practice"
+ },
+ {
+  "id": "dfdc5aea",
+  "where": "course:3255",
+  "text": "Module 3: Rights and Responsibilities"
+ },
+ {
+  "id": "baee85af",
+  "where": "course:3255",
+  "text": "Human Rights Framework — UNCRPD Foundation"
+ },
+ {
+  "id": "fb3f8e25",
+  "where": "course:3255",
+  "text": "NDIS Code of Conduct and Application"
+ },
+ {
+  "id": "a1e5a88e",
+  "where": "course:3255",
+  "text": "Individual Autonomy as a Human Right"
+ },
+ {
+  "id": "4068ebca",
+  "where": "course:3255",
+  "text": "Privacy and Confidentiality Requirements"
+ },
+ {
+  "id": "d7cd0328",
+  "where": "course:3255",
+  "text": "Duty of Care Principles"
+ },
+ {
+  "id": "35855f11",
+  "where": "course:3255",
+  "text": "Balancing Rights and Duty of Care"
+ },
+ {
+  "id": "cf9e2e9d",
+  "where": "course:3255",
+  "text": "Practical Exercise — Rights and Responsibilities"
+ },
+ {
+  "id": "0fd38510",
+  "where": "course:3255",
+  "text": "Knowledge Assessment — Rights and Responsibilities"
+ },
+ {
+  "id": "2ee78974",
+  "where": "course:3255",
+  "text": "Role-Play — Rights-Based Decision Making"
+ },
+ {
+  "id": "792e6dc0",
+  "where": "course:3255",
+  "text": "Self-Reflection — Rights and Responsibilities"
+ },
+ {
+  "id": "fb8fad5f",
+  "where": "course:3255",
+  "text": "Reference Materials — Rights and Responsibilities"
+ },
+ {
+  "id": "e3d34fb3",
+  "where": "course:3255",
+  "text": "Course details"
+ },
+ {
+  "id": "0a525ffc",
+  "where": "course:495",
+  "text": "Apply advanced person-centered practice frameworks"
+ },
+ {
+  "id": "435c9b4c",
+  "where": "course:495",
+  "text": "Facilitate complex planning meetings with multiple stakeholders"
+ },
+ {
+  "id": "58384293",
+  "where": "course:495",
+  "text": "Coordinate services across multiple providers"
+ },
+ {
+  "id": "855814f1",
+  "where": "course:495",
+  "text": "Develop and review participant goal plans"
+ },
+ {
+  "id": "391279ed",
+  "where": "course:495",
+  "text": "Manage documentation and compliance requirements"
+ },
+ {
+  "id": "84b3a132",
+  "where": "course:495",
+  "text": "Support participants through plan reviews"
+ },
+ {
+  "id": "e011832a",
+  "where": "course:495",
+  "text": "Apply risk management and safeguarding strategies"
+ },
+ {
+  "id": "c4ca5777",
+  "where": "course:495",
+  "text": "Navigate complex funding and service arrangements"
+ },
+ {
+  "id": "9946f501",
+  "where": "course:495",
+  "text": "Module 1: Advanced Person-Centered Practice"
+ },
+ {
+  "id": "970bc9b2",
+  "where": "course:495",
+  "text": "Theoretical Foundations of Advanced PCP"
+ },
+ {
+  "id": "b9febce7",
+  "where": "course:495",
+  "text": "From Service-Led to Person-Led Practice"
+ },
+ {
+  "id": "8fb64028",
+  "where": "course:495",
+  "text": "Best Practice Frameworks in PCP"
+ },
+ {
+  "id": "257199e4",
+  "where": "course:495",
+  "text": "Facilitating Complex PCP Meetings"
+ },
+ {
+  "id": "af7bde56",
+  "where": "course:495",
+  "text": "Using AAC Systems and Visual Supports"
+ },
+ {
+  "id": "345a0067",
+  "where": "course:495",
+  "text": "Documenting the Facilitation Process"
+ },
+ {
+  "id": "fdcc3e1c",
+  "where": "course:495",
+  "text": "Knowledge Assessment — Advanced PCP"
+ },
+ {
+  "id": "dedb4ed3",
+  "where": "course:495",
+  "text": "Module 2: Provider Engagement & Management"
+ },
+ {
+  "id": "9315a30a",
+  "where": "course:495",
+  "text": "Sourcing and Vetting Service Providers"
+ },
+ {
+  "id": "4608aa2c",
+  "where": "course:495",
+  "text": "Negotiating Service Agreements"
+ },
+ {
+  "id": "a268bf71",
+  "where": "course:495",
+  "text": "Managing Provider Relationships"
+ },
+ {
+  "id": "f45bf699",
+  "where": "course:495",
+  "text": "Addressing Service Quality Issues"
+ },
+ {
+  "id": "a97d7865",
+  "where": "course:495",
+  "text": "Knowledge Assessment — Provider Engagement"
+ },
+ {
+  "id": "e38a6f4c",
+  "where": "course:495",
+  "text": "Module 3: Goal Planning in Practice"
+ },
+ {
+  "id": "acc8c11c",
+  "where": "course:495",
+  "text": "Identifying Participant Goals and Aspirations"
+ },
+ {
+  "id": "a895c2b6",
+  "where": "course:495",
+  "text": "Translating Goals into Funded Supports"
+ },
+ {
+  "id": "e466615f",
+  "where": "course:495",
+  "text": "Co-designing Action Plans"
+ },
+ {
+  "id": "c4ff1947",
+  "where": "course:495",
+  "text": "Reviewing Progress Against Goals"
+ },
+ {
+  "id": "f502f791",
+  "where": "course:495",
+  "text": "Knowledge Assessment — Goal Planning"
+ },
+ {
+  "id": "5696cc31",
+  "where": "course:495",
+  "text": "Module 4: Documentation & Reporting"
+ },
+ {
+  "id": "831b1553",
+  "where": "course:495",
+  "text": "NDIS Documentation Requirements"
+ },
+ {
+  "id": "6eeb6e41",
+  "where": "course:495",
+  "text": "Writing Support Coordination Notes"
+ },
+ {
+  "id": "d4100054",
+  "where": "course:495",
+  "text": "Incident Reporting Obligations"
+ },
+ {
+  "id": "1be2964d",
+  "where": "course:495",
+  "text": "Progress Reports for NDIA"
+ },
+ {
+  "id": "0e45e5f3",
+  "where": "course:495",
+  "text": "Knowledge Assessment — Documentation"
+ },
+ {
+  "id": "cfbdeea1",
+  "where": "course:495",
+  "text": "Module 5: Case Management Strategies"
+ },
+ {
+  "id": "67dedd8b",
+  "where": "course:495",
+  "text": "Case Management Principles in NDIS"
+ },
+ {
+  "id": "d5c3ad04",
+  "where": "course:495",
+  "text": "Managing Complex Participant Situations"
+ },
+ {
+  "id": "e337a6a4",
+  "where": "course:495",
+  "text": "Coordinating Crisis Responses"
+ },
+ {
+  "id": "46c644af",
+  "where": "course:495",
+  "text": "Escalation Pathways and Referrals"
+ },
+ {
+  "id": "62f8c7bd",
+  "where": "course:495",
+  "text": "Knowledge Assessment — Case Management"
+ },
+ {
+  "id": "7422a9dd",
+  "where": "course:495",
+  "text": "Module 6: Plan Review Preparation"
+ },
+ {
+  "id": "c39437b5",
+  "where": "course:495",
+  "text": "Understanding Plan Review Triggers"
+ },
+ {
+  "id": "a756837f",
+  "where": "course:495",
+  "text": "Preparing Evidence for Plan Reviews"
+ },
+ {
+  "id": "f097bfb2",
+  "where": "course:495",
+  "text": "Supporting Participants in Review Meetings"
+ },
+ {
+  "id": "6ec2abea",
+  "where": "course:495",
+  "text": "Advocating for Adequate Funding"
+ },
+ {
+  "id": "2857dccc",
+  "where": "course:495",
+  "text": "Knowledge Assessment — Plan Review"
+ },
+ {
+  "id": "ad77997f",
+  "where": "course:495",
+  "text": "Module 7: Risk & Safeguarding"
+ },
+ {
+  "id": "639c4c41",
+  "where": "course:495",
+  "text": "Risk Assessment Frameworks"
+ },
+ {
+  "id": "58d2edf8",
+  "where": "course:495",
+  "text": "Identifying and Responding to Abuse"
+ },
+ {
+  "id": "648edf6b",
+  "where": "course:495",
+  "text": "Restrictive Practices — Obligations and Reporting"
+ },
+ {
+  "id": "59f91c97",
+  "where": "course:495",
+  "text": "Knowledge Assessment — Risk & Safeguarding"
+ },
+ {
+  "id": "6e29f4bd",
+  "where": "course:495",
+  "text": "Module 8: Assessment & Certificate"
+ },
+ {
+  "id": "417b6a03",
+  "where": "course:495",
+  "text": "Level 2 Comprehensive Assessment"
+ },
+ {
+  "id": "3c90873d",
+  "where": "course:495",
+  "text": "Certificate of Completion"
+ },
+ {
+  "id": "aed3cc48",
+  "where": "course:499",
+  "text": "Manage complex and high-risk participant situations"
+ },
+ {
+  "id": "22c66ec6",
+  "where": "course:499",
+  "text": "Lead a support coordination team effectively"
+ },
+ {
+  "id": "3005d9d1",
+  "where": "course:499",
+  "text": "Ensure full NDIS compliance and audit readiness"
+ },
+ {
+  "id": "1898dbd3",
+  "where": "course:499",
+  "text": "Apply the Four Principles ethical framework"
+ },
+ {
+  "id": "8d3be73b",
+  "where": "course:499",
+  "text": "Handle crisis interventions and escalations"
+ },
+ {
+  "id": "f2c0cf12",
+  "where": "course:499",
+  "text": "Produce high-quality reports for NDIA and providers"
+ },
+ {
+  "id": "c13246ee",
+  "where": "course:499",
+  "text": "Mentor junior Support Coordinators"
+ },
+ {
+  "id": "1a0511b0",
+  "where": "course:499",
+  "text": "Navigate Specialist Support Coordination pathways"
+ },
+ {
+  "id": "81dd22ba",
+  "where": "course:499",
+  "text": "Module 1: Introduction to Level 3 NDIS Support"
+ },
+ {
+  "id": "0c36f2dc",
+  "where": "course:499",
+  "text": "Level 3 Role and Responsibilities"
+ },
+ {
+  "id": "67e6c37e",
+  "where": "course:499",
+  "text": "Level Differentiation — Level 1, 2 and 3 Compared"
+ },
+ {
+  "id": "04171ea9",
+  "where": "course:499",
+  "text": "Advanced NDIS Practice Standards"
+ },
+ {
+  "id": "0a30a37a",
+  "where": "course:499",
+  "text": "Ethical Frameworks — The Four Principles Approach"
+ },
+ {
+  "id": "9e4cbf98",
+  "where": "course:499",
+  "text": "Applying Autonomy, Beneficence, Non-Maleficence and Justice"
+ },
+ {
+  "id": "7d9e056e",
+  "where": "course:499",
+  "text": "Complex Decision-Making at Level 3"
+ },
+ {
+  "id": "eea11e09",
+  "where": "course:499",
+  "text": "Knowledge Assessment — Level 3 Introduction"
+ },
+ {
+  "id": "db2d338f",
+  "where": "course:499",
+  "text": "Module 2: Complex Participant Situations"
+ },
+ {
+  "id": "c0eb471a",
+  "where": "course:499",
+  "text": "Identifying and Managing Complex Needs"
+ },
+ {
+  "id": "865b52b6",
+  "where": "course:499",
+  "text": "Multiple Disability and Comorbidity"
+ },
+ {
+  "id": "049d1cb8",
+  "where": "course:499",
+  "text": "Behavioural Support in Complex Cases"
+ },
+ {
+  "id": "64465425",
+  "where": "course:499",
+  "text": "Family Dynamics and Conflict Resolution"
+ },
+ {
+  "id": "676e6750",
+  "where": "course:499",
+  "text": "Knowledge Assessment — Complex Situations"
+ },
+ {
+  "id": "2e910a15",
+  "where": "course:499",
+  "text": "Module 3: NDIS Compliance & Audit Readiness"
+ },
+ {
+  "id": "763e6a75",
+  "where": "course:499",
+  "text": "NDIS Quality and Safeguards Framework"
+ },
+ {
+  "id": "99db972f",
+  "where": "course:499",
+  "text": "Preparing for NDIS Audits"
+ },
+ {
+  "id": "9e7cccbe",
+  "where": "course:499",
+  "text": "Continuous Improvement Systems"
+ },
+ {
+  "id": "47bb7291",
+  "where": "course:499",
+  "text": "Knowledge Assessment — Compliance"
+ },
+ {
+  "id": "037d4438",
+  "where": "course:499",
+  "text": "Module 4: Crisis Management & Intervention"
+ },
+ {
+  "id": "08f8b2cf",
+  "where": "course:499",
+  "text": "Crisis Identification and Early Intervention"
+ },
+ {
+  "id": "283c99ed",
+  "where": "course:499",
+  "text": "De-escalation Strategies"
+ },
+ {
+  "id": "7f864b10",
+  "where": "course:499",
+  "text": "Post-Crisis Review and Reporting"
+ },
+ {
+  "id": "bc063a87",
+  "where": "course:499",
+  "text": "Knowledge Assessment — Crisis Management"
+ },
+ {
+  "id": "384d352e",
+  "where": "course:499",
+  "text": "Module 5: Leadership in Support Coordination"
+ },
+ {
+  "id": "f55f4783",
+  "where": "course:499",
+  "text": "Leadership Styles in Support Teams"
+ },
+ {
+  "id": "83ec5553",
+  "where": "course:499",
+  "text": "Coaching and Mentoring Junior Staff"
+ },
+ {
+  "id": "db619c15",
+  "where": "course:499",
+  "text": "Running Effective Team Meetings"
+ },
+ {
+  "id": "37330751",
+  "where": "course:499",
+  "text": "Knowledge Assessment — Leadership"
+ },
+ {
+  "id": "dd047d2b",
+  "where": "course:499",
+  "text": "Module 6: Advanced Reporting & Documentation"
+ },
+ {
+  "id": "7afee61f",
+  "where": "course:499",
+  "text": "Complex Incident Investigation Reports"
+ },
+ {
+  "id": "040a98f9",
+  "where": "course:499",
+  "text": "Specialist Support Coordination Reports"
+ },
+ {
+  "id": "6c87bc2d",
+  "where": "course:499",
+  "text": "Quality Evidence for Plan Reviews"
+ },
+ {
+  "id": "ca5434e1",
+  "where": "course:499",
+  "text": "Knowledge Assessment — Advanced Reporting"
+ },
+ {
+  "id": "e3d34257",
+  "where": "course:499",
+  "text": "Module 7: Specialist Support Coordination"
+ },
+ {
+  "id": "723ae258",
+  "where": "course:499",
+  "text": "What is Specialist Support Coordination?"
+ },
+ {
+  "id": "8d4b2214",
+  "where": "course:499",
+  "text": "Eligibility and Funding Criteria"
+ },
+ {
+  "id": "e6aaa4b1",
+  "where": "course:499",
+  "text": "Transitioning to Specialist Roles"
+ },
+ {
+  "id": "f792730d",
+  "where": "course:499",
+  "text": "Knowledge Assessment — Specialist SC"
+ },
+ {
+  "id": "4ff6341a",
+  "where": "course:499",
+  "text": "Module 8: Capstone Assessment & Certificate"
+ },
+ {
+  "id": "50cf5154",
+  "where": "course:499",
+  "text": "Level 3 Comprehensive Capstone Assessment"
+ },
+ {
+  "id": "f1777247",
+  "where": "course:499",
+  "text": "Certificate of Advanced Completion"
+ },
+ {
+  "id": "371e8c5e",
+  "where": "options",
+  "text": "Free Readiness Quiz"
+ },
+ {
+  "id": "63de101b",
+  "where": "options",
+  "text": "Not sure where to start?"
+ },
+ {
+  "id": "40558719",
+  "where": "options",
+  "text": "Free Quiz"
+ },
+ {
+  "id": "347eb3f2",
+  "where": "options",
+  "text": "Find My Plan"
+ },
+ {
+  "id": "ca1b579f",
+  "where": "options",
+  "text": "Let's Build Your|Business Foundation"
+ },
+ {
+  "id": "150d71d9",
+  "where": "options",
+  "text": "Start with a free consultation today."
+ },
+ {
+  "id": "0f95d8da",
+  "where": "options",
+  "text": "Monthly compliance tips"
+ },
+ {
+  "id": "59184585",
+  "where": "options",
+  "text": "Sol Services"
+ },
+ {
+  "id": "5e1c5089",
+  "where": "options",
+  "text": "Easy Compliance"
+ }
+]

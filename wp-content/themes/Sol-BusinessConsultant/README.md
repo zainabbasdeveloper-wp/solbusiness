@@ -90,3 +90,11 @@ npm run build
 ```
 
 `npm run build` checks every value against the field definitions (and every `woo:sku:` against the product list) before writing `acf-json`, `seed/site.json` and `FIELD-REFERENCE.md`. Commit and push; the sites pick the changes up on their next dashboard visit (see *Theme updates* above).
+
+## SEO wording
+
+The site copy is rewritten for SEO and to be unique from the training site (search engines treat copied text as duplicate content). The rewrites live in `_dev/build/content/seo-copy.json` (original sentence → new sentence) and `npm run build` swaps them in, so a rebuild from the training site keeps them.
+
+- **Rewritten:** headings, intros, descriptions, FAQs, benefits, calls to action, image alt text, blog posts, product descriptions, course summaries, and every page's Yoast title (60 characters or fewer) and description (160 or fewer).
+- **Kept word for word on purpose:** official NDIS registration group names, prices and figures, menu labels, product names, course module and lesson names (they match the LMS), quiz questions, comparison table cells, and the commitments on the legal, privacy, service inclusions, support, accessibility and complaints pages.
+- **New or changed text:** after each build, anything still in its original wording is listed in `_dev/COPY-TODO.json`. To reword it, add `"original text": "new text"` to `seo-copy.json` and build again.

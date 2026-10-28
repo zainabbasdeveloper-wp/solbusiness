@@ -3,7 +3,7 @@
 //   seed/site.json           all content for Appearance → SOL Setup
 //   _dev/FIELD-REFERENCE.md  every field, repeater and data type
 // Usage: npm run build   (run `npm run extract` first if the training site changed)
-import { mkdirSync, writeFileSync, rmSync, existsSync } from 'node:fs';
+import { mkdirSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { execSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
@@ -16,6 +16,7 @@ import { services } from './content/services.mjs';
 import { courses, posts } from './content/collections.mjs';
 import { pages } from './content/pages.mjs';
 import { products } from './content/products.mjs';
+import { applyCopy, mapSeedText, loadCopy } from './copy.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const THEME = join(HERE, '..', '..');
@@ -117,7 +118,7 @@ for (const g of GROUPS) writeFileSync(join(jsonDir, `${g.key}.json`), JSON.strin
 
 /* ---------- write seed ---------- */
 mkdirSync(join(THEME, 'seed'), { recursive: true });
-const seed = routeUrls({
+let seed = routeUrls({
   version: '2.0.0',
   options_slug: OPTIONS_SLUG,
   field_keys: topLevelKeys(),
@@ -132,6 +133,23 @@ const seed = routeUrls({
   courses: courses.map((c) => ({ product_id: c.product_id, title: c.title, fields: c.fields })),
   posts: posts.map((p) => ({ post_type: 'post', path: p.slug, title: p.title, excerpt: p.excerpt, content: p.content, date: p.date, category: p.category, featured_image: p.featured_image, featured_alt: p.featured_alt, sticky: p.featured, yoast: yoast(p.seo), fields: p.fields })),
 });
+/* ---------- SEO copy layer (content/seo-copy.json) ---------- */
+{
+  const todo = [];
+  const seen = new Set();
+  const res = applyCopy(seed);
+  // Anything still in its original wording is listed for rewriting.
+  const map = loadCopy();
+  const rewritten = new Set(Object.values(map));
+  mapSeedText(res.seed, (t, where) => {
+    if (!rewritten.has(t) && !seen.has(t)) { seen.add(t); todo.push({ id: createHash('sha1').update(t).digest('hex').slice(0, 8), where, text: t }); }
+    return t;
+  });
+  writeFileSync(join(HERE, '..', 'COPY-TODO.json'), JSON.stringify(todo, null, 1));
+  seed = res.seed;
+  console.log(`    SEO copy: ${res.applied} texts rewritten, ${todo.length} still original (_dev/COPY-TODO.json)${res.unused.length ? `, ${res.unused.length} unused entries` : ''}`);
+}
+
 /* ---------- fingerprints: let WordPress apply only what changed after a git pull ---------- */
 // One hash per item (page, reusable section, post, product, course, site setting). WordPress stores the
 // hash it last applied; a different hash in a new theme version means that item needs updating.
