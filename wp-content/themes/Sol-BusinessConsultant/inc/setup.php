@@ -140,6 +140,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	$ver = SOL_THEME_VERSION;
 	wp_enqueue_style( 'sol-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap', array(), null );
 	wp_enqueue_style( 'sol', SOL_URI . 'assets/css/sol.css', array(), $ver );
+	wp_enqueue_style( 'sol-hero', SOL_URI . 'assets/css/sol-hero.css', array( 'sol' ), $ver );
 	if ( class_exists( 'WooCommerce' ) ) {
 		wp_enqueue_style( 'sol-woo', SOL_URI . 'assets/css/sol-woo.css', array( 'sol' ), $ver );
 		wp_enqueue_style( 'sol-shop', SOL_URI . 'assets/css/sol-shop.css', array( 'sol-woo' ), $ver );
@@ -164,6 +165,14 @@ add_action( 'wp', function () {
 	remove_all_actions( 'get_header' );
 	remove_all_actions( 'get_footer' );
 }, 999 );
+
+/*
+ * Switch on load animations before the page paints, only when JavaScript runs and the visitor
+ * allows motion. Without this class every animated element simply shows in its final state.
+ */
+add_action( 'wp_head', function () {
+	echo "<script>if(window.matchMedia&&!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('sol-anim');}</script>\n";
+}, 1 );
 
 add_action( 'wp_head', function () {
 	$code = sol_opt( 'head_code' );

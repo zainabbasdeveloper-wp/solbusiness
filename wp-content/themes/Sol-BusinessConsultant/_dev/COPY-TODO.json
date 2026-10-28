@@ -1,5 +1,10 @@
 [
  {
+  "id": "e26a326e",
+  "where": "page:home",
+  "text": "Australian NDIS & business consultants"
+ },
+ {
   "id": "fbe32d1b",
   "where": "page:home",
   "text": "STRUCTURE.\nCOMPLIANCE.\n[SCALE.]"
@@ -13,6 +18,11 @@
   "id": "830d359a",
   "where": "page:home",
   "text": "Explore Services"
+ },
+ {
+  "id": "ea6eb605",
+  "where": "page:home",
+  "text": "SOL consultants working with a client team around a laptop"
  },
  {
   "id": "1023ba98",

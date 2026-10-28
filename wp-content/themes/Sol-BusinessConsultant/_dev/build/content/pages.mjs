@@ -32,12 +32,12 @@ const home = {
   seo: { seo_title: LIVE_TEXT.homeSeoTitle, seo_description: LIVE_TEXT.homeSeoDescription },
   sections: [
     {
-      acf_fc_layout: 'hero', style: 'split', eyebrow: '', heading: 'STRUCTURE.\nCOMPLIANCE.\n[SCALE.]',
+      acf_fc_layout: 'hero', style: 'showcase', eyebrow: 'Australian NDIS & business consultants', heading: 'STRUCTURE.\nCOMPLIANCE.\n[SCALE.]',
       text: 'Australian business and NDIS consulting with practical systems, documentation, and support to move from setup to audit-ready operations.',
       buttons: [btn('Book Free Consultation', '/book-consultation'), btn('Explore Services', '/#services', 'outline')],
       badges: H.trustBadges.map((b) => ({ icon: ic(b.icon), label: b.label })),
       stats: H.stats.map((s) => ({ value: s.value, label: s.label })),
-      image: img('services/compliance-document-review.webp'), image_alt: 'Australian compliance consultant reviewing business documentation',
+      image: img('services/business-consulting-workshop.webp'), image_alt: 'SOL consultants working with a client team around a laptop',
       card_title: 'Audit Ready', card_text: 'Your compliance system is configured and reviewed against your workflow.', disclaimer: '',
     },
     {

@@ -41,6 +41,7 @@
                             "choices": {
                                 "split": "Split - white, image right",
                                 "dark": "Dark - navy, image right",
+                                "showcase": "Showcase - navy, outlined headline, framed photo, animated on load",
                                 "centered": "Centered - no image"
                             },
                             "return_format": "value",

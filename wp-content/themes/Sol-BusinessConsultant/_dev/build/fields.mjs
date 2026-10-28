@@ -17,7 +17,7 @@ const columns = (def = '3') => select('columns', 'Columns', { 1: '1', 2: '2', 3:
 /* ------------------------------------------------------------------ */
 export const LAYOUTS = [
   layout('hero', 'Hero', [
-    select('style', 'Style', { split: 'Split - white, image right', dark: 'Dark - navy, image right', centered: 'Centered - no image' }, { default_value: 'split' }),
+    select('style', 'Style', { split: 'Split - white, image right', dark: 'Dark - navy, image right', showcase: 'Showcase - navy, outlined headline, framed photo, animated on load', centered: 'Centered - no image' }, { default_value: 'split' }),
     text('eyebrow', 'Eyebrow'),
     textarea('heading', 'Heading', { rows: 3, instructions: 'One line per row. Wrap words in [square brackets] to colour them amber.' }),
     textarea('text', 'Text'),

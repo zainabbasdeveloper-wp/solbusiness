@@ -2758,8 +2758,8 @@
     "page_sections": [
      {
       "acf_fc_layout": "hero",
-      "style": "split",
-      "eyebrow": "",
+      "style": "showcase",
+      "eyebrow": "Australian NDIS & business consultants",
       "heading": "STRUCTURE.\nCOMPLIANCE.\n[SCALE.]",
       "text": "Australian NDIS and business consultants who give you the systems, documents and hands-on support to go from setup to audit-ready operations.",
       "buttons": [
@@ -2808,8 +2808,8 @@
         "label": "Response target"
        }
       ],
-      "image": "img:services/compliance-document-review.webp",
-      "image_alt": "SOL compliance consultant reviewing NDIS provider documentation",
+      "image": "img:services/business-consulting-workshop.webp",
+      "image_alt": "SOL consultants working with a client team around a laptop",
       "card_title": "Audit Ready",
       "card_text": "Your compliance system is set up and checked against how your business really works.",
       "disclaimer": ""
@@ -14258,7 +14258,7 @@
   "sol_block:training-faq": "ed6ea5866639c433",
   "sol_block:contact": "3841f3f7c0d55a0b",
   "sol_block:service-comparison": "a8bc97567e04f3df",
-  "page:home": "11c8fdbf0fe45b61",
+  "page:home": "1ca688081199e90a",
   "page:about": "de892520adefe479",
   "page:contact": "f65fd873425acef2",
   "page:faq": "fdbbfdf1f8f6f0cb",
@@ -14363,6 +14363,12 @@
   "option:head_code": "dd29ecf524b030a6"
  },
  "history": {
+  "page:home": [
+   "11c8fdbf0fe45b61",
+   "eea177346d8ff45b",
+   "806e6bbf05a6bb85",
+   "1199fbf5a0344c12"
+  ],
   "sol_block:pricing-tabs": [
    "d30f827c7699d52d",
    "74f4a589c432a1fc"
@@ -14402,11 +14408,6 @@
   "sol_block:service-comparison": [
    "93ae8fca5c000b7b",
    "a8669c0d25ba0cea"
-  ],
-  "page:home": [
-   "eea177346d8ff45b",
-   "806e6bbf05a6bb85",
-   "1199fbf5a0344c12"
   ],
   "page:about": [
    "448255dc13f307c0"
@@ -15648,5 +15649,5 @@
    }
   ]
  },
- "build": "01a1a78d53315f7e"
+ "build": "5ed7f3fab7a733e2"
 }

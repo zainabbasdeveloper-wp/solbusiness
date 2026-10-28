@@ -380,6 +380,42 @@
 		}
 	}
 
-	function init() { icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); }
+	/* ---------- Showcase hero: counting stats + mouse spotlight ---------- */
+	function showcase() {
+		if (!document.documentElement.classList.contains('sol-anim')) { return; }
+		var ease = function (t) { return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); };
+		// The real number is already in the HTML; count up to it once it is on screen.
+		function count(el) {
+			var target = parseInt(el.getAttribute('data-sol-count'), 10), node = el.firstChild, start = null;
+			if (!node || node.nodeType !== 3 || isNaN(target)) { return; }
+			node.nodeValue = '0';
+			setTimeout(function () {
+				requestAnimationFrame(function step(ts) {
+					if (start === null) { start = ts; }
+					var p = Math.min((ts - start) / 1800, 1);
+					node.nodeValue = String(Math.round(target * ease(p)));
+					if (p < 1) { requestAnimationFrame(step); }
+				});
+			}, 1300);
+		}
+		var nums = $$('[data-sol-count]');
+		if (nums.length && 'IntersectionObserver' in window) {
+			var io = new IntersectionObserver(function (es) {
+				es.forEach(function (e) { if (e.isIntersecting) { count(e.target); io.unobserve(e.target); } });
+			}, { threshold: 0.6 });
+			nums.forEach(function (n) { io.observe(n); });
+		}
+		if (window.matchMedia && matchMedia('(hover: hover)').matches) {
+			$$('[data-sol-showcase]').forEach(function (hero) {
+				hero.addEventListener('pointermove', function (e) {
+					var r = hero.getBoundingClientRect();
+					hero.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+					hero.style.setProperty('--my', (e.clientY - r.top) + 'px');
+				});
+			});
+		}
+	}
+
+	function init() { icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); showcase(); }
 	if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();

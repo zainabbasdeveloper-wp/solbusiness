@@ -195,7 +195,7 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 
 | Field name | Type | Label / notes |
 |---|---|---|
-| `style` | Select: `split`, `dark`, `centered` | Style |
+| `style` | Select: `split`, `dark`, `showcase`, `centered` | Style |
 | `eyebrow` | Text | Eyebrow |
 | `heading` | Text area | Heading — One line per row. Wrap words in [square brackets] to colour them amber. |
 | `text` | Text area | Text |

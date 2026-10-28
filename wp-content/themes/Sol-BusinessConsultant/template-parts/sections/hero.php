@@ -2,6 +2,11 @@
 /** Layout: hero. Also used for service heroes (extra keys: checks, scroll_hint). */
 defined( 'ABSPATH' ) || exit;
 
+if ( 'showcase' === sol_get( $s, 'style' ) ) {
+	include __DIR__ . '/hero-showcase.php';
+	return;
+}
+
 $style  = sol_get( $s, 'style', 'split' );
 $image  = sol_get( $s, 'image' );
 $badges = sol_rows( sol_get( $s, 'badges', array() ) );
