@@ -172,7 +172,7 @@ function sol_run_setup( $opts = array() ) {
 		return $report;
 	}
 	if ( function_exists( 'set_time_limit' ) ) {
-		@set_time_limit( 300 ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
+		@set_time_limit( 900 ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
 	}
 	wp_raise_memory_limit( 'admin' );
 	$keys = isset( $seed['field_keys'] ) ? $seed['field_keys'] : array();
@@ -540,11 +540,11 @@ function sol_render_updates_panel( $scf ) {
 	$seed    = sol_seed();
 	$plan    = sol_updates_plan();
 	$pending = array_values( array_filter( $plan, function ( $r ) {
-		return in_array( $r['state'], array( 'update', 'new', 'edited' ), true );
+		return in_array( $r['state'], array( 'update', 'new', 'convert', 'edited' ), true );
 	} ) );
 	$backup  = get_option( 'sol_last_update_backup' );
 	$paused  = get_option( 'sol_updates_paused' );
-	$labels  = array( 'update' => 'Will be updated', 'new' => 'Will be created', 'edited' => 'Edited in WordPress since setup: kept unless ticked' );
+	$labels  = array( 'update' => 'Will be updated', 'new' => 'Will be created', 'convert' => 'Existing page: switched to the SOL design (old version kept for undo)', 'edited' => 'Edited in WordPress since setup: kept unless ticked' );
 	?>
 	<div class="card" style="max-width:1100px;margin:16px 0;padding:16px 20px">
 		<h2 style="margin-top:0">Theme updates</h2>

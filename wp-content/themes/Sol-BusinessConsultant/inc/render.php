@@ -61,17 +61,42 @@ function sol_services_parent_id() {
 	return $page ? (int) $page->ID : 0;
 }
 
-/** Cards for the service grid: child pages of /services/ that use the SOL Service Page template. */
+/** Service page path => position, from the theme seed (cached until the seed file changes). */
+function sol_service_order() {
+	$file  = SOL_DIR . 'seed/site.json';
+	$mtime = file_exists( $file ) ? (int) filemtime( $file ) : 0;
+	$cache = get_option( 'sol_service_order' );
+	if ( is_array( $cache ) && isset( $cache['mtime'] ) && $cache['mtime'] === $mtime ) {
+		return $cache['order'];
+	}
+	$order = array();
+	foreach ( (array) ( sol_seed()['services'] ?? array() ) as $s ) {
+		$order[ $s['path'] ] = (int) $s['menu_order'];
+	}
+	update_option( 'sol_service_order', array( 'mtime' => $mtime, 'order' => $order ), true );
+	return $order;
+}
+
+/** Cards for the service grid: published pages that use the SOL Service Page template (under /services/ or not). */
 function sol_cards_from_posts( $source ) {
-	if ( 'services' !== $source || ! sol_services_parent_id() ) {
+	if ( 'services' !== $source ) {
 		return array();
 	}
 	$pages = get_pages( array(
-		'parent'      => sol_services_parent_id(),
-		'sort_column' => 'menu_order,post_title',
-		'meta_key'    => '_wp_page_template', // phpcs:ignore WordPress.DB.SlowDBQuery
-		'meta_value'  => SOL_TPL_SERVICE, // phpcs:ignore WordPress.DB.SlowDBQuery
+		'hierarchical' => false, // flat list: include /services/ children and top-level service pages alike
+		'sort_column'  => 'menu_order,post_title',
+		'meta_key'     => '_wp_page_template', // phpcs:ignore WordPress.DB.SlowDBQuery
+		'meta_value'   => SOL_TPL_SERVICE, // phpcs:ignore WordPress.DB.SlowDBQuery
 	) );
+	// Theme order first (pages that existed before setup keep their old menu order), then any extra service pages.
+	$order = sol_service_order();
+	$rank = function ( $p ) use ( $order ) {
+		$uri = get_page_uri( $p );
+		return isset( $order[ $uri ] ) ? $order[ $uri ] : 1000 + (int) $p->menu_order;
+	};
+	usort( $pages, function ( $a, $b ) use ( $rank ) {
+		return $rank( $a ) <=> $rank( $b );
+	} );
 	$cards = array();
 	foreach ( $pages as $p ) {
 		if ( get_field( 'hide_in_grid', $p->ID ) ) {

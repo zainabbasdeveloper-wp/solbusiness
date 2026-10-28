@@ -126,7 +126,7 @@ const seed = routeUrls({
   blocks: blocks.map((b) => ({ post_type: 'sol_block', path: b.slug, title: b.title, fields: { page_sections: b.sections } })),
   pages: pages.map((p, i) => ({ post_type: 'page', path: p.slug, title: p.title, menu_order: i, front_page: !!p.front_page, template: TPL_BUILDER, yoast: yoast(p.seo), fields: { page_sections: p.sections } })),
   services: services.map((s) => ({
-    post_type: 'page', path: `services/${SERVICE_SLUG[s.slug] || s.slug}`, title: s.title, menu_order: s.menu_order, template: TPL_SERVICE,
+    post_type: 'page', path: s.path || `services/${SERVICE_SLUG[s.slug] || s.slug}`, title: s.title, menu_order: s.menu_order, template: TPL_SERVICE,
     yoast: yoast(s.seo), fields: s.fields,
   })),
   courses: courses.map((c) => ({ product_id: c.product_id, title: c.title, fields: c.fields })),

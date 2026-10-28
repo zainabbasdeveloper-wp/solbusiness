@@ -267,6 +267,30 @@
       "desc": "Compare monthly packages"
      }
     ]
+   },
+   {
+    "label": "Outsourcing & AI",
+    "badge": "",
+    "items": [
+     {
+      "label": "Admin & Back-Office Support",
+      "url": "/services/admin-back-office-support/",
+      "icon": "clipboard-list",
+      "desc": "CRM, scheduling & data entry"
+     },
+     {
+      "label": "Offshore Outsourcing & Staff",
+      "url": "/services/offshore-outsourcing-staff-solutions/",
+      "icon": "users",
+      "desc": "Managed remote teams"
+     },
+     {
+      "label": "AI & Machine Learning",
+      "url": "/ai-machine-learning/",
+      "icon": "brain-circuit",
+      "desc": "Data labelling & annotation"
+     }
+    ]
    }
   ],
   "mega_promo": {
@@ -367,6 +391,18 @@
      {
       "label": "Software & Automation",
       "url": "/services/software-automation/"
+     },
+     {
+      "label": "Admin & Back-Office Support",
+      "url": "/services/admin-back-office-support/"
+     },
+     {
+      "label": "Offshore Outsourcing & Staff",
+      "url": "/services/offshore-outsourcing-staff-solutions/"
+     },
+     {
+      "label": "AI & Machine Learning",
+      "url": "/ai-machine-learning/"
      }
     ]
    },
@@ -12471,6 +12507,693 @@
   },
   {
    "post_type": "page",
+   "path": "services/admin-back-office-support",
+   "title": "Admin & Back-Office Support",
+   "menu_order": 13,
+   "template": "page-templates/sol-service.php",
+   "yoast": {
+    "title": "Admin & Back-Office Support Services | Australia",
+    "description": "Professional administrative support including data entry, CRM management, scheduling and client communications for Australian businesses"
+   },
+   "fields": {
+    "card_icon": "clipboard-list",
+    "card_text": "Data entry, CRM upkeep, scheduling and client correspondence handled for you.",
+    "card_url": "",
+    "hide_in_grid": false,
+    "show_enquiry": true,
+    "service_type": "admin_support",
+    "eyebrow": "Admin & Back-Office Support",
+    "hero_heading": "Seamless Admin &\nBack-Office [Support]",
+    "hero_intro": "Spend your time on growth, strategy and client delivery. SOL handles CRM updates, scheduling, data entry and client correspondence in the background, working with your current systems.",
+    "hero_highlights": [
+     {
+      "item": "Works with your current systems"
+     },
+     {
+      "item": "Affordable, scalable support"
+     },
+     {
+      "item": "Staff training on admin procedures"
+     }
+    ],
+    "hero_image": "img:services/admin-back-office-support.webp",
+    "hero_buttons": [
+     {
+      "link": {
+       "title": "Start Your Enquiry",
+       "url": "#intake-form",
+       "target": ""
+      },
+      "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
+     }
+    ],
+    "overview_heading": "What Do We Offer?",
+    "features": [
+     {
+      "item": "Database administration and data entry"
+     },
+     {
+      "item": "CRM upgrades and system upkeep"
+     },
+     {
+      "item": "Calendar management, meeting scheduling, and follow-ups"
+     },
+     {
+      "item": "Managing correspondence and emails with clients"
+     },
+     {
+      "item": "Admin instruction on procedures and equipment for your staff"
+     },
+     {
+      "item": "Smooth interaction with the platforms and workflows of your choice"
+     }
+    ],
+    "why_heading": "What Makes SOL a Preferred Choice?",
+    "why_intro": "SOL Business Consultant brings a host of benefits when you choose us:",
+    "why": [
+     {
+      "item": "Support that is specifically tailored to your company's activities"
+     },
+     {
+      "item": "Skilled experts with training in several administrative systems"
+     },
+     {
+      "item": "Scalable services that expand along with your company"
+     },
+     {
+      "item": "Human touch combined with dependable and effective turnaround"
+     }
+    ],
+    "show_details": true,
+    "details_who": [
+     {
+      "item": "Australian businesses that want practical service support with clear next steps."
+     },
+     {
+      "item": "New or growing providers who need documentation, setup, digital systems, or operational guidance."
+     },
+     {
+      "item": "Clients who want a scoped service before paying for implementation work."
+     }
+    ],
+    "details_get": [
+     {
+      "item": "A confirmed service scope and list of required details."
+     },
+     {
+      "item": "Practical deliverables matched to the selected service."
+     },
+     {
+      "item": "Client portal visibility for payments, documents, requests, updates, and support tickets."
+     },
+     {
+      "item": "Follow-up guidance so you know what happens after delivery."
+     }
+    ],
+    "details_process": [
+     {
+      "item": "Submit an enquiry or book a consultation."
+     },
+     {
+      "item": "SOL confirms scope, required information, price, and timeline."
+     },
+     {
+      "item": "Client pays through the service payment flow when ready."
+     },
+     {
+      "item": "Delivery starts, documents are reviewed, and updates are shared through the client portal."
+     }
+    ],
+    "details_timeline": [
+     {
+      "item": "Initial response: within 1 business day."
+     },
+     {
+      "item": "Scope confirmation: usually 1-2 business days after details are received."
+     },
+     {
+      "item": "Delivery timing: depends on the selected service, document readiness, and package size."
+     }
+    ],
+    "details_faqs": [
+     {
+      "question": "Do I need to pay before speaking with SOL?",
+      "answer": "No. We recommend confirming the right service and scope before making a payment."
+     },
+     {
+      "question": "Where do I track my service?",
+      "answer": "Clients can use the client portal to view service records, documents, requests, updates, support tickets, and payment history."
+     },
+     {
+      "question": "Can SOL customise the service?",
+      "answer": "Yes. Scope, deliverables, and timing can be adjusted based on your business needs."
+     }
+    ],
+    "enquiry_heading": "Start Your Admin & Back-Office Support Enquiry",
+    "enquiry_text": "Share your details and the SOL team will confirm the right scope, pricing, and next step for your business.",
+    "page_sections": [
+     {
+      "acf_fc_layout": "text_image",
+      "section_id": "",
+      "eyebrow": "",
+      "background": "chalk",
+      "align": "left",
+      "heading": "Handling Backend Effortlessly for Efficiency at the Frontend!",
+      "intro": "",
+      "content": "<p>At SOL Business Consultant, we know that you should not spend your time mired in administrative duties, but rather on growth, strategy, and client delivery. Our Seamless Admin & Back-Office Support solution can help with that.</p>\n<p>We provide comprehensive administrative support and training that is designed to work seamlessly with your current procedures and systems. Our knowledgeable staff makes sure everything goes without a hitch in the background, whether you need assistance with CRM updates, appointment scheduling, or client interactions, so you can concentrate on what really counts.</p>\n<p>Do not worry about the pricing when we are here. We offer affordable and easy solutions that can handle your backend jobs without pricking your pocket. Speak to our team today!</p>",
+      "image": "img:services/admin-back-office-support.webp",
+      "image_alt": "Administrative support team working on back-office tasks",
+      "image_position": "right",
+      "image_badge": "",
+      "stats": [],
+      "checklist": [],
+      "buttons": [],
+      "callout": {
+       "icon": "",
+       "title": "",
+       "text": ""
+      }
+     },
+     {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
+      "acf_fc_layout": "service_details",
+      "heading": ""
+     },
+     {
+      "acf_fc_layout": "cta_banner",
+      "section_id": "",
+      "style": "dark",
+      "eyebrow": "",
+      "heading": "Shine At The Frontend With Our Services!",
+      "text": "When we take care of your admin and back-office jobs, you get to shine at the front. Trust our experts and get in touch today for a quick consultation.",
+      "buttons": [
+       {
+        "link": {
+         "title": "Get in Touch",
+         "url": "#intake-form",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Book a Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "list": [],
+      "image": "",
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "service_enquiry",
+      "section_id": "intake-form",
+      "form_variant": "contact"
+     }
+    ]
+   }
+  },
+  {
+   "post_type": "page",
+   "path": "services/offshore-outsourcing-staff-solutions",
+   "title": "Offshore Outsourcing & Staff Solutions",
+   "menu_order": 14,
+   "template": "page-templates/sol-service.php",
+   "yoast": {
+    "title": "Offshore Outsourcing & Staff Solutions | Australia",
+    "description": "Cost-effective remote teams, offshore staff, work-from-home solutions and managed staffing for Australian businesses"
+   },
+   "fields": {
+    "card_icon": "users",
+    "card_text": "Qualified remote staff at a fraction of local hiring costs, fully managed by SOL.",
+    "card_url": "",
+    "hide_in_grid": false,
+    "show_enquiry": true,
+    "service_type": "offshore_staffing",
+    "eyebrow": "Offshore Outsourcing & Staffing",
+    "hero_heading": "Offshore Outsourcing &\nStaff Solutions [Made Easy]",
+    "hero_intro": "Effective, adaptable offshore staffing customised to your business. Access qualified work-from-home staff at a fraction of local recruiting costs, with pricing that depends on the role.",
+    "hero_highlights": [
+     {
+      "item": "Startups to large businesses"
+     },
+     {
+      "item": "Hourly pricing by role"
+     },
+     {
+      "item": "Dedicated account manager"
+     }
+    ],
+    "hero_image": "img:services/offshore-staff-solutions.webp",
+    "hero_buttons": [
+     {
+      "link": {
+       "title": "Start Your Enquiry",
+       "url": "#intake-form",
+       "target": ""
+      },
+      "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
+     }
+    ],
+    "overview_heading": "What's Included in Our Services?",
+    "features": [
+     {
+      "item": "End-to-end recruitment and onboarding"
+     },
+     {
+      "item": "HR management and payroll handling"
+     },
+     {
+      "item": "Performance monitoring and reporting"
+     },
+     {
+      "item": "Fully remote, secure, and compliant infrastructure"
+     },
+     {
+      "item": "Dedicated account manager support"
+     }
+    ],
+    "why_heading": "Why Hire SOL?",
+    "why_intro": "Here is what makes us a preferred choice for staffing solutions:",
+    "why": [
+     {
+      "item": "Availability of worldwide talent at affordable prices"
+     },
+     {
+      "item": "Easy team management: we take care of everything"
+     },
+     {
+      "item": "Scalable personnel as your company expands"
+     },
+     {
+      "item": "Clear pricing with no additional expenses"
+     }
+    ],
+    "show_details": true,
+    "details_who": [
+     {
+      "item": "Australian businesses that want practical service support with clear next steps."
+     },
+     {
+      "item": "New or growing providers who need documentation, setup, digital systems, or operational guidance."
+     },
+     {
+      "item": "Clients who want a scoped service before paying for implementation work."
+     }
+    ],
+    "details_get": [
+     {
+      "item": "A confirmed service scope and list of required details."
+     },
+     {
+      "item": "Practical deliverables matched to the selected service."
+     },
+     {
+      "item": "Client portal visibility for payments, documents, requests, updates, and support tickets."
+     },
+     {
+      "item": "Follow-up guidance so you know what happens after delivery."
+     }
+    ],
+    "details_process": [
+     {
+      "item": "Submit an enquiry or book a consultation."
+     },
+     {
+      "item": "SOL confirms scope, required information, price, and timeline."
+     },
+     {
+      "item": "Client pays through the service payment flow when ready."
+     },
+     {
+      "item": "Delivery starts, documents are reviewed, and updates are shared through the client portal."
+     }
+    ],
+    "details_timeline": [
+     {
+      "item": "Initial response: within 1 business day."
+     },
+     {
+      "item": "Scope confirmation: usually 1-2 business days after details are received."
+     },
+     {
+      "item": "Delivery timing: depends on the selected service, document readiness, and package size."
+     }
+    ],
+    "details_faqs": [
+     {
+      "question": "Do I need to pay before speaking with SOL?",
+      "answer": "No. We recommend confirming the right service and scope before making a payment."
+     },
+     {
+      "question": "Where do I track my service?",
+      "answer": "Clients can use the client portal to view service records, documents, requests, updates, support tickets, and payment history."
+     },
+     {
+      "question": "Can SOL customise the service?",
+      "answer": "Yes. Scope, deliverables, and timing can be adjusted based on your business needs."
+     }
+    ],
+    "enquiry_heading": "Start Your Offshore Outsourcing & Staff Solutions Enquiry",
+    "enquiry_text": "Share your details and the SOL team will confirm the right scope, pricing, and next step for your business.",
+    "page_sections": [
+     {
+      "acf_fc_layout": "text_image",
+      "section_id": "",
+      "eyebrow": "",
+      "background": "chalk",
+      "align": "left",
+      "heading": "Managing Remote Teams Easily Just For You!",
+      "intro": "",
+      "content": "<p>SOL Business Consultant offers effective and adaptable offshore outsourcing and staffing solutions that are customised to meet your company's requirements.</p>\n<p>Our work-from-home staffing solutions provide access to qualified individuals at a fraction of the local recruiting cost, regardless of your company's size: startup, small, or large. Depending on the position, our hourly fee range allows you to grow your staff without going over budget.</p>\n<p>Talk to us for seamless staff solutions.</p>",
+      "image": "img:services/offshore-staff-solutions.webp",
+      "image_alt": "Remote team members collaborating on a video call",
+      "image_position": "right",
+      "image_badge": "",
+      "stats": [],
+      "checklist": [],
+      "buttons": [],
+      "callout": {
+       "icon": "badge-dollar-sign",
+       "title": "Offshore Staffing Solutions",
+       "text": "Hourly pricing depending on role. Ask us for a quote for the positions you need."
+      }
+     },
+     {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
+      "acf_fc_layout": "service_details",
+      "heading": ""
+     },
+     {
+      "acf_fc_layout": "cta_banner",
+      "section_id": "",
+      "style": "dark",
+      "eyebrow": "",
+      "heading": "Get Started Today!",
+      "text": "Look no further for easy and affordable staff. SOL Business Consultant is here to build your ideal remote team. Book a consultation with us today.",
+      "buttons": [
+       {
+        "link": {
+         "title": "Get in Touch",
+         "url": "#intake-form",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Book a Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "list": [],
+      "image": "",
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "service_enquiry",
+      "section_id": "intake-form",
+      "form_variant": "contact"
+     }
+    ]
+   }
+  },
+  {
+   "post_type": "page",
+   "path": "ai-machine-learning",
+   "title": "AI & Machine Learning",
+   "menu_order": 15,
+   "template": "page-templates/sol-service.php",
+   "yoast": {
+    "title": "AI & Machine Learning Solutions Australia | Automation",
+    "description": "AI implementation, machine learning solutions and business automation for Australian organisations seeking operational efficiency"
+   },
+   "fields": {
+    "card_icon": "brain-circuit",
+    "card_text": "Video labelling, data annotation and quality assurance for AI and machine learning teams.",
+    "card_url": "",
+    "hide_in_grid": false,
+    "show_enquiry": true,
+    "service_type": "ai_machine_learning",
+    "eyebrow": "AI & Machine Learning",
+    "hero_heading": "Comprehensive AI & Machine\nLearning Services [Under One Roof]",
+    "hero_intro": "Helping organisations build, train, and scale accurate AI and machine learning models through high-quality data and skilled human intelligence.",
+    "hero_highlights": [
+     {
+      "item": "Video labelling & data annotation"
+     },
+     {
+      "item": "Human-in-the-loop quality control"
+     },
+     {
+      "item": "Secure, compliant workflows"
+     }
+    ],
+    "hero_image": "img:services/ai-machine-learning.webp",
+    "hero_buttons": [
+     {
+      "link": {
+       "title": "Start Your Enquiry",
+       "url": "#intake-form",
+       "target": ""
+      },
+      "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
+     }
+    ],
+    "overview_heading": "Our AI & Machine Learning Services Include the Following",
+    "features": [
+     {
+      "item": "Video Labelling & Annotation: frame-by-frame annotation, object tracking, activity recognition, and scenario tagging for computer vision models"
+     },
+     {
+      "item": "Image & Data Annotation: images, structured and unstructured datasets, with a human-in-the-loop approach for clean, model-ready data"
+     },
+     {
+      "item": "AI Quality Assurance & Validation: checks for annotation accuracy, consistency, and guideline compliance, for higher model accuracy and less rework"
+     },
+     {
+      "item": "Machine Learning Workflow Support: dataset preparation, review cycles, feedback loops, and workflow optimisation to meet tight timelines"
+     },
+     {
+      "item": "Enterprise AI Support Services: secure data handling, workforce scaling, and customised project management frameworks"
+     }
+    ],
+    "why_heading": "Why Choose SOL Business Consultant for AI & Machine Learning?",
+    "why_intro": "We focus on delivering measurable outcomes that help organisations build dependable AI systems.",
+    "why": [
+     {
+      "item": "Skilled workforce trained for AI and machine learning data operations"
+     },
+     {
+      "item": "Structured processes focused on accuracy, scalability, and delivery speed"
+     },
+     {
+      "item": "Proven experience supporting video labelling and data-driven projects"
+     },
+     {
+      "item": "Human-in-the-loop approach to improve model reliability"
+     },
+     {
+      "item": "Secure, compliant workflows aligned with enterprise requirements"
+     }
+    ],
+    "show_details": true,
+    "details_who": [
+     {
+      "item": "Australian businesses that want practical service support with clear next steps."
+     },
+     {
+      "item": "New or growing providers who need documentation, setup, digital systems, or operational guidance."
+     },
+     {
+      "item": "Clients who want a scoped service before paying for implementation work."
+     }
+    ],
+    "details_get": [
+     {
+      "item": "A confirmed service scope and list of required details."
+     },
+     {
+      "item": "Practical deliverables matched to the selected service."
+     },
+     {
+      "item": "Client portal visibility for payments, documents, requests, updates, and support tickets."
+     },
+     {
+      "item": "Follow-up guidance so you know what happens after delivery."
+     }
+    ],
+    "details_process": [
+     {
+      "item": "Submit an enquiry or book a consultation."
+     },
+     {
+      "item": "SOL confirms scope, required information, price, and timeline."
+     },
+     {
+      "item": "Client pays through the service payment flow when ready."
+     },
+     {
+      "item": "Delivery starts, documents are reviewed, and updates are shared through the client portal."
+     }
+    ],
+    "details_timeline": [
+     {
+      "item": "Initial response: within 1 business day."
+     },
+     {
+      "item": "Scope confirmation: usually 1-2 business days after details are received."
+     },
+     {
+      "item": "Delivery timing: depends on the selected service, document readiness, and package size."
+     }
+    ],
+    "details_faqs": [
+     {
+      "question": "Do I need to pay before speaking with SOL?",
+      "answer": "No. We recommend confirming the right service and scope before making a payment."
+     },
+     {
+      "question": "Where do I track my service?",
+      "answer": "Clients can use the client portal to view service records, documents, requests, updates, support tickets, and payment history."
+     },
+     {
+      "question": "Can SOL customise the service?",
+      "answer": "Yes. Scope, deliverables, and timing can be adjusted based on your business needs."
+     }
+    ],
+    "enquiry_heading": "Start Your AI & Machine Learning Enquiry",
+    "enquiry_text": "Share your details and the SOL team will confirm the right scope, pricing, and next step for your business.",
+    "page_sections": [
+     {
+      "acf_fc_layout": "text_image",
+      "section_id": "",
+      "eyebrow": "",
+      "background": "chalk",
+      "align": "left",
+      "heading": "Delivering High-Quality Data Solutions for Intelligent Systems",
+      "intro": "",
+      "content": "<p>At SOL Business Consultant, we specialise in AI and machine learning support services that enable businesses to achieve reliable, production-ready outcomes. From video labelling and data annotation to quality assurance and workflow management, we support AI teams across every stage of the model lifecycle.</p>\n<p>Our experienced workforce combines domain knowledge, structured processes, and rigorous quality controls to ensure precision, consistency, and scalability. Whether you are developing computer vision systems, automation pipelines, or analytics platforms, our AI solutions help you move faster with confidence.</p>",
+      "image": "img:services/ai-machine-learning.webp",
+      "image_alt": "Data annotation specialist labelling images for a machine learning model",
+      "image_position": "right",
+      "image_badge": "",
+      "stats": [],
+      "checklist": [],
+      "buttons": [],
+      "callout": {
+       "icon": "",
+       "title": "",
+       "text": ""
+      }
+     },
+     {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
+      "acf_fc_layout": "service_details",
+      "heading": ""
+     },
+     {
+      "acf_fc_layout": "cta_banner",
+      "section_id": "",
+      "style": "dark",
+      "eyebrow": "",
+      "heading": "Wishing to Build Smarter AI Solutions?",
+      "text": "Start your AI and machine learning journey with a partner you can trust. Speak with our team today to discuss your project requirements and how our AI services can support your goals.",
+      "buttons": [
+       {
+        "link": {
+         "title": "Get in Touch",
+         "url": "#intake-form",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Book a Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "list": [],
+      "image": "",
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "service_enquiry",
+      "section_id": "intake-form",
+      "form_variant": "contact"
+     }
+    ]
+   }
+  },
+  {
+   "post_type": "page",
    "path": "services/accountancy",
    "title": "Accounting Consultancy",
    "menu_order": 20,
@@ -13572,6 +14295,9 @@
   "page:services/google-adwords": "cd78cc491b684c28",
   "page:services/social-media-marketing": "46fea9398fe92793",
   "page:services/software-automation": "0f7182470e6ac511",
+  "page:services/admin-back-office-support": "b34185024aedae44",
+  "page:services/offshore-outsourcing-staff-solutions": "c133f0cda759b4e8",
+  "page:ai-machine-learning": "2082dc041d199b85",
   "page:services/accountancy": "ce186287eaee576a",
   "post:ndis-provider-registration-australia": "09f568b9d325443d",
   "post:bookkeeping-mistakes-small-business": "00a3e6f0bfd3cb55",
@@ -13613,7 +14339,7 @@
   "option:website_label": "e5b69164fcf109f5",
   "option:business_hours": "094a2010dc561f57",
   "option:nav_items": "884337fb7d7e99f4",
-  "option:mega_menu": "cdd63d1ecec03dc4",
+  "option:mega_menu": "9599ef842ba69325",
   "option:mega_promo": "bc27efeb3b848a35",
   "option:header_buttons": "ad19c15dd586ab4d",
   "option:portal_links": "e4c41918dc71cb97",
@@ -13623,7 +14349,7 @@
   "option:newsletter_enabled": "5ffe533b830f08a0",
   "option:newsletter_label": "79cdd94608dbbe77",
   "option:newsletter_note": "9f05891958daa5b8",
-  "option:footer_columns": "00786a3c1c122e79",
+  "option:footer_columns": "b559db99dd7df4f5",
   "option:footer_copyright": "905f8f74802742f0",
   "option:app_url": "015218d6fc454ec4",
   "option:payment_page_url": "b3381b66f2a05d88",
@@ -13637,6 +14363,13 @@
   "option:head_code": "dd29ecf524b030a6"
  },
  "history": {
+  "option:mega_menu": [
+   "cdd63d1ecec03dc4"
+  ],
+  "option:footer_columns": [
+   "00786a3c1c122e79",
+   "c65563ed95e44410"
+  ],
   "sol_block:pricing-tabs": [
    "74f4a589c432a1fc"
   ],
@@ -13665,9 +14398,6 @@
   ],
   "option:tagline": [
    "bdc2327304a36dd9"
-  ],
-  "option:footer_columns": [
-   "c65563ed95e44410"
   ],
   "sol_block:ndis-roadmap": [
    "32137992bedb053b"
@@ -13733,5 +14463,5 @@
    }
   ]
  },
- "build": "1a579075b3e3c1a0"
+ "build": "7671f0b16b97ed1b"
 }

@@ -65,7 +65,7 @@ function sol_stamp_option( $name, $keys ) {
 /**
  * Decide what to do with one item.
  * $applied_fp: fingerprint stored when last applied ('' = set up before fingerprints existed).
- * Returns: current | update | edited | stamp
+ * Returns: current | update | edited | stamp  (sol_updates_plan() adds: new | convert)
  */
 function sol_update_state( $key, $applied_fp, $values_unchanged ) {
 	$seed = sol_seed();
@@ -106,7 +106,12 @@ function sol_updates_plan() {
 				continue;
 			}
 			if ( ! get_post_meta( $id, '_sol_setup', true ) ) {
-				continue; // Not managed by SOL Setup (e.g. an Elementor page never converted, an existing blog post).
+				// An existing page the theme now provides (e.g. an Elementor service page): switch it to the SOL design.
+				// Existing blog posts are left alone.
+				if ( 'post' !== $item['post_type'] ) {
+					$plan[] = array( 'key' => $key, 'kind' => 'post', 'item' => $item, 'id' => $id, 'state' => 'convert', 'label' => get_the_title( $id ) );
+				}
+				continue;
 			}
 			$applied = (string) get_post_meta( $id, '_sol_fp', true );
 			$same    = $applied && get_post_meta( $id, '_sol_values_hash', true ) === sol_post_values_hash( $id, $item, $keys );
@@ -176,7 +181,7 @@ function sol_apply_theme_updates( $force = array() ) {
 		return $report;
 	}
 	if ( function_exists( 'set_time_limit' ) ) {
-		@set_time_limit( 300 ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
+		@set_time_limit( 900 ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
 	}
 	wp_raise_memory_limit( 'admin' );
 
@@ -206,6 +211,12 @@ function sol_apply_theme_updates( $force = array() ) {
 		}
 		if ( 'edited' === $state ) {
 			$report['kept'][] = $row['label'];
+			continue;
+		}
+		if ( 'convert' === $state ) {
+			$backup['items'][] = sol_backup_post( $row['id'], $row['item'], $keys, $row['key'] );
+			sol_apply_post_item( $row['id'], $row['item'], $keys, $ids, $report );
+			$report['created'][] = $row['item']['title'];
 			continue;
 		}
 		if ( 'current' === $state || 'new' === $state ) {
@@ -301,6 +312,7 @@ function sol_backup_post( $id, $item, $keys, $key ) {
 		'title'    => get_post_field( 'post_title', $id ),
 		'template' => get_post_meta( $id, '_wp_page_template', true ),
 		'fp'       => get_post_meta( $id, '_sol_fp', true ),
+		'managed'  => (bool) get_post_meta( $id, '_sol_setup', true ),
 		'value'    => $vals,
 	);
 }
@@ -325,6 +337,11 @@ function sol_undo_last_update() {
 				}
 				update_post_meta( $b['id'], '_sol_fp', $b['fp'] );
 				delete_post_meta( $b['id'], '_sol_values_hash' );
+				if ( isset( $b['managed'] ) && ! $b['managed'] ) {
+					// It was an Elementor page before: hand it back to Elementor completely.
+					delete_post_meta( $b['id'], '_sol_setup' );
+					delete_post_meta( $b['id'], '_sol_fp' );
+				}
 				break;
 			case 'created':
 				wp_trash_post( $b['id'] );

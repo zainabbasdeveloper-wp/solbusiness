@@ -30,7 +30,14 @@ export const options = {
   mega_menu: N.SERVICE_CATEGORIES.map((c) => ({
     label: c.label, badge: (c.badge || '').replace(/^⭐\s*/, ''),
     items: c.items.map((i) => ({ label: i.label, url: route(i.href), icon: ic(i.icon), desc: i.desc })),
-  })),
+  })).concat([
+    // Services that exist only on the WordPress site.
+    { label: 'Outsourcing & AI', badge: '', items: [
+      { label: 'Admin & Back-Office Support', url: '/services/admin-back-office-support/', icon: 'clipboard-list', desc: 'CRM, scheduling & data entry' },
+      { label: 'Offshore Outsourcing & Staff', url: '/services/offshore-outsourcing-staff-solutions/', icon: 'users', desc: 'Managed remote teams' },
+      { label: 'AI & Machine Learning', url: '/ai-machine-learning/', icon: 'brain-circuit', desc: 'Data labelling & annotation' },
+    ] },
+  ]),
   mega_promo: { title: 'Not sure where to start?', text: 'Take our readiness quiz and get a personalized plan.', link: L('Free Quiz', '/readiness-quiz') },
   header_buttons: [btn('Find My Plan', '/get-started', 'outline'), btn('Book Consultation', '/book-consultation')],
   portal_links: [{ label: 'Portal', url: route('/client-portal') }, { label: 'Student', url: route('/student-dashboard') }],
@@ -42,7 +49,7 @@ export const options = {
   newsletter_label: 'Monthly compliance tips',
   newsletter_note: 'By joining, you agree to receive marketing updates. You can unsubscribe at any time.',
   footer_columns: [
-    { title: 'Sol Services', links: links(F.solServices) },
+    { title: 'Sol Services', links: [...links(F.solServices), { label: 'Admin & Back-Office Support', url: '/services/admin-back-office-support/' }, { label: 'Offshore Outsourcing & Staff', url: '/services/offshore-outsourcing-staff-solutions/' }, { label: 'AI & Machine Learning', url: '/ai-machine-learning/' }] },
     { title: 'Easy Compliance', links: links(F.complianceLinks) },
     { title: 'NDIS Registration', links: links(F.ndisLinks) },
     { title: 'Company', links: links(F.companyLinks) },

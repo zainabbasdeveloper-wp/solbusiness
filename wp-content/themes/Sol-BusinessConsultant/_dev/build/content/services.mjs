@@ -249,5 +249,101 @@ const marketing = {
 };
 marketing.seo = { seo_title: 'Digital Marketing Services Australia | SOL Business Consultant', seo_description: 'SEO, paid ads, social media, email and reporting support for Australian businesses.' };
 
-export const services = [ndis, training, ...standard, website, software, marketing, accountancy]
+// Services that exist only on the WordPress site (not on the training site). Text from the live pages.
+const wpService = ({ slug, path, title, order, icon, cardText, type, eyebrow, heroHeading, intro, highlights, image, imageAlt, storyHeading, story, featuresHeading, featuresIntro, features: feats, whyHeading, whyIntro, why, ctaHeading, ctaText, callout, seo }) => ({
+  slug, path, title, menu_order: order,
+  fields: {
+    card_icon: icon, card_text: cardText, card_url: '', hide_in_grid: false, show_enquiry: true,
+    service_type: type, eyebrow, hero_heading: heroHeading, hero_intro: intro, hero_highlights: items(highlights),
+    hero_image: img(image), hero_buttons: [enquireBtn(), payBtn(type)],
+    overview_heading: featuresHeading, features: items(feats), why_heading: whyHeading, why_intro: whyIntro, why: items(why),
+    ...details(type),
+    enquiry_heading: `Start Your ${title} Enquiry`,
+    enquiry_text: 'Share your details and the SOL team will confirm the right scope, pricing, and next step for your business.',
+    page_sections: [
+      textBlock({ heading: storyHeading, content: story.map((p) => `<p>${p}</p>`).join('\n'), image: img(image), image_alt: imageAlt, image_position: 'right', callout: callout || { icon: '', title: '', text: '' } }),
+      { acf_fc_layout: 'service_overview', eyebrow: '' },
+      block('service-trust'), block('service-journey'),
+      { acf_fc_layout: 'service_details', heading: '' },
+      { acf_fc_layout: 'cta_banner', section_id: '', style: 'dark', eyebrow: '', heading: ctaHeading, text: ctaText, buttons: [btn('Get in Touch', '#intake-form'), btn('Book a Consultation', '/book-consultation', 'outline')], list: [], image: '', note: '' },
+      { acf_fc_layout: 'service_enquiry', section_id: 'intake-form', form_variant: 'contact' },
+    ],
+  },
+  seo,
+});
+
+const adminSupport = wpService({
+  slug: 'admin-back-office-support', title: 'Admin & Back-Office Support', order: 13, icon: 'clipboard-list',
+  cardText: 'Data entry, CRM upkeep, scheduling and client correspondence handled for you.',
+  type: 'admin_support', eyebrow: 'Admin & Back-Office Support', heroHeading: 'Seamless Admin &\nBack-Office [Support]',
+  intro: 'Spend your time on growth, strategy and client delivery. SOL handles CRM updates, scheduling, data entry and client correspondence in the background, working with your current systems.',
+  highlights: ['Works with your current systems', 'Affordable, scalable support', 'Staff training on admin procedures'],
+  image: 'services/admin-back-office-support.webp', imageAlt: 'Administrative support team working on back-office tasks',
+  storyHeading: 'Handling Backend Effortlessly for Efficiency at the Frontend!',
+  story: [
+    'At SOL Business Consultant, we know that you should not spend your time mired in administrative duties, but rather on growth, strategy, and client delivery. Our Seamless Admin & Back-Office Support solution can help with that.',
+    'We provide comprehensive administrative support and training that is designed to work seamlessly with your current procedures and systems. Our knowledgeable staff makes sure everything goes without a hitch in the background, whether you need assistance with CRM updates, appointment scheduling, or client interactions, so you can concentrate on what really counts.',
+    'Do not worry about the pricing when we are here. We offer affordable and easy solutions that can handle your backend jobs without pricking your pocket. Speak to our team today!',
+  ],
+  featuresHeading: 'What Do We Offer?',
+  features: ['Database administration and data entry', 'CRM upgrades and system upkeep', 'Calendar management, meeting scheduling, and follow-ups', 'Managing correspondence and emails with clients', 'Admin instruction on procedures and equipment for your staff', 'Smooth interaction with the platforms and workflows of your choice'],
+  whyHeading: 'What Makes SOL a Preferred Choice?', whyIntro: 'SOL Business Consultant brings a host of benefits when you choose us:',
+  why: ["Support that is specifically tailored to your company's activities", 'Skilled experts with training in several administrative systems', 'Scalable services that expand along with your company', 'Human touch combined with dependable and effective turnaround'],
+  ctaHeading: 'Shine At The Frontend With Our Services!',
+  ctaText: 'When we take care of your admin and back-office jobs, you get to shine at the front. Trust our experts and get in touch today for a quick consultation.',
+  seo: { seo_title: 'Admin & Back-Office Support Services | Australia', seo_description: 'Professional administrative support including data entry, CRM management, scheduling and client communications for Australian businesses' },
+});
+
+const offshore = wpService({
+  slug: 'offshore-outsourcing-staff-solutions', title: 'Offshore Outsourcing & Staff Solutions', order: 14, icon: 'users',
+  cardText: 'Qualified remote staff at a fraction of local hiring costs, fully managed by SOL.',
+  type: 'offshore_staffing', eyebrow: 'Offshore Outsourcing & Staffing', heroHeading: 'Offshore Outsourcing &\nStaff Solutions [Made Easy]',
+  intro: 'Effective, adaptable offshore staffing customised to your business. Access qualified work-from-home staff at a fraction of local recruiting costs, with pricing that depends on the role.',
+  highlights: ['Startups to large businesses', 'Hourly pricing by role', 'Dedicated account manager'],
+  image: 'services/offshore-staff-solutions.webp', imageAlt: 'Remote team members collaborating on a video call',
+  storyHeading: 'Managing Remote Teams Easily Just For You!',
+  story: [
+    "SOL Business Consultant offers effective and adaptable offshore outsourcing and staffing solutions that are customised to meet your company's requirements.",
+    "Our work-from-home staffing solutions provide access to qualified individuals at a fraction of the local recruiting cost, regardless of your company's size: startup, small, or large. Depending on the position, our hourly fee range allows you to grow your staff without going over budget.",
+    'Talk to us for seamless staff solutions.',
+  ],
+  callout: { icon: 'badge-dollar-sign', title: 'Offshore Staffing Solutions', text: 'Hourly pricing depending on role. Ask us for a quote for the positions you need.' },
+  featuresHeading: "What's Included in Our Services?",
+  features: ['End-to-end recruitment and onboarding', 'HR management and payroll handling', 'Performance monitoring and reporting', 'Fully remote, secure, and compliant infrastructure', 'Dedicated account manager support'],
+  whyHeading: 'Why Hire SOL?', whyIntro: 'Here is what makes us a preferred choice for staffing solutions:',
+  why: ['Availability of worldwide talent at affordable prices', 'Easy team management: we take care of everything', 'Scalable personnel as your company expands', 'Clear pricing with no additional expenses'],
+  ctaHeading: 'Get Started Today!',
+  ctaText: 'Look no further for easy and affordable staff. SOL Business Consultant is here to build your ideal remote team. Book a consultation with us today.',
+  seo: { seo_title: 'Offshore Outsourcing & Staff Solutions | Australia', seo_description: 'Cost-effective remote teams, offshore staff, work-from-home solutions and managed staffing for Australian businesses' },
+});
+
+const ai = wpService({
+  // Kept at its existing address (/ai-machine-learning/), outside /services/.
+  slug: 'ai-machine-learning', path: 'ai-machine-learning', title: 'AI & Machine Learning', order: 15, icon: 'brain-circuit',
+  cardText: 'Video labelling, data annotation and quality assurance for AI and machine learning teams.',
+  type: 'ai_machine_learning', eyebrow: 'AI & Machine Learning', heroHeading: 'Comprehensive AI & Machine\nLearning Services [Under One Roof]',
+  intro: 'Helping organisations build, train, and scale accurate AI and machine learning models through high-quality data and skilled human intelligence.',
+  highlights: ['Video labelling & data annotation', 'Human-in-the-loop quality control', 'Secure, compliant workflows'],
+  image: 'services/ai-machine-learning.webp', imageAlt: 'Data annotation specialist labelling images for a machine learning model',
+  storyHeading: 'Delivering High-Quality Data Solutions for Intelligent Systems',
+  story: [
+    'At SOL Business Consultant, we specialise in AI and machine learning support services that enable businesses to achieve reliable, production-ready outcomes. From video labelling and data annotation to quality assurance and workflow management, we support AI teams across every stage of the model lifecycle.',
+    'Our experienced workforce combines domain knowledge, structured processes, and rigorous quality controls to ensure precision, consistency, and scalability. Whether you are developing computer vision systems, automation pipelines, or analytics platforms, our AI solutions help you move faster with confidence.',
+  ],
+  featuresHeading: 'Our AI & Machine Learning Services Include the Following',
+  features: [
+    'Video Labelling & Annotation: frame-by-frame annotation, object tracking, activity recognition, and scenario tagging for computer vision models',
+    'Image & Data Annotation: images, structured and unstructured datasets, with a human-in-the-loop approach for clean, model-ready data',
+    'AI Quality Assurance & Validation: checks for annotation accuracy, consistency, and guideline compliance, for higher model accuracy and less rework',
+    'Machine Learning Workflow Support: dataset preparation, review cycles, feedback loops, and workflow optimisation to meet tight timelines',
+    'Enterprise AI Support Services: secure data handling, workforce scaling, and customised project management frameworks',
+  ],
+  whyHeading: 'Why Choose SOL Business Consultant for AI & Machine Learning?', whyIntro: 'We focus on delivering measurable outcomes that help organisations build dependable AI systems.',
+  why: ['Skilled workforce trained for AI and machine learning data operations', 'Structured processes focused on accuracy, scalability, and delivery speed', 'Proven experience supporting video labelling and data-driven projects', 'Human-in-the-loop approach to improve model reliability', 'Secure, compliant workflows aligned with enterprise requirements'],
+  ctaHeading: 'Wishing to Build Smarter AI Solutions?',
+  ctaText: 'Start your AI and machine learning journey with a partner you can trust. Speak with our team today to discuss your project requirements and how our AI services can support your goals.',
+  seo: { seo_title: 'AI & Machine Learning Solutions Australia | Automation', seo_description: 'AI implementation, machine learning solutions and business automation for Australian organisations seeking operational efficiency' },
+});
+
+export const services = [ndis, training, ...standard, website, software, marketing, accountancy, adminSupport, offshore, ai]
   .sort((a, b) => a.menu_order - b.menu_order);

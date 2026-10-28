@@ -20,7 +20,7 @@ The WordPress marketing site in the **SOL Training Academy** design (training.so
 |---|---|
 | Existing pages (home, about, contact, services/…, training-2, policies) | Switched to the *SOL Page Builder* / *SOL Service Page* template and filled with the training-site sections. Same URLs. |
 | Missing pages (FAQ, pricing, NDIS packages, package finder, quizzes, …) | Created. |
-| Service pages | Children of `/services/` using *SOL Service Page*. `support-coordination-training` → `ndis-support-coordination-training`, `marketing` → `social-media-marketing`. |
+| Service pages | Children of `/services/` using *SOL Service Page* (AI & Machine Learning stays at `/ai-machine-learning/`). Includes the WordPress-only services: Admin & Back-Office Support, Offshore Outsourcing & Staff Solutions, AI & Machine Learning (text from the old Elementor pages). `support-coordination-training` → `ndis-support-coordination-training`, `marketing` → `social-media-marketing`. |
 | WooCommerce | 16 hidden package products created by SKU (NDIS START/CERTIFIED/COMPLETE deposit + full, training team/individual, automation, finance, marketing). Course details (outcomes, curriculum) added to training products #3255, #495, #499. |
 | Header / footer | SOL header (mega menu) and footer on **every** page, including cart, checkout and account. Elementor theme-builder headers are switched off. |
 | Site settings | SOL Site → logo, top bar, menu, mega menu, footer columns, contact details, training-site address, service payment page. |
