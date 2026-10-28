@@ -243,6 +243,13 @@ function sol_run_setup( $opts = array() ) {
 					update_post_meta( $id, '_sol_previous_template', $prev ? $prev : 'default' );
 				}
 				update_post_meta( $id, '_wp_page_template', $item['template'] );
+				// Keep the page title in line with the training site (service cards show it).
+				if ( ! empty( $item['title'] ) && get_the_title( $id ) !== $item['title'] ) {
+					if ( ! get_post_meta( $id, '_sol_previous_title', true ) ) {
+						update_post_meta( $id, '_sol_previous_title', get_post_field( 'post_title', $id ) );
+					}
+					wp_update_post( array( 'ID' => $id, 'post_title' => $item['title'] ) );
+				}
 			}
 			foreach ( (array) ( $item['fields'] ?? array() ) as $name => $value ) {
 				update_field( isset( $keys[ $name ] ) ? $keys[ $name ] : $name, sol_setup_resolve( $value, $ids, $report ), $id );
@@ -438,6 +445,11 @@ function sol_restore_templates() {
 	$pages  = get_posts( array( 'post_type' => 'page', 'post_status' => 'any', 'numberposts' => -1, 'fields' => 'ids', 'meta_key' => '_sol_previous_template' ) ); // phpcs:ignore WordPress.DB.SlowDBQuery
 	foreach ( $pages as $id ) {
 		update_post_meta( $id, '_wp_page_template', get_post_meta( $id, '_sol_previous_template', true ) );
+		$old_title = get_post_meta( $id, '_sol_previous_title', true );
+		if ( $old_title ) {
+			wp_update_post( array( 'ID' => $id, 'post_title' => $old_title ) );
+			delete_post_meta( $id, '_sol_previous_title' );
+		}
 		delete_post_meta( $id, '_sol_previous_template' );
 		delete_post_meta( $id, '_sol_setup' );
 	}

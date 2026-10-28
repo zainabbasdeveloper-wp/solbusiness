@@ -343,13 +343,15 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | `heading` | Text area | Heading — New lines become line breaks. |
 | `intro` | Text area | Intro text |
 | `first_column_label` | Text | First column label |
-| `columns` | Repeater | Columns |
+| `columns` | Repeater | Columns — With headline features filled in, the section shows them as cards and puts the full table behind "Show all features". |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `name` | Text | Name |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `tagline` | Text | Tagline |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `badge` | Text | Badge |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `price` | Text | Price |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Button |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `highlight` | True / False | Highlight |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `highlights` | Repeater | Headline features (optional) |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `item` | Text | Item |
 | `groups` | Repeater | Row groups |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `category` | Text | Group heading (optional) |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `rows` | Repeater | Rows |
@@ -430,7 +432,7 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | Field name | Type | Label / notes |
 |---|---|---|
 | `section_id` | Text | Anchor ID |
-| `style` | Select: `dark`, `amber`, `light`, `image` | Style |
+| `style` | Select: `dark`, `amber`, `light`, `image`, `strip` | Style |
 | `eyebrow` | Text | Eyebrow |
 | `heading` | Text area | Heading |
 | `text` | Text area | Text |

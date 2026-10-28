@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { D, L, R, ext, btn, rbtn, img, ic, items, ref, app, yesNo } from './helpers.mjs';
 import { DATA, buy, buyId, WOO } from './helpers.mjs';
 import { ndisSku, SKU_BY_NAME } from './products.mjs';
+import { LIVE_TEXT } from './live-updates.mjs';
 const { NDIS_PACKAGES, NDIS_ENTITY_TYPES, NDIS_REGISTRATION_GROUPS, NDIS_OPTIONAL_MODULES } = DATA.ndisRegistrationPricing;
 
 const block = (slug) => ({ acf_fc_layout: 'reusable_block', block: ref('sol_block', slug) });
@@ -28,7 +29,7 @@ const cmpRows = (rows) => rows.map(([label, ...vals]) => ({ label, values: vals.
 const H = D.HeroSection;
 const home = {
   slug: 'home', title: 'Home', front_page: true,
-  seo: { seo_title: 'SOL Business Consultant | NDIS Registration, Compliance & Business Services', seo_description: 'Australian business and NDIS consulting with practical systems, documentation, and support to move from setup to audit-ready operations.' },
+  seo: { seo_title: LIVE_TEXT.homeSeoTitle, seo_description: LIVE_TEXT.homeSeoDescription },
   sections: [
     {
       acf_fc_layout: 'hero', style: 'split', eyebrow: '', heading: 'STRUCTURE.\nCOMPLIANCE.\n[SCALE.]',
@@ -101,7 +102,7 @@ const home = {
     }),
     grid({
       background: 'chalk', eyebrow: 'Featured Offers', heading: 'Current packages, plans, and next-step offers',
-      intro: 'Start with the most useful pathways below, or view all current plans.', card_style: 'bordered',
+      intro: LIVE_TEXT.featuredOffersIntro, card_style: 'bordered',
       cards: D.FeaturedOffersSection.fallbackOffers.map((o) => ({ icon: 'sparkles', tag: 'Start here', title: o.title, text: o.service_name, link: L('Open', o.href) })),
       buttons: [rbtn('View All Plans', '/plans', 'outline')],
     }),
@@ -115,7 +116,7 @@ const home = {
     block('marketing-packages'),
     textImage({
       background: 'ink', eyebrow: 'Service Standards', heading: 'Built for Australian Providers and Growing Businesses',
-      content: '<p>We do not publish client names, ratings, or outcome statistics unless they are verified and approved. This section now focuses on the service standards clients can expect from SOL Business Consultant.</p>',
+      content: `<p>${LIVE_TEXT.serviceStandardsIntro}</p>`,
       callout: { icon: 'message-square', title: '', text: 'Have a project in mind? Use the enquiry form and we will confirm scope, cost, and likely timing before any paid work begins.' },
     }),
     grid({ background: 'ink', columns: '4', card_style: 'dark', cards: D.TestimonialSection.STANDARDS.map((s) => ({ icon: ic(s.icon), title: s.title, text: s.desc })) }),
@@ -258,6 +259,7 @@ const ndisPackages = {
   seo: { seo_title: 'NDIS Registration Support Packages | SOL Business Consultant', seo_description: "Compare SOL's NDIS registration support packages, inclusions, payment options, and preparation information." },
   sections: [
     header('NDIS Registration Support', 'Clear Pricing. Flexible Packages.', "Choose the right level of support for your NDIS registration journey. Whether you're a small verification-only provider or a complex SIL/SDA organization, we've got a package that fits."),
+    cta({ style: 'strip', heading: LIVE_TEXT.readinessHeading, text: LIVE_TEXT.readinessNdisPackages, buttons: [btn('Take the 8-question quiz', '/readiness-quiz'), btn('Open the 15-question calculator', '/ndis-readiness-calculator', 'outline')] }),
     {
       acf_fc_layout: 'pricing', ...head({ align: 'center' }), columns: '3',
       tabs: [{ label: 'NDIS', icon: '', packages: Object.values(NDIS_PACKAGES).map((p) => ({
@@ -467,17 +469,12 @@ const terms = {
 const AS = D.AccessibilityStatement;
 const accessibility = {
   slug: 'accessibility', title: 'Accessibility Statement',
-  seo: { seo_title: 'Accessibility Statement | SOL Business Consultant', seo_description: 'Our commitment to WCAG 2.1 Level AA accessibility and how to give feedback.' },
+  seo: { seo_title: 'Accessibility Statement | SOL Business Consultant', seo_description: 'How SOL Business Consultant approaches website accessibility, WCAG 2.1 goals, known limitations and how to give feedback.' },
   sections: [
     header('Accessibility', 'Accessibility Statement', 'SOL Business Consultant is committed to ensuring digital accessibility for people with disabilities. We continuously improve the user experience for everyone and apply relevant accessibility standards.'),
-    textImage({ heading: 'Our Commitment', content: html(['We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> as published by the World Wide Web Consortium (W3C). These guidelines explain how to make web content more accessible to people with disabilities, and to all users regardless of device.', 'As a business providing services to NDIS participants, families, and carers, we recognise that accessible design is not just a legal requirement — it is fundamental to serving our community.']) }),
-    grid({ background: 'chalk', heading: 'Accessibility Features', columns: '2', card_style: 'feature', cards: [
-      { icon: 'type', title: 'Adjustable Text Size', text: "Use your browser's zoom (Ctrl/Cmd + or -) to increase text size up to 200%" },
-      { icon: 'contrast', title: 'High Contrast Support', text: 'The site supports operating system high-contrast mode settings' },
-      { icon: 'volume-2', title: 'Screen Reader Compatible', text: 'Semantic HTML and ARIA labels support screen readers such as NVDA, JAWS, and VoiceOver' },
-      { icon: 'eye', title: 'Keyboard Navigation', text: 'All interactive elements are accessible via Tab, Enter, and arrow keys' },
-    ] }),
-    { acf_fc_layout: 'comparison_table', ...head({ heading: 'WCAG 2.1 Conformance Status' }), first_column_label: 'Criterion', columns: ['Level', 'Status', 'Note'].map((name) => ({ name, tagline: '', badge: '', price: '', link: null, highlight: false })), groups: [{ category: '', rows: AS.WCAG_ITEMS.map((w) => ({ label: w.criterion, values: [w.level, w.status, w.note].join(' | ') })) }], footer_label: '', note: 'Partial = in progress. Last reviewed: June 2026.' },
+    textImage({ heading: 'Our Commitment', content: html([LIVE_TEXT.accessibilityCommitment, 'As a business providing services to NDIS participants, families, and carers, we recognise that accessible design is not just a legal requirement — it is fundamental to serving our community.']) }),
+    grid({ background: 'chalk', heading: 'Accessibility Features', columns: '2', card_style: 'feature', cards: AS.FEATURES.map((f) => ({ icon: f.icon, title: f.title, text: f.desc })) }),
+    { acf_fc_layout: 'comparison_table', ...head({ heading: 'WCAG 2.1 Accessibility Goals', intro: 'The items below describe goals and work in progress, not verified conformance or certification.' }), first_column_label: 'Criterion', columns: ['Level', 'Status', 'Goal'].map((name) => ({ name, tagline: '', badge: '', price: '', link: null, highlight: false })), groups: [{ category: '', rows: AS.WCAG_ITEMS.map((w) => ({ label: w.criterion, values: [w.level, w.status, w.note].join(' | ') })) }], footer_label: '', note: 'Partial = in progress. Last reviewed: June 2026.' },
     legal([], [
       { title: 'Known Limitations', content: ul(['Some older PDF documents may not be fully accessible. We are working to remediate these.', 'Third-party embedded content (e.g. Stripe payment pages) is outside our direct control.', 'Skip-to-content navigation links are being implemented.']) },
       { title: 'Feedback & Contact', content: html(['If you experience any barriers accessing our content, or if you require information in an alternative format, please contact us:', '<strong>Email:</strong> <a href="mailto:info@solbusinessconsultant.com.au">info@solbusinessconsultant.com.au</a><br><strong>Phone:</strong> <a href="tel:+61460003494">+61 460 003 494</a><br><strong>Post:</strong> SOL Business Consultant, Glenroy VIC 3046', 'We aim to respond to accessibility feedback within 5 business days.']) },

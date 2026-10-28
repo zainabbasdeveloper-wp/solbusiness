@@ -9,10 +9,35 @@ if ( ! $n ) {
 	return;
 }
 
+// With headline features, show them as cards and keep the full table behind "Show all features".
+$has_highlights = false;
+foreach ( $cols as $c ) {
+	if ( sol_list( sol_get( $c, 'highlights', array() ) ) ) {
+		$has_highlights = true;
+	}
+}
+
 sol_section_open( $s, 'comparison_table' );
 ?>
 <div class="sol-container">
 	<?php sol_section_head( $s ); ?>
+	<?php if ( $has_highlights ) : ?>
+		<div class="sol-grid sol-grid--<?php echo (int) min( 4, $n ); ?> sol-compare-cards">
+			<?php foreach ( $cols as $c ) : ?>
+				<article class="sol-package<?php echo ! empty( $c['highlight'] ) ? ' sol-package--highlight' : ''; ?>">
+					<?php if ( sol_get( $c, 'badge' ) ) : ?><span class="sol-package__badge"><?php echo esc_html( $c['badge'] ); ?></span><?php endif; ?>
+					<div class="sol-package__head">
+						<h3 class="sol-package__name"><?php echo esc_html( sol_get( $c, 'name' ) ); ?></h3>
+						<?php if ( sol_get( $c, 'tagline' ) ) : ?><p class="sol-package__tagline"><?php echo esc_html( $c['tagline'] ); ?></p><?php endif; ?>
+					</div>
+					<?php echo sol_checks( sol_list( sol_get( $c, 'highlights', array() ) ), 'sol-checks--sm' ); // phpcs:ignore ?>
+					<div class="sol-package__cta"><?php echo sol_button( sol_get( $c, 'link' ), ! empty( $c['highlight'] ) ? 'primary' : 'dark' ); // phpcs:ignore ?></div>
+				</article>
+			<?php endforeach; ?>
+		</div>
+		<details class="sol-compare-more">
+			<summary><?php echo sol_icon( 'chevron-down', 'sol-accordion__chev' ); // phpcs:ignore ?> Show all features</summary>
+	<?php endif; ?>
 	<div class="sol-table-wrap" tabindex="0">
 		<table class="sol-table">
 			<thead>
@@ -54,6 +79,9 @@ sol_section_open( $s, 'comparison_table' );
 			</tbody>
 		</table>
 	</div>
+	<?php if ( $has_highlights ) : ?>
+		</details>
+	<?php endif; ?>
 	<?php if ( sol_get( $s, 'note' ) ) : ?><p class="sol-note"><?php echo esc_html( $s['note'] ); ?></p><?php endif; ?>
 </div>
 </section>

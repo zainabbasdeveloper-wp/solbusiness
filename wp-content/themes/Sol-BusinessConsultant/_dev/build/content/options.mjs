@@ -1,5 +1,6 @@
 // SOL Site Settings (options page).
 import { D, L, btn, rbtn, ic, img, route, APP } from './helpers.mjs';
+import { LIVE_TEXT } from './live-updates.mjs';
 
 const N = D.Navbar;
 const F = D.Footer;
@@ -8,7 +9,7 @@ const links = (arr) => arr.map((l) => ({ label: l.label, url: route(l.href) }));
 export const options = {
   logo: img('sol-logo.jpg'),
   company_name: 'SOL Business Consultant',
-  tagline: "Australia's trusted partner for business consulting, NDIS registration, and compliance solutions.",
+  tagline: LIVE_TEXT.footerTagline,
   topbar_text: 'Australian-owned NDIS & business consulting — audit-ready systems, end-to-end support.',
   topbar_link: L('Free Readiness Quiz', '/readiness-quiz'),
 

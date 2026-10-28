@@ -1,7 +1,9 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { applyLiveUpdates } from './live-updates.mjs';
 
-export const D = JSON.parse(readFileSync(fileURLToPath(new URL('../source-data.json', import.meta.url)), 'utf8'));
+// Training-site content (source-data.json) plus changes made on the live site since the zip.
+export const D = applyLiveUpdates(JSON.parse(readFileSync(fileURLToPath(new URL('../source-data.json', import.meta.url)), 'utf8')));
 export const DATA = D._data;
 
 // The training app keeps the LMS, student dashboard and client portal after checkout.

@@ -2475,7 +2475,7 @@
                             "name": "columns",
                             "aria-label": "",
                             "type": "repeater",
-                            "instructions": "",
+                            "instructions": "With headline features filled in, the section shows them as cards and puts the full table behind \"Show all features\".",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2483,7 +2483,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "table",
+                            "layout": "block",
                             "button_label": "Add Column",
                             "min": 0,
                             "max": 0,
@@ -2589,6 +2589,47 @@
                                     "ui": 1,
                                     "default_value": 0,
                                     "parent_repeater": "field_2562e2d78d167"
+                                },
+                                {
+                                    "key": "field_3f4fe78d19dd3",
+                                    "label": "Headline features (optional)",
+                                    "name": "highlights",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "layout": "table",
+                                    "button_label": "Add Item",
+                                    "min": 0,
+                                    "max": 0,
+                                    "pagination": 0,
+                                    "rows_per_page": 20,
+                                    "parent_repeater": "field_2562e2d78d167",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_611c19a2badc2",
+                                            "label": "Item",
+                                            "name": "item",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "parent_repeater": "field_3f4fe78d19dd3"
+                                        }
+                                    ],
+                                    "collapsed": "field_611c19a2badc2"
                                 }
                             ],
                             "collapsed": "field_b57743ff2edd6"
@@ -3847,7 +3888,8 @@
                                 "dark": "Dark navy",
                                 "amber": "Amber",
                                 "light": "Light",
-                                "image": "Image with overlay"
+                                "image": "Image with overlay",
+                                "strip": "Slim amber strip"
                             },
                             "return_format": "value",
                             "allow_null": 0,

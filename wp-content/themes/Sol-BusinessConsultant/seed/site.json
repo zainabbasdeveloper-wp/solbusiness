@@ -89,7 +89,7 @@
  "options": {
   "logo": "img:sol-logo.jpg",
   "company_name": "SOL Business Consultant",
-  "tagline": "Australia's trusted partner for business consulting, NDIS registration, and compliance solutions.",
+  "tagline": "Business consulting, NDIS registration, and compliance support.",
   "topbar_text": "Australian-owned NDIS & business consulting — audit-ready systems, end-to-end support.",
   "topbar_link": {
    "title": "Free Readiness Quiz",
@@ -357,7 +357,7 @@
       "url": "/services/search-engine-optimization/"
      },
      {
-      "label": "Google Adwords",
+      "label": "Google Ads",
       "url": "/services/google-adwords/"
      },
      {
@@ -904,7 +904,10 @@
           "tagline": "",
           "features": [
            {
-            "item": "Full curriculum for up to 10 staff"
+            "item": "Full 12-module curriculum for up to 10 staff"
+           },
+           {
+            "item": "1,500+ quiz questions with answers"
            },
            {
             "item": "Video scripts & PowerPoint slide decks"
@@ -2529,7 +2532,21 @@
          "url": "/services/ndis-registration/",
          "target": ""
         },
-        "highlight": true
+        "highlight": true,
+        "highlights": [
+         {
+          "item": "Registration groups and business details"
+         },
+         {
+          "item": "Verification or certification audit pathway"
+         },
+         {
+          "item": "Branded policies, procedures, and registers"
+         },
+         {
+          "item": "Guidance for PRODA and NDIS Commission steps"
+         }
+        ]
        },
        {
         "name": "Support Coordination Training",
@@ -2541,7 +2558,21 @@
          "url": "/services/ndis-support-coordination-training/",
          "target": ""
         },
-        "highlight": false
+        "highlight": false,
+        "highlights": [
+         {
+          "item": "12 learning modules"
+         },
+         {
+          "item": "NDIS plan implementation and participant-centred practice"
+         },
+         {
+          "item": "Scenario assessments and 1,500+ quiz questions"
+         },
+         {
+          "item": "Completion certificate after passing assessments"
+         }
+        ]
        },
        {
         "name": "Software & Automation",
@@ -2553,7 +2584,21 @@
          "url": "/services/software-automation/",
          "target": ""
         },
-        "highlight": false
+        "highlight": false,
+        "highlights": [
+         {
+          "item": "Branded policy and document generation"
+         },
+         {
+          "item": "Client intake and onboarding workflows"
+         },
+         {
+          "item": "Compliance dashboards and document status"
+         },
+         {
+          "item": "Easy Compliance setup and staff training"
+         }
+        ]
        }
       ],
       "groups": [
@@ -2670,8 +2715,8 @@
    "front_page": true,
    "template": "page-templates/sol-builder.php",
    "yoast": {
-    "title": "SOL Business Consultant | NDIS Registration, Compliance & Business Services",
-    "description": "Australian business and NDIS consulting with practical systems, documentation, and support to move from setup to audit-ready operations."
+    "title": "SOL Business Consultant | NDIS Registration & Compliance Support Australia",
+    "description": "Australian-owned NDIS registration, Easy Compliance, support coordination training, bookkeeping, and business consulting support from Glenroy VIC."
    },
    "fields": {
     "page_sections": [
@@ -3150,6 +3195,26 @@
         }
        },
        {
+        "icon": "shield-check",
+        "title": "NDIS readiness quiz",
+        "text": "Answer 8 questions for a personalised NDIS readiness recommendation.",
+        "link": {
+         "title": "Open",
+         "url": "/readiness-quiz/",
+         "target": ""
+        }
+       },
+       {
+        "icon": "calculator",
+        "title": "NDIS readiness calculator",
+        "text": "Answer 15 questions across five domains for a readiness score.",
+        "link": {
+         "title": "Open",
+         "url": "/ndis-readiness-calculator/",
+         "target": ""
+        }
+       },
+       {
         "icon": "globe",
         "title": "Website launch checklist",
         "text": "Prepare content, brand assets, access, pages, forms, SEO, and launch approvals.",
@@ -3443,7 +3508,7 @@
       "background": "chalk",
       "align": "left",
       "heading": "Current packages, plans, and next-step offers",
-      "intro": "Start with the most useful pathways below, or view all current plans.",
+      "intro": "Explore current offers and choose a starting pathway for your business.",
       "source": "manual",
       "columns": "3",
       "card_style": "bordered",
@@ -3534,7 +3599,7 @@
       "align": "left",
       "heading": "Built for Australian Providers and Growing Businesses",
       "intro": "",
-      "content": "<p>We do not publish client names, ratings, or outcome statistics unless they are verified and approved. This section now focuses on the service standards clients can expect from SOL Business Consultant.</p>",
+      "content": "<p>Explore the practical service standards that guide how we work with Australian providers and businesses.</p>",
       "image": "",
       "image_alt": "",
       "image_position": "left",
@@ -4985,6 +5050,35 @@
       "text": "Choose the right level of support for your NDIS registration journey. Whether you're a small verification-only provider or a complex SIL/SDA organization, we've got a package that fits.",
       "info_cards": [],
       "buttons": []
+     },
+     {
+      "acf_fc_layout": "cta_banner",
+      "section_id": "",
+      "style": "strip",
+      "eyebrow": "",
+      "heading": "Check your NDIS readiness",
+      "text": "Use either existing readiness tool before comparing support packages.",
+      "buttons": [
+       {
+        "link": {
+         "title": "Take the 8-question quiz",
+         "url": "/readiness-quiz/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Open the 15-question calculator",
+         "url": "/ndis-readiness-calculator/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "list": [],
+      "image": "",
+      "note": ""
      },
      {
       "acf_fc_layout": "pricing",
@@ -8436,7 +8530,7 @@
    "template": "page-templates/sol-builder.php",
    "yoast": {
     "title": "Accessibility Statement | SOL Business Consultant",
-    "description": "Our commitment to WCAG 2.1 Level AA accessibility and how to give feedback."
+    "description": "How SOL Business Consultant approaches website accessibility, WCAG 2.1 goals, known limitations and how to give feedback."
    },
    "fields": {
     "page_sections": [
@@ -8456,7 +8550,7 @@
       "align": "left",
       "heading": "Our Commitment",
       "intro": "",
-      "content": "<p>We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> as published by the World Wide Web Consortium (W3C). These guidelines explain how to make web content more accessible to people with disabilities, and to all users regardless of device.</p><p>As a business providing services to NDIS participants, families, and carers, we recognise that accessible design is not just a legal requirement — it is fundamental to serving our community.</p>",
+      "content": "<p>We use the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> as a reference for ongoing accessibility improvements. This website has not been independently assessed or certified for WCAG conformance.</p><p>As a business providing services to NDIS participants, families, and carers, we recognise that accessible design is not just a legal requirement — it is fundamental to serving our community.</p>",
       "image": "",
       "image_alt": "",
       "image_position": "left",
@@ -8484,23 +8578,23 @@
       "cards": [
        {
         "icon": "type",
-        "title": "Adjustable Text Size",
-        "text": "Use your browser's zoom (Ctrl/Cmd + or -) to increase text size up to 200%"
+        "title": "Text Resizing",
+        "text": "Use your browser's zoom controls to enlarge text. Layout behavior may vary."
        },
        {
         "icon": "contrast",
-        "title": "High Contrast Support",
-        "text": "The site supports operating system high-contrast mode settings"
+        "title": "Contrast Preferences",
+        "text": "We aim to support contrast preferences; behavior can vary by browser and page."
        },
        {
         "icon": "volume-2",
-        "title": "Screen Reader Compatible",
-        "text": "Semantic HTML and ARIA labels support screen readers such as NVDA, JAWS, and VoiceOver"
+        "title": "Screen Reader Support",
+        "text": "We use semantic HTML and ARIA where appropriate and continue to improve assistive technology support."
        },
        {
         "icon": "eye",
         "title": "Keyboard Navigation",
-        "text": "All interactive elements are accessible via Tab, Enter, and arrow keys"
+        "text": "We aim to support keyboard navigation and are continuing to improve it."
        }
       ],
       "buttons": [],
@@ -8512,8 +8606,8 @@
       "eyebrow": "",
       "background": "white",
       "align": "left",
-      "heading": "WCAG 2.1 Conformance Status",
-      "intro": "",
+      "heading": "WCAG 2.1 Accessibility Goals",
+      "intro": "The items below describe goals and work in progress, not verified conformance or certification.",
       "first_column_label": "Criterion",
       "columns": [
        {
@@ -8533,7 +8627,7 @@
         "highlight": false
        },
        {
-        "name": "Note",
+        "name": "Goal",
         "tagline": "",
         "badge": "",
         "price": "",
@@ -8547,39 +8641,39 @@
         "rows": [
          {
           "label": "1.1.1 Non-text Content",
-          "values": "A | compliant | All images include descriptive alt text"
+          "values": "A | Goal | We aim to provide text alternatives for meaningful images."
          },
          {
           "label": "1.3.1 Info and Relationships",
-          "values": "A | compliant | Semantic HTML structure used throughout"
+          "values": "A | Goal | We aim to use semantic structure to communicate content relationships."
          },
          {
           "label": "1.4.3 Contrast (Minimum)",
-          "values": "AA | compliant | 4.5:1 contrast ratio maintained"
+          "values": "AA | Goal | We aim to provide sufficient contrast; this has not been independently assessed."
          },
          {
           "label": "1.4.4 Resize Text",
-          "values": "AA | compliant | Text scales up to 200% without loss of functionality"
+          "values": "AA | Goal | We aim to keep content usable when text is resized; behavior may vary."
          },
          {
           "label": "2.1.1 Keyboard",
-          "values": "A | compliant | All functionality accessible via keyboard"
+          "values": "A | Goal | We aim to support keyboard navigation and continue to improve it."
          },
          {
           "label": "2.4.1 Bypass Blocks",
-          "values": "A | partial | Skip navigation links in progress"
+          "values": "A | Partial | Skip navigation links are in progress."
          },
          {
           "label": "2.4.2 Page Titled",
-          "values": "A | compliant | All pages have descriptive titles"
+          "values": "A | Goal | We aim to provide descriptive page titles throughout the site."
          },
          {
           "label": "3.1.1 Language of Page",
-          "values": "A | compliant | HTML lang attribute set to en-AU"
+          "values": "A | Goal | The document language is set to en-AU; content accessibility is not independently assessed."
          },
          {
           "label": "4.1.2 Name, Role, Value",
-          "values": "A | compliant | Interactive elements use ARIA labels"
+          "values": "A | Goal | We aim to provide clear names, roles, and states for interactive elements."
          }
         ]
        }
@@ -8905,6 +8999,35 @@
      }
     ],
     "page_sections": [
+     {
+      "acf_fc_layout": "cta_banner",
+      "section_id": "",
+      "style": "strip",
+      "eyebrow": "",
+      "heading": "Check your NDIS readiness",
+      "text": "Choose a quick quiz or a detailed readiness score.",
+      "buttons": [
+       {
+        "link": {
+         "title": "Take the 8-question quiz",
+         "url": "/readiness-quiz/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Open the 15-question calculator",
+         "url": "/ndis-readiness-calculator/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "list": [],
+      "image": "",
+      "note": ""
+     },
      {
       "acf_fc_layout": "card_grid",
       "section_id": "",
@@ -9601,7 +9724,7 @@
    "template": "page-templates/sol-service.php",
    "yoast": {
     "title": "NDIS Support Coordination Training Australia | SOL",
-    "description": "12-module NDIS Support Coordinator training with 1,500+ quiz questions for individuals, teams and RTOs."
+    "description": "NDIS support coordination training for Australian learners and organisations, covering NDIS plans, documentation, participant-centred practice, provider networks, and compliance awareness."
    },
    "fields": {
     "card_icon": "graduation-cap",
@@ -9612,7 +9735,7 @@
     "service_type": "support_coordination_training",
     "eyebrow": "NDIS Training",
     "hero_heading": "Support Coordination\nTraining That\n[Builds Careers]",
-    "hero_intro": "Australia's most comprehensive NDIS Support Coordinator training — 12 modules, 1,500+ quiz questions, and full curriculum aligned to NDIS Practice Standards. For individuals, teams, and RTOs.",
+    "hero_intro": "Practical NDIS Support Coordinator training with 12 modules, 1,500+ quiz questions, and course content covering NDIS Practice Standards. For individuals, teams, and RTOs.",
     "hero_stats": [
      {
       "value": "12",
@@ -9627,8 +9750,8 @@
       "label": "Months Access"
      },
      {
-      "value": "100%",
-      "label": "NDIS Standards Aligned"
+      "value": "NDIS",
+      "label": "Standards-Focused Training"
      }
     ],
     "hero_image": "img:training/professional-workshop-presentation.webp",
@@ -11515,11 +11638,11 @@
   {
    "post_type": "page",
    "path": "services/google-adwords",
-   "title": "Google Adwords",
+   "title": "Google Ads Management",
    "menu_order": 9,
    "template": "page-templates/sol-service.php",
    "yoast": {
-    "title": "Google Adwords | SOL Business Consultant",
+    "title": "Google Ads Management | SOL Business Consultant",
     "description": "Reach the right audience quickly with paid advertising strategy, setup, monitoring, creative support, landing page optimisation, and campaign improvement."
    },
    "fields": {
@@ -11661,7 +11784,7 @@
       "answer": "Yes. Scope, deliverables, and timing can be adjusted based on your business needs."
      }
     ],
-    "enquiry_heading": "Start Your Google Adwords Enquiry",
+    "enquiry_heading": "Start Your Google Ads Management Enquiry",
     "enquiry_text": "Share your details and the SOL team will confirm the right scope, package, and next step for your situation.",
     "page_sections": [
      {

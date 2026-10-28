@@ -3,6 +3,7 @@ import { D, L, R, btn, rbtn, img, ic, items, ref, app } from './helpers.mjs';
 import { DATA } from './helpers.mjs';
 const { serviceCards, detailServices } = DATA.serviceCatalog;
 import { pkgCard } from './blocks.mjs';
+import { LIVE_TEXT } from './live-updates.mjs';
 
 const SP = D.ServicePagePolishSection;
 const details = (type) => {
@@ -60,6 +61,7 @@ const ndis = base('ndis-registration', {
     hero_disclaimer: 'SOL Business Consultant is not affiliated with the NDIS Quality and Safeguards Commission. Registration and audit outcomes depend on your business, scope, evidence, auditor assessment, and official decisions.',
     ...details('ndis_registration'),
     page_sections: [
+      { acf_fc_layout: 'cta_banner', section_id: '', style: 'strip', eyebrow: '', heading: LIVE_TEXT.readinessHeading, text: LIVE_TEXT.readinessNdisService, buttons: [btn('Take the 8-question quiz', '/readiness-quiz'), btn('Open the 15-question calculator', '/ndis-readiness-calculator', 'outline')], list: [], image: '', note: '' },
       grid({ eyebrow: 'Why Choose Sol', heading: 'A Practical Partner for Your NDIS Journey', align: 'center', card_style: 'plain', cards: NR.WHY.map((w) => ({ title: w.title, text: w.desc })) }),
       block('service-trust'), block('service-journey'),
       { acf_fc_layout: 'service_details', heading: '' },
@@ -90,7 +92,7 @@ const SC = D.SupportCoordinationTraining;
 const training = base('support-coordination-training', {
   fields: {
     service_type: 'support_coordination_training', eyebrow: 'NDIS Training', hero_heading: 'Support Coordination\nTraining That\n[Builds Careers]',
-    hero_intro: "Australia's most comprehensive NDIS Support Coordinator training — 12 modules, 1,500+ quiz questions, and full curriculum aligned to NDIS Practice Standards. For individuals, teams, and RTOs.",
+    hero_intro: LIVE_TEXT.scTrainingIntro,
     hero_stats: SC.OUTCOMES.map((o) => ({ value: o.stat, label: o.label })),
     hero_image: img('training/professional-workshop-presentation.webp'),
     hero_buttons: [btn('Enrol Now', '#intake-form'), payBtn('support_coordination_training'), btn('View All 12 Modules', '#modules', 'light')],
@@ -127,7 +129,7 @@ const training = base('support-coordination-training', {
       { acf_fc_layout: 'service_enquiry', section_id: 'intake-form', form_variant: 'training' },
     ],
   },
-  seo: { seo_title: 'NDIS Support Coordination Training Australia | SOL', seo_description: '12-module NDIS Support Coordinator training with 1,500+ quiz questions for individuals, teams and RTOs.' },
+  seo: { seo_title: 'NDIS Support Coordination Training Australia | SOL', seo_description: LIVE_TEXT.scTrainingSeo },
 });
 
 const WD = D.WebsiteDevelopment;

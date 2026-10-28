@@ -111,7 +111,7 @@ export const LAYOUTS = [
   layout('comparison_table', 'Comparison Table', [
     ...sectionHead(),
     text('first_column_label', 'First column label', { default_value: 'Features' }),
-    repeater('columns', 'Columns', [text('name', 'Name'), text('tagline', 'Tagline'), text('badge', 'Badge'), text('price', 'Price'), link('link', 'Button'), bool('highlight', 'Highlight')], { layout: 'table', item: 'Column' }),
+    repeater('columns', 'Columns', [text('name', 'Name'), text('tagline', 'Tagline'), text('badge', 'Badge'), text('price', 'Price'), link('link', 'Button'), bool('highlight', 'Highlight'), listOf('highlights', 'Headline features (optional)')], { item: 'Column', instructions: 'With headline features filled in, the section shows them as cards and puts the full table behind "Show all features".' }),
     repeater('groups', 'Row groups', [
       text('category', 'Group heading (optional)'),
       repeater('rows', 'Rows', [
@@ -149,7 +149,7 @@ export const LAYOUTS = [
   ]),
   layout('cta_banner', 'Call to Action Banner', [
     text('section_id', 'Anchor ID'),
-    select('style', 'Style', { dark: 'Dark navy', amber: 'Amber', light: 'Light', image: 'Image with overlay' }, { default_value: 'dark' }),
+    select('style', 'Style', { dark: 'Dark navy', amber: 'Amber', light: 'Light', image: 'Image with overlay', strip: 'Slim amber strip' }, { default_value: 'dark' }),
     text('eyebrow', 'Eyebrow'),
     textarea('heading', 'Heading', { rows: 2 }),
     textarea('text', 'Text', { rows: 3 }),

@@ -204,7 +204,7 @@ export const blocks = [
       heading: 'Choose the Right Path for Your Business',
       intro: 'Not sure where to start? Compare three common pathways side by side, then choose the service that fits your current goal.',
       first_column_label: 'Features',
-      columns: Cmp.SERVICES.map((s) => ({ name: s.name, tagline: s.tagline, badge: s.popular ? 'Most Popular' : '', price: '', link: L('Get Started', s.href), highlight: !!s.popular })),
+      columns: Cmp.SERVICES.map((s) => ({ name: s.name, tagline: s.tagline, badge: s.popular ? 'Most Popular' : '', price: '', link: L('Get Started', s.href), highlight: !!s.popular, highlights: items(s.highlights) })),
       groups: Cmp.FEATURES.map((g) => ({
         category: g.category,
         rows: g.items.map((it) => ({ label: it.label, values: Cmp.SERVICES.map((s) => yesNo(s.features[it.label])).join(' | ') })),
