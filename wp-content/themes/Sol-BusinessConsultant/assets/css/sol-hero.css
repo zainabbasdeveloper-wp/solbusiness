@@ -103,7 +103,7 @@
 @keyframes sol-sh-frame { from { clip-path: inset(100% 0 0 0 round 28px); transform: translateY(30px); } to { clip-path: inset(0 0 0 0 round 28px); } }
 @keyframes sol-sh-zoom { from { transform: scale(1.25); } }
 @keyframes sol-sh-shimmer { to { background-position: 100% 100%; } }
-@keyframes sol-sh-spin { from { opacity: 0; transform: rotate(-90deg) scale(.7); } }
+@keyframes sol-sh-spin { from { opacity: 0; transform: scale(.7); } }
 @keyframes sol-sh-card { from { opacity: 0; transform: translate(-40px, 20px) scale(.92); filter: blur(6px); } }
 @keyframes sol-sh-bob { to { transform: translateY(-10px); } }
 @keyframes sol-sh-draw { from { stroke-dashoffset: 24; } }
