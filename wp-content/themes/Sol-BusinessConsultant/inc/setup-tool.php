@@ -526,6 +526,10 @@ function sol_setup_image( $rel, &$report, $alt = '' ) {
 	}
 	wp_update_attachment_metadata( $id, wp_generate_attachment_metadata( $id, $upload['file'] ) );
 	update_post_meta( $id, '_sol_seed_image', $rel );
+	if ( ! $alt ) {
+		$seed = sol_seed();
+		$alt  = isset( $seed['image_alts'][ $rel ] ) ? (string) $seed['image_alts'][ $rel ] : '';
+	}
 	update_post_meta( $id, '_wp_attachment_image_alt', $alt ? $alt : ucwords( str_replace( '-', ' ', pathinfo( $rel, PATHINFO_FILENAME ) ) ) );
 	return $cache[ $rel ] = (int) $id;
 }

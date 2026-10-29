@@ -13,7 +13,7 @@ sol_section_open( $s, 'resource_download' );
 	<div class="sol-form-card">
 		<h3>Download a preparation checklist</h3>
 		<p class="sol-muted">Choose a resource and enter your details to request it.</p>
-		<form class="sol-form" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" data-sol-form>
+		<form class="sol-form" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" data-sol-form data-success="Thanks, your request is in. The SOL team will email your checklist and suggested next step within one business day.">
 			<?php sol_form_hidden( 'resource' ); ?>
 			<div class="sol-resource-list">
 				<?php foreach ( $resources as $i => $r ) : ?>

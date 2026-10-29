@@ -1747,8 +1747,8 @@
       "heading": "The Foundation\nof Your Growth",
       "intro": "",
       "content": "<p>SOL Business Consultant helps Australian businesses with NDIS registration, compliance preparation, bookkeeping, digital systems, websites and growth services.</p><p>With Easy Compliance in our toolkit, we help providers organise documents, prepare operational evidence and build workflows that are easy to maintain. We focus on practical systems, clear advice and honest claims.</p>",
-      "image": "img:about/trainer-student-discussion.webp",
-      "image_alt": "SOL consultant guiding a client through business planning on a laptop",
+      "image": "img:photos/about-consultant-conversation.webp",
+      "image_alt": "SOL consultant in a friendly planning conversation with a client",
       "image_position": "left",
       "image_badge": "",
       "stats": [
@@ -1831,8 +1831,8 @@
       "heading": "NDIS Compliance Made Simple",
       "intro": "Easy Compliance is a service, not just software. Our team works with you at every step, turning scattered documents into a clear audit readiness plan.",
       "content": "<h3>NDIS Audits Are Stressful. They Do Not Have to Be.</h3>",
-      "image": "img:services/compliance-document-review.webp",
-      "image_alt": "Compliance professionals reviewing NDIS documents in a modern office",
+      "image": "img:photos/compliance-document-review.webp",
+      "image_alt": "Consultant reviewing compliance documents and notes beside a laptop",
       "image_position": "right",
       "image_badge": "Document Review Workflow Active",
       "stats": [],
@@ -1981,7 +1981,7 @@
         ]
        }
       ],
-      "image": "img:services/ndis-registration-documents.webp",
+      "image": "img:photos/ndis-roadmap-support-at-home.webp",
       "buttons": [
        {
         "link": {
@@ -2824,8 +2824,8 @@
         "label": "Response target"
        }
       ],
-      "image": "img:services/business-consulting-workshop.webp",
-      "image_alt": "SOL consultants working with a client team around a laptop",
+      "image": "img:photos/home-consultants-team.webp",
+      "image_alt": "SOL consultants working through a plan with a client team around a laptop",
       "card_title": "Audit Ready",
       "card_text": "Your compliance system is set up and checked against how your business really works.",
       "disclaimer": ""
@@ -2953,7 +2953,7 @@
       "text": "From first registration to scaling up, every service you need under one roof",
       "buttons": [],
       "list": [],
-      "image": "img:services/marketing-strategy-team.webp",
+      "image": "img:photos/home-one-stop-partner.webp",
       "note": ""
      },
      {
@@ -4247,8 +4247,8 @@
         "label": "Local Contact"
        }
       ],
-      "image": "img:services/marketing-strategy-team.webp",
-      "image_alt": "SOL marketing team reviewing digital campaign plans on a laptop",
+      "image": "img:photos/marketing-packages-team.webp",
+      "image_alt": "Marketing team planning a digital campaign together",
       "card_title": "",
       "card_text": "",
       "disclaimer": ""
@@ -4794,8 +4794,8 @@
         "label": "Lifetime Access"
        }
       ],
-      "image": "img:hero/academy-training-hero.webp",
-      "image_alt": "SOL trainer delivering an NDIS support coordination workshop",
+      "image": "img:photos/training-workshop-room.webp",
+      "image_alt": "Adult learners attending a support coordination training workshop",
       "card_title": "",
       "card_text": "",
       "disclaimer": ""
@@ -8783,7 +8783,7 @@
       "item": "Specialists in Australian NDIS providers"
      }
     ],
-    "hero_image": "img:services/ndis-registration-documents.webp",
+    "hero_image": "img:photos/ndis-registration-support-worker.webp",
     "hero_buttons": [
      {
       "link": {
@@ -9624,7 +9624,7 @@
       "label": "Standards-Focused Training"
      }
     ],
-    "hero_image": "img:training/professional-workshop-presentation.webp",
+    "hero_image": "img:photos/support-coordination-training.webp",
     "hero_buttons": [
      {
       "link": {
@@ -10300,7 +10300,7 @@
       "item": "Sole trader, partnership or company advice"
      }
     ],
-    "hero_image": "img:services/business-consulting-workshop.webp",
+    "hero_image": "img:photos/company-registration-signing.webp",
     "hero_buttons": [
      {
       "link": {
@@ -10467,7 +10467,7 @@
       "item": "Reconciliations and financial reports"
      }
     ],
-    "hero_image": "img:services/accounting-consultation.webp",
+    "hero_image": "img:photos/bookkeeping-bas-desk.webp",
     "hero_buttons": [
      {
       "link": {
@@ -10640,7 +10640,7 @@
       "item": "Single Touch Payroll (STP)"
      }
     ],
-    "hero_image": "img:services/accounting-consultation.webp",
+    "hero_image": "img:photos/payroll-financial-desk.webp",
     "hero_buttons": [
      {
       "link": {
@@ -10802,7 +10802,7 @@
     "eyebrow": "Website Development",
     "hero_heading": "Websites Built to\nWin [Customers]",
     "hero_intro": "Custom website design and app development for Australian businesses that need a fast, modern and responsive online presence that turns visitors into enquiries.",
-    "hero_image": "img:blog/website-project-planning.webp",
+    "hero_image": "img:photos/website-development-wireframes.webp",
     "hero_buttons": [
      {
       "link": {
@@ -11017,7 +11017,7 @@
       "item": "Trusted broker and lender introductions"
      }
     ],
-    "hero_image": "img:services/business-consulting-workshop.webp",
+    "hero_image": "img:photos/business-loan-meeting.webp",
     "hero_buttons": [
      {
       "link": {
@@ -11187,7 +11187,7 @@
       "item": "Strategic growth planning"
      }
     ],
-    "hero_image": "img:services/accounting-consultation.webp",
+    "hero_image": "img:photos/accountancy-partnership-handshake.webp",
     "hero_buttons": [
      {
       "link": {
@@ -11360,7 +11360,7 @@
       "item": "Local SEO and monthly reports"
      }
     ],
-    "hero_image": "img:services/marketing-strategy-team.webp",
+    "hero_image": "img:photos/seo-analytics-dashboard.webp",
     "hero_buttons": [
      {
       "link": {
@@ -11536,7 +11536,7 @@
       "item": "A/B testing and clear reporting"
      }
     ],
-    "hero_image": "img:services/marketing-strategy-team.webp",
+    "hero_image": "img:photos/google-ads-campaign.webp",
     "hero_buttons": [
      {
       "link": {
@@ -11701,7 +11701,7 @@
     "eyebrow": "Marketing Services",
     "hero_heading": "Digital Marketing That Grows [Australian Businesses]",
     "hero_intro": "SEO, paid ads, social media, email marketing and reporting, built around a clear scope, Australian audiences and measurable results.",
-    "hero_image": "img:services/marketing-strategy-team.webp",
+    "hero_image": "img:photos/social-media-marketing.webp",
     "hero_buttons": [
      {
       "link": {
@@ -12102,7 +12102,7 @@
     "eyebrow": "Software & NDIS Automation",
     "hero_heading": "Automate Your\nNDIS Compliance\n[Intelligently]",
     "hero_intro": "From automated documents to live compliance dashboards, we build the systems that let you focus on participants, not paperwork.",
-    "hero_image": "img:services/automation-dashboard.webp",
+    "hero_image": "img:photos/software-automation-spreadsheet.webp",
     "hero_buttons": [
      {
       "link": {
@@ -12370,7 +12370,7 @@
       "item": "Admin process training for your staff"
      }
     ],
-    "hero_image": "img:services/admin-back-office-support.webp",
+    "hero_image": "img:photos/admin-back-office-support.webp",
     "hero_buttons": [
      {
       "link": {
@@ -12503,8 +12503,8 @@
       "heading": "We Handle the Back Office, You Lead the Front Line",
       "intro": "",
       "content": "<p>Your time is best spent on growth, strategy and serving clients, not buried in admin. SOL's admin and back-office support takes those tasks off your plate.</p>\n<p>We provide reliable administrative support and staff training designed to fit your existing processes and systems. Whether you need CRM updates, appointment scheduling or client communication handled, our experienced team keeps everything running smoothly in the background so you can focus on what matters most.</p>\n<p>Our pricing is affordable and flexible, so you get dependable back-office help without stretching your budget. Talk to our team today.</p>",
-      "image": "img:services/admin-back-office-support.webp",
-      "image_alt": "SOL admin team managing CRM records and client scheduling",
+      "image": "img:photos/admin-back-office-support.webp",
+      "image_alt": "Back-office administrator managing tasks at a desk",
       "image_position": "right",
       "image_badge": "",
       "stats": [],
@@ -12600,7 +12600,7 @@
       "item": "Dedicated account manager"
      }
     ],
-    "hero_image": "img:services/offshore-staff-solutions.webp",
+    "hero_image": "img:photos/offshore-remote-team-call.webp",
     "hero_buttons": [
      {
       "link": {
@@ -12730,8 +12730,8 @@
       "heading": "Remote Teams, Managed for You",
       "intro": "",
       "content": "<p>SOL Business Consultant provides flexible offshore outsourcing and remote staffing solutions tailored to your business needs.</p>\n<p>Whether you are a startup, a small business or a large organisation, our managed remote staffing gives you access to qualified professionals for a fraction of the cost of local recruitment. Hourly rates are set by role, so you can grow your team without blowing your budget.</p>\n<p>Talk to us about building your remote team.</p>",
-      "image": "img:services/offshore-staff-solutions.webp",
-      "image_alt": "Offshore team members collaborating on a video call",
+      "image": "img:photos/offshore-remote-team-call.webp",
+      "image_alt": "Remote team members meeting on a video call",
       "image_position": "right",
       "image_badge": "",
       "stats": [],
@@ -12827,7 +12827,7 @@
       "item": "Secure, compliant data workflows"
      }
     ],
-    "hero_image": "img:services/ai-machine-learning.webp",
+    "hero_image": "img:photos/ai-human-and-machine.webp",
     "hero_buttons": [
      {
       "link": {
@@ -12960,8 +12960,8 @@
       "heading": "High-Quality Training Data for Intelligent Systems",
       "intro": "",
       "content": "<p>SOL Business Consultant provides AI and machine learning support services that help organisations reach reliable, production-ready results. From video labelling and data annotation to quality assurance and workflow management, we support AI teams at every stage of the model lifecycle.</p>\n<p>Our experienced team combines domain knowledge, structured processes and rigorous quality control to deliver precise, consistent and scalable training data. Whether you are building computer vision systems, automation pipelines or analytics platforms, we help you move faster with confidence.</p>",
-      "image": "img:services/ai-machine-learning.webp",
-      "image_alt": "Data annotation specialist labelling images for a machine learning model",
+      "image": "img:photos/ai-human-and-machine.webp",
+      "image_alt": "Human and robotic hands reaching toward each other, representing AI",
       "image_position": "right",
       "image_badge": "",
       "stats": [],
@@ -13046,7 +13046,7 @@
     "eyebrow": "Accounting Consultancy",
     "hero_heading": "Accounting Consultancy\nfor [Australian Businesses]",
     "hero_intro": "We are consultants, not accountants. We help you understand your financial obligations, set up the right systems and connect with the right registered professionals.",
-    "hero_image": "img:services/accounting-consultation.webp",
+    "hero_image": "img:photos/accountancy-finance-review.webp",
     "hero_buttons": [
      {
       "link": {
@@ -13425,7 +13425,7 @@
       ]
      }
     ],
-    "thumbnail": "img:courses/level-1-foundation-learning.webp",
+    "thumbnail": "img:photos/course-level-1-foundations.webp",
     "enrol_link": {
      "title": "Enrol Now",
      "url": "woo:id:3255",
@@ -13632,7 +13632,7 @@
       ]
      }
     ],
-    "thumbnail": "img:courses/level-2-professional-coordination.webp",
+    "thumbnail": "img:photos/course-level-2-coordination.webp",
     "enrol_link": {
      "title": "Enrol Now",
      "url": "woo:id:495",
@@ -13827,7 +13827,7 @@
       ]
      }
     ],
-    "thumbnail": "img:courses/level-3-advanced-mentoring.webp",
+    "thumbnail": "img:photos/course-level-3-mentoring.webp",
     "enrol_link": {
      "title": "Enrol Now",
      "url": "woo:id:499",
@@ -13850,8 +13850,8 @@
    "content": "<!-- wp:paragraph -->\n<p>Becoming a registered NDIS provider means choosing the right registration groups, preparing evidence, writing compliant policies and procedures, completing worker screening, arranging insurance and getting audit-ready before you apply through the NDIS Commission portal.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>The most reliable approach is to confirm your registration pathway first. Once you know whether a verification or certification audit applies, you can build your document pack and operational registers around the supports you genuinely plan to deliver, rather than paying for paperwork you do not need.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>SOL Business Consultant helps providers organise their application evidence, close readiness gaps, assign internal responsibilities and plan practical next steps before the auditor is engaged. Start with our free NDIS readiness quiz to see where you stand.</p>\n<!-- /wp:paragraph -->",
    "date": "2025-05-01 09:00:00",
    "category": "NDIS",
-   "featured_image": "img:blog/ndis-provider-registration.webp",
-   "featured_alt": "SOL consultants reviewing NDIS provider registration documents",
+   "featured_image": "img:photos/blog-ndis-care-support.webp",
+   "featured_alt": "Care worker smiling with an NDIS participant",
    "sticky": false,
    "yoast": {
     "title": "How to Become a Registered NDIS Provider in Australia",
@@ -13873,8 +13873,8 @@
    "content": "<!-- wp:paragraph -->\n<p>Many small businesses fall behind because receipts, bank feeds, payroll records and GST coding are only dealt with when the BAS is due. By then, missing documents and miscoded transactions are harder and more expensive to fix.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Reconciling every month, using clear account categories and saving source documents as you go makes tax time far less stressful, and means management decisions are based on real, up-to-date numbers.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>A steady bookkeeping routine in Xero, MYOB or QuickBooks also helps you spot late-paying customers, cash flow pressure and missing records before they turn into costly problems.</p>\n<!-- /wp:paragraph -->",
    "date": "2025-04-01 09:00:00",
    "category": "Accounting",
-   "featured_image": "img:blog/bookkeeping-business-records.webp",
-   "featured_alt": "Laptop and financial documents prepared for small business bookkeeping",
+   "featured_image": "img:photos/blog-bookkeeping-review.webp",
+   "featured_alt": "Small business owner reviewing bookkeeping records",
    "sticky": false,
    "yoast": {
     "title": "5 Costly Bookkeeping Mistakes Small Businesses Make",
@@ -13896,8 +13896,8 @@
    "content": "<!-- wp:paragraph -->\n<p>NDIS Support Coordination helps participants understand and use their NDIS plan, connect with the right providers and build the capacity to manage their own supports over time.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Effective support coordinators combine strong documentation, conflict-of-interest awareness, respect for participant choice and control, clear communication and practical knowledge of how the NDIS works day to day.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>SOL's support coordination training is non-accredited professional development, designed to build practical skills and workplace confidence for people entering or growing in the role.</p>\n<!-- /wp:paragraph -->",
    "date": "2025-03-01 09:00:00",
    "category": "Training",
-   "featured_image": "img:blog/support-coordination-training.webp",
-   "featured_alt": "Trainer presenting a support coordination workshop to adult learners",
+   "featured_image": "img:photos/blog-support-coordination-workshop.webp",
+   "featured_alt": "Team planning support coordination tasks with sticky notes",
    "sticky": false,
    "yoast": {
     "title": "What Is NDIS Support Coordination? A Complete Guide",
@@ -13919,8 +13919,8 @@
    "content": "<!-- wp:paragraph -->\n<p>A strong NDIS provider website makes your services, contact details, complaints process, privacy information and participant resources easy to find on any device.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Clear service pages and accessible design help participants, nominees, support coordinators and referrers understand what you offer quickly, which builds trust and drives more enquiries.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>The best provider websites also support daily operations, with online forms, intake flows, secure document collection and enquiry tracking built in.</p>\n<!-- /wp:paragraph -->",
    "date": "2025-02-01 09:00:00",
    "category": "Web Development",
-   "featured_image": "img:blog/website-project-planning.webp",
-   "featured_alt": "Team planning a website for an NDIS provider",
+   "featured_image": "img:photos/blog-website-development.webp",
+   "featured_alt": "Website code and design files open on a laptop",
    "sticky": false,
    "yoast": {
     "title": "Website Design for NDIS Providers: What Your Site Needs | SOL",
@@ -13942,8 +13942,8 @@
    "content": "<!-- wp:paragraph -->\n<p>Automation works best when it removes repetitive follow-up while keeping the provider firmly in control. For NDIS and service businesses, that usually means intake forms, document requests, expiry reminders, client updates and clear task visibility.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>The aim is not to replace your team's judgement. It is to make important steps harder to miss: who submitted a document, what still needs review, which service is in progress and what the client needs next.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>SOL builds practical workflows around each provider's service model, team capacity and compliance requirements, so the system supports daily operations instead of adding another admin burden.</p>\n<!-- /wp:paragraph -->",
    "date": "2026-01-01 09:00:00",
    "category": "Automation",
-   "featured_image": "img:blog/automation-dashboard.webp",
-   "featured_alt": "Business automation dashboard on a laptop screen",
+   "featured_image": "img:photos/blog-automation-analytics.webp",
+   "featured_alt": "Business automation reports open on a laptop",
    "sticky": true,
    "yoast": {
     "title": "NDIS Business Automation: Workflows That Cut Admin Time | SOL",
@@ -14014,8 +14014,8 @@
    "content": "<!-- wp:paragraph -->\n<p>A professional client portal is much more than a login screen. It is a delivery workspace where clients see their paid services, submit information, upload documents, raise requests and track progress.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>For businesses that offer both services and training, the portal should keep service work separate from student learning. That separation avoids confusion between business clients, NDIS registration clients and training learners.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>The most valuable use cases cut repetitive email follow-up while giving your team a clear record of client activity.</p>\n<!-- /wp:paragraph -->",
    "date": "2026-02-01 09:00:00",
    "category": "Use Cases",
-   "featured_image": "img:services/automation-dashboard.webp",
-   "featured_alt": "Client portal dashboard showing a service delivery workflow",
+   "featured_image": "img:photos/blog-client-portal.webp",
+   "featured_alt": "Laptop and phone on a desk, used to access a client portal",
    "sticky": false,
    "yoast": {
     "title": "Client Portal Use Cases for Service Businesses | SOL",
@@ -14063,8 +14063,8 @@
    "content": "<!-- wp:paragraph -->\n<p>Accurate BAS lodgement depends on correct GST, PAYG withholding and business records across the whole reporting period.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Keeping invoices, receipts, payroll records, bank reconciliations and GST coding organised throughout the quarter reduces errors, late lodgement and the risk of ATO penalties.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Reviewing your numbers regularly also helps you understand what you will owe before cash flow gets tight.</p>\n<!-- /wp:paragraph -->",
    "date": "2024-12-01 09:00:00",
    "category": "Accounting",
-   "featured_image": "img:blog/bas-lodgement-records.webp",
-   "featured_alt": "Business documents prepared for BAS lodgement and accounting review",
+   "featured_image": "img:photos/blog-bas-lodgement.webp",
+   "featured_alt": "Business owner preparing a BAS lodgement with a calculator",
    "sticky": false,
    "yoast": {
     "title": "BAS Lodgement Explained for Australian Businesses",
@@ -14079,20 +14079,55 @@
    }
   }
  ],
+ "image_alts": {
+  "photos/home-consultants-team.webp": "SOL consultants working through a plan with a client team around a laptop",
+  "photos/home-one-stop-partner.webp": "Client and consultant shaking hands after agreeing a business plan",
+  "photos/about-consultant-conversation.webp": "SOL consultant in a friendly planning conversation with a client",
+  "photos/compliance-document-review.webp": "Consultant reviewing compliance documents and notes beside a laptop",
+  "photos/ndis-roadmap-support-at-home.webp": "Support worker helping an NDIS participant at home",
+  "photos/ndis-registration-support-worker.webp": "Support worker assisting an NDIS participant with an exercise session",
+  "photos/marketing-packages-team.webp": "Marketing team planning a digital campaign together",
+  "photos/training-workshop-room.webp": "Adult learners attending a support coordination training workshop",
+  "photos/support-coordination-training.webp": "Trainer presenting support coordination concepts to a group of learners",
+  "photos/company-registration-signing.webp": "Business owner signing company registration documents",
+  "photos/bookkeeping-bas-desk.webp": "Bookkeeper reconciling accounts with a calculator and notebook",
+  "photos/payroll-financial-desk.webp": "Payroll reports and financial charts on an office desk",
+  "photos/website-development-wireframes.webp": "Designer sketching website wireframes beside a laptop",
+  "photos/business-loan-meeting.webp": "Advisor discussing a business loan application with a client",
+  "photos/accountancy-partnership-handshake.webp": "Accounting partners shaking hands to confirm a partnership",
+  "photos/seo-analytics-dashboard.webp": "Website analytics dashboard showing search traffic trends",
+  "photos/google-ads-campaign.webp": "Marketer managing a Google Ads campaign on a laptop and phone",
+  "photos/social-media-marketing.webp": "Social media content being reviewed on a smartphone",
+  "photos/software-automation-spreadsheet.webp": "Automated business data and spreadsheets on a laptop",
+  "photos/admin-back-office-support.webp": "Back-office administrator managing tasks at a desk",
+  "photos/offshore-remote-team-call.webp": "Remote team members meeting on a video call",
+  "photos/ai-human-and-machine.webp": "Human and robotic hands reaching toward each other, representing AI",
+  "photos/accountancy-finance-review.webp": "Accountant reviewing financial statements with a calculator",
+  "photos/course-level-1-foundations.webp": "Learner starting an online support coordination course on a laptop",
+  "photos/course-level-2-coordination.webp": "Support coordinator working through course modules on a laptop",
+  "photos/course-level-3-mentoring.webp": "Mentor guiding a support coordinator through a case on a laptop",
+  "photos/blog-ndis-care-support.webp": "Care worker smiling with an NDIS participant",
+  "photos/blog-bookkeeping-review.webp": "Small business owner reviewing bookkeeping records",
+  "photos/blog-support-coordination-workshop.webp": "Team planning support coordination tasks with sticky notes",
+  "photos/blog-website-development.webp": "Website code and design files open on a laptop",
+  "photos/blog-automation-analytics.webp": "Business automation reports open on a laptop",
+  "photos/blog-client-portal.webp": "Laptop and phone on a desk, used to access a client portal",
+  "photos/blog-bas-lodgement.webp": "Business owner preparing a BAS lodgement with a calculator"
+ },
  "fingerprints": {
   "sol_block:pricing-tabs": "3460e5a7863ce268",
   "sol_block:consulting-packages": "fb20ff919b519ba8",
   "sol_block:marketing-packages": "1290a2446c0f4f0e",
-  "sol_block:about-sol": "b78c43a57d086264",
-  "sol_block:compliance": "df260bb9a3f79bb8",
-  "sol_block:ndis-roadmap": "a8de7a79d5492d12",
+  "sol_block:about-sol": "3947846ca776bcc2",
+  "sol_block:compliance": "1dabb230f12cd0d4",
+  "sol_block:ndis-roadmap": "55d2c5ce009a828a",
   "sol_block:service-trust": "42b5087ca2e8c75a",
   "sol_block:service-journey": "db42bbf2a50fe9e3",
   "sol_block:general-faq": "60559749527dd765",
   "sol_block:training-faq": "ed6ea5866639c433",
   "sol_block:contact": "3841f3f7c0d55a0b",
   "sol_block:service-comparison": "a8bc97567e04f3df",
-  "page:home": "a06d273feb4c546e",
+  "page:home": "2238b34ac329e855",
   "page:about": "de892520adefe479",
   "page:contact": "f65fd873425acef2",
   "page:faq": "fdbbfdf1f8f6f0cb",
@@ -14100,8 +14135,8 @@
   "page:blog": "496b26bae9032947",
   "page:case-studies": "29715d711c49907f",
   "page:use-cases": "05964b2488471f14",
-  "page:marketing-packages": "bd8c4af89e8ba89e",
-  "page:training-2": "149b510c5702322a",
+  "page:marketing-packages": "0553a9b1e3c6e42c",
+  "page:training-2": "0bf364b916c87b1a",
   "page:ndis-packages": "faf58b21ac1e4f6a",
   "page:get-started": "983fec375a6cb221",
   "page:book-consultation": "d551cb3d24150644",
@@ -14117,29 +14152,29 @@
   "page:accessibility": "871e09d07242ced2",
   "page:complaints-feedback": "ac70fc3da012b748",
   "page:services": "ca2bd81e6938bbf8",
-  "page:services/ndis-registration": "346bf0262b2aa130",
-  "page:services/ndis-support-coordination-training": "bd632f420ec690c4",
-  "page:services/company-business-registration": "e53b911fa40ddb22",
-  "page:services/bookkeeping-bas-lodgement": "2ead2c4cc3cd42a3",
-  "page:services/payroll-services": "3ea6d227353d278e",
-  "page:services/website-development": "f4a1b505e8783265",
-  "page:services/business-personal-loan-support": "6bd15b8e8c0ee582",
-  "page:services/accountancy-partnerships": "e455a40303005b4a",
-  "page:services/search-engine-optimization": "5436e57112417d96",
-  "page:services/google-adwords": "a4c0281838a2da01",
-  "page:services/social-media-marketing": "8cd9fcff2a7820ca",
-  "page:services/software-automation": "a0da67a4ea95196f",
-  "page:services/admin-back-office-support": "1c3b8342e4a2d795",
-  "page:services/offshore-outsourcing-staff-solutions": "616aee131b8a13e5",
-  "page:ai-machine-learning": "6c357e2f574e54f3",
-  "page:services/accountancy": "06c94d2d17b4aff6",
-  "post:ndis-provider-registration-australia": "ae1ec89a0d4c17ff",
-  "post:bookkeeping-mistakes-small-business": "9f74224f209fd779",
-  "post:what-is-support-coordination": "632cfc6ee552ff92",
-  "post:website-development-ndis-providers": "a4d13aea32d267c9",
-  "post:automation-transform-ndis-business": "92932e1c5ad1617b",
-  "post:client-portal-use-cases-service-businesses": "defe52a330c45b47",
-  "post:bas-lodgement-australian-businesses": "a568e9fce4ad1a37",
+  "page:services/ndis-registration": "0ab867569a0605f7",
+  "page:services/ndis-support-coordination-training": "48689f3db7d4da70",
+  "page:services/company-business-registration": "8582bd7d0e135bba",
+  "page:services/bookkeeping-bas-lodgement": "73e9d3eea3ac324e",
+  "page:services/payroll-services": "2edbeaafc01539d5",
+  "page:services/website-development": "e0f1aa0caa683ace",
+  "page:services/business-personal-loan-support": "b65e22cdc61fd1e6",
+  "page:services/accountancy-partnerships": "ff83cadcff2bcd8d",
+  "page:services/search-engine-optimization": "2ce973f9646ccb15",
+  "page:services/google-adwords": "10c0868dfbe50fcc",
+  "page:services/social-media-marketing": "72cd5ea72ec57446",
+  "page:services/software-automation": "8b083ff45807685b",
+  "page:services/admin-back-office-support": "25ab7fed9833ddf9",
+  "page:services/offshore-outsourcing-staff-solutions": "97760eb09ceccd9b",
+  "page:ai-machine-learning": "1a7622bd99d30526",
+  "page:services/accountancy": "1775eea30c417b76",
+  "post:ndis-provider-registration-australia": "54ff0e0be4956b6a",
+  "post:bookkeeping-mistakes-small-business": "10f8fc70ee44c6b7",
+  "post:what-is-support-coordination": "195b30419f433912",
+  "post:website-development-ndis-providers": "6c3f3fb7a16aedae",
+  "post:automation-transform-ndis-business": "0f4560e98ac801d5",
+  "post:client-portal-use-cases-service-businesses": "50b9fe58b1703767",
+  "post:bas-lodgement-australian-businesses": "710c86792d4d4d67",
   "product:SOL-NDIS-START-DEPOSIT": "d3e1be843968b416",
   "product:SOL-NDIS-START-FULL": "4c882e11430ff3ed",
   "product:SOL-NDIS-CERTIFIED-DEPOSIT": "30862c21225d4f3a",
@@ -14156,9 +14191,9 @@
   "product:SOL-MKT-STARTER": "447f0120631e9b9d",
   "product:SOL-MKT-GROWTH": "4bdc5c9007ece834",
   "product:SOL-MKT-ENTERPRISE": "8662eed634ec2231",
-  "course:3255": "50d51d3b3152e401",
-  "course:495": "525b38cebc0c2bbb",
-  "course:499": "13f420bc75fa007d",
+  "course:3255": "34f91b35de92a235",
+  "course:495": "406bff3505d51e3c",
+  "course:499": "f53c22beb68cfb09",
   "option:logo": "5122052e9845dfcd",
   "option:company_name": "c65cfe9a85a090fa",
   "option:tagline": "22045c911a1a8c13",
@@ -14197,16 +14232,157 @@
   "option:head_code": "dd29ecf524b030a6"
  },
  "history": {
-  "option:mega_promo": [
-   "059eacbf67bab373",
-   "bc27efeb3b848a35"
+  "sol_block:about-sol": [
+   "b78c43a57d086264",
+   "3fbd72bed978eb35"
+  ],
+  "sol_block:compliance": [
+   "df260bb9a3f79bb8",
+   "5dc4454f9f8750d5"
+  ],
+  "sol_block:ndis-roadmap": [
+   "a8de7a79d5492d12",
+   "6eef4f3e4679b146",
+   "32137992bedb053b"
   ],
   "page:home": [
+   "a06d273feb4c546e",
    "1ca688081199e90a",
    "11c8fdbf0fe45b61",
    "eea177346d8ff45b",
    "806e6bbf05a6bb85",
    "1199fbf5a0344c12"
+  ],
+  "page:marketing-packages": [
+   "bd8c4af89e8ba89e",
+   "151df300aaa2410b"
+  ],
+  "page:training-2": [
+   "149b510c5702322a",
+   "d9b571a3be95060d"
+  ],
+  "page:services/ndis-registration": [
+   "346bf0262b2aa130",
+   "f583c414262fdadd",
+   "ec6ab13fde3d07e8"
+  ],
+  "page:services/ndis-support-coordination-training": [
+   "bd632f420ec690c4",
+   "4331006dd9ac0982",
+   "fea3d25c24c9ec72",
+   "c0701a939035f13f"
+  ],
+  "page:services/company-business-registration": [
+   "e53b911fa40ddb22",
+   "73b380054bef3553",
+   "9a27c22564e357d9"
+  ],
+  "page:services/bookkeeping-bas-lodgement": [
+   "2ead2c4cc3cd42a3",
+   "7ee3d9b20f92534a",
+   "3cb647091465e925"
+  ],
+  "page:services/payroll-services": [
+   "3ea6d227353d278e",
+   "b8399440e49c59cd"
+  ],
+  "page:services/website-development": [
+   "f4a1b505e8783265",
+   "77a1d3f35649ed47"
+  ],
+  "page:services/business-personal-loan-support": [
+   "6bd15b8e8c0ee582",
+   "5585d429e4a8cd7c",
+   "89873b358d6e92ce"
+  ],
+  "page:services/accountancy-partnerships": [
+   "e455a40303005b4a",
+   "defa7c91ccb6da05"
+  ],
+  "page:services/search-engine-optimization": [
+   "5436e57112417d96",
+   "a7e1d549789c34a3"
+  ],
+  "page:services/google-adwords": [
+   "a4c0281838a2da01",
+   "cd78cc491b684c28",
+   "61f18e087557702f"
+  ],
+  "page:services/social-media-marketing": [
+   "8cd9fcff2a7820ca",
+   "46fea9398fe92793"
+  ],
+  "page:services/software-automation": [
+   "a0da67a4ea95196f",
+   "0f7182470e6ac511",
+   "1b24431ed9844130"
+  ],
+  "page:services/admin-back-office-support": [
+   "1c3b8342e4a2d795",
+   "b34185024aedae44"
+  ],
+  "page:services/offshore-outsourcing-staff-solutions": [
+   "616aee131b8a13e5",
+   "c133f0cda759b4e8"
+  ],
+  "page:ai-machine-learning": [
+   "6c357e2f574e54f3",
+   "2082dc041d199b85"
+  ],
+  "page:services/accountancy": [
+   "06c94d2d17b4aff6",
+   "ce186287eaee576a"
+  ],
+  "post:ndis-provider-registration-australia": [
+   "ae1ec89a0d4c17ff",
+   "09f568b9d325443d",
+   "f0b31e5dab626ac4"
+  ],
+  "post:bookkeeping-mistakes-small-business": [
+   "9f74224f209fd779",
+   "00a3e6f0bfd3cb55",
+   "2dbeb629ef64296d"
+  ],
+  "post:what-is-support-coordination": [
+   "632cfc6ee552ff92",
+   "f155c03799817af1",
+   "49e2b98d0a84d86c"
+  ],
+  "post:website-development-ndis-providers": [
+   "a4d13aea32d267c9",
+   "a04192845486608b",
+   "57ccc556f01c623c"
+  ],
+  "post:automation-transform-ndis-business": [
+   "92932e1c5ad1617b",
+   "b745bcffc8bbfe43",
+   "a284e0176d42abde"
+  ],
+  "post:client-portal-use-cases-service-businesses": [
+   "defe52a330c45b47",
+   "f1573288f8d14954",
+   "ab753e1a0a718d70"
+  ],
+  "post:bas-lodgement-australian-businesses": [
+   "a568e9fce4ad1a37",
+   "19f9b682a003b692",
+   "bdc6eb52fbd1b3f4"
+  ],
+  "course:3255": [
+   "50d51d3b3152e401",
+   "81297261a501836e"
+  ],
+  "course:495": [
+   "525b38cebc0c2bbb",
+   "1d9b97b40389f2a0"
+  ],
+  "course:499": [
+   "13f420bc75fa007d",
+   "8c876b323c3e4823"
+  ],
+  "option:mega_promo": [
+   "059eacbf67bab373",
+   "bc27efeb3b848a35"
   ],
   "option:mega_menu": [
    "9599ef842ba69325",
@@ -14221,16 +14397,6 @@
   ],
   "sol_block:marketing-packages": [
    "9130dee6468a2a2e"
-  ],
-  "sol_block:about-sol": [
-   "3fbd72bed978eb35"
-  ],
-  "sol_block:compliance": [
-   "5dc4454f9f8750d5"
-  ],
-  "sol_block:ndis-roadmap": [
-   "6eef4f3e4679b146",
-   "32137992bedb053b"
   ],
   "sol_block:service-trust": [
    "0d5334ee42b53946"
@@ -14273,12 +14439,6 @@
   "page:use-cases": [
    "5c59b59de6f97354"
   ],
-  "page:marketing-packages": [
-   "151df300aaa2410b"
-  ],
-  "page:training-2": [
-   "d9b571a3be95060d"
-  ],
   "page:ndis-packages": [
    "e7d00842f5a3eec5",
    "037b60eca990f213"
@@ -14317,83 +14477,6 @@
   ],
   "page:services": [
    "e52be39fa396a44c"
-  ],
-  "page:services/ndis-registration": [
-   "f583c414262fdadd",
-   "ec6ab13fde3d07e8"
-  ],
-  "page:services/ndis-support-coordination-training": [
-   "4331006dd9ac0982",
-   "fea3d25c24c9ec72",
-   "c0701a939035f13f"
-  ],
-  "page:services/company-business-registration": [
-   "73b380054bef3553",
-   "9a27c22564e357d9"
-  ],
-  "page:services/bookkeeping-bas-lodgement": [
-   "7ee3d9b20f92534a",
-   "3cb647091465e925"
-  ],
-  "page:services/payroll-services": [
-   "b8399440e49c59cd"
-  ],
-  "page:services/website-development": [
-   "77a1d3f35649ed47"
-  ],
-  "page:services/business-personal-loan-support": [
-   "5585d429e4a8cd7c",
-   "89873b358d6e92ce"
-  ],
-  "page:services/accountancy-partnerships": [
-   "defa7c91ccb6da05"
-  ],
-  "page:services/search-engine-optimization": [
-   "a7e1d549789c34a3"
-  ],
-  "page:services/google-adwords": [
-   "cd78cc491b684c28",
-   "61f18e087557702f"
-  ],
-  "page:services/social-media-marketing": [
-   "46fea9398fe92793"
-  ],
-  "page:services/software-automation": [
-   "0f7182470e6ac511",
-   "1b24431ed9844130"
-  ],
-  "page:services/admin-back-office-support": [
-   "b34185024aedae44"
-  ],
-  "page:services/offshore-outsourcing-staff-solutions": [
-   "c133f0cda759b4e8"
-  ],
-  "page:ai-machine-learning": [
-   "2082dc041d199b85"
-  ],
-  "page:services/accountancy": [
-   "ce186287eaee576a"
-  ],
-  "post:ndis-provider-registration-australia": [
-   "09f568b9d325443d"
-  ],
-  "post:bookkeeping-mistakes-small-business": [
-   "00a3e6f0bfd3cb55"
-  ],
-  "post:what-is-support-coordination": [
-   "f155c03799817af1"
-  ],
-  "post:website-development-ndis-providers": [
-   "a04192845486608b"
-  ],
-  "post:automation-transform-ndis-business": [
-   "b745bcffc8bbfe43"
-  ],
-  "post:client-portal-use-cases-service-businesses": [
-   "f1573288f8d14954"
-  ],
-  "post:bas-lodgement-australian-businesses": [
-   "19f9b682a003b692"
   ],
   "product:SOL-NDIS-START-DEPOSIT": [
    "6bc76132d220ed62"
@@ -14442,15 +14525,6 @@
   ],
   "product:SOL-MKT-ENTERPRISE": [
    "c2c243861903febb"
-  ],
-  "course:3255": [
-   "81297261a501836e"
-  ],
-  "course:495": [
-   "1d9b97b40389f2a0"
-  ],
-  "course:499": [
-   "8c876b323c3e4823"
   ],
   "option:tagline": [
    "9a74837a71a5076b",
@@ -15486,5 +15560,5 @@
    }
   ]
  },
- "build": "5d93021895859c13"
+ "build": "25ac47cf092be02e"
 }

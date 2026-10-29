@@ -17,6 +17,7 @@ import { courses, posts } from './content/collections.mjs';
 import { pages } from './content/pages.mjs';
 import { products } from './content/products.mjs';
 import { applyCopy, mapSeedText, loadCopy } from './copy.mjs';
+import { applyPhotos, PHOTO_ALT } from './content/photos.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const THEME = join(HERE, '..', '..');
@@ -63,7 +64,7 @@ function checkValue(field, value, where) {
       break;
     case 'image':
       if (typeof value !== 'string' || !value.startsWith('img:')) errors.push(`${where}: image "${field.name}" should be img:path`);
-      else if (!existsSync(join(THEME, 'assets', 'images', value.slice(4)))) errors.push(`${where}: missing image ${value}`);
+      // The file itself is checked after the photo swap below.
       break;
     case 'relationship':
     case 'post_object':
@@ -150,6 +151,21 @@ let seed = routeUrls({
   console.log(`    SEO copy: ${res.applied} texts rewritten, ${todo.length} still original (_dev/COPY-TODO.json)${res.unused.length ? `, ${res.unused.length} unused entries` : ''}`);
 }
 
+/* ---------- photos (content/photos.mjs) ---------- */
+console.log(`    Photos: ${applyPhotos(seed)} items use the new photography`);
+{
+  const missing = new Set();
+  const scan = (v) => {
+    if (typeof v === 'string') { if (v.startsWith('img:') && !existsSync(join(THEME, 'assets', 'images', v.slice(4)))) missing.add(v); }
+    else if (Array.isArray(v)) v.forEach(scan);
+    else if (v && typeof v === 'object') Object.values(v).forEach(scan);
+  };
+  scan(seed);
+  if (missing.size) { console.error('Missing images: ' + [...missing].join(', ')); process.exit(1); }
+}
+// Alt text WordPress gives each photo when it is added to the Media Library.
+seed.image_alts = Object.fromEntries(Object.entries(PHOTO_ALT).map(([k, v]) => [`photos/${k}.webp`, v]));
+
 /* ---------- fingerprints: let WordPress apply only what changed after a git pull ---------- */
 // One hash per item (page, reusable section, post, product, course, site setting). WordPress stores the
 // hash it last applied; a different hash in a new theme version means that item needs updating.
@@ -159,7 +175,7 @@ const sha = (v) => createHash('sha1').update(JSON.stringify(v)).digest('hex').sl
 function fingerprints(s) {
   const fp = {};
   for (const g of ['blocks', 'pages', 'services', 'posts']) {
-    for (const it of s[g] || []) fp[`${it.post_type}:${it.path}`] = sha({ title: it.title, template: it.template || '', fields: it.fields, content: it.content || '' });
+    for (const it of s[g] || []) fp[`${it.post_type}:${it.path}`] = sha({ title: it.title, template: it.template || '', fields: it.fields, content: it.content || '', ...(it.featured_image ? { image: it.featured_image } : {}) });
   }
   for (const p of s.products || []) fp[`product:${p.sku}`] = sha(p);
   for (const c of s.courses || []) fp[`course:${c.product_id}`] = sha(c.fields);

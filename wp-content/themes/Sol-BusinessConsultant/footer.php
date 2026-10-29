@@ -40,7 +40,7 @@ $copy     = str_replace( '{year}', gmdate( 'Y' ), sol_opt( 'footer_copyright', '
 			?>
 			<p><?php echo esc_html( sol_opt( 'tagline' ) ); ?></p>
 			<?php if ( sol_opt( 'newsletter_enabled', false ) ) : ?>
-				<form class="sol-form sol-newsletter" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" data-sol-form>
+				<form class="sol-form sol-newsletter" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" data-sol-form data-success="You're subscribed. Look out for practical NDIS and business updates from SOL in your inbox.">
 					<?php sol_form_hidden( 'newsletter' ); ?>
 					<label for="sol-news-email"><?php echo esc_html( sol_opt( 'newsletter_label', 'Newsletter' ) ); ?></label>
 					<div class="sol-newsletter__row">
