@@ -580,7 +580,7 @@
 	function cardGlow() {
 		if (!window.matchMedia || !matchMedia('(hover: hover)').matches) { return; }
 		document.addEventListener('pointermove', function (e) {
-			var card = e.target.closest && e.target.closest('.sol-card--bordered, .sol-card--numbered, .sol-card--tagged, .sol-card--feature');
+			var card = e.target.closest && e.target.closest('.sol-card--bordered, .sol-card--numbered, .sol-card--tagged, .sol-card--feature, .sol-steps--cards .sol-step, .sol-steps--numbered .sol-step');
 			if (!card) { return; }
 			var r = card.getBoundingClientRect();
 			card.style.setProperty('--mx', (e.clientX - r.left) + 'px');

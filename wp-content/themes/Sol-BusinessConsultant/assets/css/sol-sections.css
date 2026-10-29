@@ -195,3 +195,36 @@
 .sol-bg-chalk .sol-card--plain { background: rgba(255, 255, 255, .55); }
 .sol-bg-chalk .sol-card--plain:hover { background: #fff; }
 @media (max-width: 639px) { .sol-card--plain { padding: 24px 20px; } }
+
+/* ---------- Step cards: same hover family as the service cards ---------- */
+.sol-steps--cards .sol-step,
+.sol-steps--numbered .sol-step-group:not(.sol-step-group--boxed) .sol-step {
+	position: relative; isolation: isolate; border-color: #e6ebf2;
+	box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 14px 30px -24px rgba(15, 23, 42, .35);
+	transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.sol-steps--cards .sol-step:hover,
+.sol-steps--numbered .sol-step-group:not(.sol-step-group--boxed) .sol-step:hover {
+	transform: translateY(-4px); border-color: rgba(217, 119, 6, .3);
+	box-shadow: 0 2px 4px rgba(15, 23, 42, .04), 0 24px 44px -24px rgba(217, 119, 6, .45);
+}
+.sol-steps--cards .sol-step::after,
+.sol-steps--numbered .sol-step-group:not(.sol-step-group--boxed) .sol-step::after {
+	content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+	background: radial-gradient(260px circle at var(--mx, 85%) var(--my, 0%), rgba(251, 191, 36, .16), rgba(251, 191, 36, .05) 45%, transparent 70%);
+	opacity: 0; transition: opacity .45s ease;
+}
+.sol-steps--cards .sol-step:hover::after,
+.sol-steps--numbered .sol-step-group:not(.sol-step-group--boxed) .sol-step:hover::after { opacity: 1; }
+.sol-steps--cards .sol-step__marker,
+.sol-steps--numbered .sol-step-group:not(.sol-step-group--boxed) .sol-step__marker {
+	background: linear-gradient(135deg, #fff7e0, #fde68a); color: var(--sol-harvest-dark);
+	box-shadow: inset 0 0 0 1px rgba(217, 119, 6, .15);
+	transition: color .35s ease, box-shadow .45s cubic-bezier(.2, .8, .2, 1);
+}
+.sol-steps--cards .sol-step:hover .sol-step__marker,
+.sol-steps--numbered .sol-step-group:not(.sol-step-group--boxed) .sol-step:hover .sol-step__marker {
+	color: #fff; box-shadow: inset 0 0 0 30px var(--sol-harvest), 0 8px 18px -10px rgba(217, 119, 6, .75);
+}
+.sol-steps--cards .sol-step__title { transition: color .3s ease; }
+.sol-steps--cards .sol-step:hover .sol-step__title { color: var(--sol-harvest-dark); }
