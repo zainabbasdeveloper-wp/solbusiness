@@ -157,34 +157,33 @@
 .sol-card__num { color: transparent; -webkit-text-stroke: 1.5px rgba(217, 119, 6, .35); background: linear-gradient(180deg, rgba(251, 191, 36, .22), rgba(251, 191, 36, 0)); -webkit-background-clip: text; background-clip: text; }
 .sol-card:hover .sol-card__num { color: transparent; -webkit-text-stroke-color: var(--sol-harvest); background-image: linear-gradient(180deg, rgba(251, 191, 36, .55), rgba(251, 191, 36, .1)); }
 
-/* ---------- Timeline steps: light icons and a glow that flows down the line ---------- */
+/* ---------- Timeline steps: light icons and a calm light that travels down the line ---------- */
 .sol-steps--timeline .sol-step__marker {
 	position: relative; color: var(--sol-harvest-dark);
 	background: linear-gradient(135deg, #fffbeb, #fde68a);
-	box-shadow: 0 0 0 6px rgba(251, 191, 36, .14), inset 0 0 0 1px rgba(217, 119, 6, .22);
+	box-shadow: 0 0 0 6px rgba(251, 191, 36, .12), inset 0 0 0 1px rgba(217, 119, 6, .2);
 }
 .sol-steps--timeline .sol-step__marker .sol-icon { width: 19px; height: 19px; }
 .sol-steps--timeline .sol-step::before {
 	width: 2px; border-radius: 2px;
-	background-color: rgba(217, 119, 6, .14);
-	background-image: linear-gradient(180deg, rgba(251, 191, 36, 0) 0%, rgba(251, 191, 36, 0) 38%, #fbbf24 47%, #d97706 50%, rgba(251, 191, 36, 0) 62%, rgba(251, 191, 36, 0) 100%);
+	background-color: rgba(217, 119, 6, .12);
+	background-image: linear-gradient(180deg, rgba(251, 191, 36, 0) 0%, rgba(251, 191, 36, 0) 34%, rgba(251, 191, 36, .45) 45%, rgba(217, 119, 6, .6) 50%, rgba(251, 191, 36, .45) 55%, rgba(251, 191, 36, 0) 66%, rgba(251, 191, 36, 0) 100%);
 	background-size: 100% 300%; background-repeat: no-repeat; background-position: 0 100%;
 }
 .sol-bg-ink .sol-steps--timeline .sol-step::before, .sol-steps--timeline.sol-bg-ink .sol-step::before { background-color: rgba(255, 255, 255, .12); }
+/* One light at a time: each line segment takes 1.8s, the cycle is 9s, so there's a pause before it starts again. */
 @media (prefers-reduced-motion: no-preference) {
-	.sol-steps--timeline .sol-step::before { animation: sol-tl-flow 2.6s cubic-bezier(.45, 0, .55, 1) infinite; animation-delay: var(--sol-tl, 0s); }
-	.sol-steps--timeline .sol-step__marker { animation: sol-tl-glow 2.6s ease-out infinite; animation-delay: var(--sol-tl, 0s); }
+	.sol-steps--timeline .sol-step::before { animation: sol-tl-flow 9s ease-in-out infinite; animation-delay: var(--sol-tl, 0s); }
+	.sol-steps--timeline .sol-step__marker { animation: sol-tl-glow 9s ease-in-out infinite; animation-delay: var(--sol-tl, 0s); }
 }
-/* Each step starts as the light from the step above reaches it. */
-.sol-steps--timeline .sol-step:nth-child(2) { --sol-tl: 1.6s; }
-.sol-steps--timeline .sol-step:nth-child(3) { --sol-tl: 3.2s; }
-.sol-steps--timeline .sol-step:nth-child(4) { --sol-tl: 4.8s; }
-.sol-steps--timeline .sol-step:nth-child(5) { --sol-tl: 6.4s; }
-.sol-steps--timeline .sol-step:nth-child(6) { --sol-tl: 8s; }
-.sol-steps--timeline .sol-step:nth-child(n+7) { --sol-tl: 9.6s; }
-@keyframes sol-tl-flow { 0% { background-position: 0 100%; } 62%, 100% { background-position: 0 0; } }
+.sol-steps--timeline .sol-step:nth-child(2) { --sol-tl: 1.8s; }
+.sol-steps--timeline .sol-step:nth-child(3) { --sol-tl: 3.6s; }
+.sol-steps--timeline .sol-step:nth-child(4) { --sol-tl: 5.4s; }
+.sol-steps--timeline .sol-step:nth-child(5) { --sol-tl: 7.2s; }
+.sol-steps--timeline .sol-step:nth-child(n+6) { --sol-tl: 9s; }
+@keyframes sol-tl-flow { 0% { background-position: 0 100%; } 20%, 100% { background-position: 0 0; } }
+/* The icon only warms slightly as the light arrives: same ring size, a touch more colour. */
 @keyframes sol-tl-glow {
-	0% { box-shadow: 0 0 0 6px rgba(251, 191, 36, .14), inset 0 0 0 1px rgba(217, 119, 6, .22); }
-	12% { box-shadow: 0 0 0 9px rgba(251, 191, 36, .32), 0 0 22px 2px rgba(251, 191, 36, .45), inset 0 0 0 1px rgba(217, 119, 6, .4); }
-	45%, 100% { box-shadow: 0 0 0 6px rgba(251, 191, 36, .14), inset 0 0 0 1px rgba(217, 119, 6, .22); }
+	0%, 14%, 100% { box-shadow: 0 0 0 6px rgba(251, 191, 36, .12), inset 0 0 0 1px rgba(217, 119, 6, .2); }
+	5% { box-shadow: 0 0 0 6px rgba(251, 191, 36, .24), inset 0 0 0 1px rgba(217, 119, 6, .35); }
 }
