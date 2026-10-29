@@ -177,8 +177,71 @@ function sol_header_cart( $class = '' ) {
 add_filter( 'woocommerce_add_to_cart_fragments', function ( $fragments ) {
 	$count = WC()->cart ? WC()->cart->get_cart_contents_count() : 0;
 	$fragments['span.sol-cart-count'] = '<span class="sol-cart-count' . ( $count ? '' : ' is-empty' ) . '">' . (int) $count . '</span>';
+	$fragments['span.sol-fcart__count'] = sol_fcart_count_html();
+	$fragments['span.sol-fcart__total'] = sol_fcart_total_html();
+	$fragments['span.sol-fcart__heading-count'] = sol_fcart_heading_count_html();
 	return $fragments;
 } );
+
+/* ------------------------------------------------------------------ */
+/* Floating cart (left edge) + slide-in cart drawer                    */
+/* ------------------------------------------------------------------ */
+
+function sol_fcart_count_html() {
+	$count = WC()->cart ? WC()->cart->get_cart_contents_count() : 0;
+	return '<span class="sol-fcart__count' . ( $count ? '' : ' is-empty' ) . '" data-count="' . (int) $count . '">' . (int) $count . '</span>';
+}
+function sol_fcart_total_html() {
+	return '<span class="sol-fcart__total">' . ( WC()->cart ? wp_kses_post( WC()->cart->get_cart_subtotal() ) : '' ) . '</span>';
+}
+function sol_fcart_heading_count_html() {
+	$count = WC()->cart ? WC()->cart->get_cart_contents_count() : 0;
+	/* translators: %d: number of items */
+	return '<span class="sol-fcart__heading-count">' . esc_html( sprintf( _n( '%d item', '%d items', $count, 'sol-business-consultant' ), $count ) ) . '</span>';
+}
+
+// The mini cart in the drawer is refreshed by WooCommerce's cart fragments script.
+add_action( 'wp_enqueue_scripts', function () {
+	if ( ! is_cart() && ! is_checkout() ) {
+		wp_enqueue_script( 'wc-cart-fragments' );
+		wp_enqueue_script( 'wc-add-to-cart' );
+	}
+}, 30 );
+
+add_action( 'wp_footer', function () {
+	if ( ! WC()->cart || is_cart() || is_checkout() || ! apply_filters( 'sol_show_floating_cart', true ) ) {
+		return;
+	}
+	$browse = apply_filters( 'sol_fcart_browse_url', home_url( '/pricing/' ) );
+	?>
+	<div class="sol-fcart" data-sol-fcart>
+		<button type="button" class="sol-fcart__tab" aria-controls="sol-fcart-drawer" aria-expanded="false" data-sol-fcart-open>
+			<span class="sol-fcart__ring" aria-hidden="true"></span>
+			<span class="sol-fcart__icon"><?php echo sol_icon( 'shopping-bag' ); // phpcs:ignore ?><?php echo sol_fcart_count_html(); // phpcs:ignore ?></span>
+			<span class="sol-fcart__label"><b>Your cart</b><?php echo sol_fcart_total_html(); // phpcs:ignore ?></span>
+			<span class="screen-reader-text">Open cart</span>
+		</button>
+		<div class="sol-fcart__backdrop" data-sol-fcart-close></div>
+		<aside class="sol-fcart__drawer" id="sol-fcart-drawer" role="dialog" aria-modal="true" aria-labelledby="sol-fcart-title" aria-hidden="true">
+			<header class="sol-fcart__head">
+				<span class="sol-fcart__head-icon" aria-hidden="true"><?php echo sol_icon( 'shopping-bag' ); // phpcs:ignore ?></span>
+				<div>
+					<p class="sol-fcart__title" id="sol-fcart-title">Your cart</p>
+					<?php echo sol_fcart_heading_count_html(); // phpcs:ignore ?>
+				</div>
+				<button type="button" class="sol-fcart__close" aria-label="Close cart" data-sol-fcart-close><?php echo sol_icon( 'x' ); // phpcs:ignore ?></button>
+			</header>
+			<div class="sol-fcart__body">
+				<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+			</div>
+			<footer class="sol-fcart__foot">
+				<a class="sol-fcart__browse" href="<?php echo esc_url( $browse ); ?>"><?php echo sol_icon( 'sparkles' ); // phpcs:ignore ?> Browse packages and courses</a>
+				<p class="sol-fcart__secure"><?php echo sol_icon( 'lock' ); // phpcs:ignore ?> Secure checkout · prices in AUD</p>
+			</footer>
+		</aside>
+	</div>
+	<?php
+}, 20 );
 
 /* ------------------------------------------------------------------ */
 /* Cart and checkout                                                   */

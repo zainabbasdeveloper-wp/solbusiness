@@ -529,6 +529,53 @@
 		});
 	}
 
-	function init() { icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); showcase(); reveal(); }
+	/* ---------- Floating cart (left edge) + cart drawer ---------- */
+	function fcart() {
+		var root = $('[data-sol-fcart]');
+		if (!root) { return; }
+		var tab = $('[data-sol-fcart-open]', root);
+		var drawer = $('.sol-fcart__drawer', root);
+		var last = null;
+		var open = function (yes) {
+			root.classList.toggle('is-open', yes);
+			tab.setAttribute('aria-expanded', yes ? 'true' : 'false');
+			drawer.setAttribute('aria-hidden', yes ? 'false' : 'true');
+			document.documentElement.style.overflow = yes ? 'hidden' : '';
+			if (yes) {
+				last = document.activeElement;
+				setTimeout(function () { var c = $('.sol-fcart__close', root); if (c) { c.focus(); } }, 60);
+			} else if (last && last.focus) { last.focus(); }
+		};
+		tab.addEventListener('click', function () { open(true); });
+		$$('[data-sol-fcart-close]', root).forEach(function (b) { b.addEventListener('click', function () { open(false); }); });
+		document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && root.classList.contains('is-open')) { open(false); } });
+
+		// Count changes arrive as WooCommerce cart fragments (the badge element is replaced).
+		var count = function () { var c = $('.sol-fcart__count', root); return c ? parseInt(c.getAttribute('data-count'), 10) || 0 : 0; };
+		var prev = count();
+		root.classList.toggle('has-items', prev > 0);
+		var bump = function () {
+			root.classList.remove('is-bump');
+			void root.offsetWidth;
+			root.classList.add('is-bump');
+			setTimeout(function () { root.classList.remove('is-bump'); }, 900);
+		};
+		if ('MutationObserver' in window) {
+			new MutationObserver(function () {
+				var now = count();
+				if (now !== prev) {
+					root.classList.toggle('has-items', now > 0);
+					if (now > prev) { bump(); }
+					prev = now;
+				}
+			}).observe(root, { childList: true, subtree: true });
+		}
+		// Open the drawer right after an AJAX "Add to cart".
+		if (window.jQuery) {
+			window.jQuery(document.body).on('added_to_cart', function () { setTimeout(function () { open(true); }, 350); });
+		}
+	}
+
+	function init() { icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); showcase(); reveal(); fcart(); }
 	if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();

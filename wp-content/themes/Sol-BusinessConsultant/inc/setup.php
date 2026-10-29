@@ -146,6 +146,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	if ( class_exists( 'WooCommerce' ) ) {
 		wp_enqueue_style( 'sol-woo', SOL_URI . 'assets/css/sol-woo.css', array( 'sol' ), $ver );
 		wp_enqueue_style( 'sol-shop', SOL_URI . 'assets/css/sol-shop.css', array( 'sol-woo' ), $ver );
+		wp_enqueue_style( 'sol-fcart', SOL_URI . 'assets/css/sol-fcart.css', array( 'sol' ), $ver );
 	}
 	wp_enqueue_script( 'lucide', 'https://unpkg.com/lucide@0.475.0/dist/umd/lucide.min.js', array(), '0.475.0', true );
 	wp_enqueue_script( 'sol', SOL_URI . 'assets/js/sol.js', array( 'lucide' ), $ver, true );

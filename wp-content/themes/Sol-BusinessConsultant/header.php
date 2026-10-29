@@ -155,11 +155,9 @@ $sol_is_cur = function ( $l ) {
 				<?php foreach ( $portals as $p ) : ?>
 					<a class="sol-nav__portal" href="<?php echo esc_url( sol_url( sol_get( $p, 'url' ) ) ); ?>"><?php echo esc_html( sol_get( $p, 'label' ) ); ?></a>
 				<?php endforeach; ?>
-				<?php echo function_exists( 'sol_header_cart' ) ? sol_header_cart() : ''; // phpcs:ignore ?>
 				<?php echo sol_buttons( $buttons, 'sol-nav__buttons' ); // phpcs:ignore ?>
 			</div>
 
-			<?php echo function_exists( 'sol_header_cart' ) ? sol_header_cart( 'sol-cart-link--mobile' ) : ''; // phpcs:ignore ?>
 			<button type="button" class="sol-burger" aria-label="Open menu" aria-expanded="false" aria-controls="sol-drawer" data-sol-burger>
 				<?php echo sol_icon( 'menu' ); // phpcs:ignore ?>
 			</button>
