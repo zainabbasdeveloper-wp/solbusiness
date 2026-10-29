@@ -9,12 +9,9 @@
 .sol-rule { width: 96px; height: 3px; border-radius: 3px; background: linear-gradient(90deg, var(--sol-harvest), #fbbf24 60%, rgba(251, 191, 36, 0)); transform-origin: left center; }
 .sol-head--center .sol-rule { transform-origin: center; background: linear-gradient(90deg, rgba(251, 191, 36, 0), var(--sol-harvest) 30%, #fbbf24 70%, rgba(251, 191, 36, 0)); }
 
-/* Wide screens: left-aligned heads with an intro put the intro beside the title. */
-@media (min-width: 1024px) {
-	.sol-head--left:has(.sol-intro):has(.sol-title) { max-width: none; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); column-gap: 64px; align-items: end; }
-	.sol-head--left:has(.sol-intro):has(.sol-title) > :not(.sol-intro) { grid-column: 1; }
-	.sol-head--left:has(.sol-intro):has(.sol-title) > .sol-intro { grid-column: 2; grid-row: 1 / span 3; align-self: end; margin-top: 0; padding-left: 24px; border-left: 2px solid rgba(217, 119, 6, .25); }
-}
+/* The intro sits under the title, at a comfortable reading width. */
+.sol-head .sol-intro { max-width: 680px; }
+.sol-head--center .sol-intro { margin-left: auto; margin-right: auto; }
 
 /* ---------- Dividers ---------- */
 /* Two sections in a row with the same light background get a divider instead of running together. */
