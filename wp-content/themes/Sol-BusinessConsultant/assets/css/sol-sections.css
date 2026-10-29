@@ -82,11 +82,23 @@
 /* ---------- Cards ---------- */
 .sol-card { will-change: auto; }
 .sol-card:hover { transform: translateY(-4px); }
+/* Hover: a soft amber glow follows the cursor inside the card, and the border warms up around it.
+   (sol.js sets --mx / --my; without it the glow sits in the top-right corner.) */
+.sol-card--bordered, .sol-card--numbered, .sol-card--tagged, .sol-card--feature { isolation: isolate; }
 .sol-card--bordered::after, .sol-card--numbered::after, .sol-card--tagged::after, .sol-card--feature::after {
-	content: ""; position: absolute; left: 24px; right: 24px; top: -1px; height: 2px; border-radius: 2px;
-	background: linear-gradient(90deg, var(--sol-harvest), #fbbf24); transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
+	content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+	background: radial-gradient(260px circle at var(--mx, 85%) var(--my, 0%), rgba(251, 191, 36, .16), rgba(251, 191, 36, .05) 45%, transparent 70%);
+	opacity: 0; transition: opacity .45s ease;
 }
-.sol-card--bordered:hover::after, .sol-card--numbered:hover::after, .sol-card--tagged:hover::after, .sol-card--feature:hover::after { transform: scaleX(1); }
+.sol-card--bordered::before, .sol-card--numbered::before, .sol-card--tagged::before, .sol-card--feature::before {
+	content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none;
+	background: radial-gradient(220px circle at var(--mx, 85%) var(--my, 0%), rgba(217, 119, 6, .85), rgba(217, 119, 6, 0) 70%);
+	-webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+	mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+	opacity: 0; transition: opacity .45s ease;
+}
+.sol-card--bordered:hover::after, .sol-card--numbered:hover::after, .sol-card--tagged:hover::after, .sol-card--feature:hover::after,
+.sol-card--bordered:hover::before, .sol-card--numbered:hover::before, .sol-card--tagged:hover::before, .sol-card--feature:hover::before { opacity: 1; }
 
 /* ---------- Scroll-in animations ----------
    Content is never hidden by default. sol.js adds .sol-in to an element only at the moment it is

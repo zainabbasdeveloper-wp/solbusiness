@@ -576,6 +576,18 @@
 		}
 	}
 
-	function init() { icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); showcase(); reveal(); fcart(); }
+	/* ---------- Cards: the hover glow follows the cursor ---------- */
+	function cardGlow() {
+		if (!window.matchMedia || !matchMedia('(hover: hover)').matches) { return; }
+		document.addEventListener('pointermove', function (e) {
+			var card = e.target.closest && e.target.closest('.sol-card--bordered, .sol-card--numbered, .sol-card--tagged, .sol-card--feature');
+			if (!card) { return; }
+			var r = card.getBoundingClientRect();
+			card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+			card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+		}, { passive: true });
+	}
+
+	function init() { icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); showcase(); reveal(); fcart(); cardGlow(); }
 	if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();

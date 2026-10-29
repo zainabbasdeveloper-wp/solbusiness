@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * SOL Training Academy design for WordPress, built with Secure Custom Fields (no Elementor).
  * Setup: Appearance → SOL Setup. Field reference: _dev/FIELD-REFERENCE.md
  */
-define( 'SOL_THEME_VERSION', '2.7.0' );
+define( 'SOL_THEME_VERSION', '2.7.1' );
 define( 'SOL_DIR', trailingslashit( get_stylesheet_directory() ) );
 define( 'SOL_URI', trailingslashit( get_stylesheet_directory_uri() ) );
 define( 'SOL_OPTIONS_SLUG', 'sol-site-settings' );
