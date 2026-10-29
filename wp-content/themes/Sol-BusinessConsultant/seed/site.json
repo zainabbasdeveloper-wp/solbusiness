@@ -311,6 +311,7 @@
   "mega_promo": {
    "title": "Not sure where to start?",
    "text": "Take our free readiness quiz and get a personalised plan.",
+   "points": "Takes about 5 minutes\nPersonalised NDIS & business plan\nNo obligation, no sign-up",
    "link": {
     "title": "Free Quiz",
     "url": "/readiness-quiz/",
@@ -14173,7 +14174,7 @@
   "option:business_hours": "094a2010dc561f57",
   "option:nav_items": "884337fb7d7e99f4",
   "option:mega_menu": "e67cc0d6d327ae05",
-  "option:mega_promo": "059eacbf67bab373",
+  "option:mega_promo": "d661c647fc478723",
   "option:header_buttons": "ad19c15dd586ab4d",
   "option:portal_links": "e4c41918dc71cb97",
   "option:footer_cta_heading": "5d6c9884c5f9ca99",
@@ -14196,6 +14197,10 @@
   "option:head_code": "dd29ecf524b030a6"
  },
  "history": {
+  "option:mega_promo": [
+   "059eacbf67bab373",
+   "bc27efeb3b848a35"
+  ],
   "page:home": [
    "1ca688081199e90a",
    "11c8fdbf0fe45b61",
@@ -14453,9 +14458,6 @@
   ],
   "option:topbar_text": [
    "dcd520a5d7befd70"
-  ],
-  "option:mega_promo": [
-   "bc27efeb3b848a35"
   ],
   "option:newsletter_note": [
    "9f05891958daa5b8"
@@ -15484,5 +15486,5 @@
    }
   ]
  },
- "build": "a441714fcb997a50"
+ "build": "5d93021895859c13"
 }

@@ -46,7 +46,7 @@ export const options = {
       { label: 'AI & Machine Learning', url: '/ai-machine-learning/', icon: 'brain-circuit', desc: 'Data labelling & annotation' },
     ] },
   ]),
-  mega_promo: { title: 'Not sure where to start?', text: 'Take our readiness quiz and get a personalized plan.', link: L('Free Quiz', '/readiness-quiz') },
+  mega_promo: { title: 'Not sure where to start?', text: 'Take our readiness quiz and get a personalized plan.', points: ['Takes about 5 minutes', 'Personalised NDIS & business plan', 'No obligation, no sign-up'].join('\n'), link: L('Free Quiz', '/readiness-quiz') },
   header_buttons: [btn('Find My Plan', '/get-started', 'outline'), btn('Book Consultation', '/book-consultation')],
   portal_links: [{ label: 'Portal', url: route('/client-portal') }, { label: 'Student', url: route('/student-dashboard') }],
 

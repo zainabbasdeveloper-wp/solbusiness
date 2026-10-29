@@ -407,7 +407,7 @@ const options = fieldGroup({
       text('label', 'Category'), text('desc', 'Short description'), icon(), text('badge', 'Badge'), text('url', 'View all link', { instructions: 'Optional. Defaults to the Services link.' }),
       repeater('items', 'Links', [text('label', 'Label'), text('url', 'Link'), icon(), text('desc', 'Description')], { layout: 'table', item: 'Link' }),
     ], { item: 'Column' }),
-    group('mega_promo', 'Mega menu promo box', [text('title', 'Title'), textarea('text', 'Text', { rows: 2 }), link('link', 'Link')]),
+    group('mega_promo', 'Mega menu promo box', [text('title', 'Title'), textarea('text', 'Text', { rows: 2 }), textarea('points', 'Ticked points', { rows: 3, instructions: 'One per line' }), link('link', 'Link')]),
     buttons('header_buttons'),
     repeater('portal_links', 'Portal links', [text('label', 'Label'), text('url', 'Link')], { layout: 'table', item: 'Link' }),
     tab('Footer'),

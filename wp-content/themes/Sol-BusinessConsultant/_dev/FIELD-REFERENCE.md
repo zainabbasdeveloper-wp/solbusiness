@@ -155,6 +155,7 @@ Key `group_sol_options` · Shown on: options_page = sol-site-settings
 | `mega_promo` | Group | Mega menu promo box |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `title` | Text | Title |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `text` | Text area | Text |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `points` | Text area | Ticked points — One per line |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
 | `header_buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |

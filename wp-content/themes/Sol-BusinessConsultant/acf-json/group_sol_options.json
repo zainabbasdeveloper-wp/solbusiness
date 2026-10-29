@@ -577,6 +577,23 @@
                     "new_lines": ""
                 },
                 {
+                    "key": "field_37e39b8917e3b",
+                    "label": "Ticked points",
+                    "name": "points",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "One per line",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 3,
+                    "new_lines": ""
+                },
+                {
                     "key": "field_5a9a21cefdbef",
                     "label": "Link",
                     "name": "link",

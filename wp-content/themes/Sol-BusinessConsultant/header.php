@@ -118,7 +118,13 @@ $sol_is_cur = function ( $l ) {
 												<span class="sol-mega__promo-kick">Get started</span>
 												<p class="sol-mega__promo-title"><?php echo esc_html( $promo['title'] ); ?></p>
 												<?php if ( sol_get( $promo, 'text' ) ) : ?><p class="sol-mega__promo-text"><?php echo esc_html( $promo['text'] ); ?></p><?php endif; ?>
-												<?php echo sol_button( sol_get( $promo, 'link' ), 'primary', 'sol-btn--sm' ); // phpcs:ignore ?>
+												<?php $points = array_filter( array_map( 'trim', explode( "\n", (string) sol_get( $promo, 'points' ) ) ), 'strlen' ); ?>
+												<?php if ( $points ) : ?>
+													<ul class="sol-mega__promo-list">
+														<?php foreach ( $points as $pt ) : ?><li><?php echo sol_icon( 'check' ); // phpcs:ignore ?><?php echo esc_html( $pt ); ?></li><?php endforeach; ?>
+													</ul>
+												<?php endif; ?>
+												<?php echo sol_button( sol_get( $promo, 'link' ), 'primary', 'sol-mega__promo-btn' ); // phpcs:ignore ?>
 												<?php if ( $phone ) : ?>
 													<a class="sol-mega__call" href="tel:<?php echo esc_attr( $phone_l ); ?>"><?php echo sol_icon( 'phone' ); // phpcs:ignore ?><span>Prefer to talk?<b><?php echo esc_html( $phone ); ?></b></span></a>
 												<?php endif; ?>

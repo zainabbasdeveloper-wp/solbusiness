@@ -114,3 +114,16 @@
 .sol-drawer__sub a { display: block; padding: 10px 14px 10px 60px !important; font-size: .9rem; color: var(--sol-ink-2); border-bottom: 1px solid #eef2f7; }
 .sol-drawer__sub a:last-child { border-bottom: 0; }
 .sol-drawer__sub .sol-mega__icon { width: 34px; height: 34px; }
+
+/* ---------- Promo card: full right-hand column ---------- */
+.sol-mega__wrap { grid-template-columns: 300px minmax(0, 1fr) 340px; }
+@media (max-width: 1279px) { .sol-mega__wrap { grid-template-columns: 250px minmax(0, 1fr) 290px; } }
+.sol-mega__promo { padding: 26px 26px 22px; gap: 12px; align-self: stretch; min-height: 100%; }
+.sol-mega__promo-title { font-size: 1.45rem; letter-spacing: -.01em; }
+.sol-mega__promo-text { font-size: .9rem; }
+.sol-mega__promo-list { list-style: none; margin: 2px 0 4px; padding: 0; display: grid; gap: 8px; width: 100%; }
+.sol-mega__promo-list li { display: flex; align-items: center; gap: 10px; font-size: .86rem; color: rgba(255, 255, 255, .88); }
+.sol-mega__promo-list .sol-icon { width: 20px; height: 20px; padding: 4px; border-radius: 50%; flex-shrink: 0; color: var(--sol-ink); background: linear-gradient(135deg, #fbbf24, var(--sol-harvest)); stroke-width: 3; }
+.sol-mega__promo .sol-mega__promo-btn { width: 100%; margin-top: 6px; padding: 13px 18px; font-size: .95rem; }
+.sol-mega__call { margin-top: auto; padding: 12px; border: 1px solid rgba(255, 255, 255, .1); border-radius: 14px; background: rgba(255, 255, 255, .04); transition: background .2s, border-color .2s; }
+.sol-mega__call:hover { background: rgba(255, 255, 255, .08); border-color: rgba(251, 191, 36, .35); }
