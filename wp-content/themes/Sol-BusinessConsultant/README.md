@@ -102,3 +102,12 @@ The site copy is rewritten for SEO and to be unique from the training site (sear
 - **Rewritten:** headings, intros, descriptions, FAQs, benefits, calls to action, image alt text, blog posts, product descriptions, course summaries, and every page's Yoast title (60 characters or fewer) and description (160 or fewer).
 - **Kept word for word on purpose:** official NDIS registration group names, prices and figures, menu labels, product names, course module and lesson names (they match the LMS), quiz questions, comparison table cells, and the commitments on the legal, privacy, service inclusions, support, accessibility and complaints pages.
 - **New or changed text:** after each build, anything still in its original wording is listed in `_dev/COPY-TODO.json`. To reword it, add `"original text": "new text"` to `seo-copy.json` and build again.
+
+## Social sharing and search tags
+
+Each page has its own 1200×630 share card in `assets/images/share/`: the page's photo, the SOL logo and the page title. Links shared in Slack, Facebook, LinkedIn, WhatsApp, Teams or X show this card (code: `inc/seo.php`).
+
+- **With Yoast SEO (live site):** Yoast keeps titles, descriptions, canonical links, sitemaps and schema. The theme replaces only Yoast's share image with the card, unless you choose an image yourself in a page's Yoast **Social** tab. It also sets the locale to Australian English and adds the address, phone, email, hours, ABN and service area to Yoast's organisation schema. Service pages also get a `Service` schema item.
+- **Without an SEO plugin:** the theme prints the meta description, Open Graph and Twitter tags, the business and website schema, and `BlogPosting` schema on posts. It also tells Google not to index search results or 404 pages.
+- **New page cards:** run `python _dev/build/share-cards.py` after adding a page to the seed. Pages without a card use their featured image (JPG or PNG), or `default.jpg`.
+- **After an update:** Slack and Facebook cache previews. Use the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) or LinkedIn Post Inspector to refresh a link. Slack refreshes on its own within about a day.
