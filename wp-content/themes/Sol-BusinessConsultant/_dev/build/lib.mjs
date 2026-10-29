@@ -14,6 +14,7 @@ export const file = (name, label, o) => base('file', name, label, { return_forma
 export const link = (name, label, o) => base('link', name, label, { return_format: 'array', ...o });
 export const url = (name, label, o) => base('url', name, label, o);
 export const email = (name, label, o) => base('email', name, label, o);
+export const password = (name, label, o) => base('password', name, label, o);
 export const number = (name, label, o) => base('number', name, label, o);
 export const bool = (name, label, o) => base('true_false', name, label, { ui: 1, default_value: 0, ...o });
 export const select = (name, label, choices, o) => base('select', name, label, {

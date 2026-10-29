@@ -1,6 +1,6 @@
 // All SCF field groups for the SOL website.
 import {
-  text, textarea, wysiwyg, image, file, link, url, email, number, bool, select, icon, tab,
+  text, textarea, password, wysiwyg, image, file, link, url, email, number, bool, select, icon, tab,
   postObject, relationship, repeater, group, flexible, layout, listOf, buttons, sectionHead,
   fieldGroup, onPostType, onOptionsPage, onTemplate,
 } from './lib.mjs';
@@ -434,6 +434,14 @@ const options = fieldGroup({
     bool('back_to_top', 'Back-to-top button', { default_value: 1 }),
     email('notification_email', 'Send form submissions to'),
     textarea('default_success', 'Default form success message', { rows: 2 }),
+    tab('AI Assistant'),
+    bool('chat_enabled', 'Show the AI chat assistant', { default_value: 1, instructions: 'A chat button in the bottom-right corner. Replies come from Groq (the same AI service as the training site).' }),
+    password('chat_api_key', 'Groq API key', { instructions: "From console.groq.com → API Keys. Kept on the server, never shown to visitors. Or add define( 'SOL_GROQ_API_KEY', 'gsk_…' ); to wp-config.php instead." }),
+    text('chat_model', 'Model', { instructions: 'Groq model ID. Default: openai/gpt-oss-120b (same as the training site).' }),
+    text('chat_name', 'Assistant name'),
+    textarea('chat_greeting', 'Greeting', { rows: 2 }),
+    textarea('chat_questions', 'Quick questions', { rows: 4, instructions: 'One per line. Shown as buttons before the first message.' }),
+    textarea('chat_instructions', 'Extra knowledge for the assistant', { rows: 6, instructions: 'Optional. Facts, offers or rules to add to the built-in instructions, e.g. current promotions or answers to common questions.' }),
     tab('Tracking'),
     textarea('head_code', 'Code in <head> (analytics, tag manager)', { rows: 4, instructions: 'Only administrators can edit this.' }),
   ],

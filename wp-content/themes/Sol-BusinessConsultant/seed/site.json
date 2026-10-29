@@ -84,6 +84,13 @@
   "back_to_top": "field_2f196c241d432",
   "notification_email": "field_3a641778ef17d",
   "default_success": "field_72fe600691c14",
+  "chat_enabled": "field_22c3dd6101866",
+  "chat_api_key": "field_9e169cc3ebc38",
+  "chat_model": "field_73681532c50de",
+  "chat_name": "field_2c8e0648f8f9a",
+  "chat_greeting": "field_cfe5374eec928",
+  "chat_questions": "field_39dd954842852",
+  "chat_instructions": "field_e223563e39720",
   "head_code": "field_473a85c8efba5"
  },
  "options": {
@@ -593,7 +600,13 @@
   "back_to_top": true,
   "notification_email": "info@solbusinessconsultant.com.au",
   "default_success": "Thank you. The SOL team will contact you within one business day.",
-  "head_code": ""
+  "head_code": "",
+  "chat_enabled": true,
+  "chat_model": "openai/gpt-oss-120b",
+  "chat_name": "SOL Assistant",
+  "chat_greeting": "Hi, I'm online and ready to help. Are you looking for a business service, NDIS support, a training course, payment help or access to your Student Portal?",
+  "chat_questions": "Help me choose a business service\nHow do I get registered as an NDIS provider?\nHow do I purchase a training course?\nHow can I pay for an agreed service?",
+  "chat_instructions": ""
  },
  "products": [
   {
@@ -14229,7 +14242,13 @@
   "option:back_to_top": "5ffe533b830f08a0",
   "option:notification_email": "ad8b98e0295b228f",
   "option:default_success": "5c36eb931a650f06",
-  "option:head_code": "dd29ecf524b030a6"
+  "option:head_code": "dd29ecf524b030a6",
+  "option:chat_enabled": "5ffe533b830f08a0",
+  "option:chat_model": "c70eab232bfb5652",
+  "option:chat_name": "e62dfb0343a9c2ba",
+  "option:chat_greeting": "47ece361cb8c9f95",
+  "option:chat_questions": "2add6048335f9e48",
+  "option:chat_instructions": "dd29ecf524b030a6"
  },
  "history": {
   "sol_block:about-sol": [
@@ -15560,5 +15579,5 @@
    }
   ]
  },
- "build": "25ac47cf092be02e"
+ "build": "4435a5e1251e419e"
 }

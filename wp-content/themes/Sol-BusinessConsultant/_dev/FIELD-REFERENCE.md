@@ -188,6 +188,14 @@ Key `group_sol_options` · Shown on: options_page = sol-site-settings
 | `back_to_top` | True / False | Back-to-top button |
 | `notification_email` | Email | Send form submissions to |
 | `default_success` | Text area | Default form success message |
+| **— AI Assistant tab —** | | |
+| `chat_enabled` | True / False | Show the AI chat assistant — A chat button in the bottom-right corner. Replies come from Groq (the same AI service as the training site). |
+| `chat_api_key` | password | Groq API key — From console.groq.com → API Keys. Kept on the server, never shown to visitors. Or add define( 'SOL_GROQ_API_KEY', 'gsk_…' ); to wp-config.php instead. |
+| `chat_model` | Text | Model — Groq model ID. Default: openai/gpt-oss-120b (same as the training site). |
+| `chat_name` | Text | Assistant name |
+| `chat_greeting` | Text area | Greeting |
+| `chat_questions` | Text area | Quick questions — One per line. Shown as buttons before the first message. |
+| `chat_instructions` | Text area | Extra knowledge for the assistant — Optional. Facts, offers or rules to add to the built-in instructions, e.g. current promotions or answers to common questions. |
 | **— Tracking tab —** | | |
 | `head_code` | Text area | Code in <head> (analytics, tag manager) — Only administrators can edit this. |
 

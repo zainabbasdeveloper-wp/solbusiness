@@ -111,3 +111,13 @@ Each page has its own 1200×630 share card in `assets/images/share/`: the page's
 - **Without an SEO plugin:** the theme prints the meta description, Open Graph and Twitter tags, the business and website schema, and `BlogPosting` schema on posts. It also tells Google not to index search results or 404 pages.
 - **New page cards:** run `python _dev/build/share-cards.py` after adding a page to the seed. Pages without a card use their featured image (JPG or PNG), or `default.jpg`.
 - **After an update:** Slack and Facebook cache previews. Use the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) or LinkedIn Post Inspector to refresh a link. Slack refreshes on its own within about a day.
+
+## AI chat assistant
+
+The **SOL Assistant** chat sits in the bottom-right corner on every page. It's the same assistant as the training site: Groq's `openai/gpt-oss-120b` model with the SOL concierge instructions, rewritten to link to this site's own pages.
+
+- **Switch it on:** add a Groq API key in **SOL Site → AI Assistant** (free from [console.groq.com](https://console.groq.com/keys); the training site's key works too). The chat stays hidden until a key is set. For extra safety, put the key in `wp-config.php` instead: `define( 'SOL_GROQ_API_KEY', 'gsk_…' );`
+- **Settings there:** the assistant name, greeting, quick-question buttons (one per line), model, and **Extra knowledge**, a box for facts or rules to add, such as current offers or answers to common questions.
+- **What it knows:** SOL's services, every service page (it reads them from the site, so new service pages are included automatically), the key pages (booking, contact, pricing, quiz, payment form, policies), phone, email and hours, and how course purchase and portal access work.
+- **Safety:** the key stays on the server (`/wp-json/sol/v1/chat` calls Groq), only this site can use the endpoint, and each visitor is limited to 12 messages per 5 minutes and 80 per day, with 2,000 per day for the whole site (change with the `sol_chat_limits` filter). It never asks for card, bank or password details.
+- **Files:** `inc/chat.php`, `assets/js/sol-chat.js`, `assets/css/sol-chat.css`. The conversation is kept for the browser tab's session, so it survives page changes.

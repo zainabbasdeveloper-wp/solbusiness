@@ -1155,6 +1155,136 @@
         },
         {
             "key": "field_c482b0868419d",
+            "label": "AI Assistant",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_22c3dd6101866",
+            "label": "Show the AI chat assistant",
+            "name": "chat_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "A chat button in the bottom-right corner. Replies come from Groq (the same AI service as the training site).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_9e169cc3ebc38",
+            "label": "Groq API key",
+            "name": "chat_api_key",
+            "aria-label": "",
+            "type": "password",
+            "instructions": "From console.groq.com → API Keys. Kept on the server, never shown to visitors. Or add define( 'SOL_GROQ_API_KEY', 'gsk_…' ); to wp-config.php instead.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_73681532c50de",
+            "label": "Model",
+            "name": "chat_model",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Groq model ID. Default: openai/gpt-oss-120b (same as the training site).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_2c8e0648f8f9a",
+            "label": "Assistant name",
+            "name": "chat_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_cfe5374eec928",
+            "label": "Greeting",
+            "name": "chat_greeting",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_39dd954842852",
+            "label": "Quick questions",
+            "name": "chat_questions",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "One per line. Shown as buttons before the first message.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_e223563e39720",
+            "label": "Extra knowledge for the assistant",
+            "name": "chat_instructions",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optional. Facts, offers or rules to add to the built-in instructions, e.g. current promotions or answers to common questions.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 6,
+            "new_lines": ""
+        },
+        {
+            "key": "field_a89ee56a58c5f",
             "label": "Tracking",
             "name": "",
             "aria-label": "",

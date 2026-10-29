@@ -75,4 +75,16 @@ export const options = {
   notification_email: 'info@solbusinessconsultant.com.au',
   default_success: 'Thanks. The SOL team will contact you within one business day.',
   head_code: '',
+
+  chat_enabled: true,
+  chat_model: 'openai/gpt-oss-120b',
+  chat_name: 'SOL Assistant',
+  chat_greeting: "Hi, I'm online and ready to help. Are you looking for a business service, NDIS support, a training course, payment help or access to your Student Portal?",
+  chat_questions: [
+    'Help me choose a business service',
+    'How do I get registered as an NDIS provider?',
+    'How do I purchase a training course?',
+    'How can I pay for an agreed service?',
+  ].join('\n'),
+  chat_instructions: '',
 };

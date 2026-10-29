@@ -5853,5 +5853,20 @@
   "id": "5e1c5089",
   "where": "options",
   "text": "Easy Compliance"
+ },
+ {
+  "id": "7aa455f1",
+  "where": "options",
+  "text": "SOL Assistant"
+ },
+ {
+  "id": "b348c20e",
+  "where": "options",
+  "text": "Hi, I'm online and ready to help. Are you looking for a business service, NDIS support, a training course, payment help or access to your Student Portal?"
+ },
+ {
+  "id": "df50be68",
+  "where": "options",
+  "text": "Help me choose a business service\nHow do I get registered as an NDIS provider?\nHow do I purchase a training course?\nHow can I pay for an agreed service?"
  }
 ]
