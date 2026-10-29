@@ -1,19 +1,28 @@
 <?php
 /**
- * Site header for every page (replaces any Elementor theme-builder header): top bar, menu with services mega menu, mobile drawer.
+ * Site header for every page (replaces any Elementor theme-builder header): top bar, main menu with
+ * the services mega menu and dropdowns, mobile drawer. Menu items come from sol_menu_data() (inc/menu.php).
  */
 
 defined( 'ABSPATH' ) || exit;
 
-$logo      = sol_opt( 'logo' );
-$company   = sol_opt( 'company_name', get_bloginfo( 'name' ) );
-$nav       = sol_rows( sol_opt( 'nav_items', array() ) );
-$mega      = sol_rows( sol_opt( 'mega_menu', array() ) );
-$promo     = sol_opt( 'mega_promo', array() );
-$buttons   = sol_opt( 'header_buttons', array() );
-$portals   = sol_rows( sol_opt( 'portal_links', array() ) );
-$top_text  = sol_opt( 'topbar_text' );
-$top_link  = sol_opt( 'topbar_link' );
+$logo     = sol_opt( 'logo' );
+$company  = sol_opt( 'company_name', get_bloginfo( 'name' ) );
+$menu     = sol_menu_data();
+$promo    = sol_opt( 'mega_promo', array() );
+$buttons  = sol_opt( 'header_buttons', array() );
+$portals  = sol_rows( sol_opt( 'portal_links', array() ) );
+$top_text = sol_opt( 'topbar_text' );
+$top_link = sol_opt( 'topbar_link' );
+$phone    = sol_opt( 'phone' );
+$phone_l  = preg_replace( '/[^0-9+]/', '', (string) sol_opt( 'phone_link', $phone ) );
+
+$sol_target = function ( $l ) {
+	return ! empty( $l['target'] ) ? ' target="_blank" rel="noopener"' : '';
+};
+$sol_is_cur = function ( $l ) {
+	return ! empty( $l['current'] ) || sol_menu_is_current( isset( $l['url'] ) ? $l['url'] : '' );
+};
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -52,42 +61,91 @@ $top_link  = sol_opt( 'topbar_link' );
 
 			<nav class="sol-menu" aria-label="Main">
 				<ul class="sol-menu__list">
-					<?php foreach ( $nav as $item ) : ?>
-						<?php if ( 'mega' === sol_get( $item, 'type' ) && $mega ) : ?>
-							<li class="sol-menu__item sol-menu__item--mega">
-								<button type="button" class="sol-menu__link" aria-expanded="false" data-sol-mega-toggle>
-									<?php echo esc_html( sol_get( $item, 'label', 'Services' ) ); ?> <?php echo sol_icon( 'chevron-down', 'sol-menu__chev' ); // phpcs:ignore ?>
+					<?php foreach ( $menu as $mi => $item ) : ?>
+						<?php if ( 'mega' === $item['type'] && ! empty( $item['columns'] ) ) : ?>
+							<?php $mid = 'sol-mega-' . $mi; ?>
+							<li class="sol-menu__item sol-menu__item--mega" data-sol-drop>
+								<button type="button" class="sol-menu__link" aria-expanded="false" aria-controls="<?php echo esc_attr( $mid ); ?>" data-sol-drop-toggle>
+									<?php echo esc_html( $item['label'] ); ?> <?php echo sol_icon( 'chevron-down', 'sol-menu__chev' ); // phpcs:ignore ?>
 								</button>
-								<div class="sol-mega" data-sol-mega>
-									<div class="sol-mega__grid">
-										<?php foreach ( $mega as $col ) : ?>
-											<div class="sol-mega__col">
-												<p class="sol-mega__title"><?php echo esc_html( sol_get( $col, 'label' ) ); ?>
-													<?php if ( sol_get( $col, 'badge' ) ) : ?><span class="sol-badge"><?php echo esc_html( $col['badge'] ); ?></span><?php endif; ?>
-												</p>
-												<?php foreach ( sol_rows( sol_get( $col, 'items', array() ) ) as $link ) : ?>
-													<a class="sol-mega__link" href="<?php echo esc_url( sol_url( sol_get( $link, 'url' ) ) ); ?>">
-														<span class="sol-mega__icon"><?php echo sol_icon( sol_get( $link, 'icon', 'circle' ) ); // phpcs:ignore ?></span>
-														<span><strong><?php echo esc_html( sol_get( $link, 'label' ) ); ?></strong>
-															<?php if ( sol_get( $link, 'desc' ) ) : ?><small><?php echo esc_html( $link['desc'] ); ?></small><?php endif; ?>
-														</span>
-													</a>
-												<?php endforeach; ?>
-											</div>
-										<?php endforeach; ?>
+								<div class="sol-mega" id="<?php echo esc_attr( $mid ); ?>" data-sol-drop-panel data-sol-mega>
+									<div class="sol-mega__wrap">
+										<div class="sol-mega__tabs" role="tablist" aria-label="<?php echo esc_attr( $item['label'] ); ?> categories">
+											<?php foreach ( $item['columns'] as $ci => $col ) : ?>
+												<button type="button" class="sol-mega__tab<?php echo 0 === $ci ? ' is-active' : ''; ?>" role="tab" id="<?php echo esc_attr( $mid . '-t' . $ci ); ?>" aria-controls="<?php echo esc_attr( $mid . '-p' . $ci ); ?>" aria-selected="<?php echo 0 === $ci ? 'true' : 'false'; ?>" tabindex="<?php echo 0 === $ci ? '0' : '-1'; ?>" data-sol-mega-tab>
+													<span class="sol-mega__tab-icon"><?php echo sol_icon( $col['icon'] ? $col['icon'] : 'layers' ); // phpcs:ignore ?></span>
+													<span class="sol-mega__tab-text">
+														<strong><?php echo esc_html( $col['label'] ); ?></strong>
+														<?php if ( $col['desc'] ) : ?><small><?php echo esc_html( $col['desc'] ); ?></small><?php endif; ?>
+													</span>
+													<?php if ( $col['badge'] ) : ?><span class="sol-mega__flag"><?php echo esc_html( $col['badge'] ); ?></span><?php endif; ?>
+													<span class="sol-mega__count" aria-hidden="true"><?php echo (int) count( $col['items'] ); ?></span>
+												</button>
+											<?php endforeach; ?>
+										</div>
+
+										<div class="sol-mega__panels">
+											<?php foreach ( $item['columns'] as $ci => $col ) : ?>
+												<div class="sol-mega__panel<?php echo 0 === $ci ? ' is-active' : ''; ?>" role="tabpanel" id="<?php echo esc_attr( $mid . '-p' . $ci ); ?>" aria-labelledby="<?php echo esc_attr( $mid . '-t' . $ci ); ?>">
+													<div class="sol-mega__panel-head">
+														<p class="sol-mega__panel-title"><?php echo esc_html( $col['label'] ); ?></p>
+														<?php
+														$all = $col['url'] ? $col['url'] : $item['url'];
+														if ( $all ) :
+															?>
+															<a class="sol-mega__all" href="<?php echo esc_url( $all ); ?>">View all <?php echo sol_icon( 'arrow-right' ); // phpcs:ignore ?></a>
+														<?php endif; ?>
+													</div>
+													<div class="sol-mega__links">
+														<?php foreach ( $col['items'] as $li => $link ) : ?>
+															<a class="sol-mega__link<?php echo $sol_is_cur( $link ) ? ' is-current' : ''; ?>" href="<?php echo esc_url( $link['url'] ); ?>"<?php echo $sol_target( $link ); // phpcs:ignore ?> style="--i:<?php echo (int) $li; ?>">
+																<span class="sol-mega__icon"><?php echo sol_icon( $link['icon'] ? $link['icon'] : 'circle-dot' ); // phpcs:ignore ?></span>
+																<span class="sol-mega__text">
+																	<strong><?php echo esc_html( $link['label'] ); ?><?php if ( $link['badge'] ) : ?> <span class="sol-mega__flag"><?php echo esc_html( $link['badge'] ); ?></span><?php endif; ?></strong>
+																	<?php if ( $link['desc'] ) : ?><small><?php echo esc_html( $link['desc'] ); ?></small><?php endif; ?>
+																</span>
+																<?php echo sol_icon( 'arrow-up-right', 'sol-mega__go' ); // phpcs:ignore ?>
+															</a>
+														<?php endforeach; ?>
+													</div>
+												</div>
+											<?php endforeach; ?>
+										</div>
+
 										<?php if ( is_array( $promo ) && sol_get( $promo, 'title' ) ) : ?>
-											<div class="sol-mega__promo">
-												<span class="sol-eyebrow">Get Started</span>
+											<aside class="sol-mega__promo">
+												<span class="sol-mega__promo-glow" aria-hidden="true"></span>
+												<span class="sol-mega__promo-kick">Get started</span>
 												<p class="sol-mega__promo-title"><?php echo esc_html( $promo['title'] ); ?></p>
-												<p><?php echo esc_html( sol_get( $promo, 'text' ) ); ?></p>
-												<?php echo sol_button( sol_get( $promo, 'link' ), 'primary' ); // phpcs:ignore ?>
-											</div>
+												<?php if ( sol_get( $promo, 'text' ) ) : ?><p class="sol-mega__promo-text"><?php echo esc_html( $promo['text'] ); ?></p><?php endif; ?>
+												<?php echo sol_button( sol_get( $promo, 'link' ), 'primary', 'sol-btn--sm' ); // phpcs:ignore ?>
+												<?php if ( $phone ) : ?>
+													<a class="sol-mega__call" href="tel:<?php echo esc_attr( $phone_l ); ?>"><?php echo sol_icon( 'phone' ); // phpcs:ignore ?><span>Prefer to talk?<b><?php echo esc_html( $phone ); ?></b></span></a>
+												<?php endif; ?>
+											</aside>
 										<?php endif; ?>
 									</div>
 								</div>
 							</li>
+						<?php elseif ( 'dropdown' === $item['type'] && ! empty( $item['children'] ) ) : ?>
+							<li class="sol-menu__item sol-menu__item--dd" data-sol-drop>
+								<button type="button" class="sol-menu__link" aria-expanded="false" data-sol-drop-toggle>
+									<?php echo esc_html( $item['label'] ); ?> <?php echo sol_icon( 'chevron-down', 'sol-menu__chev' ); // phpcs:ignore ?>
+								</button>
+								<div class="sol-dd" data-sol-drop-panel>
+									<?php if ( $item['url'] ) : ?>
+										<a class="sol-dd__link sol-dd__link--top" href="<?php echo esc_url( $item['url'] ); ?>"<?php echo $sol_target( $item ); // phpcs:ignore ?>><?php echo esc_html( $item['label'] ); ?> overview</a>
+									<?php endif; ?>
+									<?php foreach ( $item['children'] as $li => $c ) : ?>
+										<a class="sol-dd__link<?php echo $sol_is_cur( $c ) ? ' is-current' : ''; ?>" href="<?php echo esc_url( $c['url'] ); ?>"<?php echo $sol_target( $c ); // phpcs:ignore ?> style="--i:<?php echo (int) $li; ?>">
+											<?php if ( $c['icon'] ) : ?><span class="sol-mega__icon"><?php echo sol_icon( $c['icon'] ); // phpcs:ignore ?></span><?php endif; ?>
+											<span class="sol-mega__text"><strong><?php echo esc_html( $c['label'] ); ?></strong><?php if ( $c['desc'] ) : ?><small><?php echo esc_html( $c['desc'] ); ?></small><?php endif; ?></span>
+										</a>
+									<?php endforeach; ?>
+								</div>
+							</li>
 						<?php else : ?>
-							<li class="sol-menu__item"><a class="sol-menu__link" href="<?php echo esc_url( sol_url( sol_get( $item, 'url' ) ) ); ?>"><?php echo esc_html( sol_get( $item, 'label' ) ); ?></a></li>
+							<li class="sol-menu__item"><a class="sol-menu__link<?php echo $sol_is_cur( $item ) ? ' is-current' : ''; ?>" href="<?php echo esc_url( $item['url'] ); ?>"<?php echo $sol_target( $item ); // phpcs:ignore ?><?php echo $sol_is_cur( $item ) ? ' aria-current="page"' : ''; ?>><?php echo esc_html( $item['label'] ); ?></a></li>
 						<?php endif; ?>
 					<?php endforeach; ?>
 				</ul>
@@ -110,19 +168,33 @@ $top_link  = sol_opt( 'topbar_link' );
 
 	<div class="sol-drawer" id="sol-drawer" hidden data-sol-drawer>
 		<div class="sol-drawer__inner">
-			<?php foreach ( $nav as $item ) : ?>
-				<?php if ( 'mega' === sol_get( $item, 'type' ) && $mega ) : ?>
+			<?php foreach ( $menu as $item ) : ?>
+				<?php if ( 'mega' === $item['type'] && ! empty( $item['columns'] ) ) : ?>
 					<details class="sol-drawer__group">
-						<summary><?php echo esc_html( sol_get( $item, 'label', 'Services' ) ); ?></summary>
-						<?php foreach ( $mega as $col ) : ?>
-							<p class="sol-drawer__label"><?php echo esc_html( sol_get( $col, 'label' ) ); ?></p>
-							<?php foreach ( sol_rows( sol_get( $col, 'items', array() ) ) as $link ) : ?>
-								<a href="<?php echo esc_url( sol_url( sol_get( $link, 'url' ) ) ); ?>"><?php echo esc_html( sol_get( $link, 'label' ) ); ?></a>
-							<?php endforeach; ?>
+						<summary><?php echo esc_html( $item['label'] ); ?> <?php echo sol_icon( 'chevron-down', 'sol-drawer__chev' ); // phpcs:ignore ?></summary>
+						<?php foreach ( $item['columns'] as $col ) : ?>
+							<details class="sol-drawer__sub">
+								<summary>
+									<span class="sol-mega__icon"><?php echo sol_icon( $col['icon'] ? $col['icon'] : 'layers' ); // phpcs:ignore ?></span>
+									<span><?php echo esc_html( $col['label'] ); ?></span>
+									<span class="sol-mega__count" aria-hidden="true"><?php echo (int) count( $col['items'] ); ?></span>
+								</summary>
+								<?php foreach ( $col['items'] as $link ) : ?>
+									<a href="<?php echo esc_url( $link['url'] ); ?>"<?php echo $sol_target( $link ); // phpcs:ignore ?>><?php echo esc_html( $link['label'] ); ?></a>
+								<?php endforeach; ?>
+							</details>
+						<?php endforeach; ?>
+					</details>
+				<?php elseif ( 'dropdown' === $item['type'] && ! empty( $item['children'] ) ) : ?>
+					<details class="sol-drawer__group">
+						<summary><?php echo esc_html( $item['label'] ); ?> <?php echo sol_icon( 'chevron-down', 'sol-drawer__chev' ); // phpcs:ignore ?></summary>
+						<?php if ( $item['url'] ) : ?><a href="<?php echo esc_url( $item['url'] ); ?>"><?php echo esc_html( $item['label'] ); ?> overview</a><?php endif; ?>
+						<?php foreach ( $item['children'] as $c ) : ?>
+							<a href="<?php echo esc_url( $c['url'] ); ?>"<?php echo $sol_target( $c ); // phpcs:ignore ?>><?php echo esc_html( $c['label'] ); ?></a>
 						<?php endforeach; ?>
 					</details>
 				<?php else : ?>
-					<a class="sol-drawer__link" href="<?php echo esc_url( sol_url( sol_get( $item, 'url' ) ) ); ?>"><?php echo esc_html( sol_get( $item, 'label' ) ); ?></a>
+					<a class="sol-drawer__link" href="<?php echo esc_url( $item['url'] ); ?>"<?php echo $sol_target( $item ); // phpcs:ignore ?>><?php echo esc_html( $item['label'] ); ?></a>
 				<?php endif; ?>
 			<?php endforeach; ?>
 			<?php foreach ( $portals as $p ) : ?>

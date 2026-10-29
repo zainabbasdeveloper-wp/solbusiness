@@ -404,7 +404,7 @@ const options = fieldGroup({
       select('type', 'Type', { link: 'Link', mega: 'Services mega menu' }, { default_value: 'link' }),
     ], { layout: 'table', item: 'Menu item' }),
     repeater('mega_menu', 'Services mega menu', [
-      text('label', 'Column title'), text('badge', 'Badge'),
+      text('label', 'Category'), text('desc', 'Short description'), icon(), text('badge', 'Badge'), text('url', 'View all link', { instructions: 'Optional. Defaults to the Services link.' }),
       repeater('items', 'Links', [text('label', 'Label'), text('url', 'Link'), icon(), text('desc', 'Description')], { layout: 'table', item: 'Link' }),
     ], { item: 'Column' }),
     group('mega_promo', 'Mega menu promo box', [text('title', 'Title'), textarea('text', 'Text', { rows: 2 }), link('link', 'Link')]),

@@ -16,7 +16,7 @@ ob_start();
 	<?php sol_section_head( $s, 'h2', 'left' ); ?>
 	<?php if ( sol_get( $s, 'content' ) ) : ?><div class="sol-prose"><?php echo sol_rich( $s['content'] ); // phpcs:ignore ?></div><?php endif; ?>
 	<?php if ( $stats ) : ?>
-		<dl class="sol-stats"><?php foreach ( $stats as $st ) : ?><div><dt><?php echo esc_html( sol_get( $st, 'value' ) ); ?></dt><dd><?php echo esc_html( sol_get( $st, 'label' ) ); ?></dd></div><?php endforeach; ?></dl>
+		<dl class="sol-stats"><?php foreach ( $stats as $st ) : ?><?php $sv = (string) sol_get( $st, 'value' ); ?><div><?php if ( preg_match( '/^(\d+)(.*)$/', $sv, $sm ) ) : ?><dt data-sol-count="<?php echo esc_attr( $sm[1] ); ?>"><?php echo esc_html( $sm[1] ); ?><?php if ( '' !== $sm[2] ) : ?><span><?php echo esc_html( $sm[2] ); ?></span><?php endif; ?></dt><?php else : ?><dt><?php echo esc_html( $sv ); ?></dt><?php endif; ?><dd><?php echo esc_html( sol_get( $st, 'label' ) ); ?></dd></div><?php endforeach; ?></dl>
 	<?php endif; ?>
 	<?php echo sol_checks( $checks ); // phpcs:ignore ?>
 	<?php echo sol_buttons( sol_get( $s, 'buttons', array() ) ); // phpcs:ignore ?>

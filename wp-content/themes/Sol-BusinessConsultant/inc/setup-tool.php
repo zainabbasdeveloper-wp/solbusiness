@@ -87,6 +87,11 @@ function sol_setup_page() {
 		$report = $keys
 			? sol_run_setup( array( 'options' => false, 'products' => false, 'posts' => false, 'pages' => true, 'reapply' => $keys ) )
 			: array( 'log' => array(), 'errors' => array( 'Tick at least one page or reusable section to re-apply.' ) );
+	} elseif ( isset( $_POST['sol_menu_rebuild'] ) ) {
+		check_admin_referer( 'sol_setup' );
+		$report = sol_build_wp_menu( true )
+			? array( 'log' => array( 'Main menu rebuilt from SOL Site → Header and assigned to the header.' ), 'errors' => array() )
+			: array( 'log' => array(), 'errors' => array( 'The menu could not be created.' ) );
 	} elseif ( isset( $_POST['sol_setup_restore'] ) ) {
 		check_admin_referer( 'sol_setup' );
 		$report = sol_restore_templates();
@@ -115,6 +120,24 @@ function sol_setup_page() {
 		<?php endif; ?>
 
 		<?php sol_render_updates_panel( $scf ); ?>
+
+		<h2>Main menu</h2>
+		<?php
+		$sol_locs = get_nav_menu_locations();
+		$sol_menu = ! empty( $sol_locs[ SOL_MENU_LOCATION ] ) ? wp_get_nav_menu_object( $sol_locs[ SOL_MENU_LOCATION ] ) : null;
+		?>
+		<p>
+			<?php if ( $sol_menu ) : ?>
+				The header uses <strong><?php echo esc_html( $sol_menu->name ); ?></strong>. Edit it in <a href="<?php echo esc_url( admin_url( 'nav-menus.php?action=edit&menu=' . $sol_menu->term_id ) ); ?>">Appearance → Menus</a>.
+			<?php else : ?>
+				No WordPress menu is assigned, so the header uses the menu in <a href="<?php echo esc_url( admin_url( 'admin.php?page=' . SOL_OPTIONS_SLUG ) ); ?>">SOL Site → Header</a>.
+			<?php endif; ?>
+			Rebuilding replaces the menu's items with the theme's default menu.
+		</p>
+		<form method="post">
+			<?php wp_nonce_field( 'sol_setup' ); ?>
+			<?php submit_button( $sol_menu ? 'Rebuild main menu' : 'Create main menu', 'secondary', 'sol_menu_rebuild', false, $sol_menu ? array( 'onclick' => "return confirm('Replace every item in the main menu with the theme default menu?');" ) : array() ); ?>
+		</form>
 
 		<h2>Full setup</h2>
 		<form method="post">
@@ -267,6 +290,12 @@ function sol_run_setup( $opts = array() ) {
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $home->ID );
 		$report['log'][] = 'Front page set to "Home".';
+	}
+
+	if ( $opts['options'] && ( $opts['overwrite'] || ! get_option( 'sol_menu_built' ) ) && function_exists( 'sol_build_wp_menu' ) ) {
+		if ( sol_build_wp_menu( (bool) $opts['overwrite'] ) ) {
+			$report['log'][] = 'Main menu created in Appearance → Menus ("SOL Main Menu").';
+		}
 	}
 	return $report;
 }

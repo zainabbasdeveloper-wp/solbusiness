@@ -35,6 +35,11 @@
   "text": "Our Services"
  },
  {
+  "id": "93d824ed",
+  "where": "page:home",
+  "text": "NDIS registration, compliance, bookkeeping, marketing and remote teams, all delivered by one Australian team and tracked in your own client portal."
+ },
+ {
   "id": "33bf2fec",
   "where": "page:home",
   "text": "View All Services"
@@ -160,74 +165,49 @@
   "text": "Student dashboard for training"
  },
  {
-  "id": "2bd83c9b",
+  "id": "2cc32eb6",
   "where": "page:home",
-  "text": "NDIS Registration Intake"
+  "text": "Registration preparation pathway"
  },
  {
-  "id": "5a324eb0",
+  "id": "24c2be18",
   "where": "page:home",
-  "text": "Website & Automation Brief"
+  "text": "Support coordination training pathway"
  },
  {
-  "id": "27ca355c",
+  "id": "6433023b",
   "where": "page:home",
-  "text": "Marketing & SEO Goals"
+  "text": "Operational clean-up pathway"
  },
  {
-  "id": "06148a0b",
+  "id": "06dc37a7",
   "where": "page:home",
-  "text": "Finance & Payroll Setup"
+  "text": "View Examples"
  },
  {
-  "id": "dc064d50",
+  "id": "6b8ba94e",
   "where": "page:home",
-  "text": "Start Service Intake"
+  "text": "Featured Offers"
  },
  {
-  "id": "8d2c6975",
+  "id": "d3e606d4",
   "where": "page:home",
-  "text": "Browse Training"
+  "text": "NDIS Registration Support"
  },
  {
-  "id": "ef9f8efe",
+  "id": "c35e1dd9",
   "where": "page:home",
-  "text": "NDIS registration checklist"
+  "text": "Website Development"
  },
  {
-  "id": "431e3d39",
+  "id": "6b408714",
   "where": "page:home",
-  "text": "NDIS readiness quiz"
+  "text": "Training Courses"
  },
  {
-  "id": "4fe2191d",
+  "id": "ade54f01",
   "where": "page:home",
-  "text": "NDIS readiness calculator"
- },
- {
-  "id": "9e3f9017",
-  "where": "page:home",
-  "text": "Website launch checklist"
- },
- {
-  "id": "93969b9d",
-  "where": "page:home",
-  "text": "SEO readiness checklist"
- },
- {
-  "id": "938b0125",
-  "where": "page:home",
-  "text": "Training pathway guide"
- },
- {
-  "id": "03c8889a",
-  "where": "page:home",
-  "text": "After payment, everything is tracked"
- },
- {
-  "id": "af43c082",
-  "where": "page:home",
-  "text": "Choose Portal"
+  "text": "View All Plans"
  },
  {
   "id": "6b34648c",
@@ -290,11 +270,6 @@
   "text": "How urgent is this?"
  },
  {
-  "id": "d3e606d4",
-  "where": "page:home",
-  "text": "NDIS Registration Support"
- },
- {
   "id": "5c4bc558",
   "where": "page:home",
   "text": "Recommended Pathway"
@@ -303,11 +278,6 @@
   "id": "793b65b4",
   "where": "page:home",
   "text": "View NDIS Support"
- },
- {
-  "id": "c35e1dd9",
-  "where": "page:home",
-  "text": "Website Development"
  },
  {
   "id": "32db90aa",
@@ -338,41 +308,6 @@
   "id": "75f08ef6",
   "where": "page:home",
   "text": "Support Coordination Training"
- },
- {
-  "id": "2cc32eb6",
-  "where": "page:home",
-  "text": "Registration preparation pathway"
- },
- {
-  "id": "24c2be18",
-  "where": "page:home",
-  "text": "Support coordination training pathway"
- },
- {
-  "id": "6433023b",
-  "where": "page:home",
-  "text": "Operational clean-up pathway"
- },
- {
-  "id": "06dc37a7",
-  "where": "page:home",
-  "text": "View Examples"
- },
- {
-  "id": "6b8ba94e",
-  "where": "page:home",
-  "text": "Featured Offers"
- },
- {
-  "id": "6b408714",
-  "where": "page:home",
-  "text": "Training Courses"
- },
- {
-  "id": "ade54f01",
-  "where": "page:home",
-  "text": "View All Plans"
  },
  {
   "id": "8bc38284",

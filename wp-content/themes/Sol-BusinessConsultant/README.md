@@ -58,6 +58,8 @@ How it knows: `npm run build` gives every item a fingerprint in `seed/site.json`
 - **Shared sections** (pricing tabs, contact, FAQ…): SOL Site → Reusable Sections.
 - **Headings:** one line per row; `[words]` turn amber. **Icons:** any [Lucide](https://lucide.dev/icons) name.
 - **Forms:** submissions under SOL Site → Enquiries, emailed to the address in SOL Site settings.
+- **Main menu:** Appearance → Menus → *SOL Main Menu* (location "Main menu (SOL header)"). It is created from SOL Site → Header the first time an admin opens the dashboard on v2.6.0. Three levels make the Services mega menu: *Services* → category (left-hand tab) → links. Two levels make a normal dropdown. Each menu item has **Icon**, **Short description** and **Badge** fields. A category's own link is used for its "View all" link. The dark "Get started" box comes from SOL Site → Header → Mega menu promo box. SOL Setup → *Rebuild main menu* resets the menu to the theme default. If no menu is assigned to the location, the header falls back to SOL Site → Header.
+- **Section look:** two light sections in a row get a divider line, grey sections have a dot texture, dark sections become a band with a curved top, and sections fade up as they scroll into view (not for visitors who turn off motion). This all comes from the section backgrounds (white / chalk / ink), so pick backgrounds that alternate.
 
 Every field, repeater and data type: [`_dev/FIELD-REFERENCE.md`](_dev/FIELD-REFERENCE.md).
 

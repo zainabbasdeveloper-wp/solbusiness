@@ -21,20 +21,70 @@
 		set: function (k, v) { try { window.localStorage.setItem(k, v); } catch (e) { /* private mode */ } }
 	};
 
-	/* ---------- Header: mega menu + mobile drawer ---------- */
+	/* ---------- Header: mega menu, dropdowns + mobile drawer ---------- */
 	function header() {
-		var toggle = $('[data-sol-mega-toggle]');
-		var mega = $('[data-sol-mega]');
-		if (toggle && mega) {
-			var item = toggle.parentNode;
-			var open = function (yes) { mega.classList.toggle('is-open', yes); toggle.setAttribute('aria-expanded', yes ? 'true' : 'false'); };
+		var drops = $$('[data-sol-drop]');
+		var closeAll = function (except) {
+			drops.forEach(function (d) { if (d !== except && d._solOpen) { d._solOpen(false); } });
+		};
+		var hoverable = window.matchMedia && matchMedia('(hover: hover)').matches;
+		drops.forEach(function (item) {
+			var toggle = $('[data-sol-drop-toggle]', item);
+			var panel = $('[data-sol-drop-panel]', item);
+			if (!toggle || !panel) { return; }
 			var timer;
-			toggle.addEventListener('click', function () { open(!mega.classList.contains('is-open')); });
-			item.addEventListener('mouseenter', function () { clearTimeout(timer); open(true); });
-			item.addEventListener('mouseleave', function () { timer = setTimeout(function () { open(false); }, 150); });
-			document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { open(false); } });
-			document.addEventListener('click', function (e) { if (!item.contains(e.target)) { open(false); } });
-		}
+			var open = function (yes) {
+				clearTimeout(timer);
+				if (yes) { closeAll(item); }
+				panel.classList.toggle('is-open', yes);
+				item.classList.toggle('is-open', yes);
+				toggle.setAttribute('aria-expanded', yes ? 'true' : 'false');
+			};
+			item._solOpen = open;
+			toggle.addEventListener('click', function () { open(!panel.classList.contains('is-open')); });
+			if (hoverable) {
+				item.addEventListener('mouseenter', function () { clearTimeout(timer); timer = setTimeout(function () { open(true); }, 60); });
+				item.addEventListener('mouseleave', function () { clearTimeout(timer); timer = setTimeout(function () { open(false); }, 180); });
+			}
+			item.addEventListener('keydown', function (e) {
+				if (e.key === 'Escape' && panel.classList.contains('is-open')) { open(false); toggle.focus(); }
+			});
+			item.addEventListener('focusout', function (e) {
+				if (e.relatedTarget && !item.contains(e.relatedTarget)) { open(false); }
+			});
+
+			// Category tabs inside the mega menu: hover or arrow keys switch the panel.
+			var tabs = $$('[data-sol-mega-tab]', item);
+			var select = function (tab, focus) {
+				tabs.forEach(function (t) {
+					var on = t === tab;
+					t.classList.toggle('is-active', on);
+					t.setAttribute('aria-selected', on ? 'true' : 'false');
+					t.tabIndex = on ? 0 : -1;
+					var p = document.getElementById(t.getAttribute('aria-controls'));
+					if (p) { p.classList.toggle('is-active', on); }
+				});
+				if (focus) { tab.focus(); }
+			};
+			tabs.forEach(function (t, i) {
+				var hov;
+				t.addEventListener('click', function () { select(t); });
+				t.addEventListener('focus', function () { select(t); });
+				if (hoverable) {
+					t.addEventListener('mouseenter', function () { hov = setTimeout(function () { select(t); }, 70); });
+					t.addEventListener('mouseleave', function () { clearTimeout(hov); });
+				}
+				t.addEventListener('keydown', function (e) {
+					var n = null;
+					if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { n = tabs[(i + 1) % tabs.length]; }
+					if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { n = tabs[(i - 1 + tabs.length) % tabs.length]; }
+					if (n) { e.preventDefault(); select(n, true); }
+				});
+			});
+		});
+		document.addEventListener('click', function (e) {
+			drops.forEach(function (d) { if (d._solOpen && !d.contains(e.target)) { d._solOpen(false); } });
+		});
 		var burger = $('[data-sol-burger]');
 		var drawer = $('[data-sol-drawer]');
 		if (burger && drawer) {
@@ -48,7 +98,6 @@
 		}
 	}
 
-	/* ---------- Tabs ---------- */
 	function tabs() {
 		$$('[data-sol-tabs]').forEach(function (wrap) {
 			var list = $$('[role="tab"]', wrap);
@@ -396,7 +445,7 @@
 					node.nodeValue = String(Math.round(target * ease(p)));
 					if (p < 1) { requestAnimationFrame(step); }
 				});
-			}, 1300);
+			}, el.closest('[data-sol-showcase]') ? 1300 : 150);
 		}
 		var nums = $$('[data-sol-count]');
 		if (nums.length && 'IntersectionObserver' in window) {
@@ -416,6 +465,66 @@
 		}
 	}
 
-	function init() { icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); showcase(); }
+	/* ---------- Sections fade up as they scroll into view ---------- */
+	function reveal() {
+		var root = document.documentElement;
+		// Scroll progress bar under the header.
+		var header = $('[data-sol-header]');
+		if (header && $('.sol-main .sol-section')) {
+			var bar = document.createElement('span');
+			bar.className = 'sol-progress';
+			bar.setAttribute('aria-hidden', 'true');
+			header.appendChild(bar);
+			var ticking = false;
+			var update = function () {
+				var max = document.documentElement.scrollHeight - window.innerHeight;
+				bar.style.setProperty('--sol-progress', max > 0 ? Math.min(window.scrollY / max, 1).toFixed(4) : 0);
+				ticking = false;
+			};
+			window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+			update();
+		}
+		if (!root.classList.contains('sol-anim') || !('IntersectionObserver' in window)) { return; }
+		var items = [];
+		var add = function (el, delay, kind) {
+			if (!el || el.classList.contains('sol-reveal')) { return; }
+			el.classList.add('sol-reveal');
+			if (kind) { el.classList.add('sol-reveal--' + kind); }
+			el.style.setProperty('--sol-d', delay || 0);
+			items.push(el);
+		};
+		$$('.sol-main .sol-section').forEach(function (sec) {
+			if (sec.classList.contains('sol-hero') || sec.closest('.sol-hero')) { return; }
+			add($('.sol-head', sec), 0);
+			// Children of grids and lists come in one after another.
+			$$('.sol-grid, .sol-step-list, .sol-resource-list, .sol-accordion, .sol-logos, .sol-pills', sec).forEach(function (grid) {
+				Array.prototype.slice.call(grid.children).forEach(function (child, i) { add(child, Math.min(i % 8, 6) + 1); });
+			});
+			// Text + image layouts slide in from each side.
+			$$('.sol-split', sec).forEach(function (split) {
+				var kids = Array.prototype.slice.call(split.children);
+				kids.forEach(function (child, i) { add(child, i + 1, i === 0 ? 'left' : 'right'); });
+			});
+			add($('.sol-cta__box', sec), 0, 'zoom');
+			$$('.sol-buttons--after, .sol-table-wrap, .sol-tabs', sec).forEach(function (el) { add(el, 2); });
+		});
+		var done = function (el) {
+			// Hand the element back to its own hover transitions once it has arrived.
+			setTimeout(function () { el.classList.remove('sol-reveal', 'sol-reveal--left', 'sol-reveal--right', 'sol-reveal--zoom', 'is-in'); el.style.removeProperty('--sol-d'); }, 1500);
+		};
+		var io = new IntersectionObserver(function (entries) {
+			entries.forEach(function (e) {
+				if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); done(e.target); }
+			});
+		}, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+		items.forEach(function (el) {
+			// Anything already above the fold on load (e.g. after a refresh halfway down) shows at once.
+			var r = el.getBoundingClientRect();
+			if (r.bottom < 0) { el.classList.add('is-in'); done(el); return; }
+			io.observe(el);
+		});
+	}
+
+	function init() { icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); showcase(); reveal(); }
 	if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();

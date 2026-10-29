@@ -141,6 +141,8 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'sol-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap', array(), null );
 	wp_enqueue_style( 'sol', SOL_URI . 'assets/css/sol.css', array(), $ver );
 	wp_enqueue_style( 'sol-hero', SOL_URI . 'assets/css/sol-hero.css', array( 'sol' ), $ver );
+	wp_enqueue_style( 'sol-nav', SOL_URI . 'assets/css/sol-nav.css', array( 'sol' ), $ver );
+	wp_enqueue_style( 'sol-sections', SOL_URI . 'assets/css/sol-sections.css', array( 'sol' ), $ver );
 	if ( class_exists( 'WooCommerce' ) ) {
 		wp_enqueue_style( 'sol-woo', SOL_URI . 'assets/css/sol-woo.css', array( 'sol' ), $ver );
 		wp_enqueue_style( 'sol-shop', SOL_URI . 'assets/css/sol-shop.css', array( 'sol-woo' ), $ver );

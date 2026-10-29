@@ -142,8 +142,11 @@ Key `group_sol_options` · Shown on: options_page = sol-site-settings
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `url` | Text | Link |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `type` | Select: `link`, `mega` | Type |
 | `mega_menu` | Repeater | Services mega menu |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `label` | Text | Column title |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `label` | Text | Category |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `desc` | Text | Short description |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `icon` | Text | Icon — Lucide icon name, e.g. shield, graduation-cap, file-check. Browse: https://lucide.dev/icons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `badge` | Text | Badge |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `url` | Text | View all link — Optional. Defaults to the Services link. |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `items` | Repeater | Links |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `label` | Text | Label |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `url` | Text | Link |

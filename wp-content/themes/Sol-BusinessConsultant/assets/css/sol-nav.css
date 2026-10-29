@@ -1,0 +1,116 @@
+/* SOL header menu: tabbed services mega menu, dropdowns and the mobile drawer. */
+
+/* ---------- Top-level links ---------- */
+.sol-menu__link { position: relative; transition: color .2s, background .2s; }
+.sol-menu__link::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 4px; height: 2px; border-radius: 2px; background: var(--sol-harvest); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+.sol-menu__link:hover::after, .sol-menu__link.is-current::after, .sol-menu__item.is-open > .sol-menu__link::after { transform: scaleX(1); }
+.sol-menu__link.is-current { color: var(--sol-harvest-dark); }
+.sol-menu__item--dd { position: relative; }
+
+/* ---------- Mega menu shell ---------- */
+.sol-mega {
+	position: absolute; left: 0; right: 0; top: 100%;
+	display: block; visibility: hidden; opacity: 0; transform: translateY(-6px); pointer-events: none;
+	background: #fff; border-top: 1px solid var(--sol-border);
+	box-shadow: 0 30px 60px -28px rgba(15, 23, 42, .35), 0 1px 0 rgba(15, 23, 42, .04);
+	transition: opacity .22s ease, transform .22s ease, visibility 0s linear .22s;
+}
+.sol-mega.is-open { visibility: visible; opacity: 1; transform: none; pointer-events: auto; transition: opacity .22s ease, transform .22s ease, visibility 0s; }
+.sol-mega::before { content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 2px; background: linear-gradient(90deg, transparent, var(--sol-harvest) 30%, #f59e0b 50%, var(--sol-harvest) 70%, transparent); opacity: .7; }
+.sol-mega__wrap { max-width: 1280px; margin: 0 auto; padding: 22px var(--sol-gutter) 26px; display: grid; grid-template-columns: 330px minmax(0, 1fr) 260px; gap: 26px; align-items: stretch; }
+
+/* ---------- Category tabs ---------- */
+.sol-mega__tabs { display: flex; flex-direction: column; gap: 4px; padding: 8px; border-radius: 18px; background: #f8fafc; border: 1px solid #eef2f7; }
+.sol-mega__tab { position: relative; display: flex; align-items: center; gap: 12px; width: 100%; padding: 11px 12px; border: 0; border-radius: 13px; background: transparent; text-align: left; cursor: pointer; color: var(--sol-ink-2); font: inherit; transition: background .2s, box-shadow .2s, color .2s; }
+.sol-mega__tab:hover { background: rgba(255, 255, 255, .7); }
+.sol-mega__tab.is-active { background: #fff; box-shadow: 0 8px 22px -14px rgba(15, 23, 42, .35), 0 0 0 1px rgba(15, 23, 42, .05); color: var(--sol-ink); }
+.sol-mega__tab::before { content: ""; position: absolute; left: -8px; top: 14px; bottom: 14px; width: 3px; border-radius: 0 3px 3px 0; background: var(--sol-harvest); transform: scaleY(0); transition: transform .25s ease; }
+.sol-mega__tab.is-active::before { transform: scaleY(1); }
+.sol-mega__tab-icon { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; flex-shrink: 0; background: var(--sol-harvest-soft); color: var(--sol-harvest-dark); transition: background .25s, color .25s, transform .25s; }
+.sol-mega__tab-icon .sol-icon { width: 18px; height: 18px; }
+.sol-mega__tab.is-active .sol-mega__tab-icon { background: linear-gradient(135deg, #f59e0b, var(--sol-harvest)); color: #fff; transform: rotate(-4deg) scale(1.04); box-shadow: 0 8px 18px -8px rgba(217, 119, 6, .7); }
+.sol-mega__tab-text { flex: 1; min-width: 0; }
+.sol-mega__tab-text strong { display: block; font-family: var(--sol-display); font-size: .95rem; font-weight: 600; line-height: 1.25; }
+.sol-mega__tab-text small { display: block; font-size: .75rem; color: var(--sol-mist); line-height: 1.35; margin-top: 2px; }
+.sol-mega__count { min-width: 24px; height: 22px; padding: 0 7px; border-radius: 999px; display: inline-grid; place-items: center; font-size: .72rem; font-weight: 700; color: var(--sol-mist); background: #fff; border: 1px solid var(--sol-border); flex-shrink: 0; }
+.sol-mega__tab.is-active .sol-mega__count { color: var(--sol-harvest-dark); border-color: rgba(217, 119, 6, .35); background: var(--sol-harvest-soft); }
+.sol-mega__flag { display: inline-block; padding: 2px 7px; border-radius: 999px; background: var(--sol-ink); color: #fbbf24; font-size: .6rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; vertical-align: 2px; }
+.sol-mega__tab .sol-mega__flag { position: absolute; top: -6px; right: 10px; }
+
+/* ---------- Panels ---------- */
+.sol-mega__panels { display: grid; min-width: 0; }
+.sol-mega__panel { grid-area: 1 / 1; min-width: 0; visibility: hidden; opacity: 0; transform: translateX(10px); transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s; }
+.sol-mega__panel.is-active { visibility: visible; opacity: 1; transform: none; transition: opacity .25s ease, transform .25s ease, visibility 0s; }
+.sol-mega__panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 4px 12px; margin-bottom: 8px; border-bottom: 1px solid var(--sol-border); }
+.sol-mega__panel-title { font-family: var(--sol-display); font-size: .78rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--sol-mist); }
+.sol-mega__all { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 600; color: var(--sol-harvest-dark) !important; }
+.sol-mega__all .sol-icon { width: 15px; height: 15px; transition: transform .2s; }
+.sol-mega__all:hover .sol-icon { transform: translateX(3px); }
+.sol-mega__links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 10px; align-content: start; }
+.sol-mega__link { position: relative; display: flex; align-items: flex-start; gap: 12px; padding: 11px 34px 11px 11px; border-radius: 13px; border: 1px solid transparent; transition: background .2s, border-color .2s, transform .2s, box-shadow .2s; }
+.sol-mega__link:hover, .sol-mega__link:focus-visible { background: #fff; border-color: var(--sol-border); box-shadow: 0 10px 24px -18px rgba(15, 23, 42, .45); transform: translateY(-1px); }
+.sol-mega__link.is-current { background: var(--sol-harvest-soft); }
+.sol-mega__icon { width: 36px; height: 36px; border-radius: 10px; background: var(--sol-harvest-soft); color: var(--sol-harvest-dark); display: grid; place-items: center; flex-shrink: 0; transition: background .2s, color .2s; }
+.sol-mega__icon .sol-icon { width: 17px; height: 17px; }
+.sol-mega__link:hover .sol-mega__icon { background: var(--sol-ink); color: #fbbf24; }
+.sol-mega__text { min-width: 0; }
+.sol-mega__text strong { display: block; font-size: .9rem; font-weight: 600; line-height: 1.3; color: var(--sol-ink); }
+.sol-mega__text small { display: block; font-size: .77rem; color: var(--sol-mist); line-height: 1.4; margin-top: 2px; }
+.sol-mega__go { position: absolute; right: 12px; top: 14px; width: 16px !important; height: 16px !important; color: var(--sol-harvest); opacity: 0; transform: translate(-4px, 4px); transition: opacity .2s, transform .2s; }
+.sol-mega__link:hover .sol-mega__go { opacity: 1; transform: none; }
+
+/* ---------- Promo card ---------- */
+.sol-mega__promo { position: relative; overflow: hidden; isolation: isolate; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; color: #fff; background: radial-gradient(120% 90% at 100% 0%, #1e293b 0%, var(--sol-ink) 60%); }
+.sol-mega__promo::after { content: ""; position: absolute; inset: 0; z-index: -1; background-image: linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px); background-size: 22px 22px; mask-image: linear-gradient(180deg, #000, transparent 75%); -webkit-mask-image: linear-gradient(180deg, #000, transparent 75%); }
+.sol-mega__promo-glow { position: absolute; z-index: -1; width: 220px; height: 220px; right: -80px; top: -90px; border-radius: 50%; background: radial-gradient(circle, rgba(245, 158, 11, .55), transparent 65%); filter: blur(6px); }
+.sol-mega.is-open .sol-mega__promo-glow { animation: sol-mega-glow 6s ease-in-out infinite alternate; }
+.sol-mega__promo-kick { font-size: .68rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: #fbbf24; }
+.sol-mega__promo-title { font-family: var(--sol-display); font-weight: 700; font-size: 1.3rem; line-height: 1.2; }
+.sol-mega__promo-text { font-size: .86rem; color: rgba(255, 255, 255, .72); line-height: 1.5; }
+.sol-mega__promo .sol-btn { margin-top: 4px; }
+.sol-mega__call { margin-top: auto; display: flex; align-items: center; gap: 10px; width: 100%; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .12); font-size: .75rem; color: rgba(255, 255, 255, .6) !important; }
+.sol-mega__call .sol-icon { width: 34px; height: 34px; padding: 9px; border-radius: 50%; background: rgba(255, 255, 255, .08); color: #fbbf24; }
+.sol-mega__call b { display: block; font-size: .92rem; color: #fff; font-weight: 600; }
+.sol-mega__call:hover .sol-icon { background: var(--sol-harvest); color: var(--sol-ink); }
+@keyframes sol-mega-glow { from { transform: translate(0, 0) scale(1); } to { transform: translate(-30px, 20px) scale(1.15); } }
+
+/* Links ripple in when the menu opens or a tab is switched (only with motion allowed). */
+.sol-anim .sol-mega.is-open .sol-mega__panel.is-active .sol-mega__link { animation: sol-mega-in .4s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i, 0) * 35ms + 40ms); }
+.sol-anim .sol-mega.is-open .sol-mega__tab { animation: sol-mega-in .35s cubic-bezier(.2, .7, .2, 1) both; }
+@keyframes sol-mega-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 1279px) {
+	.sol-mega__wrap { grid-template-columns: 250px minmax(0, 1fr) 230px; gap: 18px; }
+	.sol-mega__tab-text small { display: none; }
+}
+
+/* ---------- Simple dropdown ---------- */
+.sol-dd {
+	position: absolute; top: calc(100% + 8px); left: 0; min-width: 280px; padding: 8px; z-index: 5;
+	background: #fff; border: 1px solid var(--sol-border); border-radius: 16px; box-shadow: 0 24px 50px -24px rgba(15, 23, 42, .35);
+	visibility: hidden; opacity: 0; transform: translateY(-6px); pointer-events: none;
+	transition: opacity .2s ease, transform .2s ease, visibility 0s linear .2s;
+}
+.sol-dd::before { content: ""; position: absolute; left: 0; right: 0; top: -10px; height: 10px; }
+.sol-dd.is-open { visibility: visible; opacity: 1; transform: none; pointer-events: auto; transition: opacity .2s ease, transform .2s ease, visibility 0s; }
+.sol-dd__link { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 11px; font-size: .9rem; transition: background .2s; }
+.sol-dd__link:hover { background: var(--sol-chalk); }
+.sol-dd__link--top { font-weight: 600; color: var(--sol-harvest-dark) !important; border-bottom: 1px solid var(--sol-border); border-radius: 11px 11px 0 0; margin-bottom: 4px; }
+.sol-dd .sol-mega__icon { width: 30px; height: 30px; }
+
+/* ---------- Mobile drawer ---------- */
+.sol-drawer:not([hidden]) .sol-drawer__inner { animation: sol-drawer-in .3s ease both; }
+@keyframes sol-drawer-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+.sol-drawer__group > summary, .sol-drawer__sub > summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.sol-drawer__group > summary::-webkit-details-marker, .sol-drawer__sub > summary::-webkit-details-marker { display: none; }
+.sol-drawer__chev { width: 18px; height: 18px; transition: transform .25s; color: var(--sol-mist); }
+.sol-drawer__group[open] > summary .sol-drawer__chev { transform: rotate(180deg); color: var(--sol-harvest-dark); }
+.sol-drawer__group[open] > summary { color: var(--sol-harvest-dark); }
+.sol-drawer__sub { margin: 6px 0; border-radius: 14px; background: var(--sol-chalk); border: 1px solid #eef2f7; overflow: hidden; }
+.sol-drawer__sub > summary { justify-content: flex-start; padding: 10px 12px; font-weight: 600; font-size: .95rem; cursor: pointer; }
+.sol-drawer__sub > summary > span:nth-child(2) { flex: 1; }
+.sol-drawer__sub[open] > summary { background: #fff; border-bottom: 1px solid #eef2f7; }
+.sol-drawer__sub[open] .sol-mega__icon { background: var(--sol-harvest); color: #fff; }
+.sol-drawer__sub a { display: block; padding: 10px 14px 10px 60px !important; font-size: .9rem; color: var(--sol-ink-2); border-bottom: 1px solid #eef2f7; }
+.sol-drawer__sub a:last-child { border-bottom: 0; }
+.sol-drawer__sub .sol-mega__icon { width: 34px; height: 34px; }

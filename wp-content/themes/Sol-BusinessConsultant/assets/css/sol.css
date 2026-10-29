@@ -121,20 +121,6 @@ i.sol-icon { font-style: normal; }
 .sol-menu__chev { width: 16px; height: 16px; transition: transform .2s; }
 [aria-expanded="true"] > .sol-menu__chev { transform: rotate(180deg); }
 .sol-menu__item--mega { position: static; }
-.sol-mega { position: absolute; left: 0; right: 0; top: 100%; background: #fff; border-top: 1px solid var(--sol-border); box-shadow: 0 24px 40px -20px rgba(15, 23, 42, .25); display: none; }
-.sol-mega.is-open { display: block; }
-.sol-mega__grid { max-width: 1280px; margin: 0 auto; padding: 28px var(--sol-gutter); display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) 240px; gap: 22px; }
-.sol-mega__title { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--sol-mist); margin-bottom: 10px !important; }
-.sol-mega__link { display: flex; gap: 10px; padding: 9px 10px; border-radius: 10px; }
-.sol-mega__link:hover { background: var(--sol-chalk); }
-.sol-mega__link strong { display: block; font-size: .88rem; font-weight: 600; }
-.sol-mega__link small { display: block; font-size: .76rem; color: var(--sol-mist); line-height: 1.35; }
-.sol-mega__icon { width: 32px; height: 32px; border-radius: 8px; background: var(--sol-harvest-soft); color: var(--sol-harvest-dark); display: grid; place-items: center; flex-shrink: 0; }
-.sol-mega__icon .sol-icon { width: 16px; height: 16px; }
-.sol-mega__promo { background: var(--sol-ink); color: #fff; border-radius: var(--sol-radius); padding: 20px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
-.sol-mega__promo .sol-eyebrow { color: var(--sol-harvest); margin: 0; }
-.sol-mega__promo-title { font-family: var(--sol-display); font-weight: 700; font-size: 1.1rem; }
-.sol-mega__promo p { font-size: .85rem; color: rgba(255, 255, 255, .72); }
 .sol-nav__actions { display: none; align-items: center; gap: 12px; margin-left: auto; }
 .sol-nav__portal { font-size: .85rem; font-weight: 600; color: var(--sol-mist); padding: 8px; }
 .sol-nav__portal:hover { color: var(--sol-ink); }
@@ -148,7 +134,6 @@ i.sol-icon { font-style: normal; }
 .sol-drawer__inner { padding: 12px var(--sol-gutter) 24px; display: flex; flex-direction: column; }
 .sol-drawer__link, .sol-drawer__group summary { padding: 12px 4px; border-bottom: 1px solid var(--sol-border); font-weight: 600; cursor: pointer; }
 .sol-drawer__group a { display: block; padding: 8px 12px; font-size: .92rem; color: var(--sol-ink-2); }
-.sol-drawer__label { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--sol-mist); padding: 12px 12px 4px; }
 .sol-drawer__buttons { margin-top: 16px; flex-direction: column; }
 @media (min-width: 1180px) {
 	.sol-menu, .sol-nav__actions { display: flex; }

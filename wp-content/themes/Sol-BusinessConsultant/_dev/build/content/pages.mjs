@@ -45,9 +45,11 @@ const home = {
       logos: D.LogoCarousel.PLATFORMS.map((p) => ({ name: p.abbr.replace(/\n/g, '|'), image: '' })), animate: true,
       pills: items(['ABN-backed Australian business', 'NDIS-aware service guidance', 'Clear pricing before paid work', 'Privacy-conscious enquiry handling']),
     },
-    grid({ section_id: 'services', eyebrow: 'Our Services', heading: 'Comprehensive Solutions for Every Stage of Growth', source: 'services', card_style: 'numbered', buttons: [btn('View All Services', '/services/'), btn('Browse Training Courses', '/training-courses', 'outline'), btn('Book Free Consultation', '/book-consultation', 'outline')] }),
+    // 1. What SOL does
+    grid({ section_id: 'services', background: 'chalk', eyebrow: 'Our Services', heading: 'Comprehensive Solutions for Every Stage of Growth', intro: 'NDIS registration, compliance, bookkeeping, marketing and remote teams, all delivered by one Australian team and tracked in your own client portal.', source: 'services', card_style: 'numbered', buttons: [btn('View All Services', '/services/'), btn('Browse Training Courses', '/training-courses', 'outline'), btn('Book Free Consultation', '/book-consultation', 'outline')] }),
     block('service-comparison'),
     cta({ style: 'image', heading: 'Your One-Stop Business Partner', text: 'From startup to scale - every service connected under one roof', image: img('services/marketing-strategy-team.webp') }),
+    // 2. How delivery works
     steps({
       eyebrow: 'Clear Delivery Path', align: 'center', heading: 'Services and training stay organised from payment to completion',
       intro: 'SOL separates business service delivery from student training, so clients and learners each get the right portal, documents, updates, and support.',
@@ -65,22 +67,26 @@ const home = {
       heading: 'Already have a quote?', text: 'Make a secure payment for agreed service work. Training enrolments remain separate in the student training system.',
       list: items(D.ProcessPortalSection.trustItems), buttons: [rbtn('Make Service Payment', '/service-payment'), btn('Explore Training', '/training-courses', 'light')],
     }),
+    // 3. Pricing and the NDIS pathway
+    block('pricing-tabs'),
+    block('ndis-roadmap'),
+    block('compliance'),
+    // 4. Proof and next steps
+    block('service-journey'),
     grid({
-      background: 'chalk', eyebrow: 'Start With The Right Brief', heading: 'Faster quotes, clearer delivery, fewer back-and-forth emails',
-      intro: 'Visitors can start with guided service intake, download preparation resources, or go straight to consultation. Training visitors stay on the student path, while service clients move into the client portal.',
-      columns: '2', card_style: 'bordered',
-      cards: D.IntakeResourcesSection.intakeCards.map((c) => ({ icon: ic(c.icon), tag: 'Service Intake Path', title: c.title, text: c.desc, link: L('Continue', c.href) })),
-      buttons: [btn('Start Service Intake', '/get-started'), btn('Browse Training', '/training-courses', 'outline')],
+      background: 'chalk', eyebrow: 'Engagement Examples', heading: 'How SOL typically supports clients and learners',
+      intro: 'Practical examples of how our services, training, documents, and portal workflows come together.', card_style: 'tagged',
+      cards: D.CaseStudiesPreviewSection.items.map((c) => ({ icon: ic(c.icon), tag: c.label, title: c.title, text: c.desc })),
+      buttons: [btn('View Examples', '/case-studies', 'outline')],
     }),
     grid({
-      background: 'chalk', heading: 'Helpful Resources', columns: '2', card_style: 'feature',
-      cards: D.IntakeResourcesSection.resources.map((c) => ({ icon: ic(c.icon), title: c.title, text: c.desc, link: L('Open', c.href) })),
+      eyebrow: 'Featured Offers', heading: 'Current packages, plans, and next-step offers',
+      intro: LIVE_TEXT.featuredOffersIntro, card_style: 'bordered',
+      cards: D.FeaturedOffersSection.fallbackOffers.map((o) => ({ icon: 'sparkles', tag: 'Start here', title: o.title, text: o.service_name, link: L('Open', o.href) })),
+      buttons: [rbtn('View All Plans', '/plans', 'outline')],
     }),
-    cta({
-      style: 'light', heading: 'After payment, everything is tracked',
-      text: 'Service clients use the client portal for documents, requests, plans, invoices, and deliverables. Training students use the student dashboard for lessons, quizzes, certificates, and resources.',
-      buttons: [rbtn('Choose Portal', '/portal', 'outline')],
-    }),
+    block('service-trust'),
+    // 5. Free tools
     {
       acf_fc_layout: 'resource_download', ...head({ eyebrow: 'Free Tools', heading: 'Start with a checklist or find the right SOL service', intro: 'Capture your next step in a structured way. We keep service enquiries separate from training enrolments and send the right pathway to your inbox.' }),
       resources: D.LeadGrowthToolsSection.RESOURCES.map((r) => ({ key: r.id, title: r.title, text: r.desc, file: '' })),
@@ -94,26 +100,8 @@ const home = {
       results: Object.entries(D.LeadGrowthToolsSection.RECOMMENDATIONS).map(([key, r]) => ({ key, min_percent: 0, title: r.title, subtitle: 'Recommended Pathway', description: r.desc, link: L(r.cta, r.href) })),
       note: '',
     },
-    grid({
-      eyebrow: 'Engagement Examples', heading: 'How SOL typically supports clients and learners',
-      intro: 'Practical examples of how our services, training, documents, and portal workflows come together.', card_style: 'tagged',
-      cards: D.CaseStudiesPreviewSection.items.map((c) => ({ icon: ic(c.icon), tag: c.label, title: c.title, text: c.desc })),
-      buttons: [btn('View Examples', '/case-studies', 'outline')],
-    }),
-    grid({
-      background: 'chalk', eyebrow: 'Featured Offers', heading: 'Current packages, plans, and next-step offers',
-      intro: LIVE_TEXT.featuredOffersIntro, card_style: 'bordered',
-      cards: D.FeaturedOffersSection.fallbackOffers.map((o) => ({ icon: 'sparkles', tag: 'Start here', title: o.title, text: o.service_name, link: L('Open', o.href) })),
-      buttons: [rbtn('View All Plans', '/plans', 'outline')],
-    }),
-    block('service-trust'),
-    block('service-journey'),
-    block('consulting-packages'),
-    block('pricing-tabs'),
-    block('compliance'),
-    block('ndis-roadmap'),
+    // 6. About, standards, questions, contact
     block('about-sol'),
-    block('marketing-packages'),
     textImage({
       background: 'ink', eyebrow: 'Service Standards', heading: 'Built for Australian Providers and Growing Businesses',
       content: `<p>${LIVE_TEXT.serviceStandardsIntro}</p>`,

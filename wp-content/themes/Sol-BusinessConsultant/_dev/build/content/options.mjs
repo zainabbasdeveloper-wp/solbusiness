@@ -5,6 +5,14 @@ import { LIVE_TEXT } from './live-updates.mjs';
 const N = D.Navbar;
 const F = D.Footer;
 const links = (arr) => arr.map((l) => ({ label: l.label, url: route(l.href) }));
+// Icon, one-line description and "view all" link for each mega menu category.
+const MEGA_META = {
+  'NDIS Services': { icon: 'shield-check', desc: 'Registration, audits & readiness', url: route('/ndis-packages') },
+  Training: { icon: 'graduation-cap', desc: 'Support coordination courses', url: route('/training-courses') },
+  'Business Services': { icon: 'briefcase-business', desc: 'Setup, finance & operations', url: '/services/' },
+  Marketing: { icon: 'megaphone', desc: 'SEO, ads & growth campaigns', url: route('/marketing-packages') },
+  'Outsourcing & AI': { icon: 'bot', desc: 'Remote teams & AI data services', url: '/services/' },
+};
 
 export const options = {
   logo: img('sol-logo.jpg'),
@@ -28,11 +36,11 @@ export const options = {
     ...N.NAV_LINKS_AFTER_SERVICES.map((l) => ({ label: l.label, url: l.href, type: 'link' })),
   ],
   mega_menu: N.SERVICE_CATEGORIES.map((c) => ({
-    label: c.label, badge: (c.badge || '').replace(/^⭐\s*/, ''),
+    label: c.label, badge: (c.badge || '').replace(/^⭐\s*/, ''), ...(MEGA_META[c.label] || {}),
     items: c.items.map((i) => ({ label: i.label, url: route(i.href), icon: ic(i.icon), desc: i.desc })),
   })).concat([
     // Services that exist only on the WordPress site.
-    { label: 'Outsourcing & AI', badge: '', items: [
+    { label: 'Outsourcing & AI', badge: '', ...MEGA_META['Outsourcing & AI'], items: [
       { label: 'Admin & Back-Office Support', url: '/services/admin-back-office-support/', icon: 'clipboard-list', desc: 'CRM, scheduling & data entry' },
       { label: 'Offshore Outsourcing & Staff', url: '/services/offshore-outsourcing-staff-solutions/', icon: 'users', desc: 'Managed remote teams' },
       { label: 'AI & Machine Learning', url: '/ai-machine-learning/', icon: 'brain-circuit', desc: 'Data labelling & annotation' },

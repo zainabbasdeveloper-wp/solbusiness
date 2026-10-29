@@ -19,21 +19,65 @@ function sol_item_key( $item ) {
 	return $item['post_type'] . ':' . $item['path'];
 }
 
-/** Hash of what is stored for a post item now (title, template, SCF fields), to detect edits. */
-function sol_post_values_hash( $id, $item, $keys ) {
+/**
+ * Drop sub-fields that were never saved from a raw SCF value. A theme update that adds a new
+ * field then doesn't change the hash, so the item isn't mistaken for one edited in WordPress.
+ * $prefix is the stored meta name of $value; $exists( $meta_name ) says whether it is saved.
+ */
+function sol_prune_unsaved( $value, $prefix, $exists ) {
+	if ( ! is_array( $value ) ) {
+		return $value;
+	}
+	$out = array();
+	foreach ( $value as $k => $v ) {
+		if ( is_string( $k ) && 0 === strpos( $k, 'field_' ) && function_exists( 'acf_get_field' ) ) {
+			$f = acf_get_field( $k );
+			if ( ! $f || empty( $f['name'] ) ) {
+				$out[ $k ] = $v;
+				continue;
+			}
+			$name = $prefix . '_' . $f['name'];
+			if ( ! $exists( $name ) ) {
+				continue;
+			}
+			$out[ $k ] = sol_prune_unsaved( $v, $name, $exists );
+		} elseif ( is_int( $k ) ) {
+			$out[ $k ] = sol_prune_unsaved( $v, $prefix . '_' . $k, $exists );
+		} else {
+			$out[ $k ] = $v;
+		}
+	}
+	return $out;
+}
+
+/**
+ * Hash of what is stored for a post item now (title, template, SCF fields), to detect edits.
+ * $raw = true gives the pre-2.6 hash (including never-saved sub-fields), still accepted for items stamped before.
+ */
+function sol_post_values_hash( $id, $item, $keys, $raw = false ) {
 	$vals = array(
 		'title'    => get_post_field( 'post_title', $id ),
 		'template' => (string) get_post_meta( $id, '_wp_page_template', true ),
 	);
+	$exists = function ( $meta ) use ( $id ) {
+		return metadata_exists( 'post', $id, $meta );
+	};
 	foreach ( array_keys( (array) ( $item['fields'] ?? array() ) ) as $name ) {
-		$vals[ $name ] = get_field( isset( $keys[ $name ] ) ? $keys[ $name ] : $name, $id, false );
+		$v             = get_field( isset( $keys[ $name ] ) ? $keys[ $name ] : $name, $id, false );
+		$vals[ $name ] = $raw ? $v : sol_prune_unsaved( $v, $name, $exists );
 	}
 	return md5( wp_json_encode( $vals ) );
 }
 
-/** Hash of a site setting's stored value. */
-function sol_option_values_hash( $name, $keys ) {
-	return md5( wp_json_encode( get_field( isset( $keys[ $name ] ) ? $keys[ $name ] : $name, 'option', false ) ) );
+/** Hash of a site setting's stored value ($raw: see sol_post_values_hash). */
+function sol_option_values_hash( $name, $keys, $raw = false ) {
+	$v = get_field( isset( $keys[ $name ] ) ? $keys[ $name ] : $name, 'option', false );
+	if ( ! $raw ) {
+		$v = sol_prune_unsaved( $v, 'options_' . $name, function ( $meta ) {
+			return null !== get_option( $meta, null );
+		} );
+	}
+	return md5( wp_json_encode( $v ) );
 }
 
 /** Remember which fingerprint was applied to a post and what it looked like right after. */
@@ -114,7 +158,8 @@ function sol_updates_plan() {
 				continue;
 			}
 			$applied = (string) get_post_meta( $id, '_sol_fp', true );
-			$same    = $applied && get_post_meta( $id, '_sol_values_hash', true ) === sol_post_values_hash( $id, $item, $keys );
+			$stored  = get_post_meta( $id, '_sol_values_hash', true );
+			$same    = $applied && ( $stored === sol_post_values_hash( $id, $item, $keys ) || $stored === sol_post_values_hash( $id, $item, $keys, true ) );
 			$plan[]  = array( 'key' => $key, 'kind' => 'post', 'item' => $item, 'id' => $id, 'state' => sol_update_state( $key, $applied, $same ), 'label' => get_the_title( $id ) );
 		}
 	}
@@ -125,7 +170,7 @@ function sol_updates_plan() {
 		foreach ( array_keys( (array) ( $seed['options'] ?? array() ) ) as $name ) {
 			$key     = 'option:' . $name;
 			$applied = isset( $fp[ $name ] ) ? (string) $fp[ $name ] : '';
-			$same    = $applied && isset( $vh[ $name ] ) && $vh[ $name ] === sol_option_values_hash( $name, $keys );
+			$same    = $applied && isset( $vh[ $name ] ) && ( $vh[ $name ] === sol_option_values_hash( $name, $keys ) || $vh[ $name ] === sol_option_values_hash( $name, $keys, true ) );
 			$plan[]  = array( 'key' => $key, 'kind' => 'option', 'name' => $name, 'state' => sol_update_state( $key, $applied, $same ), 'label' => 'Site setting: ' . $name );
 		}
 	}

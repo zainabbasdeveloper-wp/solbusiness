@@ -358,11 +358,43 @@
             "sub_fields": [
                 {
                     "key": "field_52c3a6b2704ab",
-                    "label": "Column title",
+                    "label": "Category",
                     "name": "label",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "parent_repeater": "field_799760ce21072"
+                },
+                {
+                    "key": "field_6c8464f821bf1",
+                    "label": "Short description",
+                    "name": "desc",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "parent_repeater": "field_799760ce21072"
+                },
+                {
+                    "key": "field_b43248b6fca3b",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Lucide icon name, e.g. shield, graduation-cap, file-check. Browse: https://lucide.dev/icons",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -379,6 +411,22 @@
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "parent_repeater": "field_799760ce21072"
+                },
+                {
+                    "key": "field_4d540783f568d",
+                    "label": "View all link",
+                    "name": "url",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Optional. Defaults to the Services link.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {

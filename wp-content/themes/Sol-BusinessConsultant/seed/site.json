@@ -145,6 +145,9 @@
    {
     "label": "NDIS Services",
     "badge": "Most Popular",
+    "icon": "shield-check",
+    "desc": "Registration, audits & readiness",
+    "url": "/ndis-packages/",
     "items": [
      {
       "label": "NDIS Registration",
@@ -169,6 +172,9 @@
    {
     "label": "Training",
     "badge": "",
+    "icon": "graduation-cap",
+    "desc": "Support coordination courses",
+    "url": "/training-2/",
     "items": [
      {
       "label": "Support Coordination Training",
@@ -187,6 +193,9 @@
    {
     "label": "Business Services",
     "badge": "",
+    "icon": "briefcase-business",
+    "desc": "Setup, finance & operations",
+    "url": "/services/",
     "items": [
      {
       "label": "Company & Business Registration",
@@ -241,6 +250,9 @@
    {
     "label": "Marketing",
     "badge": "",
+    "icon": "megaphone",
+    "desc": "SEO, ads & growth campaigns",
+    "url": "/marketing-packages/",
     "items": [
      {
       "label": "Digital Marketing",
@@ -271,6 +283,9 @@
    {
     "label": "Outsourcing & AI",
     "badge": "",
+    "icon": "bot",
+    "desc": "Remote teams & AI data services",
+    "url": "/services/",
     "items": [
      {
       "label": "Admin & Back-Office Support",
@@ -2888,10 +2903,10 @@
       "acf_fc_layout": "card_grid",
       "section_id": "services",
       "eyebrow": "Our Services",
-      "background": "white",
+      "background": "chalk",
       "align": "left",
       "heading": "Business, NDIS and Digital Services for Every Stage of Growth",
-      "intro": "",
+      "intro": "NDIS registration, compliance, bookkeeping, marketing and remote teams, all delivered by one Australian team and tracked in your own client portal.",
       "source": "services",
       "columns": "3",
       "card_style": "numbered",
@@ -3132,148 +3147,103 @@
       "note": ""
      },
      {
-      "acf_fc_layout": "card_grid",
-      "section_id": "",
-      "eyebrow": "Start With the Right Brief",
-      "background": "chalk",
-      "align": "left",
-      "heading": "Faster quotes, clearer delivery and fewer back-and-forth emails",
-      "intro": "Start with a guided service intake, download a preparation checklist or book a consultation. Learners stay on the training path, while service clients move into the client portal.",
-      "source": "manual",
-      "columns": "2",
-      "card_style": "bordered",
-      "cards": [
-       {
-        "icon": "shield-check",
-        "tag": "Service Intake Path",
-        "title": "NDIS Registration Intake",
-        "text": "Tell us your entity type, registration groups, states, audit pathway and how ready your documents are.",
-        "link": {
-         "title": "Continue",
-         "url": "/get-started/",
-         "target": ""
-        }
-       },
-       {
-        "icon": "globe",
-        "tag": "Service Intake Path",
-        "title": "Website & Automation Brief",
-        "text": "Share your pages, content, domain, examples, workflow needs and launch goals.",
-        "link": {
-         "title": "Continue",
-         "url": "/services/website-development/",
-         "target": ""
-        }
-       },
-       {
-        "icon": "megaphone",
-        "tag": "Service Intake Path",
-        "title": "Marketing & SEO Goals",
-        "text": "Send us your website, target locations, services, competitors and campaign budget.",
-        "link": {
-         "title": "Continue",
-         "url": "/services/social-media-marketing/",
-         "target": ""
-        }
-       },
-       {
-        "icon": "calculator",
-        "tag": "Service Intake Path",
-        "title": "Finance & Payroll Setup",
-        "text": "Outline your bookkeeping, BAS, payroll, staff and reporting needs.",
-        "link": {
-         "title": "Continue",
-         "url": "/services/bookkeeping-bas-lodgement/",
-         "target": ""
-        }
-       }
-      ],
-      "buttons": [
-       {
-        "link": {
-         "title": "Start Service Intake",
-         "url": "/get-started/",
-         "target": ""
-        },
-        "style": "primary"
-       },
-       {
-        "link": {
-         "title": "Browse Training",
-         "url": "/training-2/",
-         "target": ""
-        },
-        "style": "outline"
-       }
-      ],
-      "note": ""
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:pricing-tabs"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:ndis-roadmap"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:compliance"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
      },
      {
       "acf_fc_layout": "card_grid",
       "section_id": "",
-      "eyebrow": "",
+      "eyebrow": "How We Work",
       "background": "chalk",
       "align": "left",
-      "heading": "Free Resources",
-      "intro": "",
+      "heading": "How SOL supports clients and learners",
+      "intro": "Real-world examples of how our services, training, documents and client portal come together.",
       "source": "manual",
-      "columns": "2",
-      "card_style": "feature",
+      "columns": "3",
+      "card_style": "tagged",
       "cards": [
        {
-        "icon": "clipboard-list",
-        "title": "NDIS registration checklist",
-        "text": "A quick guide to preparing documents, registration groups and audit readiness.",
-        "link": {
-         "title": "Open",
-         "url": "/get-started/",
-         "target": ""
-        }
-       },
-       {
-        "icon": "shield-check",
-        "title": "NDIS readiness quiz",
-        "text": "Answer 8 quick questions for a personalised NDIS readiness recommendation.",
-        "link": {
-         "title": "Open",
-         "url": "/readiness-quiz/",
-         "target": ""
-        }
-       },
-       {
-        "icon": "calculator",
-        "title": "NDIS readiness calculator",
-        "text": "Answer 15 questions across five areas to get your NDIS readiness score.",
-        "link": {
-         "title": "Open",
-         "url": "/ndis-readiness-calculator/",
-         "target": ""
-        }
-       },
-       {
-        "icon": "globe",
-        "title": "Website launch checklist",
-        "text": "Prepare content, brand assets, access, pages, forms, SEO and launch approvals.",
-        "link": {
-         "title": "Open",
-         "url": "/services/website-development/",
-         "target": ""
-        }
-       },
-       {
-        "icon": "search",
-        "title": "SEO readiness checklist",
-        "text": "Check your target locations, keywords, website access, Google tools and reporting needs.",
-        "link": {
-         "title": "Open",
-         "url": "/services/search-engine-optimization/",
-         "target": ""
-        }
+        "icon": "file-text",
+        "tag": "NDIS Registration",
+        "title": "Registration preparation pathway",
+        "text": "Service scope review, document readiness, registration group planning and audit preparation."
        },
        {
         "icon": "graduation-cap",
-        "title": "Training pathway guide",
-        "text": "How course access, modules, quizzes, certificates and student records work.",
+        "tag": "Training",
+        "title": "Support coordination training pathway",
+        "text": "Structured modules, quizzes, learning resources and completion records for individuals or teams."
+       },
+       {
+        "icon": "calculator",
+        "tag": "Finance & Compliance",
+        "title": "Operational clean-up pathway",
+        "text": "Bookkeeping, BAS readiness, payroll processes and reporting structure for growing providers."
+       }
+      ],
+      "buttons": [
+       {
+        "link": {
+         "title": "View Examples",
+         "url": "/case-studies/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "card_grid",
+      "section_id": "",
+      "eyebrow": "Featured Offers",
+      "background": "white",
+      "align": "left",
+      "heading": "Current packages, plans and special offers",
+      "intro": "Explore current offers and choose the best starting point for your business.",
+      "source": "manual",
+      "columns": "3",
+      "card_style": "bordered",
+      "cards": [
+       {
+        "icon": "sparkles",
+        "tag": "Start here",
+        "title": "NDIS Registration Support",
+        "text": "NDIS registration preparation, policies and procedures, and audit readiness guidance.",
+        "link": {
+         "title": "Open",
+         "url": "/get-started/",
+         "target": ""
+        }
+       },
+       {
+        "icon": "sparkles",
+        "tag": "Start here",
+        "title": "Website Development",
+        "text": "Mobile-friendly websites, service pages, forms, SEO basics and launch support.",
+        "link": {
+         "title": "Open",
+         "url": "/services/website-development/",
+         "target": ""
+        }
+       },
+       {
+        "icon": "sparkles",
+        "tag": "Start here",
+        "title": "Training Courses",
+        "text": "Support coordination training with quizzes, resources and completion records.",
         "link": {
          "title": "Open",
          "url": "/training-2/",
@@ -3281,29 +3251,21 @@
         }
        }
       ],
-      "buttons": [],
-      "note": ""
-     },
-     {
-      "acf_fc_layout": "cta_banner",
-      "section_id": "",
-      "style": "light",
-      "eyebrow": "",
-      "heading": "After payment, everything is tracked",
-      "text": "Service clients use the client portal for documents, requests, plans, invoices and deliverables. Students use the training dashboard for lessons, quizzes, certificates and resources.",
       "buttons": [
        {
         "link": {
-         "title": "Choose Portal",
-         "url": "https://training.solbusinessconsultant.com.au/portal",
+         "title": "View All Plans",
+         "url": "https://training.solbusinessconsultant.com.au/plans",
          "target": ""
         },
         "style": "outline"
        }
       ],
-      "list": [],
-      "image": "",
       "note": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
      },
      {
       "acf_fc_layout": "resource_download",
@@ -3495,137 +3457,8 @@
       "note": ""
      },
      {
-      "acf_fc_layout": "card_grid",
-      "section_id": "",
-      "eyebrow": "How We Work",
-      "background": "white",
-      "align": "left",
-      "heading": "How SOL supports clients and learners",
-      "intro": "Real-world examples of how our services, training, documents and client portal come together.",
-      "source": "manual",
-      "columns": "3",
-      "card_style": "tagged",
-      "cards": [
-       {
-        "icon": "file-text",
-        "tag": "NDIS Registration",
-        "title": "Registration preparation pathway",
-        "text": "Service scope review, document readiness, registration group planning and audit preparation."
-       },
-       {
-        "icon": "graduation-cap",
-        "tag": "Training",
-        "title": "Support coordination training pathway",
-        "text": "Structured modules, quizzes, learning resources and completion records for individuals or teams."
-       },
-       {
-        "icon": "calculator",
-        "tag": "Finance & Compliance",
-        "title": "Operational clean-up pathway",
-        "text": "Bookkeeping, BAS readiness, payroll processes and reporting structure for growing providers."
-       }
-      ],
-      "buttons": [
-       {
-        "link": {
-         "title": "View Examples",
-         "url": "/case-studies/",
-         "target": ""
-        },
-        "style": "outline"
-       }
-      ],
-      "note": ""
-     },
-     {
-      "acf_fc_layout": "card_grid",
-      "section_id": "",
-      "eyebrow": "Featured Offers",
-      "background": "chalk",
-      "align": "left",
-      "heading": "Current packages, plans and special offers",
-      "intro": "Explore current offers and choose the best starting point for your business.",
-      "source": "manual",
-      "columns": "3",
-      "card_style": "bordered",
-      "cards": [
-       {
-        "icon": "sparkles",
-        "tag": "Start here",
-        "title": "NDIS Registration Support",
-        "text": "NDIS registration preparation, policies and procedures, and audit readiness guidance.",
-        "link": {
-         "title": "Open",
-         "url": "/get-started/",
-         "target": ""
-        }
-       },
-       {
-        "icon": "sparkles",
-        "tag": "Start here",
-        "title": "Website Development",
-        "text": "Mobile-friendly websites, service pages, forms, SEO basics and launch support.",
-        "link": {
-         "title": "Open",
-         "url": "/services/website-development/",
-         "target": ""
-        }
-       },
-       {
-        "icon": "sparkles",
-        "tag": "Start here",
-        "title": "Training Courses",
-        "text": "Support coordination training with quizzes, resources and completion records.",
-        "link": {
-         "title": "Open",
-         "url": "/training-2/",
-         "target": ""
-        }
-       }
-      ],
-      "buttons": [
-       {
-        "link": {
-         "title": "View All Plans",
-         "url": "https://training.solbusinessconsultant.com.au/plans",
-         "target": ""
-        },
-        "style": "outline"
-       }
-      ],
-      "note": ""
-     },
-     {
-      "acf_fc_layout": "reusable_block",
-      "block": "ref:sol_block:service-trust"
-     },
-     {
-      "acf_fc_layout": "reusable_block",
-      "block": "ref:sol_block:service-journey"
-     },
-     {
-      "acf_fc_layout": "reusable_block",
-      "block": "ref:sol_block:consulting-packages"
-     },
-     {
-      "acf_fc_layout": "reusable_block",
-      "block": "ref:sol_block:pricing-tabs"
-     },
-     {
-      "acf_fc_layout": "reusable_block",
-      "block": "ref:sol_block:compliance"
-     },
-     {
-      "acf_fc_layout": "reusable_block",
-      "block": "ref:sol_block:ndis-roadmap"
-     },
-     {
       "acf_fc_layout": "reusable_block",
       "block": "ref:sol_block:about-sol"
-     },
-     {
-      "acf_fc_layout": "reusable_block",
-      "block": "ref:sol_block:marketing-packages"
      },
      {
       "acf_fc_layout": "text_image",
@@ -14258,7 +14091,7 @@
   "sol_block:training-faq": "ed6ea5866639c433",
   "sol_block:contact": "3841f3f7c0d55a0b",
   "sol_block:service-comparison": "a8bc97567e04f3df",
-  "page:home": "1ca688081199e90a",
+  "page:home": "a06d273feb4c546e",
   "page:about": "de892520adefe479",
   "page:contact": "f65fd873425acef2",
   "page:faq": "fdbbfdf1f8f6f0cb",
@@ -14339,7 +14172,7 @@
   "option:website_label": "e5b69164fcf109f5",
   "option:business_hours": "094a2010dc561f57",
   "option:nav_items": "884337fb7d7e99f4",
-  "option:mega_menu": "9599ef842ba69325",
+  "option:mega_menu": "e67cc0d6d327ae05",
   "option:mega_promo": "059eacbf67bab373",
   "option:header_buttons": "ad19c15dd586ab4d",
   "option:portal_links": "e4c41918dc71cb97",
@@ -14364,10 +14197,15 @@
  },
  "history": {
   "page:home": [
+   "1ca688081199e90a",
    "11c8fdbf0fe45b61",
    "eea177346d8ff45b",
    "806e6bbf05a6bb85",
    "1199fbf5a0344c12"
+  ],
+  "option:mega_menu": [
+   "9599ef842ba69325",
+   "cdd63d1ecec03dc4"
   ],
   "sol_block:pricing-tabs": [
    "d30f827c7699d52d",
@@ -14630,9 +14468,6 @@
   ],
   "option:default_success": [
    "86af238f7c0a78f6"
-  ],
-  "option:mega_menu": [
-   "cdd63d1ecec03dc4"
   ],
   "option:footer_columns": [
    "00786a3c1c122e79",
@@ -15649,5 +15484,5 @@
    }
   ]
  },
- "build": "5ed7f3fab7a733e2"
+ "build": "a441714fcb997a50"
 }

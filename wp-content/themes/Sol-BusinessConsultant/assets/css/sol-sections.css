@@ -1,0 +1,102 @@
+/* SOL section rhythm: dividers between sections, textured and dark bands, section heads and
+   scroll-in animations. Applies to every SOL page; the home page uses all of it. */
+
+/* ---------- Section heads ---------- */
+.sol-eyebrow { display: inline-flex; align-items: center; gap: 12px; }
+.sol-eyebrow::before { content: ""; width: 28px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, var(--sol-harvest), #fbbf24); flex-shrink: 0; }
+.sol-head--center .sol-eyebrow::after { content: ""; width: 28px; height: 2px; border-radius: 2px; background: linear-gradient(270deg, var(--sol-harvest), #fbbf24); flex-shrink: 0; }
+.sol-title { letter-spacing: -.02em; }
+.sol-rule { width: 96px; height: 3px; border-radius: 3px; background: linear-gradient(90deg, var(--sol-harvest), #fbbf24 60%, rgba(251, 191, 36, 0)); transform-origin: left center; }
+.sol-head--center .sol-rule { transform-origin: center; background: linear-gradient(90deg, rgba(251, 191, 36, 0), var(--sol-harvest) 30%, #fbbf24 70%, rgba(251, 191, 36, 0)); }
+
+/* Wide screens: left-aligned heads with an intro put the intro beside the title. */
+@media (min-width: 1024px) {
+	.sol-head--left:has(.sol-intro):has(.sol-title) { max-width: none; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); column-gap: 64px; align-items: end; }
+	.sol-head--left:has(.sol-intro):has(.sol-title) > :not(.sol-intro) { grid-column: 1; }
+	.sol-head--left:has(.sol-intro):has(.sol-title) > .sol-intro { grid-column: 2; grid-row: 1 / span 3; align-self: end; margin-top: 0; padding-left: 24px; border-left: 2px solid rgba(217, 119, 6, .25); }
+}
+
+/* ---------- Dividers ---------- */
+/* Two sections in a row with the same light background get a divider instead of running together. */
+.sol-section.sol-bg-white + .sol-section.sol-bg-white,
+.sol-section.sol-bg-chalk + .sol-section.sol-bg-chalk { padding-top: 72px; }
+@media (min-width: 768px) {
+	.sol-section.sol-bg-white + .sol-section.sol-bg-white,
+	.sol-section.sol-bg-chalk + .sol-section.sol-bg-chalk { padding-top: 88px; }
+}
+.sol-section.sol-bg-white + .sol-section.sol-bg-white::before,
+.sol-section.sol-bg-chalk + .sol-section.sol-bg-chalk::before {
+	content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+	width: min(1216px, calc(100% - 2 * var(--sol-gutter))); height: 1px;
+	background: linear-gradient(90deg, rgba(15, 23, 42, 0), rgba(15, 23, 42, .12) 18%, rgba(217, 119, 6, .55) 50%, rgba(15, 23, 42, .12) 82%, rgba(15, 23, 42, 0));
+}
+.sol-section.sol-bg-white + .sol-section.sol-bg-white::after,
+.sol-section.sol-bg-chalk + .sol-section.sol-bg-chalk::after {
+	content: ""; position: absolute; top: -5px; left: 50%; width: 10px; height: 10px; margin-left: -5px;
+	transform: rotate(45deg); border: 2px solid var(--sol-harvest); background-color: #fff; border-radius: 2px;
+}
+.sol-section.sol-bg-chalk + .sol-section.sol-bg-chalk::after { background-color: var(--sol-chalk); }
+
+/* ---------- Light grey bands ---------- */
+.sol-section.sol-bg-chalk {
+	background-color: #f6f8fb;
+	background-image: radial-gradient(rgba(15, 23, 42, .075) 1px, transparent 1.3px);
+	background-size: 24px 24px;
+	background-position: center top;
+	box-shadow: inset 0 1px 0 rgba(15, 23, 42, .05), inset 0 -1px 0 rgba(15, 23, 42, .05);
+}
+.sol-section.sol-bg-chalk + .sol-section.sol-bg-chalk { box-shadow: inset 0 -1px 0 rgba(15, 23, 42, .05); }
+.sol-section.sol-bg-chalk .sol-card:not(.sol-card--dark):not(.sol-card--plain) { box-shadow: 0 1px 2px rgba(15, 23, 42, .04); }
+
+/* ---------- Dark bands ---------- */
+.sol-main > .sol-section.sol-bg-ink { isolation: isolate; overflow: hidden; }
+.sol-main > .sol-section.sol-bg-ink::before {
+	content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+	background:
+		radial-gradient(600px 360px at 88% 0%, rgba(217, 119, 6, .22), transparent 70%),
+		radial-gradient(500px 320px at 0% 100%, rgba(59, 130, 246, .10), transparent 70%);
+}
+.sol-main > .sol-section.sol-bg-ink::after {
+	content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+	background-image: linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
+	background-size: 56px 56px;
+	-webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 0%, transparent 75%);
+	mask-image: radial-gradient(ellipse at 50% 0%, #000 0%, transparent 75%);
+}
+/* A run of dark sections reads as one band: only the first one keeps the glow. */
+.sol-main > .sol-section.sol-bg-ink + .sol-section.sol-bg-ink::before { background: radial-gradient(500px 300px at 10% 100%, rgba(217, 119, 6, .12), transparent 70%); }
+.sol-main > .sol-section.sol-bg-ink + .sol-section.sol-bg-ink::after { display: none; }
+
+/* Curved top edge where a light section meets a dark band. */
+.sol-main > .sol-section:not(.sol-bg-ink):not(.sol-hero) + .sol-section.sol-bg-ink { border-radius: 44px 44px 0 0; margin-top: -1px; }
+@media (max-width: 767px) { .sol-main > .sol-section:not(.sol-bg-ink):not(.sol-hero) + .sol-section.sol-bg-ink { border-radius: 28px 28px 0 0; } }
+
+/* ---------- Call-to-action boxes ---------- */
+.sol-cta__box { overflow: hidden; isolation: isolate; }
+.sol-cta--dark .sol-cta__box::before {
+	content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+	background: radial-gradient(420px 260px at 100% 0%, rgba(217, 119, 6, .28), transparent 70%), radial-gradient(380px 240px at 0% 100%, rgba(251, 191, 36, .08), transparent 70%);
+}
+.sol-cta--light .sol-cta__box { background: linear-gradient(135deg, #fff 0%, #fffbeb 100%); }
+
+/* ---------- Cards ---------- */
+.sol-card { will-change: auto; }
+.sol-card:hover { transform: translateY(-4px); }
+.sol-card--bordered::after, .sol-card--numbered::after, .sol-card--tagged::after, .sol-card--feature::after {
+	content: ""; position: absolute; left: 24px; right: 24px; top: -1px; height: 2px; border-radius: 2px;
+	background: linear-gradient(90deg, var(--sol-harvest), #fbbf24); transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
+}
+.sol-card--bordered:hover::after, .sol-card--numbered:hover::after, .sol-card--tagged:hover::after, .sol-card--feature:hover::after { transform: scaleX(1); }
+
+/* ---------- Scroll-in animations (only when JS runs and motion is allowed) ---------- */
+.sol-anim .sol-reveal { opacity: 0; transform: translate3d(0, 28px, 0); transition: opacity .75s cubic-bezier(.2, .7, .2, 1), transform .75s cubic-bezier(.2, .7, .2, 1); transition-delay: calc(var(--sol-d, 0) * 90ms); }
+.sol-anim .sol-reveal--left { transform: translate3d(-36px, 0, 0); }
+.sol-anim .sol-reveal--right { transform: translate3d(36px, 0, 0); }
+.sol-anim .sol-reveal--zoom { transform: scale(.96); }
+.sol-anim .sol-reveal.is-in { opacity: 1; transform: none; }
+.sol-anim .sol-head.sol-reveal .sol-rule { transform: scaleX(0); transition: transform 1s cubic-bezier(.2, .7, .2, 1) .35s; }
+.sol-anim .sol-head.sol-reveal.is-in .sol-rule { transform: scaleX(1); }
+
+/* Scroll progress bar under the header. */
+.sol-progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; transform-origin: left; transform: scaleX(var(--sol-progress, 0)); background: linear-gradient(90deg, var(--sol-harvest), #fbbf24); pointer-events: none; }
+@media print { .sol-anim .sol-reveal { opacity: 1 !important; transform: none !important; } }
