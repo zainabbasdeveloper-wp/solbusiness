@@ -88,15 +88,22 @@
 }
 .sol-card--bordered:hover::after, .sol-card--numbered:hover::after, .sol-card--tagged:hover::after, .sol-card--feature:hover::after { transform: scaleX(1); }
 
-/* ---------- Scroll-in animations (only when JS runs and motion is allowed) ---------- */
-.sol-anim .sol-reveal { opacity: 0; transform: translate3d(0, 28px, 0); transition: opacity .75s cubic-bezier(.2, .7, .2, 1), transform .75s cubic-bezier(.2, .7, .2, 1); transition-delay: calc(var(--sol-d, 0) * 90ms); }
-.sol-anim .sol-reveal--left { transform: translate3d(-36px, 0, 0); }
-.sol-anim .sol-reveal--right { transform: translate3d(36px, 0, 0); }
-.sol-anim .sol-reveal--zoom { transform: scale(.96); }
-.sol-anim .sol-reveal.is-in { opacity: 1; transform: none; }
-.sol-anim .sol-head.sol-reveal .sol-rule { transform: scaleX(0); transition: transform 1s cubic-bezier(.2, .7, .2, 1) .35s; }
-.sol-anim .sol-head.sol-reveal.is-in .sol-rule { transform: scaleX(1); }
+/* ---------- Scroll-in animations ----------
+   Content is never hidden by default. sol.js adds .sol-in to an element only at the moment it is
+   about to scroll into view; the animation then plays once. If the script is delayed, blocked or
+   never runs, or this rule is stripped by an optimisation plugin, everything simply shows. */
+@media (prefers-reduced-motion: no-preference) {
+	.sol-in { animation: sol-in-up .75s cubic-bezier(.2, .7, .2, 1) backwards; animation-delay: calc(var(--sol-d, 0) * 90ms); }
+	.sol-in.sol-in--left { animation-name: sol-in-left; }
+	.sol-in.sol-in--right { animation-name: sol-in-right; }
+	.sol-in.sol-in--zoom { animation-name: sol-in-zoom; }
+	.sol-head.sol-in .sol-rule { animation: sol-in-rule 1s cubic-bezier(.2, .7, .2, 1) .35s backwards; }
+}
+@keyframes sol-in-up { from { opacity: 0; transform: translate3d(0, 28px, 0); } }
+@keyframes sol-in-left { from { opacity: 0; transform: translate3d(-36px, 0, 0); } }
+@keyframes sol-in-right { from { opacity: 0; transform: translate3d(36px, 0, 0); } }
+@keyframes sol-in-zoom { from { opacity: 0; transform: scale(.96); } }
+@keyframes sol-in-rule { from { transform: scaleX(0); } }
 
 /* Scroll progress bar under the header. */
 .sol-progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; transform-origin: left; transform: scaleX(var(--sol-progress, 0)); background: linear-gradient(90deg, var(--sol-harvest), #fbbf24); pointer-events: none; }
-@media print { .sol-anim .sol-reveal { opacity: 1 !important; transform: none !important; } }

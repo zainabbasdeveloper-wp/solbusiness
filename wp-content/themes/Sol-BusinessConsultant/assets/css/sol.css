@@ -682,11 +682,6 @@ i.sol-icon { font-style: normal; }
 .sol-cookie .sol-btn { padding: 10px 18px; flex-shrink: 0; }
 @media (min-width: 640px) { .sol-cookie { right: auto; } }
 
-/* ---------- Motion ---------- */
-@media (prefers-reduced-motion: no-preference) {
-	.sol-reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-	.sol-reveal.is-visible { opacity: 1; transform: none; }
-}
 
 /* ---------- Default page / archive (cart, checkout, account, unconverted pages) ---------- */
 .sol-page-content { max-width: 1180px; margin: 0 auto; padding: 48px var(--sol-gutter) 72px; font-family: var(--sol-font); color: var(--sol-ink); }

@@ -421,12 +421,6 @@
 			window.addEventListener('scroll', function () { top.hidden = window.scrollY < 600; }, { passive: true });
 			top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 		}
-		if ('IntersectionObserver' in window) {
-			var io = new IntersectionObserver(function (entries) {
-				entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); } });
-			}, { rootMargin: '0px 0px -10% 0px' });
-			$$('.sol-section .sol-head, .sol-card, .sol-package, .sol-step, .sol-panel').forEach(function (el) { el.classList.add('sol-reveal'); io.observe(el); });
-		}
 	}
 
 	/* ---------- Showcase hero: counting stats + mouse spotlight ---------- */
@@ -485,42 +479,52 @@
 			update();
 		}
 		if (!root.classList.contains('sol-anim') || !('IntersectionObserver' in window)) { return; }
+		// Nothing is hidden up front: an element only gets the .sol-in animation when it is about to
+		// scroll into view, so content always shows even if this code never runs.
 		var items = [];
 		var add = function (el, delay, kind) {
-			if (!el || el.classList.contains('sol-reveal')) { return; }
-			el.classList.add('sol-reveal');
-			if (kind) { el.classList.add('sol-reveal--' + kind); }
-			el.style.setProperty('--sol-d', delay || 0);
+			if (!el || el._solIn) { return; }
+			el._solIn = { d: delay || 0, k: kind || '' };
 			items.push(el);
 		};
 		$$('.sol-main .sol-section').forEach(function (sec) {
 			if (sec.classList.contains('sol-hero') || sec.closest('.sol-hero')) { return; }
 			add($('.sol-head', sec), 0);
-			// Children of grids and lists come in one after another.
-			$$('.sol-grid, .sol-step-list, .sol-resource-list, .sol-accordion, .sol-logos, .sol-pills', sec).forEach(function (grid) {
+			$$('.sol-grid, .sol-step-list, .sol-resource-list, .sol-accordion, .sol-pills', sec).forEach(function (grid) {
 				Array.prototype.slice.call(grid.children).forEach(function (child, i) { add(child, Math.min(i % 8, 6) + 1); });
 			});
-			// Text + image layouts slide in from each side.
 			$$('.sol-split', sec).forEach(function (split) {
-				var kids = Array.prototype.slice.call(split.children);
-				kids.forEach(function (child, i) { add(child, i + 1, i === 0 ? 'left' : 'right'); });
+				Array.prototype.slice.call(split.children).forEach(function (child, i) { add(child, i + 1, i === 0 ? 'left' : 'right'); });
 			});
 			add($('.sol-cta__box', sec), 0, 'zoom');
-			$$('.sol-buttons--after, .sol-table-wrap, .sol-tabs', sec).forEach(function (el) { add(el, 2); });
+			// Cards, packages and steps outside those lists.
+			$$('.sol-card, .sol-package, .sol-step, .sol-panel', sec).forEach(function (el) {
+				add(el, Math.min(Array.prototype.indexOf.call(el.parentNode.children, el), 6) + 1);
+			});
 		});
-		var done = function (el) {
-			// Hand the element back to its own hover transitions once it has arrived.
-			setTimeout(function () { el.classList.remove('sol-reveal', 'sol-reveal--left', 'sol-reveal--right', 'sol-reveal--zoom', 'is-in'); el.style.removeProperty('--sol-d'); }, 1500);
+		var play = function (el) {
+			var o = el._solIn;
+			el.style.setProperty('--sol-d', o.d);
+			if (o.k) { el.classList.add('sol-in--' + o.k); }
+			el.classList.add('sol-in');
+			el.addEventListener('animationend', function end(e) {
+				if (e.target !== el) { return; }
+				el.removeEventListener('animationend', end);
+				el.classList.remove('sol-in', 'sol-in--left', 'sol-in--right', 'sol-in--zoom');
+				el.style.removeProperty('--sol-d');
+			});
 		};
+		// Trigger a little before the element reaches the screen, so it never shows and then jumps.
 		var io = new IntersectionObserver(function (entries) {
 			entries.forEach(function (e) {
-				if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); done(e.target); }
+				if (e.isIntersecting) { io.unobserve(e.target); play(e.target); }
 			});
-		}, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+		}, { rootMargin: '0px 0px 12% 0px', threshold: 0 });
+		var vh = window.innerHeight || document.documentElement.clientHeight;
 		items.forEach(function (el) {
-			// Anything already above the fold on load (e.g. after a refresh halfway down) shows at once.
 			var r = el.getBoundingClientRect();
-			if (r.bottom < 0) { el.classList.add('is-in'); done(el); return; }
+			// Already on screen when the page loads (or above it): leave it as it is.
+			if (r.top < vh) { return; }
 			io.observe(el);
 		});
 	}
