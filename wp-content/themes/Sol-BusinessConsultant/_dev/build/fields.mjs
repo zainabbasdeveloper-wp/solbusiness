@@ -149,7 +149,7 @@ export const LAYOUTS = [
   ]),
   layout('cta_banner', 'Call to Action Banner', [
     text('section_id', 'Anchor ID'),
-    select('style', 'Style', { dark: 'Dark navy', amber: 'Amber', light: 'Light', image: 'Image with overlay', strip: 'Slim amber strip' }, { default_value: 'dark' }),
+    select('style', 'Style', { dark: 'Dark navy', amber: 'Amber', light: 'Light', soft: 'Soft - centred and warm (good for page endings)', image: 'Image with overlay', strip: 'Slim amber strip' }, { default_value: 'dark' }),
     text('eyebrow', 'Eyebrow'),
     textarea('heading', 'Heading', { rows: 2 }),
     textarea('text', 'Text', { rows: 3 }),

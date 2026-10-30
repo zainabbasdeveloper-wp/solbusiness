@@ -226,3 +226,26 @@
 }
 .sol-steps--cards .sol-step__title { transition: color .3s ease; }
 .sol-steps--cards .sol-step:hover .sol-step__title { color: var(--sol-harvest-dark); }
+
+/* ---------- CTA "soft": a centred, warm invitation for page endings ---------- */
+.sol-cta--soft { padding: 64px 0 88px; }
+.sol-cta--soft .sol-cta__box {
+	max-width: 900px; margin: 0 auto; padding: 56px 24px; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0;
+	border-radius: 32px; border: 1px solid rgba(217, 119, 6, .16);
+	background: radial-gradient(60% 70% at 50% 0%, rgba(251, 191, 36, .2), transparent 70%), linear-gradient(180deg, #fffaf0 0%, #fff 70%);
+	box-shadow: 0 30px 60px -40px rgba(15, 23, 42, .35), 0 1px 2px rgba(15, 23, 42, .04);
+}
+@media (min-width: 768px) { .sol-cta--soft .sol-cta__box { padding: 72px 64px; } }
+.sol-cta--soft .sol-cta__box::before { content: ""; position: absolute; left: 50%; top: -220px; width: 520px; height: 520px; margin-left: -260px; border-radius: 50%; border: 1px dashed rgba(217, 119, 6, .18); pointer-events: none; }
+.sol-cta--soft .sol-cta__box::after { content: ""; position: absolute; left: 50%; top: -150px; width: 380px; height: 380px; margin-left: -190px; border-radius: 50%; border: 1px solid rgba(217, 119, 6, .1); pointer-events: none; }
+.sol-cta--soft .sol-cta__content { max-width: 620px; display: flex; flex-direction: column; align-items: center; }
+.sol-cta--soft .sol-eyebrow { display: inline-flex; padding: 6px 14px; border-radius: 999px; background: #fef3c7; color: var(--sol-harvest-dark); }
+.sol-cta--soft .sol-cta__title { margin-top: 18px; font-size: clamp(2rem, 4.4vw, 3rem); line-height: 1.08; letter-spacing: -.025em; }
+.sol-cta--soft .sol-cta__text { max-width: 520px; margin-top: 16px; font-size: 1.06rem; line-height: 1.65; color: var(--sol-mist); }
+.sol-cta--soft .sol-checks--inline { justify-content: center; gap: 10px; margin-top: 24px; }
+.sol-cta--soft .sol-checks--inline li { align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--sol-border); font-size: .88rem; font-weight: 600; color: var(--sol-ink-2); box-shadow: 0 4px 12px -10px rgba(15, 23, 42, .4); }
+.sol-cta--soft .sol-checks__icon { margin-top: 0; width: 16px; height: 16px; color: var(--sol-green); }
+.sol-cta--soft .sol-cta__buttons { justify-content: center; margin-top: 32px; }
+.sol-cta--soft .sol-btn--light { background: #fff; color: var(--sol-ink) !important; border-color: rgba(15, 23, 42, .15); }
+.sol-cta--soft .sol-btn--light:hover { border-color: var(--sol-ink); }
+.sol-cta--soft .sol-cta__note { margin-top: 18px; text-align: center; }

@@ -445,7 +445,7 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | Field name | Type | Label / notes |
 |---|---|---|
 | `section_id` | Text | Anchor ID |
-| `style` | Select: `dark`, `amber`, `light`, `image`, `strip` | Style |
+| `style` | Select: `dark`, `amber`, `light`, `soft`, `image`, `strip` | Style |
 | `eyebrow` | Text | Eyebrow |
 | `heading` | Text area | Heading |
 | `text` | Text area | Text |

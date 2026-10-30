@@ -315,6 +315,11 @@
   "text": "Service Standards"
  },
  {
+  "id": "5aa5c8c1",
+  "where": "page:home",
+  "text": "Explore the practical service standards that guide how we work with Australian providers and businesses."
+ },
+ {
   "id": "9d86e46b",
   "where": "page:home",
   "text": "Human support"
@@ -323,6 +328,46 @@
   "id": "693dc1de",
   "where": "page:home",
   "text": "Responsive follow-up"
+ },
+ {
+  "id": "eef4ca43",
+  "where": "page:home",
+  "text": "Free consultation"
+ },
+ {
+  "id": "ced46a7d",
+  "where": "page:home",
+  "text": "Ready to Build\nYour Foundation?"
+ },
+ {
+  "id": "f74b9a21",
+  "where": "page:home",
+  "text": "Tell us where you are today and we'll map a clear, practical next step. No pressure, no jargon."
+ },
+ {
+  "id": "a1706049",
+  "where": "page:home",
+  "text": "Book a Free Consultation"
+ },
+ {
+  "id": "4af504af",
+  "where": "page:home",
+  "text": "WhatsApp Us"
+ },
+ {
+  "id": "c0e6c990",
+  "where": "page:home",
+  "text": "Free 30-minute call"
+ },
+ {
+  "id": "efa4f170",
+  "where": "page:home",
+  "text": "Reply within one business day"
+ },
+ {
+  "id": "18ac4821",
+  "where": "page:home",
+  "text": "No obligation"
  },
  {
   "id": "738d204f",
@@ -4863,16 +4908,6 @@
   "id": "26e00b08",
   "where": "sol_block:contact",
   "text": "Get In Touch"
- },
- {
-  "id": "ced46a7d",
-  "where": "sol_block:contact",
-  "text": "Ready to Build\nYour Foundation?"
- },
- {
-  "id": "4af504af",
-  "where": "sol_block:contact",
-  "text": "WhatsApp Us"
  },
  {
   "id": "aaf9a507",

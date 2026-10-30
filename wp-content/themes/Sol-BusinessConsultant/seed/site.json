@@ -3477,38 +3477,16 @@
       "block": "ref:sol_block:about-sol"
      },
      {
-      "acf_fc_layout": "text_image",
-      "section_id": "",
-      "eyebrow": "Service Standards",
-      "background": "ink",
-      "align": "left",
-      "heading": "Built for Australian NDIS Providers and Growing Businesses",
-      "intro": "",
-      "content": "<p>The service standards that guide how we work with NDIS providers and businesses across Australia.</p>",
-      "image": "",
-      "image_alt": "",
-      "image_position": "left",
-      "image_badge": "",
-      "stats": [],
-      "checklist": [],
-      "buttons": [],
-      "callout": {
-       "icon": "message-square",
-       "title": "",
-       "text": "Have a project in mind? Send an enquiry and we will confirm the scope, cost and likely timing before any paid work begins."
-      }
-     },
-     {
       "acf_fc_layout": "card_grid",
       "section_id": "",
-      "eyebrow": "",
-      "background": "ink",
-      "align": "left",
-      "heading": "",
-      "intro": "",
+      "eyebrow": "Service Standards",
+      "background": "white",
+      "align": "center",
+      "heading": "Built for Australian NDIS Providers and Growing Businesses",
+      "intro": "Explore the practical service standards that guide how we work with Australian providers and businesses.",
       "source": "manual",
       "columns": "4",
-      "card_style": "dark",
+      "card_style": "bordered",
       "cards": [
        {
         "icon": "shield-check",
@@ -3535,44 +3513,47 @@
       "note": ""
      },
      {
-      "acf_fc_layout": "checklist",
-      "section_id": "",
-      "eyebrow": "How We Help Businesses",
-      "background": "ink",
-      "align": "left",
-      "heading": "",
-      "intro": "",
-      "style": "checks",
-      "columns": "3",
-      "items": [
-       {
-        "item": "NDIS provider registration and audit readiness"
-       },
-       {
-        "item": "NDIS policies, procedures and compliance documents"
-       },
-       {
-        "item": "Business systems and workflow automation"
-       },
-       {
-        "item": "Bookkeeping, BAS and operations support"
-       },
-       {
-        "item": "Websites, digital marketing and lead generation"
-       },
-       {
-        "item": "Support coordination training and resources"
-       }
-      ],
-      "buttons": []
-     },
-     {
       "acf_fc_layout": "reusable_block",
       "block": "ref:sol_block:general-faq"
      },
      {
-      "acf_fc_layout": "reusable_block",
-      "block": "ref:sol_block:contact"
+      "acf_fc_layout": "cta_banner",
+      "section_id": "",
+      "style": "soft",
+      "eyebrow": "Free consultation",
+      "heading": "Ready to Build\nYour Foundation?",
+      "text": "Tell us where you are today and we'll map a clear, practical next step. No pressure, no jargon.",
+      "buttons": [
+       {
+        "link": {
+         "title": "Book a Free Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "WhatsApp Us",
+         "url": "https://wa.me/61460003494?text=Hi%20SOL%20Business%20Consultant%2C%20I%27d%20like%20to%20book%20a%20consultation.",
+         "target": "_blank"
+        },
+        "style": "light"
+       }
+      ],
+      "list": [
+       {
+        "item": "Free 30-minute call"
+       },
+       {
+        "item": "Reply within one business day"
+       },
+       {
+        "item": "No obligation"
+       }
+      ],
+      "image": "",
+      "note": ""
      }
     ]
    }
@@ -14142,7 +14123,7 @@
   "sol_block:training-faq": "ed6ea5866639c433",
   "sol_block:contact": "3841f3f7c0d55a0b",
   "sol_block:service-comparison": "a8bc97567e04f3df",
-  "page:home": "2238b34ac329e855",
+  "page:home": "5d0b2f783a7641d6",
   "page:about": "de892520adefe479",
   "page:contact": "f65fd873425acef2",
   "page:faq": "fdbbfdf1f8f6f0cb",
@@ -14254,6 +14235,15 @@
   "option:chat_instructions": "dd29ecf524b030a6"
  },
  "history": {
+  "page:home": [
+   "2238b34ac329e855",
+   "a06d273feb4c546e",
+   "1ca688081199e90a",
+   "11c8fdbf0fe45b61",
+   "eea177346d8ff45b",
+   "806e6bbf05a6bb85",
+   "1199fbf5a0344c12"
+  ],
   "sol_block:about-sol": [
    "b78c43a57d086264",
    "3fbd72bed978eb35"
@@ -14266,14 +14256,6 @@
    "a8de7a79d5492d12",
    "6eef4f3e4679b146",
    "32137992bedb053b"
-  ],
-  "page:home": [
-   "a06d273feb4c546e",
-   "1ca688081199e90a",
-   "11c8fdbf0fe45b61",
-   "eea177346d8ff45b",
-   "806e6bbf05a6bb85",
-   "1199fbf5a0344c12"
   ],
   "page:marketing-packages": [
    "bd8c4af89e8ba89e",
@@ -15582,5 +15564,5 @@
    }
   ]
  },
- "build": "345e5e6bd8970130"
+ "build": "46b8847bced15381"
 }

@@ -102,15 +102,20 @@ const home = {
     },
     // 6. About, standards, questions, contact
     block('about-sol'),
-    textImage({
-      background: 'ink', eyebrow: 'Service Standards', heading: 'Built for Australian Providers and Growing Businesses',
-      content: `<p>${LIVE_TEXT.serviceStandardsIntro}</p>`,
-      callout: { icon: 'message-square', title: '', text: 'Have a project in mind? Use the enquiry form and we will confirm scope, cost, and likely timing before any paid work begins.' },
+    // One light section instead of three dark ones (intro, cards and checklist).
+    grid({
+      background: 'white', align: 'center', eyebrow: 'Service Standards', heading: 'Built for Australian Providers and Growing Businesses',
+      intro: LIVE_TEXT.serviceStandardsIntro, columns: '4', card_style: 'bordered',
+      cards: D.TestimonialSection.STANDARDS.map((s) => ({ icon: ic(s.icon), title: s.title, text: s.desc })),
     }),
-    grid({ background: 'ink', columns: '4', card_style: 'dark', cards: D.TestimonialSection.STANDARDS.map((s) => ({ icon: ic(s.icon), title: s.title, text: s.desc })) }),
-    checklist({ background: 'ink', eyebrow: 'Common Support Areas', items: items(D.TestimonialSection.WORK_AREAS) }),
     block('general-faq'),
-    block('contact'),
+    // A friendly closing invitation; the full enquiry form lives on the Contact and Book Consultation pages.
+    cta({
+      style: 'soft', eyebrow: 'Free consultation', heading: 'Ready to Build\nYour Foundation?',
+      text: "Tell us where you are today and we'll map a clear, practical next step. No pressure, no jargon.",
+      list: items(['Free 30-minute call', 'Reply within one business day', 'No obligation']),
+      buttons: [btn('Book a Free Consultation', '/book-consultation'), { link: { title: 'WhatsApp Us', url: D.ContactSection.WHATSAPP_LINK, target: '_blank' }, style: 'light' }],
+    }),
   ],
 };
 

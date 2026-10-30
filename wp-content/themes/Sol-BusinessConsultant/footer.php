@@ -1,8 +1,8 @@
 <?php
 /**
  * Site footer for every page (replaces any Elementor theme-builder footer).
- * Layout: CTA card, brand + contact + newsletter row, link columns (accordions on phones),
- * a large faded wordmark and a bottom bar with legal links. Styles: assets/css/sol-footer.css.
+ * Layout: brand + contact on the left, a one-line invitation and a compact newsletter field on the right,
+ * link columns (accordions on phones) and a bottom bar with legal links. Styles: assets/css/sol-footer.css.
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -40,27 +40,6 @@ foreach ( $columns as $i => $col ) {
 ?>
 </div><!-- sol-main -->
 <footer class="sol-footer">
-	<?php if ( $cta_h ) : ?>
-		<div class="sol-container">
-			<div class="sol-footer__cta">
-				<div class="sol-footer__cta-copy">
-					<p class="sol-footer__kicker"><span aria-hidden="true"></span>Free consultation</p>
-					<h2 class="sol-footer__cta-title"><?php echo wp_kses( str_replace( '|', '<br>', esc_html( $cta_h ) ), array( 'br' => array() ) ); ?></h2>
-					<p class="sol-footer__cta-text"><?php echo esc_html( sol_opt( 'footer_cta_text' ) ); ?></p>
-				</div>
-				<div class="sol-footer__cta-actions">
-					<?php echo sol_button( sol_opt( 'footer_cta_link' ), 'primary' ); // phpcs:ignore ?>
-					<?php if ( $phone ) : ?>
-						<a class="sol-footer__call" href="tel:<?php echo esc_attr( $phone_l ); ?>">
-							<span class="sol-footer__call-icon"><?php echo sol_icon( 'phone' ); // phpcs:ignore ?></span>
-							<span><small>Prefer to talk?</small><?php echo esc_html( $phone ); ?></span>
-						</a>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-	<?php endif; ?>
-
 	<div class="sol-container sol-footer__top">
 		<div class="sol-footer__brand">
 			<?php
@@ -78,20 +57,29 @@ foreach ( $columns as $i => $col ) {
 			</ul>
 		</div>
 
-		<?php if ( sol_opt( 'newsletter_enabled', false ) ) : ?>
-			<form class="sol-form sol-newsletter" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" data-sol-form data-success="You're subscribed. Look out for practical NDIS and business updates from SOL in your inbox.">
-				<?php sol_form_hidden( 'newsletter' ); ?>
-				<span class="sol-newsletter__icon" aria-hidden="true"><?php echo sol_icon( 'mail-check' ); // phpcs:ignore ?></span>
-				<label for="sol-news-email"><?php echo esc_html( sol_opt( 'newsletter_label', 'Newsletter' ) ); ?></label>
-				<p class="sol-newsletter__lead">One practical email a month: NDIS rule changes, audit tips and business checklists.</p>
-				<div class="sol-newsletter__row">
-					<input id="sol-news-email" type="email" name="email" required placeholder="you@business.com.au" autocomplete="email">
-					<button class="sol-btn sol-btn--primary" type="submit">Subscribe<?php echo sol_icon( 'arrow-right' ); // phpcs:ignore ?></button>
-				</div>
-				<small><?php echo esc_html( sol_opt( 'newsletter_note' ) ); ?></small>
-				<p class="sol-form__status" role="status" aria-live="polite"></p>
-			</form>
-		<?php endif; ?>
+		<div class="sol-footer__side">
+			<?php
+			$cta_l = sol_opt( 'footer_cta_link' );
+			if ( $cta_h && $cta_l ) :
+				?>
+				<a class="sol-footer__invite" href="<?php echo esc_url( sol_url( sol_get( $cta_l, 'url' ) ) ); ?>">
+					<span><?php echo esc_html( trim( str_replace( '|', ' ', $cta_h ) ) ); ?></span>
+					<strong><?php echo esc_html( sol_get( $cta_l, 'title', 'Get Started' ) ); ?><?php echo sol_icon( 'arrow-right' ); // phpcs:ignore ?></strong>
+				</a>
+			<?php endif; ?>
+			<?php if ( sol_opt( 'newsletter_enabled', false ) ) : ?>
+				<form class="sol-form sol-newsletter" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" data-sol-form data-success="You're subscribed. Look out for practical NDIS and business updates from SOL in your inbox.">
+					<?php sol_form_hidden( 'newsletter' ); ?>
+					<label for="sol-news-email"><?php echo esc_html( sol_opt( 'newsletter_label', 'Newsletter' ) ); ?></label>
+					<div class="sol-newsletter__row">
+						<input id="sol-news-email" type="email" name="email" required placeholder="you@business.com.au" autocomplete="email">
+						<button type="submit" aria-label="Subscribe"><?php echo sol_icon( 'arrow-right' ); // phpcs:ignore ?></button>
+					</div>
+					<small><?php echo esc_html( sol_opt( 'newsletter_note' ) ); ?></small>
+					<p class="sol-form__status" role="status" aria-live="polite"></p>
+				</form>
+			<?php endif; ?>
+		</div>
 	</div>
 
 	<nav class="sol-container sol-footer__nav" aria-label="Footer">
@@ -112,8 +100,6 @@ foreach ( $columns as $i => $col ) {
 			</details>
 		<?php endforeach; ?>
 	</nav>
-
-	<div class="sol-footer__mark" aria-hidden="true"><?php echo esc_html( $company ); ?></div>
 
 	<div class="sol-footer__bottom">
 		<div class="sol-container sol-footer__bottom-inner">
