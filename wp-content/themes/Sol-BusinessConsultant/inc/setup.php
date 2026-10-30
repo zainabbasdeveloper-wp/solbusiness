@@ -143,6 +143,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'sol-hero', SOL_URI . 'assets/css/sol-hero.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-nav', SOL_URI . 'assets/css/sol-nav.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-sections', SOL_URI . 'assets/css/sol-sections.css', array( 'sol' ), $ver );
+	wp_enqueue_style( 'sol-sticky', SOL_URI . 'assets/css/sol-sticky.css', array( 'sol' ), $ver ); // Sticky Buttons plugin side rail.
 	if ( class_exists( 'WooCommerce' ) ) {
 		wp_enqueue_style( 'sol-woo', SOL_URI . 'assets/css/sol-woo.css', array( 'sol' ), $ver );
 		wp_enqueue_style( 'sol-shop', SOL_URI . 'assets/css/sol-shop.css', array( 'sol-woo' ), $ver );

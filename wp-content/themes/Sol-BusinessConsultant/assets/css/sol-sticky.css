@@ -1,0 +1,106 @@
+/* Side buttons from the "Sticky Buttons" plugin (Secure Payment, Contact Us), restyled to match the site.
+   The plugin still controls which buttons show, their links, icons and labels.
+   The selectors start with "html body" so they win over the plugin's own rules and inline colours. */
+
+html body .sticky-buttons {
+	--sb-ink: var(--sol-ink, #0f172a);
+	--sb-amber: #f59e0b;
+	--sb-amber-deep: var(--sol-harvest, #d97706);
+	--sb-btn: 48px;
+	--margin-inline: 0px;
+	--margin-block: 0px;
+	z-index: 140;
+	gap: 6px;
+	padding: 8px;
+	background: linear-gradient(160deg, rgba(30, 41, 59, .96), rgba(15, 23, 42, .97));
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, .08);
+	box-shadow: 0 24px 48px -18px rgba(15, 23, 42, .55), 0 2px 6px rgba(15, 23, 42, .18), inset 0 1px 0 rgba(255, 255, 255, .06);
+	font-family: var(--sol-font, 'Inter', system-ui, sans-serif);
+}
+/* Docked flush to the screen edge, rounded on the open side only. */
+html body .sticky-buttons.-right-center, html body .sticky-buttons.-right-top, html body .sticky-buttons.-right-bottom { border-right: 0; border-radius: 18px 0 0 18px; }
+html body .sticky-buttons.-left-center, html body .sticky-buttons.-left-top, html body .sticky-buttons.-left-bottom { border-left: 0; border-radius: 0 18px 18px 0; }
+
+/* Buttons */
+html body .sticky-buttons .sb-link::after { display: none; }
+html body .sticky-buttons .sb-icon {
+	position: relative;
+	inline-size: var(--sb-btn);
+	block-size: var(--sb-btn);
+	border-radius: 14px;
+	background: rgba(255, 255, 255, .06);
+	color: #fbbf24;
+	font-size: 19px;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08);
+	transition: background-color .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+html body .sticky-buttons .sb-icon img { max-inline-size: 22px; max-block-size: 22px; }
+
+/* The last button (Contact Us) is the main call to action: solid amber with a soft pulse. */
+html body .sticky-buttons .sb-item:last-child:not(:first-child) .sb-icon {
+	background: linear-gradient(145deg, #fbbf24, var(--sb-amber-deep));
+	color: var(--sb-ink);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), 0 8px 18px -8px rgba(217, 119, 6, .8);
+}
+html body .sticky-buttons .sb-item:last-child:not(:first-child) .sb-icon::after {
+	content: ""; position: absolute; inset: 0; border-radius: inherit;
+	box-shadow: 0 0 0 0 rgba(245, 158, 11, .55);
+	animation: sol-sb-pulse 2.6s ease-out infinite;
+	pointer-events: none;
+}
+
+/* Hover and keyboard focus */
+@media (hover: hover) {
+	html body .sticky-buttons a:hover .sb-icon, html body .sticky-buttons button:hover .sb-icon { background: linear-gradient(145deg, #fbbf24, var(--sb-amber-deep)); color: var(--sb-ink); transform: scale(1.06); }
+	html body .sticky-buttons .sb-item:last-child:not(:first-child) a:hover .sb-icon { background: #fff; color: var(--sb-ink); }
+}
+html body .sticky-buttons a:focus .sb-icon, html body .sticky-buttons button:focus .sb-icon { background: linear-gradient(145deg, #fbbf24, var(--sb-amber-deep)); color: var(--sb-ink); }
+html body .sticky-buttons a:focus-visible .sb-icon, html body .sticky-buttons button:focus-visible .sb-icon { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* Labels slide out beside the rail as white pills. */
+html body .sticky-buttons .sb-label {
+	block-size: 40px;
+	line-height: 40px;
+	inset-block-start: calc((var(--sb-btn) - 40px) / 2);
+	margin-inline: 18px;
+	padding: 0 16px;
+	border-radius: 12px;
+	background: #fff;
+	color: var(--sb-ink);
+	font-family: var(--sol-font, 'Inter', system-ui, sans-serif);
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: .01em;
+	box-shadow: 0 18px 36px -16px rgba(15, 23, 42, .5), 0 0 0 1px rgba(15, 23, 42, .06);
+	transform: translateX(8px);
+	transition: opacity .22s ease, transform .22s ease, visibility .22s;
+}
+html body .sticky-buttons.-left-center .sb-label, html body .sticky-buttons.-left-top .sb-label, html body .sticky-buttons.-left-bottom .sb-label { transform: translateX(-8px); }
+html body .sticky-buttons .sb-label::before { inline-size: 10px; block-size: 10px; }
+html body .sticky-buttons.-right-center .sb-label::before, html body .sticky-buttons.-right-top .sb-label::before, html body .sticky-buttons.-right-bottom .sb-label::before { inset: 50% -4px auto auto; }
+@media (hover: hover) {
+	html body .sticky-buttons a:hover .sb-label, html body .sticky-buttons button:hover .sb-label { background: #fff; color: var(--sb-ink); transform: none; }
+}
+html body .sticky-buttons a:focus .sb-label, html body .sticky-buttons button:focus .sb-label { background: #fff; color: var(--sb-ink); transform: none; }
+
+/* Phones: a slimmer rail. */
+@media (max-width: 639px) {
+	html body .sticky-buttons { --sb-btn: 40px; gap: 5px; padding: 6px; }
+	html body .sticky-buttons.-right-center, html body .sticky-buttons.-right-top, html body .sticky-buttons.-right-bottom { border-radius: 14px 0 0 14px; }
+	html body .sticky-buttons.-left-center, html body .sticky-buttons.-left-top, html body .sticky-buttons.-left-bottom { border-radius: 0 14px 14px 0; }
+	html body .sticky-buttons .sb-icon { border-radius: 11px; font-size: 16px; }
+}
+
+/* Keep the rail out of the way while the chat panel is open. */
+body:has(.sol-chat.is-open) .sticky-buttons { opacity: 0; pointer-events: none; }
+html body .sticky-buttons { transition: opacity .2s ease; }
+
+@keyframes sol-sb-pulse {
+	0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, .55); }
+	70%, 100% { box-shadow: 0 0 0 12px rgba(245, 158, 11, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+	html body .sticky-buttons *, html body .sticky-buttons *::after { animation: none !important; transition: none !important; }
+}
