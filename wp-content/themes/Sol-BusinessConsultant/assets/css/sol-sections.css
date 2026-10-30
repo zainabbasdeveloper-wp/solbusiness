@@ -47,20 +47,27 @@
 
 /* ---------- Dark bands ---------- */
 .sol-main > .sol-section.sol-bg-ink { isolation: isolate; overflow: hidden; }
+/* Glows are kept away from any edge that touches another dark section, and every dark section
+   gets the same grain, so a run of dark sections reads as one seamless band with no visible joins. */
 .sol-main > .sol-section.sol-bg-ink::before {
 	content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
 	background:
-		radial-gradient(600px 360px at 88% 0%, rgba(217, 119, 6, .22), transparent 70%),
-		radial-gradient(500px 320px at 0% 100%, rgba(59, 130, 246, .10), transparent 70%);
+		radial-gradient(600px 360px at 88% 0%, rgba(217, 119, 6, .2), transparent 70%),
+		radial-gradient(500px 320px at 0% 100%, rgba(59, 130, 246, .09), transparent 70%);
 }
 .sol-main > .sol-section.sol-bg-ink::after {
 	content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-	background: linear-gradient(112deg, transparent 34%, rgba(255, 255, 255, .025) 46%, transparent 58%), var(--sol-grain);
-	background-size: auto, 200px 200px;
+	background: var(--sol-grain); background-size: 200px 200px;
 }
-/* A run of dark sections reads as one band: only the first one keeps the glow. */
-.sol-main > .sol-section.sol-bg-ink + .sol-section.sol-bg-ink::before { background: radial-gradient(500px 300px at 10% 100%, rgba(217, 119, 6, .12), transparent 70%); }
-.sol-main > .sol-section.sol-bg-ink + .sol-section.sol-bg-ink::after { display: none; }
+/* First of a run: top glow only (its bottom edge joins the next dark section). */
+.sol-main > .sol-section.sol-bg-ink:has(+ .sol-section.sol-bg-ink)::before { background: radial-gradient(600px 360px at 88% 0%, rgba(217, 119, 6, .2), transparent 70%); }
+/* Middle of a run: no glow. */
+.sol-main > .sol-section.sol-bg-ink + .sol-section.sol-bg-ink::before { background: none; }
+/* Last of a run: a soft glow at the bottom only. */
+.sol-main > .sol-section.sol-bg-ink + .sol-section.sol-bg-ink:not(:has(+ .sol-section.sol-bg-ink))::before { background: radial-gradient(520px 320px at 0% 100%, rgba(59, 130, 246, .08), transparent 70%); }
+/* Breathing room between joined dark sections, without a visible edge. The 1px overlap stops the white
+   page showing through as a hairline when section heights land on fractional pixels. */
+.sol-main > .sol-section.sol-bg-ink + .sol-section.sol-bg-ink { padding-top: 8px; margin-top: -1px; }
 
 /* Curved top edge where a light section meets a dark band. */
 .sol-main > .sol-section:not(.sol-bg-ink):not(.sol-hero) + .sol-section.sol-bg-ink { border-radius: 44px 44px 0 0; margin-top: -1px; }
