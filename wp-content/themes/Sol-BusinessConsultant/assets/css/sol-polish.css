@@ -1,0 +1,72 @@
+/* Finishing touches loaded after the other SOL styles: warmer page headers, even heading lines and small details. */
+
+/* ---------- Type ---------- */
+/* Headings break into even lines instead of leaving one short word on its own. */
+.sol-main :is(h1, h2, h3), .sol-cta__title { text-wrap: balance; }
+/* Paragraphs avoid a single word on the last line. */
+.sol-main :is(p, li, dd) { text-wrap: pretty; }
+/* Brand-coloured text highlight. */
+.sol-site ::selection { background: rgba(245, 158, 11, .3); color: inherit; }
+/* Smooth jumps to links on the same page. */
+@media (prefers-reduced-motion: no-preference) { html:has(> body.sol-site) { scroll-behavior: smooth; } }
+
+/* ---------- Page header (About, Contact, Pricing, Blog and other inner pages) ---------- */
+.sol-page-header { position: relative; overflow: hidden; isolation: isolate; background: linear-gradient(180deg, #fffaf0 0%, #fff 78%); border-bottom: 1px solid rgba(226, 232, 240, .8); }
+/* Soft glows. */
+.sol-page-header::before { content: ""; position: absolute; inset: 0; z-index: -2; pointer-events: none; background:
+	radial-gradient(560px 340px at 94% 0%, rgba(245, 158, 11, .17), transparent 70%),
+	radial-gradient(460px 320px at 66% 120%, rgba(59, 130, 246, .07), transparent 70%); }
+/* Fine rings on the right that fade out at the edges. */
+.sol-page-header::after { content: ""; position: absolute; z-index: -1; pointer-events: none; right: -140px; top: 50%; width: 600px; height: 600px; transform: translateY(-50%); border-radius: 50%;
+	background: repeating-radial-gradient(circle at center, transparent 0 44px, rgba(217, 119, 6, .13) 44px 45px);
+	-webkit-mask-image: radial-gradient(circle at center, #000 18%, transparent 68%); mask-image: radial-gradient(circle at center, #000 18%, transparent 68%); }
+@media (max-width: 767px) { .sol-page-header::after { width: 380px; height: 380px; right: -190px; top: -40px; transform: none; opacity: .75; } }
+.sol-page-header .sol-container { position: relative; }
+.sol-page-header__title { letter-spacing: -.025em; line-height: 1.08; }
+.sol-page-header__text { color: #556579; }
+
+/* Contact details under the title: white cards with an icon tile. */
+.sol-info-card { align-items: center; gap: 14px; padding: 16px 18px; background: rgba(255, 255, 255, .88); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 14px 30px -24px rgba(15, 23, 42, .35); transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease; }
+.sol-info-card:hover { border-color: rgba(217, 119, 6, .35); box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 20px 36px -24px rgba(217, 119, 6, .45); transform: translateY(-2px); }
+.sol-info-card > .sol-icon { box-sizing: border-box; width: 40px; height: 40px; padding: 10px; margin: 0; border-radius: 12px; background: var(--sol-harvest-soft); color: var(--sol-harvest-dark); }
+.sol-info-card__value { font-size: .95rem; }
+a.sol-info-card__value:hover { color: var(--sol-harvest-dark); }
+
+/* ---------- Text + image figures (e.g. NDIS / BAS / CRM on About) ---------- */
+.sol-split__content .sol-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 28px !important; }
+.sol-split__content .sol-stats > div { padding: 16px 18px; border-radius: 14px; background: #fff; border: 1px solid var(--sol-border); box-shadow: 0 1px 2px rgba(15, 23, 42, .04); transition: border-color .25s ease, transform .25s ease; }
+.sol-split__content .sol-stats > div:hover { border-color: rgba(217, 119, 6, .35); transform: translateY(-2px); }
+.sol-split__content .sol-stats dt { font-size: 1.6rem; line-height: 1.1; }
+.sol-split__content .sol-stats dd { line-height: 1.4; }
+.sol-bg-chalk .sol-split__content .sol-stats > div { background: #fff; }
+
+/* ---------- Photo banner ("Your One-Stop Business Partner") ---------- */
+.sol-cta--image .sol-cta__box { min-height: 340px; }
+@media (min-width: 768px) { .sol-cta--image .sol-cta__box { min-height: 380px; padding: 64px; } }
+.sol-cta--image .sol-cta__title { font-size: clamp(1.9rem, 4vw, 3rem); letter-spacing: -.02em; line-height: 1.08; }
+.sol-cta--image .sol-cta__text { margin-top: 12px; }
+/* A thin amber line under the banner title. */
+.sol-cta--image .sol-cta__title::after { content: ""; display: block; width: 64px; height: 2px; margin: 18px auto 0; border-radius: 2px; background: linear-gradient(90deg, transparent, #fbbf24, transparent); }
+
+/* ---------- Logo strip when motion is reduced (no scrolling ticker) ---------- */
+@media (prefers-reduced-motion: reduce) {
+	.sol-marquee { -webkit-mask-image: none; mask-image: none; }
+	.sol-marquee--animate .sol-marquee__track { gap: 12px; max-width: 1040px; margin: 0 auto; }
+	.sol-marquee--animate .sol-logo-pill { min-width: 120px; padding: 14px 18px; }
+}
+
+/* ---------- Primary buttons: a soft light sweep on hover ---------- */
+.sol-btn--primary { position: relative; overflow: hidden; isolation: isolate; }
+.sol-btn--primary::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, .45) 50%, transparent 70%); transform: translateX(-120%); pointer-events: none; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+	.sol-btn--primary:hover::after { transform: translateX(120%); transition: transform .7s ease; }
+}
+
+/* ---------- Service page hero title: sized so each written line fits on one row ---------- */
+.sol-hero__title { font-size: clamp(2.3rem, 4.2vw, 3.4rem); line-height: 1.06; letter-spacing: -.025em; text-wrap: wrap; }
+
+/* ---------- Numbered service cards: "Learn more" always visible, quiet until hover ---------- */
+.sol-card--numbered .sol-card__more { opacity: 1; margin-top: auto; padding-top: 14px; color: var(--sol-mist); transition: color .25s ease; }
+.sol-card--numbered .sol-card__more .sol-icon { transition: transform .25s ease; }
+.sol-card--numbered:hover .sol-card__more { color: var(--sol-harvest-dark); }
+.sol-card--numbered:hover .sol-card__more .sol-icon { transform: translateX(3px); }

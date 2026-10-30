@@ -133,4 +133,6 @@ An accessibility tab sits on the left edge of every page, just under the cart ta
 
 Choices are saved in the visitor's browser and reapplied before the page appears, so there's no flicker. Turn it off in **SOL Site → Widgets & Forms → Accessibility toolbar**. Files: `inc/a11y.php`, `assets/js/sol-a11y.js`, `assets/css/sol-a11y.css`.
 
+Site-wide finishing touches (inner page headers, even heading lines, contact cards, card "Learn more" links, banner title) live in `assets/css/sol-polish.css`, which loads last.
+
 The **Secure Payment / Contact Us** side buttons come from the Sticky Buttons plugin; `assets/css/sol-sticky.css` restyles them to match the site (the plugin still controls links, icons and labels).
