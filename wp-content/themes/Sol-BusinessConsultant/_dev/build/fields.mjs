@@ -432,7 +432,7 @@ const options = fieldGroup({
     text('cookie_link', 'Cookie banner link'),
     bool('floating_whatsapp', 'Floating WhatsApp button', { default_value: 1 }),
     bool('back_to_top', 'Back-to-top button', { default_value: 1 }),
-    bool('a11y_enabled', 'Accessibility toolbar', { default_value: 1, instructions: 'A button in the bottom-left corner with text size, contrast, link underline and read-aloud options.' }),
+    bool('a11y_enabled', 'Accessibility toolbar', { default_value: 1, instructions: 'A tab on the left edge with text size, contrast, link underline and read-aloud options.' }),
     email('notification_email', 'Send form submissions to'),
     textarea('default_success', 'Default form success message', { rows: 2 }),
     tab('AI Assistant'),

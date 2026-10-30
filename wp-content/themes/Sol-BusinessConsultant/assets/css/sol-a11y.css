@@ -40,25 +40,31 @@ html.a11y-read .sol-a11y-reading { outline: 2px dashed #f59e0b !important; outli
 /* =========================================================
    Toolbar
    ========================================================= */
-.sol-a11y { --a-ink: var(--sol-ink, #0f172a); --a-amber: #f59e0b; --a-amber-deep: var(--sol-harvest, #d97706); --a-line: #e2e8f0; position: fixed; left: 18px; bottom: 18px; z-index: 145; font-family: var(--sol-font, 'Inter', system-ui, sans-serif); font-size: 15px; line-height: 1.4; color: var(--a-ink); -webkit-font-smoothing: antialiased; }
+/* Docked to the left edge, just under the floating cart tab (which is centred at 50%). */
+.sol-a11y { --a-ink: var(--sol-ink, #0f172a); --a-amber: #f59e0b; --a-amber-deep: var(--sol-harvest, #d97706); --a-line: #e2e8f0; position: fixed; left: 0; top: calc(50% + 46px); z-index: 145; font-family: var(--sol-font, 'Inter', system-ui, sans-serif); font-size: 15px; line-height: 1.4; color: var(--a-ink); -webkit-font-smoothing: antialiased; }
 .sol-a11y *, .sol-a11y *::before, .sol-a11y *::after { box-sizing: border-box; }
 .sol-a11y svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
 .sol-a11y button { font: inherit; margin: 0; }
 .sol-a11y [hidden] { display: none !important; }
 
-/* Launcher */
-.sol-a11y__launch { position: relative; width: 56px; height: 56px; padding: 0; border: 1px solid rgba(15, 23, 42, .08); border-radius: 50%; background: radial-gradient(circle at 30% 25%, #fff 0%, #f8fafc 70%); color: var(--a-ink); cursor: pointer; display: grid; place-items: center; box-shadow: 0 18px 36px -14px rgba(15, 23, 42, .45), 0 2px 6px rgba(15, 23, 42, .08), inset 0 1px 0 #fff; transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease; }
-.sol-a11y__launch svg { width: 26px; height: 26px; stroke-width: 2.1; }
-.sol-a11y__launch::before { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 2px solid rgba(245, 158, 11, 0); transition: border-color .25s ease, inset .25s ease; }
-.sol-a11y__launch:hover, .sol-a11y.is-open .sol-a11y__launch { transform: translateY(-2px); background: linear-gradient(145deg, #1e293b, var(--a-ink)); color: #fbbf24; box-shadow: 0 22px 40px -14px rgba(15, 23, 42, .6); }
-.sol-a11y__launch:hover::before, .sol-a11y.is-open .sol-a11y__launch::before { border-color: rgba(245, 158, 11, .45); inset: -6px; }
-.sol-a11y__launch:focus-visible { outline: 3px solid var(--a-amber); outline-offset: 4px; }
-.sol-a11y__dot { position: absolute; top: 2px; right: 2px; width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(145deg, #fbbf24, var(--a-amber-deep)); border: 2px solid #fff; transform: scale(0); transition: transform .25s ease; }
+/* Launcher: a navy tab on the left edge, same family as the cart tab; the label slides out on hover. */
+.sol-a11y__launch { position: relative; display: flex; align-items: center; padding: 8px 10px 8px 8px; border: 1px solid rgba(255, 255, 255, .08); border-left: 0; border-radius: 0 18px 18px 0; background: linear-gradient(160deg, #1e293b 0%, #0f172a 70%); color: #fff; cursor: pointer; box-shadow: 0 22px 44px -16px rgba(15, 23, 42, .6), inset 0 1px 0 rgba(255, 255, 255, .08); transition: box-shadow .3s ease, padding .35s cubic-bezier(.2, .8, .2, 1); }
+.sol-a11y__tile { position: relative; width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center; background: linear-gradient(145deg, #fff, #e2e8f0); color: var(--a-ink); box-shadow: inset 0 1px 0 #fff, 0 6px 14px -8px rgba(0, 0, 0, .6); transition: background .25s ease, color .25s ease, transform .25s ease; }
+.sol-a11y__tile svg { width: 24px; height: 24px; stroke-width: 2.1; }
+.sol-a11y__tab-label { max-width: 0; overflow: hidden; opacity: 0; white-space: nowrap; font-size: 14px; font-weight: 600; letter-spacing: .01em; transition: max-width .35s cubic-bezier(.2, .8, .2, 1), opacity .25s ease, margin .35s ease; }
+.sol-a11y__launch:hover, .sol-a11y__launch:focus-visible, .sol-a11y.is-open .sol-a11y__launch { box-shadow: 0 26px 48px -16px rgba(15, 23, 42, .7), inset 0 1px 0 rgba(255, 255, 255, .1); }
+.sol-a11y__launch:hover .sol-a11y__tile, .sol-a11y__launch:focus-visible .sol-a11y__tile, .sol-a11y.is-open .sol-a11y__tile { background: linear-gradient(145deg, #fbbf24, var(--a-amber-deep)); transform: rotate(-6deg); }
+@media (hover: hover) {
+	.sol-a11y__launch:hover .sol-a11y__tab-label, .sol-a11y__launch:focus-visible .sol-a11y__tab-label { max-width: 130px; opacity: 1; margin-left: 12px; }
+}
+.sol-a11y.is-open .sol-a11y__launch .sol-a11y__tab-label { max-width: 0; opacity: 0; margin-left: 0; }
+.sol-a11y__launch:focus-visible { outline: 3px solid var(--a-amber); outline-offset: 3px; }
+.sol-a11y__dot { position: absolute; top: -5px; right: -5px; width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(145deg, #fbbf24, var(--a-amber-deep)); border: 2px solid #0f172a; transform: scale(0); transition: transform .25s ease; }
 .sol-a11y.has-active .sol-a11y__dot { transform: scale(1); }
 
-/* Panel */
-.sol-a11y__panel { position: absolute; left: 0; bottom: 72px; width: 340px; max-height: calc(100vh - 110px); max-height: calc(100dvh - 110px); display: flex; flex-direction: column; overflow: hidden; border-radius: 22px; background: #fff; border: 1px solid rgba(15, 23, 42, .08); box-shadow: 0 40px 80px -28px rgba(15, 23, 42, .55), 0 4px 14px rgba(15, 23, 42, .08); opacity: 0; transform: translateY(14px) scale(.98); transform-origin: bottom left; transition: opacity .22s ease, transform .22s ease; }
-.sol-a11y.is-shown .sol-a11y__panel { opacity: 1; transform: none; }
+/* Panel: opens beside the tab, centred in the window. */
+.sol-a11y__panel { position: fixed; left: 76px; top: 50%; width: 340px; max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); display: flex; flex-direction: column; overflow: hidden; border-radius: 22px; background: #fff; border: 1px solid rgba(15, 23, 42, .08); box-shadow: 0 40px 80px -28px rgba(15, 23, 42, .55), 0 4px 14px rgba(15, 23, 42, .08); opacity: 0; transform: translate(-12px, -50%) scale(.98); transform-origin: left center; transition: opacity .22s ease, transform .22s ease; }
+.sol-a11y.is-shown .sol-a11y__panel { opacity: 1; transform: translate(0, -50%); }
 
 .sol-a11y__head { position: relative; display: flex; align-items: center; gap: 12px; padding: 18px 16px 18px 18px; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; overflow: hidden; }
 .sol-a11y__head::after { content: ""; position: absolute; right: -40px; top: -60px; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle, rgba(245, 158, 11, .28), transparent 70%); pointer-events: none; }
@@ -103,14 +109,17 @@ html.a11y-read .sol-a11y-reading { outline: 2px dashed #f59e0b !important; outli
 .sol-a11y__reset svg { width: 17px; height: 17px; }
 .sol-a11y__reset:hover { border-color: var(--a-amber-deep); background: #fff; }
 
-/* Hide the launcher behind the cookie notice until it's accepted, and while the chat is open on phones. */
-body:has(.sol-cookie:not([hidden])) .sol-a11y:not(.is-open) { opacity: 0; pointer-events: none; }
 .sol-a11y { transition: opacity .2s ease; }
 
+/* Tablets and phones: the cart tab moves to bottom: 110px, so this tab sits just above it. */
+@media (max-width: 767px) {
+	.sol-a11y { top: auto; bottom: 184px; }
+	.sol-a11y__launch { padding: 6px 8px 6px 6px; border-radius: 0 16px 16px 0; }
+	.sol-a11y__tile { width: 38px; height: 38px; border-radius: 11px; }
+	.sol-a11y__tile svg { width: 21px; height: 21px; }
+}
 @media (max-width: 639px) {
-	.sol-a11y { left: 14px; bottom: 14px; }
-	.sol-a11y__launch { width: 52px; height: 52px; }
-	.sol-a11y__panel { position: fixed; left: 10px; right: 10px; bottom: 80px; width: auto; }
+	.sol-a11y__panel { left: 10px; right: 10px; width: auto; }
 	body:has(.sol-chat.is-open) .sol-a11y { opacity: 0; pointer-events: none; }
 }
 @media (prefers-reduced-motion: reduce) {

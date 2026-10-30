@@ -186,7 +186,7 @@ Key `group_sol_options` · Shown on: options_page = sol-site-settings
 | `cookie_link` | Text | Cookie banner link |
 | `floating_whatsapp` | True / False | Floating WhatsApp button |
 | `back_to_top` | True / False | Back-to-top button |
-| `a11y_enabled` | True / False | Accessibility toolbar — A button in the bottom-left corner with text size, contrast, link underline and read-aloud options. |
+| `a11y_enabled` | True / False | Accessibility toolbar — A tab on the left edge with text size, contrast, link underline and read-aloud options. |
 | `notification_email` | Email | Send form submissions to |
 | `default_success` | Text area | Default form success message |
 | **— AI Assistant tab —** | | |

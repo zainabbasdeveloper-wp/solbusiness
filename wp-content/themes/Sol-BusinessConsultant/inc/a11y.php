@@ -1,6 +1,6 @@
 <?php
 /**
- * Accessibility toolbar: a floating button (bottom-left) that opens display and reading options.
+ * Accessibility toolbar: a tab docked to the left edge (under the cart tab) that opens display and reading options.
  * Text size, grayscale, high contrast, negative contrast, light background, underlined links and read aloud.
  * Choices are kept in the visitor's browser (localStorage "sol-a11y") and reapplied before the page paints.
  * Turn it off in SOL Site → Widgets & Forms.
@@ -67,8 +67,8 @@ add_action( 'wp_footer', function () {
 	?>
 	<div class="sol-a11y" data-sol-a11y>
 		<button type="button" class="sol-a11y__launch" data-a11y-toggle aria-expanded="false" aria-controls="sol-a11y-panel" aria-label="Accessibility options">
-			<?php echo sol_a11y_svg( $icons['launch'] ); // phpcs:ignore ?>
-			<span class="sol-a11y__dot" aria-hidden="true"></span>
+			<span class="sol-a11y__tile"><?php echo sol_a11y_svg( $icons['launch'] ); // phpcs:ignore ?><span class="sol-a11y__dot" aria-hidden="true"></span></span>
+			<span class="sol-a11y__tab-label" aria-hidden="true">Accessibility</span>
 		</button>
 
 		<section class="sol-a11y__panel" id="sol-a11y-panel" role="dialog" aria-labelledby="sol-a11y-title" hidden>

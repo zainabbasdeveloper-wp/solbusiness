@@ -1127,7 +1127,7 @@
             "name": "a11y_enabled",
             "aria-label": "",
             "type": "true_false",
-            "instructions": "A button in the bottom-left corner with text size, contrast, link underline and read-aloud options.",
+            "instructions": "A tab on the left edge with text size, contrast, link underline and read-aloud options.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {

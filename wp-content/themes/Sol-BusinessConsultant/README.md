@@ -124,13 +124,13 @@ The **SOL Assistant** chat sits in the bottom-right corner on every page. It's t
 
 ## Accessibility toolbar
 
-A round accessibility button sits in the bottom-left corner on every page. It opens a panel with:
+An accessibility tab sits on the left edge of every page, just under the cart tab (just above it on phones). It opens a panel with:
 
 - **Text size** from 80% to 150% (− and + buttons).
 - **Grayscale**, **High Contrast**, **Negative Contrast** (black background, white text, yellow links) and **Light Background** (white background, black text, blue links). Only one of the three contrast modes is on at a time; grayscale can be combined with any of them.
 - **Links Underline** and **Read Aloud** (uses the browser's built-in voice; click or select any text to hear it, and keyboard focus is read out too).
 - **Reset all settings.**
 
-Choices are saved in the visitor's browser and reapplied before the page appears, so there's no flicker. The button waits until the cookie notice is accepted. Turn it off in **SOL Site → Widgets & Forms → Accessibility toolbar**. Files: `inc/a11y.php`, `assets/js/sol-a11y.js`, `assets/css/sol-a11y.css`.
+Choices are saved in the visitor's browser and reapplied before the page appears, so there's no flicker. Turn it off in **SOL Site → Widgets & Forms → Accessibility toolbar**. Files: `inc/a11y.php`, `assets/js/sol-a11y.js`, `assets/css/sol-a11y.css`.
 
 The **Secure Payment / Contact Us** side buttons come from the Sticky Buttons plugin; `assets/css/sol-sticky.css` restyles them to match the site (the plugin still controls links, icons and labels).
