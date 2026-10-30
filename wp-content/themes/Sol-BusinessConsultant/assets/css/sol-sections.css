@@ -55,10 +55,8 @@
 }
 .sol-main > .sol-section.sol-bg-ink::after {
 	content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-	background-image: linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
-	background-size: 56px 56px;
-	-webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 0%, transparent 75%);
-	mask-image: radial-gradient(ellipse at 50% 0%, #000 0%, transparent 75%);
+	background: linear-gradient(112deg, transparent 34%, rgba(255, 255, 255, .025) 46%, transparent 58%), var(--sol-grain);
+	background-size: auto, 200px 200px;
 }
 /* A run of dark sections reads as one band: only the first one keeps the glow. */
 .sol-main > .sol-section.sol-bg-ink + .sol-section.sol-bg-ink::before { background: radial-gradient(500px 300px at 10% 100%, rgba(217, 119, 6, .12), transparent 70%); }
