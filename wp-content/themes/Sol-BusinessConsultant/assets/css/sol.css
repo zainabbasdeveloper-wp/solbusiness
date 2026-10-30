@@ -649,31 +649,7 @@ i.sol-icon { font-style: normal; }
 .sol-legal__section h2 { font-size: 1.35rem; margin-bottom: 12px !important; }
 
 /* ---------- Footer ---------- */
-.sol-footer { background: var(--sol-ink); color: rgba(255, 255, 255, .7); font-size: .9rem; }
-.sol-footer a:hover { color: var(--sol-harvest); }
-.sol-footer__cta { border-bottom: 1px solid rgba(255, 255, 255, .08); }
-.sol-footer__cta-inner { display: flex; flex-direction: column; gap: 20px; justify-content: space-between; padding-top: 48px; padding-bottom: 48px; }
-@media (min-width: 768px) { .sol-footer__cta-inner { flex-direction: row; align-items: center; } }
-.sol-footer__cta-title { color: #fff; font-size: clamp(1.6rem, 3vw, 2.25rem); }
-.sol-footer__cta p { margin-top: 8px !important; }
-.sol-footer__main { display: grid; gap: 40px; padding-top: 56px; padding-bottom: 40px; }
-@media (min-width: 1024px) { .sol-footer__main { grid-template-columns: 300px 1fr; gap: 56px; } }
-.sol-footer__brand { display: grid; gap: 16px; align-content: start; }
-.sol-footer .sol-footer__logo { height: 56px; width: auto; max-width: none; border-radius: 8px; }
-.sol-footer__cols { display: grid; gap: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (min-width: 768px) { .sol-footer__cols { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (min-width: 1180px) { .sol-footer__cols { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
-.sol-footer__col h3 { color: #fff; font-size: .95rem; margin-bottom: 14px !important; }
-.sol-footer__col ul { list-style: none; display: grid; gap: 8px; font-size: .84rem; }
-.sol-newsletter { gap: 8px; }
-.sol-newsletter label { color: #fff; font-weight: 600; font-size: .88rem; }
-.sol-newsletter__row { display: flex; gap: 8px; }
-.sol-newsletter input { flex: 1; min-width: 0; min-height: 44px; padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, .15); background: rgba(255, 255, 255, .06); color: #fff; font: inherit; }
-.sol-newsletter small { font-size: .74rem; color: rgba(255, 255, 255, .5); }
-.sol-newsletter .sol-btn { padding: 10px 16px; }
-.sol-footer__contact { display: flex; flex-wrap: wrap; gap: 10px 24px; padding-top: 24px; padding-bottom: 24px; border-top: 1px solid rgba(255, 255, 255, .08); font-size: .84rem; }
-.sol-footer__contact a { color: #fff; }
-.sol-footer__bottom { border-top: 1px solid rgba(255, 255, 255, .08); padding: 20px 0; font-size: .78rem; color: rgba(255, 255, 255, .5); }
+/* Footer styles live in sol-footer.css. */
 
 /* ---------- Floating widgets ---------- */
 .sol-float-wa { position: fixed; right: 18px; bottom: 18px; z-index: 90; width: 56px; height: 56px; border-radius: 50%; background: #25d366; color: #fff !important; display: grid; place-items: center; box-shadow: 0 12px 24px -8px rgba(0, 0, 0, .35); }

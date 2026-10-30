@@ -121,7 +121,7 @@ function sol_is_sol_template( $post_id = 0 ) {
 
 /** Pages fully drawn by the theme (sections, blog), as opposed to Elementor or WooCommerce content. */
 function sol_is_sol_view() {
-	return ( is_page() && sol_is_sol_template() ) || is_singular( 'post' ) || is_home();
+	return ( is_page() && sol_is_sol_template() ) || is_singular( 'post' ) || is_home() || is_404();
 }
 
 add_filter( 'body_class', function ( $classes ) {
@@ -144,6 +144,10 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'sol-nav', SOL_URI . 'assets/css/sol-nav.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-sections', SOL_URI . 'assets/css/sol-sections.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-sticky', SOL_URI . 'assets/css/sol-sticky.css', array( 'sol' ), $ver ); // Sticky Buttons plugin side rail.
+	wp_enqueue_style( 'sol-footer', SOL_URI . 'assets/css/sol-footer.css', array( 'sol' ), $ver );
+	if ( is_404() ) {
+		wp_enqueue_style( 'sol-404', SOL_URI . 'assets/css/sol-404.css', array( 'sol' ), $ver );
+	}
 	if ( class_exists( 'WooCommerce' ) ) {
 		wp_enqueue_style( 'sol-woo', SOL_URI . 'assets/css/sol-woo.css', array( 'sol' ), $ver );
 		wp_enqueue_style( 'sol-shop', SOL_URI . 'assets/css/sol-shop.css', array( 'sol-woo' ), $ver );
