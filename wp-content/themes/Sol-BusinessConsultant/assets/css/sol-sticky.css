@@ -7,8 +7,8 @@ html body .sticky-buttons {
 	--sb-amber: #f59e0b;
 	--sb-amber-deep: var(--sol-harvest, #d97706);
 	--sb-btn: 48px;
-	--margin-inline: 0px;
-	--margin-block: 0px;
+	/* The plugin's own margin setting arrives as an inline style, so set the margin itself: flush to the edge. */
+	margin: 0 !important;
 	z-index: 140;
 	gap: 6px;
 	padding: 8px;
