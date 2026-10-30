@@ -5,7 +5,7 @@ defined( 'ABSPATH' ) || exit;
 $cards = sol_rows( sol_get( $s, 'info_cards', array() ) );
 ?>
 <section class="sol-page-header">
-	<div class="sol-container sol-container--mid">
+	<div class="sol-container">
 		<?php if ( sol_get( $s, 'eyebrow' ) ) : ?><span class="sol-eyebrow"><?php echo esc_html( $s['eyebrow'] ); ?></span><?php endif; ?>
 		<h1 class="sol-page-header__title"><?php echo sol_heading( sol_get( $s, 'heading' ) ); // phpcs:ignore ?></h1>
 		<?php if ( sol_get( $s, 'text' ) ) : ?><div class="sol-page-header__text"><?php echo sol_text( $s['text'] ); // phpcs:ignore ?></div><?php endif; ?>
