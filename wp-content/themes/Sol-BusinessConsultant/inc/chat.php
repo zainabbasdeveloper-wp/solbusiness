@@ -4,13 +4,13 @@
  *
  * The browser sends the conversation to /wp-json/sol/v1/chat. WordPress adds the assistant's
  * instructions and forwards it to Groq, so the API key never reaches the visitor.
- * Settings: SOL Site → AI Assistant. The key can also be set in wp-config.php:
+ * Key and on/off switch: SOL Site → AI Chat (inc/chat-admin.php). The key can also be set in wp-config.php:
  *   define( 'SOL_GROQ_API_KEY', 'gsk_…' );
  */
 
 defined( 'ABSPATH' ) || exit;
 
-/** Groq API key: wp-config constant, then server environment, then SOL Site Settings. */
+/** Groq API key: wp-config constant, then server environment, then SOL Site → AI Chat, then SOL Site Settings. */
 function sol_chat_api_key() {
 	if ( defined( 'SOL_GROQ_API_KEY' ) && SOL_GROQ_API_KEY ) {
 		return (string) SOL_GROQ_API_KEY;
@@ -19,12 +19,26 @@ function sol_chat_api_key() {
 	if ( $env ) {
 		return (string) $env;
 	}
+	$page = trim( (string) get_option( 'sol_groq_api_key', '' ) );
+	if ( '' !== $page ) {
+		return $page;
+	}
 	return trim( (string) sol_opt( 'chat_api_key' ) );
+}
+
+/** The on/off switch: SOL Site → AI Chat once saved there, otherwise the SOL Site Settings toggle (on by default). */
+function sol_chat_switched_on() {
+	$on = get_option( 'sol_chat_on', null );
+	if ( null !== $on ) {
+		return '1' === (string) $on;
+	}
+	$v = function_exists( 'get_field' ) ? get_field( 'chat_enabled', 'option' ) : null;
+	return null === $v ? true : (bool) $v;
 }
 
 /** The chat shows only when it's switched on and has a key. */
 function sol_chat_enabled() {
-	return (bool) apply_filters( 'sol_chat_enabled', sol_opt( 'chat_enabled', false ) && '' !== sol_chat_api_key() );
+	return (bool) apply_filters( 'sol_chat_enabled', sol_chat_switched_on() && '' !== sol_chat_api_key() );
 }
 
 /** Link to a page by path, or '' when the page doesn't exist. */
