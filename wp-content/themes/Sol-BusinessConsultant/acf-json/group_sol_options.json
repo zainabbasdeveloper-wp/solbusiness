@@ -1122,6 +1122,23 @@
             "default_value": 1
         },
         {
+            "key": "field_7622d9f2a498d",
+            "label": "Accessibility toolbar",
+            "name": "a11y_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "A button in the bottom-left corner with text size, contrast, link underline and read-aloud options.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "ui": 1,
+            "default_value": 1
+        },
+        {
             "key": "field_3a641778ef17d",
             "label": "Send form submissions to",
             "name": "notification_email",
@@ -1154,7 +1171,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_c482b0868419d",
+            "key": "field_aac526ea19605",
             "label": "AI Assistant",
             "name": "",
             "aria-label": "",
@@ -1284,7 +1301,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_a89ee56a58c5f",
+            "key": "field_3454f56768b04",
             "label": "Tracking",
             "name": "",
             "aria-label": "",

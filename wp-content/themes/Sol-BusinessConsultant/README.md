@@ -121,3 +121,16 @@ The **SOL Assistant** chat sits in the bottom-right corner on every page. It's t
 - **What it knows:** SOL's services, every service page (it reads them from the site, so new service pages are included automatically), the key pages (booking, contact, pricing, quiz, payment form, policies), phone, email and hours, and how course purchase and portal access work.
 - **Safety:** the key stays on the server (`/wp-json/sol/v1/chat` calls Groq), only this site can use the endpoint, and each visitor is limited to 12 messages per 5 minutes and 80 per day, with 2,000 per day for the whole site (change with the `sol_chat_limits` filter). It never asks for card, bank or password details.
 - **Files:** `inc/chat.php`, `assets/js/sol-chat.js`, `assets/css/sol-chat.css`. The conversation is kept for the browser tab's session, so it survives page changes.
+
+## Accessibility toolbar
+
+A round accessibility button sits in the bottom-left corner on every page. It opens a panel with:
+
+- **Text size** from 80% to 150% (− and + buttons).
+- **Grayscale**, **High Contrast**, **Negative Contrast** (black background, white text, yellow links) and **Light Background** (white background, black text, blue links). Only one of the three contrast modes is on at a time; grayscale can be combined with any of them.
+- **Links Underline** and **Read Aloud** (uses the browser's built-in voice; click or select any text to hear it, and keyboard focus is read out too).
+- **Reset all settings.**
+
+Choices are saved in the visitor's browser and reapplied before the page appears, so there's no flicker. The button waits until the cookie notice is accepted. Turn it off in **SOL Site → Widgets & Forms → Accessibility toolbar**. Files: `inc/a11y.php`, `assets/js/sol-a11y.js`, `assets/css/sol-a11y.css`.
+
+The **Secure Payment / Contact Us** side buttons come from the Sticky Buttons plugin; `assets/css/sol-sticky.css` restyles them to match the site (the plugin still controls links, icons and labels).

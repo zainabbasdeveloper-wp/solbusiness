@@ -72,6 +72,7 @@ export const options = {
   cookie_link: '/privacy-policy',
   floating_whatsapp: true,
   back_to_top: true,
+  a11y_enabled: true,
   notification_email: 'info@solbusinessconsultant.com.au',
   default_success: 'Thanks. The SOL team will contact you within one business day.',
   head_code: '',

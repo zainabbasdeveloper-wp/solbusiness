@@ -82,6 +82,7 @@
   "cookie_link": "field_4ba9abd686768",
   "floating_whatsapp": "field_026fa2c61ffb3",
   "back_to_top": "field_2f196c241d432",
+  "a11y_enabled": "field_7622d9f2a498d",
   "notification_email": "field_3a641778ef17d",
   "default_success": "field_72fe600691c14",
   "chat_enabled": "field_22c3dd6101866",
@@ -598,6 +599,7 @@
   "cookie_link": "/privacy-policy",
   "floating_whatsapp": true,
   "back_to_top": true,
+  "a11y_enabled": true,
   "notification_email": "info@solbusinessconsultant.com.au",
   "default_success": "Thank you. The SOL team will contact you within one business day.",
   "head_code": "",
@@ -14240,6 +14242,7 @@
   "option:cookie_link": "9da14cbc49b6eff1",
   "option:floating_whatsapp": "5ffe533b830f08a0",
   "option:back_to_top": "5ffe533b830f08a0",
+  "option:a11y_enabled": "5ffe533b830f08a0",
   "option:notification_email": "ad8b98e0295b228f",
   "option:default_success": "5c36eb931a650f06",
   "option:head_code": "dd29ecf524b030a6",
@@ -15579,5 +15582,5 @@
    }
   ]
  },
- "build": "4435a5e1251e419e"
+ "build": "345e5e6bd8970130"
 }
