@@ -145,7 +145,6 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'sol-sections', SOL_URI . 'assets/css/sol-sections.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-sticky', SOL_URI . 'assets/css/sol-sticky.css', array( 'sol' ), $ver ); // Sticky Buttons plugin side rail.
 	wp_enqueue_style( 'sol-footer', SOL_URI . 'assets/css/sol-footer.css', array( 'sol' ), $ver );
-	wp_enqueue_style( 'sol-polish', SOL_URI . 'assets/css/sol-polish.css', array( 'sol-sections', 'sol-footer' ), $ver ); // Finishing touches, loaded last.
 	if ( is_404() ) {
 		wp_enqueue_style( 'sol-404', SOL_URI . 'assets/css/sol-404.css', array( 'sol' ), $ver );
 	}
