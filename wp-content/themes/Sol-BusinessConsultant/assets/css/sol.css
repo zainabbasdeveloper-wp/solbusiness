@@ -48,7 +48,7 @@ i.sol-icon { font-style: normal; }
 .sol-muted { color: var(--sol-mist); font-size: .9rem; }
 .sol-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--sol-mist); margin-bottom: .5rem !important; }
 
-.sol-container { width: 100%; max-width: 1280px; margin: 0 auto; padding-left: var(--sol-gutter); padding-right: var(--sol-gutter); }
+.sol-container { box-sizing: border-box; width: 100%; max-width: 1280px; margin: 0 auto; padding-left: var(--sol-gutter); padding-right: var(--sol-gutter); }
 .sol-container--mid { max-width: 1040px; }
 .sol-container--narrow { max-width: 820px; }
 .sol-flush { padding: 0; margin: 0 auto; }
@@ -92,7 +92,8 @@ i.sol-icon { font-style: normal; }
 .sol-bg-ink .sol-btn--outline, .sol-hero--dark .sol-btn--outline, .sol-cta--dark .sol-btn--outline, .sol-cta--image .sol-btn--outline, .sol-panel--dark .sol-btn--outline { color: #fff !important; border-color: rgba(255, 255, 255, .3); }
 .sol-bg-white .sol-btn--light, .sol-bg-chalk .sol-btn--light, .sol-cta--light .sol-btn--light, .sol-page-header .sol-btn--light { color: var(--sol-ink) !important; border-color: rgba(15, 23, 42, .2); background: transparent; }
 .sol-btn--sm { padding: 9px 14px; font-size: .85rem; border-radius: 10px; }
-.sol-btn--block { width: 100%; }
+.sol-btn--block { width: 100%; box-sizing: border-box; }
+.sol-main :is(p, li, td, dd) a { overflow-wrap: anywhere; } /* long pasted URLs wrap on phones */
 .sol-btn__icon { width: 1.1em; height: 1.1em; }
 .sol-link-btn { background: none; border: 0; padding: 8px 0; color: var(--sol-mist); font: inherit; font-size: .9rem; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
 .sol-link-btn:hover { color: var(--sol-ink); }
@@ -377,7 +378,7 @@ i.sol-icon { font-style: normal; }
 .sol-inline-cta .sol-btn--outline { color: #fff !important; border-color: rgba(255, 255, 255, .3); }
 
 /* ---------- Table ---------- */
-.sol-table-wrap { overflow-x: auto; border: 1px solid var(--sol-border); border-radius: var(--sol-radius-lg); background: #fff; -webkit-overflow-scrolling: touch; }
+.sol-table-wrap { position: relative; overflow-x: auto; border: 1px solid var(--sol-border); border-radius: var(--sol-radius-lg); background: #fff; -webkit-overflow-scrolling: touch; }
 .sol-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: .92rem; }
 .sol-table th, .sol-table td { padding: 14px 16px; border-bottom: 1px solid var(--sol-border); text-align: center; vertical-align: middle; }
 .sol-table th[scope="row"], .sol-table__first { text-align: left; font-weight: 500; color: var(--sol-ink-2); }
