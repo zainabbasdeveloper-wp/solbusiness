@@ -325,3 +325,11 @@ add_action( 'woocommerce_thankyou', function ( $order_id ) {
 	</section>
 	<?php
 }, 5 );
+
+// Product edit screen: always show WooCommerce's main boxes, even if they were unticked in Screen Options.
+add_filter( 'hidden_meta_boxes', function ( $hidden, $screen ) {
+	if ( $screen && 'product' === $screen->id && is_array( $hidden ) ) {
+		$hidden = array_values( array_diff( $hidden, array( 'woocommerce-product-data', 'postexcerpt', 'product_catdiv', 'tagsdiv-product_tag', 'product_branddiv', 'woocommerce-product-images', 'postimagediv' ) ) );
+	}
+	return $hidden;
+}, 20, 2 );
