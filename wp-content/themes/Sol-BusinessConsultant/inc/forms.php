@@ -251,7 +251,13 @@ function sol_handle_form() {
 	}
 	$body .= "\nView all enquiries: " . admin_url( 'edit.php?post_type=sol_enquiry' );
 	$headers = array( 'Reply-To: ' . ( $data['name'] ? $data['name'] . ' ' : '' ) . '<' . $data['email'] . '>' );
-	wp_mail( $to, sprintf( '[%s] New %s from %s', wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ), $variant, $data['name'] ? $data['name'] : $data['email'] ), $body, $headers );
+	$mailed = wp_mail( $to, sprintf( '[%s] New %s from %s', wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ), $variant, $data['name'] ? $data['name'] : $data['email'] ), $body, $headers );
+	if ( $post_id && ! is_wp_error( $post_id ) ) {
+		update_post_meta( $post_id, '_sol_mail', $mailed ? 'sent' : 'failed' );
+	}
+	if ( $mailed ) {
+		update_option( 'sol_mail_last_ok', time(), false );
+	}
 
 	// Optional webhook (CRM, n8n, Zapier).
 	$hook = sol_opt( 'lead_webhook_url' );
