@@ -1,6 +1,6 @@
 // All SCF field groups for the SOL website.
 import {
-  text, textarea, password, wysiwyg, image, file, link, url, email, number, bool, select, icon, tab,
+  text, textarea, password, wysiwyg, image, file, link, url, email, number, message, bool, select, icon, tab,
   postObject, relationship, repeater, group, flexible, layout, listOf, buttons, sectionHead,
   fieldGroup, onPostType, onOptionsPage, onTemplate,
 } from './lib.mjs';
@@ -350,7 +350,7 @@ const course = fieldGroup({
     text('badge', 'Badge (e.g. Foundation)', { wrapper: { width: 25 } }),
     select('color', 'Colour', { blue: 'Blue', amber: 'Amber', purple: 'Purple' }, { default_value: 'blue', wrapper: { width: 25 } }),
     bool('popular', 'Most popular', { wrapper: { width: 25 } }),
-    number('price', 'Price (AUD)', { wrapper: { width: 33 } }),
+    message('price_note', 'Price', 'Set the price in <strong>Product data → General</strong> above (Regular price, plus Sale price for a discount). That price shows on the website and is charged at checkout.', { wrapper: { width: 33 } }),
     text('duration', 'Duration', { wrapper: { width: 33 } }),
     number('total_topics', 'Total topics', { wrapper: { width: 33 } }),
     textarea('description', 'Description'),

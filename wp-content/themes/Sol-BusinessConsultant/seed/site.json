@@ -34,7 +34,7 @@
   "badge": "field_9d962bae75ed6",
   "color": "field_edb8b7c34f62c",
   "popular": "field_587dd3fb5247b",
-  "price": "field_d0afacbf3f1d1",
+  "price_note": "field_5cc0bccb33591",
   "duration": "field_0651b8136b3a9",
   "total_topics": "field_8477c0d581293",
   "description": "field_71e322c207661",
@@ -13239,7 +13239,6 @@
     "badge": "Foundation",
     "color": "blue",
     "popular": false,
-    "price": 325,
     "duration": "4–6 hours",
     "total_topics": 45,
     "description": "Build a strong foundation in NDIS support coordination: NDIS principles, participant engagement and how to read and apply NDIS plans and supports.",
@@ -13442,7 +13441,6 @@
     "badge": "Professional",
     "color": "amber",
     "popular": true,
-    "price": 460,
     "duration": "8–10 hours",
     "total_topics": 124,
     "description": "Develop hands-on support coordination skills in service coordination, provider engagement, participant goal planning, documentation and case management.",
@@ -13649,7 +13647,6 @@
     "badge": "Advanced",
     "color": "purple",
     "popular": false,
-    "price": 599,
     "duration": "12–15 hours",
     "total_topics": 65,
     "description": "Master advanced support coordination: complex needs, compliance obligations, crisis management, reporting, leadership and advanced participant support strategies.",
@@ -14187,9 +14184,9 @@
   "product:SOL-MKT-STARTER": "447f0120631e9b9d",
   "product:SOL-MKT-GROWTH": "4bdc5c9007ece834",
   "product:SOL-MKT-ENTERPRISE": "8662eed634ec2231",
-  "course:3255": "34f91b35de92a235",
-  "course:495": "406bff3505d51e3c",
-  "course:499": "f53c22beb68cfb09",
+  "course:3255": "5f96620cb8bd9ca7",
+  "course:495": "802862852a56646c",
+  "course:499": "4068c288b299457b",
   "option:logo": "5122052e9845dfcd",
   "option:company_name": "c65cfe9a85a090fa",
   "option:tagline": "22045c911a1a8c13",
@@ -14235,6 +14232,21 @@
   "option:chat_instructions": "dd29ecf524b030a6"
  },
  "history": {
+  "course:3255": [
+   "34f91b35de92a235",
+   "50d51d3b3152e401",
+   "81297261a501836e"
+  ],
+  "course:495": [
+   "406bff3505d51e3c",
+   "525b38cebc0c2bbb",
+   "1d9b97b40389f2a0"
+  ],
+  "course:499": [
+   "f53c22beb68cfb09",
+   "13f420bc75fa007d",
+   "8c876b323c3e4823"
+  ],
   "page:home": [
    "2238b34ac329e855",
    "a06d273feb4c546e",
@@ -14371,18 +14383,6 @@
    "a568e9fce4ad1a37",
    "19f9b682a003b692",
    "bdc6eb52fbd1b3f4"
-  ],
-  "course:3255": [
-   "50d51d3b3152e401",
-   "81297261a501836e"
-  ],
-  "course:495": [
-   "525b38cebc0c2bbb",
-   "1d9b97b40389f2a0"
-  ],
-  "course:499": [
-   "13f420bc75fa007d",
-   "8c876b323c3e4823"
   ],
   "option:mega_promo": [
    "059eacbf67bab373",
@@ -15564,5 +15564,5 @@
    }
   ]
  },
- "build": "46b8847bced15381"
+ "build": "6fbbe63d4cb62038"
 }

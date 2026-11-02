@@ -75,11 +75,11 @@
             "default_value": 0
         },
         {
-            "key": "field_d0afacbf3f1d1",
-            "label": "Price (AUD)",
-            "name": "price",
+            "key": "field_5cc0bccb33591",
+            "label": "Price",
+            "name": "price_note",
             "aria-label": "",
-            "type": "number",
+            "type": "message",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -87,7 +87,10 @@
                 "width": "33",
                 "class": "",
                 "id": ""
-            }
+            },
+            "message": "Set the price in <strong>Product data → General</strong> above (Regular price, plus Sale price for a discount). That price shows on the website and is charged at checkout.",
+            "new_lines": "",
+            "esc_html": 0
         },
         {
             "key": "field_0651b8136b3a9",

@@ -8,7 +8,7 @@ const PRODUCT_IDS = [WOO.level1, WOO.level2, WOO.level3];
 export const courses = D.TrainingCourses.LEVELS.map((c, i) => ({
   product_id: PRODUCT_IDS[i], title: c.title,
   fields: {
-    level: c.level, badge: c.badge, color: c.color, popular: !!c.popular, price: c.price, duration: c.duration, total_topics: c.totalTopics,
+    level: c.level, badge: c.badge, color: c.color, popular: !!c.popular, duration: c.duration, total_topics: c.totalTopics,
     description: c.description, outcomes: items(c.outcomes),
     curriculum: c.curriculum.map((m) => ({ title: m.title, topics: items(m.topics) })),
     thumbnail: img(THUMBS[c.color]),

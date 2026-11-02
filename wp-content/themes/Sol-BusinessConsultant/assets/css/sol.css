@@ -639,6 +639,8 @@ i.sol-icon { font-style: normal; }
 .sol-course__card { position: sticky; top: 120px; display: grid; gap: 12px; padding: 20px; border: 1px solid var(--sol-border); border-radius: var(--sol-radius-lg); background: #fff; box-shadow: var(--sol-shadow); }
 .sol-course__thumb { width: 100%; height: 190px; object-fit: cover; border-radius: 12px; }
 .sol-course__price { font-family: var(--sol-display); font-weight: 700; font-size: 2rem; }
+.sol-course__price del { font-size: 1.1rem; color: var(--sol-mist); font-weight: 500; }
+.sol-course__price ins { text-decoration: none; }
 .sol-color-blue .sol-course__num, .sol-color-blue .sol-tabs__tab[aria-selected="true"], .sol-tabs__tab.sol-color-blue[aria-selected="true"] { background: #2563eb; color: #fff; }
 .sol-color-amber .sol-course__num, .sol-tabs__tab.sol-color-amber[aria-selected="true"] { background: #f59e0b; color: #fff; }
 .sol-color-purple .sol-course__num, .sol-tabs__tab.sol-color-purple[aria-selected="true"] { background: #9333ea; color: #fff; }

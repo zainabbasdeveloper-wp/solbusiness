@@ -16,6 +16,7 @@ export const url = (name, label, o) => base('url', name, label, o);
 export const email = (name, label, o) => base('email', name, label, o);
 export const password = (name, label, o) => base('password', name, label, o);
 export const number = (name, label, o) => base('number', name, label, o);
+export const message = (name, label, text, o) => base('message', name, label, { message: text, new_lines: '', esc_html: 0, ...o });
 export const bool = (name, label, o) => base('true_false', name, label, { ui: 1, default_value: 0, ...o });
 export const select = (name, label, choices, o) => base('select', name, label, {
   choices: Array.isArray(choices) ? Object.fromEntries(choices.map((c) => [c, c])) : choices,

@@ -39,7 +39,7 @@ sol_section_open( $s, 'course_levels' );
 			}
 			$color = preg_replace( '/[^a-z]/', '', (string) get_field( 'color', $id ) );
 			$wc    = function_exists( 'wc_get_product' ) ? wc_get_product( $id ) : null;
-			$price = $wc ? $wc->get_price() : get_field( 'price', $id );
+			$price = $wc && '' !== $wc->get_price() ? $wc->get_price_html() : '';
 			$thumb = get_field( 'thumbnail', $id ) ? get_field( 'thumbnail', $id ) : get_post_thumbnail_id( $id );
 			?>
 			<div class="sol-tabs__panel sol-course sol-color-<?php echo esc_attr( $color ); ?>" <?php echo $many ? 'role="tabpanel" aria-labelledby="' . esc_attr( $uid . '-tab-' . $i ) . '"' : ''; ?> id="<?php echo esc_attr( $uid . '-panel-' . $i ); ?>" <?php echo ( $many && $i > 0 ) ? 'hidden' : ''; ?>>
@@ -71,7 +71,7 @@ sol_section_open( $s, 'course_levels' );
 					<div class="sol-course__card">
 						<?php echo sol_image( $thumb, 'medium_large', get_the_title( $id ), 'sol-course__thumb' ); // phpcs:ignore ?>
 						<p class="sol-muted"><?php echo esc_html( get_field( 'level', $id ) . ' · ' . get_field( 'badge', $id ) ); ?></p>
-						<?php if ( $price ) : ?><p class="sol-course__price">AUD $<?php echo esc_html( number_format_i18n( (float) $price ) ); ?></p><?php endif; ?>
+						<?php if ( $price ) : ?><p class="sol-course__price price">AUD <?php echo wp_kses_post( $price ); ?></p><?php endif; ?>
 						<p class="sol-muted">One-time payment · Lifetime access · No hidden fees</p>
 						<?php echo sol_button( get_field( 'enrol_link', $id ), 'primary' ); // phpcs:ignore ?>
 						<?php echo sol_button( get_field( 'buy_link', $id ), 'outline' ); // phpcs:ignore ?>

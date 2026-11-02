@@ -84,7 +84,7 @@ Key `group_sol_course` · Shown on: post_type = product
 | `badge` | Text | Badge (e.g. Foundation) |
 | `color` | Select: `blue`, `amber`, `purple` | Colour |
 | `popular` | True / False | Most popular |
-| `price` | Number | Price (AUD) |
+| `price_note` | message | Price |
 | `duration` | Text | Duration |
 | `total_topics` | Number | Total topics |
 | `description` | Text area | Description |

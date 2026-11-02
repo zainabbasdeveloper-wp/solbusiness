@@ -333,3 +333,83 @@ add_filter( 'hidden_meta_boxes', function ( $hidden, $screen ) {
 	}
 	return $hidden;
 }, 20, 2 );
+
+/**
+ * The price a simple product should charge, worked out from its Regular price, Sale price and sale dates
+ * the same way WooCommerce does when a product is saved.
+ */
+function sol_expected_price( $p ) {
+	$regular = (string) $p->get_regular_price( 'edit' );
+	$sale    = (string) $p->get_sale_price( 'edit' );
+	$from    = $p->get_date_on_sale_from( 'edit' );
+	$to      = $p->get_date_on_sale_to( 'edit' );
+	$on_sale = '' !== $sale && ( '' === $regular || (float) $sale < (float) $regular )
+		&& ( ! $from || $from->getTimestamp() <= time() ) && ( ! $to || $to->getTimestamp() > time() );
+	return $on_sale ? $sale : $regular;
+}
+
+/** Simple products whose stored price doesn't match their Regular/Sale price (for example after a sale ended). */
+function sol_products_with_wrong_price() {
+	if ( ! function_exists( 'wc_get_products' ) ) {
+		return array();
+	}
+	$out = array();
+	foreach ( wc_get_products( array( 'type' => array( 'simple', 'external' ), 'status' => array( 'publish', 'private', 'draft', 'pending', 'future' ), 'limit' => -1 ) ) as $p ) {
+		$want = sol_expected_price( $p );
+		$have = (string) $p->get_price( 'edit' );
+		if ( '' !== $want && ( '' === $have || abs( (float) $want - (float) $have ) > 0.0001 ) ) {
+			$out[] = array( 'product' => $p, 'have' => $have, 'want' => $want );
+		}
+	}
+	return $out;
+}
+
+// Products screens: warn when the price customers see doesn't match the product's Regular/Sale price, with a fix button.
+add_action( 'admin_notices', function () {
+	$screen = get_current_screen();
+	if ( ! $screen || ! in_array( $screen->id, array( 'edit-product', 'product' ), true ) || ! current_user_can( 'edit_products' ) ) {
+		return;
+	}
+	if ( isset( $_GET['sol_prices_fixed'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+		echo '<div class="notice notice-success is-dismissible"><p>' . esc_html( sprintf( '%d product price(s) updated to match their Regular/Sale price.', absint( $_GET['sol_prices_fixed'] ) ) ) . '</p></div>'; // phpcs:ignore WordPress.Security.NonceVerification
+	}
+	$wrong = sol_products_with_wrong_price();
+	if ( ! $wrong ) {
+		return;
+	}
+	echo '<div class="notice notice-warning"><p><strong>Some products are charging a different price from their Regular/Sale price.</strong> This usually happens when a scheduled sale ended but WooCommerce didn\'t switch the price back.</p><ul style="list-style:disc;padding-left:20px">';
+	foreach ( $wrong as $w ) {
+		echo '<li>' . esc_html( $w['product']->get_name() ) . ': charging ' . wp_kses_post( wc_price( $w['have'] ) ) . ', should be ' . wp_kses_post( wc_price( $w['want'] ) ) . '</li>';
+	}
+	echo '</ul><form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" style="margin:0 0 10px"><input type="hidden" name="action" value="sol_fix_prices">';
+	wp_nonce_field( 'sol_fix_prices' );
+	echo '<button type="submit" class="button button-primary">Fix prices</button> <span class="description">To keep a discount instead, open the product and set its Sale price in Product data → General.</span></form></div>';
+} );
+
+add_action( 'admin_post_sol_fix_prices', function () {
+	if ( ! current_user_can( 'edit_products' ) ) {
+		wp_die( 'Not allowed.' );
+	}
+	check_admin_referer( 'sol_fix_prices' );
+	$n = 0;
+	foreach ( sol_products_with_wrong_price() as $w ) {
+		$p  = $w['product'];
+		$to = $p->get_date_on_sale_to( 'edit' );
+		if ( $to && $to->getTimestamp() <= time() ) { // the sale is over: clear it, as WooCommerce's daily sale check would have
+			$p->set_sale_price( '' );
+			$p->set_date_on_sale_from( '' );
+			$p->set_date_on_sale_to( '' );
+		}
+		$p->save();
+		// WooCommerce only recalculates the stored price when a price field changes, so write it directly.
+		update_post_meta( $p->get_id(), '_price', wc_format_decimal( $w['want'] ) );
+		wc_delete_product_transients( $p->get_id() );
+		clean_post_cache( $p->get_id() );
+		++$n;
+	}
+	if ( $n && function_exists( 'wc_update_product_lookup_tables_column' ) ) {
+		wc_update_product_lookup_tables_column( 'min_max_price' ); // keeps shop sorting and price filters in step
+	}
+	wp_safe_redirect( add_query_arg( 'sol_prices_fixed', $n, wp_get_referer() ? wp_get_referer() : admin_url( 'edit.php?post_type=product' ) ) );
+	exit;
+} );
