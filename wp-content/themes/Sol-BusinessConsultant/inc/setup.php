@@ -182,6 +182,14 @@ add_action( 'wp_head', function () {
 	echo "<script>if(window.matchMedia&&!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('sol-anim');}</script>\n";
 }, 1 );
 
+// Analytics stays cookie-free until the visitor clicks Accept on the cookie banner.
+add_action( 'wp_head', function () {
+	if ( ! sol_opt( 'cookie_enabled', false ) ) {
+		return;
+	}
+	echo "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var c=null;try{c=localStorage.getItem('sol_cookie_consent');}catch(e){}var v=(c==='accepted'||c==='1')?'granted':'denied';gtag('consent','default',{analytics_storage:v,ad_storage:v,ad_user_data:v,ad_personalization:v});})();</script>\n";
+}, 2 );
+
 add_action( 'wp_head', function () {
 	$code = sol_opt( 'head_code' );
 	if ( $code ) {

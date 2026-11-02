@@ -411,10 +411,23 @@
 
 	/* ---------- Widgets ---------- */
 	function widgets() {
+		// Cookie banner: shown until the visitor accepts or rejects. Older "OK" clicks ('1') count as accepted.
 		var cookie = $('[data-sol-cookie]');
-		if (cookie && store.get('sol_cookie_consent') !== '1') {
+		var choice = store.get('sol_cookie_consent');
+		if (cookie && choice !== 'accepted' && choice !== 'rejected' && choice !== '1') {
 			cookie.hidden = false;
-			$('[data-sol-cookie-accept]', cookie).addEventListener('click', function () { store.set('sol_cookie_consent', '1'); cookie.hidden = true; });
+			$$('[data-sol-cookie-choice]', cookie).forEach(function (btn) {
+				btn.addEventListener('click', function () {
+					var c = btn.getAttribute('data-sol-cookie-choice');
+					store.set('sol_cookie_consent', c);
+					cookie.hidden = true;
+					if (typeof window.gtag === 'function') {
+						var v = c === 'accepted' ? 'granted' : 'denied';
+						window.gtag('consent', 'update', { analytics_storage: v, ad_storage: v, ad_user_data: v, ad_personalization: v });
+					}
+					document.dispatchEvent(new CustomEvent('sol:cookie-consent', { detail: c }));
+				});
+			});
 		}
 		var top = $('[data-sol-totop]');
 		if (top) {

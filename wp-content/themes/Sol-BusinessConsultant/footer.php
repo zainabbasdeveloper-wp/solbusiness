@@ -149,7 +149,10 @@ if ( $wa && sol_opt( 'floating_whatsapp', false ) ) :
 		<p><?php echo esc_html( sol_opt( 'cookie_text' ) ); ?>
 			<?php if ( sol_opt( 'cookie_link' ) ) : ?><a href="<?php echo esc_url( sol_url( sol_opt( 'cookie_link' ) ) ); ?>">Privacy Policy</a><?php endif; ?>
 		</p>
-		<button type="button" class="sol-btn sol-btn--primary" data-sol-cookie-accept>OK</button>
+		<div class="sol-cookie__actions">
+			<button type="button" class="sol-btn sol-btn--light" data-sol-cookie-choice="rejected">Reject</button>
+			<button type="button" class="sol-btn sol-btn--primary" data-sol-cookie-choice="accepted">Accept</button>
+		</div>
 	</div>
 <?php endif; ?>
 <?php wp_footer(); ?>
