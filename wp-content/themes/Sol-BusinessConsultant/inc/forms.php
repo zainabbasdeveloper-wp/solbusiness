@@ -60,17 +60,18 @@ function sol_render_form( $variant, $args = array() ) {
 		$args['select_label'] = 'Training package';
 	}
 
-	$field = function ( $name, $label, $type = 'text', $required = false, $auto = '' ) use ( $uid ) {
+	$field = function ( $name, $label, $type = 'text', $required = false, $auto = '', $extra = '' ) use ( $uid ) {
 		$id = $uid . '-' . $name;
 		return sprintf(
-			'<label class="sol-field" for="%1$s"><span>%2$s%3$s</span><input id="%1$s" type="%4$s" name="%5$s"%6$s%7$s></label>',
+			'<label class="sol-field" for="%1$s"><span>%2$s%3$s</span><input id="%1$s" type="%4$s" name="%5$s"%6$s%7$s%8$s></label>',
 			esc_attr( $id ),
 			esc_html( $label ),
 			$required ? ' *' : '',
 			esc_attr( $type ),
 			esc_attr( $name ),
 			$required ? ' required' : '',
-			$auto ? ' autocomplete="' . esc_attr( $auto ) . '"' : ''
+			$auto ? ' autocomplete="' . esc_attr( $auto ) . '"' : '',
+			$extra ? ' ' . $extra : ''
 		);
 	};
 
@@ -81,15 +82,15 @@ function sol_render_form( $variant, $args = array() ) {
 		<?php if ( 'quiz' === $variant ) : ?><input type="hidden" name="summary" value="" data-sol-quiz-summary><?php endif; ?>
 		<?php if ( $sent ) : ?><p class="sol-form__status is-success"><?php echo esc_html( $success ); ?></p><?php endif; ?>
 		<?php if ( ! $sent && ! empty( $_GET['sol_error'] ) && 0 === $GLOBALS['sol_form_error_shown']++ ) : // phpcs:ignore WordPress.Security.NonceVerification ?>
-			<p class="sol-form__status is-error"><?php echo esc_html( sanitize_text_field( wp_unslash( $_GET['sol_error'] ) ) ); // phpcs:ignore ?></p>
+			<p class="sol-form__status is-error"><?php echo esc_html( sol_form_error_text( sanitize_key( wp_unslash( $_GET['sol_error'] ) ) ) ); // phpcs:ignore ?></p>
 		<?php endif; ?>
 
 		<div class="sol-form__row">
-			<?php echo $field( 'name', 'complaint' === $variant ? 'Your name' : 'Full name', 'text', true, 'name' ); // phpcs:ignore ?>
-			<?php echo $field( 'email', 'Email address', 'email', true, 'email' ); // phpcs:ignore ?>
+			<?php echo $field( 'name', 'complaint' === $variant ? 'Your name' : 'Full name', 'text', true, 'name', 'minlength="2" maxlength="100"' ); // phpcs:ignore ?>
+			<?php echo $field( 'email', 'Email address', 'email', true, 'email', 'maxlength="150"' ); // phpcs:ignore ?>
 		</div>
 		<div class="sol-form__row">
-			<?php echo $field( 'phone', 'Phone number', 'tel', false, 'tel' ); // phpcs:ignore ?>
+			<?php echo $field( 'phone', 'Phone number', 'tel', false, 'tel', 'pattern="[0-9 +\(\)\-]{8,20}" maxlength="20" title="Digits, spaces, + ( ) and - only, at least 8 digits"' ); // phpcs:ignore ?>
 			<?php
 			if ( 'complaint' === $variant ) {
 				echo $field( 'reference', 'Order or reference number (optional)' ); // phpcs:ignore
@@ -110,7 +111,7 @@ function sol_render_form( $variant, $args = array() ) {
 
 		<?php if ( 'consultation' === $variant ) : ?>
 			<div class="sol-form__row">
-				<?php echo $field( 'preferred_date', 'Preferred date', 'date' ); // phpcs:ignore ?>
+				<?php echo $field( 'preferred_date', 'Preferred date', 'date', false, '', 'min="' . esc_attr( wp_date( 'Y-m-d' ) ) . '" max="' . esc_attr( wp_date( 'Y-m-d', time() + YEAR_IN_SECONDS ) ) . '"' ); // phpcs:ignore ?>
 				<label class="sol-field" for="<?php echo esc_attr( $uid ); ?>-time"><span>Preferred time (Melbourne)</span>
 					<select id="<?php echo esc_attr( $uid ); ?>-time" name="preferred_time">
 						<option value="">Any time</option><option>Morning (9am–12pm)</option><option>Afternoon (12pm–3pm)</option><option>Late afternoon (3pm–5pm)</option>
@@ -119,12 +120,12 @@ function sol_render_form( $variant, $args = array() ) {
 			</div>
 		<?php endif; ?>
 		<?php if ( 'training' === $variant ) : ?>
-			<?php echo $field( 'learners', 'Number of learners', 'number' ); // phpcs:ignore ?>
+			<?php echo $field( 'learners', 'Number of learners', 'number', false, '', 'min="1" max="1000" step="1" inputmode="numeric"' ); // phpcs:ignore ?>
 		<?php endif; ?>
 
 		<?php if ( 'quiz' !== $variant ) : ?>
 			<label class="sol-field" for="<?php echo esc_attr( $uid ); ?>-message"><span><?php echo esc_html( 'complaint' === $variant ? 'Describe your complaint or feedback' : ( 'consultation' === $variant ? 'What would you like to discuss?' : 'What do you need help with?' ) ); ?><?php echo in_array( $variant, array( 'contact', 'complaint' ), true ) ? ' *' : ''; ?></span>
-				<textarea id="<?php echo esc_attr( $uid ); ?>-message" name="message" rows="5" <?php echo in_array( $variant, array( 'contact', 'complaint' ), true ) ? 'required' : ''; ?>></textarea>
+				<textarea id="<?php echo esc_attr( $uid ); ?>-message" name="message" rows="5" maxlength="5000" <?php echo in_array( $variant, array( 'contact', 'complaint' ), true ) ? 'required' : ''; ?>></textarea>
 			</label>
 		<?php endif; ?>
 
@@ -155,11 +156,11 @@ function sol_handle_form() {
 		$back = home_url( '/' );
 	}
 
-	$fail = function ( $msg, $code = 400 ) use ( $ajax, $back ) {
+	$fail = function ( $key, $code = 400 ) use ( $ajax, $back ) {
 		if ( $ajax ) {
-			wp_send_json_error( array( 'message' => $msg ), $code );
+			wp_send_json_error( array( 'message' => sol_form_error_text( $key ), 'field' => $key ), $code );
 		}
-		wp_safe_redirect( add_query_arg( 'sol_error', rawurlencode( $msg ), $back ) );
+		wp_safe_redirect( add_query_arg( 'sol_error', $key, $back ) );
 		exit;
 	};
 	$done = function () use ( $ajax, $back, $variant ) {
@@ -171,21 +172,21 @@ function sol_handle_form() {
 	};
 
 	if ( ! in_array( $variant, sol_form_variants(), true ) ) {
-		$fail( 'Unknown form.' );
+		$fail( 'unknown' );
 	}
 
 	// Bots: honeypot filled or submitted faster than a person can type. Pretend it worked.
 	$ts = isset( $_POST['_sol_ts'] ) ? (int) $_POST['_sol_ts'] : 0;
-	if ( ! empty( $_POST['website'] ) || ( $ts && time() - $ts < 2 ) ) {
+	if ( ! empty( $_POST['website'] ) || ! $ts || time() - $ts < 2 ) {
 		$done();
 	}
 
 	// Basic rate limit per IP.
-	$ip   = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+	$ip   = sol_visitor_ip();
 	$rkey = 'sol_rl_' . md5( $ip );
 	$hits = (int) get_transient( $rkey );
 	if ( $hits >= 8 ) {
-		$fail( 'Too many submissions. Please try again in a few minutes or call us.', 429 );
+		$fail( 'rate', 429 );
 	}
 	set_transient( $rkey, $hits + 1, 10 * MINUTE_IN_SECONDS );
 
@@ -210,13 +211,35 @@ function sol_handle_form() {
 	// phpcs:enable
 
 	if ( ! is_email( $data['email'] ) ) {
-		$fail( 'Please enter a valid email address.' );
+		$fail( 'email' );
 	}
-	if ( 'newsletter' !== $variant && '' === $data['name'] ) {
-		$fail( 'Please enter your name.' );
+	if ( 'newsletter' !== $variant && mb_strlen( $data['name'] ) < 2 ) {
+		$fail( 'name' );
+	}
+	if ( '' !== $data['phone'] && ( ! preg_match( '/^[0-9 +()\-]+$/', $data['phone'] ) || strlen( preg_replace( '/\D/', '', $data['phone'] ) ) < 8 ) ) {
+		$fail( 'phone' );
 	}
 	if ( in_array( $variant, array( 'contact', 'complaint' ), true ) && '' === $data['message'] ) {
-		$fail( 'Please tell us a little about your enquiry.' );
+		$fail( 'message' );
+	}
+	if ( 'complaint' === $variant && '' === $data['selection'] ) {
+		$fail( 'selection' );
+	}
+	if ( '' !== $data['preferred_date'] ) {
+		$day = DateTime::createFromFormat( '!Y-m-d', $data['preferred_date'], wp_timezone() );
+		if ( ! $day || $day->format( 'Y-m-d' ) !== $data['preferred_date'] || $data['preferred_date'] < wp_date( 'Y-m-d' ) ) {
+			$fail( 'date' );
+		}
+	}
+	if ( '' !== $data['learners'] && ( ! ctype_digit( $data['learners'] ) || (int) $data['learners'] < 1 || (int) $data['learners'] > 1000 ) ) {
+		$fail( 'learners' );
+	}
+	// Newsletter: one entry per email address.
+	if ( 'newsletter' === $variant ) {
+		$dupe = get_posts( array( 'post_type' => 'sol_enquiry', 'post_status' => 'any', 'fields' => 'ids', 'posts_per_page' => 1, 'meta_query' => array( 'relation' => 'AND', array( 'key' => 'email', 'value' => $data['email'] ), array( 'key' => 'form_variant', 'value' => 'newsletter' ) ) ) ); // phpcs:ignore WordPress.DB.SlowDBQuery
+		if ( $dupe ) {
+			$done();
+		}
 	}
 
 	$labels = array(
@@ -250,7 +273,9 @@ function sol_handle_form() {
 		$body .= $label . ': ' . $value . "\n";
 	}
 	$body .= "\nView all enquiries: " . admin_url( 'edit.php?post_type=sol_enquiry' );
-	$headers = array( 'Reply-To: ' . ( $data['name'] ? $data['name'] . ' ' : '' ) . '<' . $data['email'] . '>' );
+	// Quote the name so commas or quotes in it can't break the address (newlines are already stripped).
+	$reply   = trim( str_replace( array( '"', chr( 92 ) ), '', $data['name'] ) );
+	$headers = array( 'Reply-To: ' . ( $reply ? '"' . $reply . '" ' : '' ) . '<' . $data['email'] . '>' );
 	$mailed = wp_mail( $to, sprintf( '[%s] New %s from %s', wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ), $variant, $data['name'] ? $data['name'] : $data['email'] ), $body, $headers );
 	if ( $post_id && ! is_wp_error( $post_id ) ) {
 		update_post_meta( $post_id, '_sol_mail', $mailed ? 'sent' : 'failed' );
@@ -272,4 +297,40 @@ function sol_handle_form() {
 
 	do_action( 'sol_form_submitted', $variant, $data, $post_id );
 	$done();
+}
+
+/** Visitor message for each failure code. */
+function sol_form_error_text( $key ) {
+	$msgs = array(
+		'email'     => 'Please enter a valid email address.',
+		'name'      => 'Please enter your full name.',
+		'phone'     => 'Please enter a valid phone number (at least 8 digits).',
+		'message'   => 'Please tell us a little about your enquiry.',
+		'selection' => 'Please choose a category.',
+		'date'      => 'Please choose a preferred date from today onwards.',
+		'learners'  => 'Please enter a number of learners between 1 and 1000.',
+		'rate'      => 'Too many submissions. Please try again in a few minutes or call us.',
+		'unknown'   => 'Something went wrong. Please refresh the page and try again.',
+	);
+	return isset( $msgs[ $key ] ) ? $msgs[ $key ] : $msgs['unknown'];
+}
+
+/**
+ * The visitor's IP address. Behind a reverse proxy (as on this server) REMOTE_ADDR is the proxy,
+ * so the forwarded address is used when the request comes from a private or local network.
+ */
+function sol_visitor_ip() {
+	$remote = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+	$public = filter_var( $remote, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE );
+	if ( $remote && ! $public ) {
+		foreach ( array( 'HTTP_X_REAL_IP', 'HTTP_X_FORWARDED_FOR' ) as $h ) {
+			if ( ! empty( $_SERVER[ $h ] ) ) {
+				$first = trim( explode( ',', sanitize_text_field( wp_unslash( $_SERVER[ $h ] ) ) )[0] );
+				if ( filter_var( $first, FILTER_VALIDATE_IP ) ) {
+					return $first;
+				}
+			}
+		}
+	}
+	return $remote;
 }
