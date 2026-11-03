@@ -54,7 +54,7 @@ add_action( 'admin_post_sol_mail_test', function () {
 	}
 	check_admin_referer( 'sol_mail_test' );
 	list( $to ) = sol_mail_recipient();
-	$ok = wp_mail( $to, '[' . wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ) . '] Test email', "This is a test from SOL Site → Email.\n\nIf you can read this, enquiry emails from the website forms will reach this inbox.\n\nSent " . wp_date( 'j M Y, g:i a' ) . '.' );
+	$ok = sol_email_send_template( 'test', $to );
 	if ( $ok ) {
 		update_option( 'sol_mail_last_ok', time(), false );
 	}
@@ -114,6 +114,7 @@ function sol_mail_admin_page() {
 				<li>Come back here and press <strong>Send test email</strong>.</li>
 			</ol>
 		<?php endif; ?>
+		<p>See and test every email design in <a href="<?php echo esc_url( admin_url( 'admin.php?page=sol-email-templates' ) ); ?>">SOL Site → Email templates</a>.</p>
 		<p>To change where enquiries go, edit <strong>Notification email</strong> in <a href="<?php echo esc_url( admin_url( 'admin.php?page=' . SOL_OPTIONS_SLUG ) ); ?>">SOL Site Settings</a>.</p>
 	</div>
 	<?php

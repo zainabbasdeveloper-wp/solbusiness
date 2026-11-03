@@ -268,15 +268,10 @@ function sol_handle_form() {
 
 	// Email the team.
 	$to = sol_opt( 'notification_email', get_option( 'admin_email' ) );
-	$body = '';
-	foreach ( $rows as $label => $value ) {
-		$body .= $label . ': ' . $value . "\n";
-	}
-	$body .= "\nView all enquiries: " . admin_url( 'edit.php?post_type=sol_enquiry' );
 	// Quote the name so commas or quotes in it can't break the address (newlines are already stripped).
 	$reply   = trim( str_replace( array( '"', chr( 92 ) ), '', $data['name'] ) );
 	$headers = array( 'Reply-To: ' . ( $reply ? '"' . $reply . '" ' : '' ) . '<' . $data['email'] . '>' );
-	$mailed = wp_mail( $to, sprintf( '[%s] New %s from %s', wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ), $variant, $data['name'] ? $data['name'] : $data['email'] ), $body, $headers );
+	$mailed  = sol_email_send_template( 'enquiry_notification', $to, array( 'variant' => $variant, 'fields' => $rows ), $headers ); // inc/emails.php
 	if ( $post_id && ! is_wp_error( $post_id ) ) {
 		update_post_meta( $post_id, '_sol_mail', $mailed ? 'sent' : 'failed' );
 	}
@@ -351,52 +346,51 @@ function sol_send_confirmation( $variant, $data, $team ) {
 		return null;
 	}
 	$site = wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES );
-	$copy = array(
-		'contact'      => array( 'We’ve received your message', 'Thanks for getting in touch. We’ve received your message and the SOL team will reply within one business day.' ),
-		'consultation' => array( 'Your consultation request has been received', 'Thanks for booking a consultation. We’ve received your request and the SOL team will contact you within one business day to confirm a time.' ),
-		'complaint'    => array( 'We’ve received your feedback', 'Thank you for your feedback. It has been recorded, and the SOL team will review it and contact you within one business day.' ),
-		'training'     => array( 'We’ve received your training enquiry', 'Thanks for your interest in our training. We’ve received your enquiry and the SOL team will contact you within one business day.' ),
-		'resource'     => array( 'Your resource request has been received', 'Thanks for requesting our free resource. The SOL team will email it to you within one business day.' ),
-		'newsletter'   => array( 'You’re subscribed to SOL updates', 'Thanks for subscribing. You’ll receive our latest NDIS and business updates by email. To unsubscribe at any time, just reply to this email.' ),
-		'quiz'         => array( 'We’ve received your readiness results', 'Thanks for completing the NDIS readiness check. We’ve received your results and the SOL team will contact you within one business day to talk through your next steps.' ),
-	);
-	if ( ! isset( $copy[ $variant ] ) ) {
+	if ( ! isset( sol_email_form_copy()[ $variant ] ) ) {
 		return null;
 	}
-	$nl = "\n";
 
 	// Greet by first name only when it looks like a name.
 	$first = strtok( trim( $data['name'] ), ' ' );
-	$hello = $first && preg_match( '/^[\p{L}\'.-]{2,30}$/u', $first ) ? 'Hi ' . $first . ',' : 'Hi there,';
+	$first = $first && preg_match( '/^[\p{L}\'.-]{2,30}$/u', $first ) ? $first : '';
 
+	$pretty  = function ( $v ) {
+		return preg_replace_callback( '/\b(ndis|bas|seo|gst|abn|ai)\b/i', function ( $m ) { return strtoupper( $m[1] ); }, ucfirst( str_replace( array( '_', '-' ), ' ', $v ) ) );
+	};
 	$details = array();
 	if ( '' !== $data['selection'] ) {
-		$what      = array( 'complaint' => 'Category', 'resource' => 'Resource', 'training' => 'Training option' );
-		$details[] = ( isset( $what[ $variant ] ) ? $what[ $variant ] : 'Selection' ) . ': ' . preg_replace_callback( '/\b(ndis|bas|seo|gst|abn|ai)\b/i', function ( $m ) { return strtoupper( $m[1] ); }, ucfirst( str_replace( array( '_', '-' ), ' ', $data['selection'] ) ) );
+		$what = array( 'complaint' => 'Category', 'resource' => 'Resource', 'training' => 'Training option' );
+		$details[ isset( $what[ $variant ] ) ? $what[ $variant ] : 'Selection' ] = $pretty( $data['selection'] );
 	}
 	if ( '' !== $data['preferred_date'] ) {
-		$day       = DateTime::createFromFormat( '!Y-m-d', $data['preferred_date'], wp_timezone() );
-		$details[] = 'Preferred date: ' . ( $day ? wp_date( 'l j F Y', $day->getTimestamp() ) : $data['preferred_date'] );
+		$day = DateTime::createFromFormat( '!Y-m-d', $data['preferred_date'], wp_timezone() );
+		$details['Preferred date'] = $day ? wp_date( 'l j F Y', $day->getTimestamp() ) : $data['preferred_date'];
 	}
 	if ( '' !== $data['preferred_time'] ) {
-		$details[] = 'Preferred time: ' . $data['preferred_time'];
+		$details['Preferred time'] = $data['preferred_time'];
 	}
 	if ( '' !== $data['learners'] ) {
-		$details[] = 'Learners: ' . (int) $data['learners'];
+		$details['Learners'] = (string) (int) $data['learners'];
 	}
 
-	$body = $hello . $nl . $nl . $copy[ $variant ][1] . $nl;
-	if ( $details ) {
-		$body .= $nl . 'Your request:' . $nl . '- ' . implode( $nl . '- ', $details ) . $nl;
+	// The branded templates are in inc/emails.php.
+	if ( 'consultation' === $variant ) {
+		$key  = 'consultation_confirmation';
+		$args = array(
+			'when'    => $data['preferred_date'],
+			'time'    => $data['preferred_time'],
+			'service' => '' !== $data['selection'] ? $pretty( $data['selection'] ) : ( '' !== $data['service'] ? $pretty( $data['service'] ) : 'Consultation' ),
+		);
+	} elseif ( 'resource' === $variant ) {
+		$key  = 'resource_checklist';
+		$args = array( 'resource' => $data['selection'] );
+	} else {
+		$key  = 'form_confirmation';
+		$args = array( 'variant' => $variant, 'details' => $details );
 	}
-	$note = trim( (string) sol_opt( 'confirm_note' ) );
-	if ( $note ) {
-		$body .= $nl . $note . $nl;
-	}
-	$body .= ( 'newsletter' === $variant ? '' : $nl . 'If you have anything to add, just reply to this email.' . $nl ) . $nl . 'Kind regards,' . $nl . 'The SOL team' . $nl . $site . $nl;
-	$body .= sol_opt( 'phone', '+61 460 003 494' ) . ' · ' . sol_opt( 'email', 'info@solbusinessconsultant.com.au' ) . $nl . home_url( '/' ) . $nl;
-	$body .= $nl . 'You’re receiving this because this email address was entered on our website. If that wasn’t you, you can ignore this email.' . $nl;
+	$args['name']  = $first;
+	$args['extra'] = trim( (string) sol_opt( 'confirm_note' ) );
 
 	$headers = is_email( $team ) ? array( 'Reply-To: "' . str_replace( '"', '', $site ) . '" <' . $team . '>' ) : array();
-	return wp_mail( $data['email'], $copy[ $variant ][0] . ' | ' . $site, $body, $headers );
+	return sol_email_send_template( $key, $data['email'], $args, $headers );
 }
