@@ -50,9 +50,24 @@ function sol_url( $url ) {
 		return sol_woo_url( $url );
 	}
 	if ( 0 === strpos( $url, '/' ) && 0 !== strpos( $url, '//' ) ) {
-		return home_url( $url );
+		// Add the trailing slash pages use, so the link doesn't cost a redirect ("/contact" → "/contact/").
+		if ( preg_match( '#^([^?\#]*)(.*)$#s', $url, $m ) && '/' !== substr( $m[1], -1 ) && ! preg_match( '#\.[a-z0-9]{2,5}$#i', $m[1] ) ) {
+			$url = user_trailingslashit( $m[1] ) . $m[2];
+		}
+		$url = home_url( $url );
 	}
-	return $url;
+	return function_exists( 'sol_moved_link' ) ? sol_moved_link( $url ) : $url;
+}
+
+/** The training courses page. It was "training-2" on the old site and is "training-courses" now. */
+function sol_training_page() {
+	foreach ( array( 'training-courses', 'training-2' ) as $path ) {
+		$p = get_page_by_path( $path );
+		if ( $p && 'publish' === $p->post_status ) {
+			return $p;
+		}
+	}
+	return null;
 }
 
 /**

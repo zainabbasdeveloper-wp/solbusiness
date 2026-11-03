@@ -88,7 +88,7 @@ function sol_chat_system_prompt() {
 		'Free NDIS readiness quiz'                     => sol_chat_page( 'readiness-quiz' ),
 		'NDIS readiness calculator'                    => sol_chat_page( 'ndis-readiness-calculator' ),
 		'Package finder (find my plan)'                => sol_chat_page( 'get-started' ),
-		'Support Coordinator training courses'         => sol_chat_page( 'training-2' ),
+		'Support Coordinator training courses'         => ( sol_training_page() ? get_permalink( sol_training_page() ) : '' ),
 		'Marketing packages'                           => sol_chat_page( 'marketing-packages' ),
 		'FAQs'                                         => sol_chat_page( 'faq' ),
 		'Pay for an agreed service (service payment form)' => sol_url( sol_opt( 'payment_page_url', '/sol-service-payment-form/' ) ),

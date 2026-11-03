@@ -50,7 +50,7 @@ function sol_course_product_ids( $exclude = array() ) {
 
 /** Where "All training courses" links go: the training page, else the shop. */
 function sol_courses_url() {
-	$page = get_page_by_path( 'training-2' );
+	$page = sol_training_page();
 	return $page ? get_permalink( $page ) : wc_get_page_permalink( 'shop' );
 }
 

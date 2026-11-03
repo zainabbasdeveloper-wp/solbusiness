@@ -65,7 +65,7 @@ function sol_menu_from_wp() {
 	$node = function ( $it ) {
 		return array(
 			'label'   => $it->title,
-			'url'     => '#' === $it->url ? '' : $it->url,
+			'url'     => '#' === $it->url ? '' : sol_url( $it->url ),
 			'icon'    => (string) get_post_meta( $it->ID, '_sol_icon', true ),
 			'desc'    => (string) get_post_meta( $it->ID, '_sol_desc', true ),
 			'badge'   => (string) get_post_meta( $it->ID, '_sol_badge', true ),
