@@ -509,6 +509,39 @@ add_filter( 'woocommerce_cart_item_permalink', function ( $link, $item ) {
 	return isset( $item['product_id'] ) && sol_is_service_payment( (int) $item['product_id'] ) ? sol_payment_url( 'cart' ) : $link;
 }, 10, 2 );
 
+/*
+ * Only the payment form may set its amount. Added any other way (an ?add-to-cart= link, the Store API)
+ * the line keeps the placeholder price, so it would check out for $1. Such lines are removed at the
+ * cart and checkout, with a pointer to the form. The check looks at the price, not at how the form
+ * adds the item, so it keeps working however the form's snippet is written.
+ */
+function sol_service_payment_unpriced_keys() {
+	$keys = array();
+	if ( ! WC()->cart ) {
+		return $keys;
+	}
+	foreach ( WC()->cart->get_cart() as $key => $item ) {
+		if ( empty( $item['data'] ) || ! sol_is_service_payment( (int) $item['product_id'] ) ) {
+			continue;
+		}
+		$saved = wc_get_product( $item['product_id'] );
+		if ( $saved && abs( (float) $item['data']->get_price( 'edit' ) - (float) $saved->get_price( 'edit' ) ) < 0.005 ) {
+			$keys[] = $key;
+		}
+	}
+	return $keys;
+}
+add_action( 'woocommerce_check_cart_items', function () {
+	$keys = sol_service_payment_unpriced_keys();
+	if ( ! $keys ) {
+		return;
+	}
+	foreach ( $keys as $key ) {
+		WC()->cart->remove_cart_item( $key );
+	}
+	wc_add_notice( sprintf( 'To make a service payment, please enter the agreed amount on the <a href="%s">service payment form</a>.', esc_url( sol_payment_url( 'cart' ) ) ), 'error' );
+} );
+
 // Admin: say what the product is for, so nobody deletes or "fixes" it.
 add_action( 'admin_notices', function () {
 	$screen = get_current_screen();
