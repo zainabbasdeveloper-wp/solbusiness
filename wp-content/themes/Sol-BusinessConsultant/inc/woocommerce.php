@@ -542,6 +542,28 @@ add_action( 'woocommerce_check_cart_items', function () {
 	wc_add_notice( sprintf( 'To make a service payment, please enter the agreed amount on the <a href="%s">service payment form</a>.', esc_url( sol_payment_url( 'cart' ) ) ), 'error' );
 } );
 
+/** The Terms & Conditions page: WooCommerce's terms page when set, else the page at /terms-conditions/. */
+function sol_terms_url() {
+	$id = function_exists( 'wc_terms_and_conditions_page_id' ) ? (int) wc_terms_and_conditions_page_id() : 0;
+	if ( ! $id || 'publish' !== get_post_status( $id ) ) {
+		$p  = get_page_by_path( 'terms-conditions' );
+		$id = $p && 'publish' === $p->post_status ? $p->ID : 0;
+	}
+	return $id ? get_permalink( $id ) : '';
+}
+
+// The service payment form (a Code Snippets shortcode) links "Terms & Conditions" to the home page.
+// Point that link at the terms page instead.
+add_filter( 'the_content', function ( $html ) {
+	if ( false === strpos( $html, 'sol-terms' ) || ! ( $terms = sol_terms_url() ) ) { // phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition
+		return $html;
+	}
+	$home = preg_quote( untrailingslashit( home_url() ), '#' );
+	return preg_replace_callback( '#(<div class="sol-terms">.*?</div>)#s', function ( $m ) use ( $home, $terms ) {
+		return preg_replace( '#href=(["\'])' . $home . '/?\1#', 'href="' . esc_url( $terms ) . '"', $m[1] );
+	}, $html );
+}, 99 );
+
 // Admin: say what the product is for, so nobody deletes or "fixes" it.
 add_action( 'admin_notices', function () {
 	$screen = get_current_screen();
