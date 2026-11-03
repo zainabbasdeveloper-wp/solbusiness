@@ -85,6 +85,8 @@
   "a11y_enabled": "field_7622d9f2a498d",
   "notification_email": "field_3a641778ef17d",
   "default_success": "field_72fe600691c14",
+  "confirm_emails_off": "field_cbb093fd2ef14",
+  "confirm_note": "field_1d4bfe6f739a9",
   "chat_enabled": "field_22c3dd6101866",
   "chat_api_key": "field_9e169cc3ebc38",
   "chat_model": "field_73681532c50de",

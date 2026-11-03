@@ -1171,7 +1171,41 @@
             "new_lines": ""
         },
         {
-            "key": "field_aac526ea19605",
+            "key": "field_cbb093fd2ef14",
+            "label": "Turn off confirmation emails to visitors",
+            "name": "confirm_emails_off",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Every form emails the person who filled it in a short confirmation (replies come to the address above). Turn this on to stop sending them.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "ui": 1,
+            "default_value": 0
+        },
+        {
+            "key": "field_1d4bfe6f739a9",
+            "label": "Extra text for confirmation emails",
+            "name": "confirm_note",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optional. Added to every confirmation email, e.g. office hours or a link to book.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_6607fb0060f1b",
             "label": "AI Assistant",
             "name": "",
             "aria-label": "",
@@ -1301,7 +1335,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_3454f56768b04",
+            "key": "field_8b3756d067451",
             "label": "Tracking",
             "name": "",
             "aria-label": "",

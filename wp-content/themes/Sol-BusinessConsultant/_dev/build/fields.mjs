@@ -435,6 +435,8 @@ const options = fieldGroup({
     bool('a11y_enabled', 'Accessibility toolbar', { default_value: 1, instructions: 'A tab on the left edge with text size, contrast, link underline and read-aloud options.' }),
     email('notification_email', 'Send form submissions to'),
     textarea('default_success', 'Default form success message', { rows: 2 }),
+    bool('confirm_emails_off', 'Turn off confirmation emails to visitors', { instructions: 'Every form emails the person who filled it in a short confirmation (replies come to the address above). Turn this on to stop sending them.' }),
+    textarea('confirm_note', 'Extra text for confirmation emails', { rows: 2, instructions: 'Optional. Added to every confirmation email, e.g. office hours or a link to book.' }),
     tab('AI Assistant'),
     bool('chat_enabled', 'Show the AI chat assistant', { default_value: 1, instructions: 'A chat button in the bottom-right corner. Replies come from Groq (the same AI service as the training site).' }),
     password('chat_api_key', 'Groq API key', { instructions: "From console.groq.com → API Keys. Kept on the server, never shown to visitors. Or add define( 'SOL_GROQ_API_KEY', 'gsk_…' ); to wp-config.php instead." }),

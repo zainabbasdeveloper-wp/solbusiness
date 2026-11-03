@@ -137,15 +137,16 @@ add_filter( 'manage_sol_enquiry_posts_columns', function ( $cols ) {
 	$date = isset( $cols['date'] ) ? $cols['date'] : null;
 	unset( $cols['date'] );
 	$cols['sol_mail'] = 'Team notified';
+	$cols['sol_confirm'] = 'Visitor confirmation';
 	if ( $date ) {
 		$cols['date'] = $date;
 	}
 	return $cols;
 }, 20 );
 add_action( 'manage_sol_enquiry_posts_custom_column', function ( $col, $post_id ) {
-	if ( 'sol_mail' !== $col ) {
+	if ( ! in_array( $col, array( 'sol_mail', 'sol_confirm' ), true ) ) {
 		return;
 	}
-	$s = get_post_meta( $post_id, '_sol_mail', true );
+	$s = get_post_meta( $post_id, '_' . $col, true );
 	echo 'sent' === $s ? '<span style="color:#008a20">Sent</span>' : ( 'failed' === $s ? '<span style="color:#b32d2e">Failed</span>' : '<span class="description">Not recorded</span>' );
 }, 10, 2 );

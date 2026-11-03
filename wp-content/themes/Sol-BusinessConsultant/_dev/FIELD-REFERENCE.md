@@ -189,6 +189,8 @@ Key `group_sol_options` · Shown on: options_page = sol-site-settings
 | `a11y_enabled` | True / False | Accessibility toolbar — A tab on the left edge with text size, contrast, link underline and read-aloud options. |
 | `notification_email` | Email | Send form submissions to |
 | `default_success` | Text area | Default form success message |
+| `confirm_emails_off` | True / False | Turn off confirmation emails to visitors — Every form emails the person who filled it in a short confirmation (replies come to the address above). Turn this on to stop sending them. |
+| `confirm_note` | Text area | Extra text for confirmation emails — Optional. Added to every confirmation email, e.g. office hours or a link to book. |
 | **— AI Assistant tab —** | | |
 | `chat_enabled` | True / False | Show the AI chat assistant — A chat button in the bottom-right corner. Replies come from Groq (the same AI service as the training site). |
 | `chat_api_key` | password | Groq API key — From console.groq.com → API Keys. Kept on the server, never shown to visitors. Or add define( 'SOL_GROQ_API_KEY', 'gsk_…' ); to wp-config.php instead. |
