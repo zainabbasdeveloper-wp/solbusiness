@@ -413,3 +413,108 @@ add_action( 'admin_post_sol_fix_prices', function () {
 	wp_safe_redirect( add_query_arg( 'sol_prices_fixed', $n, wp_get_referer() ? wp_get_referer() : admin_url( 'edit.php?post_type=product' ) ) );
 	exit;
 } );
+
+/* ------------------------------------------------------------------ */
+/* Service Payment product                                             */
+/* ------------------------------------------------------------------ */
+/*
+ * "Service Payment" (SKU SOL-SERVICE-PAYMENT) is how the service payment form takes an agreed amount:
+ * the form puts it in the cart at the amount the visitor enters. It isn't something to buy on its own,
+ * so it's kept out of the shop, categories, search, related products and the sitemap, and its
+ * product page sends visitors to the form.
+ */
+
+/** ID of the Service Payment product, or 0. */
+function sol_service_payment_product_id() {
+	static $id = null;
+	if ( null === $id ) {
+		$id = (int) wc_get_product_id_by_sku( 'SOL-SERVICE-PAYMENT' );
+		if ( ! $id ) {
+			$p  = get_page_by_path( 'service-payment', OBJECT, 'product' );
+			$id = $p ? (int) $p->ID : 0;
+		}
+		$id = (int) apply_filters( 'sol_service_payment_product_id', $id );
+	}
+	return $id;
+}
+
+/** True for the Service Payment product (or a variation of it). */
+function sol_is_service_payment( $product ) {
+	$id = sol_service_payment_product_id();
+	if ( ! $id || ! $product ) {
+		return false;
+	}
+	if ( $product instanceof WC_Product ) {
+		return $id === $product->get_id() || $id === $product->get_parent_id();
+	}
+	return $id === (int) $product;
+}
+
+// Shop, category, tag and product search pages.
+add_action( 'woocommerce_product_query', function ( $q ) {
+	$id = sol_service_payment_product_id();
+	if ( $id ) {
+		$q->set( 'post__not_in', array_merge( (array) $q->get( 'post__not_in' ), array( $id ) ) );
+	}
+} );
+
+// Site search.
+add_action( 'pre_get_posts', function ( $q ) {
+	$id = sol_service_payment_product_id();
+	if ( $id && ! is_admin() && $q->is_main_query() && $q->is_search() ) {
+		$q->set( 'post__not_in', array_merge( (array) $q->get( 'post__not_in' ), array( $id ) ) );
+	}
+} );
+
+// Product shortcodes, blocks, widgets and "you may also like".
+add_filter( 'woocommerce_product_is_visible', function ( $visible, $product_id ) {
+	return sol_is_service_payment( $product_id ) ? false : $visible;
+}, 10, 2 );
+add_filter( 'woocommerce_related_products', function ( $ids ) {
+	return array_values( array_diff( (array) $ids, array( sol_service_payment_product_id() ) ) );
+} );
+add_filter( 'woocommerce_product_get_upsell_ids', function ( $ids ) {
+	return array_values( array_diff( (array) $ids, array( sol_service_payment_product_id() ) ) );
+} );
+add_filter( 'woocommerce_product_get_cross_sell_ids', function ( $ids ) {
+	return array_values( array_diff( (array) $ids, array( sol_service_payment_product_id() ) ) );
+} );
+
+// Store API (used by the cart and product blocks).
+add_filter( 'woocommerce_store_api_product_collection_query_args', function ( $args ) {
+	$id = sol_service_payment_product_id();
+	if ( $id ) {
+		$args['post__not_in'] = array_merge( isset( $args['post__not_in'] ) ? (array) $args['post__not_in'] : array(), array( $id ) );
+	}
+	return $args;
+} );
+
+// Yoast: leave it out of the sitemap and search results.
+add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', function ( $ids ) {
+	$id = sol_service_payment_product_id();
+	return $id ? array_merge( (array) $ids, array( $id ) ) : $ids;
+} );
+
+// Its product page goes to the payment form, which is where the amount is entered.
+add_action( 'template_redirect', function () {
+	$id = sol_service_payment_product_id();
+	if ( $id && is_singular( 'product' ) && (int) get_queried_object_id() === $id && ! current_user_can( 'edit_post', $id ) ) {
+		wp_safe_redirect( sol_payment_url( 'product' ), 302 );
+		exit;
+	}
+} );
+
+// In the cart and checkout, its name links back to the form, not the product page.
+add_filter( 'woocommerce_cart_item_permalink', function ( $link, $item ) {
+	return isset( $item['product_id'] ) && sol_is_service_payment( (int) $item['product_id'] ) ? sol_payment_url( 'cart' ) : $link;
+}, 10, 2 );
+
+// Admin: say what the product is for, so nobody deletes or "fixes" it.
+add_action( 'admin_notices', function () {
+	$screen = get_current_screen();
+	$id     = sol_service_payment_product_id();
+	if ( ! $id || ! $screen || 'product' !== $screen->id || (int) ( isset( $_GET['post'] ) ? $_GET['post'] : 0 ) !== $id ) { // phpcs:ignore WordPress.Security.NonceVerification
+		return;
+	}
+	echo '<div class="notice notice-info"><p><strong>This product powers the <a href="' . esc_url( sol_payment_url( 'admin' ) ) . '" target="_blank">service payment form</a>.</strong> Visitors enter the agreed amount on the form, so the price here is only a placeholder. The theme hides it from the shop, search and sitemap. Keep it published, and don’t delete it or change its SKU (SOL-SERVICE-PAYMENT).</p></div>';
+} );
