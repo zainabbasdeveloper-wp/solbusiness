@@ -608,7 +608,7 @@
 				if (Math.abs(want - window.scrollY) <= 3 || tries++ >= 4) { flash(el); return; }
 				if (from === window.scrollY) { smooth = false; } // smooth scrolling didn't move the page (some browsers/settings): jump instead
 				from = window.scrollY;
-				window.scrollTo({ top: want, behavior: smooth && !reduce ? 'smooth' : 'auto' });
+				window.scrollTo({ top: want, behavior: smooth && !reduce && !document.documentElement.classList.contains('a11y-still') ? 'smooth' : 'auto' });
 				timer = setTimeout(function () { settle(move); }, 120);
 			};
 			move();
