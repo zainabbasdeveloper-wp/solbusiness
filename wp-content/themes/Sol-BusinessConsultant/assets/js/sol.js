@@ -126,11 +126,18 @@
 	/* ---------- Forms (AJAX with normal POST fallback) ---------- */
 	function submitForm(form, onSuccess) {
 		var status = $('.sol-form__status', form);
-		var data = new FormData(form);
-		data.append('_sol_ajax', '1');
+		if (form.classList.contains('is-sending')) { return Promise.resolve(); } // double click
 		form.classList.add('is-sending');
 		if (status) { status.className = 'sol-form__status'; status.textContent = 'Sending…'; }
-		return fetch(form.getAttribute('action'), { method: 'POST', body: data, credentials: 'same-origin' })
+		// Spam check first when reCAPTCHA is on (assets/js/sol-recaptcha.js).
+		var variant = form.querySelector('input[name="form_variant"]');
+		var check = window.SOLRC && SOLRC.sol ? SOLRC.token(form, 'form_' + (variant ? variant.value : 'contact')) : Promise.resolve();
+		return check
+			.then(function () {
+				var data = new FormData(form);
+				data.append('_sol_ajax', '1');
+				return fetch(form.getAttribute('action'), { method: 'POST', body: data, credentials: 'same-origin' });
+			})
 			.then(function (r) { return r.json().catch(function () { return { success: false, data: { message: 'Something went wrong. Please try again.' } }; }); })
 			.then(function (res) {
 				form.classList.remove('is-sending');

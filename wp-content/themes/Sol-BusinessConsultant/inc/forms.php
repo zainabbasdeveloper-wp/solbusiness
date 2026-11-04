@@ -190,6 +190,14 @@ function sol_handle_form() {
 	}
 	set_transient( $rkey, $hits + 1, 10 * MINUTE_IN_SECONDS );
 
+	// Google reCAPTCHA v3 (inc/recaptcha.php), when it's set up under SOL Site → Spam protection.
+	if ( function_exists( 'sol_rc_active' ) && sol_rc_active( 'forms' ) ) {
+		$rc = sol_rc_verify( 'forms', 'form' );
+		if ( ! $rc['ok'] ) {
+			$fail( 'missing' === $rc['reason'] ? 'captcha_missing' : 'captcha', 403 );
+		}
+	}
+
 	$text = function ( $k, $max = 200 ) {
 		return isset( $_POST[ $k ] ) ? mb_substr( sanitize_text_field( wp_unslash( $_POST[ $k ] ) ), 0, $max ) : '';
 	};
@@ -218,6 +226,14 @@ function sol_handle_form() {
 	}
 	if ( '' !== $data['phone'] && ( ! preg_match( '/^[0-9 +()\-]+$/', $data['phone'] ) || strlen( preg_replace( '/\D/', '', $data['phone'] ) ) < 8 ) ) {
 		$fail( 'phone' );
+	}
+	// Spam usually carries links: none in name or business name, at most 2 in the message.
+	$link = '#https?://|www\.|\[url|<a\s#i';
+	if ( preg_match( $link, $data['name'] . ' ' . $data['company'] ) ) {
+		$fail( 'links_name' );
+	}
+	if ( preg_match_all( $link, $data['message'] ) > 2 ) {
+		$fail( 'links' );
 	}
 	if ( in_array( $variant, array( 'contact', 'complaint' ), true ) && '' === $data['message'] ) {
 		$fail( 'message' );
@@ -311,6 +327,10 @@ function sol_form_error_text( $key ) {
 		'date'      => 'Please choose a preferred date from today onwards.',
 		'learners'  => 'Please enter a number of learners between 1 and 1000.',
 		'rate'      => 'Too many submissions. Please try again in a few minutes or call us.',
+		'links'     => 'Please remove some of the web links from your message (2 at most).',
+		'links_name' => 'Please enter your name and business name without web links.',
+		'captcha'   => function_exists( 'sol_rc_message' ) ? sol_rc_message( 'low' ) : 'Please refresh the page and try again.',
+		'captcha_missing' => function_exists( 'sol_rc_message' ) ? sol_rc_message( 'missing' ) : 'Please refresh the page and try again.',
 		'unknown'   => 'Something went wrong. Please refresh the page and try again.',
 	);
 	return isset( $msgs[ $key ] ) ? $msgs[ $key ] : $msgs['unknown'];
