@@ -132,6 +132,15 @@ i.sol-icon { font-style: normal; }
 .sol-nav__buttons .sol-btn__icon { display: none; }
 @media (max-width: 1399px) { .sol-nav__buttons .sol-btn:not(:last-child), .sol-nav__portal { display: none; } }
 .sol-chrome [id] { scroll-margin-top: 130px; }
+/* The spot a #link scrolled to: a short amber ring so it's clear which card was picked (assets/js/sol.js anchors()). */
+.sol-target { outline: none; animation: sol-target 2.6s ease-out; }
+li.sol-target, article.sol-target, .sol-card.sol-target, .sol-step.sol-target { border-radius: var(--sol-radius); }
+@keyframes sol-target {
+	0%, 55% { box-shadow: 0 0 0 3px var(--sol-harvest), 0 14px 34px -12px rgba(217, 119, 6, .45); }
+	100% { box-shadow: 0 0 0 3px rgba(217, 119, 6, 0), 0 14px 34px -12px rgba(217, 119, 6, 0); }
+}
+section.sol-target { animation: none; } /* whole sections just scroll into place */
+@media (prefers-reduced-motion: reduce) { .sol-target { animation-duration: .01s; box-shadow: 0 0 0 3px var(--sol-harvest); } }
 .sol-burger { margin-left: auto; background: none; border: 1px solid var(--sol-border); border-radius: 10px; width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; color: var(--sol-ink); }
 .sol-drawer { border-top: 1px solid var(--sol-border); background: #fff; max-height: calc(100vh - var(--sol-header-h)); overflow-y: auto; }
 .sol-drawer__inner { padding: 12px var(--sol-gutter) 24px; display: flex; flex-direction: column; }

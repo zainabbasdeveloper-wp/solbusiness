@@ -85,6 +85,8 @@
 		document.addEventListener('click', function (e) {
 			drops.forEach(function (d) { if (d._solOpen && !d.contains(e.target)) { d._solOpen(false); } });
 		});
+		// A link inside a menu that scrolls to a spot on this page (see anchors()) closes the menu.
+		document.addEventListener('sol:navigate', function () { closeAll(null); });
 		var burger = $('[data-sol-burger]');
 		var drawer = $('[data-sol-drawer]');
 		if (burger && drawer) {
@@ -549,6 +551,95 @@
 		});
 	}
 
+	/* ---------- Links to a spot on a page (#section) ----------
+	 * Smooth scroll that stops just below the sticky header, corrects itself if images load
+	 * on the way, and briefly highlights the target (cards in one row share a scroll position,
+	 * so the highlight shows which one was picked). Also runs when arriving from another page. */
+	function anchors() {
+		var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+		var header = $('[data-sol-header]') || $('.sol-header');
+		var timer = null;
+		var flashTimer = null;
+		var offset = function () {
+			var h = 0;
+			if (header) {
+				var cs = getComputedStyle(header);
+				if (cs.position === 'sticky' || cs.position === 'fixed') { h = (parseFloat(cs.top) || 0) + header.offsetHeight; }
+			}
+			return h + 24;
+		};
+		var find = function (hash) {
+			if (!hash || hash.length < 2) { return null; }
+			var id;
+			try { id = decodeURIComponent(hash.slice(1)); } catch (e) { return null; }
+			var el = document.getElementById(id);
+			return el && el.getClientRects().length ? el : null; // skip hidden targets
+		};
+		var spot = function (el) {
+			return Math.max(0, Math.round(el.getBoundingClientRect().top + window.scrollY - offset()));
+		};
+		var flash = function (el) {
+			$$('.sol-target').forEach(function (o) { o.classList.remove('sol-target'); });
+			void el.offsetWidth; // restart the animation when the same target is picked again
+			el.classList.add('sol-target');
+			clearTimeout(flashTimer);
+			flashTimer = setTimeout(function () { el.classList.remove('sol-target'); }, 2600);
+			if (!el.hasAttribute('tabindex') && !/^(A|BUTTON|INPUT|SELECT|TEXTAREA)$/.test(el.tagName)) { el.setAttribute('tabindex', '-1'); }
+			try { el.focus({ preventScroll: true }); } catch (e) { /* old browsers */ }
+		};
+		// Calls cb once the page has stopped scrolling (works in browsers without the scrollend event).
+		var settle = function (cb) {
+			var last = -1;
+			var still = 0;
+			(function tick() {
+				var y = window.scrollY;
+				still = y === last ? still + 1 : 0;
+				last = y;
+				if (still >= 2) { cb(); } else { timer = setTimeout(tick, 100); }
+			})();
+		};
+		var go = function (el, smooth) {
+			clearTimeout(timer);
+			var tries = 0;
+			var from = null;
+			// Scroll, wait until it stops, then re-measure: lazy images or animations above the target can move it on the way.
+			var move = function () {
+				var want = Math.min(spot(el), document.documentElement.scrollHeight - window.innerHeight); // near the page end it can't go higher
+				if (Math.abs(want - window.scrollY) <= 3 || tries++ >= 4) { flash(el); return; }
+				if (from === window.scrollY) { smooth = false; } // smooth scrolling didn't move the page (some browsers/settings): jump instead
+				from = window.scrollY;
+				window.scrollTo({ top: want, behavior: smooth && !reduce ? 'smooth' : 'auto' });
+				timer = setTimeout(function () { settle(move); }, 120);
+			};
+			move();
+		};
+
+		// Clicks on links to a spot on this same page.
+		document.addEventListener('click', function (e) {
+			if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) { return; }
+			var a = e.target.closest && e.target.closest('a[href*="#"]');
+			if (!a || a.target === '_blank' || a.hasAttribute('download') || a.closest('[data-sol-tabs], [role="tablist"]')) { return; }
+			var url;
+			try { url = new URL(a.href, location.href); } catch (err) { return; }
+			if (url.origin !== location.origin || url.pathname.replace(/\/$/, '') !== location.pathname.replace(/\/$/, '') || url.search !== location.search) { return; }
+			var el = find(url.hash);
+			if (!el) { return; }
+			e.preventDefault();
+			if (location.hash !== url.hash) { history.pushState(null, '', url.hash); }
+			// Close the mobile menu or mega menu if the link was inside one.
+			document.dispatchEvent(new CustomEvent('sol:navigate'));
+			go(el, true);
+		});
+		window.addEventListener('popstate', function () { var el = find(location.hash); if (el) { go(el, true); } });
+
+		// Arriving from another page with #section: the browser jumps before images load, so settle it once loaded.
+		if (location.hash) {
+			if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+			var arrive = function () { var el = find(location.hash); if (el) { go(el, true); } };
+			if (document.readyState === 'complete') { setTimeout(arrive, 80); } else { window.addEventListener('load', function () { setTimeout(arrive, 80); }); }
+		}
+	}
+
 	/* ---------- Floating cart (left edge) + cart drawer ---------- */
 	function fcart() {
 		var root = $('[data-sol-fcart]');
@@ -608,6 +699,6 @@
 		}, { passive: true });
 	}
 
-	function init() { icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); showcase(); reveal(); fcart(); cardGlow(); }
+	function init() { icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); showcase(); reveal(); fcart(); cardGlow(); anchors(); }
 	if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();
