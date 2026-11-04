@@ -508,7 +508,9 @@ i.sol-icon { font-style: normal; }
 .sol-finder__step { border: 0; padding: 0; margin: 0; display: grid; gap: 18px; min-width: 0; }
 .sol-finder__step legend, .sol-finder__result h3 { font-family: var(--sol-display); font-size: 1.4rem; font-weight: 700; padding: 0; margin-bottom: 4px; }
 .sol-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.sol-chip input { position: absolute; opacity: 0; }
+.sol-chip { position: relative; }
+/* Hidden but still focusable; kept 1px inside the chip so it can't widen the page (inputs default to width:100%). */
+.sol-chip input { position: absolute; top: 0; left: 0; width: 1px !important; height: 1px; margin: 0; padding: 0; border: 0; opacity: 0; overflow: hidden; pointer-events: none; }
 .sol-chip span { display: inline-block; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--sol-border); font-weight: 600; font-size: .85rem; cursor: pointer; }
 .sol-chip input:checked + span { background: var(--sol-ink); color: #fff; border-color: var(--sol-ink); }
 .sol-chip input:focus-visible + span { outline: 3px solid var(--sol-harvest); }
