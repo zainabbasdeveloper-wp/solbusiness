@@ -650,6 +650,16 @@ i.sol-icon { font-style: normal; }
 .sol-legal__meta p + p { margin-top: 4px; }
 .sol-legal__section { padding: 24px 0; border-bottom: 1px solid var(--sol-border); }
 .sol-legal__section h2 { font-size: 1.35rem; margin-bottom: 12px !important; }
+.sol-legal__section:last-child { border-bottom: 0; }
+
+/* Policy pages (page header + legal text): the title sits on the same column as the text below it. */
+.sol-page-header:has(+ .sol-legal) > .sol-container { max-width: 820px; }
+.sol-page-header + .sol-legal { padding-top: 48px; }
+/* Pages that mix wide sections with legal text (e.g. Accessibility): everything starts on the same
+   left edge as the title, cards and tables; text keeps a readable width. */
+.sol-section:not(.sol-legal) ~ .sol-legal > .sol-container--narrow { max-width: 1280px; }
+.sol-section:not(.sol-legal) ~ .sol-legal > .sol-container--narrow > * { max-width: 760px; }
+.sol-main:has(> .sol-legal) .sol-text-image .sol-container--mid.sol-flush { margin-left: 0; }
 
 /* ---------- Footer ---------- */
 /* Footer styles live in sol-footer.css. */
