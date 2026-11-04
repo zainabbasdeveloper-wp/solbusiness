@@ -116,6 +116,7 @@ function sol_mail_admin_page() {
 		<?php endif; ?>
 		<p>See and test every email design in <a href="<?php echo esc_url( admin_url( 'admin.php?page=sol-email-templates' ) ); ?>">SOL Site → Email templates</a>.</p>
 		<p>To change where enquiries go, edit <strong>Notification email</strong> in <a href="<?php echo esc_url( admin_url( 'admin.php?page=' . SOL_OPTIONS_SLUG ) ); ?>">SOL Site Settings</a>.</p>
+		<?php if ( function_exists( 'sol_mail_identity_section' ) ) { sol_mail_identity_section(); } // inc/mail-identity.php ?>
 	</div>
 	<?php
 }
