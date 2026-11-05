@@ -28,7 +28,8 @@ $variant = 'training' === sol_get( $s, 'form_variant' ) ? 'training' : 'contact'
 			<div class="sol-split__form">
 				<?php
 				sol_render_form( $variant, array(
-					'service' => $title,
+					'service'  => $title,
+					'selected' => sol_service_value_for_slug( get_post_field( 'post_name', $id ) ),
 					'success' => 'Thanks. The SOL team will contact you within one business day.',
 				) );
 				?>

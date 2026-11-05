@@ -50,6 +50,29 @@ function sol_service_options() {
 	) );
 }
 
+/** The dropdown value for a service page, from its slug ('' if it isn't a service page). */
+function sol_service_value_for_slug( $slug ) {
+	$map = array(
+		'ndis-registration'                   => 'ndis_registration',
+		'ndis-support-coordination-training'  => 'support_coordination_training',
+		'software-automation'                 => 'software_automation',
+		'company-business-registration'       => 'company_registration',
+		'bookkeeping-bas-lodgement'           => 'bookkeeping_bas',
+		'payroll-services'                    => 'payroll',
+		'accountancy'                         => 'accountancy',
+		'accountancy-partnerships'            => 'accountancy_partnerships',
+		'business-personal-loan-support'      => 'loan_support',
+		'website-development'                 => 'website_development',
+		'search-engine-optimization'          => 'seo',
+		'google-adwords'                      => 'google_ads',
+		'social-media-marketing'              => 'social_media',
+		'admin-back-office-support'           => 'admin_support',
+		'offshore-outsourcing-staff-solutions' => 'offshore_staff',
+		'ai-machine-learning'                 => 'ai_machine_learning',
+	);
+	return isset( $map[ $slug ] ) ? $map[ $slug ] : '';
+}
+
 /**
  * Turn a saved "Service of interest" list into the full service list. Only applies when the
  * saved list is a service list (it uses at least one service value), so a custom dropdown is
@@ -83,6 +106,7 @@ function sol_render_form( $variant, $args = array() ) {
 		'privacy_text'   => '',
 		'success'        => '',
 		'service'        => '',
+		'selected'       => '',
 		'submit'         => '',
 	) );
 	$uid     = 'sol-f-' . wp_unique_id();
@@ -101,6 +125,13 @@ function sol_render_form( $variant, $args = array() ) {
 	}
 	if ( in_array( $variant, array( 'contact', 'consultation' ), true ) ) {
 		$opts = sol_service_dropdown( $opts );
+		// Service page forms: offer every service, with this page's service picked.
+		if ( ! $opts && $args['service'] ) {
+			foreach ( sol_service_options() as $value => $label ) {
+				$opts[] = array( 'value' => $value, 'label' => $label );
+			}
+			$opts[] = array( 'value' => 'general_enquiry', 'label' => 'Other / Multiple Services' );
+		}
 	}
 	if ( 'training' === $variant && ! $opts ) {
 		$opts = array(
@@ -155,7 +186,7 @@ function sol_render_form( $variant, $args = array() ) {
 			<label class="sol-field" for="<?php echo esc_attr( $uid ); ?>-selection"><span><?php echo esc_html( $args['select_label'] ); ?><?php echo 'complaint' === $variant ? ' *' : ''; ?></span>
 				<select id="<?php echo esc_attr( $uid ); ?>-selection" name="selection" <?php echo 'complaint' === $variant ? 'required' : ''; ?>>
 					<option value="">Select…</option>
-					<?php foreach ( $opts as $o ) : ?><option value="<?php echo esc_attr( $o['value'] ); ?>"><?php echo esc_html( $o['label'] ); ?></option><?php endforeach; ?>
+					<?php foreach ( $opts as $o ) : ?><option value="<?php echo esc_attr( $o['value'] ); ?>"<?php selected( $args['selected'], $o['value'] ); ?>><?php echo esc_html( $o['label'] ); ?></option><?php endforeach; ?>
 				</select>
 			</label>
 		<?php endif; ?>
