@@ -25,6 +25,54 @@ function sol_form_hidden( $variant, $extra = array() ) {
 	echo '<div class="sol-hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>';
 }
 
+/**
+ * Every service the site offers, as dropdown options. Values match the ones the
+ * forms already used, so older enquiries and links keep working.
+ */
+function sol_service_options() {
+	return apply_filters( 'sol_service_options', array(
+		'ndis_registration'             => 'NDIS Registration Support',
+		'support_coordination_training' => 'NDIS Support Coordination Training',
+		'software_automation'           => 'Software & NDIS Automation',
+		'company_registration'          => 'Company & Business Registration',
+		'bookkeeping_bas'               => 'Bookkeeping & BAS Lodgement',
+		'payroll'                       => 'Payroll Services',
+		'accountancy'                   => 'Accounting Consultancy',
+		'accountancy_partnerships'      => 'Accountancy Partnerships',
+		'loan_support'                  => 'Business & Personal Loan Support',
+		'website_development'           => 'Website Development',
+		'seo'                           => 'Search Engine Optimization (SEO)',
+		'google_ads'                    => 'Google Ads Management',
+		'social_media'                  => 'Social Media Marketing',
+		'admin_support'                 => 'Admin & Back-Office Support',
+		'offshore_staff'                => 'Offshore Outsourcing & Staff Solutions',
+		'ai_machine_learning'           => 'AI & Machine Learning',
+	) );
+}
+
+/**
+ * Turn a saved "Service of interest" list into the full service list. Only applies when the
+ * saved list is a service list (it uses at least one service value), so a custom dropdown is
+ * left alone. Saved options that aren't services (like "Other / Multiple Services") go last.
+ */
+function sol_service_dropdown( $saved ) {
+	$services = sol_service_options();
+	$extra    = array();
+	foreach ( $saved as $o ) {
+		if ( ! isset( $services[ $o['value'] ] ) ) {
+			$extra[] = $o;
+		}
+	}
+	if ( count( $extra ) === count( $saved ) ) {
+		return $saved;
+	}
+	$out = array();
+	foreach ( $services as $value => $label ) {
+		$out[] = array( 'value' => $value, 'label' => $label );
+	}
+	return array_merge( $out, $extra );
+}
+
 /** Render a built-in form. */
 function sol_render_form( $variant, $args = array() ) {
 	$variant = in_array( $variant, sol_form_variants(), true ) ? $variant : 'contact';
@@ -50,6 +98,9 @@ function sol_render_form( $variant, $args = array() ) {
 	$opts = array();
 	foreach ( sol_rows( $args['select_options'] ) as $o ) {
 		$opts[] = array( 'value' => sol_get( $o, 'value', sol_get( $o, 'label' ) ), 'label' => sol_get( $o, 'label', sol_get( $o, 'value' ) ) );
+	}
+	if ( in_array( $variant, array( 'contact', 'consultation' ), true ) ) {
+		$opts = sol_service_dropdown( $opts );
 	}
 	if ( 'training' === $variant && ! $opts ) {
 		$opts = array(
@@ -375,6 +426,10 @@ function sol_send_confirmation( $variant, $data, $team ) {
 	$first = $first && preg_match( '/^[\p{L}\'.-]{2,30}$/u', $first ) ? $first : '';
 
 	$pretty  = function ( $v ) {
+		$services = sol_service_options();
+		if ( isset( $services[ $v ] ) ) {
+			return $services[ $v ];
+		}
 		return preg_replace_callback( '/\b(ndis|bas|seo|gst|abn|ai)\b/i', function ( $m ) { return strtoupper( $m[1] ); }, ucfirst( str_replace( array( '_', '-' ), ' ', $v ) ) );
 	};
 	$details = array();
