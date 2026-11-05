@@ -143,13 +143,15 @@ add_action( 'wp_enqueue_scripts', function () {
 
 add_action( 'wp_enqueue_scripts', function () {
 	$ver = SOL_THEME_VERSION;
-	wp_enqueue_style( 'sol-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap', array(), null );
+	wp_enqueue_style( 'sol-fonts', 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap', array(), null );
 	wp_enqueue_style( 'sol', SOL_URI . 'assets/css/sol.css', array(), $ver );
 	wp_enqueue_style( 'sol-hero', SOL_URI . 'assets/css/sol-hero.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-nav', SOL_URI . 'assets/css/sol-nav.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-sections', SOL_URI . 'assets/css/sol-sections.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-sticky', SOL_URI . 'assets/css/sol-sticky.css', array( 'sol' ), $ver ); // Sticky Buttons plugin side rail.
 	wp_enqueue_style( 'sol-footer', SOL_URI . 'assets/css/sol-footer.css', array( 'sol' ), $ver );
+	// v2.18 design system: calmer palette, serif headings, editorial sections. Loads after the files above.
+	wp_enqueue_style( 'sol-design', SOL_URI . 'assets/css/sol-design.css', array( 'sol', 'sol-hero', 'sol-nav', 'sol-sections', 'sol-footer' ), $ver );
 	if ( is_404() ) {
 		wp_enqueue_style( 'sol-404', SOL_URI . 'assets/css/sol-404.css', array( 'sol' ), $ver );
 	}

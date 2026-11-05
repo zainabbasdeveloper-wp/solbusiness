@@ -17,7 +17,7 @@ const columns = (def = '3') => select('columns', 'Columns', { 1: '1', 2: '2', 3:
 /* ------------------------------------------------------------------ */
 export const LAYOUTS = [
   layout('hero', 'Hero', [
-    select('style', 'Style', { split: 'Split - white, image right', dark: 'Dark - navy, image right', showcase: 'Showcase - navy, outlined headline, framed photo, animated on load', centered: 'Centered - no image' }, { default_value: 'split' }),
+    select('style', 'Style', { split: 'Split - white, image right', dark: 'Dark - navy, image right', showcase: 'Showcase - navy, outlined headline, framed photo, animated on load', centered: 'Centered - no image', editorial: 'Editorial - calm light background, large headline, one photo' }, { default_value: 'split' }),
     text('eyebrow', 'Eyebrow'),
     textarea('heading', 'Heading', { rows: 3, instructions: 'One line per row. Wrap words in [square brackets] to colour them amber.' }),
     textarea('text', 'Text'),
@@ -43,7 +43,8 @@ export const LAYOUTS = [
     columns('3'),
     select('card_style', 'Card style', {
       bordered: 'Bordered card', numbered: 'Numbered (01, 02...)', plain: 'Top rule, no box', dark: 'Dark card',
-      feature: 'Icon left', tagged: 'Tag + list',
+      feature: 'Icon left', tagged: 'Tag + list', category: 'Category - photo, title, short text and link',
+      editorial: 'Editorial - numbered points, no boxes, heading on the left',
     }, { default_value: 'bordered' }),
     repeater('cards', 'Cards', [
       icon(),
@@ -64,7 +65,7 @@ export const LAYOUTS = [
   ]),
   layout('steps', 'Steps / Timeline', [
     ...sectionHead(),
-    select('style', 'Style', { numbered: 'Numbered list', timeline: 'Timeline', cards: 'Step cards' }, { default_value: 'numbered' }),
+    select('style', 'Style', { numbered: 'Numbered list', timeline: 'Timeline', cards: 'Step cards', process: 'Process - steps in a row with a connecting line' }, { default_value: 'numbered' }),
     columns('2'),
     repeater('groups', 'Step groups', [
       text('title', 'Group title (optional)'),
@@ -142,14 +143,14 @@ export const LAYOUTS = [
   ]),
   layout('checklist', 'Checklist / Pills', [
     ...sectionHead(),
-    select('style', 'Style', { checks: 'Ticks', pills: 'Pills', numbered: 'Numbered' }, { default_value: 'checks' }),
+    select('style', 'Style', { checks: 'Ticks', pills: 'Pills', numbered: 'Numbered', audience: 'Audience line - short names in one calm row' }, { default_value: 'checks' }),
     columns('3'),
     listOf('items', 'Items'),
     buttons(),
   ]),
   layout('cta_banner', 'Call to Action Banner', [
     text('section_id', 'Anchor ID'),
-    select('style', 'Style', { dark: 'Dark navy', amber: 'Amber', light: 'Light', soft: 'Soft - centred and warm (good for page endings)', image: 'Image with overlay', strip: 'Slim amber strip' }, { default_value: 'dark' }),
+    select('style', 'Style', { dark: 'Dark navy', amber: 'Amber', light: 'Light', soft: 'Soft - centred and warm (good for page endings)', image: 'Image with overlay', strip: 'Slim amber strip', closing: 'Closing - calm navy page ending', statement: 'Statement - one large sentence, no box' }, { default_value: 'dark' }),
     text('eyebrow', 'Eyebrow'),
     textarea('heading', 'Heading', { rows: 2 }),
     textarea('text', 'Text', { rows: 3 }),
@@ -265,6 +266,18 @@ export const LAYOUTS = [
     repeater('resources', 'Resources', [text('key', 'Key'), text('title', 'Title'), textarea('text', 'Text', { rows: 2 }), file('file', 'File (optional)')], { item: 'Resource' }),
     textarea('consent_text', 'Consent text', { rows: 2 }),
     text('button_label', 'Button label', { default_value: 'Request Checklist' }),
+  ]),
+  layout('service_groups', 'Service Categories', [
+    ...sectionHead(),
+    repeater('groups', 'Categories', [
+      text('anchor', 'Anchor ID', { instructions: 'Lets other pages link to this category, e.g. /services/#ndis' }),
+      text('title', 'Title'),
+      textarea('text', 'Short description', { rows: 2 }),
+      image('image', 'Image'),
+      text('image_alt', 'Image alt text'),
+      repeater('links', 'Services', [text('title', 'Service'), text('text', 'One line'), text('url', 'Link')], { layout: 'table', item: 'Service' }),
+    ], { item: 'Category' }),
+    buttons(),
   ]),
   layout('service_overview', 'Service: Overview & Why SOL', [
     text('eyebrow', 'Eyebrow override'),

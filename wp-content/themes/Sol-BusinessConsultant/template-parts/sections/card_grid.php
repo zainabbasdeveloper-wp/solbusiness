@@ -7,7 +7,7 @@ $cards  = 'manual' === $source ? sol_rows( sol_get( $s, 'cards', array() ) ) : s
 $style  = preg_replace( '/[^a-z]/', '', sol_get( $s, 'card_style', 'bordered' ) );
 $cols   = max( 1, min( 4, (int) sol_get( $s, 'columns', 3 ) ) );
 
-sol_section_open( $s, 'card_grid' );
+sol_section_open( $s, 'card_grid', 'sol-cards--' . $style );
 ?>
 <div class="sol-container">
 	<?php sol_section_head( $s ); ?>

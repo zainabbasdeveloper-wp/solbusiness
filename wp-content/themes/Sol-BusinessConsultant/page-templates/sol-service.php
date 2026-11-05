@@ -20,7 +20,7 @@ while ( have_posts() ) {
 	$image   = get_field( 'hero_image', $id );
 	sol_render_row( array(
 		'acf_fc_layout' => 'hero',
-		'style'         => 'dark',
+		'style'         => apply_filters( 'sol_service_hero_style', 'editorial' ),
 		'eyebrow'       => get_field( 'eyebrow', $id ),
 		'heading'       => $heading ? $heading : get_the_title(),
 		'text'          => get_field( 'hero_intro', $id ),
@@ -30,7 +30,7 @@ while ( have_posts() ) {
 		'image'         => $image ? $image : get_post_thumbnail_id( $id ),
 		'image_alt'     => get_the_title() . ' consultation',
 		'disclaimer'    => get_field( 'hero_disclaimer', $id ),
-		'scroll_hint'   => get_field( 'show_enquiry', $id ) ? '#intake-form' : '',
+		'scroll_hint'   => '', // The first hero button already goes to the form.
 	) );
 
 	$rows = sol_rows( get_field( 'page_sections', $id ) );

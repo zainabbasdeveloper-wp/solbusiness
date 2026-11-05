@@ -39,7 +39,7 @@ export const layout = (name, label, sub_fields) => ({ name, label, sub_fields })
 export const listOf = (name, label, itemLabel = 'Item') => repeater(name, label, [text('item', itemLabel)], { layout: 'table', item: itemLabel });
 export const buttons = (name = 'buttons') => repeater(name, 'Buttons', [
   link('link', 'Link'),
-  select('style', 'Style', { primary: 'Primary (amber)', outline: 'Outline', dark: 'Dark', light: 'Light / on dark' }, { default_value: 'primary' }),
+  select('style', 'Style', { primary: 'Primary (amber)', outline: 'Outline', dark: 'Dark', light: 'Light / on dark', text: 'Text link with arrow' }, { default_value: 'primary' }),
 ], { layout: 'table', item: 'Button' });
 export const sectionHead = () => [
   text('section_id', 'Anchor ID', { instructions: 'Optional. Lets you link to this section, e.g. /#pricing', wrapper: { width: 25 } }),

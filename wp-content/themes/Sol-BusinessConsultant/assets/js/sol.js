@@ -553,6 +553,31 @@
 		});
 	}
 
+	/* ---------- Old home page links (v2.18) ----------
+	 * The home page used to hold contact, compliance and NDIS sections. Old links and bookmarks
+	 * such as /#contact go to the page that has that content now. Server side, inc/menu.php
+	 * fixes saved menu links the same way. */
+	function oldAnchors() {
+		if (!document.body.classList.contains('home')) { return; }
+		var where = function (h) {
+			if (h === 'contact') { return '/contact/'; }
+			if (h === 'pricing') { return '/pricing/'; }
+			if (h === 'faq') { return '/faq/'; }
+			if (h === 'about') { return '/about/'; }
+			if (h === 'compliance' || h.indexOf('compliance-') === 0) { return '/about/#' + h; }
+			if (h === 'ndis' || h.indexOf('ndis-') === 0) { return '/services/ndis-registration/'; }
+			return '';
+		};
+		var check = function () {
+			var h = (location.hash || '').slice(1);
+			if (!h || document.getElementById(h)) { return; }
+			var to = where(h);
+			if (to) { location.replace(to); }
+		};
+		check();
+		window.addEventListener('hashchange', check);
+	}
+
 	/* ---------- Links to a spot on a page (#section) ----------
 	 * Smooth scroll that stops just below the sticky header, corrects itself if images load
 	 * on the way, and briefly highlights the target (cards in one row share a scroll position,
@@ -701,6 +726,6 @@
 		}, { passive: true });
 	}
 
-	function init() { icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); showcase(); reveal(); fcart(); cardGlow(); anchors(); }
+	function init() { oldAnchors(); icons(); header(); tabs(); forms(); quizzes(); finder(); filters(); widgets(); showcase(); reveal(); fcart(); cardGlow(); anchors(); }
 	if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();

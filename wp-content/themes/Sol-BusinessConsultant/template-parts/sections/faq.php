@@ -25,7 +25,9 @@ sol_section_open( $s, 'faq' );
 			</details>
 		<?php endforeach; ?>
 	</div>
-	<?php if ( is_array( $cta ) && sol_get( $cta, 'heading' ) ) : ?>
+	<?php if ( is_array( $cta ) && ! sol_get( $cta, 'heading' ) && sol_get( $cta, 'buttons' ) ) : ?>
+		<?php echo sol_buttons( $cta['buttons'], 'sol-buttons--after sol-buttons--center' ); // phpcs:ignore ?>
+	<?php elseif ( is_array( $cta ) && sol_get( $cta, 'heading' ) ) : ?>
 		<div class="sol-inline-cta sol-inline-cta--center">
 			<div><h3><?php echo esc_html( $cta['heading'] ); ?></h3><p><?php echo esc_html( sol_get( $cta, 'text' ) ); ?></p></div>
 			<?php echo sol_buttons( sol_get( $cta, 'buttons', array() ) ); // phpcs:ignore ?>

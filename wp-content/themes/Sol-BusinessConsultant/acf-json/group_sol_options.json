@@ -667,7 +667,8 @@
                         "primary": "Primary (amber)",
                         "outline": "Outline",
                         "dark": "Dark",
-                        "light": "Light / on dark"
+                        "light": "Light / on dark",
+                        "text": "Text link with arrow"
                     },
                     "return_format": "value",
                     "allow_null": 0,

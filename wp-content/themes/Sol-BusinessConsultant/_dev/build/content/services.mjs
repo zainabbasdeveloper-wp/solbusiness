@@ -345,5 +345,26 @@ const ai = wpService({
   seo: { seo_title: 'AI & Machine Learning Solutions Australia | Automation', seo_description: 'AI implementation, machine learning solutions and business automation for Australian organisations seeking operational efficiency' },
 });
 
+// v2.18 simplification: every service page used to repeat the same "service standards" and "client journey"
+// blocks, and the hero offered a payment button next to the enquiry one. The service details section now
+// covers who it's for, what we help with, the process, benefits and FAQs in one calm flow.
+const REPEATED = new Set([ref('sol_block', 'service-trust'), ref('sol_block', 'service-journey')]);
+const simplify = (s) => {
+  const f = s.fields;
+  let rows = (f.page_sections || []).filter((r) => !(r.acf_fc_layout === 'reusable_block' && REPEATED.has(r.block)));
+  if (rows.some((r) => r.acf_fc_layout === 'service_details')) rows = rows.filter((r) => r.acf_fc_layout !== 'service_overview');
+  // "Also available" cross-sell banners pull visitors away from the page they chose.
+  rows = rows.filter((r) => !(r.acf_fc_layout === 'cta_banner' && r.eyebrow === 'Also Available'));
+  rows = rows.map((r) => {
+    if (r.acf_fc_layout !== 'cta_banner' || !r.buttons) return r;
+    const seen = new Set();
+    return { ...r, buttons: r.buttons.filter((b) => !seen.has(b.link.url) && seen.add(b.link.url)) };
+  });
+  const hero = (f.hero_buttons || []).filter((b) => b.link.title !== 'Make a Service Payment').slice(0, 2)
+    .map((b, i) => (i === 0 ? b : { ...b, style: 'outline' }));
+  return { ...s, fields: { ...f, hero_buttons: hero, page_sections: rows } };
+};
+
 export const services = [ndis, training, ...standard, website, software, marketing, accountancy, adminSupport, offshore, ai]
+  .map(simplify)
   .sort((a, b) => a.menu_order - b.menu_order);

@@ -323,3 +323,44 @@ add_action( 'admin_notices', function () {
 		. 'Services → category (e.g. NDIS Services) → links. Each item has icon, short description and badge fields at the bottom of its box. '
 		. 'The dark "Get started" box in the mega menu is set in SOL Site → Header.</p></div>';
 } );
+
+/**
+ * v2.18: the home page no longer holds the contact, compliance and NDIS sections.
+ * Where an old link to one of them (/#contact, /#compliance-…, /#ndis-…) should go now.
+ * Returns the URL unchanged when it isn't one of those links.
+ */
+function sol_home_anchor_url( $url ) {
+	$home = untrailingslashit( home_url() );
+	$path = 0 === strpos( (string) $url, $home ) ? substr( $url, strlen( $home ) ) : (string) $url;
+	if ( ! preg_match( '~^/?#([a-z0-9-]+)$~', $path, $m ) ) {
+		return $url;
+	}
+	$h   = $m[1];
+	$map = array( 'contact' => '/contact/', 'pricing' => '/pricing/', 'faq' => '/faq/', 'about' => '/about/' );
+	if ( isset( $map[ $h ] ) ) {
+		return home_url( $map[ $h ] );
+	}
+	if ( 'compliance' === $h || 0 === strpos( $h, 'compliance-' ) ) {
+		return home_url( '/about/#' . $h );
+	}
+	if ( 'ndis' === $h || 0 === strpos( $h, 'ndis-' ) ) {
+		return home_url( '/services/ndis-registration/' );
+	}
+	return $url;
+}
+
+/** Once: point saved menu links at the pages that now hold those sections. */
+add_action( 'admin_init', function () {
+	if ( get_option( 'sol_menu_anchors_218' ) ) {
+		return;
+	}
+	update_option( 'sol_menu_anchors_218', 1, false );
+	$ids = get_posts( array( 'post_type' => 'nav_menu_item', 'post_status' => 'any', 'numberposts' => -1, 'fields' => 'ids', 'meta_key' => '_menu_item_type', 'meta_value' => 'custom' ) ); // phpcs:ignore WordPress.DB.SlowDBQuery
+	foreach ( $ids as $mid ) {
+		$old = (string) get_post_meta( $mid, '_menu_item_url', true );
+		$new = sol_home_anchor_url( $old );
+		if ( $new !== $old ) {
+			update_post_meta( $mid, '_menu_item_url', esc_url_raw( $new ) );
+		}
+	}
+} );

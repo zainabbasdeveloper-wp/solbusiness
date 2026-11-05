@@ -46,7 +46,7 @@ Key `group_sol_service` · Shown on: page_template = page-templates/sol-service.
 | `hero_image` | Image (attachment ID) | Hero image |
 | `hero_buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 | `hero_disclaimer` | Text area | Small print |
 | **— Overview tab —** | | |
 | `overview_heading` | Text | Overview heading |
@@ -159,7 +159,7 @@ Key `group_sol_options` · Shown on: options_page = sol-site-settings
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
 | `header_buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 | `portal_links` | Repeater | Portal links |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `label` | Text | Label |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `url` | Text | Link |
@@ -210,13 +210,13 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 
 | Field name | Type | Label / notes |
 |---|---|---|
-| `style` | Select: `split`, `dark`, `showcase`, `centered` | Style |
+| `style` | Select: `split`, `dark`, `showcase`, `centered`, `editorial` | Style |
 | `eyebrow` | Text | Eyebrow |
 | `heading` | Text area | Heading — One line per row. Wrap words in [square brackets] to colour them amber. |
 | `text` | Text area | Text |
 | `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 | `badges` | Repeater | Trust badges |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `icon` | Text | Icon — Lucide icon name, e.g. shield, graduation-cap, file-check. Browse: https://lucide.dev/icons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `label` | Text | Label |
@@ -243,7 +243,7 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `url` | Text | Link (optional) |
 | `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 
 ### `card_grid` — Card Grid
 
@@ -257,7 +257,7 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | `intro` | Text area | Intro text |
 | `source` | Select: `manual`, `services` | Cards come from |
 | `columns` | Select: `1`, `2`, `3`, `4` | Columns |
-| `card_style` | Select: `bordered`, `numbered`, `plain`, `dark`, `feature`, `tagged` | Card style |
+| `card_style` | Select: `bordered`, `numbered`, `plain`, `dark`, `feature`, `tagged`, `category`, `editorial` | Card style |
 | `cards` | Repeater | Cards |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `icon` | Text | Icon — Lucide icon name, e.g. shield, graduation-cap, file-check. Browse: https://lucide.dev/icons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `tag` | Text | Tag / label |
@@ -276,7 +276,7 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link_2` | Link {title, url, target} | Second link |
 | `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 | `note` | Text area | Note under grid |
 
 ### `steps` — Steps / Timeline
@@ -289,7 +289,7 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | `align` | Select: `left`, `center` | Heading alignment |
 | `heading` | Text area | Heading — New lines become line breaks. |
 | `intro` | Text area | Intro text |
-| `style` | Select: `numbered`, `timeline`, `cards` | Style |
+| `style` | Select: `numbered`, `timeline`, `cards`, `process` | Style |
 | `columns` | Select: `1`, `2`, `3`, `4` | Columns |
 | `groups` | Repeater | Step groups |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `title` | Text | Group title (optional) |
@@ -302,11 +302,11 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `text` | Text area | Text |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 | `image` | Image (attachment ID) | Image |
 | `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 | `note` | Text area | Note |
 
 ### `pricing` — Pricing Packages
@@ -394,7 +394,7 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `text` | Text area | Text |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 
 ### `text_image` — Text + Image
 
@@ -418,7 +418,7 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `item` | Text | Item |
 | `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 | `callout` | Group | Callout box — With no image, the callout shows as a dark box beside the text. |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `icon` | Text | Icon — Lucide icon name, e.g. shield, graduation-cap, file-check. Browse: https://lucide.dev/icons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `title` | Text | Title |
@@ -434,26 +434,26 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | `align` | Select: `left`, `center` | Heading alignment |
 | `heading` | Text area | Heading — New lines become line breaks. |
 | `intro` | Text area | Intro text |
-| `style` | Select: `checks`, `pills`, `numbered` | Style |
+| `style` | Select: `checks`, `pills`, `numbered`, `audience` | Style |
 | `columns` | Select: `1`, `2`, `3`, `4` | Columns |
 | `items` | Repeater | Items |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `item` | Text | Item |
 | `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 
 ### `cta_banner` — Call to Action Banner
 
 | Field name | Type | Label / notes |
 |---|---|---|
 | `section_id` | Text | Anchor ID |
-| `style` | Select: `dark`, `amber`, `light`, `soft`, `image`, `strip` | Style |
+| `style` | Select: `dark`, `amber`, `light`, `soft`, `image`, `strip`, `closing`, `statement` | Style |
 | `eyebrow` | Text | Eyebrow |
 | `heading` | Text area | Heading |
 | `text` | Text area | Text |
 | `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 | `list` | Repeater | Checklist |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `item` | Text | Item |
 | `image` | Image (attachment ID) | Background image |
@@ -489,7 +489,7 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | `show_details` | True / False | Show phone / email / address |
 | `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 | `form_type` | Select: `builtin`, `shortcode`, `none` | Form |
 | `form_variant` | Select: `contact`, `consultation`, `complaint`, `training` | Built-in form variant |
 | `form_shortcode` | Text | Form shortcode |
@@ -642,7 +642,7 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | `show_filters` | True / False | Show category filter |
 | `buttons` | Repeater | Buttons |
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
-| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light` | Style |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 
 ### `course_levels` — Course Levels
 
@@ -692,6 +692,30 @@ Field: `page_sections` (flexible content). Each row has `acf_fc_layout` set to t
 | &nbsp;&nbsp;&nbsp;&nbsp;↳ `file` | File (array) | File (optional) |
 | `consent_text` | Text area | Consent text |
 | `button_label` | Text | Button label |
+
+### `service_groups` — Service Categories
+
+| Field name | Type | Label / notes |
+|---|---|---|
+| `section_id` | Text | Anchor ID — Optional. Lets you link to this section, e.g. /#pricing |
+| `eyebrow` | Text | Eyebrow |
+| `background` | Select: `white`, `chalk`, `ink`, `amber` | Background |
+| `align` | Select: `left`, `center` | Heading alignment |
+| `heading` | Text area | Heading — New lines become line breaks. |
+| `intro` | Text area | Intro text |
+| `groups` | Repeater | Categories |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `anchor` | Text | Anchor ID — Lets other pages link to this category, e.g. /services/#ndis |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `title` | Text | Title |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `text` | Text area | Short description |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `image` | Image (attachment ID) | Image |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `image_alt` | Text | Image alt text |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `links` | Repeater | Services |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `title` | Text | Service |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `text` | Text | One line |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ `url` | Text | Link |
+| `buttons` | Repeater | Buttons |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `link` | Link {title, url, target} | Link |
+| &nbsp;&nbsp;&nbsp;&nbsp;↳ `style` | Select: `primary`, `outline`, `dark`, `light`, `text` | Style |
 
 ### `service_overview` — Service: Overview & Why SOL
 

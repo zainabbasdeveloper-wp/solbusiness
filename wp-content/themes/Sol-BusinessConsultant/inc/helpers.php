@@ -117,7 +117,7 @@ function sol_button( $link, $style = 'primary', $class = '', $arrow = true ) {
 	if ( '_blank' === $l['target'] ) {
 		$attrs = ' target="_blank" rel="noopener noreferrer"';
 	}
-	$icon = $arrow && 'primary' === $style ? sol_icon( 'arrow-right', 'sol-btn__icon' ) : '';
+	$icon = $arrow && in_array( $style, array( 'primary', 'text' ), true ) ? sol_icon( 'arrow-right', 'sol-btn__icon' ) : '';
 	return sprintf(
 		'<a class="sol-btn sol-btn--%1$s %2$s" href="%3$s"%4$s>%5$s%6$s</a>',
 		esc_attr( $style ? $style : 'primary' ),

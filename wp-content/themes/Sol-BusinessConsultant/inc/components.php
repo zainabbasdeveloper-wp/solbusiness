@@ -11,7 +11,7 @@ function sol_card( $c, $style = 'bordered', $index = 0 ) {
 	$link2 = sol_link( sol_get( $c, 'link_2' ) );
 	$list  = is_array( sol_get( $c, 'list' ) ) ? sol_list( $c['list'] ) : array();
 	$meta  = sol_rows( sol_get( $c, 'meta', array() ) );
-	$whole = $link && 'numbered' === $style; // Whole card clickable.
+	$whole = $link && in_array( $style, array( 'numbered', 'category' ), true ); // Whole card clickable.
 
 	$html  = '<article class="sol-card sol-card--' . esc_attr( $style ) . '">';
 	if ( $whole ) {
@@ -24,7 +24,7 @@ function sol_card( $c, $style = 'bordered', $index = 0 ) {
 	if ( sol_get( $c, 'icon' ) ) {
 		$top .= '<span class="sol-card__icon">' . sol_icon( $c['icon'] ) . '</span>';
 	}
-	if ( 'numbered' === $style ) {
+	if ( 'numbered' === $style || 'editorial' === $style ) {
 		$top .= '<span class="sol-card__num">' . esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ) . '</span>';
 	}
 	if ( 'plain' === $style && sol_get( $c, 'tag' ) ) {

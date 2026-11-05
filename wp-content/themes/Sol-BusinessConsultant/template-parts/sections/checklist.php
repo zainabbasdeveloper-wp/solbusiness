@@ -13,7 +13,9 @@ sol_section_open( $s, 'checklist', 'sol-checklist--' . $style );
 ?>
 <div class="sol-container">
 	<?php sol_section_head( $s ); ?>
-	<?php if ( 'pills' === $style ) : ?>
+	<?php if ( 'audience' === $style ) : ?>
+		<ul class="sol-audience"><?php foreach ( $items as $it ) : ?><li><?php echo esc_html( $it ); ?></li><?php endforeach; ?></ul>
+	<?php elseif ( 'pills' === $style ) : ?>
 		<ul class="sol-pills sol-pills--<?php echo (int) $cols; ?>"><?php foreach ( $items as $it ) : ?><li><?php echo esc_html( $it ); ?></li><?php endforeach; ?></ul>
 	<?php elseif ( 'numbered' === $style ) : ?>
 		<ol class="sol-numbered"><?php foreach ( $items as $i => $it ) : ?><li><span><?php echo (int) $i + 1; ?></span><p><?php echo esc_html( $it ); ?></p></li><?php endforeach; ?></ol>

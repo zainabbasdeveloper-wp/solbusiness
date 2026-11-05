@@ -2,6 +2,10 @@
 /** Layout: service_overview — "What we offer" + "Why SOL" from the current service. */
 defined( 'ABSPATH' ) || exit;
 
+// The service details section already shows "What we help with" and "Why SOL".
+if ( ! empty( $GLOBALS['sol_service_details_done'] ) ) {
+	return;
+}
 $id       = sol_context_id();
 $features = sol_list( get_field( 'features', $id ) );
 $why      = sol_list( get_field( 'why', $id ) );
