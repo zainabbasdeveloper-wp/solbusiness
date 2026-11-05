@@ -111,9 +111,9 @@ html.a11y-ui-hidden .sol-a11y__launch { display: none; }
 .sol-a11y__dot { position: absolute; top: -5px; right: -5px; width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(145deg, #fbbf24, var(--a-amber-deep)); border: 2px solid #0f172a; transform: scale(0); transition: transform .25s ease; }
 .sol-a11y.has-active .sol-a11y__dot { transform: scale(1); }
 
-/* Panel: opens beside the tab, centred in the window. */
-.sol-a11y__panel { position: fixed; left: 76px; top: 50%; width: 410px; height: calc(100vh - 32px); height: calc(100dvh - 32px); max-height: 860px; display: flex; flex-direction: column; overflow: hidden; border-radius: 22px; background: #fff; border: 1px solid rgba(15, 23, 42, .08); box-shadow: 0 40px 80px -28px rgba(15, 23, 42, .55), 0 4px 14px rgba(15, 23, 42, .08); opacity: 0; transform: translate(-12px, -50%) scale(.98); transform-origin: left center; transition: opacity .22s ease, transform .22s ease; }
-.sol-a11y.is-shown .sol-a11y__panel { opacity: 1; transform: translate(0, -50%); }
+/* Panel: starts just below the site header (--a11y-top is measured by the script when it opens) and uses the height left on screen. */
+.sol-a11y__panel { --a11y-gap: 16px; position: fixed; left: 76px; top: var(--a11y-top, 132px); width: 410px; height: calc(100vh - var(--a11y-top, 132px) - var(--a11y-gap)); height: calc(100dvh - var(--a11y-top, 132px) - var(--a11y-gap)); max-height: 760px; display: flex; flex-direction: column; overflow: hidden; border-radius: 22px; background: #fff; border: 1px solid rgba(15, 23, 42, .08); box-shadow: 0 40px 80px -28px rgba(15, 23, 42, .55), 0 4px 14px rgba(15, 23, 42, .08); opacity: 0; transform: translateX(-12px) scale(.98); transform-origin: left top; transition: opacity .22s ease, transform .22s ease; }
+.sol-a11y.is-shown .sol-a11y__panel { opacity: 1; transform: none; }
 
 .sol-a11y__head { position: relative; flex-shrink: 0; padding: 16px 16px 14px 18px; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; overflow: hidden; }
 .sol-a11y__head::after { content: ""; position: absolute; right: -40px; top: -60px; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle, rgba(245, 158, 11, .28), transparent 70%); pointer-events: none; }
@@ -126,7 +126,7 @@ html.a11y-ui-hidden .sol-a11y__launch { display: none; }
 .sol-a11y__close:hover { background: rgba(255, 255, 255, .16); transform: rotate(90deg); }
 .sol-a11y__close svg { width: 18px; height: 18px; }
 .sol-a11y__actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-.sol-a11y__actions > * { display: inline-flex; align-items: center; gap: 6px; padding: 7px 11px; border: 1px solid rgba(255, 255, 255, .16); border-radius: 999px; background: rgba(255, 255, 255, .07); color: #fff !important; font-size: 12.5px; font-weight: 600; line-height: 1.2; text-decoration: none !important; cursor: pointer; transition: background-color .2s ease, border-color .2s ease; }
+.sol-a11y .sol-a11y__actions > * { display: inline-flex; align-items: center; gap: 6px; padding: 7px 11px; border: 1px solid rgba(255, 255, 255, .16); border-radius: 999px; background: rgba(255, 255, 255, .07); color: #fff !important; font-size: 12.5px; font-weight: 600; line-height: 1.2; text-decoration: none !important; cursor: pointer; transition: background-color .2s ease, border-color .2s ease; }
 .sol-a11y__actions > *:hover { background: rgba(255, 255, 255, .16); border-color: rgba(251, 191, 36, .6); }
 .sol-a11y__actions svg { width: 14px; height: 14px; }
 
@@ -246,9 +246,23 @@ html.a11y-ui-hidden .sol-a11y__launch { display: none; }
 	.sol-a11y__tile svg { width: 21px; height: 21px; }
 }
 @media (max-width: 639px) {
-	.sol-a11y__panel { left: 10px; right: 10px; width: auto; height: calc(100vh - 20px); height: calc(100dvh - 20px); }
+	.sol-a11y__panel { --a11y-gap: 10px; left: 10px; right: 10px; width: auto; max-height: none; border-radius: 18px; }
+	/* Compact header on phones: no shortcut line (no keyboard) and the three buttons on one row. */
+	.sol-a11y__head { padding: 12px 12px 12px 14px; }
+	.sol-a11y__head-top { gap: 10px; }
+	.sol-a11y__badge { width: 34px; height: 34px; border-radius: 11px; }
+	.sol-a11y__badge svg { width: 19px; height: 19px; }
+	.sol-a11y__title { font-size: 15.5px; }
+	.sol-a11y__sub { display: none; }
+	.sol-a11y__close { width: 32px; height: 32px; }
+	.sol-a11y__actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 6px; margin-top: 10px; }
+	.sol-a11y .sol-a11y__actions > * { justify-content: center; padding: 7px 6px; font-size: 12px; white-space: nowrap; }
+	.sol-a11y__body { padding: 12px 10px 14px; }
 	body:has(.sol-chat.is-open) .sol-a11y { opacity: 0; pointer-events: none; }
 	.sol-a11y__ai-text span { display: none; }
+}
+@media (max-width: 379px) {
+	.sol-a11y .sol-a11y__actions > * { flex-direction: column; gap: 3px; padding: 6px 2px; border-radius: 12px; font-size: 11px; }
 }
 @media (max-width: 359px) {
 	.sol-a11y__grid { grid-template-columns: 1fr 1fr; }

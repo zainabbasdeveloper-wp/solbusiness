@@ -478,10 +478,27 @@
   });
 
   /* ---------- Open / close ---------- */
+  // Start the panel just below the visible header; on short screens move it up so it keeps at least 420px of height.
+  function place() {
+    var bar = document.querySelector('.sol-header') || document.querySelector('header');
+    var below = 0;
+    [document.getElementById('wpadminbar'), bar].forEach(function (el) {
+      if (!el) return;
+      var r = el.getBoundingClientRect();
+      if (r.height && r.bottom > below) below = r.bottom;
+    });
+    var gap = window.innerWidth < 640 ? 10 : 16;
+    var top = Math.round(Math.max(gap, Math.min(below + 12, window.innerHeight - gap - 420)));
+    panel.style.setProperty('--a11y-top', top + 'px');
+  }
+  window.addEventListener('resize', function () { if (root.classList.contains('is-open')) place(); });
+  window.addEventListener('scroll', function () { if (root.classList.contains('is-open')) place(); }, { passive: true });
+
   function open() {
     html.classList.remove('a11y-ui-hidden');
     try { sessionStorage.removeItem('sol-a11y-hide'); } catch (e) {}
     fillLinks();
+    place();
     panel.hidden = false;
     root.classList.add('is-open');
     toggle.setAttribute('aria-expanded', 'true');
