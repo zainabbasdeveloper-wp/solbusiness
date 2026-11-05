@@ -1,0 +1,52 @@
+/* Live Chat inbox (WordPress admin → Live Chat). */
+.sol-live__top { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; }
+.sol-live__top h1 { margin-right: 6px; }
+.sol-live__avail { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+.sol-live__online { color: #646970; }
+.sol-live__online.is-on { color: #008a20; font-weight: 600; }
+.sol-live__help { max-width: 900px; color: #50575e; }
+
+.sol-live__app { display: grid; grid-template-columns: 320px 1fr; height: calc(100vh - 220px); min-height: 460px; margin-top: 12px; border: 1px solid #dcdcde; border-radius: 8px; background: #fff; overflow: hidden; }
+@media (max-width: 900px) { .sol-live__app { grid-template-columns: 1fr; height: auto; } .sol-live__list { max-height: 320px; border-right: 0 !important; border-bottom: 1px solid #dcdcde; } .sol-live__conv { min-height: 520px; } }
+
+.sol-live__list { overflow-y: auto; border-right: 1px solid #dcdcde; background: #f6f7f7; }
+.sol-live__group { margin: 0; padding: 12px 14px 6px; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #646970; }
+.sol-live__item { display: flex; flex-direction: column; gap: 4px; width: 100%; padding: 10px 14px; border: 0; border-bottom: 1px solid #ececec; border-left: 3px solid transparent; background: #fff; text-align: left; cursor: pointer; }
+.sol-live__item:hover { background: #f0f6fc; }
+.sol-live__item.is-current { background: #f0f6fc; border-left-color: #2271b1; }
+.sol-live__item.is-waiting { border-left-color: #d97706; }
+.sol-live__item.is-closed { opacity: .75; }
+.sol-live__item-top { display: flex; justify-content: space-between; gap: 8px; }
+.sol-live__item-top strong { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; color: #1d2327; }
+.sol-live__here { width: 8px; height: 8px; border-radius: 50%; background: #00a32a; }
+.sol-live__time { font-size: 11.5px; color: #8c8f94; white-space: nowrap; }
+.sol-live__preview { overflow: hidden; color: #50575e; font-size: 12.5px; white-space: nowrap; text-overflow: ellipsis; }
+.sol-live__meta { display: flex; align-items: center; gap: 8px; font-size: 11.5px; color: #646970; }
+.sol-live__pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; background: #f0f0f1; color: #50575e; }
+.sol-live__pill.is-waiting { background: #fcf0e3; color: #9a4f00; }
+.sol-live__pill.is-live { background: #e7f6ec; color: #006a1f; }
+.sol-live__unread { margin-left: auto; min-width: 18px; padding: 0 6px; border-radius: 9px; background: #d63638; color: #fff; font-weight: 700; text-align: center; line-height: 18px; }
+.sol-live__empty { padding: 16px; color: #646970; }
+
+.sol-live__conv { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.sol-live__placeholder { margin: auto; text-align: center; color: #8c8f94; }
+.sol-live__placeholder .dashicons { width: 48px; height: 48px; font-size: 48px; }
+.sol-live__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #dcdcde; }
+.sol-live__head h2 { margin: 0 0 2px; font-size: 16px; }
+.sol-live__info { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; font-size: 12.5px; }
+.sol-live__info a { overflow-wrap: anywhere; }
+.sol-live__state { margin: 4px 0 0; font-size: 12px; color: #646970; }
+.sol-live__tools { display: flex; gap: 6px; flex-shrink: 0; }
+.sol-live__log { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; background: #f9fafb; }
+.sol-live__msg { display: flex; flex-direction: column; gap: 2px; max-width: 75%; }
+.sol-live__msg.is-agent { align-self: flex-end; align-items: flex-end; }
+.sol-live__by { font-size: 11px; color: #8c8f94; }
+.sol-live__bubble { padding: 8px 12px; border-radius: 12px; background: #fff; border: 1px solid #dcdcde; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13.5px; line-height: 1.5; }
+.sol-live__msg.is-visitor .sol-live__bubble { border-bottom-left-radius: 4px; }
+.sol-live__msg.is-bot .sol-live__bubble { background: #f0f0f1; color: #50575e; border-style: dashed; }
+.sol-live__msg.is-agent .sol-live__bubble { background: #2271b1; border-color: #2271b1; color: #fff; border-bottom-right-radius: 4px; }
+.sol-live__note { align-self: center; margin: 0; padding: 3px 10px; border-radius: 8px; background: #eef1f4; color: #50575e; font-size: 12px; }
+.sol-live__typing { margin: 0; padding: 0 16px 6px; background: #f9fafb; color: #8c8f94; font-size: 12px; font-style: italic; }
+.sol-live__typing[hidden] { display: none; }
+.sol-live__compose { display: flex; gap: 8px; align-items: flex-end; padding: 10px 12px; border-top: 1px solid #dcdcde; }
+.sol-live__compose textarea { flex: 1; min-height: 52px; resize: vertical; }

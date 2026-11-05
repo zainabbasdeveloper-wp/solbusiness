@@ -340,6 +340,19 @@ function sol_handle_form() {
 		}
 	}
 
+	sol_save_enquiry( $variant, $data, $back );
+	$done();
+}
+
+/**
+ * Save a validated submission as an Enquiry, email the team and the visitor, and call the webhook.
+ * Used by the website forms and by chat bookings (inc/live-chat.php). Returns the enquiry ID.
+ */
+function sol_save_enquiry( $variant, $data, $back ) {
+	$data = wp_parse_args( $data, array(
+		'name' => '', 'email' => '', 'phone' => '', 'company' => '', 'service' => '', 'selection' => '', 'reference' => '',
+		'preferred_date' => '', 'preferred_time' => '', 'learners' => '', 'message' => '', 'summary' => '', 'marketing_consent' => 'No',
+	) );
 	$labels = array(
 		'name' => 'Name', 'email' => 'Email', 'phone' => 'Phone', 'company' => 'Business / organisation', 'service' => 'Service page',
 		'selection' => 'Selection', 'reference' => 'Reference', 'preferred_date' => 'Preferred date', 'preferred_time' => 'Preferred time',
@@ -395,7 +408,7 @@ function sol_handle_form() {
 	}
 
 	do_action( 'sol_form_submitted', $variant, $data, $post_id );
-	$done();
+	return ( $post_id && ! is_wp_error( $post_id ) ) ? (int) $post_id : 0;
 }
 
 /** Visitor message for each failure code. */

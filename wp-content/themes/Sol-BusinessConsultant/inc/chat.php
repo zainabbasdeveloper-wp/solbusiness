@@ -148,17 +148,26 @@ Accessibility menu on this website:
 - When a visitor describes a need (for example "the text is too small" or "I get distracted"), suggest the matching option and say where to find it.
 
 Guidelines:
-- Be warm, concise and professional. Use plain Australian English.
-- Start by understanding whether the visitor needs a business service, NDIS support, a training course, payment help or portal access, then give the most relevant link as a Markdown link with a descriptive label.
+- Be warm and professional, in plain Australian English. Be brief: 1-3 short sentences per reply.
+- Give at most one link per reply, as a Markdown link with a short label. Use a short list only when the visitor asks for steps or options.
+- Work out whether the visitor needs a business service, NDIS support, a training course, payment help or portal access, then point them to the single most relevant page.
 - Recommend only options that fit what the visitor said. Link only the URLs listed above; never make up URLs.
+- Don't repeat the phone number or the contact page in every reply. The chat already shows the phone number.
 - If someone has already paid for training, remind them to register or sign in with the same checkout email.
-- For payment, account, enrolment or access problems, don't claim to see their account or payment. Ask them to contact the SOL team with their order or reference number.
-- For anything outside SOL's services or that needs a person (quotes, account issues, legal, financial or medical advice), say so politely and point them to {$phone}, the contact page or a free consultation.
-- Never invent prices, dates, timeframes or guarantees. If you're not sure, say so and suggest contacting the team.
+- Never invent prices, dates, timeframes or guarantees. If you're not sure, say so.
 - Never ask for passwords, card details, bank logins, one-time codes or identity documents.
-- Keep replies short (2-5 sentences) unless the visitor asks for detail. Use short bullet points and Markdown links when helpful. No tables or headings.
+- No tables or headings.
+
+Chat actions (the website turns these tags into buttons and forms; the visitor never sees the tags):
+- Booking: when the visitor wants to book a consultation, asks you to book a service for them, or wants a quote, say you can book a free consultation right here and end your reply with [[book]]. A booking form then appears in the chat, so don't ask for their name, email or phone yourself.
+{HANDOFF}
+- Quick replies: end most replies with up to 3 short follow-up choices the visitor might tap, written as the visitor would say them, each under 25 characters, for example [[options: See pricing | Book a consultation | Talk to the team]]. Skip them when you used [[book]].
+- Put tags on their own at the very end of the reply. Use each tag at most once.
 TXT;
 	$prompt = str_replace( '{SERVICES}', sol_chat_service_lines(), $prompt );
+	$prompt = str_replace( '{HANDOFF}', function_exists( 'sol_live_enabled' ) && sol_live_enabled()
+		? "- Team handover: when the visitor asks for a person, human, agent or staff member, seems frustrated, or needs something you can't do (account, payment or enrolment problems, quotes for unusual work, complaints, anything you're unsure about), say you can connect them with the SOL team now and end your reply with [[handoff]]. Don't claim to see their account or payment."
+		: "- Team help: for account, payment or enrolment problems, quotes, complaints or anything that needs a person, say so politely and point them to {$phone} or the contact page. Don't claim to see their account or payment.", $prompt );
 
 	$extra = trim( (string) sol_opt( 'chat_instructions' ) );
 	if ( $extra ) {
@@ -262,10 +271,39 @@ function sol_chat_reply( WP_REST_Request $req ) {
 	}
 	$reply = isset( $data['choices'][0]['message']['content'] ) ? (string) $data['choices'][0]['message']['content'] : '';
 	$reply = trim( preg_replace( '#<think>.*?</think>#s', '', $reply ) );
-	if ( '' === $reply ) {
+	$parsed = sol_chat_parse_actions( $reply );
+	if ( '' === $parsed['reply'] ) {
 		return sol_chat_error( $fallback, 502 );
 	}
-	return new WP_REST_Response( array( 'reply' => $reply ), 200 );
+	return new WP_REST_Response( $parsed, 200 );
+}
+
+/**
+ * Split the assistant's action tags from its reply: [[book]], [[handoff]] and
+ * [[options: A | B | C]]. Any other [[...]] tag is removed.
+ */
+function sol_chat_parse_actions( $reply ) {
+	$action  = '';
+	$options = array();
+	if ( preg_match( '/\[\[\s*options?\s*:\s*(.*?)\]\]/is', $reply, $m ) ) {
+		foreach ( explode( '|', $m[1] ) as $o ) {
+			$o = trim( wp_strip_all_tags( $o ), " \t\n\r\"'" );
+			if ( '' !== $o && mb_strlen( $o ) <= 40 ) {
+				$options[] = $o;
+			}
+		}
+	}
+	if ( preg_match( '/\[\[\s*book\s*\]\]/i', $reply ) ) {
+		$action = 'book';
+	} elseif ( preg_match( '/\[\[\s*handoff\s*\]\]/i', $reply ) && function_exists( 'sol_live_enabled' ) && sol_live_enabled() ) {
+		$action = 'handoff';
+	}
+	$reply = trim( preg_replace( '/\[\[[^\]]*\]\]/', '', $reply ) );
+	return array(
+		'reply'   => $reply,
+		'options' => 'book' === $action ? array() : array_slice( array_values( array_unique( $options ) ), 0, 3 ),
+		'action'  => $action,
+	);
 }
 
 /* ---------- Widget ---------- */
@@ -284,6 +322,13 @@ add_action( 'wp_enqueue_scripts', function () {
 		'greeting'  => sol_opt( 'chat_greeting', "Hi, I'm online and ready to help. What can I help you with today?" ),
 		'questions' => array_slice( $questions, 0, 6 ),
 		'error'     => "Sorry, I couldn't respond just now. Please try again, or call us on " . sol_opt( 'phone', '+61 460 003 494' ) . '.',
+		'live'      => function_exists( 'sol_live_enabled' ) && sol_live_enabled(),
+		'liveApi'   => esc_url_raw( rest_url( 'sol/v1/live/' ) ),
+		'bookApi'   => esc_url_raw( rest_url( 'sol/v1/chat/book' ) ),
+		'services'  => function_exists( 'sol_service_options' ) ? sol_service_options() : array(),
+		'times'     => function_exists( 'sol_live_times' ) ? sol_live_times() : array(),
+		'today'     => wp_date( 'Y-m-d' ),
+		'hours'     => sol_opt( 'business_hours', 'Monday-Friday: 9:00 AM - 5:00 PM AEST' ),
 	) );
 }, 30 );
 
@@ -319,10 +364,10 @@ add_action( 'wp_footer', function () {
 		<section class="sol-chat__panel" id="sol-chat-panel" role="dialog" aria-label="<?php echo esc_attr( $name ); ?>" hidden>
 			<header class="sol-chat__head">
 				<div class="sol-chat__who">
-					<span class="sol-chat__avatar"><?php echo $bot; // phpcs:ignore ?></span>
+					<span class="sol-chat__avatar" data-chat-avatar><?php echo $bot; // phpcs:ignore ?></span>
 					<div>
-						<p class="sol-chat__name"><?php echo esc_html( $name ); ?></p>
-						<p class="sol-chat__status"><i></i>Online and ready to help</p>
+						<p class="sol-chat__name" data-chat-name><?php echo esc_html( $name ); ?></p>
+						<p class="sol-chat__status" data-chat-status><i></i><span>Online and ready to help</span></p>
 					</div>
 				</div>
 				<div class="sol-chat__tools">
@@ -332,7 +377,8 @@ add_action( 'wp_footer', function () {
 			</header>
 			<nav class="sol-chat__links" aria-label="Quick links">
 				<?php if ( $pay ) : ?><a href="<?php echo esc_url( $pay ); ?>">Service &amp; Training Payment</a><?php endif; ?>
-				<?php if ( $book ) : ?><a href="<?php echo esc_url( $book ); ?>">Book Consultation</a><?php endif; ?>
+				<?php if ( $book ) : ?><a data-chat-book href="<?php echo esc_url( $book ); ?>">Book Consultation</a><?php endif; ?>
+				<?php if ( function_exists( 'sol_live_enabled' ) && sol_live_enabled() ) : ?><button type="button" class="sol-chat__human" data-chat-human><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>Talk to a person</button><?php endif; ?>
 			</nav>
 			<div class="sol-chat__log" data-chat-log aria-live="polite"></div>
 			<form class="sol-chat__form" data-chat-form>
@@ -340,7 +386,7 @@ add_action( 'wp_footer', function () {
 				<textarea id="sol-chat-input" rows="1" maxlength="2000" placeholder="Type your message…" data-chat-input></textarea>
 				<button type="submit" aria-label="Send message" data-chat-send disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 21.7a.5.5 0 0 0 .9 0L22 2.6a.5.5 0 0 0-.6-.6L2.3 8.6a.5.5 0 0 0 0 .9l8 3.2a2 2 0 0 1 1.1 1.1z"/><path d="m21.9 2.1-10.9 10.9"/></svg></button>
 			</form>
-			<p class="sol-chat__foot">AI replies can be wrong. For anything urgent call <a href="tel:<?php echo esc_attr( $phone_l ); ?>"><?php echo esc_html( $phone ); ?></a></p>
+			<p class="sol-chat__foot" data-chat-foot>AI replies can be wrong. For anything urgent call <a href="tel:<?php echo esc_attr( $phone_l ); ?>"><?php echo esc_html( $phone ); ?></a></p>
 		</section>
 	</div>
 	<?php

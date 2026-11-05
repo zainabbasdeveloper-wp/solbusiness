@@ -59,6 +59,7 @@ add_action( 'admin_post_sol_chat_save', function () {
 	check_admin_referer( 'sol_chat_save' );
 
 	update_option( 'sol_chat_on', empty( $_POST['sol_chat_on'] ) ? '0' : '1', false );
+	update_option( 'sol_live_on', empty( $_POST['sol_live_on'] ) ? '0' : '1', false );
 
 	$msg  = 'saved';
 	$note = '';
@@ -155,6 +156,13 @@ function sol_chat_admin_page() {
 				<tr>
 					<th scope="row">Chat</th>
 					<td><label><input type="checkbox" name="sol_chat_on" value="1" <?php checked( $on ); ?>> Show the chat on the site</label></td>
+				</tr>
+				<tr>
+					<th scope="row">Live chat with the team</th>
+					<td>
+						<label><input type="checkbox" name="sol_live_on" value="1" <?php checked( '0' !== (string) get_option( 'sol_live_on', '1' ) ); ?>> Let visitors talk to a team member when the assistant can't help</label>
+						<p class="description">Team members (editors and administrators) reply from <a href="<?php echo esc_url( admin_url( 'admin.php?page=' . SOL_LIVE_PAGE ) ); ?>">Live Chat</a> in the admin menu. When no one is online, the visitor leaves their details and the request is emailed to the team.</p>
+					</td>
 				</tr>
 			</table>
 			<p class="submit">

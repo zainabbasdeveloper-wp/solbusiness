@@ -368,6 +368,7 @@ function sol_email_templates() {
 		'resource_checklist'        => array( 'Website forms', 'Free checklist', 'Free checklist form (sent to the visitor).', array( 'name' => 'Jane', 'resource' => 'ndis_checklist' ) ),
 		'form_confirmation'         => array( 'Website forms', 'Form received', 'Contact, training, feedback, newsletter and readiness-check forms (sent to the visitor).', array( 'name' => 'Jane', 'variant' => 'contact' ) ),
 		'enquiry_notification'      => array( 'Website forms', 'New enquiry (team)', 'Every website form (sent to the SOL team).', array( 'variant' => 'contact', 'fields' => array( 'Form' => 'Contact', 'Page' => home_url( '/contact/' ), 'Name' => 'Jane Citizen', 'Email' => 'jane@example.com', 'Phone' => '0400 000 000', 'Message' => "Hi, I'd like help with NDIS registration.\nWhat documents do I need?" ) ) ),
+		'live_chat_request'         => array( 'Website forms', 'Live chat request (team)', 'When a visitor asks the chat to talk to a person (sent to the SOL team).', array( 'name' => 'Jane Citizen', 'email' => 'jane@example.com', 'phone' => '0400 000 000', 'message' => 'Can someone check my NDIS registration quote?', 'page' => home_url( '/services/' ), 'offline' => false, 'url' => admin_url( 'admin.php?page=sol-live-chat' ) ) ),
 		'test'                      => array( 'Website forms', 'Test email', 'SOL Site → Email test button.', array() ),
 	);
 	$out = array();
@@ -888,6 +889,33 @@ function sol_email_tpl_enquiry_notification( $d ) {
 			array( 'p', '**' . sol_email_value( $who ) . '** sent the ' . strtolower( $variant ) . ' form on the website.' ),
 			array( 'rows', $rows ),
 			array( 'button', 'View all enquiries', admin_url( 'edit.php?post_type=sol_enquiry' ) ),
+		),
+	);
+}
+
+function sol_email_tpl_live_chat_request( $d ) {
+	$who     = sol_email_value( sol_get( $d, 'name', 'A visitor' ) );
+	$offline = ! empty( $d['offline'] );
+	$rows    = array();
+	foreach ( array( 'Name' => 'name', 'Email' => 'email', 'Phone' => 'phone', 'Page' => 'page', 'Message' => 'message' ) as $label => $k ) {
+		$v = (string) sol_get( $d, $k, '' );
+		if ( '' === $v ) {
+			continue;
+		}
+		$v      = 'email' === $k && is_email( $v ) ? '[' . sol_email_value( $v ) . '](mailto:' . sol_email_value( $v ) . ')' : sol_email_value( $v );
+		$rows[] = array( $label, $v );
+	}
+	return array(
+		'subject'   => '[' . sol_email_company() . '] ' . ( $offline ? 'Chat message' : 'Live chat request' ) . ' from ' . $who,
+		'title'     => $offline ? 'New chat message (team offline)' : 'A visitor wants to talk to the team',
+		'preheader' => $offline ? $who . ' left a message in the website chat.' : $who . ' is waiting in the website chat.',
+		'note'      => 'Reply to this email to answer ' . $who . ' directly. Sent by the website chat.',
+		'blocks'    => array(
+			array( 'p', $offline
+				? '**' . $who . '** asked to talk to the team while no one was online. Please reply by email or phone.'
+				: '**' . $who . '** is waiting in the website chat. Open the inbox to reply in the chat window.' ),
+			array( 'rows', $rows ),
+			array( 'button', 'Open Live Chat inbox', sol_get( $d, 'url', admin_url( 'admin.php?page=sol-live-chat' ) ) ),
 		),
 	);
 }
