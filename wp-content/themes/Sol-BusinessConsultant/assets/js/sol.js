@@ -93,6 +93,8 @@
 			burger.addEventListener('click', function () {
 				var show = drawer.hidden;
 				drawer.hidden = !show;
+				// The menu scrolls inside itself and never runs past the bottom of the screen (sol-mobile.css).
+				if (show) { drawer.style.setProperty('--sol-drawer-top', Math.max(0, Math.round(drawer.getBoundingClientRect().top)) + 'px'); }
 				burger.setAttribute('aria-expanded', show ? 'true' : 'false');
 				burger.setAttribute('aria-label', show ? 'Close menu' : 'Open menu');
 			});

@@ -136,6 +136,11 @@ add_filter( 'body_class', function ( $classes ) {
 	return $classes;
 } );
 
+// Phone and tablet polish: loaded after every other stylesheet (chat, accessibility, cart) so it wins.
+add_action( 'wp_enqueue_scripts', function () {
+	wp_enqueue_style( 'sol-mobile', SOL_URI . 'assets/css/sol-mobile.css', array( 'sol' ), SOL_THEME_VERSION );
+}, 100 );
+
 add_action( 'wp_enqueue_scripts', function () {
 	$ver = SOL_THEME_VERSION;
 	wp_enqueue_style( 'sol-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap', array(), null );

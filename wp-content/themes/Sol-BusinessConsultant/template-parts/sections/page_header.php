@@ -18,9 +18,9 @@ $cards = sol_rows( sol_get( $s, 'info_cards', array() ) );
 						<div>
 							<p class="sol-info-card__label"><?php echo esc_html( sol_get( $c, 'label' ) ); ?></p>
 							<?php if ( $u ) : ?>
-								<a class="sol-info-card__value" href="<?php echo esc_url( sol_url( $u ) ); ?>"><?php echo esc_html( sol_get( $c, 'value' ) ); ?></a>
+								<a class="sol-info-card__value" href="<?php echo esc_url( sol_url( $u ) ); ?>"><?php echo sol_soft_email( sol_get( $c, 'value' ) ); // phpcs:ignore -- escaped inside ?></a>
 							<?php else : ?>
-								<p class="sol-info-card__value"><?php echo esc_html( sol_get( $c, 'value' ) ); ?></p>
+								<p class="sol-info-card__value"><?php echo sol_soft_email( sol_get( $c, 'value' ) ); // phpcs:ignore -- escaped inside ?></p>
 							<?php endif; ?>
 						</div>
 					</div>

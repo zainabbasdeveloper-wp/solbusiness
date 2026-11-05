@@ -292,3 +292,17 @@ function sol_context_id( $set = null ) {
 	}
 	return $id ? $id : get_the_ID();
 }
+
+/**
+ * Escaped text that may hold an email address, with a line-break hint after the "@" so a long
+ * address wraps as "name@ / domain.com.au" on small phones instead of mid-word. Emails are also
+ * obfuscated for spam bots. Any other text is simply escaped.
+ */
+function sol_soft_email( $text ) {
+	$text = (string) $text;
+	if ( ! is_email( $text ) ) {
+		return esc_html( $text );
+	}
+	list( $user, $domain ) = explode( '@', $text, 2 );
+	return esc_html( antispambot( $user ) ) . '@<wbr>' . esc_html( antispambot( $domain ) );
+}

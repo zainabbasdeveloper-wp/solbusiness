@@ -205,6 +205,13 @@ $sol_is_cur = function ( $l ) {
 				<a class="sol-drawer__link" href="<?php echo esc_url( sol_url( sol_get( $p, 'url' ) ) ); ?>"><?php echo esc_html( sol_get( $p, 'label' ) ); ?></a>
 			<?php endforeach; ?>
 			<?php echo sol_buttons( $buttons, 'sol-drawer__buttons' ); // phpcs:ignore ?>
+			<?php $pay_url = sol_url( sol_opt( 'payment_page_url', '/sol-service-payment-form/' ) ); ?>
+			<?php if ( $phone || $pay_url ) : ?>
+				<div class="sol-drawer__contact">
+					<?php if ( $phone ) : ?><a href="tel:<?php echo esc_attr( $phone_l ); ?>"><?php echo sol_icon( 'phone' ); // phpcs:ignore ?><span>Call <?php echo esc_html( $phone ); ?></span></a><?php endif; ?>
+					<?php if ( $pay_url ) : ?><a href="<?php echo esc_url( $pay_url ); ?>"><?php echo sol_icon( 'credit-card' ); // phpcs:ignore ?><span>Make a payment</span></a><?php endif; ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </header>

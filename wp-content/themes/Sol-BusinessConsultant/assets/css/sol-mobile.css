@@ -1,0 +1,67 @@
+/* Phone and tablet polish. Loaded after every other stylesheet (inc/setup.php) so these rules win.
+   Goal: nothing sticks out sideways, nothing floating covers the content, and the header stays small. */
+
+/* ---------- Never scroll sideways ---------- */
+/* Slide-in animations and long words can't widen the page. `clip` (unlike `hidden`) keeps sticky elements working. */
+.sol-main { overflow-x: clip; }
+/* Long web addresses and emails inside text wrap instead of running off the screen. */
+.sol-main { overflow-wrap: break-word; }
+.sol-main :is(p, li, td, dd, blockquote) :is(a, strong, b, code, em) { overflow-wrap: anywhere; }
+/* Product pages: the single column can't grow past the screen. */
+.sol-product-grid { grid-template-columns: minmax(0, 1fr); }
+.sol-product-aside { min-width: 0; }
+
+@media (max-width: 767px) {
+	/* Sideways slide-ins become a gentle rise on phones, so the page never shifts left or right. */
+	.sol-in.sol-in--left, .sol-in.sol-in--right { animation-name: sol-in-up; }
+}
+
+/* ---------- Header ---------- */
+@media (max-width: 767px) {
+	/* The announcement bar is part of the sticky header: keep just its link, on one short line. */
+	.sol-topbar__inner { padding-top: 6px; padding-bottom: 6px; gap: 8px; }
+	.sol-topbar__inner > span { display: none; }
+	.sol-topbar a { font-size: .8rem; }
+	/* The menu fits the screen below the header and scrolls inside itself (sol.js sets --sol-drawer-top). */
+	.sol-drawer { max-height: calc(100vh - var(--sol-drawer-top, 110px)); max-height: calc(100dvh - var(--sol-drawer-top, 110px)); overscroll-behavior: contain; }
+}
+.sol-drawer__contact { display: grid; gap: 8px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--sol-border); }
+.sol-drawer__contact a { display: flex; align-items: center; gap: 10px; padding: 10px 4px; font-weight: 600; color: var(--sol-ink); }
+.sol-drawer__contact .sol-icon { width: 18px; height: 18px; color: var(--sol-harvest); flex-shrink: 0; }
+
+/* ---------- Floating buttons on phones ----------
+   Right corner: chat (bottom) and WhatsApp above it.
+   Left corner: accessibility (bottom), back-to-top above it, and the cart above that only when it has items.
+   The side rail from the Sticky Buttons plugin (payment and call) is hidden on phones: both links are in the menu. */
+@media (max-width: 767px) {
+	html body .sticky-buttons { display: none !important; }
+
+	.sol-chat__launch { width: 54px; height: 54px; }
+	.sol-chat__launch-icon svg { width: 24px; height: 24px; }
+	.sol-chat__panel { bottom: 80px; }
+	.sol-float-wa, .sol-has-chat .sol-float-wa { right: 16px; bottom: 80px; width: 50px; height: 50px; }
+	.sol-float-wa .sol-icon, .sol-float-wa__logo { width: 26px; height: 26px; }
+
+	html body .sol-a11y { top: auto; bottom: 14px; }
+	html body .sol-a11y__launch { padding: 6px 8px 6px 6px; border-radius: 0 16px 16px 0; }
+	.sol-totop, .sol-has-chat .sol-totop { left: 10px; right: auto; bottom: 76px; width: 40px; height: 40px; }
+	.sol-fcart__tab { bottom: 126px; }
+	.sol-fcart:not(.has-items) .sol-fcart__tab { display: none; }
+
+	/* Keep the last lines of the footer clear of the floating buttons. */
+	.sol-footer { padding-bottom: 76px; }
+
+	/* An open menu, cart or accessibility panel gets the whole screen: floating buttons step aside. */
+	body:has(.sol-drawer:not([hidden])) :is(.sol-chat, .sol-float-wa, .sol-totop, .sol-a11y, .sol-fcart__tab) { opacity: 0; pointer-events: none; }
+	body:has(.sol-chat.is-open) :is(.sol-a11y, .sol-fcart__tab, .sol-totop) { opacity: 0; pointer-events: none; }
+}
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+	.sol-chat, .sol-float-wa, .sol-totop, .sol-a11y, .sol-fcart__tab { transition: opacity .2s ease; }
+}
+
+/* ---------- Footer ---------- */
+@media (max-width: 479px) {
+	/* "Let's build your business foundation" box: heading on top, button below. */
+	.sol-footer__invite { flex-direction: column; align-items: flex-start; gap: 12px; }
+	.sol-footer__invite span { font-size: 1.05rem; }
+}

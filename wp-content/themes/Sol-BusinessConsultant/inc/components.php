@@ -136,7 +136,7 @@ function sol_contact_details( $dark = false ) {
 	$addr  = sol_opt( 'address' );
 	$html  = '<ul class="sol-contact-list' . ( $dark ? ' sol-contact-list--dark' : '' ) . '">';
 	if ( $email ) {
-		$html .= '<li>' . sol_icon( 'mail' ) . '<div><span>Email</span><a href="mailto:' . esc_attr( antispambot( $email ) ) . '">' . esc_html( antispambot( $email ) ) . '</a></div></li>';
+		$html .= '<li>' . sol_icon( 'mail' ) . '<div><span>Email</span><a href="mailto:' . esc_attr( antispambot( $email ) ) . '">' . sol_soft_email( $email ) . '</a></div></li>';
 	}
 	if ( $phone ) {
 		$html .= '<li>' . sol_icon( 'phone' ) . '<div><span>Phone</span><a href="tel:' . esc_attr( $tel ) . '">' . esc_html( $phone ) . '</a></div></li>';
