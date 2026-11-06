@@ -65,7 +65,11 @@ add_filter( 'body_class', function ( $classes ) {
 	if ( null === $c ) {
 		return $classes;
 	}
-	$classes   = array_diff( $classes, array( 'error404' ) );
+	// Drawn fully by the theme: use the SOL base styles, without Elementor's global kit styles.
+	$classes   = array_values( array_filter( array_diff( $classes, array( 'error404' ) ), function ( $c ) {
+		return 0 !== strpos( $c, 'elementor-kit-' );
+	} ) );
+	$classes[] = 'sol-site';
 	$classes[] = 'sol-ho';
 	$classes[] = 'sol-ho--' . ( '' === $c ? 'index' : $c );
 	return $classes;
