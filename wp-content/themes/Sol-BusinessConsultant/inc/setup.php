@@ -143,15 +143,19 @@ add_action( 'wp_enqueue_scripts', function () {
 
 add_action( 'wp_enqueue_scripts', function () {
 	$ver = SOL_THEME_VERSION;
-	wp_enqueue_style( 'sol-fonts', 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap', array(), null );
+	$preview = sol_is_design_preview();
+	$serif   = $preview ? 'family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&' : '';
+	wp_enqueue_style( 'sol-fonts', 'https://fonts.googleapis.com/css2?' . $serif . 'family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap', array(), null );
 	wp_enqueue_style( 'sol', SOL_URI . 'assets/css/sol.css', array(), $ver );
 	wp_enqueue_style( 'sol-hero', SOL_URI . 'assets/css/sol-hero.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-nav', SOL_URI . 'assets/css/sol-nav.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-sections', SOL_URI . 'assets/css/sol-sections.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-sticky', SOL_URI . 'assets/css/sol-sticky.css', array( 'sol' ), $ver ); // Sticky Buttons plugin side rail.
 	wp_enqueue_style( 'sol-footer', SOL_URI . 'assets/css/sol-footer.css', array( 'sol' ), $ver );
-	// v2.18 design system: calmer palette, serif headings, editorial sections. Loads after the files above.
-	wp_enqueue_style( 'sol-design', SOL_URI . 'assets/css/sol-design.css', array( 'sol', 'sol-hero', 'sol-nav', 'sol-sections', 'sol-footer' ), $ver );
+	// New design (v2.18): only on the preview page until it is approved. Loads after the files above.
+	if ( $preview ) {
+		wp_enqueue_style( 'sol-design', SOL_URI . 'assets/css/sol-design.css', array( 'sol', 'sol-hero', 'sol-nav', 'sol-sections', 'sol-footer' ), $ver );
+	}
 	if ( is_404() ) {
 		wp_enqueue_style( 'sol-404', SOL_URI . 'assets/css/sol-404.css', array( 'sol' ), $ver );
 	}
@@ -230,4 +234,37 @@ if ( ! isset( $content_width ) ) {
 // Elementor: let pages that haven't been rebuilt yet keep working without Hello Elementor.
 add_action( 'elementor/theme/register_locations', function ( $manager ) {
 	$manager->register_all_core_location();
+} );
+
+/**
+ * New design preview (v2.18.1). The redesigned home page lives at /home-new/ and is the only page
+ * that loads the new styles (assets/css/sol-design.css) until the design is approved.
+ */
+function sol_is_design_preview() {
+	return is_page( apply_filters( 'sol_design_preview_slug', 'home-new' ) );
+}
+
+// Keep the preview page out of search results and the sitemap while it is a draft design.
+add_filter( 'wp_robots', function ( $robots ) {
+	if ( sol_is_design_preview() ) {
+		$robots['noindex'] = true;
+		$robots['follow']  = true;
+	}
+	return $robots;
+}, 20 );
+add_filter( 'wp_sitemaps_posts_query_args', function ( $args, $post_type ) {
+	if ( 'page' === $post_type ) {
+		$p = get_page_by_path( 'home-new' );
+		if ( $p ) {
+			$args['post__not_in'] = array_merge( isset( $args['post__not_in'] ) ? (array) $args['post__not_in'] : array(), array( $p->ID ) );
+		}
+	}
+	return $args;
+}, 10, 2 );
+add_filter( 'wpseo_robots', function ( $robots ) {
+	return sol_is_design_preview() ? 'noindex, follow' : $robots;
+} );
+add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', function ( $ids ) {
+	$p = get_page_by_path( 'home-new' );
+	return $p ? array_merge( (array) $ids, array( $p->ID ) ) : $ids;
 } );

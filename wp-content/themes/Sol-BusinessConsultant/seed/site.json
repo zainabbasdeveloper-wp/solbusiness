@@ -127,7 +127,7 @@
    },
    {
     "label": "Compliance",
-    "url": "/about/#compliance",
+    "url": "/#compliance",
     "type": "link"
    },
    {
@@ -368,48 +368,129 @@
   "newsletter_note": "By subscribing, you agree to receive marketing updates. You can unsubscribe at any time.",
   "footer_columns": [
    {
-    "title": "Services",
+    "title": "Sol Services",
     "links": [
      {
-      "label": "Business Consulting & Support",
-      "url": "/services/#business"
-     },
-     {
-      "label": "NDIS Registration & Compliance",
+      "label": "NDIS Registration",
       "url": "/services/ndis-registration/"
-     },
-     {
-      "label": "Digital Solutions & Growth",
-      "url": "/services/#digital"
      },
      {
       "label": "Support Coordination Training",
       "url": "/services/ndis-support-coordination-training/"
      },
      {
-      "label": "All services",
-      "url": "/services/"
+      "label": "Company Registration",
+      "url": "/services/company-business-registration/"
+     },
+     {
+      "label": "Bookkeeping & BAS Lodgement",
+      "url": "/services/bookkeeping-bas-lodgement/"
+     },
+     {
+      "label": "Payroll Services",
+      "url": "/services/payroll-services/"
+     },
+     {
+      "label": "Website Development",
+      "url": "/services/website-development/"
+     },
+     {
+      "label": "Business & Personal Loan Support",
+      "url": "/services/business-personal-loan-support/"
+     },
+     {
+      "label": "Accountancy Partnerships",
+      "url": "/services/accountancy-partnerships/"
+     },
+     {
+      "label": "SEO",
+      "url": "/services/search-engine-optimization/"
+     },
+     {
+      "label": "Google Ads",
+      "url": "/services/google-adwords/"
+     },
+     {
+      "label": "Digital Marketing",
+      "url": "/services/social-media-marketing/"
+     },
+     {
+      "label": "Software & Automation",
+      "url": "/services/software-automation/"
+     },
+     {
+      "label": "Admin & Back-Office Support",
+      "url": "/services/admin-back-office-support/"
+     },
+     {
+      "label": "Offshore Outsourcing & Staff",
+      "url": "/services/offshore-outsourcing-staff-solutions/"
+     },
+     {
+      "label": "AI & Machine Learning",
+      "url": "/ai-machine-learning/"
      }
     ]
    },
    {
-    "title": "NDIS Providers",
+    "title": "Easy Compliance",
     "links": [
      {
-      "label": "NDIS Packages & Pricing",
-      "url": "/ndis-packages/"
-     },
-     {
-      "label": "Readiness Quiz",
-      "url": "/readiness-quiz/"
-     },
-     {
       "label": "Easy Compliance Platform",
-      "url": "/about/#compliance"
+      "url": "/#compliance"
      },
      {
-      "label": "Find My Package",
+      "label": "HR Compliance",
+      "url": "/#compliance-onboarding-training"
+     },
+     {
+      "label": "Participant Management",
+      "url": "/#compliance-setup-configuration"
+     },
+     {
+      "label": "Compliance Registers",
+      "url": "/#compliance-ongoing-compliance"
+     },
+     {
+      "label": "AI Document Validation",
+      "url": "/#compliance-ai-document-validation"
+     },
+     {
+      "label": "Internal Audits",
+      "url": "/#compliance-internal-audits"
+     }
+    ]
+   },
+   {
+    "title": "NDIS Registration",
+    "links": [
+     {
+      "label": "NDIS Registration",
+      "url": "/#ndis"
+     },
+     {
+      "label": "SOL START",
       "url": "/get-started/"
+     },
+     {
+      "label": "SOL CERTIFIED",
+      "url": "/get-started/"
+     },
+     {
+      "label": "SOL COMPLETE",
+      "url": "/get-started/"
+     },
+     {
+      "label": "Support Coordinator Training",
+      "url": "/services/ndis-support-coordination-training/"
+     },
+     {
+      "label": "Mock Audit Preparation",
+      "url": "/#ndis-mock-audit"
+     },
+     {
+      "label": "Policy & Procedure Packs",
+      "url": "/#ndis-documentation"
      }
     ]
    },
@@ -421,33 +502,65 @@
       "url": "/about/"
      },
      {
-      "label": "Pricing",
-      "url": "/pricing/"
+      "label": "Services",
+      "url": "/#services"
      },
      {
-      "label": "Engagement Examples",
+      "label": "Use Cases",
+      "url": "/use-cases/"
+     },
+     {
+      "label": "Case Studies",
       "url": "/case-studies/"
      },
      {
-      "label": "Blog",
-      "url": "/blog/"
+      "label": "Readiness Quiz",
+      "url": "/readiness-quiz/"
      },
      {
       "label": "FAQ",
       "url": "/faq/"
      },
      {
-      "label": "Contact",
-      "url": "/contact/"
+      "label": "Verify Certificate",
+      "url": "https://training.solbusinessconsultant.com.au/verify-certificate"
      },
      {
       "label": "Complaints & Feedback",
       "url": "/complaints-feedback/"
+     },
+     {
+      "label": "Accessibility",
+      "url": "/accessibility/"
+     },
+     {
+      "label": "Privacy Policy",
+      "url": "/privacy-policy/"
+     },
+     {
+      "label": "Refund Policy",
+      "url": "/refunds-cancellation-policy/"
+     },
+     {
+      "label": "Terms & Conditions",
+      "url": "/terms-conditions/"
+     },
+     {
+      "label": "Trust & Security",
+      "url": "/data-privacy-and-security/"
+     },
+     {
+      "label": "Service Inclusions",
+      "url": "/service-inclusions/"
+     },
+     {
+      "label": "Support & Availability",
+      "url": "/support-and-availability/"
      }
     ]
    },
    {
-    "title": "Clients & Students",
+    "title": "Portals",
     "links": [
      {
       "label": "Client Portal",
@@ -456,6 +569,10 @@
      {
       "label": "Student Dashboard",
       "url": "https://training.solbusinessconsultant.com.au/student-dashboard"
+     },
+     {
+      "label": "Choose Portal",
+      "url": "https://training.solbusinessconsultant.com.au/portal"
      },
      {
       "label": "Make Service Payment",
@@ -470,8 +587,8 @@
       "url": "/training-2/"
      },
      {
-      "label": "Verify Certificate",
-      "url": "https://training.solbusinessconsultant.com.au/verify-certificate"
+      "label": "Payment History",
+      "url": "https://training.solbusinessconsultant.com.au/payment-history"
      }
     ]
    }
@@ -1818,7 +1935,7 @@
        {
         "link": {
          "title": "Get Audit-Ready Now",
-         "url": "/contact/",
+         "url": "/#contact",
          "target": ""
         },
         "style": "primary"
@@ -2674,6 +2791,790 @@
     "page_sections": [
      {
       "acf_fc_layout": "hero",
+      "style": "showcase",
+      "eyebrow": "Australian NDIS & business consultants",
+      "heading": "STRUCTURE.\nCOMPLIANCE.\n[SCALE.]",
+      "text": "Australian NDIS and business consultants who give you the systems, documents and hands-on support to go from setup to audit-ready operations.",
+      "buttons": [
+       {
+        "link": {
+         "title": "Book Free Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Explore Services",
+         "url": "/#services",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "badges": [
+       {
+        "icon": "map-pin",
+        "label": "Australian-owned"
+       },
+       {
+        "icon": "file-check",
+        "label": "NDIS-aligned processes"
+       },
+       {
+        "icon": "award",
+        "label": "Easy Compliance support"
+       }
+      ],
+      "stats": [
+       {
+        "value": "12+",
+        "label": "Business services"
+       },
+       {
+        "value": "2",
+        "label": "Dedicated portals"
+       },
+       {
+        "value": "24h",
+        "label": "Response target"
+       }
+      ],
+      "image": "img:photos/home-consultants-team.webp",
+      "image_alt": "SOL consultants working through a plan with a client team around a laptop",
+      "card_title": "Audit Ready",
+      "card_text": "Your compliance system is set up and checked against how your business really works.",
+      "disclaimer": ""
+     },
+     {
+      "acf_fc_layout": "logo_strip",
+      "section_id": "",
+      "eyebrow": "Built for the Australian Market",
+      "background": "white",
+      "align": "center",
+      "heading": "We Work With the Platforms Australian Providers Rely On",
+      "intro": "We help clients navigate the government, accounting, compliance and business platforms they use every day. Platform names are shown for context only and do not imply endorsement or partnership.",
+      "logos": [
+       {
+        "name": "NDIS|Commission",
+        "image": ""
+       },
+       {
+        "name": "PRODA",
+        "image": ""
+       },
+       {
+        "name": "Services|Australia",
+        "image": ""
+       },
+       {
+        "name": "Xero",
+        "image": ""
+       },
+       {
+        "name": "MYOB",
+        "image": ""
+       },
+       {
+        "name": "Easy|Compliance",
+        "image": ""
+       },
+       {
+        "name": "Fair Work",
+        "image": ""
+       },
+       {
+        "name": "ASIC",
+        "image": ""
+       },
+       {
+        "name": "ATO",
+        "image": ""
+       },
+       {
+        "name": "AHPRA",
+        "image": ""
+       },
+       {
+        "name": "Safe Work|Australia",
+        "image": ""
+       }
+      ],
+      "animate": true,
+      "pills": [
+       {
+        "item": "ABN-registered Australian business"
+       },
+       {
+        "item": "Specialist NDIS guidance"
+       },
+       {
+        "item": "Transparent pricing before any paid work"
+       },
+       {
+        "item": "Your enquiry details kept private"
+       }
+      ]
+     },
+     {
+      "acf_fc_layout": "card_grid",
+      "section_id": "services",
+      "eyebrow": "Our Services",
+      "background": "chalk",
+      "align": "left",
+      "heading": "Business, NDIS and Digital Services for Every Stage of Growth",
+      "intro": "NDIS registration, compliance, bookkeeping, marketing and remote teams, all delivered by one Australian team and tracked in your own client portal.",
+      "source": "services",
+      "columns": "3",
+      "card_style": "numbered",
+      "cards": [],
+      "buttons": [
+       {
+        "link": {
+         "title": "View All Services",
+         "url": "/services/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Browse Training Courses",
+         "url": "/training-2/",
+         "target": ""
+        },
+        "style": "outline"
+       },
+       {
+        "link": {
+         "title": "Book Free Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-comparison"
+     },
+     {
+      "acf_fc_layout": "cta_banner",
+      "section_id": "",
+      "style": "image",
+      "eyebrow": "",
+      "heading": "Your One-Stop Business Partner",
+      "text": "From first registration to scaling up, every service you need under one roof",
+      "buttons": [],
+      "list": [],
+      "image": "img:photos/home-one-stop-partner.webp",
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "steps",
+      "section_id": "",
+      "eyebrow": "A Clear Path from Payment to Delivery",
+      "background": "white",
+      "align": "center",
+      "heading": "Business services and training, organised from payment to completion",
+      "intro": "SOL keeps business service delivery and student training separate, so clients and learners each get the right portal, documents, updates and support.",
+      "style": "numbered",
+      "columns": "2",
+      "groups": [
+       {
+        "title": "For Business Services",
+        "icon": "briefcase-business",
+        "steps": [
+         {
+          "title": "Choose a service",
+          "text": "Start with NDIS registration, a new website, marketing, payroll, bookkeeping, automation or business setup."
+         },
+         {
+          "title": "Pay securely",
+          "text": "Pay for agreed services, quotes, packages or custom plans through secure Stripe Checkout."
+         },
+         {
+          "title": "Track in client portal",
+          "text": "See your services, invoices, document requests, tickets, deliverables and updates in one place."
+         },
+         {
+          "title": "Receive final work",
+          "text": "Download handover files, reports, receipts and next-step guidance from your client portal."
+         }
+        ],
+        "buttons": [
+         {
+          "link": {
+           "title": "Explore Business Services",
+           "url": "/services/",
+           "target": ""
+          },
+          "style": "primary"
+         },
+         {
+          "link": {
+           "title": "Make a Service Payment",
+           "url": "/sol-service-payment-form/",
+           "target": ""
+          },
+          "style": "outline"
+         }
+        ]
+       },
+       {
+        "title": "For Training",
+        "icon": "graduation-cap",
+        "steps": [
+         {
+          "title": "Select training",
+          "text": "Browse NDIS support coordination and compliance training courses."
+         },
+         {
+          "title": "Enrol online",
+          "text": "Enrol online and get instant access through your student training dashboard."
+         },
+         {
+          "title": "Learn and complete",
+          "text": "Work through modules, quizzes, certificates, calendar items and learning resources at your own pace."
+         },
+         {
+          "title": "Keep records",
+          "text": "Keep your certificates, progress, quiz history and training documents in your student area."
+         }
+        ],
+        "buttons": [
+         {
+          "link": {
+           "title": "Browse Training Courses",
+           "url": "/training-2/",
+           "target": ""
+          },
+          "style": "primary"
+         },
+         {
+          "link": {
+           "title": "Compare Training Packages",
+           "url": "/services/ndis-support-coordination-training/#training-pricing",
+           "target": ""
+          },
+          "style": "outline"
+         }
+        ]
+       }
+      ],
+      "image": "",
+      "buttons": [
+       {
+        "link": {
+         "title": "Book Free Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "View All Pricing",
+         "url": "/pricing/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "card_grid",
+      "section_id": "",
+      "eyebrow": "",
+      "background": "chalk",
+      "align": "left",
+      "heading": "A client portal comes with every service",
+      "intro": "Once you have paid for a service, manage project communication and files from one secure place.",
+      "source": "manual",
+      "columns": "4",
+      "card_style": "feature",
+      "cards": [
+       {
+        "icon": "monitor-check",
+        "title": "Live service status",
+        "text": "See what SOL is working on and exactly what stage your project has reached."
+       },
+       {
+        "icon": "upload-cloud",
+        "title": "Document requests",
+        "text": "Upload requested files and track their review and verification status."
+       },
+       {
+        "icon": "life-buoy",
+        "title": "Support tickets",
+        "text": "Send requests, change orders or support questions straight to our team."
+       },
+       {
+        "icon": "file-text",
+        "title": "Deliverables",
+        "text": "Download completed work, handover files, reports and receipts."
+       }
+      ],
+      "buttons": [],
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "cta_banner",
+      "section_id": "",
+      "style": "dark",
+      "eyebrow": "",
+      "heading": "Already have a quote?",
+      "text": "Pay securely for agreed service work. Training enrolments are handled separately in the student training system.",
+      "buttons": [
+       {
+        "link": {
+         "title": "Make Service Payment",
+         "url": "/sol-service-payment-form/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Explore Training",
+         "url": "/training-2/",
+         "target": ""
+        },
+        "style": "light"
+       }
+      ],
+      "list": [
+       {
+        "item": "Client portal for service work"
+       },
+       {
+        "item": "Student dashboard for training"
+       },
+       {
+        "item": "Secure Stripe payments"
+       },
+       {
+        "item": "Support Australia-wide"
+       }
+      ],
+      "image": "",
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:pricing-tabs"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:ndis-roadmap"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:compliance"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
+      "acf_fc_layout": "card_grid",
+      "section_id": "",
+      "eyebrow": "How We Work",
+      "background": "chalk",
+      "align": "left",
+      "heading": "How SOL supports clients and learners",
+      "intro": "Real-world examples of how our services, training, documents and client portal come together.",
+      "source": "manual",
+      "columns": "3",
+      "card_style": "tagged",
+      "cards": [
+       {
+        "icon": "file-text",
+        "tag": "NDIS Registration",
+        "title": "Registration preparation pathway",
+        "text": "Service scope review, document readiness, registration group planning and audit preparation."
+       },
+       {
+        "icon": "graduation-cap",
+        "tag": "Training",
+        "title": "Support coordination training pathway",
+        "text": "Structured modules, quizzes, learning resources and completion records for individuals or teams."
+       },
+       {
+        "icon": "calculator",
+        "tag": "Finance & Compliance",
+        "title": "Operational clean-up pathway",
+        "text": "Bookkeeping, BAS readiness, payroll processes and reporting structure for growing providers."
+       }
+      ],
+      "buttons": [
+       {
+        "link": {
+         "title": "View Examples",
+         "url": "/case-studies/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "card_grid",
+      "section_id": "",
+      "eyebrow": "Featured Offers",
+      "background": "white",
+      "align": "left",
+      "heading": "Current packages, plans and special offers",
+      "intro": "Explore current offers and choose the best starting point for your business.",
+      "source": "manual",
+      "columns": "3",
+      "card_style": "bordered",
+      "cards": [
+       {
+        "icon": "sparkles",
+        "tag": "Start here",
+        "title": "NDIS Registration Support",
+        "text": "NDIS registration preparation, policies and procedures, and audit readiness guidance.",
+        "link": {
+         "title": "Open",
+         "url": "/get-started/",
+         "target": ""
+        }
+       },
+       {
+        "icon": "sparkles",
+        "tag": "Start here",
+        "title": "Website Development",
+        "text": "Mobile-friendly websites, service pages, forms, SEO basics and launch support.",
+        "link": {
+         "title": "Open",
+         "url": "/services/website-development/",
+         "target": ""
+        }
+       },
+       {
+        "icon": "sparkles",
+        "tag": "Start here",
+        "title": "Training Courses",
+        "text": "Support coordination training with quizzes, resources and completion records.",
+        "link": {
+         "title": "Open",
+         "url": "/training-2/",
+         "target": ""
+        }
+       }
+      ],
+      "buttons": [
+       {
+        "link": {
+         "title": "View All Plans",
+         "url": "https://training.solbusinessconsultant.com.au/plans",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "resource_download",
+      "section_id": "",
+      "eyebrow": "Free Tools",
+      "background": "white",
+      "align": "left",
+      "heading": "Start with a free checklist or find the right SOL service",
+      "intro": "Get your next step in writing. We keep service enquiries separate from training enrolments and send the right pathway straight to your inbox.",
+      "resources": [
+       {
+        "key": "ndis_checklist",
+        "title": "NDIS Registration Checklist",
+        "text": "Prepare your registration groups, evidence, policies, audit readiness and provider setup details.",
+        "file": ""
+       },
+       {
+        "key": "website_launch",
+        "title": "Website Launch Checklist",
+        "text": "Gather your content, logo, pages, domain access, SEO basics, forms and launch approvals.",
+        "file": ""
+       },
+       {
+        "key": "seo_audit",
+        "title": "SEO Readiness Checklist",
+        "text": "Map your keywords, locations, website access, competitors, Google tools and reporting goals.",
+        "file": ""
+       },
+       {
+        "key": "payroll_bas",
+        "title": "Payroll & BAS Prep Checklist",
+        "text": "Organise employee records, pay cycles, STP, super, software access and BAS documents.",
+        "file": ""
+       }
+      ],
+      "consent_text": "Send me this resource and relevant SOL updates. I can unsubscribe at any time.",
+      "button_label": "Request Checklist"
+     },
+     {
+      "acf_fc_layout": "quiz",
+      "section_id": "",
+      "eyebrow": "",
+      "background": "chalk",
+      "align": "left",
+      "heading": "Service selector quiz",
+      "intro": "Answer three quick questions and get a recommended SOL pathway.",
+      "mode": "recommend",
+      "bullets": [],
+      "start_label": "Find My Service",
+      "lead_capture": false,
+      "consent_text": "Send me this recommendation and relevant SOL follow-up.",
+      "questions": [
+       {
+        "group": "",
+        "question": "What do you need most right now?",
+        "options": [
+         {
+          "label": "NDIS registration or audit readiness",
+          "score": 0,
+          "value": "ndis_registration"
+         },
+         {
+          "label": "A website, landing page, or client intake system",
+          "score": 0,
+          "value": "website_development"
+         },
+         {
+          "label": "More leads through SEO, Google Ads, or social media",
+          "score": 0,
+          "value": "digital_marketing"
+         },
+         {
+          "label": "Bookkeeping, BAS, payroll, or reporting support",
+          "score": 0,
+          "value": "bookkeeping_bas"
+         },
+         {
+          "label": "Training for myself or my team",
+          "score": 0,
+          "value": "support_coordination_training"
+         }
+        ]
+       },
+       {
+        "group": "",
+        "question": "Which stage best matches you?",
+        "options": [
+         {
+          "label": "Starting from scratch",
+          "score": 0,
+          "value": "starter"
+         },
+         {
+          "label": "Already operating and need structure",
+          "score": 0,
+          "value": "active"
+         },
+         {
+          "label": "Growing and need systems/support",
+          "score": 0,
+          "value": "growth"
+         }
+        ]
+       },
+       {
+        "group": "",
+        "question": "How urgent is this?",
+        "options": [
+         {
+          "label": "This week",
+          "score": 0,
+          "value": "urgent"
+         },
+         {
+          "label": "Next 2-4 weeks",
+          "score": 0,
+          "value": "soon"
+         },
+         {
+          "label": "Planning ahead",
+          "score": 0,
+          "value": "planning"
+         }
+        ]
+       }
+      ],
+      "results": [
+       {
+        "key": "ndis_registration",
+        "min_percent": 0,
+        "title": "NDIS Registration Support",
+        "subtitle": "Recommended Pathway",
+        "description": "Ideal if you need registration pathway advice, policies and procedures, audit preparation or provider setup.",
+        "link": {
+         "title": "View NDIS Support",
+         "url": "/services/ndis-registration/",
+         "target": ""
+        }
+       },
+       {
+        "key": "website_development",
+        "min_percent": 0,
+        "title": "Website Development",
+        "subtitle": "Recommended Pathway",
+        "description": "Ideal if you need a professional website, high-converting pages, forms, SEO basics and launch support.",
+        "link": {
+         "title": "View Website Service",
+         "url": "/services/website-development/",
+         "target": ""
+        }
+       },
+       {
+        "key": "digital_marketing",
+        "min_percent": 0,
+        "title": "Marketing & SEO Support",
+        "subtitle": "Recommended Pathway",
+        "description": "Ideal if you need SEO, Google Ads, social media, local visibility, reporting and campaign support.",
+        "link": {
+         "title": "View Marketing Services",
+         "url": "/services/social-media-marketing/",
+         "target": ""
+        }
+       },
+       {
+        "key": "bookkeeping_bas",
+        "min_percent": 0,
+        "title": "Bookkeeping, BAS & Payroll",
+        "subtitle": "Recommended Pathway",
+        "description": "Ideal if you need cleaner books, payroll processing, BAS preparation, reconciliations and reporting.",
+        "link": {
+         "title": "View Finance Support",
+         "url": "/services/bookkeeping-bas-lodgement/",
+         "target": ""
+        }
+       },
+       {
+        "key": "support_coordination_training",
+        "min_percent": 0,
+        "title": "Support Coordination Training",
+        "subtitle": "Recommended Pathway",
+        "description": "Ideal if you or your team need structured training, learning resources, quizzes and completion records.",
+        "link": {
+         "title": "Explore Training",
+         "url": "/training-2/",
+         "target": ""
+        }
+       }
+      ],
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:about-sol"
+     },
+     {
+      "acf_fc_layout": "card_grid",
+      "section_id": "",
+      "eyebrow": "Service Standards",
+      "background": "white",
+      "align": "center",
+      "heading": "Built for Australian NDIS Providers and Growing Businesses",
+      "intro": "Explore the practical service standards that guide how we work with Australian providers and businesses.",
+      "source": "manual",
+      "columns": "4",
+      "card_style": "bordered",
+      "cards": [
+       {
+        "icon": "shield-check",
+        "title": "Specialist NDIS guidance",
+        "text": "Our support follows published NDIS Commission requirements, audit pathways and provider obligations."
+       },
+       {
+        "icon": "file-check",
+        "title": "Documented, traceable process",
+        "text": "We focus on clear records, version control, practical policies and evidence your team can genuinely maintain."
+       },
+       {
+        "icon": "users",
+        "title": "Human support",
+        "text": "You work with a real consultant who explains next steps in plain English and understands your business."
+       },
+       {
+        "icon": "clock",
+        "title": "Responsive follow-up",
+        "text": "New enquiries are reviewed promptly, and realistic timeframes are confirmed once we understand your situation."
+       }
+      ],
+      "buttons": [],
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:general-faq"
+     },
+     {
+      "acf_fc_layout": "cta_banner",
+      "section_id": "",
+      "style": "soft",
+      "eyebrow": "Free consultation",
+      "heading": "Ready to Build\nYour Foundation?",
+      "text": "Tell us where you are today and we'll map a clear, practical next step. No pressure, no jargon.",
+      "buttons": [
+       {
+        "link": {
+         "title": "Book a Free Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "WhatsApp Us",
+         "url": "https://wa.me/61460003494?text=Hi%20SOL%20Business%20Consultant%2C%20I%27d%20like%20to%20book%20a%20consultation.",
+         "target": "_blank"
+        },
+        "style": "light"
+       }
+      ],
+      "list": [
+       {
+        "item": "Free 30-minute call"
+       },
+       {
+        "item": "Reply within one business day"
+       },
+       {
+        "item": "No obligation"
+       }
+      ],
+      "image": "",
+      "note": ""
+     }
+    ]
+   }
+  },
+  {
+   "post_type": "page",
+   "path": "home-new",
+   "title": "Home (New Design)",
+   "menu_order": 1,
+   "front_page": false,
+   "template": "page-templates/sol-builder.php",
+   "yoast": {
+    "title": "Home (New Design Preview) | SOL Business Consultant",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   "fields": {
+    "page_sections": [
+     {
+      "acf_fc_layout": "hero",
       "style": "editorial",
       "eyebrow": "Australian business consultants",
       "heading": "Business Support That\nMoves You [Forward.]",
@@ -2991,7 +3892,7 @@
    "post_type": "page",
    "path": "about",
    "title": "About",
-   "menu_order": 1,
+   "menu_order": 2,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -3023,7 +3924,7 @@
    "post_type": "page",
    "path": "contact",
    "title": "Contact",
-   "menu_order": 2,
+   "menu_order": 3,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -3070,7 +3971,7 @@
    "post_type": "page",
    "path": "faq",
    "title": "FAQ",
-   "menu_order": 3,
+   "menu_order": 4,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -3102,7 +4003,7 @@
    "post_type": "page",
    "path": "pricing",
    "title": "Pricing",
-   "menu_order": 4,
+   "menu_order": 5,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -3138,7 +4039,7 @@
    "post_type": "page",
    "path": "blog",
    "title": "Blog",
-   "menu_order": 5,
+   "menu_order": 6,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -3206,7 +4107,7 @@
    "post_type": "page",
    "path": "case-studies",
    "title": "Engagement Examples",
-   "menu_order": 6,
+   "menu_order": 7,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -3360,7 +4261,7 @@
    "post_type": "page",
    "path": "use-cases",
    "title": "Use Cases",
-   "menu_order": 7,
+   "menu_order": 8,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -3612,7 +4513,7 @@
    "post_type": "page",
    "path": "marketing-packages",
    "title": "Marketing Packages",
-   "menu_order": 8,
+   "menu_order": 9,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -4150,7 +5051,7 @@
        {
         "link": {
          "title": "Send an Enquiry",
-         "url": "/contact/",
+         "url": "/#contact",
          "target": ""
         },
         "style": "light"
@@ -4167,7 +5068,7 @@
    "post_type": "page",
    "path": "training-2",
    "title": "Training",
-   "menu_order": 9,
+   "menu_order": 10,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -4194,7 +5095,7 @@
        {
         "link": {
          "title": "Ask a Question",
-         "url": "/contact/",
+         "url": "/#contact",
          "target": ""
         },
         "style": "light"
@@ -4305,7 +5206,7 @@
        {
         "link": {
          "title": "Have questions? Contact Us",
-         "url": "/contact/",
+         "url": "/#contact",
          "target": ""
         },
         "style": "light"
@@ -4329,7 +5230,7 @@
    "post_type": "page",
    "path": "ndis-packages",
    "title": "NDIS Packages",
-   "menu_order": 10,
+   "menu_order": 11,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -4787,7 +5688,7 @@
    "post_type": "page",
    "path": "get-started",
    "title": "Get Started",
-   "menu_order": 11,
+   "menu_order": 12,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -5259,7 +6160,7 @@
    "post_type": "page",
    "path": "book-consultation",
    "title": "Book a Consultation",
-   "menu_order": 12,
+   "menu_order": 13,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -5327,7 +6228,7 @@
    "post_type": "page",
    "path": "readiness-quiz",
    "title": "NDIS Readiness Quiz",
-   "menu_order": 13,
+   "menu_order": 14,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -5565,7 +6466,7 @@
         "description": "Several key requirements are not yet in place, and applying now could lead to delays or rejection. SOL specialises in getting organisations like yours fully prepared, usually within 2–3 months.",
         "link": {
          "title": "Book a Free Planning Session",
-         "url": "/contact/",
+         "url": "/#contact",
          "target": ""
         }
        },
@@ -5577,7 +6478,7 @@
         "description": "Most successful NDIS providers start right here. Registration is complex, but SOL's end-to-end support covers everything from business setup to audit. Book a free consultation to get a clear roadmap.",
         "link": {
          "title": "Book Free Consultation",
-         "url": "/contact/",
+         "url": "/#contact",
          "target": ""
         }
        }
@@ -5591,7 +6492,7 @@
    "post_type": "page",
    "path": "ndis-readiness-calculator",
    "title": "NDIS Readiness Calculator",
-   "menu_order": 14,
+   "menu_order": 15,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -5981,7 +6882,7 @@
         "description": "You are heading in the right direction, but several key requirements are not yet in place and applying now could lead to delays or rejection. SOL specialises in preparing organisations like yours, usually within 2–3 months of engagement.",
         "link": {
          "title": "Book a Free Planning Session",
-         "url": "/contact/",
+         "url": "/#contact",
          "target": ""
         }
        },
@@ -5993,7 +6894,7 @@
         "description": "Most successful NDIS providers start from exactly here. Registration is complex but completely achievable with the right guidance. SOL offers end-to-end support from business setup through to audit completion. Book a free consultation to get a clear roadmap.",
         "link": {
          "title": "Book Free Consultation",
-         "url": "/contact/",
+         "url": "/#contact",
          "target": ""
         }
        }
@@ -6007,7 +6908,7 @@
    "post_type": "page",
    "path": "data-privacy-and-security",
    "title": "Data Privacy & Security",
-   "menu_order": 15,
+   "menu_order": 16,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -6375,7 +7276,7 @@
    "post_type": "page",
    "path": "service-inclusions",
    "title": "Service Inclusions",
-   "menu_order": 16,
+   "menu_order": 17,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -7023,7 +7924,7 @@
    "post_type": "page",
    "path": "support-and-availability",
    "title": "Support & Availability",
-   "menu_order": 17,
+   "menu_order": 18,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -7354,7 +8255,7 @@
    "post_type": "page",
    "path": "after-payment",
    "title": "After Payment",
-   "menu_order": 18,
+   "menu_order": 19,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -7573,7 +8474,7 @@
    "post_type": "page",
    "path": "privacy-policy",
    "title": "Privacy Policy",
-   "menu_order": 19,
+   "menu_order": 20,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -7650,7 +8551,7 @@
    "post_type": "page",
    "path": "refunds-cancellation-policy",
    "title": "Refunds & Cancellation Policy",
-   "menu_order": 20,
+   "menu_order": 21,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -7723,7 +8624,7 @@
    "post_type": "page",
    "path": "terms-conditions",
    "title": "Terms & Conditions",
-   "menu_order": 21,
+   "menu_order": 22,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -7820,7 +8721,7 @@
    "post_type": "page",
    "path": "accessibility",
    "title": "Accessibility Statement",
-   "menu_order": 22,
+   "menu_order": 23,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -8001,7 +8902,7 @@
    "post_type": "page",
    "path": "complaints-feedback",
    "title": "Complaints & Feedback",
-   "menu_order": 23,
+   "menu_order": 24,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -8111,7 +9012,7 @@
    "post_type": "page",
    "path": "services",
    "title": "Services",
-   "menu_order": 24,
+   "menu_order": 25,
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
@@ -8123,169 +9024,54 @@
      {
       "acf_fc_layout": "page_header",
       "eyebrow": "Our Services",
-      "heading": "Support for every part of your business",
-      "text": "Three areas, one team. Choose the one closest to what you need, or talk to us and we'll point you in the right direction.",
+      "heading": "Business, NDIS and Digital Services for Every Stage of Growth",
+      "text": "Practical business, compliance and digital services, always scoped before any paid work begins.",
       "info_cards": [],
       "buttons": [
        {
         "link": {
-         "title": "Talk to Our Team",
-         "url": "/contact/",
+         "title": "Book Free Consultation",
+         "url": "/book-consultation/",
          "target": ""
         },
         "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Make a Secure Payment",
+         "url": "/sol-service-payment-form/",
+         "target": ""
+        },
+        "style": "outline"
        }
       ]
      },
      {
-      "acf_fc_layout": "service_groups",
+      "acf_fc_layout": "card_grid",
       "section_id": "",
       "eyebrow": "",
       "background": "white",
       "align": "left",
       "heading": "",
       "intro": "",
+      "source": "services",
+      "columns": "3",
+      "card_style": "numbered",
+      "cards": [],
       "buttons": [],
-      "groups": [
-       {
-        "anchor": "business",
-        "title": "Business Consulting & Support",
-        "text": "Company setup, bookkeeping and BAS, payroll, accounting and admin support, so the day-to-day runs smoothly.",
-        "image": "img:photos/about-consultant-conversation.webp",
-        "image_alt": "SOL consultant in a friendly planning conversation with a client",
-        "links": [
-         {
-          "title": "Company & Business Registration",
-          "text": "ASIC company setup, ABN, TFN and GST.",
-          "url": "/services/company-business-registration/"
-         },
-         {
-          "title": "Bookkeeping & BAS Lodgement",
-          "text": "Clean books in Xero, MYOB or QuickBooks, ready for BAS.",
-          "url": "/services/bookkeeping-bas-lodgement/"
-         },
-         {
-          "title": "Payroll Services",
-          "text": "Pay runs, super, PAYG and Single Touch Payroll.",
-          "url": "/services/payroll-services/"
-         },
-         {
-          "title": "Accounting Consultancy",
-          "text": "Practical accounting help for business owners.",
-          "url": "/services/accountancy/"
-         },
-         {
-          "title": "Accountancy Partnerships",
-          "text": "Work with our CPA partners on tax and reporting.",
-          "url": "/services/accountancy-partnerships/"
-         },
-         {
-          "title": "Business & Personal Loan Support",
-          "text": "Loan-ready documents and lender connections.",
-          "url": "/services/business-personal-loan-support/"
-         },
-         {
-          "title": "Admin & Back-Office Support",
-          "text": "Reliable help with everyday admin.",
-          "url": "/services/admin-back-office-support/"
-         },
-         {
-          "title": "Offshore Outsourcing & Staff Solutions",
-          "text": "Skilled remote team members, managed for you.",
-          "url": "/services/offshore-outsourcing-staff-solutions/"
-         }
-        ]
-       },
-       {
-        "anchor": "ndis",
-        "title": "NDIS Registration & Compliance",
-        "text": "Registration guidance, policies and audit preparation for new and growing NDIS providers, plus training for support coordinators.",
-        "image": "img:photos/ndis-registration-support-worker.webp",
-        "image_alt": "Support worker assisting an NDIS participant with an exercise session",
-        "links": [
-         {
-          "title": "NDIS Registration",
-          "text": "From first steps to audit-ready.",
-          "url": "/services/ndis-registration/"
-         },
-         {
-          "title": "NDIS Packages & Pricing",
-          "text": "Fixed-fee registration packages.",
-          "url": "/ndis-packages/"
-         },
-         {
-          "title": "NDIS Readiness Quiz",
-          "text": "Eight questions to see where you stand.",
-          "url": "/readiness-quiz/"
-         },
-         {
-          "title": "Support Coordination Training",
-          "text": "Practical online training for coordinators and teams.",
-          "url": "/services/ndis-support-coordination-training/"
-         }
-        ]
-       },
-       {
-        "anchor": "digital",
-        "title": "Digital Solutions & Growth",
-        "text": "Websites, search, ads, social media and automation that help customers find you and save your team time.",
-        "image": "img:photos/website-development-wireframes.webp",
-        "image_alt": "Designer sketching website wireframes beside a laptop",
-        "links": [
-         {
-          "title": "Website Development",
-          "text": "Fast, mobile-friendly websites that turn visitors into enquiries.",
-          "url": "/services/website-development/"
-         },
-         {
-          "title": "Search Engine Optimisation",
-          "text": "Get found on Google by the right people.",
-          "url": "/services/search-engine-optimization/"
-         },
-         {
-          "title": "Google Ads Management",
-          "text": "Paid campaigns that are measured and managed.",
-          "url": "/services/google-adwords/"
-         },
-         {
-          "title": "Social Media Marketing",
-          "text": "Consistent content and campaigns.",
-          "url": "/services/social-media-marketing/"
-         },
-         {
-          "title": "Software & NDIS Automation",
-          "text": "Workflows, dashboards and Easy Compliance setup.",
-          "url": "/services/software-automation/"
-         },
-         {
-          "title": "AI & Machine Learning",
-          "text": "Practical AI tools for everyday work.",
-          "url": "/ai-machine-learning/"
-         }
-        ]
-       }
-      ]
+      "note": ""
      },
      {
-      "acf_fc_layout": "cta_banner",
-      "section_id": "",
-      "style": "closing",
-      "eyebrow": "",
-      "heading": "Not sure which service you need?",
-      "text": "Tell us what you're working on. We'll recommend the right next step, with no obligation.",
-      "buttons": [
-       {
-        "link": {
-         "title": "Start a Conversation",
-         "url": "/contact/",
-         "target": ""
-        },
-        "style": "primary"
-       }
-      ],
-      "list": [],
-      "image": "",
-      "note": "Or call +61 460 003 494"
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-comparison"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:contact"
      }
     ]
    }
@@ -8332,6 +9118,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "hero_disclaimer": "SOL Business Consultant is an independent consultancy and is not affiliated with the NDIS Quality and Safeguards Commission. Registration and audit outcomes depend on your business, registration groups, evidence, the auditor's assessment and official decisions.",
@@ -8461,6 +9255,14 @@
       ],
       "buttons": [],
       "note": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
      },
      {
       "acf_fc_layout": "service_details",
@@ -8958,6 +9760,27 @@
       "note": ""
      },
      {
+      "acf_fc_layout": "cta_banner",
+      "section_id": "",
+      "style": "dark",
+      "eyebrow": "Also Available",
+      "heading": "NDIS Support Coordination Training",
+      "text": "Structured NDIS support coordination training for individuals, teams and organisations, with individual, team and enterprise packages.",
+      "buttons": [
+       {
+        "link": {
+         "title": "View Training Packages",
+         "url": "/services/ndis-support-coordination-training/",
+         "target": ""
+        },
+        "style": "primary"
+       }
+      ],
+      "list": [],
+      "image": "",
+      "note": ""
+     },
+     {
       "acf_fc_layout": "card_grid",
       "section_id": "registration-options",
       "eyebrow": "Choose Your Path",
@@ -9072,6 +9895,14 @@
          "target": ""
         },
         "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Open Package Finder",
+         "url": "/get-started/",
+         "target": ""
+        },
+        "style": "outline"
        }
       ],
       "list": [],
@@ -9131,11 +9962,19 @@
      },
      {
       "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
+     },
+     {
+      "link": {
        "title": "View All 12 Modules",
        "url": "#modules",
        "target": ""
       },
-      "style": "outline"
+      "style": "light"
      }
     ],
     "show_details": true,
@@ -9796,6 +10635,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "overview_heading": "Fast, Hassle-Free Company and Business Registration",
@@ -9892,8 +10739,20 @@
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
      {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
+     },
+     {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
      },
      {
       "acf_fc_layout": "service_enquiry",
@@ -9943,6 +10802,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "overview_heading": "Accurate Bookkeeping and Stress-Free BAS Lodgement",
@@ -10045,8 +10912,20 @@
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
      {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
+     },
+     {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
      },
      {
       "acf_fc_layout": "service_enquiry",
@@ -10096,6 +10975,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "overview_heading": "Reliable, Hassle-Free Payroll Services",
@@ -10198,8 +11085,20 @@
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
      {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
+     },
+     {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
      },
      {
       "acf_fc_layout": "service_enquiry",
@@ -10238,6 +11137,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "show_details": true,
@@ -10386,6 +11293,14 @@
       }
      },
      {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
      },
@@ -10437,6 +11352,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "overview_heading": "Simple, Supported Business and Personal Loan Applications",
@@ -10536,8 +11459,20 @@
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
      {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
+     },
+     {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
      },
      {
       "acf_fc_layout": "service_enquiry",
@@ -10587,6 +11522,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "overview_heading": "Accounting Partnerships That Support Profitable Growth",
@@ -10689,8 +11632,20 @@
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
      {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
+     },
+     {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
      },
      {
       "acf_fc_layout": "service_enquiry",
@@ -10740,6 +11695,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "overview_heading": "SEO Strategies That Lift Rankings and Conversions",
@@ -10845,8 +11808,20 @@
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
      {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
+     },
+     {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
      },
      {
       "acf_fc_layout": "service_enquiry",
@@ -10896,6 +11871,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "overview_heading": "Paid Advertising That Turns Clicks into Customers",
@@ -11001,8 +11984,20 @@
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
      {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
+     },
+     {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
      },
      {
       "acf_fc_layout": "service_enquiry",
@@ -11037,7 +12032,7 @@
      {
       "link": {
        "title": "Get a Free Strategy Call",
-       "url": "/contact/",
+       "url": "/#contact",
        "target": ""
       },
       "style": "primary"
@@ -11046,6 +12041,14 @@
       "link": {
        "title": "View Packages",
        "url": "#packages",
+       "target": ""
+      },
+      "style": "light"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
        "target": ""
       },
       "style": "outline"
@@ -11144,6 +12147,14 @@
       "buttons": []
      },
      {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
      },
@@ -11197,7 +12208,7 @@
           },
           "cta_2": {
            "title": "More details",
-           "url": "/contact/",
+           "url": "/#contact",
            "target": ""
           }
          },
@@ -11237,7 +12248,7 @@
           },
           "cta_2": {
            "title": "More details",
-           "url": "/contact/",
+           "url": "/#contact",
            "target": ""
           }
          },
@@ -11272,7 +12283,7 @@
           "extra_lines": [],
           "cta": {
            "title": "Get Started",
-           "url": "/contact/",
+           "url": "/#contact",
            "target": ""
           },
           "cta_2": null
@@ -11344,7 +12355,7 @@
        {
         "link": {
          "title": "Book a Free Strategy Call",
-         "url": "/contact/",
+         "url": "/#contact",
          "target": ""
         },
         "style": "primary"
@@ -11426,6 +12437,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "show_details": true,
@@ -11686,6 +12705,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "overview_heading": "Our Admin and Back-Office Services",
@@ -11816,6 +12843,18 @@
       }
      },
      {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
      },
@@ -11896,6 +12935,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "overview_heading": "What Our Offshore Staffing Service Includes",
@@ -12023,6 +13070,18 @@
       }
      },
      {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
      },
@@ -12103,6 +13162,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "overview_heading": "Our AI and Machine Learning Services",
@@ -12233,6 +13300,18 @@
       }
      },
      {
+      "acf_fc_layout": "service_overview",
+      "eyebrow": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-trust"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:service-journey"
+     },
+     {
       "acf_fc_layout": "service_details",
       "heading": ""
      },
@@ -12302,6 +13381,14 @@
        "target": ""
       },
       "style": "primary"
+     },
+     {
+      "link": {
+       "title": "Make a Service Payment",
+       "url": "/sol-service-payment-form/",
+       "target": ""
+      },
+      "style": "outline"
      }
     ],
     "show_details": true,
@@ -13355,7 +14442,7 @@
   "sol_block:consulting-packages": "fb20ff919b519ba8",
   "sol_block:marketing-packages": "1290a2446c0f4f0e",
   "sol_block:about-sol": "3947846ca776bcc2",
-  "sol_block:compliance": "5f3d1c42e9ead767",
+  "sol_block:compliance": "1dabb230f12cd0d4",
   "sol_block:ndis-roadmap": "55d2c5ce009a828a",
   "sol_block:service-trust": "42b5087ca2e8c75a",
   "sol_block:service-journey": "db42bbf2a50fe9e3",
@@ -13363,7 +14450,8 @@
   "sol_block:training-faq": "ed6ea5866639c433",
   "sol_block:contact": "3841f3f7c0d55a0b",
   "sol_block:service-comparison": "a8bc97567e04f3df",
-  "page:home": "582c982387ebbd80",
+  "page:home": "5d0b2f783a7641d6",
+  "page:home-new": "1876663c2c32a128",
   "page:about": "de892520adefe479",
   "page:contact": "f65fd873425acef2",
   "page:faq": "fdbbfdf1f8f6f0cb",
@@ -13371,13 +14459,13 @@
   "page:blog": "496b26bae9032947",
   "page:case-studies": "29715d711c49907f",
   "page:use-cases": "05964b2488471f14",
-  "page:marketing-packages": "86265f192e291fc5",
-  "page:training-2": "1fdcffa233aff1eb",
+  "page:marketing-packages": "0553a9b1e3c6e42c",
+  "page:training-2": "0bf364b916c87b1a",
   "page:ndis-packages": "faf58b21ac1e4f6a",
   "page:get-started": "983fec375a6cb221",
   "page:book-consultation": "d551cb3d24150644",
-  "page:readiness-quiz": "c6ade2ce093930c7",
-  "page:ndis-readiness-calculator": "f415f7a470e1c91d",
+  "page:readiness-quiz": "98ce4f06e06ed46e",
+  "page:ndis-readiness-calculator": "31eb1fc9f961cb3e",
   "page:data-privacy-and-security": "6811e120491f1537",
   "page:service-inclusions": "e3eae3a3e84c91a6",
   "page:support-and-availability": "5c5f5f334e7ad296",
@@ -13387,23 +14475,23 @@
   "page:terms-conditions": "7335038a79c6a56f",
   "page:accessibility": "871e09d07242ced2",
   "page:complaints-feedback": "ac70fc3da012b748",
-  "page:services": "fb2412fae390eeb0",
-  "page:services/ndis-registration": "8b064106e9d97e6b",
-  "page:services/ndis-support-coordination-training": "9728c1a707aebd06",
-  "page:services/company-business-registration": "d7f130ac56a94c90",
-  "page:services/bookkeeping-bas-lodgement": "772dd161663c207e",
-  "page:services/payroll-services": "ee899e1430ca6af3",
-  "page:services/website-development": "ca12cb2ede21a89c",
-  "page:services/business-personal-loan-support": "e3787a11265e4936",
-  "page:services/accountancy-partnerships": "533632b0e7d8e057",
-  "page:services/search-engine-optimization": "68100e08af90b9d0",
-  "page:services/google-adwords": "6a03d4b8493e7dc6",
-  "page:services/social-media-marketing": "ee175630761d9c04",
-  "page:services/software-automation": "3cb34e46ec046d2e",
-  "page:services/admin-back-office-support": "7c6c09c8ce6845dd",
-  "page:services/offshore-outsourcing-staff-solutions": "b4c8d91d99614d00",
-  "page:ai-machine-learning": "c40018bc38d7f15e",
-  "page:services/accountancy": "0aed1998719ad58e",
+  "page:services": "ca2bd81e6938bbf8",
+  "page:services/ndis-registration": "0ab867569a0605f7",
+  "page:services/ndis-support-coordination-training": "48689f3db7d4da70",
+  "page:services/company-business-registration": "8582bd7d0e135bba",
+  "page:services/bookkeeping-bas-lodgement": "73e9d3eea3ac324e",
+  "page:services/payroll-services": "2edbeaafc01539d5",
+  "page:services/website-development": "e0f1aa0caa683ace",
+  "page:services/business-personal-loan-support": "b65e22cdc61fd1e6",
+  "page:services/accountancy-partnerships": "ff83cadcff2bcd8d",
+  "page:services/search-engine-optimization": "2ce973f9646ccb15",
+  "page:services/google-adwords": "10c0868dfbe50fcc",
+  "page:services/social-media-marketing": "72cd5ea72ec57446",
+  "page:services/software-automation": "8b083ff45807685b",
+  "page:services/admin-back-office-support": "25ab7fed9833ddf9",
+  "page:services/offshore-outsourcing-staff-solutions": "97760eb09ceccd9b",
+  "page:ai-machine-learning": "1a7622bd99d30526",
+  "page:services/accountancy": "1775eea30c417b76",
   "post:ndis-provider-registration-australia": "54ff0e0be4956b6a",
   "post:bookkeeping-mistakes-small-business": "10f8fc70ee44c6b7",
   "post:what-is-support-coordination": "195b30419f433912",
@@ -13443,7 +14531,7 @@
   "option:abn": "cd06de349f2488d1",
   "option:website_label": "e5b69164fcf109f5",
   "option:business_hours": "094a2010dc561f57",
-  "option:nav_items": "80629a1d91bb9a60",
+  "option:nav_items": "884337fb7d7e99f4",
   "option:mega_menu": "e67cc0d6d327ae05",
   "option:mega_promo": "d661c647fc478723",
   "option:header_buttons": "ad19c15dd586ab4d",
@@ -13454,7 +14542,7 @@
   "option:newsletter_enabled": "5ffe533b830f08a0",
   "option:newsletter_label": "79cdd94608dbbe77",
   "option:newsletter_note": "aa377ccac640c2db",
-  "option:footer_columns": "357af69f88135647",
+  "option:footer_columns": "b559db99dd7df4f5",
   "option:footer_copyright": "6a336234d9cdb0bd",
   "option:app_url": "015218d6fc454ec4",
   "option:payment_page_url": "b3381b66f2a05d88",
@@ -13476,12 +14564,12 @@
  },
  "history": {
   "sol_block:compliance": [
-   "1dabb230f12cd0d4",
+   "5f3d1c42e9ead767",
    "df260bb9a3f79bb8",
    "5dc4454f9f8750d5"
   ],
   "page:home": [
-   "5d0b2f783a7641d6",
+   "582c982387ebbd80",
    "2238b34ac329e855",
    "a06d273feb4c546e",
    "1ca688081199e90a",
@@ -13491,120 +14579,120 @@
    "1199fbf5a0344c12"
   ],
   "page:marketing-packages": [
-   "0553a9b1e3c6e42c",
+   "86265f192e291fc5",
    "bd8c4af89e8ba89e",
    "151df300aaa2410b"
   ],
   "page:training-2": [
-   "0bf364b916c87b1a",
+   "1fdcffa233aff1eb",
    "149b510c5702322a",
    "d9b571a3be95060d"
   ],
   "page:readiness-quiz": [
-   "98ce4f06e06ed46e",
+   "c6ade2ce093930c7",
    "dbdf916f8f0c0b9b"
   ],
   "page:ndis-readiness-calculator": [
-   "31eb1fc9f961cb3e",
+   "f415f7a470e1c91d",
    "0b991750b16011c1"
   ],
   "page:services": [
-   "ca2bd81e6938bbf8",
+   "fb2412fae390eeb0",
    "e52be39fa396a44c"
   ],
   "page:services/ndis-registration": [
-   "0ab867569a0605f7",
+   "8b064106e9d97e6b",
    "346bf0262b2aa130",
    "f583c414262fdadd",
    "ec6ab13fde3d07e8"
   ],
   "page:services/ndis-support-coordination-training": [
-   "48689f3db7d4da70",
+   "9728c1a707aebd06",
    "bd632f420ec690c4",
    "4331006dd9ac0982",
    "fea3d25c24c9ec72",
    "c0701a939035f13f"
   ],
   "page:services/company-business-registration": [
-   "8582bd7d0e135bba",
+   "d7f130ac56a94c90",
    "e53b911fa40ddb22",
    "73b380054bef3553",
    "9a27c22564e357d9"
   ],
   "page:services/bookkeeping-bas-lodgement": [
-   "73e9d3eea3ac324e",
+   "772dd161663c207e",
    "2ead2c4cc3cd42a3",
    "7ee3d9b20f92534a",
    "3cb647091465e925"
   ],
   "page:services/payroll-services": [
-   "2edbeaafc01539d5",
+   "ee899e1430ca6af3",
    "3ea6d227353d278e",
    "b8399440e49c59cd"
   ],
   "page:services/website-development": [
-   "e0f1aa0caa683ace",
+   "ca12cb2ede21a89c",
    "f4a1b505e8783265",
    "77a1d3f35649ed47"
   ],
   "page:services/business-personal-loan-support": [
-   "b65e22cdc61fd1e6",
+   "e3787a11265e4936",
    "6bd15b8e8c0ee582",
    "5585d429e4a8cd7c",
    "89873b358d6e92ce"
   ],
   "page:services/accountancy-partnerships": [
-   "ff83cadcff2bcd8d",
+   "533632b0e7d8e057",
    "e455a40303005b4a",
    "defa7c91ccb6da05"
   ],
   "page:services/search-engine-optimization": [
-   "2ce973f9646ccb15",
+   "68100e08af90b9d0",
    "5436e57112417d96",
    "a7e1d549789c34a3"
   ],
   "page:services/google-adwords": [
-   "10c0868dfbe50fcc",
+   "6a03d4b8493e7dc6",
    "a4c0281838a2da01",
    "cd78cc491b684c28",
    "61f18e087557702f"
   ],
   "page:services/social-media-marketing": [
-   "72cd5ea72ec57446",
+   "ee175630761d9c04",
    "8cd9fcff2a7820ca",
    "46fea9398fe92793"
   ],
   "page:services/software-automation": [
-   "8b083ff45807685b",
+   "3cb34e46ec046d2e",
    "a0da67a4ea95196f",
    "0f7182470e6ac511",
    "1b24431ed9844130"
   ],
   "page:services/admin-back-office-support": [
-   "25ab7fed9833ddf9",
+   "7c6c09c8ce6845dd",
    "1c3b8342e4a2d795",
    "b34185024aedae44"
   ],
   "page:services/offshore-outsourcing-staff-solutions": [
-   "97760eb09ceccd9b",
+   "b4c8d91d99614d00",
    "616aee131b8a13e5",
    "c133f0cda759b4e8"
   ],
   "page:ai-machine-learning": [
-   "1a7622bd99d30526",
+   "c40018bc38d7f15e",
    "6c357e2f574e54f3",
    "2082dc041d199b85"
   ],
   "page:services/accountancy": [
-   "1775eea30c417b76",
+   "0aed1998719ad58e",
    "06c94d2d17b4aff6",
    "ce186287eaee576a"
   ],
   "option:nav_items": [
-   "884337fb7d7e99f4"
+   "80629a1d91bb9a60"
   ],
   "option:footer_columns": [
-   "b559db99dd7df4f5",
+   "357af69f88135647",
    "00786a3c1c122e79",
    "c65563ed95e44410"
   ],
@@ -14834,5 +15922,5 @@
    }
   ]
  },
- "build": "f97ba610c373fecb"
+ "build": "fd03b0bf51c6f28a"
 }

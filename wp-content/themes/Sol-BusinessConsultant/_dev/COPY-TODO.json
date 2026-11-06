@@ -1,327 +1,702 @@
 [
  {
-  "id": "dc582209",
+  "id": "e26a326e",
   "where": "page:home",
+  "text": "Australian NDIS & business consultants"
+ },
+ {
+  "id": "fbe32d1b",
+  "where": "page:home",
+  "text": "STRUCTURE.\nCOMPLIANCE.\n[SCALE.]"
+ },
+ {
+  "id": "d766e6bf",
+  "where": "page:home",
+  "text": "Book Free Consultation"
+ },
+ {
+  "id": "830d359a",
+  "where": "page:home",
+  "text": "Explore Services"
+ },
+ {
+  "id": "ea6eb605",
+  "where": "page:home",
+  "text": "SOL consultants working with a client team around a laptop"
+ },
+ {
+  "id": "1023ba98",
+  "where": "page:home",
+  "text": "Audit Ready"
+ },
+ {
+  "id": "7a772597",
+  "where": "page:home",
+  "text": "Our Services"
+ },
+ {
+  "id": "93d824ed",
+  "where": "page:home",
+  "text": "NDIS registration, compliance, bookkeeping, marketing and remote teams, all delivered by one Australian team and tracked in your own client portal."
+ },
+ {
+  "id": "33bf2fec",
+  "where": "page:home",
+  "text": "View All Services"
+ },
+ {
+  "id": "ab0e06d9",
+  "where": "page:home",
+  "text": "Browse Training Courses"
+ },
+ {
+  "id": "36ac3f83",
+  "where": "page:home",
+  "text": "Your One-Stop Business Partner"
+ },
+ {
+  "id": "0d32e39b",
+  "where": "page:home",
+  "text": "For Business Services"
+ },
+ {
+  "id": "6d433cb3",
+  "where": "page:home",
+  "text": "Choose a service"
+ },
+ {
+  "id": "403d9830",
+  "where": "page:home",
+  "text": "Pay securely"
+ },
+ {
+  "id": "f34e6796",
+  "where": "page:home",
+  "text": "Track in client portal"
+ },
+ {
+  "id": "4ff61d91",
+  "where": "page:home",
+  "text": "Receive final work"
+ },
+ {
+  "id": "4ecc2c68",
+  "where": "page:home",
+  "text": "Explore Business Services"
+ },
+ {
+  "id": "795675a6",
+  "where": "page:home",
+  "text": "Make a Service Payment"
+ },
+ {
+  "id": "64ae3621",
+  "where": "page:home",
+  "text": "For Training"
+ },
+ {
+  "id": "23ef7c9a",
+  "where": "page:home",
+  "text": "Select training"
+ },
+ {
+  "id": "43d6318e",
+  "where": "page:home",
+  "text": "Enrol online"
+ },
+ {
+  "id": "0533eb0a",
+  "where": "page:home",
+  "text": "Learn and complete"
+ },
+ {
+  "id": "88c13682",
+  "where": "page:home",
+  "text": "Keep records"
+ },
+ {
+  "id": "e0913d88",
+  "where": "page:home",
+  "text": "Compare Training Packages"
+ },
+ {
+  "id": "df99d2ee",
+  "where": "page:home",
+  "text": "View All Pricing"
+ },
+ {
+  "id": "52ef75ad",
+  "where": "page:home",
+  "text": "Live service status"
+ },
+ {
+  "id": "6fe670ec",
+  "where": "page:home",
+  "text": "Document requests"
+ },
+ {
+  "id": "46b7e6e0",
+  "where": "page:home",
+  "text": "Support tickets"
+ },
+ {
+  "id": "0f617fec",
+  "where": "page:home",
+  "text": "Already have a quote?"
+ },
+ {
+  "id": "7b1a7d19",
+  "where": "page:home",
+  "text": "Make Service Payment"
+ },
+ {
+  "id": "4f2f55c2",
+  "where": "page:home",
+  "text": "Explore Training"
+ },
+ {
+  "id": "c6314b6c",
+  "where": "page:home",
+  "text": "Client portal for service work"
+ },
+ {
+  "id": "94638ce7",
+  "where": "page:home",
+  "text": "Student dashboard for training"
+ },
+ {
+  "id": "2cc32eb6",
+  "where": "page:home",
+  "text": "Registration preparation pathway"
+ },
+ {
+  "id": "24c2be18",
+  "where": "page:home",
+  "text": "Support coordination training pathway"
+ },
+ {
+  "id": "6433023b",
+  "where": "page:home",
+  "text": "Operational clean-up pathway"
+ },
+ {
+  "id": "06dc37a7",
+  "where": "page:home",
+  "text": "View Examples"
+ },
+ {
+  "id": "6b8ba94e",
+  "where": "page:home",
+  "text": "Featured Offers"
+ },
+ {
+  "id": "d3e606d4",
+  "where": "page:home",
+  "text": "NDIS Registration Support"
+ },
+ {
+  "id": "c35e1dd9",
+  "where": "page:home",
+  "text": "Website Development"
+ },
+ {
+  "id": "6b408714",
+  "where": "page:home",
+  "text": "Training Courses"
+ },
+ {
+  "id": "ade54f01",
+  "where": "page:home",
+  "text": "View All Plans"
+ },
+ {
+  "id": "6b34648c",
+  "where": "page:home",
+  "text": "Free Tools"
+ },
+ {
+  "id": "c357de99",
+  "where": "page:home",
+  "text": "NDIS Registration Checklist"
+ },
+ {
+  "id": "400c956d",
+  "where": "page:home",
+  "text": "Website Launch Checklist"
+ },
+ {
+  "id": "9bd29b6c",
+  "where": "page:home",
+  "text": "SEO Readiness Checklist"
+ },
+ {
+  "id": "45224a3d",
+  "where": "page:home",
+  "text": "Payroll & BAS Prep Checklist"
+ },
+ {
+  "id": "563f98f6",
+  "where": "page:home",
+  "text": "Request Checklist"
+ },
+ {
+  "id": "7bd51128",
+  "where": "page:home",
+  "text": "Service selector quiz"
+ },
+ {
+  "id": "db5bb0eb",
+  "where": "page:home",
+  "text": "Find My Service"
+ },
+ {
+  "id": "a1cc63b9",
+  "where": "page:home",
+  "text": "Send me this recommendation and relevant SOL follow-up."
+ },
+ {
+  "id": "c6344f50",
+  "where": "page:home",
+  "text": "What do you need most right now?"
+ },
+ {
+  "id": "9ca66ea7",
+  "where": "page:home",
+  "text": "Which stage best matches you?"
+ },
+ {
+  "id": "e133534e",
+  "where": "page:home",
+  "text": "How urgent is this?"
+ },
+ {
+  "id": "5c4bc558",
+  "where": "page:home",
+  "text": "Recommended Pathway"
+ },
+ {
+  "id": "793b65b4",
+  "where": "page:home",
+  "text": "View NDIS Support"
+ },
+ {
+  "id": "32db90aa",
+  "where": "page:home",
+  "text": "View Website Service"
+ },
+ {
+  "id": "6ed2955a",
+  "where": "page:home",
+  "text": "Marketing & SEO Support"
+ },
+ {
+  "id": "c768d5ab",
+  "where": "page:home",
+  "text": "View Marketing Services"
+ },
+ {
+  "id": "7073e7ca",
+  "where": "page:home",
+  "text": "Bookkeeping, BAS & Payroll"
+ },
+ {
+  "id": "22fa395d",
+  "where": "page:home",
+  "text": "View Finance Support"
+ },
+ {
+  "id": "75f08ef6",
+  "where": "page:home",
+  "text": "Support Coordination Training"
+ },
+ {
+  "id": "8bc38284",
+  "where": "page:home",
+  "text": "Service Standards"
+ },
+ {
+  "id": "5aa5c8c1",
+  "where": "page:home",
+  "text": "Explore the practical service standards that guide how we work with Australian providers and businesses."
+ },
+ {
+  "id": "9d86e46b",
+  "where": "page:home",
+  "text": "Human support"
+ },
+ {
+  "id": "693dc1de",
+  "where": "page:home",
+  "text": "Responsive follow-up"
+ },
+ {
+  "id": "eef4ca43",
+  "where": "page:home",
+  "text": "Free consultation"
+ },
+ {
+  "id": "ced46a7d",
+  "where": "page:home",
+  "text": "Ready to Build\nYour Foundation?"
+ },
+ {
+  "id": "f74b9a21",
+  "where": "page:home",
+  "text": "Tell us where you are today and we'll map a clear, practical next step. No pressure, no jargon."
+ },
+ {
+  "id": "a1706049",
+  "where": "page:home",
+  "text": "Book a Free Consultation"
+ },
+ {
+  "id": "4af504af",
+  "where": "page:home",
+  "text": "WhatsApp Us"
+ },
+ {
+  "id": "c0e6c990",
+  "where": "page:home",
+  "text": "Free 30-minute call"
+ },
+ {
+  "id": "efa4f170",
+  "where": "page:home",
+  "text": "Reply within one business day"
+ },
+ {
+  "id": "18ac4821",
+  "where": "page:home",
+  "text": "No obligation"
+ },
+ {
+  "id": "53c6430a",
+  "where": "page:home-new",
+  "text": "Home (New Design Preview) | SOL Business Consultant"
+ },
+ {
+  "id": "dc582209",
+  "where": "page:home-new",
   "text": "Australian business consultants"
  },
  {
   "id": "06c4fdab",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Business Support That\nMoves You [Forward.]"
  },
  {
   "id": "c7a5ae6c",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Practical business consulting, NDIS support and digital solutions designed to help Australian businesses and providers operate, grow and succeed."
  },
  {
   "id": "01fa0051",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Explore Our Services"
  },
  {
   "id": "7e2a9a39",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Talk to Our Team"
  },
  {
   "id": "38a05800",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "SOL consultants working through a plan with a client team around a laptop"
  },
  {
   "id": "2221c4df",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Who we work with"
  },
  {
   "id": "1b9086ae",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "NDIS providers"
  },
  {
   "id": "007fb1e8",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Small businesses"
  },
  {
   "id": "9e3bf8b9",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Growing organisations"
  },
  {
   "id": "cdc8218e",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Australian service providers"
  },
  {
   "id": "a39b9d3a",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "What we do"
  },
  {
   "id": "68314363",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Three ways we can help"
  },
  {
   "id": "d3dc7387",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Choose the area closest to what you need. We'll work out the detail together."
  },
  {
   "id": "cb9ec2b9",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Business Consulting & Support"
  },
  {
   "id": "01e60727",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Company setup, bookkeeping and BAS, payroll, accounting and admin support, so the day-to-day runs smoothly."
  },
  {
   "id": "aa7c343b",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Explore service"
  },
  {
   "id": "9fbd4de6",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "NDIS Registration & Compliance"
  },
  {
   "id": "4f923b02",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Registration guidance, policies and audit preparation for new and growing NDIS providers, plus training for support coordinators."
  },
  {
   "id": "461c986f",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Digital Solutions & Growth"
  },
  {
   "id": "02a93629",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Websites, search, ads, social media and automation that help customers find you and save your team time."
  },
  {
   "id": "9c74fd37",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Why SOL"
  },
  {
   "id": "7ba1226d",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Clear advice.\nNo guesswork."
  },
  {
   "id": "9b7cb323",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "We keep things simple, so you always know what is happening, why, and what it costs."
  },
  {
   "id": "606cdd85",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Practical guidance"
  },
  {
   "id": "df06c906",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Advice you can act on straight away, explained in plain English."
  },
  {
   "id": "2d87262f",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Personalised support"
  },
  {
   "id": "1c6723b9",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "One team that learns how your business works and shapes the plan around it."
  },
  {
   "id": "a0aab8d6",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Transparent process"
  },
  {
   "id": "c6be58b5",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Scope and price are agreed in writing before any paid work begins."
  },
  {
   "id": "05cb15f3",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Ongoing assistance"
  },
  {
   "id": "ec38418a",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "We stay with you after setup, with updates and documents in your own client portal."
  },
  {
   "id": "91ca36d8",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "See how we typically support clients"
  },
  {
   "id": "1dd6a17c",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "How it works"
  },
  {
   "id": "dd19a1df",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Three simple steps"
  },
  {
   "id": "9ef53eb3",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Tell us what you need"
  },
  {
   "id": "0f587ad9",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Book a free 30-minute call or send us a message. We listen first."
  },
  {
   "id": "d7587631",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Get a clear plan"
  },
  {
   "id": "c81d57f7",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "We confirm the scope, timeline and price in writing before any work starts."
  },
  {
   "id": "135ba963",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Move forward with confidence"
  },
  {
   "id": "74015c48",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "We do the work alongside you and keep you updated until it's done."
  },
  {
   "id": "a330ef3f",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Featured service"
  },
  {
   "id": "8f1d5e25",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "NDIS registration, made manageable"
  },
  {
   "id": "a425eb18",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "<p>Registration means policies, evidence and an audit. We guide you through each step, prepare documents that fit the supports you offer, and help your team feel ready on audit day.</p>"
  },
  {
   "id": "92790d83",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Support worker helping an NDIS participant at home"
  },
  {
   "id": "25410376",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Policies matched to your registration groups"
  },
  {
   "id": "6d71684c",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Audit preparation and support"
  },
  {
   "id": "fddea3bf",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Explore NDIS Registration"
  },
  {
   "id": "ff4ce9e0",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Our commitment"
  },
  {
   "id": "e33f74aa",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "You'll always know what we're doing, why it matters, and what it costs."
  },
  {
   "id": "a56748ae",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Plain-English advice, a written scope and price before any paid work, and a reply within one business day."
  },
  {
   "id": "48208f5f",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Can I get help with just one service?"
  },
  {
   "id": "61d18761",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Yes. Our services are modular, so you choose exactly what you need, whether that is NDIS registration, bookkeeping, payroll, a website or something else."
  },
  {
   "id": "ed90bcad",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "What does it cost?"
  },
  {
   "id": "6ccf332c",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Every job is scoped first. The first consultation is free, and we confirm the price in writing before any paid work begins."
  },
  {
   "id": "b2176946",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Do you work with start-ups?"
  },
  {
   "id": "87693571",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Yes. We work with start-ups and established businesses, from first company registration through to growing a team."
  },
  {
   "id": "fc1b6ec4",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "How long does NDIS registration take?"
  },
  {
   "id": "06ca616c",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "It depends on your registration groups, audit pathway and how ready your documents are. We give you a realistic timeline once we understand your situation."
  },
  {
   "id": "155d8e76",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "How do we work together?"
  },
  {
   "id": "362f8107",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Through video calls, in person where needed, and a secure client portal where you can see documents, updates and requests in one place."
  },
  {
   "id": "4984488d",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "See all FAQs"
  },
  {
   "id": "8f9ad889",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Let's discuss your goals and find the right support for your business."
  },
  {
   "id": "89ba8c79",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Start a Conversation"
  },
  {
   "id": "dc595f4f",
-  "where": "page:home",
+  "where": "page:home-new",
   "text": "Or call +61 460 003 494"
  },
  {
@@ -370,11 +745,6 @@
   "text": "Use Cases"
  },
  {
-  "id": "795675a6",
-  "where": "page:use-cases",
-  "text": "Make a Service Payment"
- },
- {
   "id": "54241689",
   "where": "page:use-cases",
   "text": "Service payments"
@@ -390,11 +760,6 @@
   "text": "Intake forms"
  },
  {
-  "id": "6fe670ec",
-  "where": "page:use-cases",
-  "text": "Document requests"
- },
- {
   "id": "64cdf1f5",
   "where": "page:use-cases",
   "text": "Admin review"
@@ -403,11 +768,6 @@
   "id": "7a026cfc",
   "where": "page:use-cases",
   "text": "Client notifications"
- },
- {
-  "id": "46b7e6e0",
-  "where": "page:use-cases",
-  "text": "Support tickets"
  },
  {
   "id": "9e7e3aa4",
@@ -870,11 +1230,6 @@
   "text": "Call +61 460 003 494"
  },
  {
-  "id": "d3e606d4",
-  "where": "page:ndis-packages",
-  "text": "NDIS Registration Support"
- },
- {
   "id": "c9e339b1",
   "where": "page:ndis-packages",
   "text": "Take the 8-question quiz"
@@ -1128,11 +1483,6 @@
   "id": "5a1c5cef",
   "where": "page:readiness-quiz",
   "text": "Book a Free Planning Session"
- },
- {
-  "id": "d766e6bf",
-  "where": "page:readiness-quiz",
-  "text": "Book Free Consultation"
  },
  {
   "id": "7fd71953",
@@ -2705,16 +3055,6 @@
   "text": "What happens after you pay or enrol?"
  },
  {
-  "id": "7b1a7d19",
-  "where": "page:after-payment",
-  "text": "Make Service Payment"
- },
- {
-  "id": "4f2f55c2",
-  "where": "page:after-payment",
-  "text": "Explore Training"
- },
- {
   "id": "87c81862",
   "where": "page:after-payment",
   "text": "Service clients"
@@ -2738,11 +3078,6 @@
   "id": "b52f0164",
   "where": "page:after-payment",
   "text": "Deliverables and handover"
- },
- {
-  "id": "4ecc2c68",
-  "where": "page:after-payment",
-  "text": "Explore Business Services"
  },
  {
   "id": "64af56d5",
@@ -2773,16 +3108,6 @@
   "id": "bef24cfc",
   "where": "page:after-payment",
   "text": "Certificate and history"
- },
- {
-  "id": "ab0e06d9",
-  "where": "page:after-payment",
-  "text": "Browse Training Courses"
- },
- {
-  "id": "e0913d88",
-  "where": "page:after-payment",
-  "text": "Compare Training Packages"
  },
  {
   "id": "712114a9",
@@ -3050,219 +3375,14 @@
   "text": "Complaint received. Our team will respond within 2 business days. Not satisfied with our response? You may escalate to the NDIS Quality and Safeguards Commission: 1800 035 544."
  },
  {
-  "id": "7a772597",
+  "id": "66a38434",
   "where": "page:services",
-  "text": "Our Services"
- },
- {
-  "id": "fdd5b9d2",
-  "where": "page:services",
-  "text": "Support for every part of your business"
- },
- {
-  "id": "a3e28571",
-  "where": "page:services",
-  "text": "Three areas, one team. Choose the one closest to what you need, or talk to us and we'll point you in the right direction."
- },
- {
-  "id": "81f99d84",
-  "where": "page:services",
-  "text": "SOL consultant in a friendly planning conversation with a client"
- },
- {
-  "id": "92f705b6",
-  "where": "page:services",
-  "text": "Company & Business Registration"
- },
- {
-  "id": "b342ccf6",
-  "where": "page:services",
-  "text": "ASIC company setup, ABN, TFN and GST."
- },
- {
-  "id": "445eede5",
-  "where": "page:services",
-  "text": "Bookkeeping & BAS Lodgement"
- },
- {
-  "id": "9573527b",
-  "where": "page:services",
-  "text": "Clean books in Xero, MYOB or QuickBooks, ready for BAS."
- },
- {
-  "id": "dd02a3ed",
-  "where": "page:services",
-  "text": "Payroll Services"
- },
- {
-  "id": "ce84cb85",
-  "where": "page:services",
-  "text": "Pay runs, super, PAYG and Single Touch Payroll."
- },
- {
-  "id": "5b6d1986",
-  "where": "page:services",
-  "text": "Accounting Consultancy"
- },
- {
-  "id": "848a9cd8",
-  "where": "page:services",
-  "text": "Practical accounting help for business owners."
- },
- {
-  "id": "8b25402c",
-  "where": "page:services",
-  "text": "Accountancy Partnerships"
- },
- {
-  "id": "52fb2ded",
-  "where": "page:services",
-  "text": "Work with our CPA partners on tax and reporting."
- },
- {
-  "id": "01ee0417",
-  "where": "page:services",
-  "text": "Business & Personal Loan Support"
- },
- {
-  "id": "a5aa81a6",
-  "where": "page:services",
-  "text": "Loan-ready documents and lender connections."
- },
- {
-  "id": "f27bc492",
-  "where": "page:services",
-  "text": "Admin & Back-Office Support"
- },
- {
-  "id": "a8bb2882",
-  "where": "page:services",
-  "text": "Reliable help with everyday admin."
- },
- {
-  "id": "75317eb1",
-  "where": "page:services",
-  "text": "Offshore Outsourcing & Staff Solutions"
- },
- {
-  "id": "213955aa",
-  "where": "page:services",
-  "text": "Skilled remote team members, managed for you."
- },
- {
-  "id": "8616eb87",
-  "where": "page:services",
-  "text": "Support worker assisting an NDIS participant with an exercise session"
+  "text": "Make a Secure Payment"
  },
  {
   "id": "c7552e4a",
-  "where": "page:services",
+  "where": "page:services/ndis-registration",
   "text": "NDIS Registration"
- },
- {
-  "id": "5b9abf2c",
-  "where": "page:services",
-  "text": "From first steps to audit-ready."
- },
- {
-  "id": "39062098",
-  "where": "page:services",
-  "text": "NDIS Packages & Pricing"
- },
- {
-  "id": "c7bd5a84",
-  "where": "page:services",
-  "text": "Fixed-fee registration packages."
- },
- {
-  "id": "849c41d6",
-  "where": "page:services",
-  "text": "NDIS Readiness Quiz"
- },
- {
-  "id": "dbc6ed53",
-  "where": "page:services",
-  "text": "Eight questions to see where you stand."
- },
- {
-  "id": "75f08ef6",
-  "where": "page:services",
-  "text": "Support Coordination Training"
- },
- {
-  "id": "6d35b288",
-  "where": "page:services",
-  "text": "Practical online training for coordinators and teams."
- },
- {
-  "id": "5e9a9d94",
-  "where": "page:services",
-  "text": "Designer sketching website wireframes beside a laptop"
- },
- {
-  "id": "c35e1dd9",
-  "where": "page:services",
-  "text": "Website Development"
- },
- {
-  "id": "af66bf3d",
-  "where": "page:services",
-  "text": "Fast, mobile-friendly websites that turn visitors into enquiries."
- },
- {
-  "id": "484de6d5",
-  "where": "page:services",
-  "text": "Search Engine Optimisation"
- },
- {
-  "id": "3bc84cfc",
-  "where": "page:services",
-  "text": "Get found on Google by the right people."
- },
- {
-  "id": "4c15f2ab",
-  "where": "page:services",
-  "text": "Google Ads Management"
- },
- {
-  "id": "2ccd1063",
-  "where": "page:services",
-  "text": "Paid campaigns that are measured and managed."
- },
- {
-  "id": "bfa73576",
-  "where": "page:services",
-  "text": "Consistent content and campaigns."
- },
- {
-  "id": "6798f579",
-  "where": "page:services",
-  "text": "Software & NDIS Automation"
- },
- {
-  "id": "9b36f961",
-  "where": "page:services",
-  "text": "Workflows, dashboards and Easy Compliance setup."
- },
- {
-  "id": "10980a5e",
-  "where": "page:services",
-  "text": "AI & Machine Learning"
- },
- {
-  "id": "33637cf5",
-  "where": "page:services",
-  "text": "Practical AI tools for everyday work."
- },
- {
-  "id": "909885c9",
-  "where": "page:services",
-  "text": "Not sure which service you need?"
- },
- {
-  "id": "ac1db8e2",
-  "where": "page:services",
-  "text": "Tell us what you're working on. We'll recommend the right next step, with no obligation."
  },
  {
   "id": "e561ebab",
@@ -3283,6 +3403,21 @@
   "id": "73b87ece",
   "where": "page:services/ndis-registration",
   "text": "Policies, Procedures and Registers"
+ },
+ {
+  "id": "7b3651a9",
+  "where": "page:services/ndis-registration",
+  "text": "Also Available"
+ },
+ {
+  "id": "4f7b56ca",
+  "where": "page:services/ndis-registration",
+  "text": "NDIS Support Coordination Training"
+ },
+ {
+  "id": "d9988e11",
+  "where": "page:services/ndis-registration",
+  "text": "View Training Packages"
  },
  {
   "id": "51c7e3e7",
@@ -3323,6 +3458,11 @@
   "id": "d89bd178",
   "where": "page:services/ndis-registration",
   "text": "Get Started Now"
+ },
+ {
+  "id": "d46e3508",
+  "where": "page:services/ndis-registration",
+  "text": "Open Package Finder"
  },
  {
   "id": "e0e7ce12",
@@ -4140,6 +4280,11 @@
   "text": "What We Do"
  },
  {
+  "id": "484de6d5",
+  "where": "page:services/social-media-marketing",
+  "text": "Search Engine Optimisation"
+ },
+ {
   "id": "8bdbf8cc",
   "where": "page:services/social-media-marketing",
   "text": "Google and Meta Ads"
@@ -4183,6 +4328,11 @@
   "id": "f0d40ea6",
   "where": "page:services/social-media-marketing",
   "text": "Thanks. A SOL team member will contact you within one business day."
+ },
+ {
+  "id": "6798f579",
+  "where": "page:services/software-automation",
+  "text": "Software & NDIS Automation"
  },
  {
   "id": "02739abc",
@@ -4295,6 +4445,11 @@
   "text": "Data Minimisation"
  },
  {
+  "id": "f27bc492",
+  "where": "page:services/admin-back-office-support",
+  "text": "Admin & Back-Office Support"
+ },
+ {
   "id": "4b139267",
   "where": "page:services/offshore-outsourcing-staff-solutions",
   "text": "Offshore Outsourcing & Staffing"
@@ -4320,6 +4475,11 @@
   "text": "Video labelling, data annotation and quality assurance for AI and machine learning teams."
  },
  {
+  "id": "10980a5e",
+  "where": "page:ai-machine-learning",
+  "text": "AI & Machine Learning"
+ },
+ {
   "id": "76909aa6",
   "where": "page:ai-machine-learning",
   "text": "Human-in-the-loop quality control"
@@ -4328,6 +4488,11 @@
   "id": "f9189f72",
   "where": "page:ai-machine-learning",
   "text": "Data annotation specialist labelling images for a machine learning model"
+ },
+ {
+  "id": "5b6d1986",
+  "where": "page:services/accountancy",
+  "text": "Accounting Consultancy"
  },
  {
   "id": "31c052c8",
@@ -4920,11 +5085,6 @@
   "text": "NDIS Registration Service"
  },
  {
-  "id": "8bc38284",
-  "where": "sol_block:service-trust",
-  "text": "Service Standards"
- },
- {
   "id": "d9c1c7ac",
   "where": "sol_block:service-trust",
   "text": "Clear scope before work starts"
@@ -4938,11 +5098,6 @@
   "id": "7534d75d",
   "where": "sol_block:service-trust",
   "text": "Client portal visibility"
- },
- {
-  "id": "9d86e46b",
-  "where": "sol_block:service-trust",
-  "text": "Human support"
  },
  {
   "id": "0b25cf15",
@@ -5068,16 +5223,6 @@
   "id": "26e00b08",
   "where": "sol_block:contact",
   "text": "Get In Touch"
- },
- {
-  "id": "ced46a7d",
-  "where": "sol_block:contact",
-  "text": "Ready to Build\nYour Foundation?"
- },
- {
-  "id": "4af504af",
-  "where": "sol_block:contact",
-  "text": "WhatsApp Us"
  },
  {
   "id": "aaf9a507",
@@ -6050,14 +6195,14 @@
   "text": "Monthly compliance tips"
  },
  {
-  "id": "02a20468",
+  "id": "59184585",
   "where": "options",
-  "text": "NDIS Providers"
+  "text": "Sol Services"
  },
  {
-  "id": "b77ecb19",
+  "id": "5e1c5089",
   "where": "options",
-  "text": "Clients & Students"
+  "text": "Easy Compliance"
  },
  {
   "id": "7aa455f1",

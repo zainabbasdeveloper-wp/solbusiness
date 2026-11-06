@@ -349,18 +349,40 @@ function sol_home_anchor_url( $url ) {
 	return $url;
 }
 
-/** Once: point saved menu links at the pages that now hold those sections. */
+/**
+ * v2.18.1: the original home page is back, so undo the one-time menu change from v2.18.0.
+ * Each changed link gets its original "/#section" address back, matched by its label against
+ * the theme's menu settings. Runs once, and only on sites where v2.18.0 changed the menu.
+ */
 add_action( 'admin_init', function () {
-	if ( get_option( 'sol_menu_anchors_218' ) ) {
+	if ( ! get_option( 'sol_menu_anchors_218' ) || get_option( 'sol_menu_anchors_218_undone' ) ) {
 		return;
 	}
-	update_option( 'sol_menu_anchors_218', 1, false );
+	update_option( 'sol_menu_anchors_218_undone', 1, false );
+	$seed = function_exists( 'sol_seed' ) ? sol_seed() : array();
+	$orig = array(); // label => "/#section"
+	$walk = function ( $v ) use ( &$walk, &$orig ) {
+		if ( ! is_array( $v ) ) {
+			return;
+		}
+		if ( isset( $v['label'], $v['url'] ) && is_string( $v['url'] ) && preg_match( '~^/#[a-z0-9-]+$~', $v['url'] ) ) {
+			$orig[ trim( wp_strip_all_tags( $v['label'] ) ) ] = $v['url'];
+		}
+		foreach ( $v as $c ) {
+			$walk( $c );
+		}
+	};
+	$walk( isset( $seed['options'] ) ? $seed['options'] : array() );
 	$ids = get_posts( array( 'post_type' => 'nav_menu_item', 'post_status' => 'any', 'numberposts' => -1, 'fields' => 'ids', 'meta_key' => '_menu_item_type', 'meta_value' => 'custom' ) ); // phpcs:ignore WordPress.DB.SlowDBQuery
 	foreach ( $ids as $mid ) {
-		$old = (string) get_post_meta( $mid, '_menu_item_url', true );
-		$new = sol_home_anchor_url( $old );
-		if ( $new !== $old ) {
-			update_post_meta( $mid, '_menu_item_url', esc_url_raw( $new ) );
+		$label = trim( wp_strip_all_tags( get_the_title( $mid ) ) );
+		if ( ! isset( $orig[ $label ] ) ) {
+			continue;
+		}
+		$now = (string) get_post_meta( $mid, '_menu_item_url', true );
+		// Only links v2.18.0 rewrote: their old address maps to what is stored now.
+		if ( $now !== $orig[ $label ] && untrailingslashit( sol_home_anchor_url( home_url( $orig[ $label ] ) ) ) === untrailingslashit( $now ) ) {
+			update_post_meta( $mid, '_menu_item_url', $orig[ $label ] );
 		}
 	}
 } );

@@ -57,30 +57,11 @@ export const options = {
   newsletter_label: 'Monthly compliance tips',
   newsletter_note: 'By joining, you agree to receive marketing updates. You can unsubscribe at any time.',
   footer_columns: [
-    // v2.18: four short columns instead of five long ones. Every service is one click away on /services/.
-    { title: 'Services', links: [
-      { label: 'Business Consulting & Support', url: '/services/#business' },
-      { label: 'NDIS Registration & Compliance', url: '/services/ndis-registration/' },
-      { label: 'Digital Solutions & Growth', url: '/services/#digital' },
-      { label: 'Support Coordination Training', url: '/services/ndis-support-coordination-training/' },
-      { label: 'All services', url: '/services/' },
-    ] },
-    { title: 'NDIS Providers', links: [
-      { label: 'NDIS Packages & Pricing', url: '/ndis-packages/' },
-      { label: 'Readiness Quiz', url: '/readiness-quiz/' },
-      { label: 'Easy Compliance Platform', url: '/about/#compliance' },
-      { label: 'Find My Package', url: '/get-started/' },
-    ] },
-    { title: 'Company', links: [
-      { label: 'About Us', url: '/about/' },
-      { label: 'Pricing', url: '/pricing/' },
-      { label: 'Engagement Examples', url: '/case-studies/' },
-      { label: 'Blog', url: '/blog/' },
-      { label: 'FAQ', url: '/faq/' },
-      { label: 'Contact', url: '/contact/' },
-      { label: 'Complaints & Feedback', url: '/complaints-feedback/' },
-    ] },
-    { title: 'Clients & Students', links: links(F.portalLinks.filter((l) => ['/client-portal', '/student-dashboard', '/service-payment', '/after-payment', '/training-courses'].includes(l.href))).concat(links(F.companyLinks.filter((l) => l.href === '/verify-certificate'))) },
+    { title: 'Sol Services', links: [...links(F.solServices), { label: 'Admin & Back-Office Support', url: '/services/admin-back-office-support/' }, { label: 'Offshore Outsourcing & Staff', url: '/services/offshore-outsourcing-staff-solutions/' }, { label: 'AI & Machine Learning', url: '/ai-machine-learning/' }] },
+    { title: 'Easy Compliance', links: links(F.complianceLinks) },
+    { title: 'NDIS Registration', links: links(F.ndisLinks) },
+    { title: 'Company', links: links(F.companyLinks) },
+    { title: 'Portals', links: links(F.portalLinks) },
   ],
   footer_copyright: 'Copyright {year} SOL Business Consultant - NDIS registration & compliance support across Australia. Not affiliated with NDIS Commission.',
 

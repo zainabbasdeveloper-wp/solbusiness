@@ -26,7 +26,102 @@ const ul = (arr) => `<ul>${arr.map((x) => `<li>${x}</li>`).join('')}</ul>`;
 const cmpRows = (rows) => rows.map(([label, ...vals]) => ({ label, values: vals.map(yesNo).join(' | ') }));
 
 /* ---------------- Home ---------------- */
-// v2.18: nine calm sections that answer "what does SOL do, is it for me, what next?".
+const H = D.HeroSection;
+const home = {
+  slug: 'home', title: 'Home', front_page: true,
+  seo: { seo_title: LIVE_TEXT.homeSeoTitle, seo_description: LIVE_TEXT.homeSeoDescription },
+  sections: [
+    {
+      acf_fc_layout: 'hero', style: 'showcase', eyebrow: 'Australian NDIS & business consultants', heading: 'STRUCTURE.\nCOMPLIANCE.\n[SCALE.]',
+      text: 'Australian business and NDIS consulting with practical systems, documentation, and support to move from setup to audit-ready operations.',
+      buttons: [btn('Book Free Consultation', '/book-consultation'), btn('Explore Services', '/#services', 'outline')],
+      badges: H.trustBadges.map((b) => ({ icon: ic(b.icon), label: b.label })),
+      stats: H.stats.map((s) => ({ value: s.value, label: s.label })),
+      image: img('services/business-consulting-workshop.webp'), image_alt: 'SOL consultants working with a client team around a laptop',
+      card_title: 'Audit Ready', card_text: 'Your compliance system is configured and reviewed against your workflow.', disclaimer: '',
+    },
+    {
+      acf_fc_layout: 'logo_strip', ...head({ eyebrow: 'Australian Compliance Context', align: 'center', heading: 'Built Around the Systems Australian Providers Use', intro: 'We help clients navigate common government, accounting, compliance, and business platforms. Platform names are shown for context only and do not imply endorsement or partnership.' }),
+      logos: D.LogoCarousel.PLATFORMS.map((p) => ({ name: p.abbr.replace(/\n/g, '|'), image: '' })), animate: true,
+      pills: items(['ABN-backed Australian business', 'NDIS-aware service guidance', 'Clear pricing before paid work', 'Privacy-conscious enquiry handling']),
+    },
+    // 1. What SOL does
+    grid({ section_id: 'services', background: 'chalk', eyebrow: 'Our Services', heading: 'Comprehensive Solutions for Every Stage of Growth', intro: 'NDIS registration, compliance, bookkeeping, marketing and remote teams, all delivered by one Australian team and tracked in your own client portal.', source: 'services', card_style: 'numbered', buttons: [btn('View All Services', '/services/'), btn('Browse Training Courses', '/training-courses', 'outline'), btn('Book Free Consultation', '/book-consultation', 'outline')] }),
+    block('service-comparison'),
+    cta({ style: 'image', heading: 'Your One-Stop Business Partner', text: 'From startup to scale - every service connected under one roof', image: img('services/marketing-strategy-team.webp') }),
+    // 2. How delivery works
+    steps({
+      eyebrow: 'Clear Delivery Path', align: 'center', heading: 'Services and training stay organised from payment to completion',
+      intro: 'SOL separates business service delivery from student training, so clients and learners each get the right portal, documents, updates, and support.',
+      groups: [
+        { title: 'For Business Services', icon: 'briefcase-business', steps: D.ProcessPortalSection.serviceSteps.map((s) => ({ title: s.title, text: s.desc })), buttons: [btn('Explore Business Services', '/services/'), btn('Make a Service Payment', '/service-payment', 'outline')] },
+        { title: 'For Training', icon: 'graduation-cap', steps: D.ProcessPortalSection.trainingSteps.map((s) => ({ title: s.title, text: s.desc })), buttons: [btn('Browse Training Courses', '/training-courses'), btn('Compare Training Packages', '/services/support-coordination-training#training-pricing', 'outline')] },
+      ],
+      buttons: [btn('Book Free Consultation', '/book-consultation'), btn('View All Pricing', '/pricing', 'outline')],
+    }),
+    grid({
+      background: 'chalk', heading: 'Client portal included with service work', intro: 'After a service payment, clients can manage project communication and files from one secure place.',
+      columns: '4', card_style: 'feature', cards: D.ProcessPortalSection.clientBenefits.map((b) => ({ icon: ic(b.icon), title: b.title, text: b.desc })),
+    }),
+    cta({
+      heading: 'Already have a quote?', text: 'Make a secure payment for agreed service work. Training enrolments remain separate in the student training system.',
+      list: items(D.ProcessPortalSection.trustItems), buttons: [rbtn('Make Service Payment', '/service-payment'), btn('Explore Training', '/training-courses', 'light')],
+    }),
+    // 3. Pricing and the NDIS pathway
+    block('pricing-tabs'),
+    block('ndis-roadmap'),
+    block('compliance'),
+    // 4. Proof and next steps
+    block('service-journey'),
+    grid({
+      background: 'chalk', eyebrow: 'Engagement Examples', heading: 'How SOL typically supports clients and learners',
+      intro: 'Practical examples of how our services, training, documents, and portal workflows come together.', card_style: 'tagged',
+      cards: D.CaseStudiesPreviewSection.items.map((c) => ({ icon: ic(c.icon), tag: c.label, title: c.title, text: c.desc })),
+      buttons: [btn('View Examples', '/case-studies', 'outline')],
+    }),
+    grid({
+      eyebrow: 'Featured Offers', heading: 'Current packages, plans, and next-step offers',
+      intro: LIVE_TEXT.featuredOffersIntro, card_style: 'bordered',
+      cards: D.FeaturedOffersSection.fallbackOffers.map((o) => ({ icon: 'sparkles', tag: 'Start here', title: o.title, text: o.service_name, link: L('Open', o.href) })),
+      buttons: [rbtn('View All Plans', '/plans', 'outline')],
+    }),
+    block('service-trust'),
+    // 5. Free tools
+    {
+      acf_fc_layout: 'resource_download', ...head({ eyebrow: 'Free Tools', heading: 'Start with a checklist or find the right SOL service', intro: 'Capture your next step in a structured way. We keep service enquiries separate from training enrolments and send the right pathway to your inbox.' }),
+      resources: D.LeadGrowthToolsSection.RESOURCES.map((r) => ({ key: r.id, title: r.title, text: r.desc, file: '' })),
+      consent_text: 'Send me this resource and relevant SOL service updates. I can unsubscribe anytime.', button_label: 'Request Checklist',
+    },
+    {
+      acf_fc_layout: 'quiz', ...head({ background: 'chalk', heading: 'Service selector quiz', intro: 'Answer three questions and get a recommended SOL pathway.' }),
+      mode: 'recommend', bullets: [], start_label: 'Find My Service', lead_capture: false,
+      consent_text: 'Send me this recommendation and relevant SOL follow-up.',
+      questions: D.LeadGrowthToolsSection.QUESTIONS.map((q) => ({ group: '', question: q.label, options: q.options.map((o) => ({ label: o.label, score: 0, value: o.value })) })),
+      results: Object.entries(D.LeadGrowthToolsSection.RECOMMENDATIONS).map(([key, r]) => ({ key, min_percent: 0, title: r.title, subtitle: 'Recommended Pathway', description: r.desc, link: L(r.cta, r.href) })),
+      note: '',
+    },
+    // 6. About, standards, questions, contact
+    block('about-sol'),
+    // One light section instead of three dark ones (intro, cards and checklist).
+    grid({
+      background: 'white', align: 'center', eyebrow: 'Service Standards', heading: 'Built for Australian Providers and Growing Businesses',
+      intro: LIVE_TEXT.serviceStandardsIntro, columns: '4', card_style: 'bordered',
+      cards: D.TestimonialSection.STANDARDS.map((s) => ({ icon: ic(s.icon), title: s.title, text: s.desc })),
+    }),
+    block('general-faq'),
+    // A friendly closing invitation; the full enquiry form lives on the Contact and Book Consultation pages.
+    cta({
+      style: 'soft', eyebrow: 'Free consultation', heading: 'Ready to Build\nYour Foundation?',
+      text: "Tell us where you are today and we'll map a clear, practical next step. No pressure, no jargon.",
+      list: items(['Free 30-minute call', 'Reply within one business day', 'No obligation']),
+      buttons: [btn('Book a Free Consultation', '/book-consultation'), { link: { title: 'WhatsApp Us', url: D.ContactSection.WHATSAPP_LINK, target: '_blank' }, style: 'light' }],
+    }),
+  ],
+};
+
+/* ---------------- Home (new design, preview) ---------------- */
+// v2.18.1: the new design lives on its own page (/home-new/) until it is approved; the live home page above
+// keeps the original design. Nine calm sections that answer "what does SOL do, is it for me, what next?".
 // Detail lives on the service pages; the home page only points the way.
 const photo = (f) => img(`photos/${f}.webp`);
 export const SERVICE_AREAS = [
@@ -74,9 +169,9 @@ export const SERVICE_AREAS = [
   },
 ];
 
-const home = {
-  slug: 'home', title: 'Home', front_page: true,
-  seo: { seo_title: LIVE_TEXT.homeSeoTitle, seo_description: LIVE_TEXT.homeSeoDescription },
+const homeNew = {
+  slug: 'home-new', title: 'Home (New Design)',
+  seo: { seo_title: 'Home (New Design Preview) | SOL Business Consultant', seo_description: LIVE_TEXT.homeSeoDescription },
   sections: [
     // 1. Hero
     {
@@ -539,20 +634,11 @@ const servicesHub = {
   slug: 'services', title: 'Services',
   seo: { seo_title: 'Business, NDIS & Digital Services | SOL Business Consultant', seo_description: 'NDIS registration, support coordination training, bookkeeping, payroll, websites, marketing and automation services for Australian businesses.' },
   sections: [
-    header('Our Services', 'Support for every part of your business', "Three areas, one team. Choose the one closest to what you need, or talk to us and we'll point you in the right direction.", { buttons: [btn('Talk to Our Team', '/contact/')] }),
-    {
-      acf_fc_layout: 'service_groups', ...head(), buttons: [],
-      groups: SERVICE_AREAS.map((a) => ({
-        anchor: a.anchor, title: a.title, text: a.text, image: img(`photos/${a.image}.webp`), image_alt: a.alt,
-        links: a.links.map(([title, text, url]) => ({ title, text, url })),
-      })),
-    },
-    cta({
-      style: 'closing', heading: 'Not sure which service you need?',
-      text: "Tell us what you're working on. We'll recommend the right next step, with no obligation.",
-      buttons: [btn('Start a Conversation', '/contact/')],
-      note: 'Or call +61 460 003 494',
-    }),
+    header('Our Services', 'Comprehensive Solutions for Every Stage of Growth', 'Practical business, compliance and digital services, scoped before any paid work begins.', { buttons: [btn('Book Free Consultation', '/book-consultation'), btn('Make a Secure Payment', '/service-payment', 'outline')] }),
+    grid({ source: 'services', card_style: 'numbered' }),
+    block('service-comparison'),
+    block('service-trust'),
+    block('contact'),
   ],
 };
 const _unusedServicePayment = {
@@ -564,7 +650,7 @@ const _unusedServicePayment = {
 };
 
 export const pages = [
-  home, about, contactPage, faqPage, pricing, blog, caseStudies, useCases, marketingPackages, trainingCourses, ndisPackages,
+  home, homeNew, about, contactPage, faqPage, pricing, blog, caseStudies, useCases, marketingPackages, trainingCourses, ndisPackages,
   getStarted, bookConsultation, readinessQuiz, readinessCalculator, dataPrivacy, serviceInclusions, support, afterPayment,
   privacy, refund, terms, accessibility, complaints, servicesHub,
 ];

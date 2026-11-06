@@ -41,23 +41,8 @@ const WP_ROUTES = {
 const APP_ROUTES = ['/client-portal', '/student-dashboard', '/portal', '/payment-history', '/verify-certificate', '/ndis-registration-flow', '/login', '/register', '/plans', '/proposals'];
 
 /** Translate a training-site URL into its WordPress (or app) equivalent. */
-// v2.18: the home page no longer carries these sections; send their old links to where the content lives.
-export function homeAnchor(u) {
-  const m = typeof u === 'string' && u.match(/^\/#([a-z0-9-]+)$/);
-  if (!m) return u;
-  const h = m[1];
-  if (h === 'contact') return '/contact/';
-  if (h === 'pricing') return '/pricing/';
-  if (h === 'faq') return '/faq/';
-  if (h === 'about') return '/about/';
-  if (h === 'compliance' || h.startsWith('compliance-')) return `/about/#${h}`;
-  if (h === 'ndis' || h.startsWith('ndis-')) return '/services/ndis-registration/';
-  return u;
-}
-
 export function route(u) {
   if (!u || typeof u !== 'string') return u;
-  u = homeAnchor(u);
   if (/^(https?:|mailto:|tel:|#|woo:)/.test(u)) return u;
   const m = u.match(/^([^?#]*)([?#].*)?$/);
   let path = m[1] || '/';
