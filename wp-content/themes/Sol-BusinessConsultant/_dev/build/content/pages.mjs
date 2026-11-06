@@ -126,7 +126,7 @@ const home = {
 const photo = (f) => img(`photos/${f}.webp`);
 export const SERVICE_AREAS = [
   {
-    anchor: 'business', title: 'Business Consulting & Support', image: 'about-consultant-conversation',
+    anchor: 'business', icon: 'briefcase-business',  title: 'Business Consulting & Support', image: 'about-consultant-conversation',
     alt: 'SOL consultant in a friendly planning conversation with a client',
     text: 'Company setup, bookkeeping and BAS, payroll, accounting and admin support, so the day-to-day runs smoothly.',
     url: '/services/#business',
@@ -142,7 +142,7 @@ export const SERVICE_AREAS = [
     ],
   },
   {
-    anchor: 'ndis', title: 'NDIS Registration & Compliance', image: 'ndis-registration-support-worker',
+    anchor: 'ndis', icon: 'shield-check',  title: 'NDIS Registration & Compliance', image: 'ndis-registration-support-worker',
     alt: 'Support worker assisting an NDIS participant with an exercise session',
     text: 'Registration guidance, policies and audit preparation for new and growing NDIS providers, plus training for support coordinators.',
     url: '/services/ndis-registration/',
@@ -154,7 +154,7 @@ export const SERVICE_AREAS = [
     ],
   },
   {
-    anchor: 'digital', title: 'Digital Solutions & Growth', image: 'website-development-wireframes',
+    anchor: 'digital', icon: 'monitor-smartphone',  title: 'Digital Solutions & Growth', image: 'website-development-wireframes',
     alt: 'Designer sketching website wireframes beside a laptop',
     text: 'Websites, search, ads, social media and automation that help customers find you and save your team time.',
     url: '/services/#digital',
@@ -173,81 +173,111 @@ const homeNew = {
   slug: 'home-new', title: 'Home (New Design)',
   seo: { seo_title: 'Home (New Design Preview) | SOL Business Consultant', seo_description: LIVE_TEXT.homeSeoDescription },
   sections: [
-    // 1. Hero
+    // 1. Hero, with the original trust badges and figures
     {
       acf_fc_layout: 'hero', style: 'editorial', eyebrow: 'Australian business consultants',
       heading: 'Business Support That\nMoves You [Forward.]',
       text: 'Practical business consulting, NDIS support and digital solutions designed to help Australian businesses and providers operate, grow and succeed.',
       buttons: [btn('Explore Our Services', '#services'), btn('Talk to Our Team', '/contact/', 'outline')],
-      badges: [], stats: [],
+      badges: D.HeroSection.trustBadges.map((b) => ({ icon: ic(b.icon), label: b.label })),
+      stats: D.HeroSection.stats.map((s) => ({ value: s.value, label: s.label })),
       image: photo('home-consultants-team'), image_alt: 'SOL consultants working through a plan with a client team around a laptop',
-      card_title: '', card_text: '', disclaimer: '',
+      card_title: 'Audit Ready', card_text: 'Your compliance system is set up and reviewed against how you work.', disclaimer: '',
     },
     // 2. Who we work with
     checklist({
       align: 'center', style: 'audience', eyebrow: 'Who we work with',
       items: items(['NDIS providers', 'Small businesses', 'Start-ups', 'Growing organisations', 'Australian service providers']),
     }),
-    // 3. Three service areas
+    // 3. Three service areas, each with its key services
     grid({
-      section_id: 'services', eyebrow: 'What we do', heading: 'Three ways we can help',
+      section_id: 'services', background: 'chalk', eyebrow: 'What we do', heading: 'Three ways we can help',
       intro: "Choose the area closest to what you need. We'll work out the detail together.",
       card_style: 'category', columns: '3',
-      cards: SERVICE_AREAS.map((a) => ({ title: a.title, text: a.text, image: photo(a.image), link: L('Explore service', a.url) })),
+      cards: SERVICE_AREAS.map((a) => ({
+        icon: a.icon, title: a.title, text: a.text, image: photo(a.image),
+        list: items(a.links.slice(0, 4).map(([t]) => t)), link: L('Explore service', a.url),
+      })),
+      buttons: [btn('View all services', '/services/', 'text')],
     }),
     // 4. Why SOL
     grid({
-      background: 'chalk', eyebrow: 'Why SOL', heading: 'Clear advice.\nNo guesswork.',
+      eyebrow: 'Why SOL', heading: 'Clear advice.\nNo guesswork.',
       intro: 'We keep things simple, so you always know what is happening, why, and what it costs.',
       card_style: 'editorial', columns: '2',
       cards: [
-        { title: 'Practical guidance', text: 'Advice you can act on straight away, explained in plain English.' },
-        { title: 'Personalised support', text: 'One team that learns how your business works and shapes the plan around it.' },
-        { title: 'Transparent process', text: 'Scope and price are agreed in writing before any paid work begins.' },
-        { title: 'Ongoing assistance', text: 'We stay with you after setup, with updates and documents in your own client portal.' },
+        { icon: 'compass', title: 'Practical guidance', text: 'Advice you can act on straight away, explained in plain English.' },
+        { icon: 'user-round-check', title: 'Personalised support', text: 'One team that learns how your business works and shapes the plan around it.' },
+        { icon: 'file-check', title: 'Transparent process', text: 'Scope and price are agreed in writing before any paid work begins.' },
+        { icon: 'life-buoy', title: 'Ongoing assistance', text: 'We stay with you after setup, with updates and documents in your own client portal.' },
       ],
       buttons: [btn('See how we typically support clients', '/case-studies/', 'text')],
     }),
-    // 5. How it works
+    // 5. How it works (navy band)
     steps({
-      eyebrow: 'How it works', align: 'center', heading: 'Three simple steps', style: 'process', columns: '3',
+      background: 'ink', eyebrow: 'How it works', align: 'center', heading: 'Three simple steps', style: 'process', columns: '3',
       groups: [{ title: '', icon: '', buttons: [], steps: [
         { anchor_id: '', label: '', icon: '', title: 'Tell us what you need', text: 'Book a free 30-minute call or send us a message. We listen first.' },
         { anchor_id: '', label: '', icon: '', title: 'Get a clear plan', text: 'We confirm the scope, timeline and price in writing before any work starts.' },
         { anchor_id: '', label: '', icon: '', title: 'Move forward with confidence', text: "We do the work alongside you and keep you updated until it's done." },
       ] }],
+      buttons: [btn('Book a Free Consultation', '/book-consultation/')],
     }),
-    // 6. Featured service
-    textImage({
-      background: 'chalk', eyebrow: 'Featured service', heading: 'NDIS registration, made manageable',
-      content: html(['Registration means policies, evidence and an audit. We guide you through each step, prepare documents that fit the supports you offer, and help your team feel ready on audit day.']),
-      image: photo('ndis-roadmap-support-at-home'), image_alt: 'Support worker helping an NDIS participant at home', image_position: 'right',
-      checklist: items(['Registration pathway review', 'Policies matched to your registration groups', 'Audit preparation and support']),
-      buttons: [btn('Explore NDIS Registration', '/services/ndis-registration/')],
+    // 6. NDIS registration roadmap (from the original home page)
+    steps({
+      section_id: 'ndis', eyebrow: 'NDIS registration', heading: 'Your path to NDIS registration, simplified',
+      intro: 'We help sole traders, small providers and allied health professionals prepare for the NDIS Commission audit with confidence.',
+      style: 'timeline', columns: '2',
+      groups: [{ title: '', icon: '', buttons: [], steps: D.NDISSection.roadmap.map((s) => ({ anchor_id: s.id, label: s.week, icon: ic(s.icon), title: s.title, text: s.desc })) }],
+      image: photo('ndis-roadmap-support-at-home'),
+      buttons: [btn('Find My NDIS Package', '/get-started/'), btn('NDIS Registration Service', '/services/ndis-registration/', 'outline')],
     }),
-    // 7. Our commitment, in place of testimonials (we only publish reviews we can verify)
+    // 7. Pricing (shared with the Pricing page)
+    block('pricing-tabs'),
+    // 8. Easy Compliance (shared with the About page)
+    block('compliance'),
+    // 9. Client portal
+    grid({
+      eyebrow: 'Client portal', heading: 'Everything in one secure place',
+      intro: 'After a service payment, you can follow progress, share documents and get help from your own client portal.',
+      columns: '4', card_style: 'bordered',
+      cards: D.ProcessPortalSection.clientBenefits.map((b) => ({ icon: ic(b.icon), title: b.title, text: b.desc })),
+      buttons: [btn('After Payment Guide', '/after-payment/', 'text')],
+    }),
+    // 10. Our commitment, in place of testimonials (we only publish reviews we can verify)
     cta({
       style: 'statement', eyebrow: 'Our commitment',
       heading: "You'll always know what we're doing, why it matters, and what it costs.",
       text: 'Plain-English advice, a written scope and price before any paid work, and a reply within one business day.',
     }),
-    // 8. FAQ (service-specific questions live on each service page)
+    // 11. Service finder quiz (from the original home page)
+    {
+      acf_fc_layout: 'quiz', ...head({ background: 'chalk', eyebrow: 'Not sure where to start?', heading: 'Find the right service in three questions', intro: 'Answer three quick questions and we will suggest a SOL pathway.' }),
+      mode: 'recommend', bullets: [], start_label: 'Find My Service', lead_capture: false,
+      consent_text: 'Send me this recommendation and relevant SOL follow-up.',
+      questions: D.LeadGrowthToolsSection.QUESTIONS.map((q) => ({ group: '', question: q.label, options: q.options.map((o) => ({ label: o.label, score: 0, value: o.value })) })),
+      results: Object.entries(D.LeadGrowthToolsSection.RECOMMENDATIONS).map(([key, r]) => ({ key, min_percent: 0, title: r.title, subtitle: 'Recommended Pathway', description: r.desc, link: L(r.cta, r.href) })),
+      note: '',
+    },
+    // 12. FAQ
     faq({
       eyebrow: 'Questions', heading: 'Common questions', schema: true,
       items: [
         { question: 'Can I get help with just one service?', answer: 'Yes. Our services are modular, so you choose exactly what you need, whether that is NDIS registration, bookkeeping, payroll, a website or something else.' },
-        { question: 'What does it cost?', answer: 'Every job is scoped first. The first consultation is free, and we confirm the price in writing before any paid work begins.' },
+        { question: 'What does it cost?', answer: 'Every job is scoped first. The first consultation is free, and we confirm the price in writing before any paid work begins. Package prices are shown above.' },
         { question: 'Do you work with start-ups?', answer: 'Yes. We work with start-ups and established businesses, from first company registration through to growing a team.' },
         { question: 'How long does NDIS registration take?', answer: 'It depends on your registration groups, audit pathway and how ready your documents are. We give you a realistic timeline once we understand your situation.' },
+        { question: 'How does Easy Compliance work?', answer: 'We set the platform up for your operations, import your documents, train your team and help you keep audit-ready over time.' },
         { question: 'How do we work together?', answer: 'Through video calls, in person where needed, and a secure client portal where you can see documents, updates and requests in one place.' },
       ],
       cta: { heading: '', text: '', buttons: [btn('See all FAQs', '/faq/', 'text')] },
     }),
-    // 9. Closing
+    // 13. Closing
     cta({
-      style: 'closing', heading: 'Ready to Take the Next Step?',
+      style: 'closing', eyebrow: 'Free consultation', heading: 'Ready to Take the Next Step?',
       text: "Let's discuss your goals and find the right support for your business.",
-      buttons: [btn('Start a Conversation', '/contact/')],
+      list: items(['Free 30-minute call', 'Reply within one business day', 'No obligation']),
+      buttons: [btn('Start a Conversation', '/contact/'), { link: { title: 'WhatsApp Us', url: D.ContactSection.WHATSAPP_LINK, target: '_blank' }, style: 'light' }],
       note: 'Or call +61 460 003 494',
     }),
   ],

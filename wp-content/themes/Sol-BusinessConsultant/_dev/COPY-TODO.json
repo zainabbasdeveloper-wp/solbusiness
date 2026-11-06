@@ -405,6 +405,11 @@
   "text": "SOL consultants working through a plan with a client team around a laptop"
  },
  {
+  "id": "78978445",
+  "where": "page:home-new",
+  "text": "Your compliance system is set up and reviewed against how you work."
+ },
+ {
   "id": "2221c4df",
   "where": "page:home-new",
   "text": "Who we work with"
@@ -455,6 +460,26 @@
   "text": "Company setup, bookkeeping and BAS, payroll, accounting and admin support, so the day-to-day runs smoothly."
  },
  {
+  "id": "92f705b6",
+  "where": "page:home-new",
+  "text": "Company & Business Registration"
+ },
+ {
+  "id": "445eede5",
+  "where": "page:home-new",
+  "text": "Bookkeeping & BAS Lodgement"
+ },
+ {
+  "id": "dd02a3ed",
+  "where": "page:home-new",
+  "text": "Payroll Services"
+ },
+ {
+  "id": "5b6d1986",
+  "where": "page:home-new",
+  "text": "Accounting Consultancy"
+ },
+ {
   "id": "aa7c343b",
   "where": "page:home-new",
   "text": "Explore service"
@@ -470,6 +495,21 @@
   "text": "Registration guidance, policies and audit preparation for new and growing NDIS providers, plus training for support coordinators."
  },
  {
+  "id": "c7552e4a",
+  "where": "page:home-new",
+  "text": "NDIS Registration"
+ },
+ {
+  "id": "39062098",
+  "where": "page:home-new",
+  "text": "NDIS Packages & Pricing"
+ },
+ {
+  "id": "849c41d6",
+  "where": "page:home-new",
+  "text": "NDIS Readiness Quiz"
+ },
+ {
   "id": "461c986f",
   "where": "page:home-new",
   "text": "Digital Solutions & Growth"
@@ -478,6 +518,26 @@
   "id": "02a93629",
   "where": "page:home-new",
   "text": "Websites, search, ads, social media and automation that help customers find you and save your team time."
+ },
+ {
+  "id": "484de6d5",
+  "where": "page:home-new",
+  "text": "Search Engine Optimisation"
+ },
+ {
+  "id": "4c15f2ab",
+  "where": "page:home-new",
+  "text": "Google Ads Management"
+ },
+ {
+  "id": "cd20ef17",
+  "where": "page:home-new",
+  "text": "Social Media Marketing"
+ },
+ {
+  "id": "23301183",
+  "where": "page:home-new",
+  "text": "View all services"
  },
  {
   "id": "9c74fd37",
@@ -580,39 +640,69 @@
   "text": "We do the work alongside you and keep you updated until it's done."
  },
  {
-  "id": "a330ef3f",
+  "id": "13742c21",
   "where": "page:home-new",
-  "text": "Featured service"
+  "text": "NDIS registration"
  },
  {
-  "id": "8f1d5e25",
+  "id": "b66a09e5",
   "where": "page:home-new",
-  "text": "NDIS registration, made manageable"
+  "text": "Your path to NDIS registration, simplified"
  },
  {
-  "id": "a425eb18",
+  "id": "17dc9e49",
   "where": "page:home-new",
-  "text": "<p>Registration means policies, evidence and an audit. We guide you through each step, prepare documents that fit the supports you offer, and help your team feel ready on audit day.</p>"
+  "text": "We help sole traders, small providers and allied health professionals prepare for the NDIS Commission audit with confidence."
  },
  {
-  "id": "92790d83",
+  "id": "71b07f21",
   "where": "page:home-new",
-  "text": "Support worker helping an NDIS participant at home"
+  "text": "Discovery Call"
  },
  {
-  "id": "25410376",
+  "id": "8082691c",
   "where": "page:home-new",
-  "text": "Policies matched to your registration groups"
+  "text": "Documentation & Application"
  },
  {
-  "id": "6d71684c",
+  "id": "da1906ed",
   "where": "page:home-new",
-  "text": "Audit preparation and support"
+  "text": "Mock Audit & Training"
  },
  {
-  "id": "fddea3bf",
+  "id": "534d0b9e",
   "where": "page:home-new",
-  "text": "Explore NDIS Registration"
+  "text": "Registration Decision & Beyond"
+ },
+ {
+  "id": "db5a1e59",
+  "where": "page:home-new",
+  "text": "Find My NDIS Package"
+ },
+ {
+  "id": "fcd71aa0",
+  "where": "page:home-new",
+  "text": "NDIS Registration Service"
+ },
+ {
+  "id": "dfc2e63e",
+  "where": "page:home-new",
+  "text": "Client portal"
+ },
+ {
+  "id": "26fdb009",
+  "where": "page:home-new",
+  "text": "Everything in one secure place"
+ },
+ {
+  "id": "33abb6ce",
+  "where": "page:home-new",
+  "text": "After a service payment, you can follow progress, share documents and get help from your own client portal."
+ },
+ {
+  "id": "5f4b96ac",
+  "where": "page:home-new",
+  "text": "After Payment Guide"
  },
  {
   "id": "ff4ce9e0",
@@ -630,6 +720,21 @@
   "text": "Plain-English advice, a written scope and price before any paid work, and a reply within one business day."
  },
  {
+  "id": "63de101b",
+  "where": "page:home-new",
+  "text": "Not sure where to start?"
+ },
+ {
+  "id": "fefa5a5d",
+  "where": "page:home-new",
+  "text": "Find the right service in three questions"
+ },
+ {
+  "id": "9e19f4f7",
+  "where": "page:home-new",
+  "text": "Answer three quick questions and we will suggest a SOL pathway."
+ },
+ {
   "id": "48208f5f",
   "where": "page:home-new",
   "text": "Can I get help with just one service?"
@@ -645,9 +750,9 @@
   "text": "What does it cost?"
  },
  {
-  "id": "6ccf332c",
+  "id": "db9875e4",
   "where": "page:home-new",
-  "text": "Every job is scoped first. The first consultation is free, and we confirm the price in writing before any paid work begins."
+  "text": "Every job is scoped first. The first consultation is free, and we confirm the price in writing before any paid work begins. Package prices are shown above."
  },
  {
   "id": "b2176946",
@@ -668,6 +773,16 @@
   "id": "06ca616c",
   "where": "page:home-new",
   "text": "It depends on your registration groups, audit pathway and how ready your documents are. We give you a realistic timeline once we understand your situation."
+ },
+ {
+  "id": "0dada427",
+  "where": "page:home-new",
+  "text": "How does Easy Compliance work?"
+ },
+ {
+  "id": "02aff109",
+  "where": "page:home-new",
+  "text": "We set the platform up for your operations, import your documents, train your team and help you keep audit-ready over time."
  },
  {
   "id": "155d8e76",
@@ -1063,11 +1178,6 @@
   "id": "c6733cd0",
   "where": "page:marketing-packages",
   "text": "Enquire Now"
- },
- {
-  "id": "cd20ef17",
-  "where": "page:marketing-packages",
-  "text": "Social Media Marketing"
  },
  {
   "id": "f0f38dcb",
@@ -3380,11 +3490,6 @@
   "text": "Make a Secure Payment"
  },
  {
-  "id": "c7552e4a",
-  "where": "page:services/ndis-registration",
-  "text": "NDIS Registration"
- },
- {
   "id": "e561ebab",
   "where": "page:services/ndis-registration",
   "text": "Find Your Registration Package"
@@ -4280,11 +4385,6 @@
   "text": "What We Do"
  },
  {
-  "id": "484de6d5",
-  "where": "page:services/social-media-marketing",
-  "text": "Search Engine Optimisation"
- },
- {
   "id": "8bdbf8cc",
   "where": "page:services/social-media-marketing",
   "text": "Google and Meta Ads"
@@ -4488,11 +4588,6 @@
   "id": "f9189f72",
   "where": "page:ai-machine-learning",
   "text": "Data annotation specialist labelling images for a machine learning model"
- },
- {
-  "id": "5b6d1986",
-  "where": "page:services/accountancy",
-  "text": "Accounting Consultancy"
  },
  {
   "id": "31c052c8",
@@ -5055,36 +5150,6 @@
   "text": "Your Path to NDIS\nRegistration, Simplified"
  },
  {
-  "id": "71b07f21",
-  "where": "sol_block:ndis-roadmap",
-  "text": "Discovery Call"
- },
- {
-  "id": "8082691c",
-  "where": "sol_block:ndis-roadmap",
-  "text": "Documentation & Application"
- },
- {
-  "id": "da1906ed",
-  "where": "sol_block:ndis-roadmap",
-  "text": "Mock Audit & Training"
- },
- {
-  "id": "534d0b9e",
-  "where": "sol_block:ndis-roadmap",
-  "text": "Registration Decision & Beyond"
- },
- {
-  "id": "db5a1e59",
-  "where": "sol_block:ndis-roadmap",
-  "text": "Find My NDIS Package"
- },
- {
-  "id": "fcd71aa0",
-  "where": "sol_block:ndis-roadmap",
-  "text": "NDIS Registration Service"
- },
- {
   "id": "d9c1c7ac",
   "where": "sol_block:service-trust",
   "text": "Clear scope before work starts"
@@ -5103,11 +5168,6 @@
   "id": "0b25cf15",
   "where": "sol_block:service-trust",
   "text": "View Service Inclusions"
- },
- {
-  "id": "5f4b96ac",
-  "where": "sol_block:service-trust",
-  "text": "After Payment Guide"
  },
  {
   "id": "04cac2e1",
@@ -5178,11 +5238,6 @@
   "id": "a38995d8",
   "where": "sol_block:general-faq",
   "text": "Do I need to be a registered NDIS provider?"
- },
- {
-  "id": "0dada427",
-  "where": "sol_block:general-faq",
-  "text": "How does Easy Compliance work?"
  },
  {
   "id": "b405e4d8",
@@ -6158,11 +6213,6 @@
   "id": "371e8c5e",
   "where": "options",
   "text": "Free Readiness Quiz"
- },
- {
-  "id": "63de101b",
-  "where": "options",
-  "text": "Not sure where to start?"
  },
  {
   "id": "15640872",

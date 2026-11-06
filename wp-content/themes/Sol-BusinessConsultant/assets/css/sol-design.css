@@ -379,3 +379,84 @@ body.sol-site { color: var(--sol-ink); font-size: 16.5px; line-height: 1.65; }
 @media (min-width: 640px) and (max-width: 1023px) { .sol-card--category .sol-card__title { font-size: 1.2rem; } .sol-card--category .sol-card__text { font-size: .94rem; } }
 /* Text links never stretch or centre, even where other buttons go full width. */
 .sol-buttons .sol-btn--text { width: auto !important; justify-content: flex-start; text-align: left; }
+
+/* ==========================================================================
+   v2.18.2 — Space Grotesk headings (the site's own font) and more visual detail:
+   icons, card surfaces, amber accents, heading rules, soft textures and a navy band.
+   ========================================================================== */
+:root { --sol-display: 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; }
+:where(.sol-site .sol-main, .sol-header, .sol-footer) :is(h1, h2, h3) { font-weight: 700; letter-spacing: -.02em; font-variation-settings: normal; }
+.sol-title { font-weight: 700; letter-spacing: -.025em; line-height: 1.12; }
+.sol-card__title, .sol-sgroup__title, .sol-cta__title, .sol-page-header__title, .sol-package__name, .sol-package__price strong, .sol-numlist p { font-weight: 600; }
+.sol-cta--statement .sol-cta__title { font-weight: 500; letter-spacing: -.025em; }
+.sol-audience li { font-weight: 500; letter-spacing: -.01em; }
+.sol-steps--process .sol-step__marker, .sol-process__num { font-weight: 600; }
+
+/* Eyebrows in amber, and the short amber rule under section headings is back. */
+.sol-eyebrow { color: var(--sol-harvest-dark); }
+.sol-bg-ink .sol-eyebrow, .sol-cta--closing .sol-eyebrow { color: #fbbf24; }
+.sol-rule { display: block; width: 56px; height: 3px; margin-top: 20px; border-radius: 3px; background: linear-gradient(90deg, var(--sol-harvest), #fbbf24); }
+.sol-head--center .sol-rule { margin-left: auto; margin-right: auto; }
+.sol-checklist--audience .sol-rule { display: none; }
+
+/* Light bands: a faint dot texture. */
+.sol-section.sol-bg-chalk { background-color: var(--sol-chalk); background-image: radial-gradient(rgba(15, 27, 45, .06) 1px, transparent 1.3px); background-size: 22px 22px; }
+
+/* Hero: soft amber glow, amber headline accent, badges, figures and the floating card. */
+.sol-hero--editorial { background: radial-gradient(45% 60% at 92% 8%, rgba(217, 119, 6, .09), transparent 70%), linear-gradient(180deg, var(--sol-sand) 0%, #fff 100%); }
+.sol-hero--editorial .sol-hero__title { font-weight: 700; letter-spacing: -.035em; line-height: 1.02; }
+.sol-hero--editorial .sol-hero__title .sol-accent { font-style: normal; font-weight: 700; color: var(--sol-harvest); }
+.sol-hero--editorial .sol-hero__badges { margin-top: 28px; color: var(--sol-ink-2); }
+.sol-hero--editorial .sol-hero__badges .sol-icon { color: var(--sol-harvest-dark); }
+.sol-hero--editorial .sol-hero__stats { max-width: 520px; }
+.sol-hero--editorial .sol-hero__stats dt { font-weight: 700; color: var(--sol-ink); }
+.sol-hero--editorial .sol-hero__card { display: block; z-index: 2; }
+@media (min-width: 1024px) { .sol-hero--editorial .sol-hero__card { left: -32px; bottom: 40px; } }
+
+/* Service area cards: white boxes with a photo, an icon badge and the key services. */
+.sol-card--category { background: #fff; border: 1px solid var(--sol-border); border-radius: var(--sol-radius-lg); overflow: hidden; transition: transform .3s ease, box-shadow .3s ease; }
+.sol-card--category:hover { border: 1px solid var(--sol-border); transform: translateY(-4px); box-shadow: 0 30px 50px -36px rgba(15, 27, 45, .5); }
+.sol-card--category .sol-card__media { margin: 0; border-radius: 0; aspect-ratio: 16 / 10; }
+.sol-card--category .sol-card__top { position: relative; z-index: 1; margin: -28px 0 0 24px; }
+.sol-card--category .sol-card__icon { width: 56px; height: 56px; border-radius: 14px; background: #fff; color: var(--sol-harvest-dark); box-shadow: 0 12px 26px -14px rgba(15, 27, 45, .5); }
+.sol-card--category .sol-card__icon .sol-icon { width: 24px; height: 24px; }
+.sol-card:not(.sol-card--dark).sol-card--category:hover .sol-card__icon { background: var(--sol-harvest); color: #fff; }
+.sol-card--category .sol-card__body { padding: 16px 24px 0; }
+.sol-card--category .sol-card__title { font-size: 1.3rem; text-decoration: none !important; }
+.sol-card--category .sol-checks { margin-top: 10px; padding-top: 16px; border-top: 1px solid var(--sol-border); gap: 9px; }
+.sol-card--category .sol-card__more { margin: 0 24px 24px; padding-top: 20px; color: var(--sol-harvest-dark); }
+.sol-cards--category .sol-grid { gap: 24px; }
+.sol-cards--category .sol-buttons--after { justify-content: center; margin-top: 40px; }
+/* Undo the earlier compact phone row: the cards stack with a shorter photo. */
+@media (max-width: 639px) {
+	.sol-cards--category .sol-grid { gap: 16px; }
+	.sol-card--category, .sol-card--category:last-child { padding: 0; border: 1px solid var(--sol-border); }
+	.sol-card--category .sol-card__cover { display: flex; }
+	.sol-card--category .sol-card__media { grid-row: auto; aspect-ratio: 16 / 9; border-radius: 0; }
+	.sol-card--category .sol-card__more { grid-column: auto; margin-top: 0; }
+}
+@media (min-width: 640px) and (max-width: 899px) { .sol-cards--category .sol-grid--3 { grid-template-columns: minmax(0, 1fr); max-width: 560px; margin: 0 auto; } }
+
+/* Why SOL: an icon beside each number. */
+.sol-card--editorial .sol-card__top { align-items: center; justify-content: flex-start; flex-direction: row-reverse; gap: 14px; }
+.sol-card--editorial .sol-card__icon { width: 44px; height: 44px; background: var(--sol-harvest-soft); color: var(--sol-harvest-dark); }
+.sol-card--editorial:hover .sol-card__icon { background: var(--sol-harvest); color: #fff; }
+
+/* Cards with icons (client portal): warm icon tiles. */
+.sol-card--bordered { background: #fff; }
+.sol-card--bordered .sol-card__icon { background: var(--sol-harvest-soft); color: var(--sol-harvest-dark); }
+
+/* How it works on the navy band. */
+.sol-bg-ink .sol-steps--process .sol-step__marker { background: rgba(255, 255, 255, .06); border-color: rgba(251, 191, 36, .5); color: #fbbf24; }
+.sol-bg-ink .sol-steps--process .sol-step:not(:last-child)::before { background: rgba(255, 255, 255, .16); }
+.sol-bg-ink .sol-step__title { color: #fff; }
+.sol-bg-ink .sol-step__body p { color: rgba(255, 255, 255, .72); }
+.sol-steps--process .sol-buttons--after { margin-top: 48px; }
+
+/* Timeline (NDIS roadmap). */
+.sol-steps--timeline .sol-step__marker { background: var(--sol-ink); color: #fbbf24; }
+.sol-steps--timeline .sol-step__label { color: var(--sol-harvest-dark); }
+
+/* Closing: ticks centred under the text. */
+.sol-cta--closing .sol-checks--inline { justify-content: center; margin-top: 22px; color: rgba(255, 255, 255, .82); }
+.sol-cta--closing .sol-checks__icon { color: #fbbf24; }

@@ -144,8 +144,7 @@ add_action( 'wp_enqueue_scripts', function () {
 add_action( 'wp_enqueue_scripts', function () {
 	$ver = SOL_THEME_VERSION;
 	$preview = sol_is_design_preview();
-	$serif   = $preview ? 'family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&' : '';
-	wp_enqueue_style( 'sol-fonts', 'https://fonts.googleapis.com/css2?' . $serif . 'family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap', array(), null );
+	wp_enqueue_style( 'sol-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap', array(), null );
 	wp_enqueue_style( 'sol', SOL_URI . 'assets/css/sol.css', array(), $ver );
 	wp_enqueue_style( 'sol-hero', SOL_URI . 'assets/css/sol-hero.css', array( 'sol' ), $ver );
 	wp_enqueue_style( 'sol-nav', SOL_URI . 'assets/css/sol-nav.css', array( 'sol' ), $ver );

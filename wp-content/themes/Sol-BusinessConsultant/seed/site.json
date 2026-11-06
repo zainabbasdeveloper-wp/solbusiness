@@ -3597,12 +3597,38 @@
         "style": "outline"
        }
       ],
-      "badges": [],
-      "stats": [],
+      "badges": [
+       {
+        "icon": "map-pin",
+        "label": "Australian-owned"
+       },
+       {
+        "icon": "file-check",
+        "label": "NDIS-aligned processes"
+       },
+       {
+        "icon": "award",
+        "label": "Easy Compliance support"
+       }
+      ],
+      "stats": [
+       {
+        "value": "12+",
+        "label": "Business services"
+       },
+       {
+        "value": "2",
+        "label": "Dedicated portals"
+       },
+       {
+        "value": "24h",
+        "label": "Response target"
+       }
+      ],
       "image": "img:photos/home-consultants-team.webp",
       "image_alt": "SOL consultants working through a plan with a client team around a laptop",
-      "card_title": "",
-      "card_text": "",
+      "card_title": "Audit Ready",
+      "card_text": "Your compliance system is set up and reviewed against how you work.",
       "disclaimer": ""
      },
      {
@@ -3638,7 +3664,7 @@
       "acf_fc_layout": "card_grid",
       "section_id": "services",
       "eyebrow": "What we do",
-      "background": "white",
+      "background": "chalk",
       "align": "left",
       "heading": "Three ways we can help",
       "intro": "Choose the area closest to what you need. We'll work out the detail together.",
@@ -3647,9 +3673,24 @@
       "card_style": "category",
       "cards": [
        {
+        "icon": "briefcase-business",
         "title": "Business Consulting & Support",
         "text": "Company setup, bookkeeping and BAS, payroll, accounting and admin support, so the day-to-day runs smoothly.",
         "image": "img:photos/about-consultant-conversation.webp",
+        "list": [
+         {
+          "item": "Company & Business Registration"
+         },
+         {
+          "item": "Bookkeeping & BAS Lodgement"
+         },
+         {
+          "item": "Payroll Services"
+         },
+         {
+          "item": "Accounting Consultancy"
+         }
+        ],
         "link": {
          "title": "Explore service",
          "url": "/services/#business",
@@ -3657,9 +3698,24 @@
         }
        },
        {
+        "icon": "shield-check",
         "title": "NDIS Registration & Compliance",
         "text": "Registration guidance, policies and audit preparation for new and growing NDIS providers, plus training for support coordinators.",
         "image": "img:photos/ndis-registration-support-worker.webp",
+        "list": [
+         {
+          "item": "NDIS Registration"
+         },
+         {
+          "item": "NDIS Packages & Pricing"
+         },
+         {
+          "item": "NDIS Readiness Quiz"
+         },
+         {
+          "item": "Support Coordination Training"
+         }
+        ],
         "link": {
          "title": "Explore service",
          "url": "/services/ndis-registration/",
@@ -3667,9 +3723,24 @@
         }
        },
        {
+        "icon": "monitor-smartphone",
         "title": "Digital Solutions & Growth",
         "text": "Websites, search, ads, social media and automation that help customers find you and save your team time.",
         "image": "img:photos/website-development-wireframes.webp",
+        "list": [
+         {
+          "item": "Website Development"
+         },
+         {
+          "item": "Search Engine Optimisation"
+         },
+         {
+          "item": "Google Ads Management"
+         },
+         {
+          "item": "Social Media Marketing"
+         }
+        ],
         "link": {
          "title": "Explore service",
          "url": "/services/#digital",
@@ -3677,14 +3748,23 @@
         }
        }
       ],
-      "buttons": [],
+      "buttons": [
+       {
+        "link": {
+         "title": "View all services",
+         "url": "/services/",
+         "target": ""
+        },
+        "style": "text"
+       }
+      ],
       "note": ""
      },
      {
       "acf_fc_layout": "card_grid",
       "section_id": "",
       "eyebrow": "Why SOL",
-      "background": "chalk",
+      "background": "white",
       "align": "left",
       "heading": "Clear advice.\nNo guesswork.",
       "intro": "We keep things simple, so you always know what is happening, why, and what it costs.",
@@ -3693,18 +3773,22 @@
       "card_style": "editorial",
       "cards": [
        {
+        "icon": "compass",
         "title": "Practical guidance",
         "text": "Advice you can act on straight away, explained in plain English."
        },
        {
+        "icon": "user-round-check",
         "title": "Personalised support",
         "text": "One team that learns how your business works and shapes the plan around it."
        },
        {
+        "icon": "file-check",
         "title": "Transparent process",
         "text": "Scope and price are agreed in writing before any paid work begins."
        },
        {
+        "icon": "life-buoy",
         "title": "Ongoing assistance",
         "text": "We stay with you after setup, with updates and documents in your own client portal."
        }
@@ -3725,7 +3809,7 @@
       "acf_fc_layout": "steps",
       "section_id": "",
       "eyebrow": "How it works",
-      "background": "white",
+      "background": "ink",
       "align": "center",
       "heading": "Three simple steps",
       "intro": "",
@@ -3762,49 +3846,138 @@
        }
       ],
       "image": "",
-      "buttons": [],
-      "note": ""
-     },
-     {
-      "acf_fc_layout": "text_image",
-      "section_id": "",
-      "eyebrow": "Featured service",
-      "background": "chalk",
-      "align": "left",
-      "heading": "NDIS registration, made manageable",
-      "intro": "",
-      "content": "<p>Registration means policies, evidence and an audit. We guide you through each step, prepare documents that fit the supports you offer, and help your team feel ready on audit day.</p>",
-      "image": "img:photos/ndis-roadmap-support-at-home.webp",
-      "image_alt": "Support worker helping an NDIS participant at home",
-      "image_position": "right",
-      "image_badge": "",
-      "stats": [],
-      "checklist": [
-       {
-        "item": "Registration pathway and audit type review"
-       },
-       {
-        "item": "Policies matched to your registration groups"
-       },
-       {
-        "item": "Audit preparation and support"
-       }
-      ],
       "buttons": [
        {
         "link": {
-         "title": "Explore NDIS Registration",
-         "url": "/services/ndis-registration/",
+         "title": "Book a Free Consultation",
+         "url": "/book-consultation/",
          "target": ""
         },
         "style": "primary"
        }
       ],
-      "callout": {
-       "icon": "",
-       "title": "",
-       "text": ""
-      }
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "steps",
+      "section_id": "ndis",
+      "eyebrow": "NDIS registration",
+      "background": "white",
+      "align": "left",
+      "heading": "Your path to NDIS registration, simplified",
+      "intro": "We help sole traders, small providers and allied health professionals prepare for the NDIS Commission audit with confidence.",
+      "style": "timeline",
+      "columns": "2",
+      "groups": [
+       {
+        "title": "",
+        "icon": "",
+        "buttons": [],
+        "steps": [
+         {
+          "anchor_id": "ndis-discovery",
+          "label": "Week 1",
+          "icon": "clock",
+          "title": "Discovery Call",
+          "text": "A free consultation to assess eligibility, registration groups and your timeline."
+         },
+         {
+          "anchor_id": "ndis-documentation",
+          "label": "Weeks 2-3",
+          "icon": "file-check",
+          "title": "Documentation & Application",
+          "text": "Tailored policies, a quality management system, NDIS portal submission and auditor matching."
+         },
+         {
+          "anchor_id": "ndis-mock-audit",
+          "label": "Weeks 3-4",
+          "icon": "users",
+          "title": "Mock Audit & Training",
+          "text": "Practise audit-style questions, find gaps early and coach your team through the process."
+         },
+         {
+          "anchor_id": "ndis-certification",
+          "label": "Ongoing",
+          "icon": "award",
+          "title": "Registration Decision & Beyond",
+          "text": "Support with audit follow-up and findings, and keep your systems ready after the Commission's decision."
+         }
+        ]
+       }
+      ],
+      "image": "img:photos/ndis-roadmap-support-at-home.webp",
+      "buttons": [
+       {
+        "link": {
+         "title": "Find My NDIS Package",
+         "url": "/get-started/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "NDIS Registration Service",
+         "url": "/services/ndis-registration/",
+         "target": ""
+        },
+        "style": "outline"
+       }
+      ],
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:pricing-tabs"
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:compliance"
+     },
+     {
+      "acf_fc_layout": "card_grid",
+      "section_id": "",
+      "eyebrow": "Client portal",
+      "background": "white",
+      "align": "left",
+      "heading": "Everything in one secure place",
+      "intro": "After a service payment, you can follow progress, share documents and get help from your own client portal.",
+      "source": "manual",
+      "columns": "4",
+      "card_style": "bordered",
+      "cards": [
+       {
+        "icon": "monitor-check",
+        "title": "Live service status",
+        "text": "See what SOL is working on and exactly what stage your project has reached."
+       },
+       {
+        "icon": "upload-cloud",
+        "title": "Document requests",
+        "text": "Upload requested files and track their review and verification status."
+       },
+       {
+        "icon": "life-buoy",
+        "title": "Support tickets",
+        "text": "Send requests, change orders or support questions straight to our team."
+       },
+       {
+        "icon": "file-text",
+        "title": "Deliverables",
+        "text": "Download completed work, handover files, reports and receipts."
+       }
+      ],
+      "buttons": [
+       {
+        "link": {
+         "title": "After Payment Guide",
+         "url": "/after-payment/",
+         "target": ""
+        },
+        "style": "text"
+       }
+      ],
+      "note": ""
      },
      {
       "acf_fc_layout": "cta_banner",
@@ -3816,6 +3989,158 @@
       "buttons": [],
       "list": [],
       "image": "",
+      "note": ""
+     },
+     {
+      "acf_fc_layout": "quiz",
+      "section_id": "",
+      "eyebrow": "Not sure where to start?",
+      "background": "chalk",
+      "align": "left",
+      "heading": "Find the right service in three questions",
+      "intro": "Answer three quick questions and we will suggest a SOL pathway.",
+      "mode": "recommend",
+      "bullets": [],
+      "start_label": "Find My Service",
+      "lead_capture": false,
+      "consent_text": "Send me this recommendation and relevant SOL follow-up.",
+      "questions": [
+       {
+        "group": "",
+        "question": "What do you need most right now?",
+        "options": [
+         {
+          "label": "NDIS registration or audit readiness",
+          "score": 0,
+          "value": "ndis_registration"
+         },
+         {
+          "label": "A website, landing page, or client intake system",
+          "score": 0,
+          "value": "website_development"
+         },
+         {
+          "label": "More leads through SEO, Google Ads, or social media",
+          "score": 0,
+          "value": "digital_marketing"
+         },
+         {
+          "label": "Bookkeeping, BAS, payroll, or reporting support",
+          "score": 0,
+          "value": "bookkeeping_bas"
+         },
+         {
+          "label": "Training for myself or my team",
+          "score": 0,
+          "value": "support_coordination_training"
+         }
+        ]
+       },
+       {
+        "group": "",
+        "question": "Which stage best matches you?",
+        "options": [
+         {
+          "label": "Starting from scratch",
+          "score": 0,
+          "value": "starter"
+         },
+         {
+          "label": "Already operating and need structure",
+          "score": 0,
+          "value": "active"
+         },
+         {
+          "label": "Growing and need systems/support",
+          "score": 0,
+          "value": "growth"
+         }
+        ]
+       },
+       {
+        "group": "",
+        "question": "How urgent is this?",
+        "options": [
+         {
+          "label": "This week",
+          "score": 0,
+          "value": "urgent"
+         },
+         {
+          "label": "Next 2-4 weeks",
+          "score": 0,
+          "value": "soon"
+         },
+         {
+          "label": "Planning ahead",
+          "score": 0,
+          "value": "planning"
+         }
+        ]
+       }
+      ],
+      "results": [
+       {
+        "key": "ndis_registration",
+        "min_percent": 0,
+        "title": "NDIS Registration Support",
+        "subtitle": "Recommended Pathway",
+        "description": "Ideal if you need registration pathway advice, policies and procedures, audit preparation or provider setup.",
+        "link": {
+         "title": "View NDIS Support",
+         "url": "/services/ndis-registration/",
+         "target": ""
+        }
+       },
+       {
+        "key": "website_development",
+        "min_percent": 0,
+        "title": "Website Development",
+        "subtitle": "Recommended Pathway",
+        "description": "Ideal if you need a professional website, high-converting pages, forms, SEO basics and launch support.",
+        "link": {
+         "title": "View Website Service",
+         "url": "/services/website-development/",
+         "target": ""
+        }
+       },
+       {
+        "key": "digital_marketing",
+        "min_percent": 0,
+        "title": "Marketing & SEO Support",
+        "subtitle": "Recommended Pathway",
+        "description": "Ideal if you need SEO, Google Ads, social media, local visibility, reporting and campaign support.",
+        "link": {
+         "title": "View Marketing Services",
+         "url": "/services/social-media-marketing/",
+         "target": ""
+        }
+       },
+       {
+        "key": "bookkeeping_bas",
+        "min_percent": 0,
+        "title": "Bookkeeping, BAS & Payroll",
+        "subtitle": "Recommended Pathway",
+        "description": "Ideal if you need cleaner books, payroll processing, BAS preparation, reconciliations and reporting.",
+        "link": {
+         "title": "View Finance Support",
+         "url": "/services/bookkeeping-bas-lodgement/",
+         "target": ""
+        }
+       },
+       {
+        "key": "support_coordination_training",
+        "min_percent": 0,
+        "title": "Support Coordination Training",
+        "subtitle": "Recommended Pathway",
+        "description": "Ideal if you or your team need structured training, learning resources, quizzes and completion records.",
+        "link": {
+         "title": "Explore Training",
+         "url": "/training-2/",
+         "target": ""
+        }
+       }
+      ],
       "note": ""
      },
      {
@@ -3833,7 +4158,7 @@
        },
        {
         "question": "What does it cost?",
-        "answer": "Every job is scoped first. The first consultation is free, and we confirm the price in writing before any paid work begins."
+        "answer": "Every job is scoped first. The first consultation is free, and we confirm the price in writing before any paid work begins. Package prices are shown above."
        },
        {
         "question": "Do you work with start-ups?",
@@ -3842,6 +4167,10 @@
        {
         "question": "How long does NDIS registration take?",
         "answer": "It depends on your registration groups, audit pathway and how ready your documents are. We give you a realistic timeline once we understand your situation."
+       },
+       {
+        "question": "How does Easy Compliance work?",
+        "answer": "We set the platform up for your operations, import your documents, train your team and help you keep audit-ready over time."
        },
        {
         "question": "How do we work together?",
@@ -3868,7 +4197,7 @@
       "acf_fc_layout": "cta_banner",
       "section_id": "",
       "style": "closing",
-      "eyebrow": "",
+      "eyebrow": "Free consultation",
       "heading": "Ready to Take the Next Step?",
       "text": "Let's discuss your goals and find the right support for your business.",
       "buttons": [
@@ -3879,9 +4208,27 @@
          "target": ""
         },
         "style": "primary"
+       },
+       {
+        "link": {
+         "title": "WhatsApp Us",
+         "url": "https://wa.me/61460003494?text=Hi%20SOL%20Business%20Consultant%2C%20I%27d%20like%20to%20book%20a%20consultation.",
+         "target": "_blank"
+        },
+        "style": "light"
        }
       ],
-      "list": [],
+      "list": [
+       {
+        "item": "Free 30-minute call"
+       },
+       {
+        "item": "Reply within one business day"
+       },
+       {
+        "item": "No obligation"
+       }
+      ],
       "image": "",
       "note": "Or call +61 460 003 494"
      }
@@ -14451,7 +14798,7 @@
   "sol_block:contact": "3841f3f7c0d55a0b",
   "sol_block:service-comparison": "a8bc97567e04f3df",
   "page:home": "5d0b2f783a7641d6",
-  "page:home-new": "1876663c2c32a128",
+  "page:home-new": "244910b67a13ac66",
   "page:about": "de892520adefe479",
   "page:contact": "f65fd873425acef2",
   "page:faq": "fdbbfdf1f8f6f0cb",
@@ -14563,6 +14910,9 @@
   "option:chat_instructions": "dd29ecf524b030a6"
  },
  "history": {
+  "page:home-new": [
+   "1876663c2c32a128"
+  ],
   "sol_block:compliance": [
    "5f3d1c42e9ead767",
    "df260bb9a3f79bb8",
@@ -15922,5 +16272,5 @@
    }
   ]
  },
- "build": "fd03b0bf51c6f28a"
+ "build": "76d1ac6df868808f"
 }
