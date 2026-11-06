@@ -1,5 +1,5 @@
 /* Option A: Executive — dark, cinematic, confident. */
-.sol-ho--executive { --a-bg: #0b1424; --a-bg2: #101d33; --a-line: rgba(255, 255, 255, .1); --a-amber: #f59e0b; --a-text: rgba(255, 255, 255, .72); }
+.sol-ho--executive { --a-bg: #0b1424; --a-bg2: #101d33; --a-line: rgba(255, 255, 255, .1); --a-amber: #f59e0b; --a-text: rgba(255, 255, 255, .84); }
 .sol-ho--executive .sol-main { background: var(--a-bg); color: #fff; }
 .sol-ho--executive .ho-eyebrow { color: var(--a-amber); }
 .sol-ho--executive .ho-intro { color: var(--a-text); }
@@ -52,9 +52,9 @@
 /* 2. Platforms */
 .hoa-platforms { padding: 44px 0 36px; border-top: 1px solid var(--a-line); border-bottom: 1px solid var(--a-line); background: var(--a-bg2); }
 .hoa-platforms__label { text-align: center; font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255, 255, 255, .55); margin-bottom: 22px !important; }
-.hoa-platforms .ho-marquee__track li { font-family: var(--sol-display); font-size: 1.35rem; font-weight: 600; color: rgba(255, 255, 255, .5); white-space: nowrap; transition: color .2s; }
+.hoa-platforms .ho-marquee__track li { font-family: var(--sol-display); font-size: 1.35rem; font-weight: 600; color: rgba(255, 255, 255, .7); white-space: nowrap; transition: color .2s; }
 .hoa-platforms .ho-marquee__track li:hover { color: #fff; }
-.hoa-platforms__note { text-align: center; margin-top: 18px !important; font-size: .74rem; color: rgba(255, 255, 255, .38); }
+.hoa-platforms__note { text-align: center; margin-top: 18px !important; font-size: .82rem; color: rgba(255, 255, 255, .6); }
 
 /* Split heading (title left, note right) */
 .hoa-split-head { display: grid; gap: 8px; margin-bottom: 48px; align-items: end; }
@@ -89,12 +89,11 @@
 
 /* 4. Why SOL */
 .hoa-why { background: linear-gradient(180deg, var(--a-bg) 0%, var(--a-bg2) 100%); }
-.hoa-why::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px); background-size: 64px 64px; -webkit-mask-image: radial-gradient(70% 70% at 50% 50%, #000, transparent); mask-image: radial-gradient(70% 70% at 50% 50%, #000, transparent); }
 .hoa-why__grid { position: relative; display: grid; gap: 40px; }
 @media (min-width: 1024px) { .hoa-why__grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.2fr); gap: 72px; align-items: start; } .hoa-why__lead { position: sticky; top: 140px; } }
 .hoa-why__lead .sol-btn { margin-top: 28px; }
 .hoa-why__items { display: grid; gap: 18px; }
-@media (min-width: 640px) { .hoa-why__items { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hoa-why__item:nth-child(even) { transform: translateY(32px); } .ho-js .hoa-why__item:nth-child(even).is-in { transform: translateY(32px); } }
+@media (min-width: 640px) { .hoa-why__items { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hoa-why__item:nth-child(even) { transform: translateY(32px); } }
 .hoa-why__item { padding: 28px; }
 .hoa-why__item h3 { margin: 18px 0 8px; font-family: var(--sol-display); font-size: 1.25rem; font-weight: 600; color: #fff; }
 .hoa-why__item p { color: var(--a-text); line-height: 1.6; }
@@ -206,3 +205,14 @@
 	.hoa-hero__btns .sol-btn { width: 100%; }
 	.hoa-stats { margin-top: 40px; padding: 22px; }
 }
+
+/* v2.19.2: easier reading */
+.hoa-stats dd { color: rgba(255, 255, 255, .78); font-size: .82rem; }
+.hoa-start__item small { color: rgba(255, 255, 255, .7); font-size: .85rem; }
+.hoa-card__text { color: rgba(255, 255, 255, .88); font-size: 1rem; }
+.hoa-why__item p, .hoa-steps__list p { font-size: 1.02rem; }
+.hoa-life__grid li { padding: 24px 26px; display: flex; flex-direction: column; gap: 6px; }
+.hoa-life__grid h3 { margin-top: 14px; font-size: 1.2rem; }
+.hoa-prices { background: var(--a-bg2); border-top: 1px solid var(--a-line); --ho-accent: #f59e0b; --ho-accent-dark: #b45309; }
+.hoa-prices .ho-prices__note { color: rgba(255, 255, 255, .85); }
+.hoa-prices .ho-price__badge { color: #0b1424; }

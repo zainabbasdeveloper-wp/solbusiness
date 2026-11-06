@@ -61,23 +61,6 @@ get_header();
 	</div>
 </section>
 
-<!-- 4. Our services -->
-<section class="ho-sec hod-services">
-	<div class="ho-wrap">
-		<?php sol_ho_head( 'Our services', 'Three ways we can help', 'One friendly team for business, NDIS and digital, so you never have to explain yourself twice.' ); ?>
-		<div class="hod-services__grid" data-reveal-group>
-			<?php foreach ( $d['areas'] as $a ) : ?>
-				<article class="hod-svc" data-reveal>
-					<div class="hod-svc__img"><?php echo sol_ho_img( $a['img'], $a['alt'] ); // phpcs:ignore ?><span><?php echo sol_icon( $a['icon'] ); // phpcs:ignore ?></span></div>
-					<h3><?php echo esc_html( $a['title'] ); ?></h3>
-					<p><?php echo esc_html( $a['text'] ); ?></p>
-					<a class="hod-path__cta" href="<?php echo esc_url( home_url( $a['url'] ) ); ?>">Explore <?php echo esc_html( $a['short'] ); ?> <?php echo sol_icon( 'arrow-right' ); // phpcs:ignore ?></a>
-				</article>
-			<?php endforeach; ?>
-		</div>
-	</div>
-</section>
-
 <!-- 5. Journey -->
 <section class="ho-sec hod-journey">
 	<div class="ho-wrap">
@@ -128,17 +111,10 @@ get_header();
 </section>
 
 <!-- 8. Pricing -->
-<div class="hod-pricing"><?php sol_ho_pricing(); ?></div>
-
-<!-- 9. Engagement examples -->
-<section class="ho-sec hod-ex">
+<section class="ho-sec hod-prices">
 	<div class="ho-wrap">
-		<?php sol_ho_head( 'Engagement examples', 'How we typically help', 'General examples of SOL service pathways, not client testimonials or guaranteed outcomes.', 'ho-head--center' ); ?>
-		<div class="hod-ex__grid" data-reveal-group>
-			<?php foreach ( $d['examples'] as $i => $e ) : ?>
-				<article class="hod-ex__card hod-ex__card--<?php echo (int) $i % 3; ?>" data-reveal><span class="hod-path__icon"><?php echo sol_icon( $e['icon'] ? $e['icon'] : 'briefcase' ); // phpcs:ignore ?></span><small><?php echo esc_html( $e['tag'] ); ?></small><h3><?php echo esc_html( $e['title'] ); ?></h3><p><?php echo esc_html( $e['text'] ); ?></p></article>
-			<?php endforeach; ?>
-		</div>
+		<?php sol_ho_head( 'NDIS registration packages', 'Clear, fixed prices', 'Every package starts with a free call, so you know exactly what you are paying for.', 'ho-head--center' ); ?>
+		<?php sol_ho_prices(); ?>
 	</div>
 </section>
 

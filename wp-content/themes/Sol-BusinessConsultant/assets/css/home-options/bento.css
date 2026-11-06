@@ -1,5 +1,5 @@
 /* Option C: Bento — modern tiles, colour and interaction. */
-.sol-ho--bento { --c-bg: #f5f7fb; --c-ink: #0f172a; --c-mist: #5b6578; --c-line: #e3e8f0; --c-amber: #f59e0b; --c-indigo: #6366f1; --c-r: 24px; }
+.sol-ho--bento { --c-bg: #f5f7fb; --c-ink: #0f172a; --c-mist: #465066; --c-line: #e3e8f0; --c-amber: #f59e0b; --c-indigo: #6366f1; --c-r: 24px; }
 .sol-ho--bento .sol-main { background: var(--c-bg); color: var(--c-ink); }
 .sol-ho--bento .ho-eyebrow { color: var(--c-indigo); }
 .sol-ho--bento .ho-intro { color: var(--c-mist); }
@@ -177,3 +177,12 @@
 @media (max-width: 767px) { .hoc-btns .sol-btn, .hoc-hero .sol-btn { width: 100%; } .hoc-final__card { padding: 24px 18px; } }
 /* Phones: the two number tiles sit side by side, the pathway card below them. */
 @media (max-width: 639px) { .hoc-tile--status { order: 5; } .hoc-tile--amber, .hoc-tile--dark { min-height: 150px; } }
+
+/* v2.19.2: easier reading */
+.hoc-b p, .hoc-steps__list p, .hoc-panel__body > p { font-size: 1.02rem; }
+.hoc-tile--status li { font-size: .92rem; }
+.hoc-tile--status small, .hoc-window figcaption { font-size: .8rem; color: #64748b; }
+.hoc-window__row small { font-size: .88rem; color: #475569; }
+.hoc-prices { background: #fff; --ho-accent: #6366f1; --ho-accent-dark: #4f46e5; }
+.hoc-prices .ho-price { background: var(--c-bg); border-color: var(--c-line); }
+.hoc-hero { background: radial-gradient(40% 50% at 10% 10%, rgba(99, 102, 241, .12), transparent 70%), radial-gradient(40% 50% at 90% 20%, rgba(245, 158, 11, .14), transparent 70%), var(--c-bg); }

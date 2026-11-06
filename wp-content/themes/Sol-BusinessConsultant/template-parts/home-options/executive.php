@@ -148,7 +148,12 @@ get_header();
 </section>
 
 <!-- 7. Pricing -->
-<div class="hoa-pricing"><?php sol_ho_pricing(); ?></div>
+<section class="ho-sec hoa-prices">
+	<div class="ho-wrap">
+		<?php sol_ho_head( 'Transparent pricing', 'Fixed-fee NDIS registration', 'No surprises: you see the price before any paid work begins.', 'ho-head--center' ); ?>
+		<?php sol_ho_prices(); ?>
+	</div>
+</section>
 
 <!-- 8. Easy Compliance -->
 <section class="ho-sec hoa-life">
@@ -162,7 +167,6 @@ get_header();
 				<li class="hoa-glass" data-reveal data-ho-glow>
 					<div class="hoa-life__top"><span class="hoa-why__icon"><?php echo sol_icon( $s['icon'] ? $s['icon'] : 'check' ); // phpcs:ignore ?></span><b>0<?php echo (int) $i + 1; ?></b></div>
 					<h3><?php echo esc_html( $s['title'] ); ?></h3>
-					<p><?php echo esc_html( $s['text'] ); ?></p>
 				</li>
 			<?php endforeach; ?>
 		</ol>
@@ -170,27 +174,6 @@ get_header();
 			<a class="sol-btn sol-btn--primary" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Get Audit-Ready <?php echo sol_icon( 'arrow-right', 'sol-btn__icon' ); // phpcs:ignore ?></a>
 			<a class="sol-btn sol-btn--light" href="https://sol.easycompliance.org" target="_blank" rel="noopener">Open the platform</a>
 		</div>
-	</div>
-</section>
-
-<!-- 9. Engagement examples -->
-<section class="ho-sec hoa-examples">
-	<div class="ho-wrap">
-		<div class="hoa-split-head">
-			<?php sol_ho_head( 'Engagement examples', 'How we typically support clients' ); ?>
-			<p class="hoa-split-head__aside" data-reveal>General examples of SOL service pathways. They are not client testimonials or guaranteed outcomes.</p>
-		</div>
-		<div class="hoa-ex" data-reveal-group>
-			<?php foreach ( $d['examples'] as $e ) : ?>
-				<article class="hoa-ex__card" data-reveal>
-					<span class="hoa-ex__icon"><?php echo sol_icon( $e['icon'] ? $e['icon'] : 'briefcase' ); // phpcs:ignore ?></span>
-					<span class="hoa-ex__tag"><?php echo esc_html( $e['tag'] ); ?></span>
-					<h3><?php echo esc_html( $e['title'] ); ?></h3>
-					<p><?php echo esc_html( $e['text'] ); ?></p>
-				</article>
-			<?php endforeach; ?>
-		</div>
-		<a class="sol-btn sol-btn--text" href="<?php echo esc_url( home_url( '/case-studies/' ) ); ?>">See all engagement examples <?php echo sol_icon( 'arrow-right', 'sol-btn__icon' ); // phpcs:ignore ?></a>
 	</div>
 </section>
 

@@ -57,7 +57,7 @@ get_header();
 						<h3 class="hob-row__title"><a href="<?php echo esc_url( home_url( $a['url'] ) ); ?>"><?php echo esc_html( $a['title'] ); ?></a></h3>
 						<p class="hob-row__text"><?php echo esc_html( $a['text'] ); ?></p>
 						<ul class="hob-chips">
-							<?php foreach ( $a['links'] as $l ) : ?><li><a href="<?php echo esc_url( home_url( $l[1] ) ); ?>"><?php echo esc_html( $l[0] ); ?></a></li><?php endforeach; ?>
+							<?php foreach ( array_slice( $a['links'], 0, 4 ) as $l ) : ?><li><a href="<?php echo esc_url( home_url( $l[1] ) ); ?>"><?php echo esc_html( $l[0] ); ?></a></li><?php endforeach; ?>
 						</ul>
 					</div>
 					<a class="hob-row__media" href="<?php echo esc_url( home_url( $a['url'] ) ); ?>" aria-label="<?php echo esc_attr( 'Explore ' . $a['title'] ); ?>">
@@ -113,21 +113,6 @@ get_header();
 	</div>
 </section>
 
-<!-- 7. Compliance lifecycle (swipe) -->
-<section class="ho-sec hob-life" data-ho-scroller>
-	<div class="ho-wrap">
-		<div class="hob-life__head">
-			<?php sol_ho_head( 'Powered by Easy Compliance', 'The compliance lifecycle', 'From first call to a clear audit-readiness plan, and support every day after.' ); ?>
-			<div class="ho-arrows"><button type="button" data-ho-prev aria-label="Previous"><?php echo sol_icon( 'arrow-left' ); // phpcs:ignore ?></button><button type="button" data-ho-next aria-label="Next"><?php echo sol_icon( 'arrow-right' ); // phpcs:ignore ?></button></div>
-		</div>
-		<ol class="hob-life__track" data-ho-track>
-			<?php foreach ( $d['lifecycle'] as $i => $s ) : ?>
-				<li class="hob-life__card"><b>0<?php echo (int) $i + 1; ?></b><span class="hob-icon"><?php echo sol_icon( $s['icon'] ? $s['icon'] : 'check' ); // phpcs:ignore ?></span><h3><?php echo esc_html( $s['title'] ); ?></h3><p><?php echo esc_html( $s['text'] ); ?></p></li>
-			<?php endforeach; ?>
-		</ol>
-	</div>
-</section>
-
 <!-- 8. Why SOL -->
 <section class="ho-sec hob-why">
 	<div class="ho-wrap">
@@ -141,20 +126,10 @@ get_header();
 </section>
 
 <!-- 9. Pricing -->
-<div class="hob-pricing"><?php sol_ho_pricing(); ?></div>
-
-<!-- 10. Client portal -->
-<section class="ho-sec hob-portal">
-	<div class="ho-wrap hob-portal__grid">
-		<div>
-			<?php sol_ho_head( 'Client portal', 'Everything in one secure place', 'After a service payment, follow progress, share documents and get help from your own portal.' ); ?>
-			<a class="sol-btn sol-btn--text" href="<?php echo esc_url( home_url( '/after-payment/' ) ); ?>">How the portal works <?php echo sol_icon( 'arrow-right', 'sol-btn__icon' ); // phpcs:ignore ?></a>
-		</div>
-		<ul class="hob-portal__list" data-reveal-group>
-			<?php foreach ( $d['portal'] as $p ) : ?>
-				<li data-reveal><span class="hob-icon"><?php echo sol_icon( $p['icon'] ? $p['icon'] : 'check' ); // phpcs:ignore ?></span><div><h3><?php echo esc_html( $p['title'] ); ?></h3><p><?php echo esc_html( $p['text'] ); ?></p></div></li>
-			<?php endforeach; ?>
-		</ul>
+<section class="ho-sec hob-prices">
+	<div class="ho-wrap">
+		<?php sol_ho_head( 'Pricing', 'Simple, fixed fees', 'Our NDIS registration packages. Every other service is quoted in writing before work begins.', 'ho-head--center' ); ?>
+		<?php sol_ho_prices(); ?>
 	</div>
 </section>
 

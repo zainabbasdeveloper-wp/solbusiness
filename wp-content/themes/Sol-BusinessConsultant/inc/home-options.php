@@ -221,7 +221,8 @@ function sol_ho_data() {
 		'lifecycle' => sol_rows( $life['groups'][0]['steps'] ?? array() ),
 		'portal'    => sol_rows( $portal['cards'] ?? array() ),
 		'examples'  => sol_rows( $examples['cards'] ?? array() ),
-		'faqs'      => sol_rows( $faq['items'] ?? array() ),
+		'faqs'      => sol_ho_pick_faqs( sol_rows( $faq['items'] ?? array() ) ),
+		'packages'  => sol_rows( sol_ho_find( sol_ho_rows( 'blocks', 'pricing-tabs' ), array( 'acf_fc_layout' => 'pricing' ) )['tabs'][0]['packages'] ?? array() ),
 		'platforms' => array_map( function ( $l ) {
 			return str_replace( '|', ' ', (string) ( $l['name'] ?? '' ) );
 		}, (array) ( $logos['logos'] ?? array() ) ),
@@ -252,6 +253,40 @@ function sol_ho_pricing() {
 	foreach ( sol_ho_rows( 'blocks', 'pricing-tabs' ) as $i => $row ) {
 		sol_render_row( $row, $i );
 	}
+}
+
+/** Four FAQs are enough on a home page: cost, one service, NDIS timing, how we work. */
+function sol_ho_pick_faqs( $all ) {
+	$want = array( 'What does it cost?', 'Can I get help with just one service?', 'How long does NDIS registration take?', 'How do we work together?' );
+	$out  = array();
+	foreach ( $want as $q ) {
+		foreach ( $all as $f ) {
+			if ( isset( $f['question'] ) && $f['question'] === $q ) {
+				$out[] = $f;
+			}
+		}
+	}
+	return $out ? $out : array_slice( $all, 0, 4 );
+}
+
+/** Compact pricing: the three NDIS registration packages, linking to the package finder and full pricing. */
+function sol_ho_prices() {
+	$pk = sol_ho_data()['packages'];
+	if ( ! $pk ) {
+		return;
+	}
+	echo '<div class="ho-prices" data-reveal-group>';
+	foreach ( $pk as $p ) {
+		$hl = ! empty( $p['highlight'] );
+		echo '<a class="ho-price' . ( $hl ? ' is-pop' : '' ) . '" href="' . esc_url( home_url( '/get-started/' ) ) . '" data-reveal>';
+		if ( ! empty( $p['badge'] ) ) {
+			echo '<span class="ho-price__badge">' . esc_html( $p['badge'] ) . '</span>';
+		}
+		echo '<h3>' . esc_html( $p['name'] ) . '</h3><p>' . esc_html( $p['tagline'] ?? '' ) . '</p>';
+		echo '<span class="ho-price__amount">' . esc_html( $p['price'] ) . ' <small>+GST</small></span>';
+		echo '<span class="ho-price__go">Find my package ' . sol_icon( 'arrow-right' ) . '</span></a>'; // phpcs:ignore
+	}
+	echo '</div><p class="ho-prices__note"><span>Fixed fees for NDIS registration. The auditor&rsquo;s fee is separate.</span><a href="' . esc_url( home_url( '/pricing/' ) ) . '">See all packages and pricing</a></p>';
 }
 
 /** The service finder quiz. */

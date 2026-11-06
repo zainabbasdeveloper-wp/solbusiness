@@ -81,3 +81,24 @@
 /* Text link with arrow */
 .sol-ho .sol-btn--text { padding: 6px 0; background: none; border: 0; box-shadow: none; color: inherit !important; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 .sol-ho .sol-btn--text .sol-btn__icon { color: var(--sol-harvest); }
+
+/* No background patterns on the option pages (grid lines, dot textures, film grain). */
+.sol-ho .sol-section.sol-bg-chalk { background-image: none !important; }
+.sol-ho .sol-main > .sol-section.sol-bg-ink::after, .sol-ho .sol-footer::after { display: none !important; }
+
+/* Compact pricing summary: three NDIS packages and a link to full pricing. */
+.ho-prices { display: grid; gap: 16px; }
+@media (min-width: 900px) { .ho-prices { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
+.ho-price { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 30px 28px; border-radius: 22px; background: #fff; border: 1px solid rgba(15, 23, 42, .1); color: var(--sol-ink) !important; transition: transform .3s ease, box-shadow .3s ease; }
+.ho-price:hover { transform: translateY(-4px); box-shadow: 0 30px 50px -36px rgba(15, 23, 42, .5); }
+.ho-price.is-pop { border: 2px solid var(--ho-accent, #f59e0b); }
+.ho-price__badge { position: absolute; top: -13px; left: 28px; padding: 4px 12px; border-radius: 999px; background: var(--ho-accent, #f59e0b); color: #fff; font-size: .74rem; font-weight: 700; letter-spacing: .04em; }
+.ho-price h3 { margin: 0; font-family: var(--sol-display); font-size: 1.2rem; font-weight: 700; letter-spacing: .01em; }
+.ho-price p { color: #4b5563; font-size: 1rem; line-height: 1.55; }
+.ho-price__amount { margin-top: auto; padding-top: 10px; font-family: var(--sol-display); font-size: 2.4rem; font-weight: 700; letter-spacing: -.03em; line-height: 1; }
+.ho-price__amount small { font-family: var(--sol-font); font-size: .9rem; font-weight: 500; color: #6b7280; letter-spacing: 0; }
+.ho-price__go { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--ho-accent-dark, #b45309); }
+.ho-price__go .sol-icon { width: 16px; height: 16px; transition: transform .2s; }
+.ho-price:hover .ho-price__go .sol-icon { transform: translateX(3px); }
+.ho-prices__note { margin-top: 22px !important; display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; font-size: .95rem; color: inherit; opacity: .85; }
+.ho-prices__note a { font-weight: 600; text-decoration: underline; text-underline-offset: 4px; color: inherit !important; }

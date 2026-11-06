@@ -35,15 +35,6 @@ get_header();
 	</div>
 </section>
 
-<!-- 2. Platforms -->
-<section class="hoc-plat">
-	<div class="ho-wrap">
-		<p>Familiar with the systems you already use</p>
-		<ul><?php foreach ( $d['platforms'] as $p ) : ?><li><?php echo esc_html( $p ); ?></li><?php endforeach; ?></ul>
-		<small>Names shown for context only; no endorsement or partnership implied.</small>
-	</div>
-</section>
-
 <!-- 3. Service explorer -->
 <section id="hoc-explore" class="ho-sec hoc-explore" data-ho-tabs>
 	<div class="ho-wrap">
@@ -159,7 +150,12 @@ get_header();
 <div class="hoc-quiz"><?php sol_ho_quiz( array( 'eyebrow' => 'Not sure where to start?', 'heading' => 'Find the right service in three questions', 'align' => 'center', 'background' => 'white' ) ); ?></div>
 
 <!-- 9. Pricing -->
-<div class="hoc-pricing"><?php sol_ho_pricing(); ?></div>
+<section class="ho-sec hoc-prices">
+	<div class="ho-wrap">
+		<?php sol_ho_head( 'Pricing', 'Fixed-fee NDIS registration', 'Pick the package that matches your registration groups. Not sure? The package finder will tell you.', 'ho-head--center' ); ?>
+		<?php sol_ho_prices(); ?>
+	</div>
+</section>
 
 <!-- 10. FAQ -->
 <section class="ho-sec hoc-faq">

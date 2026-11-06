@@ -1,5 +1,5 @@
 /* Option B: Editorial — light, spacious, magazine-like. */
-.sol-ho--editorial { --b-paper: #fbf8f2; --b-sand: #efe8db; --b-ink: #0f1b2d; --b-mist: #5b6170; --b-line: rgba(15, 27, 45, .12); --b-amber: #d97706; }
+.sol-ho--editorial { --b-paper: #fbf8f2; --b-sand: #efe8db; --b-ink: #0f1b2d; --b-mist: #454b58; --b-line: rgba(15, 27, 45, .12); --b-amber: #d97706; }
 .sol-ho--editorial .sol-main { background: var(--b-paper); color: var(--b-ink); }
 .sol-ho--editorial .sol-header { background: rgba(251, 248, 242, .92); }
 .sol-ho--editorial .ho-intro { color: var(--b-mist); }
@@ -146,3 +146,10 @@
 .sol-ho .sol-btn--text { padding: 6px 0; background: none; border: 0; color: inherit !important; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 .sol-ho .sol-btn--text .sol-btn__icon { color: var(--sol-harvest); }
 @media (max-width: 767px) { .hob-hero__btns .sol-btn, .hob-final__btn { width: 100%; } }
+
+/* v2.19.2: easier reading */
+.hob-row__text, .hob-road p, .hob-why__item p, .hob-steps__list p { font-size: 1.04rem; }
+.hob-collage__cap { font-size: 1.1rem; text-shadow: 0 1px 12px rgba(0, 0, 0, .35); }
+.hob-stats dd { font-size: .98rem; color: #3f4552; }
+.hob-prices { background: var(--b-sand); --ho-accent: #d97706; --ho-accent-dark: #b45309; }
+.hob-prices .ho-price { border-color: rgba(15, 27, 45, .1); }
