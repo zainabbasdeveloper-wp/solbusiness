@@ -482,3 +482,36 @@ function sol_render_update_notice() {
 	echo ' <a href="' . esc_url( $url ) . '">Review or undo in SOL Setup</a></p></div>';
 }
 add_action( 'admin_notices', 'sol_render_update_notice' );
+
+/**
+ * The design preview page (/home-new/) always follows the theme. It is a draft that nobody edits in
+ * WordPress, so it is rebuilt from the theme whenever it differs, even if SOL Setup would keep it as
+ * "edited" or automatic updates are paused. Only this one page is touched.
+ */
+add_action( 'admin_init', function () {
+	if ( wp_doing_ajax() || ! current_user_can( 'manage_options' ) || ! function_exists( 'update_field' ) || ! function_exists( 'sol_apply_post_item' ) ) {
+		return;
+	}
+	$seed = sol_seed();
+	$key  = 'page:home-new';
+	$fp   = isset( $seed['fingerprints'][ $key ] ) ? $seed['fingerprints'][ $key ] : '';
+	if ( ! $fp ) {
+		return;
+	}
+	$item = null;
+	foreach ( (array) ( $seed['pages'] ?? array() ) as $p ) {
+		if ( 'page' === $p['post_type'] && 'home-new' === $p['path'] ) {
+			$item = $p;
+			break;
+		}
+	}
+	$id = $item ? sol_find_item( $item ) : 0;
+	if ( ! $id || get_post_meta( $id, '_sol_fp', true ) === $fp || get_transient( 'sol_preview_updating' ) ) {
+		return;
+	}
+	set_transient( 'sol_preview_updating', 1, MINUTE_IN_SECONDS );
+	$report = array( 'log' => array(), 'errors' => array(), 'updated' => array(), 'created' => array(), 'kept' => array() );
+	sol_apply_post_item( $id, $item, isset( $seed['field_keys'] ) ? $seed['field_keys'] : array(), sol_seed_ids(), $report );
+	update_post_meta( $id, '_sol_fp', $fp );
+	delete_transient( 'sol_preview_updating' );
+}, 20 );
