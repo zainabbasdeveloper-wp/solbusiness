@@ -1,0 +1,53 @@
+/* /home-options/ overview */
+.hoi-hero { padding: 72px 0 40px; background: radial-gradient(50% 70% at 90% 0%, rgba(245, 158, 11, .12), transparent 70%), linear-gradient(180deg, #f8fafc, #fff); }
+@media (min-width: 900px) { .hoi-hero { padding: 104px 0 56px; } }
+.hoi-hero__title { font-family: var(--sol-display); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.04; letter-spacing: -.03em; max-width: 880px; margin: 0; }
+.hoi-hero__text { margin-top: 20px !important; font-size: 1.12rem; line-height: 1.65; color: var(--sol-mist); max-width: 760px; }
+.hoi-hero__notes { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: .92rem; color: var(--sol-ink-2); }
+.hoi-hero__notes li { display: inline-flex; align-items: center; gap: 8px; }
+.hoi-hero__notes .sol-icon { color: var(--sol-harvest-dark); width: 18px; height: 18px; }
+
+.hoi-options { padding: 24px 0 88px; }
+.hoi-grid { display: grid; gap: 28px; }
+@media (min-width: 900px) { .hoi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; } }
+.hoi-card { display: flex; flex-direction: column; border: 1px solid var(--sol-border); border-radius: 22px; overflow: hidden; background: #fff; transition: transform .3s ease, box-shadow .3s ease; }
+.hoi-card:hover { transform: translateY(-4px); box-shadow: 0 36px 60px -40px rgba(15, 23, 42, .5); }
+.hoi-card__preview { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; }
+.hoi-card__img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2, .7, .2, 1); }
+.hoi-card:hover .hoi-card__img { transform: scale(1.04); }
+.hoi-card__preview::after { content: ""; position: absolute; inset: 0; }
+.hoi-card--executive .hoi-card__preview::after { background: linear-gradient(100deg, rgba(11, 20, 36, .92) 0%, rgba(11, 20, 36, .55) 60%, rgba(245, 158, 11, .18)); }
+.hoi-card--editorial .hoi-card__preview::after { background: linear-gradient(180deg, rgba(251, 248, 242, .1), rgba(251, 248, 242, .85)); }
+.hoi-card--bento .hoi-card__preview::after { background: linear-gradient(135deg, rgba(99, 102, 241, .55), rgba(245, 158, 11, .35)); mix-blend-mode: multiply; }
+.hoi-card--human .hoi-card__preview::after { background: radial-gradient(70% 90% at 20% 100%, rgba(224, 122, 47, .45), transparent 70%), linear-gradient(180deg, transparent, rgba(255, 248, 240, .5)); }
+/* A tiny wireframe hint of each layout */
+.hoi-card__mock { position: absolute; z-index: 1; left: 24px; bottom: 24px; display: grid; gap: 8px; width: 46%; }
+.hoi-card__mock span { display: block; height: 10px; border-radius: 6px; background: rgba(255, 255, 255, .85); }
+.hoi-card__mock span:nth-child(1) { height: 18px; width: 100%; }
+.hoi-card__mock span:nth-child(2) { width: 80%; opacity: .7; }
+.hoi-card__mock span:nth-child(3) { width: 38%; height: 22px; background: #f59e0b; }
+.hoi-card--editorial .hoi-card__mock span { background: rgba(15, 27, 45, .85); }
+.hoi-card--editorial .hoi-card__mock span:nth-child(3) { background: #d97706; }
+.hoi-card--human .hoi-card__mock span:nth-child(3) { background: #e07a2f; border-radius: 999px; }
+.hoi-card--bento .hoi-card__mock { grid-template-columns: 1fr 1fr; }
+.hoi-card--bento .hoi-card__mock span { height: 34px !important; width: 100% !important; border-radius: 10px; }
+.hoi-card__letter { position: absolute; z-index: 1; top: 18px; right: 18px; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: #fff; color: var(--sol-ink); font-family: var(--sol-display); font-weight: 700; font-size: 1.3rem; box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .45); }
+.hoi-card__body { padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.hoi-card__name { font-family: var(--sol-display); font-size: 1.5rem; font-weight: 700; letter-spacing: -.02em; margin: 0; }
+.hoi-card__idea { color: var(--sol-mist); line-height: 1.6; }
+.hoi-card__palette { display: flex; gap: 6px; }
+.hoi-card__palette span { width: 30px; height: 30px; border-radius: 8px; box-shadow: inset 0 0 0 1px rgba(15, 23, 42, .12); }
+.hoi-card__points { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 7px; font-size: .94rem; color: var(--sol-ink-2); }
+.hoi-card__points li { display: flex; gap: 9px; align-items: flex-start; }
+.hoi-card__points .sol-icon { width: 17px; height: 17px; color: #16a34a; margin-top: 3px; flex-shrink: 0; }
+.hoi-card__btn { margin-top: auto; align-self: flex-start; }
+
+.hoi-compare { padding: 80px 0 120px; background: #f8fafc; border-top: 1px solid var(--sol-border); }
+.hoi-table-wrap { overflow-x: auto; border: 1px solid var(--sol-border); border-radius: 18px; background: #fff; }
+.hoi-table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: .94rem; }
+.hoi-table th, .hoi-table td { padding: 16px 18px; border-bottom: 1px solid var(--sol-border); text-align: left; vertical-align: top; line-height: 1.5; }
+.hoi-table thead th { background: #0f172a; color: #fff; font-family: var(--sol-display); font-weight: 600; }
+.hoi-table thead th b { display: inline-grid; place-items: center; width: 24px; height: 24px; margin-right: 6px; border-radius: 50%; background: #f59e0b; color: #0f172a; font-size: .8rem; }
+.hoi-table tbody th { color: var(--sol-mist); font-weight: 600; width: 150px; }
+.hoi-table tr:last-child th, .hoi-table tr:last-child td { border-bottom: 0; }
+.hoi-foot { margin-top: 24px !important; max-width: 860px; color: var(--sol-mist); line-height: 1.65; }
