@@ -1,5 +1,10 @@
 [
  {
+  "id": "9da16688",
+  "where": "page:home",
+  "text": "Independent business consultancy in Glenroy, VIC: company and ABN/GST registration, NDIS registration preparation, bookkeeping and BAS, payroll and websites."
+ },
+ {
   "id": "e26a326e",
   "where": "page:home",
   "text": "Australian NDIS & business consultants"
@@ -815,9 +820,29 @@
   "text": "Or call +61 460 003 494"
  },
  {
+  "id": "e711eab6",
+  "where": "page:about",
+  "text": "About SOL Business Consultant | Independent Consultancy, Glenroy VIC"
+ },
+ {
+  "id": "e74ab9e2",
+  "where": "page:about",
+  "text": "SOL Business Consultant Pty Ltd is an independent business consultancy in Glenroy, Victoria, helping small businesses and disability service providers."
+ },
+ {
   "id": "738d204f",
   "where": "page:about",
   "text": "About SOL"
+ },
+ {
+  "id": "56e59d7a",
+  "where": "page:about",
+  "text": "An independent business consultancy in Glenroy, Victoria"
+ },
+ {
+  "id": "2f24bbb7",
+  "where": "page:about",
+  "text": "SOL Business Consultant Pty Ltd is an independent business consultancy based in Glenroy, Victoria. We help small businesses and disability service providers with company and ABN/GST registration, NDIS registration preparation and compliance documentation, bookkeeping and BAS (Xero and QuickBooks), payroll, websites and digital marketing. We also deliver online NDIS Support Coordinator training. We are not affiliated with the NDIS Commission or any government agency."
  },
  {
   "id": "a91fe4ca",
@@ -5080,6 +5105,11 @@
   "text": "The Foundation\nof Your Growth"
  },
  {
+  "id": "d37e5508",
+  "where": "sol_block:about-sol",
+  "text": "<p>SOL Business Consultant Pty Ltd is an independent business consultancy based in Glenroy, Victoria. We help small businesses and disability service providers with company and ABN/GST registration, NDIS registration preparation and compliance documentation, bookkeeping and BAS, payroll, websites and digital marketing, and we deliver online NDIS Support Coordinator training.</p><p>With Easy Compliance in our ecosystem, we help providers organise documents, prepare operational evidence, and build workflows that are easier to maintain. We focus on practical systems, clear advice, and responsible claims.</p>"
+ },
+ {
   "id": "b3e9ddda",
   "where": "sol_block:about-sol",
   "text": "Practical Innovation"
@@ -6210,6 +6240,16 @@
   "text": "Certificate of Advanced Completion"
  },
  {
+  "id": "aefeb65f",
+  "where": "options",
+  "text": "Independent business consultancy in Glenroy, Victoria, helping small businesses and disability service providers."
+ },
+ {
+  "id": "f3b4b620",
+  "where": "options",
+  "text": "Independent business consultancy in Glenroy, Victoria, for small businesses and disability service providers."
+ },
+ {
   "id": "371e8c5e",
   "where": "options",
   "text": "Free Readiness Quiz"
@@ -6253,6 +6293,11 @@
   "id": "5e1c5089",
   "where": "options",
   "text": "Easy Compliance"
+ },
+ {
+  "id": "948ba493",
+  "where": "options",
+  "text": "Copyright {year} SOL Business Consultant Pty Ltd, an independent business consultancy based in Glenroy, Victoria. Not affiliated with the NDIS Commission or any government agency."
  },
  {
   "id": "7aa455f1",

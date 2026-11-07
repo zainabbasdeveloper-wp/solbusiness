@@ -306,3 +306,12 @@ function sol_soft_email( $text ) {
 	list( $user, $domain ) = explode( '@', $text, 2 );
 	return esc_html( antispambot( $user ) ) . '@<wbr>' . esc_html( antispambot( $domain ) );
 }
+
+/**
+ * The approved description of SOL (SOL Site → Brand → Company description), used for search-engine
+ * business details and the chat assistant. Same text as _dev/build/content/brand.mjs.
+ */
+function sol_company_description() {
+	$d = trim( (string) sol_opt( 'company_description' ) );
+	return '' !== $d ? $d : 'SOL Business Consultant Pty Ltd is an independent business consultancy based in Glenroy, Victoria. We help small businesses and disability service providers with company and ABN/GST registration, NDIS registration preparation and compliance documentation, bookkeeping and BAS (Xero and QuickBooks), payroll, websites and digital marketing. We also deliver online NDIS Support Coordinator training. We are not affiliated with the NDIS Commission or any government agency.';
+}

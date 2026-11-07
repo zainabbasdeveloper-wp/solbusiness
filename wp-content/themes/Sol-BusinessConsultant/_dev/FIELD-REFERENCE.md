@@ -125,6 +125,7 @@ Key `group_sol_options` · Shown on: options_page = sol-site-settings
 | `logo` | Image (attachment ID) | Logo |
 | `company_name` | Text | Company name |
 | `tagline` | Text area | Footer tagline |
+| `company_description` | Text area | Company description — The approved description of SOL. Used for search engines (business details) and the website chat assistant. |
 | `topbar_text` | Text | Top bar text |
 | `topbar_link` | Link {title, url, target} | Top bar link |
 | **— Contact tab —** | | |

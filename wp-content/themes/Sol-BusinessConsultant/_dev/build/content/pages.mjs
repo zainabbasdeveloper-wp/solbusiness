@@ -4,6 +4,7 @@ import { D, L, R, ext, btn, rbtn, img, ic, items, ref, app, yesNo } from './help
 import { DATA, buy, buyId, WOO } from './helpers.mjs';
 import { ndisSku, SKU_BY_NAME } from './products.mjs';
 import { LIVE_TEXT } from './live-updates.mjs';
+import { COMPANY } from './brand.mjs';
 const { NDIS_PACKAGES, NDIS_ENTITY_TYPES, NDIS_REGISTRATION_GROUPS, NDIS_OPTIONAL_MODULES } = DATA.ndisRegistrationPricing;
 
 const block = (slug) => ({ acf_fc_layout: 'reusable_block', block: ref('sol_block', slug) });
@@ -42,7 +43,8 @@ const home = {
     },
     {
       acf_fc_layout: 'logo_strip', ...head({ eyebrow: 'Australian Compliance Context', align: 'center', heading: 'Built Around the Systems Australian Providers Use', intro: 'We help clients navigate common government, accounting, compliance, and business platforms. Platform names are shown for context only and do not imply endorsement or partnership.' }),
-      logos: D.LogoCarousel.PLATFORMS.map((p) => ({ name: p.abbr.replace(/\n/g, '|'), image: '' })), animate: true,
+      // Bookkeeping is Xero and QuickBooks only (approved business description).
+      logos: D.LogoCarousel.PLATFORMS.filter((p) => p.abbr !== 'MYOB').map((p) => ({ name: p.abbr.replace(/\n/g, '|'), image: '' })), animate: true,
       pills: items(['ABN-backed Australian business', 'NDIS-aware service guidance', 'Clear pricing before paid work', 'Privacy-conscious enquiry handling']),
     },
     // 1. What SOL does
@@ -132,7 +134,7 @@ export const SERVICE_AREAS = [
     url: '/services/#business',
     links: [
       ['Company & Business Registration', 'ASIC company setup, ABN, TFN and GST.', '/services/company-business-registration/'],
-      ['Bookkeeping & BAS Lodgement', 'Clean books in Xero, MYOB or QuickBooks, ready for BAS.', '/services/bookkeeping-bas-lodgement/'],
+      ['Bookkeeping & BAS Lodgement', 'Clean books in Xero or QuickBooks, ready for BAS.', '/services/bookkeeping-bas-lodgement/'],
       ['Payroll Services', 'Pay runs, super, PAYG and Single Touch Payroll.', '/services/payroll-services/'],
       ['Accounting Consultancy', 'Practical accounting help for business owners.', '/services/accountancy/'],
       ['Accountancy Partnerships', 'Work with our CPA partners on tax and reporting.', '/services/accountancy-partnerships/'],
@@ -286,9 +288,10 @@ const homeNew = {
 /* ---------------- Simple pages ---------------- */
 const about = {
   slug: 'about', title: 'About',
-  seo: { seo_title: 'About SOL Business Consultant | Australian NDIS & Business Support', seo_description: 'Learn how SOL Business Consultant supports Australian providers, small businesses, and learners with NDIS registration, compliance, training, digital operations, and finance support.' },
+  seo: { seo_title: 'About SOL Business Consultant | Independent Consultancy, Glenroy VIC', seo_description: 'SOL Business Consultant Pty Ltd is an independent business consultancy in Glenroy, Victoria, helping small businesses and disability service providers.' },
   sections: [
-    header('About SOL', 'Australian business, compliance, and NDIS support with practical delivery.', 'SOL Business Consultant Pty Ltd supports Australian providers, small businesses, and learners with NDIS registration guidance, compliance systems, training, digital operations, and finance support.'),
+    // The approved business description, word for word (content/brand.mjs).
+    header('About SOL', 'An independent business consultancy in Glenroy, Victoria', COMPANY.description),
     block('about-sol'), block('compliance'),
   ],
 };

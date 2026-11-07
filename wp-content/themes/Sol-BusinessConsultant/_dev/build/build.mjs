@@ -18,6 +18,7 @@ import { pages } from './content/pages.mjs';
 import { products } from './content/products.mjs';
 import { applyCopy, mapSeedText, loadCopy } from './copy.mjs';
 import { applyPhotos, PHOTO_ALT } from './content/photos.mjs';
+import { brandText, brandProblems } from './content/brand.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const THEME = join(HERE, '..', '..');
@@ -149,6 +150,25 @@ let seed = routeUrls({
   writeFileSync(join(HERE, '..', 'COPY-TODO.json'), JSON.stringify(todo, null, 1));
   seed = res.seed;
   console.log(`    SEO copy: ${res.applied} texts rewritten, ${todo.length} still original (_dev/COPY-TODO.json)${res.unused.length ? `, ${res.unused.length} unused entries` : ''}`);
+}
+
+/* ---------- approved business description (content/brand.mjs) ---------- */
+{
+  let changed = 0;
+  // Every string, short labels and menu descriptions included (mapSeedText skips those).
+  const brandAll = (v) => {
+    if (typeof v === 'string') { const n = brandText(v); if (n !== v) changed++; return n; }
+    if (Array.isArray(v)) return v.map(brandAll);
+    if (v && typeof v === 'object') { const o = {}; for (const [k, x] of Object.entries(v)) o[k] = brandAll(x); return o; }
+    return v;
+  };
+  for (const g of ['pages', 'services', 'blocks', 'posts', 'options', 'products', 'courses']) seed[g] = brandAll(seed[g]);
+  const problems = brandProblems({ pages: seed.pages, services: seed.services, blocks: seed.blocks, posts: seed.posts, options: seed.options, products: seed.products, courses: seed.courses });
+  if (problems.length) {
+    console.error(`Wording does not match the approved business description (${problems.length}):\n  ` + problems.slice(0, 30).join('\n  '));
+    process.exit(1);
+  }
+  console.log(`    Business description: ${changed} texts brought in line`);
 }
 
 /* ---------- photos (content/photos.mjs) ---------- */

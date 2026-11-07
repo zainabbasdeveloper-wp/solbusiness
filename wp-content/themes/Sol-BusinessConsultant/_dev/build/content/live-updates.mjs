@@ -65,14 +65,14 @@ export function applyLiveUpdates(D) {
 
 // Text-only changes, used directly by the content files.
 export const LIVE_TEXT = {
-  footerTagline: 'Business consulting, NDIS registration, and compliance support.',
+  footerTagline: 'Independent business consultancy in Glenroy, Victoria, helping small businesses and disability service providers.',
   featuredOffersIntro: 'Explore current offers and choose a starting pathway for your business.',
   serviceStandardsIntro: 'Explore the practical service standards that guide how we work with Australian providers and businesses.',
   resourceRequestIntro: 'Choose a resource and enter your details to request it.',
   scTrainingIntro: 'Practical NDIS Support Coordinator training with 12 modules, 1,500+ quiz questions, and course content covering NDIS Practice Standards. For individuals, teams, and RTOs.',
   scTrainingSeo: 'NDIS support coordination training for Australian learners and organisations, covering NDIS plans, documentation, participant-centred practice, provider networks, and compliance awareness.',
   homeSeoTitle: 'SOL Business Consultant | NDIS Registration & Compliance Support Australia',
-  homeSeoDescription: 'Australian-owned NDIS registration, Easy Compliance, support coordination training, bookkeeping, and business consulting support from Glenroy VIC.',
+  homeSeoDescription: 'Independent business consultancy in Glenroy, VIC: company and ABN/GST registration, NDIS registration preparation, bookkeeping and BAS, payroll and websites.',
   readinessHeading: 'Check your NDIS readiness',
   readinessNdisService: 'Choose a quick quiz or a detailed readiness score.',
   readinessNdisPackages: 'Use either existing readiness tool before comparing support packages.',

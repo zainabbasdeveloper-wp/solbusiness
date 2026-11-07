@@ -77,7 +77,7 @@ export const blocks = [
       {
         acf_fc_layout: 'text_image', section_id: 'about', eyebrow: 'About Sol', background: 'white', align: 'left',
         heading: 'The Foundation\nof Your Growth', intro: '',
-        content: '<p>SOL Business Consultant supports Australian businesses with NDIS registration guidance, compliance preparation, bookkeeping, digital systems, websites, and growth services.</p><p>With Easy Compliance in our ecosystem, we help providers organise documents, prepare operational evidence, and build workflows that are easier to maintain. We focus on practical systems, clear advice, and responsible claims.</p>',
+        content: '<p>SOL Business Consultant Pty Ltd is an independent business consultancy based in Glenroy, Victoria. We help small businesses and disability service providers with company and ABN/GST registration, NDIS registration preparation and compliance documentation, bookkeeping and BAS, payroll, websites and digital marketing, and we deliver online NDIS Support Coordinator training.</p><p>With Easy Compliance in our ecosystem, we help providers organise documents, prepare operational evidence, and build workflows that are easier to maintain. We focus on practical systems, clear advice, and responsible claims.</p>',
         image: img('about/trainer-student-discussion.webp'), image_alt: 'Consultant guiding a client through business planning on a laptop', image_position: 'left', image_badge: '',
         stats: D.AboutSection.focusAreas.map((f) => ({ value: f.value, label: f.label })), checklist: [], buttons: [], callout: { icon: '', title: '', text: '' },
       },

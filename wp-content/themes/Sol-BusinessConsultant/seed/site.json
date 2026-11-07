@@ -51,6 +51,7 @@
   "logo": "field_12d00281596d1",
   "company_name": "field_b4eb7dfc8dea3",
   "tagline": "field_50fa0afed0d7e",
+  "company_description": "field_f5dd8b412313f",
   "topbar_text": "field_4726e5e1ed0a5",
   "topbar_link": "field_e6a4f05c45a5f",
   "phone": "field_a5c5bba2ec8d1",
@@ -99,8 +100,9 @@
  "options": {
   "logo": "img:sol-logo.jpg",
   "company_name": "SOL Business Consultant",
-  "tagline": "NDIS registration, compliance and business consulting across Australia.",
-  "topbar_text": "Australian-owned NDIS and business consultants: audit-ready systems and end-to-end support.",
+  "tagline": "Independent business consultancy in Glenroy, Victoria, helping small businesses and disability service providers.",
+  "company_description": "SOL Business Consultant Pty Ltd is an independent business consultancy based in Glenroy, Victoria. We help small businesses and disability service providers with company and ABN/GST registration, NDIS registration preparation and compliance documentation, bookkeeping and BAS (Xero and QuickBooks), payroll, websites and digital marketing. We also deliver online NDIS Support Coordinator training. We are not affiliated with the NDIS Commission or any government agency.",
+  "topbar_text": "Independent business consultancy in Glenroy, Victoria, for small businesses and disability service providers.",
   "topbar_link": {
    "title": "Free Readiness Quiz",
    "url": "/readiness-quiz/",
@@ -217,7 +219,7 @@
       "label": "Bookkeeping & BAS Lodgement",
       "url": "/services/bookkeeping-bas-lodgement/",
       "icon": "receipt-text",
-      "desc": "Xero, MYOB, QuickBooks & BAS"
+      "desc": "Xero, QuickBooks & BAS"
      },
      {
       "label": "Payroll Services",
@@ -593,7 +595,7 @@
     ]
    }
   ],
-  "footer_copyright": "Copyright {year} SOL Business Consultant: NDIS registration and compliance support across Australia. Not affiliated with the NDIS Commission.",
+  "footer_copyright": "Copyright {year} SOL Business Consultant Pty Ltd, an independent business consultancy based in Glenroy, Victoria. Not affiliated with the NDIS Commission or any government agency.",
   "app_url": "https://training.solbusinessconsultant.com.au",
   "payment_page_url": "/sol-service-payment-form/",
   "cookie_enabled": true,
@@ -1209,7 +1211,7 @@
             "item": "Profit and loss reporting support"
            },
            {
-            "item": "Xero / MYOB / QuickBooks"
+            "item": "Xero / QuickBooks"
            },
            {
             "item": "Billed monthly - no lock-in"
@@ -1763,7 +1765,7 @@
       "align": "left",
       "heading": "The Foundation\nof Your Growth",
       "intro": "",
-      "content": "<p>SOL Business Consultant helps Australian businesses with NDIS registration, compliance preparation, bookkeeping, digital systems, websites and growth services.</p><p>With Easy Compliance in our toolkit, we help providers organise documents, prepare operational evidence and build workflows that are easy to maintain. We focus on practical systems, clear advice and honest claims.</p>",
+      "content": "<p>SOL Business Consultant Pty Ltd is an independent business consultancy based in Glenroy, Victoria. We help small businesses and disability service providers with company and ABN/GST registration, NDIS registration preparation and compliance documentation, bookkeeping and BAS, payroll, websites and digital marketing, and we deliver online NDIS Support Coordinator training.</p><p>With Easy Compliance in our ecosystem, we help providers organise documents, prepare operational evidence, and build workflows that are easier to maintain. We focus on practical systems, clear advice, and responsible claims.</p>",
       "image": "img:photos/about-consultant-conversation.webp",
       "image_alt": "SOL consultant in a friendly planning conversation with a client",
       "image_position": "left",
@@ -2785,7 +2787,7 @@
    "template": "page-templates/sol-builder.php",
    "yoast": {
     "title": "NDIS Registration & Business Consultants Australia | SOL",
-    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+    "description": "Independent business consultancy in Glenroy, VIC: company and ABN/GST registration, NDIS registration preparation, bookkeeping and BAS, payroll and websites."
    },
    "fields": {
     "page_sections": [
@@ -2854,7 +2856,7 @@
       "background": "white",
       "align": "center",
       "heading": "We Work With the Platforms Australian Providers Rely On",
-      "intro": "We help clients navigate the government, accounting, compliance and business platforms they use every day. Platform names are shown for context only and do not imply endorsement or partnership.",
+      "intro": "We help clients navigate the government, accounting, compliance and business platforms they use every day. Platform names are shown for context only and do not imply endorsement, partnership or any government affiliation.",
       "logos": [
        {
         "name": "NDIS|Commission",
@@ -2870,10 +2872,6 @@
        },
        {
         "name": "Xero",
-        "image": ""
-       },
-       {
-        "name": "MYOB",
         "image": ""
        },
        {
@@ -3569,7 +3567,7 @@
    "template": "page-templates/sol-builder.php",
    "yoast": {
     "title": "Home (New Design Preview) | SOL Business Consultant",
-    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+    "description": "Independent business consultancy in Glenroy, VIC: company and ABN/GST registration, NDIS registration preparation, bookkeeping and BAS, payroll and websites."
    },
    "fields": {
     "page_sections": [
@@ -4243,16 +4241,16 @@
    "front_page": false,
    "template": "page-templates/sol-builder.php",
    "yoast": {
-    "title": "About SOL | Australian NDIS & Business Consultants",
-    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+    "title": "About SOL Business Consultant | Independent Consultancy, Glenroy VIC",
+    "description": "SOL Business Consultant Pty Ltd is an independent business consultancy in Glenroy, Victoria, helping small businesses and disability service providers."
    },
    "fields": {
     "page_sections": [
      {
       "acf_fc_layout": "page_header",
       "eyebrow": "About SOL",
-      "heading": "Australian NDIS, compliance and business consultants who deliver practical results.",
-      "text": "SOL Business Consultant Pty Ltd helps Australian NDIS providers, small businesses and learners with registration guidance, compliance systems, training, digital operations and finance support.",
+      "heading": "An independent business consultancy in Glenroy, Victoria",
+      "text": "SOL Business Consultant Pty Ltd is an independent business consultancy based in Glenroy, Victoria. We help small businesses and disability service providers with company and ABN/GST registration, NDIS registration preparation and compliance documentation, bookkeeping and BAS (Xero and QuickBooks), payroll, websites and digital marketing. We also deliver online NDIS Support Coordinator training. We are not affiliated with the NDIS Commission or any government agency.",
       "info_cards": [],
       "buttons": []
      },
@@ -4556,7 +4554,7 @@
           "item": "Review current bookkeeping, BAS, payroll and reporting arrangements"
          },
          {
-          "item": "Set up or tidy accounting workflows in Xero, MYOB or QuickBooks"
+          "item": "Set up or tidy accounting workflows in Xero or QuickBooks"
          },
          {
           "item": "Create a practical reporting rhythm for management decisions"
@@ -7908,7 +7906,7 @@
         "tagline": "Reliable bookkeeping with compliance reporting",
         "included": [
          {
-          "item": "Xero/MYOB/QuickBooks setup & configuration"
+          "item": "Xero/QuickBooks setup & configuration"
          },
          {
           "item": "Chart of accounts setup (customized for your business)"
@@ -9475,7 +9473,7 @@
       "style": "outline"
      }
     ],
-    "hero_disclaimer": "SOL Business Consultant is an independent consultancy and is not affiliated with the NDIS Quality and Safeguards Commission. Registration and audit outcomes depend on your business, registration groups, evidence, the auditor's assessment and official decisions.",
+    "hero_disclaimer": "SOL Business Consultant is an independent business consultancy and is not affiliated with the NDIS Commission or any government agency. Registration and audit outcomes depend on your business, registration groups, evidence, the auditor's assessment and official decisions.",
     "show_details": true,
     "details_who": [
      {
@@ -9585,7 +9583,7 @@
       "cards": [
        {
         "title": "Guidance through the official process",
-        "text": "We explain each NDIS Commission step in plain language, as an independent consultancy with no claim of government affiliation."
+        "text": "We explain each NDIS Commission step in plain language, as an independent business consultancy with no claim of government affiliation."
        },
        {
         "title": "Documentation that fits your business",
@@ -10225,7 +10223,7 @@
        }
       ],
       "buttons": [],
-      "note": "SOL Business Consultant is an independent consultancy and is not affiliated with the NDIS Quality and Safeguards Commission. Registration outcomes depend on your business structure, registration groups, evidence and the auditor's assessment."
+      "note": "SOL Business Consultant is an independent business consultancy and is not affiliated with the NDIS Commission or any government agency. Registration outcomes depend on your business structure, registration groups, evidence and the auditor's assessment."
      },
      {
       "acf_fc_layout": "cta_banner",
@@ -11117,21 +11115,21 @@
    "template": "page-templates/sol-service.php",
    "yoast": {
     "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+    "description": "Accurate, BAS-ready books with Xero and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
    },
    "fields": {
     "card_icon": "receipt-text",
-    "card_text": "Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reporting and BAS lodgement coordination for small businesses.",
+    "card_text": "Xero and QuickBooks bookkeeping, bank reconciliations, monthly reporting and BAS lodgement coordination for small businesses.",
     "card_url": "",
     "hide_in_grid": false,
     "show_enquiry": true,
     "service_type": "bookkeeping_bas",
     "eyebrow": "Finance Operations",
     "hero_heading": "",
-    "hero_intro": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination.",
+    "hero_intro": "Accurate, BAS-ready books with Xero and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination.",
     "hero_highlights": [
      {
-      "item": "Xero, MYOB and QuickBooks experts"
+      "item": "Xero and QuickBooks experts"
      },
      {
       "item": "Monthly or quarterly BAS"
@@ -11199,7 +11197,7 @@
       "item": "Owners preparing records for monthly or quarterly BAS."
      },
      {
-      "item": "Businesses using Xero, MYOB, QuickBooks or similar software."
+      "item": "Businesses using Xero, QuickBooks or similar software."
      }
     ],
     "details_get": [
@@ -13821,7 +13819,7 @@
        {
         "icon": "receipt",
         "title": "Bookkeeping Referrals",
-        "text": "We connect you with trusted Xero, MYOB and QuickBooks bookkeepers who suit your business size and needs."
+        "text": "We connect you with trusted Xero and QuickBooks bookkeepers who suit your business size and needs."
        },
        {
         "icon": "calculator",
@@ -13858,7 +13856,7 @@
       "stats": [],
       "checklist": [
        {
-        "item": "Bookkeeping setup and software guidance (Xero, MYOB, QuickBooks)"
+        "item": "Bookkeeping setup and software guidance (Xero, QuickBooks)"
        },
        {
         "item": "Understanding your BAS, with referrals to registered BAS agents"
@@ -14540,7 +14538,7 @@
    "path": "bookkeeping-mistakes-small-business",
    "title": "Top 5 Bookkeeping Mistakes Small Businesses Make",
    "excerpt": "Avoid the bookkeeping mistakes that lead to BAS stress, ATO penalties, compliance problems and cash flow shortfalls in your Australian small business.",
-   "content": "<!-- wp:paragraph -->\n<p>Many small businesses fall behind because receipts, bank feeds, payroll records and GST coding are only dealt with when the BAS is due. By then, missing documents and miscoded transactions are harder and more expensive to fix.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Reconciling every month, using clear account categories and saving source documents as you go makes tax time far less stressful, and means management decisions are based on real, up-to-date numbers.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>A steady bookkeeping routine in Xero, MYOB or QuickBooks also helps you spot late-paying customers, cash flow pressure and missing records before they turn into costly problems.</p>\n<!-- /wp:paragraph -->",
+   "content": "<!-- wp:paragraph -->\n<p>Many small businesses fall behind because receipts, bank feeds, payroll records and GST coding are only dealt with when the BAS is due. By then, missing documents and miscoded transactions are harder and more expensive to fix.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Reconciling every month, using clear account categories and saving source documents as you go makes tax time far less stressful, and means management decisions are based on real, up-to-date numbers.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>A steady bookkeeping routine in Xero or QuickBooks also helps you spot late-paying customers, cash flow pressure and missing records before they turn into costly problems.</p>\n<!-- /wp:paragraph -->",
    "date": "2025-04-01 09:00:00",
    "category": "Accounting",
    "featured_image": "img:photos/blog-bookkeeping-review.webp",
@@ -14785,10 +14783,10 @@
   "photos/blog-bas-lodgement.webp": "Business owner preparing a BAS lodgement with a calculator"
  },
  "fingerprints": {
-  "sol_block:pricing-tabs": "3460e5a7863ce268",
+  "sol_block:pricing-tabs": "b634806850bcdf7d",
   "sol_block:consulting-packages": "fb20ff919b519ba8",
   "sol_block:marketing-packages": "1290a2446c0f4f0e",
-  "sol_block:about-sol": "3947846ca776bcc2",
+  "sol_block:about-sol": "f10e3b8129d514e1",
   "sol_block:compliance": "1dabb230f12cd0d4",
   "sol_block:ndis-roadmap": "55d2c5ce009a828a",
   "sol_block:service-trust": "42b5087ca2e8c75a",
@@ -14797,14 +14795,14 @@
   "sol_block:training-faq": "ed6ea5866639c433",
   "sol_block:contact": "3841f3f7c0d55a0b",
   "sol_block:service-comparison": "a8bc97567e04f3df",
-  "page:home": "5d0b2f783a7641d6",
+  "page:home": "71ae086a596ef883",
   "page:home-new": "244910b67a13ac66",
-  "page:about": "de892520adefe479",
+  "page:about": "572d2249b867b71a",
   "page:contact": "f65fd873425acef2",
   "page:faq": "fdbbfdf1f8f6f0cb",
   "page:pricing": "e3c2c7f8b9148ec6",
   "page:blog": "496b26bae9032947",
-  "page:case-studies": "29715d711c49907f",
+  "page:case-studies": "58c2c8b8cc0076ef",
   "page:use-cases": "05964b2488471f14",
   "page:marketing-packages": "0553a9b1e3c6e42c",
   "page:training-2": "0bf364b916c87b1a",
@@ -14814,7 +14812,7 @@
   "page:readiness-quiz": "98ce4f06e06ed46e",
   "page:ndis-readiness-calculator": "31eb1fc9f961cb3e",
   "page:data-privacy-and-security": "6811e120491f1537",
-  "page:service-inclusions": "e3eae3a3e84c91a6",
+  "page:service-inclusions": "c7cf969c67a2eaed",
   "page:support-and-availability": "5c5f5f334e7ad296",
   "page:after-payment": "c3c084e088e5b662",
   "page:privacy-policy": "8b635ec76ce7bcb2",
@@ -14823,10 +14821,10 @@
   "page:accessibility": "871e09d07242ced2",
   "page:complaints-feedback": "ac70fc3da012b748",
   "page:services": "ca2bd81e6938bbf8",
-  "page:services/ndis-registration": "0ab867569a0605f7",
+  "page:services/ndis-registration": "f36b7b1424b77cbd",
   "page:services/ndis-support-coordination-training": "48689f3db7d4da70",
   "page:services/company-business-registration": "8582bd7d0e135bba",
-  "page:services/bookkeeping-bas-lodgement": "73e9d3eea3ac324e",
+  "page:services/bookkeeping-bas-lodgement": "c8d0477231b3e11a",
   "page:services/payroll-services": "2edbeaafc01539d5",
   "page:services/website-development": "e0f1aa0caa683ace",
   "page:services/business-personal-loan-support": "b65e22cdc61fd1e6",
@@ -14838,9 +14836,9 @@
   "page:services/admin-back-office-support": "25ab7fed9833ddf9",
   "page:services/offshore-outsourcing-staff-solutions": "97760eb09ceccd9b",
   "page:ai-machine-learning": "1a7622bd99d30526",
-  "page:services/accountancy": "1775eea30c417b76",
+  "page:services/accountancy": "11e1a474e213d964",
   "post:ndis-provider-registration-australia": "54ff0e0be4956b6a",
-  "post:bookkeeping-mistakes-small-business": "10f8fc70ee44c6b7",
+  "post:bookkeeping-mistakes-small-business": "b0df4e268ca6c534",
   "post:what-is-support-coordination": "195b30419f433912",
   "post:website-development-ndis-providers": "6c3f3fb7a16aedae",
   "post:automation-transform-ndis-business": "0f4560e98ac801d5",
@@ -14867,8 +14865,9 @@
   "course:499": "4068c288b299457b",
   "option:logo": "5122052e9845dfcd",
   "option:company_name": "c65cfe9a85a090fa",
-  "option:tagline": "22045c911a1a8c13",
-  "option:topbar_text": "d925771fe37c1b56",
+  "option:tagline": "0af6a4a09657a0d1",
+  "option:company_description": "a11158b05c31fc19",
+  "option:topbar_text": "70c079ee54beca69",
   "option:topbar_link": "3e4a0cbb67e8a66d",
   "option:phone": "464c3d8af93fec5d",
   "option:phone_link": "5146eeaaa030b8c5",
@@ -14879,7 +14878,7 @@
   "option:website_label": "e5b69164fcf109f5",
   "option:business_hours": "094a2010dc561f57",
   "option:nav_items": "884337fb7d7e99f4",
-  "option:mega_menu": "e67cc0d6d327ae05",
+  "option:mega_menu": "9acf1f6cca6786f1",
   "option:mega_promo": "d661c647fc478723",
   "option:header_buttons": "ad19c15dd586ab4d",
   "option:portal_links": "e4c41918dc71cb97",
@@ -14890,7 +14889,7 @@
   "option:newsletter_label": "79cdd94608dbbe77",
   "option:newsletter_note": "aa377ccac640c2db",
   "option:footer_columns": "b559db99dd7df4f5",
-  "option:footer_copyright": "6a336234d9cdb0bd",
+  "option:footer_copyright": "2097dea66a5c08ff",
   "option:app_url": "015218d6fc454ec4",
   "option:payment_page_url": "b3381b66f2a05d88",
   "option:cookie_enabled": "5ffe533b830f08a0",
@@ -14910,15 +14909,18 @@
   "option:chat_instructions": "dd29ecf524b030a6"
  },
  "history": {
-  "page:home-new": [
-   "1876663c2c32a128"
+  "sol_block:pricing-tabs": [
+   "3460e5a7863ce268",
+   "d30f827c7699d52d",
+   "74f4a589c432a1fc"
   ],
-  "sol_block:compliance": [
-   "5f3d1c42e9ead767",
-   "df260bb9a3f79bb8",
-   "5dc4454f9f8750d5"
+  "sol_block:about-sol": [
+   "3947846ca776bcc2",
+   "b78c43a57d086264",
+   "3fbd72bed978eb35"
   ],
   "page:home": [
+   "5d0b2f783a7641d6",
    "582c982387ebbd80",
    "2238b34ac329e855",
    "a06d273feb4c546e",
@@ -14927,6 +14929,70 @@
    "eea177346d8ff45b",
    "806e6bbf05a6bb85",
    "1199fbf5a0344c12"
+  ],
+  "page:about": [
+   "de892520adefe479",
+   "448255dc13f307c0"
+  ],
+  "page:case-studies": [
+   "29715d711c49907f",
+   "a067e019c3e2e95c"
+  ],
+  "page:service-inclusions": [
+   "e3eae3a3e84c91a6",
+   "82c7777202be63ad"
+  ],
+  "page:services/ndis-registration": [
+   "0ab867569a0605f7",
+   "8b064106e9d97e6b",
+   "346bf0262b2aa130",
+   "f583c414262fdadd",
+   "ec6ab13fde3d07e8"
+  ],
+  "page:services/bookkeeping-bas-lodgement": [
+   "73e9d3eea3ac324e",
+   "772dd161663c207e",
+   "2ead2c4cc3cd42a3",
+   "7ee3d9b20f92534a",
+   "3cb647091465e925"
+  ],
+  "page:services/accountancy": [
+   "1775eea30c417b76",
+   "0aed1998719ad58e",
+   "06c94d2d17b4aff6",
+   "ce186287eaee576a"
+  ],
+  "post:bookkeeping-mistakes-small-business": [
+   "10f8fc70ee44c6b7",
+   "9f74224f209fd779",
+   "00a3e6f0bfd3cb55",
+   "2dbeb629ef64296d"
+  ],
+  "option:tagline": [
+   "22045c911a1a8c13",
+   "9a74837a71a5076b",
+   "bdc2327304a36dd9"
+  ],
+  "option:topbar_text": [
+   "d925771fe37c1b56",
+   "dcd520a5d7befd70"
+  ],
+  "option:mega_menu": [
+   "e67cc0d6d327ae05",
+   "9599ef842ba69325",
+   "cdd63d1ecec03dc4"
+  ],
+  "option:footer_copyright": [
+   "6a336234d9cdb0bd",
+   "905f8f74802742f0"
+  ],
+  "page:home-new": [
+   "1876663c2c32a128"
+  ],
+  "sol_block:compliance": [
+   "5f3d1c42e9ead767",
+   "df260bb9a3f79bb8",
+   "5dc4454f9f8750d5"
   ],
   "page:marketing-packages": [
    "86265f192e291fc5",
@@ -14950,12 +15016,6 @@
    "fb2412fae390eeb0",
    "e52be39fa396a44c"
   ],
-  "page:services/ndis-registration": [
-   "8b064106e9d97e6b",
-   "346bf0262b2aa130",
-   "f583c414262fdadd",
-   "ec6ab13fde3d07e8"
-  ],
   "page:services/ndis-support-coordination-training": [
    "9728c1a707aebd06",
    "bd632f420ec690c4",
@@ -14968,12 +15028,6 @@
    "e53b911fa40ddb22",
    "73b380054bef3553",
    "9a27c22564e357d9"
-  ],
-  "page:services/bookkeeping-bas-lodgement": [
-   "772dd161663c207e",
-   "2ead2c4cc3cd42a3",
-   "7ee3d9b20f92534a",
-   "3cb647091465e925"
   ],
   "page:services/payroll-services": [
    "ee899e1430ca6af3",
@@ -15033,11 +15087,6 @@
    "6c357e2f574e54f3",
    "2082dc041d199b85"
   ],
-  "page:services/accountancy": [
-   "0aed1998719ad58e",
-   "06c94d2d17b4aff6",
-   "ce186287eaee576a"
-  ],
   "option:nav_items": [
    "80629a1d91bb9a60"
   ],
@@ -15061,10 +15110,6 @@
    "13f420bc75fa007d",
    "8c876b323c3e4823"
   ],
-  "sol_block:about-sol": [
-   "b78c43a57d086264",
-   "3fbd72bed978eb35"
-  ],
   "sol_block:ndis-roadmap": [
    "a8de7a79d5492d12",
    "6eef4f3e4679b146",
@@ -15074,11 +15119,6 @@
    "ae1ec89a0d4c17ff",
    "09f568b9d325443d",
    "f0b31e5dab626ac4"
-  ],
-  "post:bookkeeping-mistakes-small-business": [
-   "9f74224f209fd779",
-   "00a3e6f0bfd3cb55",
-   "2dbeb629ef64296d"
   ],
   "post:what-is-support-coordination": [
    "632cfc6ee552ff92",
@@ -15109,14 +15149,6 @@
    "059eacbf67bab373",
    "bc27efeb3b848a35"
   ],
-  "option:mega_menu": [
-   "9599ef842ba69325",
-   "cdd63d1ecec03dc4"
-  ],
-  "sol_block:pricing-tabs": [
-   "d30f827c7699d52d",
-   "74f4a589c432a1fc"
-  ],
   "sol_block:consulting-packages": [
    "91bf3a1ba5720c67"
   ],
@@ -15143,9 +15175,6 @@
    "93ae8fca5c000b7b",
    "a8669c0d25ba0cea"
   ],
-  "page:about": [
-   "448255dc13f307c0"
-  ],
   "page:contact": [
    "b6cdbcb728e71e9a"
   ],
@@ -15157,9 +15186,6 @@
   ],
   "page:blog": [
    "c2ec97ce0949ee5e"
-  ],
-  "page:case-studies": [
-   "a067e019c3e2e95c"
   ],
   "page:use-cases": [
    "5c59b59de6f97354"
@@ -15176,9 +15202,6 @@
   ],
   "page:data-privacy-and-security": [
    "38b7d28be213219a"
-  ],
-  "page:service-inclusions": [
-   "82c7777202be63ad"
   ],
   "page:support-and-availability": [
    "2df00884ad9cf5ba"
@@ -15242,18 +15265,8 @@
   "product:SOL-MKT-ENTERPRISE": [
    "c2c243861903febb"
   ],
-  "option:tagline": [
-   "9a74837a71a5076b",
-   "bdc2327304a36dd9"
-  ],
-  "option:topbar_text": [
-   "dcd520a5d7befd70"
-  ],
   "option:newsletter_note": [
    "9f05891958daa5b8"
-  ],
-  "option:footer_copyright": [
-   "905f8f74802742f0"
   ],
   "option:cookie_text": [
    "d79dbce9e1be0e40"
@@ -15264,6 +15277,58 @@
  },
  "yoast_history": {
   "page:home": [
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "NDIS Registration & Business Consultants Australia | SOL",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
    {
     "title": "SOL Business Consultant | NDIS Registration & Compliance Support Australia",
     "description": "Australian-owned NDIS registration, Easy Compliance, support coordination training, bookkeeping, and business consulting support from Glenroy VIC."
@@ -15285,10 +15350,68 @@
     "description": "Australian business and NDIS consulting with practical systems, documentation, and support to move from setup to audit-ready operations."
    }
   ],
+  "page:home-new": [
+   {
+    "title": "Home (New Design Preview) | SOL Business Consultant",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   },
+   {
+    "title": "Home (New Design Preview) | SOL Business Consultant",
+    "description": "Australian-owned NDIS registration consultants in Glenroy VIC: provider registration, audit readiness, compliance, training, bookkeeping and business setup."
+   }
+  ],
   "page:about": [
    {
-    "title": "About SOL Business Consultant | Australian NDIS & Business Support",
-    "description": "Learn how SOL Business Consultant supports Australian providers, small businesses, and learners with NDIS registration, compliance, training, digital operations, and finance support."
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
+   },
+   {
+    "title": "About SOL | Australian NDIS & Business Consultants",
+    "description": "Meet SOL Business Consultant, an Australian-owned team helping NDIS providers and small businesses with registration, compliance, training and finance."
    },
    {
     "title": "About SOL Business Consultant | Australian NDIS & Business Support",
@@ -15305,6 +15428,84 @@
    {
     "title": "About SOL Business Consultant | Australian NDIS & Business Support",
     "description": "Learn how SOL Business Consultant supports Australian providers, small businesses, and learners with NDIS registration, compliance, training, digital operations, and finance support."
+   },
+   {
+    "title": "About SOL Business Consultant | Australian NDIS & Business Support",
+    "description": "Learn how SOL Business Consultant supports Australian providers, small businesses, and learners with NDIS registration, compliance, training, digital operations, and finance support."
+   }
+  ],
+  "page:services/bookkeeping-bas-lodgement": [
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
+    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
+    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
+    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
+    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
+    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
    }
   ],
   "page:contact": [
@@ -15879,28 +16080,6 @@
     "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
    }
   ],
-  "page:services/bookkeeping-bas-lodgement": [
-   {
-    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
-    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
-    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
-    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
-    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
-    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
-   }
-  ],
   "page:services/payroll-services": [
    {
     "title": "Payroll Services | SOL Business Consultant",
@@ -16272,5 +16451,5 @@
    }
   ]
  },
- "build": "76d1ac6df868808f"
+ "build": "e31c79f6119eef87"
 }

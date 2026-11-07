@@ -70,6 +70,23 @@
             "new_lines": ""
         },
         {
+            "key": "field_f5dd8b412313f",
+            "label": "Company description",
+            "name": "company_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "The approved description of SOL. Used for search engines (business details) and the website chat assistant.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
             "key": "field_4726e5e1ed0a5",
             "label": "Top bar text",
             "name": "topbar_text",
@@ -101,7 +118,7 @@
             "return_format": "array"
         },
         {
-            "key": "field_88ddc23f31bdd",
+            "key": "field_76bbf35b54e63",
             "label": "Contact",
             "name": "",
             "aria-label": "",
@@ -238,7 +255,7 @@
             }
         },
         {
-            "key": "field_b4de2ba768ed0",
+            "key": "field_75aa61dd7b4bf",
             "label": "Header",
             "name": "",
             "aria-label": "",
@@ -737,7 +754,7 @@
             "collapsed": "field_24bb5d7f85b4e"
         },
         {
-            "key": "field_7e044b198f5d3",
+            "key": "field_38f05cb27f266",
             "label": "Footer",
             "name": "",
             "aria-label": "",
@@ -961,7 +978,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_2b88c644cc272",
+            "key": "field_07dea4996b20b",
             "label": "App & Payments",
             "name": "",
             "aria-label": "",
@@ -1023,7 +1040,7 @@
             }
         },
         {
-            "key": "field_e6413446400f1",
+            "key": "field_efaad61fccb1f",
             "label": "Widgets & Forms",
             "name": "",
             "aria-label": "",
@@ -1206,7 +1223,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_6607fb0060f1b",
+            "key": "field_65f36de5f5397",
             "label": "AI Assistant",
             "name": "",
             "aria-label": "",
@@ -1336,7 +1353,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_8b3756d067451",
+            "key": "field_5014ea8fa5b73",
             "label": "Tracking",
             "name": "",
             "aria-label": "",

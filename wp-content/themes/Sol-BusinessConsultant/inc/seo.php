@@ -172,9 +172,9 @@ function sol_business_schema() {
 	$name = sol_opt( 'company_name', 'SOL Business Consultant' );
 	$d    = array(
 		'name'        => $name,
-		'legalName'   => apply_filters( 'sol_legal_name', 'Sol Business Consultant Pty Ltd' ),
+		'legalName'   => apply_filters( 'sol_legal_name', 'SOL Business Consultant Pty Ltd' ),
 		'url'         => home_url( '/' ),
-		'description' => wp_strip_all_tags( sol_opt( 'tagline' ) ),
+		'description' => wp_strip_all_tags( sol_company_description() ),
 		'telephone'   => sol_opt( 'phone' ),
 		'email'       => sol_opt( 'email' ),
 		'image'       => SOL_URI . 'assets/images/share/default.jpg',

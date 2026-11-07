@@ -1,6 +1,7 @@
 // SOL Site Settings (options page).
 import { D, L, btn, rbtn, ic, img, route, APP } from './helpers.mjs';
 import { LIVE_TEXT } from './live-updates.mjs';
+import { COMPANY } from './brand.mjs';
 
 const N = D.Navbar;
 const F = D.Footer;
@@ -18,7 +19,8 @@ export const options = {
   logo: img('sol-logo.jpg'),
   company_name: 'SOL Business Consultant',
   tagline: LIVE_TEXT.footerTagline,
-  topbar_text: 'Australian-owned NDIS & business consulting — audit-ready systems, end-to-end support.',
+  company_description: COMPANY.description,
+  topbar_text: 'Independent business consultancy in Glenroy, Victoria, for small businesses and disability service providers.',
   topbar_link: L('Free Readiness Quiz', '/readiness-quiz'),
 
   phone: '+61 460 003 494',
@@ -63,7 +65,7 @@ export const options = {
     { title: 'Company', links: links(F.companyLinks) },
     { title: 'Portals', links: links(F.portalLinks) },
   ],
-  footer_copyright: 'Copyright {year} SOL Business Consultant - NDIS registration & compliance support across Australia. Not affiliated with NDIS Commission.',
+  footer_copyright: 'Copyright {year} SOL Business Consultant Pty Ltd, an independent business consultancy based in Glenroy, Victoria. Not affiliated with the NDIS Commission or any government agency.',
 
   app_url: APP,
   payment_page_url: '/sol-service-payment-form/',

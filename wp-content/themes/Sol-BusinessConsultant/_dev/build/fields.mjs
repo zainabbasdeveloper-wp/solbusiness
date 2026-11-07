@@ -400,6 +400,7 @@ const options = fieldGroup({
     image('logo', 'Logo'),
     text('company_name', 'Company name'),
     textarea('tagline', 'Footer tagline', { rows: 2 }),
+    textarea('company_description', 'Company description', { rows: 4, instructions: 'The approved description of SOL. Used for search engines (business details) and the website chat assistant.' }),
     text('topbar_text', 'Top bar text'),
     link('topbar_link', 'Top bar link'),
     tab('Contact'),
