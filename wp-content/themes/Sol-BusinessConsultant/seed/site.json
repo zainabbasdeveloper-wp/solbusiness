@@ -115,7 +115,7 @@
   "address": "Glenroy VIC 3046, Australia",
   "abn": "20 662 022 522",
   "website_label": "www.solbusinessconsultant.com.au",
-  "business_hours": "Monday-Friday: 9:00 AM - 5:00 PM AEST",
+  "business_hours": "Monday-Friday: 8:30 AM - 5:30 PM AEST",
   "nav_items": [
    {
     "label": "Home",
@@ -7738,7 +7738,7 @@
           "item": "Next steps summary document"
          }
         ],
-        "support": "Email + phone during business hours (Mon-Fri 9am-5pm AEST)",
+        "support": "Email + phone during business hours (Mon-Fri 8:30am-5:30pm AEST)",
         "link": {
          "title": "Get a quote for this service",
          "url": "/book-consultation/",
@@ -8033,7 +8033,7 @@
           "item": "Year-end payroll summary"
          }
         ],
-        "support": "Email + phone support (Mon-Fri 9am-5pm AEST)",
+        "support": "Email + phone support (Mon-Fri 8:30am-5:30pm AEST)",
         "link": {
          "title": "Get a quote for this service",
          "url": "/book-consultation/",
@@ -8299,7 +8299,7 @@
        {
         "icon": "clock",
         "label": "Business Hours",
-        "value": "Monday-Friday: 9:00 AM - 5:00 PM AEST",
+        "value": "Monday-Friday: 8:30 AM - 5:30 PM AEST",
         "url": ""
        },
        {
@@ -8334,7 +8334,7 @@
          },
          {
           "label": "Hours",
-          "value": "Mon-Fri 9:00 AM - 5:00 PM AEST"
+          "value": "Mon-Fri 8:30 AM - 5:30 PM AEST"
          },
          {
           "label": "Best For",
@@ -8372,7 +8372,7 @@
          },
          {
           "label": "Hours",
-          "value": "Mon-Fri 9:00 AM - 5:00 PM AEST"
+          "value": "Mon-Fri 8:30 AM - 5:30 PM AEST"
          },
          {
           "label": "Best For",
@@ -8397,7 +8397,7 @@
       "card_style": "bordered",
       "cards": [
        {
-        "tag": "Same business day (by 5:00 PM AEST)",
+        "tag": "Same business day (by 5:30 PM AEST)",
         "title": "Urgent (Critical Issue)",
         "text": "Compliance deadline missed, registration blocked, payment issue",
         "meta": [
@@ -14812,8 +14812,8 @@
   "page:readiness-quiz": "98ce4f06e06ed46e",
   "page:ndis-readiness-calculator": "31eb1fc9f961cb3e",
   "page:data-privacy-and-security": "6811e120491f1537",
-  "page:service-inclusions": "c7cf969c67a2eaed",
-  "page:support-and-availability": "5c5f5f334e7ad296",
+  "page:service-inclusions": "fa749d4d1d0b03df",
+  "page:support-and-availability": "102c3e4f5335c1d9",
   "page:after-payment": "c3c084e088e5b662",
   "page:privacy-policy": "8b635ec76ce7bcb2",
   "page:refunds-cancellation-policy": "fe74ff57760c6f2c",
@@ -14876,7 +14876,7 @@
   "option:address": "f8fa04dc18846ff9",
   "option:abn": "cd06de349f2488d1",
   "option:website_label": "e5b69164fcf109f5",
-  "option:business_hours": "094a2010dc561f57",
+  "option:business_hours": "2f725cfa8b964188",
   "option:nav_items": "884337fb7d7e99f4",
   "option:mega_menu": "9acf1f6cca6786f1",
   "option:mega_promo": "d661c647fc478723",
@@ -14909,6 +14909,18 @@
   "option:chat_instructions": "dd29ecf524b030a6"
  },
  "history": {
+  "page:service-inclusions": [
+   "c7cf969c67a2eaed",
+   "e3eae3a3e84c91a6",
+   "82c7777202be63ad"
+  ],
+  "page:support-and-availability": [
+   "5c5f5f334e7ad296",
+   "2df00884ad9cf5ba"
+  ],
+  "option:business_hours": [
+   "094a2010dc561f57"
+  ],
   "sol_block:pricing-tabs": [
    "3460e5a7863ce268",
    "d30f827c7699d52d",
@@ -14937,10 +14949,6 @@
   "page:case-studies": [
    "29715d711c49907f",
    "a067e019c3e2e95c"
-  ],
-  "page:service-inclusions": [
-   "e3eae3a3e84c91a6",
-   "82c7777202be63ad"
   ],
   "page:services/ndis-registration": [
    "0ab867569a0605f7",
@@ -15202,9 +15210,6 @@
   ],
   "page:data-privacy-and-security": [
    "38b7d28be213219a"
-  ],
-  "page:support-and-availability": [
-   "2df00884ad9cf5ba"
   ],
   "page:after-payment": [
    "c400d6d86e037216",
@@ -16451,5 +16456,5 @@
    }
   ]
  },
- "build": "e31c79f6119eef87"
+ "build": "8631108a509728ae"
 }

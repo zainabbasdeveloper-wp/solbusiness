@@ -76,7 +76,7 @@ function sol_chat_system_prompt() {
 	$name    = sol_opt( 'chat_name', 'SOL Assistant' );
 	$phone   = sol_opt( 'phone', '+61 460 003 494' );
 	$email   = sol_opt( 'email', 'info@solbusinessconsultant.com.au' );
-	$hours   = sol_opt( 'business_hours', 'Monday-Friday: 9:00 AM - 5:00 PM AEST' );
+	$hours   = sol_opt( 'business_hours', 'Monday-Friday: 8:30 AM - 5:30 PM AEST' );
 	$address = sol_opt( 'address', 'Glenroy VIC 3046, Australia' );
 	$about   = sol_company_description();
 
@@ -334,7 +334,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		'services'  => function_exists( 'sol_service_options' ) ? sol_service_options() : array(),
 		'times'     => function_exists( 'sol_live_times' ) ? sol_live_times() : array(),
 		'today'     => wp_date( 'Y-m-d' ),
-		'hours'     => sol_opt( 'business_hours', 'Monday-Friday: 9:00 AM - 5:00 PM AEST' ),
+		'hours'     => sol_opt( 'business_hours', 'Monday-Friday: 8:30 AM - 5:30 PM AEST' ),
 	) );
 }, 30 );
 

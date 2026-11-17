@@ -190,8 +190,8 @@ function sol_business_schema() {
 		'openingHoursSpecification' => array(
 			'@type'     => 'OpeningHoursSpecification',
 			'dayOfWeek' => array( 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday' ),
-			'opens'     => '09:00',
-			'closes'    => '17:00',
+			'opens'     => '08:30',
+			'closes'    => '17:30',
 		),
 		'contactPoint' => array(
 			'@type'             => 'ContactPoint',

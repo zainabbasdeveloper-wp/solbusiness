@@ -239,7 +239,7 @@ function sol_live_r_status( WP_REST_Request $req ) {
 	return new WP_REST_Response( array(
 		'online' => (bool) $agents,
 		'agents' => array_slice( $agents, 0, 3 ),
-		'hours'  => sol_opt( 'business_hours', 'Monday-Friday: 9:00 AM - 5:00 PM AEST' ),
+		'hours'  => sol_opt( 'business_hours', 'Monday-Friday: 8:30 AM - 5:30 PM AEST' ),
 	), 200 );
 }
 
@@ -432,7 +432,7 @@ function sol_live_r_book( WP_REST_Request $req ) {
 
 /** Preferred time choices, the same as the Book Consultation form. */
 function sol_live_times() {
-	return array( 'Morning (9am–12pm)', 'Afternoon (12pm–3pm)', 'Late afternoon (3pm–5pm)' );
+	return array( 'Morning (8:30am–12pm)', 'Afternoon (12pm–3pm)', 'Late afternoon (3pm–5:30pm)' );
 }
 
 /* ---------- Team side ---------- */

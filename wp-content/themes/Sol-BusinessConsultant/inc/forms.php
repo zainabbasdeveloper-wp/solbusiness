@@ -196,7 +196,7 @@ function sol_render_form( $variant, $args = array() ) {
 				<?php echo $field( 'preferred_date', 'Preferred date', 'date', false, '', 'min="' . esc_attr( wp_date( 'Y-m-d' ) ) . '" max="' . esc_attr( wp_date( 'Y-m-d', time() + YEAR_IN_SECONDS ) ) . '"' ); // phpcs:ignore ?>
 				<label class="sol-field" for="<?php echo esc_attr( $uid ); ?>-time"><span>Preferred time (Melbourne)</span>
 					<select id="<?php echo esc_attr( $uid ); ?>-time" name="preferred_time">
-						<option value="">Any time</option><option>Morning (9am–12pm)</option><option>Afternoon (12pm–3pm)</option><option>Late afternoon (3pm–5pm)</option>
+						<option value="">Any time</option><option>Morning (8:30am–12pm)</option><option>Afternoon (12pm–3pm)</option><option>Late afternoon (3pm–5:30pm)</option>
 					</select>
 				</label>
 			</div>

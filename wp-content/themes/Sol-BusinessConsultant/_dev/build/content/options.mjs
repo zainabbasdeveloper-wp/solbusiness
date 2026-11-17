@@ -30,7 +30,7 @@ export const options = {
   address: 'Glenroy VIC 3046, Australia',
   abn: '20 662 022 522',
   website_label: 'www.solbusinessconsultant.com.au',
-  business_hours: 'Monday-Friday: 9:00 AM - 5:00 PM AEST',
+  business_hours: 'Monday-Friday: 8:30 AM - 5:30 PM AEST',
 
   nav_items: [
     ...N.NAV_LINKS.map((l) => ({ label: l.label, url: l.href, type: 'link' })),

@@ -25,6 +25,11 @@ const RULES = [
   [/Not affiliated with (?:the )?NDIS Commission\./g, 'Not affiliated with the NDIS Commission or any government agency.'],
   [/do not imply endorsement or partnership\./g, 'do not imply endorsement, partnership or any government affiliation.'],
   [/(is|as) an independent consultancy/g, '$1 an independent business consultancy'],
+  // Business hours: Monday to Friday, 8:30 AM to 5:30 PM AEST. Only SOL's own hours (marked AEST) are touched;
+  // other organisations' hours (e.g. the NDIS Commission phone line) stay as they are.
+  [/9:00 AM - 5:00 PM AEST/g, '8:30 AM - 5:30 PM AEST'],
+  [/9am-5pm AEST/g, '8:30am-5:30pm AEST'],
+  [/\(by 5:00 PM AEST\)/g, '(by 5:30 PM AEST)'],
 ];
 
 export function brandText(t) {
@@ -42,5 +47,7 @@ export function brandProblems(json) {
   if (myob) problems.push(...myob.map((m) => `MYOB: ...${m}...`));
   const old = s.match(/.{0,40}affiliated with the NDIS (?:Quality and Safeguards )?Commission\.(?!.{0,5}or any)/g);
   if (old) problems.push(...old.map((m) => `Disclaimer without "or any government agency": ...${m}`));
+  const hours = s.match(/.{0,40}(?:9:00 AM - 5:00 PM|9am-5pm|by 5:00 PM) AEST.{0,10}/g);
+  if (hours) problems.push(...hours.map((m) => `Old business hours: ...${m}`));
   return problems;
 }
