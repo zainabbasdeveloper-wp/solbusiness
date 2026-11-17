@@ -7,6 +7,8 @@ wp-content/uploads/
 wp-content/cache/
 wp-content/upgrade/
 wp-content/backup*
+wp-content/plugins/wordfence/
+
 
 # Ignore core WordPress files (optional, but recommended)
 # If you only want to track your theme, uncomment the lines below:
