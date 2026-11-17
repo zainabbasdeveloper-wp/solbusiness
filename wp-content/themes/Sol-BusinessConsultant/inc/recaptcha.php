@@ -1,7 +1,7 @@
 <?php
 /**
  * Google reCAPTCHA v3 (invisible) for the site's forms: the SOL website forms, the service payment form,
- * log in, create account, lost password and blog comments. Each submission gets a score from Google and
+ * My Account log in, create account, lost password and blog comments (never the wp-login.php admin login). Each submission gets a score from Google and
  * low scores are blocked before anything is saved or emailed.
  *
  * Set up under SOL Site → Spam protection. Protection only switches on after "Check keys" passes there,
@@ -21,9 +21,9 @@ function sol_rc_areas() {
 	return array(
 		'forms'        => 'Website forms (contact, consultation, complaint, training, checklist, newsletter, quiz)',
 		'payment'      => 'Service payment form',
-		'login'        => 'Log in (wp-login.php and My Account)',
-		'register'     => 'Create account (wp-login.php and My Account)',
-		'lostpassword' => 'Lost password (wp-login.php and My Account)',
+		'login'        => 'Log in (My Account; the WordPress admin login is never checked)',
+		'register'     => 'Create account (My Account)',
+		'lostpassword' => 'Lost password (My Account)',
 		'comments'     => 'Blog comments from visitors who are not logged in',
 	);
 }
@@ -68,8 +68,24 @@ function sol_rc_status() {
 	return hash_equals( sol_rc_fingerprint( $s ), (string) $s['checked'] ) ? 'on' : 'unchecked';
 }
 
+/**
+ * The WordPress admin login page (wp-login.php: log in, lost password, create account) never uses
+ * reCAPTCHA, so staff can always sign in; the site's admin login is protected by an authenticator app
+ * instead. The customer My Account forms and the website forms keep their spam check.
+ */
+function sol_rc_is_admin_login() {
+	if ( isset( $GLOBALS['pagenow'] ) && 'wp-login.php' === $GLOBALS['pagenow'] ) {
+		return true;
+	}
+	$script = isset( $_SERVER['SCRIPT_NAME'] ) ? (string) $_SERVER['SCRIPT_NAME'] : '';
+	return 'wp-login.php' === basename( $script );
+}
+
 /** True when reCAPTCHA is working and switched on for $area ('' = any area). */
 function sol_rc_active( $area = '' ) {
+	if ( sol_rc_is_admin_login() ) {
+		return false;
+	}
 	$on = 'on' === sol_rc_status() && ( '' === $area || in_array( $area, sol_rc_settings()['areas'], true ) );
 	return (bool) apply_filters( 'sol_recaptcha_active', $on, $area );
 }
@@ -200,7 +216,6 @@ function sol_rc_enqueue() {
 	wp_add_inline_style( 'sol-recaptcha', $css );
 }
 add_action( 'wp_enqueue_scripts', 'sol_rc_enqueue', 30 );
-add_action( 'login_enqueue_scripts', 'sol_rc_enqueue' );
 
 /* ------------------------------------------------------------------ */
 /* Server-side checks                                                  */
