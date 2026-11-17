@@ -419,6 +419,8 @@ function sol_live_r_book( WP_REST_Request $req ) {
 		return sol_live_error( 'Too many booking requests. Please try again later or call us.', 429 );
 	}
 	$data['selection'] = isset( $services[ $service ] ) ? $services[ $service ] : 'Other / Multiple Services';
+	$data['service_id'] = isset( $services[ $service ] ) ? $service : 'general_enquiry'; // for the CRM (inc/crm-forward.php)
+	$data['privacy_notice_shown'] = false; // the chat booking card shows no privacy notice
 	$data['message']   = trim( $data['message'] . "\n\n(Booked through the website chat.)" );
 
 	$page = sol_live_page_url( $req->get_param( 'page' ) );
