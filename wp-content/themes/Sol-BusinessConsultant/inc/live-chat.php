@@ -420,7 +420,7 @@ function sol_live_r_book( WP_REST_Request $req ) {
 	}
 	$data['selection'] = isset( $services[ $service ] ) ? $services[ $service ] : 'Other / Multiple Services';
 	$data['service_id'] = isset( $services[ $service ] ) ? $service : 'general_enquiry'; // for the CRM (inc/crm-forward.php)
-	$data['privacy_notice_shown'] = false; // the chat booking card shows no privacy notice
+	$data['privacy_notice_shown'] = '1' === (string) $req->get_param( 'privacy_notice' ); // the booking card shows the privacy notice and sends this
 	$data['message']   = trim( $data['message'] . "\n\n(Booked through the website chat.)" );
 
 	$page = sol_live_page_url( $req->get_param( 'page' ) );

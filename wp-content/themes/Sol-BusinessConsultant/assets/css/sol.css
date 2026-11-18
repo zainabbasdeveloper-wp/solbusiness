@@ -463,6 +463,7 @@ section.sol-target { animation: none; } /* whole sections just scroll into place
 .sol-check { display: flex; gap: 10px; align-items: flex-start; font-size: .84rem; color: var(--sol-mist); font-weight: 400; }
 .sol-check input { margin-top: 3px; accent-color: var(--sol-harvest); width: 16px; height: 16px; flex-shrink: 0; }
 .sol-form__privacy { font-size: .78rem; color: var(--sol-mist); }
+.sol-form__privacy a { color: inherit; text-decoration: underline; }
 .sol-form__status { font-size: .9rem; min-height: 0; }
 .sol-form__status:empty { display: none; }
 .sol-form__status.is-success { padding: 14px 16px; border-radius: 12px; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }

@@ -96,6 +96,37 @@ function sol_service_dropdown( $saved ) {
 	return array_merge( $out, $extra );
 }
 
+/** Default privacy notice under every form and the chat booking card. */
+function sol_privacy_notice_default() {
+	return (string) apply_filters( 'sol_privacy_notice_default', 'By submitting this form you consent to SOL Business Consultant collecting and handling your details to respond to your enquiry, in line with our Privacy Policy.' );
+}
+
+/** Privacy Policy page address (Settings → Privacy, else /privacy-policy/). */
+function sol_privacy_url() {
+	$url = function_exists( 'get_privacy_policy_url' ) ? get_privacy_policy_url() : '';
+	return $url ? $url : home_url( '/privacy-policy/' );
+}
+
+/**
+ * The privacy notice text for a form: the form's own text when it mentions privacy, otherwise the default
+ * (added after the form's own text, so a line like "We reply in 1 business day" is kept).
+ */
+function sol_privacy_notice_text( $text = '' ) {
+	$text = trim( (string) $text );
+	if ( '' !== $text && false !== stripos( $text, 'privacy' ) ) {
+		return $text;
+	}
+	return trim( sol_privacy_notice_default() . ( '' !== $text ? ' ' . $text : '' ) );
+}
+
+/** The notice as HTML, with "Privacy Policy" linked. */
+function sol_privacy_notice_html( $text = '' ) {
+	$html = esc_html( sol_privacy_notice_text( $text ) );
+	$link = '<a href="' . esc_url( sol_privacy_url() ) . '" target="_blank" rel="noopener">Privacy Policy</a>';
+	$out  = preg_replace( '/Privacy Policy/i', $link, $html, 1, $count );
+	return $count ? $out : $html . ' ' . $link . '.';
+}
+
 /** Render a built-in form. */
 function sol_render_form( $variant, $args = array() ) {
 	$variant = in_array( $variant, sol_form_variants(), true ) ? $variant : 'contact';
@@ -216,7 +247,8 @@ function sol_render_form( $variant, $args = array() ) {
 		<?php endif; ?>
 
 		<button type="submit" class="sol-btn sol-btn--primary sol-btn--block"><?php echo esc_html( $submit ); ?> <?php echo sol_icon( 'arrow-right', 'sol-btn__icon' ); // phpcs:ignore ?></button>
-		<?php if ( $args['privacy_text'] ) : ?><input type="hidden" name="_sol_pn" value="1"><p class="sol-form__privacy"><?php echo esc_html( $args['privacy_text'] ); ?></p><?php endif; ?>
+		<?php // Every form shows the privacy notice (the CRM requires it before accepting a lead). ?>
+		<input type="hidden" name="_sol_pn" value="1"><p class="sol-form__privacy"><?php echo sol_privacy_notice_html( $args['privacy_text'] ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped in sol_privacy_notice_html() ?></p>
 		<p class="sol-form__status" role="status" aria-live="polite"></p>
 	</form>
 	<?php

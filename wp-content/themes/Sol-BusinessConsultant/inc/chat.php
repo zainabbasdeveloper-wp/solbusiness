@@ -334,6 +334,8 @@ add_action( 'wp_enqueue_scripts', function () {
 		'services'  => function_exists( 'sol_service_options' ) ? sol_service_options() : array(),
 		'times'     => function_exists( 'sol_live_times' ) ? sol_live_times() : array(),
 		'today'     => wp_date( 'Y-m-d' ),
+		'privacy'   => function_exists( 'sol_privacy_notice_text' ) ? sol_privacy_notice_text() : '',
+		'privacyUrl' => function_exists( 'sol_privacy_url' ) ? sol_privacy_url() : '',
 		'hours'     => sol_opt( 'business_hours', 'Monday-Friday: 8:30 AM - 5:30 PM AEST' ),
 	) );
 }, 30 );

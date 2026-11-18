@@ -339,6 +339,18 @@
     for (var i = 0; i < rules.length; i++) if (rules[i][0].test(text) && C.services[rules[i][1]]) return rules[i][1];
     return '';
   }
+  // The privacy notice under the booking card, with "Privacy Policy" linked (text set in inc/forms.php).
+  function privacyNote() {
+    var note = el('p', 'sol-chat__card-privacy');
+    var text = String(C.privacy), i = text.toLowerCase().indexOf('privacy policy');
+    if (i < 0 || !C.privacyUrl) { note.textContent = text; return note; }
+    var a = document.createElement('a');
+    a.href = C.privacyUrl; a.target = '_blank'; a.rel = 'noopener'; a.textContent = text.substr(i, 14);
+    note.appendChild(document.createTextNode(text.slice(0, i)));
+    note.appendChild(a);
+    note.appendChild(document.createTextNode(text.slice(i + 14)));
+    return note;
+  }
   function bookCard() {
     var p = me();
     var card = el('form', 'sol-chat__card');
@@ -363,16 +375,19 @@
     var err = el('p', 'sol-chat__card-error'); err.hidden = true;
     card.appendChild(err);
     var actions = el('div', 'sol-chat__card-actions');
+    var hasNotice = !!C.privacy;
     var go = el('button', 'sol-chat__card-btn', 'Request consultation'); go.type = 'submit';
     var no = el('button', 'sol-chat__card-link', 'Not now'); no.type = 'button';
     actions.appendChild(go); actions.appendChild(no);
     card.appendChild(actions);
+    if (hasNotice) card.appendChild(privacyNote());
     no.addEventListener('click', function () { removeCards('book'); });
     card.addEventListener('submit', function (e) {
       e.preventDefault();
       var f = card.elements;
       var data = { name: f.name.value.trim(), email: f.email.value.trim(), phone: f.phone.value.trim(), service: f.service.value,
-        date: f.date.value, time: f.time.value, notes: f.notes.value.trim(), page: location.href };
+        date: f.date.value, time: f.time.value, notes: f.notes.value.trim(), page: location.href,
+        privacy_notice: hasNotice ? '1' : '' };
       var problem = data.name.length < 2 ? 'Please enter your full name.' : !/^\S+@\S+\.\S+$/.test(data.email) ? 'Please enter a valid email address.'
         : !data.service ? 'Please choose a service.' : '';
       if (problem) { err.textContent = problem; err.hidden = false; return; }
