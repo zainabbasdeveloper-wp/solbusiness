@@ -401,7 +401,10 @@ function sol_save_enquiry( $variant, $data, $back ) {
 
 	// Optional webhook (CRM, n8n, Zapier). Skipped while the n8n Lead Intake forwarding (inc/crm-forward.php)
 	// is on, so there is only one path into the CRM.
-	$hook = ( function_exists( 'sol_crm_enabled' ) && sol_crm_enabled() ) ? '' : sol_opt( 'lead_webhook_url' );
+	$hook = sol_opt( 'lead_webhook_url' );
+	if ( $hook && function_exists( 'sol_crm_legacy_allowed' ) && ! sol_crm_legacy_allowed( $variant, $hook ) ) {
+		$hook = '';
+	}
 	if ( $hook && wp_http_validate_url( $hook ) ) {
 		wp_remote_post( $hook, array(
 			'timeout'  => 5,
