@@ -12,12 +12,13 @@
  * How it works:
  * - Runs on the existing sol_form_submitted action, after the enquiry is saved and the team email has gone,
  *   so the form, its validation, storage and emails are unchanged.
- * - Each enquiry gets a stable submission ID once (_sol_submission_id). The payload is built once and stored,
+ * - Each eligible enquiry gets a stable UUID v4 once (_sol_submission_id), sent as submission_id. The payload is built once and stored,
  *   so every retry and every "Resend to CRM" sends exactly the same submission.
  * - Sending happens in the background (Action Scheduler, or WP-Cron as a fallback); the visitor never waits on n8n.
  * - Timeouts, 5xx and 429 are retried after 1 min, 5 min, 30 min, 2 h and 12 h; other 4xx are marked "rejected".
  * - Status is shown in SOL Site → Enquiries (CRM column) and on each enquiry.
- * - While this is dry_run or live, the older "Forward form submissions to (webhook)" setting is skipped
+ * - Newsletter, complaint and resource submissions are never forwarded (SOL_CRM_NEVER).
+ * - The older "Forward form submissions to (webhook)" setting is held back by sol_crm_legacy_allowed()
  *   (inc/forms.php), so there is only one path into the CRM.
  */
 
@@ -41,26 +42,63 @@ function sol_crm_key() {
 	return defined( 'SOL_CRM_WEBHOOK_KEY' ) ? trim( (string) SOL_CRM_WEBHOOK_KEY ) : '';
 }
 
-/** Forms whose submissions are leads. Newsletter sign-ups and complaints are not sent unless listed here. */
+/** Forms that are never sales leads: never forwarded, whatever SOL_CRM_FORMS says. */
+const SOL_CRM_NEVER = array( 'newsletter', 'complaint', 'resource' );
+
+/** Forms whose submissions are leads (SOL_CRM_FORMS can narrow or widen this, but never to SOL_CRM_NEVER). */
 function sol_crm_forms() {
 	$list = defined( 'SOL_CRM_FORMS' ) ? (string) SOL_CRM_FORMS : 'contact,consultation,training';
-	return array_values( array_filter( array_map( 'sanitize_key', explode( ',', $list ) ) ) );
+	return array_values( array_diff( array_filter( array_map( 'sanitize_key', explode( ',', $list ) ) ), SOL_CRM_NEVER ) );
 }
 
-/** True when the integration is on (dry run or live) — used by inc/forms.php to skip the older webhook. */
+/** True when this form's submissions go to the CRM. */
+function sol_crm_eligible( $variant ) {
+	return in_array( $variant, sol_crm_forms(), true );
+}
+
+/** True for a standard UUID v4 (lower or upper case). */
+function sol_crm_is_uuid4( $v ) {
+	return (bool) preg_match( '/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i', (string) $v );
+}
+
+/** True when the integration is on (dry run or live). */
 function sol_crm_enabled() {
 	return 'off' !== sol_crm_mode();
 }
 
-/** The enquiry's stable submission ID, created the first time it is asked for. */
+/**
+ * Whether the older "Forward form submissions to (webhook)" setting may still send $variant to $url (inc/forms.php).
+ * Never while this integration is on, never for a lead form once a CRM webhook is configured, and never to the
+ * CRM webhook's own host, so a lead can't reach the CRM twice or in the old format.
+ */
+function sol_crm_legacy_allowed( $variant, $url ) {
+	if ( sol_crm_enabled() ) {
+		return false;
+	}
+	$crm = defined( 'SOL_CRM_WEBHOOK_URL' ) ? (string) SOL_CRM_WEBHOOK_URL : '';
+	if ( '' === $crm ) {
+		return true;
+	}
+	$same_host = strtolower( (string) wp_parse_url( $crm, PHP_URL_HOST ) ) === strtolower( (string) wp_parse_url( (string) $url, PHP_URL_HOST ) );
+	return ! $same_host && ! sol_crm_eligible( $variant );
+}
+
+/**
+ * The enquiry's stable submission ID: a standard UUID v4, created once and stored as _sol_submission_id,
+ * then read back on every retry and resend. IDs stored by the first build as "sol_wp_<uuid>" (development
+ * copies only) are stored again as the bare UUID, so they keep the same UUID.
+ */
 function sol_crm_submission_id( $post_id ) {
 	$id = (string) get_post_meta( $post_id, '_sol_submission_id', true );
+	if ( 0 === strpos( $id, 'sol_wp_' ) && sol_crm_is_uuid4( substr( $id, 7 ) ) ) {
+		$id = substr( $id, 7 );
+		update_post_meta( $post_id, '_sol_submission_id', $id );
+	}
 	if ( '' === $id ) {
-		$id = 'sol_wp_' . wp_generate_uuid4();
-		add_post_meta( $post_id, '_sol_submission_id', $id, true );
+		add_post_meta( $post_id, '_sol_submission_id', wp_generate_uuid4(), true );
 		$id = (string) get_post_meta( $post_id, '_sol_submission_id', true ); // the stored value wins a race
 	}
-	return $id;
+	return strtolower( $id );
 }
 
 /** A service ID from the submitted data: the dropdown value, the chat booking's ID, or a service page's title. */
@@ -139,13 +177,15 @@ add_action( 'sol_form_submitted', function ( $variant, $data, $post_id ) {
 	if ( ! $post_id || is_wp_error( $post_id ) ) {
 		return;
 	}
-	sol_crm_submission_id( $post_id ); // every enquiry gets its stable ID, even while the integration is off
-	$mode = sol_crm_mode();
-	if ( 'off' === $mode ) {
+	if ( ! sol_crm_eligible( $variant ) ) {
+		if ( 'off' !== sol_crm_mode() ) {
+			sol_crm_set( $post_id, 'skipped', '', 'Form "' . $variant . '" is not sent to the CRM.' );
+		}
 		return;
 	}
-	if ( ! in_array( $variant, sol_crm_forms(), true ) ) {
-		sol_crm_set( $post_id, 'skipped', '', 'Form "' . $variant . '" is not sent to the CRM.' );
+	sol_crm_submission_id( $post_id ); // eligible enquiries get their stable ID even while forwarding is off
+	$mode = sol_crm_mode();
+	if ( 'off' === $mode ) {
 		return;
 	}
 	update_post_meta( $post_id, '_sol_crm_payload', wp_slash( wp_json_encode( sol_crm_payload( $variant, $data, $post_id ) ) ) );
