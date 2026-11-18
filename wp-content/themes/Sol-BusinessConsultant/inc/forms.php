@@ -216,7 +216,7 @@ function sol_render_form( $variant, $args = array() ) {
 		<?php endif; ?>
 
 		<button type="submit" class="sol-btn sol-btn--primary sol-btn--block"><?php echo esc_html( $submit ); ?> <?php echo sol_icon( 'arrow-right', 'sol-btn__icon' ); // phpcs:ignore ?></button>
-		<?php if ( $args['privacy_text'] ) : ?><p class="sol-form__privacy"><?php echo esc_html( $args['privacy_text'] ); ?></p><?php endif; ?>
+		<?php if ( $args['privacy_text'] ) : ?><input type="hidden" name="_sol_pn" value="1"><p class="sol-form__privacy"><?php echo esc_html( $args['privacy_text'] ); ?></p><?php endif; ?>
 		<p class="sol-form__status" role="status" aria-live="polite"></p>
 	</form>
 	<?php
@@ -297,6 +297,8 @@ function sol_handle_form() {
 		'message'           => isset( $_POST['message'] ) ? mb_substr( sanitize_textarea_field( wp_unslash( $_POST['message'] ) ), 0, 5000 ) : '',
 		'summary'           => isset( $_POST['summary'] ) ? mb_substr( sanitize_textarea_field( wp_unslash( $_POST['summary'] ) ), 0, 5000 ) : '',
 		'marketing_consent' => ! empty( $_POST['marketing_consent'] ) ? 'Yes' : 'No',
+		// Not saved as a field: tells the CRM forwarding (inc/crm-forward.php) whether the privacy notice was on the form.
+		'privacy_notice_shown' => ! empty( $_POST['_sol_pn'] ),
 	);
 	// phpcs:enable
 
@@ -375,6 +377,7 @@ function sol_save_enquiry( $variant, $data, $back ) {
 		update_post_meta( $post_id, 'form_variant', $variant );
 		update_post_meta( $post_id, 'selection', $data['selection'] ? $data['selection'] : $data['service'] );
 		update_post_meta( $post_id, '_sol_fields', $rows );
+		update_post_meta( $post_id, '_sol_page', esc_url_raw( $back ) );
 	}
 
 	// Email the team.
@@ -396,14 +399,15 @@ function sol_save_enquiry( $variant, $data, $back ) {
 		update_post_meta( $post_id, '_sol_confirm', $confirmed ? 'sent' : 'failed' );
 	}
 
-	// Optional webhook (CRM, n8n, Zapier).
-	$hook = sol_opt( 'lead_webhook_url' );
+	// Optional webhook (CRM, n8n, Zapier). Skipped while the n8n Lead Intake forwarding (inc/crm-forward.php)
+	// is on, so there is only one path into the CRM.
+	$hook = ( function_exists( 'sol_crm_enabled' ) && sol_crm_enabled() ) ? '' : sol_opt( 'lead_webhook_url' );
 	if ( $hook && wp_http_validate_url( $hook ) ) {
 		wp_remote_post( $hook, array(
 			'timeout'  => 5,
 			'blocking' => false,
 			'headers'  => array( 'Content-Type' => 'application/json' ),
-			'body'     => wp_json_encode( array_merge( $data, array( 'form' => $variant, 'page' => $back, 'source' => 'wordpress', 'submitted_at' => gmdate( 'c' ) ) ) ),
+			'body'     => wp_json_encode( array_merge( array_diff_key( $data, array( 'privacy_notice_shown' => 1, 'service_id' => 1 ) ), array( 'form' => $variant, 'page' => $back, 'source' => 'wordpress', 'submitted_at' => gmdate( 'c' ) ) ) ),
 		) );
 	}
 
