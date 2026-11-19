@@ -19,7 +19,8 @@ $cta_h    = sol_opt( 'footer_cta_heading' );
 $copy     = str_replace( '{year}', gmdate( 'Y' ), sol_opt( 'footer_copyright', '© {year} ' . $company ) );
 
 // Legal links move from the columns to the bottom bar (they still come from the site settings).
-$legal = array();
+$legal   = array();
+$has_dir = false;
 $widest = -1;
 $most   = 10; // only a column with more than 10 links gets the two-column layout
 foreach ( $columns as $i => $col ) {
@@ -32,10 +33,27 @@ foreach ( $columns as $i => $col ) {
 		}
 	}
 	$columns[ $i ]['links'] = $keep;
+	foreach ( $keep as $l ) {
+		if ( function_exists( 'sol_is_directory_url' ) && sol_is_directory_url( sol_get( $l, 'url' ) ) ) {
+			$has_dir = true;
+		}
+	}
 	if ( count( $keep ) > $most ) {
 		$most   = count( $keep );
 		$widest = $i;
 	}
+}
+// Provider directory link (inc/menu.php): added to the NDIS column, or the first column, unless the
+// footer settings already link to it.
+if ( ! $has_dir && function_exists( 'sol_directory_url' ) && '' !== sol_directory_url() && $columns ) {
+	$at = 0;
+	foreach ( $columns as $i => $col ) {
+		if ( false !== stripos( (string) sol_get( $col, 'title' ), 'ndis' ) ) {
+			$at = $i;
+			break;
+		}
+	}
+	$columns[ $at ]['links'][] = array( 'label' => sol_directory_label(), 'url' => sol_directory_url() );
 }
 ?>
 </div><!-- sol-main -->

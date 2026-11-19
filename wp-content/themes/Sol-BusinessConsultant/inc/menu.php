@@ -42,6 +42,81 @@ function sol_menu_data() {
 	if ( null === $data ) {
 		$data = sol_menu_from_options();
 	}
+	$data = sol_menu_add_directory( $data );
+	return $data;
+}
+
+/* ------------------------------------------------------------------ */
+/* Provider directory link (directory.solbusinessconsultant.com.au)    */
+/* ------------------------------------------------------------------ */
+
+/** The provider directory site. Change with the 'sol_directory_url' filter; return '' to hide the links. */
+function sol_directory_url() {
+	return (string) apply_filters( 'sol_directory_url', 'https://directory.solbusinessconsultant.com.au/' );
+}
+
+/** Descriptive link text (not "click here"), used in the menu and footer. */
+function sol_directory_label() {
+	return (string) apply_filters( 'sol_directory_label', 'NDIS and aged care provider directory' );
+}
+
+/** True when $url points at the directory site. */
+function sol_is_directory_url( $url ) {
+	$host = wp_parse_url( sol_directory_url(), PHP_URL_HOST );
+	return $host && wp_parse_url( (string) $url, PHP_URL_HOST ) === $host;
+}
+
+/**
+ * Adds the directory to the Services mega menu, in the NDIS column (or the first column), unless a menu item
+ * already links to it. Works for both menu sources (Appearance → Menus and SOL Site → Header).
+ */
+function sol_menu_add_directory( $data ) {
+	if ( '' === sol_directory_url() || ! is_array( $data ) ) {
+		return $data;
+	}
+	$mega = null;
+	foreach ( $data as $i => $top ) {
+		if ( sol_is_directory_url( $top['url'] ?? '' ) ) {
+			return $data;
+		}
+		foreach ( (array) ( $top['children'] ?? array() ) as $c ) {
+			if ( sol_is_directory_url( $c['url'] ?? '' ) ) {
+				return $data;
+			}
+		}
+		foreach ( (array) ( $top['columns'] ?? array() ) as $col ) {
+			if ( sol_is_directory_url( $col['url'] ?? '' ) ) {
+				return $data;
+			}
+			foreach ( (array) ( $col['items'] ?? array() ) as $it ) {
+				if ( sol_is_directory_url( $it['url'] ?? '' ) ) {
+					return $data;
+				}
+			}
+		}
+		if ( null === $mega && 'mega' === ( $top['type'] ?? '' ) && ! empty( $top['columns'] ) ) {
+			$mega = $i;
+		}
+	}
+	if ( null === $mega ) {
+		return $data; // no mega menu: the footer link still shows
+	}
+	$col = 0;
+	foreach ( $data[ $mega ]['columns'] as $j => $c ) {
+		if ( false !== stripos( (string) ( $c['label'] ?? '' ), 'ndis' ) ) {
+			$col = $j;
+			break;
+		}
+	}
+	$data[ $mega ]['columns'][ $col ]['items'][] = array(
+		'label'   => 'NDIS & Aged Care Provider Directory',
+		'url'     => sol_directory_url(),
+		'icon'    => 'search',
+		'desc'    => 'Find registered NDIS and aged care providers near you',
+		'badge'   => '',
+		'target'  => '',
+		'current' => false,
+	);
 	return $data;
 }
 
