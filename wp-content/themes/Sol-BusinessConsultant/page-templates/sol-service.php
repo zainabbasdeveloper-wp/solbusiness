@@ -35,8 +35,15 @@ while ( have_posts() ) {
 
 	$rows = sol_rows( get_field( 'page_sections', $id ) );
 	if ( $rows ) {
+		// A page whose "#intake-form" section is only a call-to-action box ("complete the form below") gets the
+		// enquiry form straight after it, so visitors can actually enquire (NDIS Registration was the case).
+		$has_form = (bool) array_intersect( array( 'service_enquiry', 'contact' ), wp_list_pluck( $rows, 'acf_fc_layout' ) );
 		foreach ( $rows as $i => $row ) {
 			sol_render_row( $row, $i );
+			if ( ! $has_form && 'cta_banner' === sol_get( $row, 'acf_fc_layout' ) && 'intake-form' === sol_get( $row, 'section_id' ) ) {
+				sol_render_row( array( 'acf_fc_layout' => 'service_enquiry', 'section_id' => 'enquiry-form' ) );
+				$has_form = true;
+			}
 		}
 	} else {
 		sol_render_row( array( 'acf_fc_layout' => 'service_details' ) );
