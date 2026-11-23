@@ -8,6 +8,9 @@
  *   define( 'SOL_CRM_WEBHOOK_URL', 'https://…' ); // full production webhook URL from n8n
  *   define( 'SOL_CRM_WEBHOOK_KEY', '…' );     // shared secret, sent as the x-sol-webhook-key header
  *   define( 'SOL_CRM_FORMS', 'contact,consultation,training' ); // optional: which forms count as leads
+ *   define( 'SOL_CRM_TEST_EMAILS', 'test@example.com' ); // optional: controlled test. In live mode ONLY enquiries
+ *                                                       // from these addresses are sent; all others are held
+ *                                                       // (stored, not sent). Remove it for unrestricted activation.
  *
  * How it works:
  * - Runs on the existing sol_form_submitted action, after the enquiry is saved and the team email has gone,
@@ -59,6 +62,24 @@ function sol_crm_eligible( $variant ) {
 /** True for a standard UUID v4 (lower or upper case). */
 function sol_crm_is_uuid4( $v ) {
 	return (bool) preg_match( '/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i', (string) $v );
+}
+
+/** Approved test addresses (lower case). Empty = no restriction. */
+function sol_crm_test_emails() {
+	$list = defined( 'SOL_CRM_TEST_EMAILS' ) ? (string) SOL_CRM_TEST_EMAILS : '';
+	return array_values( array_filter( array_map( function ( $e ) {
+		return strtolower( trim( $e ) );
+	}, explode( ',', $list ) ), 'is_email' ) );
+}
+
+/** True while a controlled test is running (SOL_CRM_TEST_EMAILS is set). */
+function sol_crm_test_mode() {
+	return (bool) sol_crm_test_emails();
+}
+
+/** True when this enquiry may be sent: always, or only from an approved test address during a controlled test. */
+function sol_crm_may_send( $post_id ) {
+	return ! sol_crm_test_mode() || in_array( strtolower( trim( (string) get_post_meta( $post_id, 'email', true ) ) ), sol_crm_test_emails(), true );
 }
 
 /** True when the integration is on (dry run or live). */
@@ -194,6 +215,10 @@ add_action( 'sol_form_submitted', function ( $variant, $data, $post_id ) {
 		sol_crm_set( $post_id, 'dry_run', '', 'Dry run: payload stored, nothing sent.' );
 		return;
 	}
+	if ( ! sol_crm_may_send( $post_id ) ) {
+		sol_crm_set( $post_id, 'held', '', 'Controlled test (SOL_CRM_TEST_EMAILS): only the approved test address is sent. Use "Resend to CRM" after activation.' );
+		return;
+	}
 	sol_crm_set( $post_id, 'queued' );
 	sol_crm_queue( $post_id );
 }, 10, 3 );
@@ -203,7 +228,7 @@ add_action( SOL_CRM_HOOK, 'sol_crm_send', 10, 2 );
 function sol_crm_send( $post_id, $attempt = 1 ) {
 	$post_id = (int) $post_id;
 	$attempt = max( 1, (int) $attempt );
-	if ( 'live' !== sol_crm_mode() || 'sent' === get_post_meta( $post_id, '_sol_crm', true ) ) {
+	if ( 'live' !== sol_crm_mode() || 'sent' === get_post_meta( $post_id, '_sol_crm', true ) || ! sol_crm_may_send( $post_id ) ) {
 		return;
 	}
 	$body = (string) get_post_meta( $post_id, '_sol_crm_payload', true );
@@ -251,6 +276,7 @@ function sol_crm_label( $status ) {
 		'rejected' => array( '#b32d2e', 'Rejected' ),
 		'dry_run'  => array( '#2271b1', 'Dry run' ),
 		'skipped'  => array( '#646970', 'Not a lead form' ),
+		'held'     => array( '#996800', 'Held (test mode)' ),
 	);
 	return isset( $labels[ $status ] ) ? '<span style="color:' . $labels[ $status ][0] . '">' . esc_html( $labels[ $status ][1] ) . '</span>' : '<span class="description">Not sent</span>';
 }
@@ -274,10 +300,25 @@ function sol_crm_resend_url( $post_id ) {
 	return wp_nonce_url( admin_url( 'admin-post.php?action=sol_crm_resend&enquiry=' . (int) $post_id ), 'sol_crm_resend_' . (int) $post_id );
 }
 
+/**
+ * Label of the resend action for an enquiry, or '' when it can't be resent. A "Sent" enquiry can be sent again
+ * (same submission ID and payload) only during a controlled test, to check that n8n drops the duplicate.
+ */
+function sol_crm_resend_label( $post_id ) {
+	if ( 'live' !== sol_crm_mode() || ! current_user_can( 'manage_options' ) || ! sol_crm_may_send( $post_id )
+		|| '' === (string) get_post_meta( $post_id, '_sol_crm_payload', true ) ) {
+		return '';
+	}
+	$status = (string) get_post_meta( $post_id, '_sol_crm', true );
+	if ( in_array( $status, array( 'failed', 'rejected', 'dry_run', 'held' ), true ) ) {
+		return 'Resend to CRM';
+	}
+	return 'sent' === $status && sol_crm_test_mode() ? 'Replay same submission (test)' : '';
+}
+
 add_filter( 'post_row_actions', function ( $actions, $post ) {
-	if ( 'sol_enquiry' === $post->post_type && 'live' === sol_crm_mode() && current_user_can( 'manage_options' )
-		&& in_array( get_post_meta( $post->ID, '_sol_crm', true ), array( 'failed', 'rejected', 'dry_run' ), true ) ) {
-		$actions['sol_crm_resend'] = '<a href="' . esc_url( sol_crm_resend_url( $post->ID ) ) . '">Resend to CRM</a>';
+	if ( 'sol_enquiry' === $post->post_type && ( $label = sol_crm_resend_label( $post->ID ) ) ) {
+		$actions['sol_crm_resend'] = '<a href="' . esc_url( sol_crm_resend_url( $post->ID ) ) . '">' . esc_html( $label ) . '</a>';
 	}
 	return $actions;
 }, 10, 2 );
@@ -289,7 +330,10 @@ add_action( 'admin_post_sol_crm_resend', function () {
 		wp_die( 'Not allowed.' );
 	}
 	check_admin_referer( 'sol_crm_resend_' . $post_id );
-	if ( 'live' === sol_crm_mode() && '' !== (string) get_post_meta( $post_id, '_sol_crm_payload', true ) ) {
+	if ( sol_crm_resend_label( $post_id ) ) {
+		if ( 'sent' === get_post_meta( $post_id, '_sol_crm', true ) ) {
+			update_post_meta( $post_id, '_sol_crm_replays', (int) get_post_meta( $post_id, '_sol_crm_replays', true ) + 1 );
+		}
 		sol_crm_set( $post_id, 'queued' );
 		sol_crm_queue( $post_id );
 	}
@@ -307,6 +351,7 @@ add_action( 'add_meta_boxes_sol_enquiry', function () {
 		}
 		$bits = array_filter( array(
 			'Attempts'  => get_post_meta( $post->ID, '_sol_crm_attempts', true ),
+			'Replays'   => get_post_meta( $post->ID, '_sol_crm_replays', true ),
 			'HTTP code' => get_post_meta( $post->ID, '_sol_crm_code', true ),
 			'Note'      => get_post_meta( $post->ID, '_sol_crm_error', true ),
 			'Updated'   => ( $t = (int) get_post_meta( $post->ID, '_sol_crm_time', true ) ) ? wp_date( 'j M Y, g:i a', $t ) : '',
@@ -318,6 +363,9 @@ add_action( 'add_meta_boxes_sol_enquiry', function () {
 		if ( $payload ) {
 			echo '<details><summary>Payload</summary><pre style="white-space:pre-wrap;font-size:11px">' . esc_html( (string) wp_json_encode( json_decode( $payload ), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) ) . '</pre></details>';
 		}
-		echo '<p class="description">Mode: ' . esc_html( sol_crm_mode() ) . ' (set in wp-config.php)</p>';
+		if ( ( $label = sol_crm_resend_label( $post->ID ) ) ) {
+			echo '<p><a class="button" href="' . esc_url( sol_crm_resend_url( $post->ID ) ) . '">' . esc_html( $label ) . '</a></p>';
+		}
+		echo '<p class="description">Mode: ' . esc_html( sol_crm_mode() ) . ( sol_crm_test_mode() ? ', controlled test (only ' . esc_html( implode( ', ', sol_crm_test_emails() ) ) . ' is sent)' : '' ) . ' (set in wp-config.php)</p>';
 	}, 'sol_enquiry', 'side' );
 } );
