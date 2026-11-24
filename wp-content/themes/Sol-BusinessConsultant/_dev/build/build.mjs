@@ -19,6 +19,7 @@ import { products } from './content/products.mjs';
 import { applyCopy, mapSeedText, loadCopy } from './copy.mjs';
 import { applyPhotos, PHOTO_ALT } from './content/photos.mjs';
 import { brandText, brandProblems } from './content/brand.mjs';
+import { applyCompliance, complianceProblems } from './content/compliance.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const THEME = join(HERE, '..', '..');
@@ -169,6 +170,17 @@ let seed = routeUrls({
     process.exit(1);
   }
   console.log(`    Business description: ${changed} texts brought in line`);
+}
+
+/* ---------- compliance wording (content/compliance.mjs) ---------- */
+{
+  const changed = applyCompliance(seed);
+  const problems = complianceProblems(seed);
+  if (problems.length) {
+    console.error(`Removed compliance claims are still on the site (${problems.length}):\n  ` + problems.slice(0, 40).join('\n  '));
+    process.exit(1);
+  }
+  console.log(`    Compliance wording: ${changed} changes`);
 }
 
 /* ---------- photos (content/photos.mjs) ---------- */

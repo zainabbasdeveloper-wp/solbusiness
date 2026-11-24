@@ -43,6 +43,63 @@ function sol_menu_data() {
 		$data = sol_menu_from_options();
 	}
 	$data = sol_menu_add_directory( $data );
+	$data = sol_menu_compliance_labels( $data );
+	return $data;
+}
+
+/**
+ * Old service names and menu descriptions that described SOL as a BAS/tax agent, accountant or broker,
+ * mapped to the compliant wording (same list as _dev/build/content/compliance.mjs). Applied when the menu and
+ * footer are shown, so links saved in Appearance → Menus or SOL Site settings are corrected too.
+ */
+function sol_compliance_labels() {
+	return (array) apply_filters( 'sol_compliance_labels', array(
+		'Bookkeeping & BAS Lodgement'      => 'Bookkeeping Support',
+		'Bookkeeping & BAS'                => 'Bookkeeping Support',
+		'Business & Personal Loan Support' => 'Finance Broker Referrals',
+		'Business & Personal Loans'        => 'Finance Broker Referrals',
+		'Accountancy Partnerships'         => 'Accounting Partners',
+		'Payroll Services'                 => 'Payroll Admin Support',
+		'Company & Business Registration'  => 'Business Setup Support',
+		'Accounting Consultancy'           => 'Business Finance Guidance',
+		'Accountancy'                      => 'Business Finance Guidance',
+		'ASIC, ABN, TFN & GST setup'       => 'ASIC and ABN applications',
+		'Xero, QuickBooks & BAS'           => 'Xero and QuickBooks support',
+		'Xero, MYOB, QuickBooks & BAS'     => 'Xero and QuickBooks support',
+		'PAYG, super & STP support'        => 'Payroll software and records',
+		'Loan packs & broker links'        => 'Funding document packs',
+		'CPA network & growth planning'    => 'Accountant referrals',
+	) );
+}
+
+/** The compliant wording for a menu or footer label (unchanged when it isn't on the list). */
+function sol_compliance_label( $text ) {
+	$map  = sol_compliance_labels();
+	$text = (string) $text;
+	$key  = html_entity_decode( $text, ENT_QUOTES, 'UTF-8' );
+	return isset( $map[ $key ] ) ? $map[ $key ] : $text;
+}
+
+function sol_menu_compliance_labels( $data ) {
+	$fix = function ( $node ) {
+		foreach ( array( 'label', 'desc' ) as $k ) {
+			if ( isset( $node[ $k ] ) ) {
+				$node[ $k ] = sol_compliance_label( $node[ $k ] );
+			}
+		}
+		return $node;
+	};
+	foreach ( (array) $data as $i => $top ) {
+		$data[ $i ] = $fix( $top );
+		foreach ( array( 'children', 'columns' ) as $list ) {
+			foreach ( (array) ( $top[ $list ] ?? array() ) as $j => $c ) {
+				$data[ $i ][ $list ][ $j ] = $fix( $c );
+				foreach ( (array) ( $c['items'] ?? array() ) as $k => $it ) {
+					$data[ $i ][ $list ][ $j ]['items'][ $k ] = $fix( $it );
+				}
+			}
+		}
+	}
 	return $data;
 }
 

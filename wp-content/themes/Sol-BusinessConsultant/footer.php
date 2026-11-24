@@ -112,7 +112,7 @@ if ( ! $has_dir && function_exists( 'sol_directory_url' ) && '' !== sol_director
 				<summary><h3><?php echo esc_html( sol_get( $col, 'title' ) ); ?></h3><?php echo sol_icon( 'chevron-down' ); // phpcs:ignore ?></summary>
 				<ul>
 					<?php foreach ( $links as $l ) : ?>
-						<li><a href="<?php echo esc_url( sol_url( sol_get( $l, 'url' ) ) ); ?>"><?php echo esc_html( sol_get( $l, 'label' ) ); ?></a></li>
+						<li><a href="<?php echo esc_url( sol_url( sol_get( $l, 'url' ) ) ); ?>"><?php echo esc_html( function_exists( 'sol_compliance_label' ) ? sol_compliance_label( sol_get( $l, 'label' ) ) : sol_get( $l, 'label' ) ); ?></a></li>
 					<?php endforeach; ?>
 				</ul>
 			</details>

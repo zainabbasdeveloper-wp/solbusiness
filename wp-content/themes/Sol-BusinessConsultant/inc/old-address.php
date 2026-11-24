@@ -44,7 +44,34 @@ add_filter( 'wp_redirect', 'sol_fix_old_address' );
 
 /** Page addresses that changed since the old site, as old path => current page path. */
 function sol_moved_pages() {
-	return (array) apply_filters( 'sol_moved_pages', array( 'training-2' => 'training-courses' ) );
+	return (array) apply_filters( 'sol_moved_pages', array_merge( array( 'training-2' => 'training-courses' ), sol_renamed_services() ) );
+}
+
+/**
+ * Service pages renamed for compliance wording (v2.22.0): old address => new address. The seed uses the new
+ * addresses; sol_rename_service_pages() renames the existing pages once, so updates change them in place
+ * (no duplicate page), and the old addresses redirect with a 301.
+ */
+function sol_renamed_services() {
+	return array(
+		'services/bookkeeping-bas-lodgement'      => 'services/bookkeeping-support',
+		'services/business-personal-loan-support' => 'services/finance-broker-referrals',
+	);
+}
+
+// Runs on init, before theme updates are applied on admin_init.
+add_action( 'init', 'sol_rename_service_pages', 5 );
+function sol_rename_service_pages() {
+	if ( get_option( 'sol_renamed_services_v1' ) ) {
+		return;
+	}
+	foreach ( sol_renamed_services() as $old => $new ) {
+		$page = get_page_by_path( $old );
+		if ( $page && ! get_page_by_path( $new ) ) {
+			wp_update_post( array( 'ID' => $page->ID, 'post_name' => basename( $new ) ) );
+		}
+	}
+	update_option( 'sol_renamed_services_v1', 1, false );
 }
 
 // Old page addresses (saved in menus and links) redirect to the page's current address instead of a 404.

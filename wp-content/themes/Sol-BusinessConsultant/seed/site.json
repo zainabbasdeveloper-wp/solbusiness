@@ -210,34 +210,34 @@
     "url": "/services/",
     "items": [
      {
-      "label": "Company & Business Registration",
+      "label": "Business Setup Support",
       "url": "/services/company-business-registration/",
       "icon": "building-2",
-      "desc": "ASIC, ABN, TFN & GST setup"
+      "desc": "ASIC and ABN applications"
      },
      {
-      "label": "Bookkeeping & BAS Lodgement",
-      "url": "/services/bookkeeping-bas-lodgement/",
+      "label": "Bookkeeping Support",
+      "url": "/services/bookkeeping-support/",
       "icon": "receipt-text",
-      "desc": "Xero, QuickBooks & BAS"
+      "desc": "Xero and QuickBooks support"
      },
      {
-      "label": "Payroll Services",
+      "label": "Payroll Admin Support",
       "url": "/services/payroll-services/",
       "icon": "calculator",
-      "desc": "PAYG, super & STP support"
+      "desc": "Payroll software and records"
      },
      {
-      "label": "Business & Personal Loans",
-      "url": "/services/business-personal-loan-support/",
+      "label": "Finance Broker Referrals",
+      "url": "/services/finance-broker-referrals/",
       "icon": "briefcase-business",
-      "desc": "Loan packs & broker links"
+      "desc": "Funding document packs"
      },
      {
-      "label": "Accountancy Partnerships",
+      "label": "Accounting Partners",
       "url": "/services/accountancy-partnerships/",
       "icon": "calculator",
-      "desc": "CPA network & growth planning"
+      "desc": "Accountant referrals"
      },
      {
       "label": "Website Development",
@@ -252,7 +252,7 @@
       "desc": "Streamline your operations"
      },
      {
-      "label": "Accountancy",
+      "label": "Business Finance Guidance",
       "url": "/services/accountancy/",
       "icon": "calculator",
       "desc": "Finance operations support"
@@ -385,11 +385,11 @@
       "url": "/services/company-business-registration/"
      },
      {
-      "label": "Bookkeeping & BAS Lodgement",
-      "url": "/services/bookkeeping-bas-lodgement/"
+      "label": "Bookkeeping Support",
+      "url": "/services/bookkeeping-support/"
      },
      {
-      "label": "Payroll Services",
+      "label": "Payroll Admin Support",
       "url": "/services/payroll-services/"
      },
      {
@@ -397,11 +397,11 @@
       "url": "/services/website-development/"
      },
      {
-      "label": "Business & Personal Loan Support",
-      "url": "/services/business-personal-loan-support/"
+      "label": "Finance Broker Referrals",
+      "url": "/services/finance-broker-referrals/"
      },
      {
-      "label": "Accountancy Partnerships",
+      "label": "Accounting Partners",
       "url": "/services/accountancy-partnerships/"
      },
      {
@@ -595,7 +595,7 @@
     ]
    }
   ],
-  "footer_copyright": "Copyright {year} SOL Business Consultant Pty Ltd, an independent business consultancy based in Glenroy, Victoria. Not affiliated with the NDIS Commission or any government agency.",
+  "footer_copyright": "Copyright {year} SOL Business Consultant Pty Ltd, an independent business consultancy based in Glenroy, Victoria. SOL is not a registered tax agent, BAS agent, accountant, financial adviser, mortgage broker or credit provider. Tax, BAS and lodgement services are provided by a registered tax or BAS agent. Finance broking is provided by a licensed finance broker. SOL may receive a referral fee, which we disclose before you proceed. SOL is not affiliated with, endorsed by or acting for the NDIA, the NDIS Quality and Safeguards Commission or any government agency. Information on this site is general in nature.",
   "app_url": "https://training.solbusinessconsultant.com.au",
   "payment_page_url": "/sol-service-payment-form/",
   "cookie_enabled": true,
@@ -741,7 +741,7 @@
    "sku": "SOL-FIN-MONTHLY",
    "name": "Monthly Finance Support (per month)",
    "price": 350,
-   "short": "Bookkeeping, BAS and GST preparation, and financial reporting. Billed monthly.",
+   "short": "Bookkeeping support, GST record organisation and financial reporting. BAS is lodged by a registered BAS agent. Billed monthly.",
    "features": [],
    "category": "Finance Support"
   },
@@ -749,7 +749,7 @@
    "sku": "SOL-FIN-OPS",
    "name": "Finance Operations Support (per month)",
    "price": 990,
-   "short": "Everything in Monthly Finance Support, plus payroll and STP processing. Billed monthly.",
+   "short": "Everything in Monthly Finance Support, plus payroll records and software support. Pay runs and STP reporting by a registered agent. Billed monthly.",
    "features": [],
    "category": "Finance Support"
   },
@@ -757,7 +757,7 @@
    "sku": "SOL-FIN-NDIS",
    "name": "NDIS Financial Pack (per month)",
    "price": 1800,
-   "short": "Everything in Finance Operations Support, plus NDIS financial reporting. Billed monthly.",
+   "short": "Everything in Finance Operations Support, plus NDIS financial record organisation. Billed monthly.",
    "features": [],
    "category": "Finance Support"
   },
@@ -1205,7 +1205,7 @@
             "item": "Bookkeeping setup and reconciliation support"
            },
            {
-            "item": "BAS/GST preparation support"
+            "item": "GST record organisation (BAS lodged by a registered agent)"
            },
            {
             "item": "Profit and loss reporting support"
@@ -1245,16 +1245,16 @@
             "item": "Everything in Monthly Finance Support"
            },
            {
-            "item": "Payroll/STP process support"
+            "item": "Payroll records and software support"
            },
            {
             "item": "Superannuation process guidance"
            },
            {
-            "item": "Tax planning and annual return referrals"
+            "item": "Referrals to registered tax agents for tax returns"
            },
            {
-            "item": "NDIS financial reporting"
+            "item": "NDIS financial record organisation"
            },
            {
             "item": "Registered accountant referral pathway"
@@ -1372,9 +1372,6 @@
            },
            {
             "item": "Audit readiness guidance"
-           },
-           {
-            "item": "ABN / company setup"
            },
            {
             "item": "Ongoing compliance support"
@@ -1515,16 +1512,16 @@
             "item": "Monthly bookkeeping support"
            },
            {
-            "item": "BAS/GST preparation support"
+            "item": "GST record organisation (BAS lodged by a registered agent)"
            },
            {
-            "item": "Payroll/STP process support"
+            "item": "Payroll records and software support"
            },
            {
-            "item": "NDIS financial reporting"
+            "item": "NDIS financial record organisation"
            },
            {
-            "item": "Tax planning referrals where required"
+            "item": "Referrals to registered tax agents where required"
            }
           ],
           "extra_lines": [],
@@ -2227,7 +2224,7 @@
         "item": "Australian business support"
        },
        {
-        "item": "Specialist NDIS service planning"
+        "item": "Independent business consultancy"
        },
        {
         "item": "Secure payment workflow"
@@ -2822,7 +2819,7 @@
        },
        {
         "icon": "file-check",
-        "label": "NDIS-aligned processes"
+        "label": "Built around the NDIS Practice Standards"
        },
        {
         "icon": "award",
@@ -2831,7 +2828,7 @@
       ],
       "stats": [
        {
-        "value": "12+",
+        "value": "15",
         "label": "Business services"
        },
        {
@@ -2839,8 +2836,8 @@
         "label": "Dedicated portals"
        },
        {
-        "value": "24h",
-        "label": "Response target"
+        "value": "1 day",
+        "label": "Business-day response"
        }
       ],
       "image": "img:photos/home-consultants-team.webp",
@@ -2852,50 +2849,22 @@
      {
       "acf_fc_layout": "logo_strip",
       "section_id": "",
-      "eyebrow": "Built for the Australian Market",
+      "eyebrow": "Software",
       "background": "white",
       "align": "center",
-      "heading": "We Work With the Platforms Australian Providers Rely On",
-      "intro": "We help clients navigate the government, accounting, compliance and business platforms they use every day. Platform names are shown for context only and do not imply endorsement, partnership or any government affiliation.",
+      "heading": "Software we work with",
+      "intro": "We set up and support the business software our clients use every day. Product names are shown for context only and do not imply endorsement or partnership.",
       "logos": [
-       {
-        "name": "NDIS|Commission",
-        "image": ""
-       },
-       {
-        "name": "PRODA",
-        "image": ""
-       },
-       {
-        "name": "Services|Australia",
-        "image": ""
-       },
        {
         "name": "Xero",
         "image": ""
        },
        {
+        "name": "QuickBooks",
+        "image": ""
+       },
+       {
         "name": "Easy|Compliance",
-        "image": ""
-       },
-       {
-        "name": "Fair Work",
-        "image": ""
-       },
-       {
-        "name": "ASIC",
-        "image": ""
-       },
-       {
-        "name": "ATO",
-        "image": ""
-       },
-       {
-        "name": "AHPRA",
-        "image": ""
-       },
-       {
-        "name": "Safe Work|Australia",
         "image": ""
        }
       ],
@@ -3354,7 +3323,7 @@
           "value": "digital_marketing"
          },
          {
-          "label": "Bookkeeping, BAS, payroll, or reporting support",
+          "label": "Bookkeeping, payroll admin or reporting support",
           "score": 0,
           "value": "bookkeeping_bas"
          },
@@ -3448,12 +3417,12 @@
        {
         "key": "bookkeeping_bas",
         "min_percent": 0,
-        "title": "Bookkeeping, BAS & Payroll",
+        "title": "Bookkeeping & Payroll Admin",
         "subtitle": "Recommended Pathway",
-        "description": "Ideal if you need cleaner books, payroll processing, BAS preparation, reconciliations and reporting.",
+        "description": "Ideal if you need cleaner books, payroll admin, records ready for your BAS agent, reconciliations and reporting.",
         "link": {
          "title": "View Finance Support",
-         "url": "/services/bookkeeping-bas-lodgement/",
+         "url": "/services/bookkeeping-support/",
          "target": ""
         }
        },
@@ -3602,7 +3571,7 @@
        },
        {
         "icon": "file-check",
-        "label": "NDIS-aligned processes"
+        "label": "Built around the NDIS Practice Standards"
        },
        {
         "icon": "award",
@@ -3611,7 +3580,7 @@
       ],
       "stats": [
        {
-        "value": "12+",
+        "value": "15",
         "label": "Business services"
        },
        {
@@ -3619,8 +3588,8 @@
         "label": "Dedicated portals"
        },
        {
-        "value": "24h",
-        "label": "Response target"
+        "value": "1 day",
+        "label": "Business-day response"
        }
       ],
       "image": "img:photos/home-consultants-team.webp",
@@ -3673,20 +3642,20 @@
        {
         "icon": "briefcase-business",
         "title": "Business Consulting & Support",
-        "text": "Company setup, bookkeeping and BAS, payroll, accounting and admin support, so the day-to-day runs smoothly.",
+        "text": "Business setup, bookkeeping support, payroll admin and accountant referrals, so the day-to-day runs smoothly.",
         "image": "img:photos/about-consultant-conversation.webp",
         "list": [
          {
-          "item": "Company & Business Registration"
+          "item": "Business Setup Support"
          },
          {
-          "item": "Bookkeeping & BAS Lodgement"
+          "item": "Bookkeeping Support"
          },
          {
-          "item": "Payroll Services"
+          "item": "Payroll Admin Support"
          },
          {
-          "item": "Accounting Consultancy"
+          "item": "Business Finance Guidance"
          }
         ],
         "link": {
@@ -4023,7 +3992,7 @@
           "value": "digital_marketing"
          },
          {
-          "label": "Bookkeeping, BAS, payroll, or reporting support",
+          "label": "Bookkeeping, payroll admin or reporting support",
           "score": 0,
           "value": "bookkeeping_bas"
          },
@@ -4117,12 +4086,12 @@
        {
         "key": "bookkeeping_bas",
         "min_percent": 0,
-        "title": "Bookkeeping, BAS & Payroll",
+        "title": "Bookkeeping & Payroll Admin",
         "subtitle": "Recommended Pathway",
-        "description": "Ideal if you need cleaner books, payroll processing, BAS preparation, reconciliations and reporting.",
+        "description": "Ideal if you need cleaner books, payroll admin, records ready for your BAS agent, reconciliations and reporting.",
         "link": {
          "title": "View Finance Support",
-         "url": "/services/bookkeeping-bas-lodgement/",
+         "url": "/services/bookkeeping-support/",
          "target": ""
         }
        },
@@ -5538,7 +5507,7 @@
       "style": "dark",
       "eyebrow": "Best Value",
       "heading": "Enrol in All 3 Levels and Save",
-      "text": "Complete the full NDIS Support Coordinator pathway, from Foundation to Advanced, and take your career further. AUD $1,097 (was $1,297).",
+      "text": "Complete the full NDIS Support Coordinator pathway, from Foundation to Advanced, and take your career further. AUD $1,097.",
       "buttons": [
        {
         "link": {
@@ -7292,7 +7261,7 @@
         "icon": "database",
         "tag": "Active",
         "title": "Data at Rest Encryption",
-        "text": "Sensitive client data (documents, invoices, personal information) is encrypted at rest on our secure servers. Only authorised staff can decrypt and access."
+        "text": "Sensitive client data (documents, invoices, personal information) is kept on secure, access-controlled systems. Only authorised staff can access it."
        },
        {
         "icon": "server",
@@ -7479,7 +7448,7 @@
          },
          {
           "title": "5. Support & Remediation",
-          "text": "We provide free credit monitoring or other support as appropriate. We also implement changes to prevent recurrence."
+          "text": "We tell affected people what happened and what they can do to protect themselves, and we make changes to prevent it happening again."
          }
         ]
        }
@@ -7901,7 +7870,7 @@
         }
        },
        {
-        "name": "Bookkeeping & BAS Lodgement",
+        "name": "Bookkeeping Support",
         "icon": "calculator",
         "tagline": "Reliable bookkeeping with compliance reporting",
         "included": [
@@ -7921,7 +7890,7 @@
           "item": "Monthly financial statements"
          },
          {
-          "item": "BAS preparation & lodgement (quarterly)"
+          "item": "Records organised for your registered BAS agent (quarterly)"
          },
          {
           "item": "Payroll integration setup (if applicable)"
@@ -7954,7 +7923,7 @@
           "item": "Monthly reconciliation reports"
          },
          {
-          "item": "BAS preparation (ready to lodge)"
+          "item": "Organised records handed to your BAS agent"
          },
          {
           "item": "Year-end financial summary"
@@ -7971,7 +7940,7 @@
         }
        },
        {
-        "name": "Payroll Services",
+        "name": "Payroll Admin Support",
         "icon": "calculator",
         "tagline": "Complete, compliant payroll processing",
         "included": [
@@ -7985,19 +7954,19 @@
           "item": "Payroll processing & pay slip generation"
          },
          {
-          "item": "PAYG withholding calculation & lodgement"
+          "item": "Payroll software checks (PAYG withholding lodged by your registered agent)"
          },
          {
           "item": "Superannuation contributions + reporting"
          },
          {
-          "item": "STP (Single Touch Payroll) lodgement"
+          "item": "STP reporting handled by your registered BAS or payroll agent"
          },
          {
           "item": "Leave accrual tracking"
          },
          {
-          "item": "End-of-year PAYG summary & year-end processing"
+          "item": "Year-end payroll record checklist"
          },
          {
           "item": "Phone & email support for payroll queries"
@@ -8024,10 +7993,10 @@
           "item": "Monthly pay slips (for all employees)"
          },
          {
-          "item": "Quarterly STP lodgement confirmation"
+          "item": "Quarterly payroll record checklist"
          },
          {
-          "item": "Annual PAYG & super reporting"
+          "item": "Annual payroll record summary for your agent"
          },
          {
           "item": "Year-end payroll summary"
@@ -8041,7 +8010,7 @@
         }
        },
        {
-        "name": "Company & Business Registration",
+        "name": "Business Setup Support",
         "icon": "file-text",
         "tagline": "Company registration, ABN and tax setup",
         "included": [
@@ -8049,13 +8018,13 @@
           "item": "Business structure advice (sole trader, company, trust)"
          },
          {
-          "item": "ASIC company registration + documentation"
+          "item": "ASIC company application preparation + documentation"
          },
          {
           "item": "ABN application & setup"
          },
          {
-          "item": "Tax File Number (TFN) registration"
+          "item": "Referral to a registered tax agent for TFN registration"
          },
          {
           "item": "GST registration (if applicable)"
@@ -8954,7 +8923,7 @@
        },
        {
         "title": "Disputes & Escalation",
-        "content": "<ul><li><strong>Step 1:</strong> Contact us within 30 days: info@solbusinessconsultant.com.au</li><li><strong>Step 2:</strong> We respond within 10 business days</li><li><strong>Step 3:</strong> Escalate to Consumer Affairs Victoria (1300 558 181) or ASIC if unresolved</li></ul>"
+        "content": "<ul><li><strong>Step 1:</strong> Contact us within 30 days: info@solbusinessconsultant.com.au</li><li><strong>Step 2:</strong> We respond within 10 business days</li><li><strong>Step 3:</strong> Escalate to Consumer Affairs Victoria (1300 558 181) or the ACCC if unresolved</li></ul>"
        },
        {
         "title": "How to Request a Refund",
@@ -9003,11 +8972,11 @@
        },
        {
         "title": "2. Services Provided",
-        "content": "<p>We offer NDIS Registration Support, Support Coordination Training, Accountancy & Bookkeeping, Website Development, Software & Automation, and Business Services including company registration and loan support.</p><p>All services are delivered in Australian dollars (AUD) + GST (10%), unless otherwise specified in your contract.</p>"
+        "content": "<p>We offer NDIS Registration Support, Support Coordination Training, Bookkeeping support and referrals to registered accountants, Website Development, Software & Automation, and Business Services including business setup support and finance broker referrals.</p><p>All services are delivered in Australian dollars (AUD) + GST (10%), unless otherwise specified in your contract.</p>"
        },
        {
         "title": "3. Service Delivery Timeframes",
-        "content": "<p>NDIS Registration Package: 5–10 working days</p><p>Support Coordination Training: 2–5 working days</p><p>Website Development: 10–25 working days (depending on package)</p><p>Software Automation: 7–21 working days</p><p>Accountancy Setup: 3–5 working days</p><p>Timeframes are estimates only. We will communicate delays promptly. Custom projects may require extended timelines.</p>"
+        "content": "<p>NDIS Registration Package: 5–10 working days</p><p>Support Coordination Training: 2–5 working days</p><p>Website Development: 10–25 working days (depending on package)</p><p>Software Automation: 7–21 working days</p><p>Bookkeeping Setup: 3–5 working days</p><p>Timeframes are estimates only. We will communicate delays promptly. Custom projects may require extended timelines.</p>"
        },
        {
         "title": "4. Pricing & Payment Terms",
@@ -9031,11 +9000,11 @@
        },
        {
         "title": "9. Liability & Limitation",
-        "content": "<p>We use reasonable effort to deliver services on time and to agreed quality.</p><p>We are not liable for: indirect/consequential damages, loss of profits, business interruption, third-party service failures.</p><p>Maximum liability is limited to the amount you paid for the specific service.</p><p>Nothing in these Terms excludes, restricts or modifies any consumer guarantee, right or remedy that cannot lawfully be excluded under the Australian Consumer Law.</p><p>NDIS services: We provide guidance only; final compliance responsibility rests with your organization.</p><p>Accounting services: Review deliverables with your accountant; tax laws change frequently.</p>"
+        "content": "<p>We use reasonable effort to deliver services on time and to agreed quality.</p><p>We are not liable for: indirect/consequential damages, loss of profits, business interruption, third-party service failures.</p><p>Maximum liability is limited to the amount you paid for the specific service.</p><p>Nothing in these Terms excludes, restricts or modifies any consumer guarantee, right or remedy that cannot lawfully be excluded under the Australian Consumer Law.</p><p>NDIS services: We provide guidance only; final compliance responsibility rests with your organization.</p><p>Bookkeeping support: Your registered accountant or BAS agent is responsible for lodgements and tax advice.</p>"
        },
        {
         "title": "10. Compliance & Regulatory",
-        "content": "<p>Australian Consumer Law: Services provided with due care and skill; goods of acceptable quality.</p><p>NDIS Compliance: Documents align with current practice standards; audit compliance rests with you.</p><p>Tax & Accounting: Based on current law; external accountant review recommended.</p><p>Website & Digital Services: Provided 'as is'; target 99% uptime but not guaranteed.</p>"
+        "content": "<p>Australian Consumer Law: Services provided with due care and skill; goods of acceptable quality.</p><p>NDIS Compliance: Documents align with current practice standards; audit compliance rests with you.</p><p>Tax & Accounting: SOL does not provide tax, BAS or accounting services; these are provided by registered tax and BAS agents.</p><p>Website & Digital Services: Provided 'as is'; target 99% uptime but not guaranteed.</p><p>Our role: SOL Business Consultant Pty Ltd, an independent business consultancy based in Glenroy, Victoria. SOL is not a registered tax agent, BAS agent, accountant, financial adviser, mortgage broker or credit provider. Tax, BAS and lodgement services are provided by a registered tax or BAS agent. Finance broking is provided by a licensed finance broker. SOL may receive a referral fee, which we disclose before you proceed. SOL is not affiliated with, endorsed by or acting for the NDIA, the NDIS Quality and Safeguards Commission or any government agency. Information on this site is general in nature.</p>"
        },
        {
         "title": "11. Export Restrictions",
@@ -9047,7 +9016,7 @@
        },
        {
         "title": "13. Dispute Resolution",
-        "content": "<p>Governing Law: Laws of Victoria, Australia.</p><p>Complaints: Contact us within 30 days of issue (info@solbusinessconsultant.com.au) with order ID and complaint description.</p><p>Initial Response: Within 10 business days.</p><p>Escalation: If unresolved, escalate to Consumer Affairs Victoria (1300 558 181) or ASIC.</p>"
+        "content": "<p>Governing Law: Laws of Victoria, Australia.</p><p>Complaints: Contact us within 30 days of issue (info@solbusinessconsultant.com.au) with order ID and complaint description.</p><p>Initial Response: Within 10 business days.</p><p>Escalation: If unresolved, escalate to Consumer Affairs Victoria (1300 558 181) or the ACCC.</p>"
        },
        {
         "title": "14. General Provisions",
@@ -9473,7 +9442,7 @@
       "style": "outline"
      }
     ],
-    "hero_disclaimer": "SOL Business Consultant is an independent business consultancy and is not affiliated with the NDIS Commission or any government agency. Registration and audit outcomes depend on your business, registration groups, evidence, the auditor's assessment and official decisions.",
+    "hero_disclaimer": "SOL Business Consultant is an independent business consultancy. We are not affiliated with, endorsed by or acting for the NDIA, the NDIS Quality and Safeguards Commission or any government agency, and we can’t guarantee registration or audit outcomes.",
     "show_details": true,
     "details_who": [
      {
@@ -10223,7 +10192,7 @@
        }
       ],
       "buttons": [],
-      "note": "SOL Business Consultant is an independent business consultancy and is not affiliated with the NDIS Commission or any government agency. Registration outcomes depend on your business structure, registration groups, evidence and the auditor's assessment."
+      "note": "SOL Business Consultant is an independent business consultancy. We are not affiliated with, endorsed by or acting for the NDIA, the NDIS Quality and Safeguards Commission or any government agency, and we can’t guarantee registration or audit outcomes."
      },
      {
       "acf_fc_layout": "cta_banner",
@@ -10943,32 +10912,32 @@
   {
    "post_type": "page",
    "path": "services/company-business-registration",
-   "title": "Company & Business Registration",
+   "title": "Business Setup Support",
    "menu_order": 2,
    "template": "page-templates/sol-service.php",
    "yoast": {
-    "title": "Company & Business Registration Australia | SOL",
-    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+    "title": "Business Setup Support | ASIC and ABN Applications | SOL",
+    "description": "Help preparing your ASIC company and ABN applications, with referrals to registered tax agents for TFN and GST registration."
    },
    "fields": {
     "card_icon": "building-2",
-    "card_text": "Pty Ltd company registration with ASIC, ABN, TFN and GST applications, business structure advice and the documents you need to start trading.",
+    "card_text": "Help preparing ASIC company and ABN applications, with referrals to registered tax agents for TFN and GST registration.",
     "card_url": "",
     "hide_in_grid": false,
     "show_enquiry": true,
     "service_type": "business_registration",
     "eyebrow": "Business Setup",
     "hero_heading": "",
-    "hero_intro": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast.",
+    "hero_intro": "Starting a business? We help you prepare your ASIC company or business name application and your ABN application, and give you a checklist of what comes next. For TFN and GST registration, and advice on the right structure, we refer you to a registered tax agent.",
     "hero_highlights": [
      {
-      "item": "ASIC company registration"
+      "item": "ASIC company and business name applications"
      },
      {
-      "item": "ABN, TFN and GST registration"
+      "item": "ABN application support"
      },
      {
-      "item": "Sole trader, partnership or company advice"
+      "item": "Tax agent referrals for TFN and GST"
      }
     ],
     "hero_image": "img:photos/company-registration-signing.webp",
@@ -10990,16 +10959,16 @@
       "style": "outline"
      }
     ],
-    "overview_heading": "Fast, Hassle-Free Company and Business Registration",
+    "overview_heading": "Simple, Well-Prepared Business Setup",
     "features": [
      {
-      "item": "Pty Ltd company setup with every ASIC registration step prepared clearly for you."
+      "item": "Pty Ltd company and business name applications prepared clearly with you for ASIC."
      },
      {
-      "item": "ABN, TFN and GST registration guidance so you can trade and invoice from day one."
+      "item": "ABN application support, with referrals to a registered tax agent for TFN and GST registration."
      },
      {
-      "item": "Document handling, practical setup advice and a fast path from first enquiry to open for business."
+      "item": "A clear checklist of what comes next, from first enquiry to open for business."
      }
     ],
     "why_heading": "Why Choose SOL",
@@ -11018,10 +10987,10 @@
     "show_details": true,
     "details_who": [
      {
-      "item": "Founders setting up a new Australian company or business structure."
+      "item": "Founders setting up a new Australian company or business name."
      },
      {
-      "item": "Existing businesses that need help with ABN, TFN, GST or ASIC registration."
+      "item": "Existing businesses that need help with ASIC or ABN applications."
      },
      {
       "item": "Owners who want clear setup steps and business-ready documents."
@@ -11029,13 +10998,13 @@
     ],
     "details_get": [
      {
-      "item": "Advice on the right business structure before any registration begins."
+      "item": "Help preparing your ASIC company or business name application."
      },
      {
-      "item": "ASIC company registration support where included in your scope."
+      "item": "ABN application support where included in your scope."
      },
      {
-      "item": "ABN, TFN, GST and business documentation guidance."
+      "item": "Referral to a registered tax agent for TFN and GST registration and structure advice."
      },
      {
       "item": "A post-registration checklist so you know exactly what to do next."
@@ -11080,9 +11049,14 @@
       "answer": "Yes. Scope, deliverables and timing are adjusted to suit your business, budget and goals."
      }
     ],
-    "enquiry_heading": "Start Your Company or Business Registration",
+    "enquiry_heading": "Start Your Business Setup Enquiry",
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
+     {
+      "acf_fc_layout": "notice",
+      "style": "info",
+      "text": "Please note: SOL is a business consultancy, not a registered tax or BAS agent, accountant, financial adviser or credit provider. Tax, BAS and payroll lodgements are handled by a registered tax or BAS agent. Loans are arranged only by a licensed finance broker. Each partner is responsible for their own advice and fees. If SOL receives a referral fee, we’ll tell you before you proceed."
+     },
      {
       "acf_fc_layout": "reusable_block",
       "block": "ref:sol_block:service-trust"
@@ -11109,33 +11083,33 @@
   },
   {
    "post_type": "page",
-   "path": "services/bookkeeping-bas-lodgement",
-   "title": "Bookkeeping & BAS Lodgement",
+   "path": "services/bookkeeping-support",
+   "title": "Bookkeeping Support",
    "menu_order": 3,
    "template": "page-templates/sol-service.php",
    "yoast": {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+    "title": "Bookkeeping Support for Small Businesses | SOL",
+    "description": "Xero and QuickBooks setup, record organisation and bookkeeping routines, with referrals to registered BAS agents for lodgement."
    },
    "fields": {
     "card_icon": "receipt-text",
-    "card_text": "Xero and QuickBooks bookkeeping, bank reconciliations, monthly reporting and BAS lodgement coordination for small businesses.",
+    "card_text": "Xero and QuickBooks setup, record organisation and bookkeeping routines, with referrals to registered BAS agents for lodgement.",
     "card_url": "",
     "hide_in_grid": false,
     "show_enquiry": true,
     "service_type": "bookkeeping_bas",
-    "eyebrow": "Finance Operations",
+    "eyebrow": "Bookkeeping Support",
     "hero_heading": "",
-    "hero_intro": "Accurate, BAS-ready books with Xero and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination.",
+    "hero_intro": "Get your records organised and your software set up properly. We help you build simple bookkeeping routines, and refer you to a registered BAS agent when it’s time to prepare and lodge your BAS.",
     "hero_highlights": [
      {
-      "item": "Xero and QuickBooks experts"
+      "item": "Xero and QuickBooks setup"
      },
      {
-      "item": "Monthly or quarterly BAS"
+      "item": "Record organisation"
      },
      {
-      "item": "Reconciliations and financial reports"
+      "item": "Registered BAS agent referrals"
      }
     ],
     "hero_image": "img:photos/bookkeeping-bas-desk.webp",
@@ -11157,35 +11131,32 @@
       "style": "outline"
      }
     ],
-    "overview_heading": "Accurate Bookkeeping and Stress-Free BAS Lodgement",
+    "overview_heading": "Organised Records and Simple Bookkeeping Routines",
     "features": [
      {
-      "item": "Bookkeeping setup and accounting software guidance."
+      "item": "Accounting software setup and training"
      },
      {
-      "item": "Bank reconciliations and organised financial records."
+      "item": "Record review and organisation guidance"
      },
      {
-      "item": "Monthly or quarterly BAS preparation."
+      "item": "Simple monthly bookkeeping routines and checklists"
      },
      {
-      "item": "Clear financial reports for business owners."
-     },
-     {
-      "item": "Referral to registered BAS or tax agents when formal lodgement advice is required."
+      "item": "Referral to a registered BAS or tax agent for BAS preparation and lodgement"
      }
     ],
     "why_heading": "Bookkeeping Built Around How You Work",
     "why_intro": "Every service is scoped before paid work begins, with practical deliverables and a clear next step for your business.",
     "why": [
      {
-      "item": "Reliable routines mean fewer missing records and no last-minute BAS rush."
+      "item": "Reliable routines mean fewer missing records and less stress at reporting time."
      },
      {
       "item": "We work in the accounting software your business already uses."
      },
      {
-      "item": "Formal tax and BAS advice stays with registered professionals where required."
+      "item": "BAS preparation, lodgement and tax advice stay with registered BAS and tax agents."
      }
     ],
     "show_details": true,
@@ -11194,7 +11165,7 @@
       "item": "Businesses that want cleaner bookkeeping routines and better reporting."
      },
      {
-      "item": "Owners preparing records for monthly or quarterly BAS."
+      "item": "Owners who want their records organised before their BAS agent prepares the BAS."
      },
      {
       "item": "Businesses using Xero, QuickBooks or similar software."
@@ -11202,16 +11173,16 @@
     ],
     "details_get": [
      {
-      "item": "Bookkeeping setup and record review."
+      "item": "Accounting software setup and training"
      },
      {
-      "item": "Bank reconciliation and record organisation guidance."
+      "item": "Record review and organisation guidance"
      },
      {
-      "item": "BAS preparation coordination where included in your scope."
+      "item": "Simple monthly bookkeeping routines and checklists"
      },
      {
-      "item": "Referral to registered BAS or tax agents when formal advice or lodgement is required."
+      "item": "Referral to a registered BAS or tax agent for BAS preparation and lodgement"
      }
     ],
     "details_process": [
@@ -11233,10 +11204,10 @@
       "item": "Initial review: within 1 business day."
      },
      {
-      "item": "Catch-up and reconciliation timing depends on transaction volume and account access."
+      "item": "Catch-up and record organisation timing depends on transaction volume and account access."
      },
      {
-      "item": "BAS work follows the agreed reporting period and registered agent requirements where applicable."
+      "item": "BAS preparation and lodgement are done by your registered BAS or tax agent, on their timeline."
      }
     ],
     "details_faqs": [
@@ -11253,9 +11224,14 @@
       "answer": "Yes. Scope, deliverables and timing are adjusted to suit your business, budget and goals."
      }
     ],
-    "enquiry_heading": "Start Your Bookkeeping and BAS Enquiry",
+    "enquiry_heading": "Start Your Bookkeeping Support Enquiry",
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
+     {
+      "acf_fc_layout": "notice",
+      "style": "info",
+      "text": "Please note: SOL is a business consultancy, not a registered tax or BAS agent, accountant, financial adviser or credit provider. Tax, BAS and payroll lodgements are handled by a registered tax or BAS agent. Loans are arranged only by a licensed finance broker. Each partner is responsible for their own advice and fees. If SOL receives a referral fee, we’ll tell you before you proceed."
+     },
      {
       "acf_fc_layout": "reusable_block",
       "block": "ref:sol_block:service-trust"
@@ -11283,32 +11259,32 @@
   {
    "post_type": "page",
    "path": "services/payroll-services",
-   "title": "Payroll Services",
+   "title": "Payroll Admin Support",
    "menu_order": 4,
    "template": "page-templates/sol-service.php",
    "yoast": {
-    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
-    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+    "title": "Payroll Admin Support | SOL Business Consultant",
+    "description": "Payroll software setup, employee onboarding checklists and record routines, with referrals to registered payroll and BAS agents."
    },
    "fields": {
     "card_icon": "calculator",
-    "card_text": "Pay runs, PAYG withholding, superannuation, Single Touch Payroll reporting and compliant employee onboarding.",
+    "card_text": "Payroll software setup, employee onboarding checklists and record routines, with referrals to registered payroll and BAS agents.",
     "card_url": "",
     "hide_in_grid": false,
     "show_enquiry": true,
     "service_type": "accountancy_payroll",
-    "eyebrow": "Payroll & Tax Process Support",
+    "eyebrow": "Payroll Administration",
     "hero_heading": "",
-    "hero_intro": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding.",
+    "hero_intro": "Set up payroll the right way from the start. We help you configure your payroll software, organise employee records and onboarding paperwork, and connect you with a registered BAS agent to run pay, PAYG withholding, super and Single Touch Payroll reporting.",
     "hero_highlights": [
      {
-      "item": "Weekly, fortnightly or monthly pay runs"
+      "item": "Payroll software setup guidance"
      },
      {
-      "item": "PAYG withholding and super"
+      "item": "Employee onboarding checklists"
      },
      {
-      "item": "Single Touch Payroll (STP)"
+      "item": "Registered BAS agent referrals"
      }
     ],
     "hero_image": "img:photos/payroll-financial-desk.webp",
@@ -11330,44 +11306,41 @@
       "style": "outline"
      }
     ],
-    "overview_heading": "Reliable, Hassle-Free Payroll Services",
+    "overview_heading": "Payroll Set Up the Right Way",
     "features": [
      {
-      "item": "Support for weekly, fortnightly or monthly pay runs."
+      "item": "Payroll software setup guidance"
      },
      {
-      "item": "PAYG withholding calculations and ATO process guidance."
+      "item": "Employee onboarding and record checklists"
      },
      {
-      "item": "Superannuation tracking and payment schedules."
+      "item": "Fair Work and record-keeping reminders (general information)"
      },
      {
-      "item": "Single Touch Payroll (STP) reporting workflows."
-     },
-     {
-      "item": "Employee onboarding records and TFN declarations."
+      "item": "Referral to a registered BAS or payroll agent for pay runs and STP reporting"
      }
     ],
     "why_heading": "Why Employers Choose SOL for Payroll",
     "why_intro": "Every service is scoped before paid work begins, with practical deliverables and a clear next step for your business.",
     "why": [
      {
-      "item": "Hands-on knowledge of Australian payroll obligations."
+      "item": "Practical knowledge of Australian payroll record-keeping."
      },
      {
-      "item": "Clear scope and checks that reduce avoidable payroll errors."
+      "item": "Clear checklists that reduce avoidable payroll errors."
      },
      {
-      "item": "Suits startups and established businesses that want dependable pay runs."
+      "item": "Pay runs and STP reporting stay with a registered BAS or payroll agent."
      }
     ],
     "show_details": true,
     "details_who": [
      {
-      "item": "Businesses that need dependable weekly, fortnightly or monthly pay runs."
+      "item": "Businesses setting up payroll software for the first time."
      },
      {
-      "item": "Employers wanting clearer PAYG, super, STP and onboarding processes."
+      "item": "Employers who want clearer onboarding and employee record processes."
      },
      {
       "item": "Growing teams that need well-organised employee records."
@@ -11375,16 +11348,16 @@
     ],
     "details_get": [
      {
-      "item": "Payroll support matched to your pay cycle."
+      "item": "Payroll software setup guidance"
      },
      {
-      "item": "PAYG, superannuation, STP and onboarding workflow guidance."
+      "item": "Employee onboarding and record checklists"
      },
      {
-      "item": "Employee record checklists and payroll routines."
+      "item": "Fair Work and record-keeping reminders (general information)"
      },
      {
-      "item": "Referral guidance when formal tax or payroll advice is required."
+      "item": "Referral to a registered BAS or payroll agent for pay runs and STP reporting"
      }
     ],
     "details_process": [
@@ -11406,10 +11379,10 @@
       "item": "Payroll scope review: within 1 business day."
      },
      {
-      "item": "Setup time depends on employee numbers, pay cycle and software access."
+      "item": "Setup time depends on employee numbers and software access."
      },
      {
-      "item": "Ongoing payroll support follows your agreed pay calendar."
+      "item": "Pay runs and STP reporting follow your registered agent’s pay calendar."
      }
     ],
     "details_faqs": [
@@ -11426,9 +11399,14 @@
       "answer": "Yes. Scope, deliverables and timing are adjusted to suit your business, budget and goals."
      }
     ],
-    "enquiry_heading": "Start Your Payroll Services Enquiry",
+    "enquiry_heading": "Start Your Payroll Admin Support Enquiry",
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
+     {
+      "acf_fc_layout": "notice",
+      "style": "info",
+      "text": "Please note: SOL is a business consultancy, not a registered tax or BAS agent, accountant, financial adviser or credit provider. Tax, BAS and payroll lodgements are handled by a registered tax or BAS agent. Loans are arranged only by a licensed finance broker. Each partner is responsible for their own advice and fees. If SOL receives a referral fee, we’ll tell you before you proceed."
+     },
      {
       "acf_fc_layout": "reusable_block",
       "block": "ref:sol_block:service-trust"
@@ -11659,33 +11637,33 @@
   },
   {
    "post_type": "page",
-   "path": "services/business-personal-loan-support",
-   "title": "Business & Personal Loan Support",
+   "path": "services/finance-broker-referrals",
+   "title": "Finance Broker Referrals",
    "menu_order": 6,
    "template": "page-templates/sol-service.php",
    "yoast": {
-    "title": "Business & Personal Loan Support Australia | SOL",
-    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+    "title": "Business Finance Broker Referrals | SOL Business Consultant",
+    "description": "Get your business records organised, then meet our partner licensed finance broker for business or personal lending."
    },
    "fields": {
     "card_icon": "credit-card",
-    "card_text": "Loan-ready financial packs, document preparation, application guidance and broker or lender introductions.",
+    "card_text": "Organised business records and an introduction to a licensed finance broker, who provides all credit advice.",
     "card_url": "",
     "hide_in_grid": false,
     "show_enquiry": true,
     "service_type": "loan_support",
-    "eyebrow": "Funding Readiness",
+    "eyebrow": "Finance Broker Referrals",
     "hero_heading": "",
-    "hero_intro": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders.",
+    "hero_intro": "Looking for business or personal finance? We help you get your business records in order, then introduce you to a licensed finance broker. Your broker gives the credit advice and handles your application. SOL is not a broker or credit provider.",
     "hero_highlights": [
      {
-      "item": "Loan-ready financial packs"
+      "item": "Organised business records"
      },
      {
-      "item": "Application document preparation"
+      "item": "Licensed broker partner"
      },
      {
-      "item": "Trusted broker and lender introductions"
+      "item": "Referral fees disclosed"
      }
     ],
     "hero_image": "img:photos/business-loan-meeting.webp",
@@ -11707,58 +11685,58 @@
       "style": "outline"
      }
     ],
-    "overview_heading": "Simple, Supported Business and Personal Loan Applications",
+    "overview_heading": "Organised Records, Then the Right Licensed Broker",
     "features": [
      {
-      "item": "Financial packs prepared for your loan application."
+      "item": "Business record and document checklist"
      },
      {
-      "item": "Document review and application preparation."
+      "item": "Organised folder of your business records"
      },
      {
-      "item": "Credit guidance and a clear application strategy."
+      "item": "An introduction to our partner licensed broker"
      },
      {
-      "item": "Introductions to trusted lenders and brokers."
+      "item": "Written disclosure of any referral fee SOL receives"
      }
     ],
     "why_heading": "Why Clients Choose SOL",
     "why_intro": "Every service is scoped before paid work begins, with practical deliverables and a clear next step for your business.",
     "why": [
      {
-      "item": "Support for individuals, startups and established businesses."
+      "item": "Support for sole traders, startups and established businesses."
      },
      {
-      "item": "Stronger applications through clear, complete documentation."
+      "item": "Clear, complete business records before you meet a broker."
      },
      {
-      "item": "Affordable packages with scope agreed before work begins."
+      "item": "Scope agreed before work begins, with any referral fee disclosed in writing."
      }
     ],
     "show_details": true,
     "details_who": [
      {
-      "item": "Business owners preparing for finance or lender meetings."
+      "item": "Business owners getting their records in order before speaking with a finance broker."
      },
      {
-      "item": "Individuals and sole traders who need their application documents organised."
+      "item": "Sole traders who want their business records organised."
      },
      {
-      "item": "Applicants who want a stronger financial pack before approaching brokers or lenders."
+      "item": "Owners who want an introduction to a licensed finance broker."
      }
     ],
     "details_get": [
      {
-      "item": "Loan-ready document checklist and application preparation."
+      "item": "Business record and document checklist"
      },
      {
-      "item": "Financial packs organised to lender or broker requirements."
+      "item": "Organised folder of your business records"
      },
      {
-      "item": "Application guidance and readiness review."
+      "item": "An introduction to our partner licensed broker"
      },
      {
-      "item": "Broker or lender introductions where suitable."
+      "item": "Written disclosure of any referral fee SOL receives"
      }
     ],
     "details_process": [
@@ -11777,13 +11755,13 @@
     ],
     "details_timeline": [
      {
-      "item": "Initial readiness review: within 1 business day."
+      "item": "Initial records review: within 1 business day."
      },
      {
-      "item": "Document pack preparation depends on your available records and lender requirements."
+      "item": "Organising your records depends on what you already have."
      },
      {
-      "item": "Approval times are set by brokers, lenders and their assessment criteria."
+      "item": "Credit advice, applications and approval times are handled by your broker."
      }
     ],
     "details_faqs": [
@@ -11800,9 +11778,14 @@
       "answer": "Yes. Scope, deliverables and timing are adjusted to suit your business, budget and goals."
      }
     ],
-    "enquiry_heading": "Start Your Loan Support Enquiry",
+    "enquiry_heading": "Start Your Finance Broker Referral Enquiry",
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
+     {
+      "acf_fc_layout": "notice",
+      "style": "info",
+      "text": "Please note: SOL is a business consultancy, not a registered tax or BAS agent, accountant, financial adviser or credit provider. Tax, BAS and payroll lodgements are handled by a registered tax or BAS agent. Loans are arranged only by a licensed finance broker. Each partner is responsible for their own advice and fees. If SOL receives a referral fee, we’ll tell you before you proceed."
+     },
      {
       "acf_fc_layout": "reusable_block",
       "block": "ref:sol_block:service-trust"
@@ -11830,32 +11813,32 @@
   {
    "post_type": "page",
    "path": "services/accountancy-partnerships",
-   "title": "Accountancy Partnerships",
+   "title": "Accounting Partners",
    "menu_order": 7,
    "template": "page-templates/sol-service.php",
    "yoast": {
-    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
-    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+    "title": "Accounting Partners for Small Businesses | SOL",
+    "description": "We organise your records and introduce you to our partner registered accountant and tax agent for BAS, tax returns and advice."
    },
    "fields": {
     "card_icon": "users",
-    "card_text": "CPA partner collaboration, compliance reporting, tax planning coordination, financial insights and strategic growth planning.",
+    "card_text": "Records organised by SOL, with BAS, tax returns and tax advice from a registered tax agent.",
     "card_url": "",
     "hide_in_grid": false,
     "show_enquiry": true,
     "service_type": "accountancy",
-    "eyebrow": "CPA Partner Network",
+    "eyebrow": "Accounting Partners",
     "hero_heading": "",
-    "hero_intro": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning.",
+    "hero_intro": "SOL works with a registered tax agent. We organise your records and handle the business admin; the registered tax agent prepares and lodges your BAS and tax returns and gives tax advice. You deal with one team, and each service is done by the right professional.",
     "hero_highlights": [
      {
-      "item": "Qualified CPA partners"
+      "item": "Records organised by SOL"
      },
      {
-      "item": "Compliance reporting"
+      "item": "BAS and tax by a registered tax agent"
      },
      {
-      "item": "Strategic growth planning"
+      "item": "One point of contact"
      }
     ],
     "hero_image": "img:photos/accountancy-partnership-handshake.webp",
@@ -11877,41 +11860,35 @@
       "style": "outline"
      }
     ],
-    "overview_heading": "Accounting Partnerships That Support Profitable Growth",
+    "overview_heading": "Each Service Done by the Right Professional",
     "features": [
      {
-      "item": "Compliance reporting aligned with your business obligations."
+      "item": "Records organised and handed over to our partner accountant"
      },
      {
-      "item": "Financial performance insights for smarter decisions."
+      "item": "BAS, tax returns and tax advice from our partner registered tax agent"
      },
      {
-      "item": "Tax planning and preparation coordinated with qualified professionals."
-     },
-     {
-      "item": "Strategic planning for expansion, funding and scale."
-     },
-     {
-      "item": "Regular financial health checks and partner referrals."
+      "item": "One point of contact for updates in your SOL client portal"
      }
     ],
-    "why_heading": "Leave the Numbers to Us",
+    "why_heading": "Why Clients Choose SOL",
     "why_intro": "Every service is scoped before paid work begins, with practical deliverables and a clear next step for your business.",
     "why": [
      {
-      "item": "A collaborative CPA network focused on accuracy and compliance."
+      "item": "Registered professionals for every tax and BAS task."
      },
      {
-      "item": "Advice matched to your goals and how your business operates."
+      "item": "Your records organised before they reach the accountant."
      },
      {
-      "item": "Growth planning from financial structure through to expansion."
+      "item": "Updates in one place, in your SOL client portal."
      }
     ],
     "show_details": true,
     "details_who": [
      {
-      "item": "Businesses that need bookkeeping, payroll, BAS coordination or finance process guidance."
+      "item": "Businesses that need bookkeeping or payroll admin, or finance process guidance."
      },
      {
       "item": "Owners who want their records organised before working with registered professionals."
@@ -11925,7 +11902,7 @@
       "item": "General finance process guidance and record organisation."
      },
      {
-      "item": "Bookkeeping, payroll, BAS or accounting partner coordination, as scoped."
+      "item": "Bookkeeping, payroll admin or accounting partner coordination, as scoped."
      },
      {
       "item": "Referrals to registered BAS, tax or accounting professionals when formal advice is required."
@@ -11973,9 +11950,14 @@
       "answer": "Yes. Scope, deliverables and timing are adjusted to suit your business, budget and goals."
      }
     ],
-    "enquiry_heading": "Start Your Accountancy Partnership Enquiry",
+    "enquiry_heading": "Start Your Accounting Partners Enquiry",
     "enquiry_text": "Share a few details and the SOL team will confirm the right scope, package and next step for your situation.",
     "page_sections": [
+     {
+      "acf_fc_layout": "notice",
+      "style": "info",
+      "text": "Please note: SOL is a business consultancy, not a registered tax or BAS agent, accountant, financial adviser or credit provider. Tax, BAS and payroll lodgements are handled by a registered tax or BAS agent. Loans are arranged only by a licensed finance broker. Each partner is responsible for their own advice and fees. If SOL receives a referral fee, we’ll tell you before you proceed."
+     },
      {
       "acf_fc_layout": "reusable_block",
       "block": "ref:sol_block:service-trust"
@@ -13700,22 +13682,22 @@
   {
    "post_type": "page",
    "path": "services/accountancy",
-   "title": "Accounting Consultancy",
+   "title": "Business Finance Guidance",
    "menu_order": 20,
    "template": "page-templates/sol-service.php",
    "yoast": {
-    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
-    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+    "title": "Business Finance Guidance | SOL Business Consultant",
+    "description": "Plain-English help with business finance admin, software and record keeping, with referrals to registered accountants and BAS agents."
    },
    "fields": {
     "card_icon": "calculator",
-    "card_text": "Finance operations and accounting guidance",
+    "card_text": "Finance admin, software and record-keeping guidance",
     "card_url": "",
     "hide_in_grid": true,
     "show_enquiry": true,
     "service_type": "accountancy",
-    "eyebrow": "Accounting Consultancy",
-    "hero_heading": "Accounting Consultancy\nfor [Australian Businesses]",
+    "eyebrow": "Business Finance Guidance",
+    "hero_heading": "Business Finance Guidance\nfor [Australian Businesses]",
     "hero_intro": "We are consultants, not accountants. We help you understand your financial obligations, set up the right systems and connect with the right registered professionals.",
     "hero_image": "img:photos/accountancy-finance-review.webp",
     "hero_buttons": [
@@ -13739,7 +13721,7 @@
     "show_details": true,
     "details_who": [
      {
-      "item": "Businesses that need bookkeeping, payroll, BAS coordination or finance process guidance."
+      "item": "Businesses that need bookkeeping or payroll admin, or finance process guidance."
      },
      {
       "item": "Owners who want their records organised before working with registered professionals."
@@ -13753,7 +13735,7 @@
       "item": "General finance process guidance and record organisation."
      },
      {
-      "item": "Bookkeeping, payroll, BAS or accounting partner coordination, as scoped."
+      "item": "Bookkeeping, payroll admin or accounting partner coordination, as scoped."
      },
      {
       "item": "Referrals to registered BAS, tax or accounting professionals when formal advice is required."
@@ -13801,9 +13783,14 @@
       "answer": "Yes. Scope, deliverables and timing are adjusted to suit your business, budget and goals."
      }
     ],
-    "enquiry_heading": "Start Your Accounting Consultancy Enquiry",
+    "enquiry_heading": "Start Your Business Finance Guidance Enquiry",
     "enquiry_text": "Tell us about your situation and we will guide you or introduce you to the right licensed professional.",
     "page_sections": [
+     {
+      "acf_fc_layout": "notice",
+      "style": "info",
+      "text": "Please note: SOL is a business consultancy, not a registered tax or BAS agent, accountant, financial adviser or credit provider. Tax, BAS and payroll lodgements are handled by a registered tax or BAS agent. Loans are arranged only by a licensed finance broker. Each partner is responsible for their own advice and fees. If SOL receives a referral fee, we’ll tell you before you proceed."
+     },
      {
       "acf_fc_layout": "card_grid",
       "section_id": "",
@@ -13823,7 +13810,7 @@
        },
        {
         "icon": "calculator",
-        "title": "BAS & Tax Guidance",
+        "title": "Understanding your obligations",
         "text": "Consultancy support to help you understand your BAS and tax obligations, with referrals to registered agents."
        },
        {
@@ -13833,8 +13820,8 @@
        },
        {
         "icon": "users",
-        "title": "Accounting Partner Network",
-        "text": "We introduce you to trusted CPA and registered accountant partners for compliant, professional service."
+        "title": "Accountant Referrals",
+        "text": "We refer you to registered accountants and tax agents for compliant, professional service."
        }
       ],
       "buttons": [],
@@ -13862,13 +13849,13 @@
         "item": "Understanding your BAS, with referrals to registered BAS agents"
        },
        {
-        "item": "Business structure, ABN and company registration advice"
+        "item": "General information on business structures"
        },
        {
         "item": "Budgeting and cash flow planning"
        },
        {
-        "item": "Introductions to CPA partners for tax returns"
+        "item": "Referrals to registered tax agents for tax returns"
        },
        {
         "item": "Record-keeping advice for business owners"
@@ -14728,9 +14715,9 @@
    "path": "bas-lodgement-australian-businesses",
    "title": "Understanding BAS Lodgement for Australian Businesses",
    "excerpt": "What every business owner needs to know about Business Activity Statements: lodgement deadlines, GST and PAYG obligations, and how to avoid ATO penalties.",
-   "content": "<!-- wp:paragraph -->\n<p>Accurate BAS lodgement depends on correct GST, PAYG withholding and business records across the whole reporting period.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Keeping invoices, receipts, payroll records, bank reconciliations and GST coding organised throughout the quarter reduces errors, late lodgement and the risk of ATO penalties.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Reviewing your numbers regularly also helps you understand what you will owe before cash flow gets tight.</p>\n<!-- /wp:paragraph -->",
+   "content": "<!-- wp:paragraph -->\n<p>Accurate BAS lodgement depends on correct GST, PAYG withholding and business records across the whole reporting period.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Keeping invoices, receipts, payroll records, bank reconciliations and GST coding organised throughout the quarter reduces errors, late lodgement and the risk of ATO penalties.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Reviewing your numbers regularly also helps you understand what you will owe before cash flow gets tight.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><strong>Please note: SOL is a business consultancy, not a registered tax or BAS agent, accountant, financial adviser or credit provider. Tax, BAS and payroll lodgements are handled by a registered tax or BAS agent. Loans are arranged only by a licensed finance broker. Each partner is responsible for their own advice and fees. If SOL receives a referral fee, we’ll tell you before you proceed.</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Your BAS must be lodged by you or a registered BAS or tax agent.</p>\n<!-- /wp:paragraph -->",
    "date": "2024-12-01 09:00:00",
-   "category": "Accounting",
+   "category": "Business finance",
    "featured_image": "img:photos/blog-bas-lodgement.webp",
    "featured_alt": "Business owner preparing a BAS lodgement with a calculator",
    "sticky": false,
@@ -14783,20 +14770,20 @@
   "photos/blog-bas-lodgement.webp": "Business owner preparing a BAS lodgement with a calculator"
  },
  "fingerprints": {
-  "sol_block:pricing-tabs": "b634806850bcdf7d",
-  "sol_block:consulting-packages": "fb20ff919b519ba8",
+  "sol_block:pricing-tabs": "5eb502db24e0c4af",
+  "sol_block:consulting-packages": "eed4b9c15b556e9d",
   "sol_block:marketing-packages": "1290a2446c0f4f0e",
   "sol_block:about-sol": "f10e3b8129d514e1",
   "sol_block:compliance": "1dabb230f12cd0d4",
   "sol_block:ndis-roadmap": "55d2c5ce009a828a",
-  "sol_block:service-trust": "42b5087ca2e8c75a",
+  "sol_block:service-trust": "70ece52810735cd2",
   "sol_block:service-journey": "db42bbf2a50fe9e3",
   "sol_block:general-faq": "60559749527dd765",
   "sol_block:training-faq": "ed6ea5866639c433",
   "sol_block:contact": "3841f3f7c0d55a0b",
   "sol_block:service-comparison": "a8bc97567e04f3df",
-  "page:home": "71ae086a596ef883",
-  "page:home-new": "244910b67a13ac66",
+  "page:home": "b92efe5c307fbb25",
+  "page:home-new": "3b6f46b13cbb6bcd",
   "page:about": "572d2249b867b71a",
   "page:contact": "f65fd873425acef2",
   "page:faq": "fdbbfdf1f8f6f0cb",
@@ -14805,30 +14792,30 @@
   "page:case-studies": "58c2c8b8cc0076ef",
   "page:use-cases": "05964b2488471f14",
   "page:marketing-packages": "0553a9b1e3c6e42c",
-  "page:training-2": "0bf364b916c87b1a",
+  "page:training-2": "d78ecc9c62918402",
   "page:ndis-packages": "faf58b21ac1e4f6a",
   "page:get-started": "983fec375a6cb221",
   "page:book-consultation": "d551cb3d24150644",
   "page:readiness-quiz": "98ce4f06e06ed46e",
   "page:ndis-readiness-calculator": "31eb1fc9f961cb3e",
-  "page:data-privacy-and-security": "6811e120491f1537",
-  "page:service-inclusions": "fa749d4d1d0b03df",
+  "page:data-privacy-and-security": "2a2d12a92e31f8cb",
+  "page:service-inclusions": "c97454db013f1a35",
   "page:support-and-availability": "102c3e4f5335c1d9",
   "page:after-payment": "c3c084e088e5b662",
   "page:privacy-policy": "8b635ec76ce7bcb2",
-  "page:refunds-cancellation-policy": "fe74ff57760c6f2c",
-  "page:terms-conditions": "7335038a79c6a56f",
+  "page:refunds-cancellation-policy": "721f1664ade3d37b",
+  "page:terms-conditions": "31bb466dcc470f92",
   "page:accessibility": "871e09d07242ced2",
   "page:complaints-feedback": "ac70fc3da012b748",
   "page:services": "ca2bd81e6938bbf8",
-  "page:services/ndis-registration": "f36b7b1424b77cbd",
+  "page:services/ndis-registration": "6da140bd5278b095",
   "page:services/ndis-support-coordination-training": "48689f3db7d4da70",
-  "page:services/company-business-registration": "8582bd7d0e135bba",
-  "page:services/bookkeeping-bas-lodgement": "c8d0477231b3e11a",
-  "page:services/payroll-services": "2edbeaafc01539d5",
+  "page:services/company-business-registration": "a8e9066d59b05e26",
+  "page:services/bookkeeping-support": "ca56213f6cfb099d",
+  "page:services/payroll-services": "18eb35610e9f0c74",
   "page:services/website-development": "e0f1aa0caa683ace",
-  "page:services/business-personal-loan-support": "b65e22cdc61fd1e6",
-  "page:services/accountancy-partnerships": "ff83cadcff2bcd8d",
+  "page:services/finance-broker-referrals": "b0eac9debde3fdfa",
+  "page:services/accountancy-partnerships": "c410749ae936f330",
   "page:services/search-engine-optimization": "2ce973f9646ccb15",
   "page:services/google-adwords": "10c0868dfbe50fcc",
   "page:services/social-media-marketing": "72cd5ea72ec57446",
@@ -14836,14 +14823,14 @@
   "page:services/admin-back-office-support": "25ab7fed9833ddf9",
   "page:services/offshore-outsourcing-staff-solutions": "97760eb09ceccd9b",
   "page:ai-machine-learning": "1a7622bd99d30526",
-  "page:services/accountancy": "11e1a474e213d964",
+  "page:services/accountancy": "01a4df68018b47bb",
   "post:ndis-provider-registration-australia": "54ff0e0be4956b6a",
   "post:bookkeeping-mistakes-small-business": "b0df4e268ca6c534",
   "post:what-is-support-coordination": "195b30419f433912",
   "post:website-development-ndis-providers": "6c3f3fb7a16aedae",
   "post:automation-transform-ndis-business": "0f4560e98ac801d5",
   "post:client-portal-use-cases-service-businesses": "50b9fe58b1703767",
-  "post:bas-lodgement-australian-businesses": "710c86792d4d4d67",
+  "post:bas-lodgement-australian-businesses": "a0c3492275ec9951",
   "product:SOL-NDIS-START-DEPOSIT": "d3e1be843968b416",
   "product:SOL-NDIS-START-FULL": "4c882e11430ff3ed",
   "product:SOL-NDIS-CERTIFIED-DEPOSIT": "30862c21225d4f3a",
@@ -14854,9 +14841,9 @@
   "product:SOL-SCT-TEAM": "34cab54bcd19402a",
   "product:SOL-AUTO-STARTER": "32856361d643c4f5",
   "product:SOL-AUTO-PRO": "e757669829f52aac",
-  "product:SOL-FIN-MONTHLY": "08752690c3028766",
-  "product:SOL-FIN-OPS": "11429e85774717fc",
-  "product:SOL-FIN-NDIS": "8449f0e6701bd9ac",
+  "product:SOL-FIN-MONTHLY": "859869f45f12538c",
+  "product:SOL-FIN-OPS": "357e149d5f303df4",
+  "product:SOL-FIN-NDIS": "61536c5a3d7e2ad2",
   "product:SOL-MKT-STARTER": "447f0120631e9b9d",
   "product:SOL-MKT-GROWTH": "4bdc5c9007ece834",
   "product:SOL-MKT-ENTERPRISE": "8662eed634ec2231",
@@ -14878,7 +14865,7 @@
   "option:website_label": "e5b69164fcf109f5",
   "option:business_hours": "2f725cfa8b964188",
   "option:nav_items": "884337fb7d7e99f4",
-  "option:mega_menu": "9acf1f6cca6786f1",
+  "option:mega_menu": "4f3099b2279978a3",
   "option:mega_promo": "d661c647fc478723",
   "option:header_buttons": "ad19c15dd586ab4d",
   "option:portal_links": "e4c41918dc71cb97",
@@ -14888,8 +14875,8 @@
   "option:newsletter_enabled": "5ffe533b830f08a0",
   "option:newsletter_label": "79cdd94608dbbe77",
   "option:newsletter_note": "aa377ccac640c2db",
-  "option:footer_columns": "b559db99dd7df4f5",
-  "option:footer_copyright": "2097dea66a5c08ff",
+  "option:footer_columns": "6d359127883a9848",
+  "option:footer_copyright": "9c113bb045c437d1",
   "option:app_url": "015218d6fc454ec4",
   "option:payment_page_url": "b3381b66f2a05d88",
   "option:cookie_enabled": "5ffe533b830f08a0",
@@ -14909,29 +14896,22 @@
   "option:chat_instructions": "dd29ecf524b030a6"
  },
  "history": {
-  "page:service-inclusions": [
-   "c7cf969c67a2eaed",
-   "e3eae3a3e84c91a6",
-   "82c7777202be63ad"
-  ],
-  "page:support-and-availability": [
-   "5c5f5f334e7ad296",
-   "2df00884ad9cf5ba"
-  ],
-  "option:business_hours": [
-   "094a2010dc561f57"
-  ],
   "sol_block:pricing-tabs": [
+   "b634806850bcdf7d",
    "3460e5a7863ce268",
    "d30f827c7699d52d",
    "74f4a589c432a1fc"
   ],
-  "sol_block:about-sol": [
-   "3947846ca776bcc2",
-   "b78c43a57d086264",
-   "3fbd72bed978eb35"
+  "sol_block:consulting-packages": [
+   "fb20ff919b519ba8",
+   "91bf3a1ba5720c67"
+  ],
+  "sol_block:service-trust": [
+   "42b5087ca2e8c75a",
+   "0d5334ee42b53946"
   ],
   "page:home": [
+   "71ae086a596ef883",
    "5d0b2f783a7641d6",
    "582c982387ebbd80",
    "2238b34ac329e855",
@@ -14942,6 +14922,128 @@
    "806e6bbf05a6bb85",
    "1199fbf5a0344c12"
   ],
+  "page:home-new": [
+   "244910b67a13ac66",
+   "1876663c2c32a128"
+  ],
+  "page:training-2": [
+   "0bf364b916c87b1a",
+   "1fdcffa233aff1eb",
+   "149b510c5702322a",
+   "d9b571a3be95060d"
+  ],
+  "page:data-privacy-and-security": [
+   "6811e120491f1537",
+   "38b7d28be213219a"
+  ],
+  "page:service-inclusions": [
+   "fa749d4d1d0b03df",
+   "c7cf969c67a2eaed",
+   "e3eae3a3e84c91a6",
+   "82c7777202be63ad"
+  ],
+  "page:refunds-cancellation-policy": [
+   "fe74ff57760c6f2c"
+  ],
+  "page:terms-conditions": [
+   "7335038a79c6a56f"
+  ],
+  "page:services/ndis-registration": [
+   "f36b7b1424b77cbd",
+   "0ab867569a0605f7",
+   "8b064106e9d97e6b",
+   "346bf0262b2aa130",
+   "f583c414262fdadd",
+   "ec6ab13fde3d07e8"
+  ],
+  "page:services/company-business-registration": [
+   "8582bd7d0e135bba",
+   "d7f130ac56a94c90",
+   "e53b911fa40ddb22",
+   "73b380054bef3553",
+   "9a27c22564e357d9"
+  ],
+  "page:services/bookkeeping-bas-lodgement": [
+   "c8d0477231b3e11a",
+   "73e9d3eea3ac324e",
+   "772dd161663c207e",
+   "2ead2c4cc3cd42a3",
+   "7ee3d9b20f92534a",
+   "3cb647091465e925"
+  ],
+  "page:services/payroll-services": [
+   "2edbeaafc01539d5",
+   "ee899e1430ca6af3",
+   "3ea6d227353d278e",
+   "b8399440e49c59cd"
+  ],
+  "page:services/business-personal-loan-support": [
+   "b65e22cdc61fd1e6",
+   "e3787a11265e4936",
+   "6bd15b8e8c0ee582",
+   "5585d429e4a8cd7c",
+   "89873b358d6e92ce"
+  ],
+  "page:services/accountancy-partnerships": [
+   "ff83cadcff2bcd8d",
+   "533632b0e7d8e057",
+   "e455a40303005b4a",
+   "defa7c91ccb6da05"
+  ],
+  "page:services/accountancy": [
+   "11e1a474e213d964",
+   "1775eea30c417b76",
+   "0aed1998719ad58e",
+   "06c94d2d17b4aff6",
+   "ce186287eaee576a"
+  ],
+  "post:bas-lodgement-australian-businesses": [
+   "710c86792d4d4d67",
+   "a568e9fce4ad1a37",
+   "19f9b682a003b692",
+   "bdc6eb52fbd1b3f4"
+  ],
+  "product:SOL-FIN-MONTHLY": [
+   "08752690c3028766",
+   "1d0f84d177f1a8bb"
+  ],
+  "product:SOL-FIN-OPS": [
+   "11429e85774717fc",
+   "f2d991ab9a8a8db7"
+  ],
+  "product:SOL-FIN-NDIS": [
+   "8449f0e6701bd9ac",
+   "d7253051a5ac03f2"
+  ],
+  "option:mega_menu": [
+   "9acf1f6cca6786f1",
+   "e67cc0d6d327ae05",
+   "9599ef842ba69325",
+   "cdd63d1ecec03dc4"
+  ],
+  "option:footer_columns": [
+   "b559db99dd7df4f5",
+   "357af69f88135647",
+   "00786a3c1c122e79",
+   "c65563ed95e44410"
+  ],
+  "option:footer_copyright": [
+   "2097dea66a5c08ff",
+   "6a336234d9cdb0bd",
+   "905f8f74802742f0"
+  ],
+  "page:support-and-availability": [
+   "5c5f5f334e7ad296",
+   "2df00884ad9cf5ba"
+  ],
+  "option:business_hours": [
+   "094a2010dc561f57"
+  ],
+  "sol_block:about-sol": [
+   "3947846ca776bcc2",
+   "b78c43a57d086264",
+   "3fbd72bed978eb35"
+  ],
   "page:about": [
    "de892520adefe479",
    "448255dc13f307c0"
@@ -14949,26 +15051,6 @@
   "page:case-studies": [
    "29715d711c49907f",
    "a067e019c3e2e95c"
-  ],
-  "page:services/ndis-registration": [
-   "0ab867569a0605f7",
-   "8b064106e9d97e6b",
-   "346bf0262b2aa130",
-   "f583c414262fdadd",
-   "ec6ab13fde3d07e8"
-  ],
-  "page:services/bookkeeping-bas-lodgement": [
-   "73e9d3eea3ac324e",
-   "772dd161663c207e",
-   "2ead2c4cc3cd42a3",
-   "7ee3d9b20f92534a",
-   "3cb647091465e925"
-  ],
-  "page:services/accountancy": [
-   "1775eea30c417b76",
-   "0aed1998719ad58e",
-   "06c94d2d17b4aff6",
-   "ce186287eaee576a"
   ],
   "post:bookkeeping-mistakes-small-business": [
    "10f8fc70ee44c6b7",
@@ -14985,18 +15067,6 @@
    "d925771fe37c1b56",
    "dcd520a5d7befd70"
   ],
-  "option:mega_menu": [
-   "e67cc0d6d327ae05",
-   "9599ef842ba69325",
-   "cdd63d1ecec03dc4"
-  ],
-  "option:footer_copyright": [
-   "6a336234d9cdb0bd",
-   "905f8f74802742f0"
-  ],
-  "page:home-new": [
-   "1876663c2c32a128"
-  ],
   "sol_block:compliance": [
    "5f3d1c42e9ead767",
    "df260bb9a3f79bb8",
@@ -15006,11 +15076,6 @@
    "86265f192e291fc5",
    "bd8c4af89e8ba89e",
    "151df300aaa2410b"
-  ],
-  "page:training-2": [
-   "1fdcffa233aff1eb",
-   "149b510c5702322a",
-   "d9b571a3be95060d"
   ],
   "page:readiness-quiz": [
    "c6ade2ce093930c7",
@@ -15031,32 +15096,10 @@
    "fea3d25c24c9ec72",
    "c0701a939035f13f"
   ],
-  "page:services/company-business-registration": [
-   "d7f130ac56a94c90",
-   "e53b911fa40ddb22",
-   "73b380054bef3553",
-   "9a27c22564e357d9"
-  ],
-  "page:services/payroll-services": [
-   "ee899e1430ca6af3",
-   "3ea6d227353d278e",
-   "b8399440e49c59cd"
-  ],
   "page:services/website-development": [
    "ca12cb2ede21a89c",
    "f4a1b505e8783265",
    "77a1d3f35649ed47"
-  ],
-  "page:services/business-personal-loan-support": [
-   "e3787a11265e4936",
-   "6bd15b8e8c0ee582",
-   "5585d429e4a8cd7c",
-   "89873b358d6e92ce"
-  ],
-  "page:services/accountancy-partnerships": [
-   "533632b0e7d8e057",
-   "e455a40303005b4a",
-   "defa7c91ccb6da05"
   ],
   "page:services/search-engine-optimization": [
    "68100e08af90b9d0",
@@ -15097,11 +15140,6 @@
   ],
   "option:nav_items": [
    "80629a1d91bb9a60"
-  ],
-  "option:footer_columns": [
-   "357af69f88135647",
-   "00786a3c1c122e79",
-   "c65563ed95e44410"
   ],
   "course:3255": [
    "34f91b35de92a235",
@@ -15148,23 +15186,12 @@
    "f1573288f8d14954",
    "ab753e1a0a718d70"
   ],
-  "post:bas-lodgement-australian-businesses": [
-   "a568e9fce4ad1a37",
-   "19f9b682a003b692",
-   "bdc6eb52fbd1b3f4"
-  ],
   "option:mega_promo": [
    "059eacbf67bab373",
    "bc27efeb3b848a35"
   ],
-  "sol_block:consulting-packages": [
-   "91bf3a1ba5720c67"
-  ],
   "sol_block:marketing-packages": [
    "9130dee6468a2a2e"
-  ],
-  "sol_block:service-trust": [
-   "0d5334ee42b53946"
   ],
   "sol_block:service-journey": [
    "e4db76f38f169e8b",
@@ -15208,9 +15235,6 @@
   "page:book-consultation": [
    "9b0c043d1aab49f2"
   ],
-  "page:data-privacy-and-security": [
-   "38b7d28be213219a"
-  ],
   "page:after-payment": [
    "c400d6d86e037216",
    "1363f7fe8bd9d66a"
@@ -15252,15 +15276,6 @@
   "product:SOL-AUTO-PRO": [
    "f4e957b3de4e1207"
   ],
-  "product:SOL-FIN-MONTHLY": [
-   "1d0f84d177f1a8bb"
-  ],
-  "product:SOL-FIN-OPS": [
-   "f2d991ab9a8a8db7"
-  ],
-  "product:SOL-FIN-NDIS": [
-   "d7253051a5ac03f2"
-  ],
   "product:SOL-MKT-STARTER": [
    "2a06385e67d29a09"
   ],
@@ -15281,6 +15296,498 @@
   ]
  },
  "yoast_history": {
+  "page:services/company-business-registration": [
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration Australia | SOL",
+    "description": "Register your company or business name with confidence. SOL handles ASIC, ABN, TFN and GST setup so new Australian businesses can start trading fast."
+   },
+   {
+    "title": "Company & Business Registration | SOL Business Consultant",
+    "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
+   },
+   {
+    "title": "Company & Business Registration | SOL Business Consultant",
+    "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
+   },
+   {
+    "title": "Company & Business Registration | SOL Business Consultant",
+    "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
+   },
+   {
+    "title": "Company & Business Registration | SOL Business Consultant",
+    "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
+   },
+   {
+    "title": "Company & Business Registration | SOL Business Consultant",
+    "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
+   }
+  ],
+  "page:services/bookkeeping-bas-lodgement": [
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
+    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
+    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
+    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
+    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
+    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
+   },
+   {
+    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
+    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
+   }
+  ],
+  "page:services/payroll-services": [
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services Australia | PAYG, Super & STP | SOL",
+    "description": "Take the pressure off payroll with support for pay runs, PAYG withholding, superannuation, Single Touch Payroll (STP) and compliant employee onboarding."
+   },
+   {
+    "title": "Payroll Services | SOL Business Consultant",
+    "description": "SOL helps businesses reduce payroll pressure with practical support for payroll cycles, PAYG, superannuation, Single Touch Payroll, and compliant onboarding."
+   },
+   {
+    "title": "Payroll Services | SOL Business Consultant",
+    "description": "SOL helps businesses reduce payroll pressure with practical support for payroll cycles, PAYG, superannuation, Single Touch Payroll, and compliant onboarding."
+   },
+   {
+    "title": "Payroll Services | SOL Business Consultant",
+    "description": "SOL helps businesses reduce payroll pressure with practical support for payroll cycles, PAYG, superannuation, Single Touch Payroll, and compliant onboarding."
+   },
+   {
+    "title": "Payroll Services | SOL Business Consultant",
+    "description": "SOL helps businesses reduce payroll pressure with practical support for payroll cycles, PAYG, superannuation, Single Touch Payroll, and compliant onboarding."
+   },
+   {
+    "title": "Payroll Services | SOL Business Consultant",
+    "description": "SOL helps businesses reduce payroll pressure with practical support for payroll cycles, PAYG, superannuation, Single Touch Payroll, and compliant onboarding."
+   }
+  ],
+  "page:services/business-personal-loan-support": [
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support Australia | SOL",
+    "description": "Get loan-ready with organised financial packs, application documents, credit guidance and introductions to trusted brokers and lenders."
+   },
+   {
+    "title": "Business & Personal Loan Support | SOL Business Consultant",
+    "description": "Become loan-ready with organised financial packs, document preparation, credit guidance, and introductions to trusted lender and broker networks where appropriate."
+   },
+   {
+    "title": "Business & Personal Loan Support | SOL Business Consultant",
+    "description": "Become loan-ready with organised financial packs, document preparation, credit guidance, and introductions to trusted lender and broker networks where appropriate."
+   },
+   {
+    "title": "Business & Personal Loan Support | SOL Business Consultant",
+    "description": "Become loan-ready with organised financial packs, document preparation, credit guidance, and introductions to trusted lender and broker networks where appropriate."
+   },
+   {
+    "title": "Business & Personal Loan Support | SOL Business Consultant",
+    "description": "Become loan-ready with organised financial packs, document preparation, credit guidance, and introductions to trusted lender and broker networks where appropriate."
+   },
+   {
+    "title": "Business & Personal Loan Support | SOL Business Consultant",
+    "description": "Become loan-ready with organised financial packs, document preparation, credit guidance, and introductions to trusted lender and broker networks where appropriate."
+   }
+  ],
+  "page:services/accountancy-partnerships": [
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | CPA Network & Growth Planning | SOL",
+    "description": "SOL pairs business consulting with experienced CPA partners for compliance reporting, tax planning coordination, financial insight and growth planning."
+   },
+   {
+    "title": "Accountancy Partnerships | SOL Business Consultant",
+    "description": "SOL connects business consulting with experienced accounting partners so clients can access compliance reporting, tax planning coordination, financial insight, and strategic growth support."
+   },
+   {
+    "title": "Accountancy Partnerships | SOL Business Consultant",
+    "description": "SOL connects business consulting with experienced accounting partners so clients can access compliance reporting, tax planning coordination, financial insight, and strategic growth support."
+   },
+   {
+    "title": "Accountancy Partnerships | SOL Business Consultant",
+    "description": "SOL connects business consulting with experienced accounting partners so clients can access compliance reporting, tax planning coordination, financial insight, and strategic growth support."
+   },
+   {
+    "title": "Accountancy Partnerships | SOL Business Consultant",
+    "description": "SOL connects business consulting with experienced accounting partners so clients can access compliance reporting, tax planning coordination, financial insight, and strategic growth support."
+   },
+   {
+    "title": "Accountancy Partnerships | SOL Business Consultant",
+    "description": "SOL connects business consulting with experienced accounting partners so clients can access compliance reporting, tax planning coordination, financial insight, and strategic growth support."
+   }
+  ],
+  "page:services/accountancy": [
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy Australia | BAS & Tax Guidance",
+    "description": "Understand your financial obligations: bookkeeping referrals, BAS and tax guidance, budgeting support and access to trusted CPA partners."
+   },
+   {
+    "title": "Accounting Consultancy & Bookkeeping Support Australia | SOL",
+    "description": "Bookkeeping referrals, BAS and tax guidance, and accounting partner connections for Australian businesses."
+   },
+   {
+    "title": "Accounting Consultancy & Bookkeeping Support Australia | SOL",
+    "description": "Bookkeeping referrals, BAS and tax guidance, and accounting partner connections for Australian businesses."
+   },
+   {
+    "title": "Accounting Consultancy & Bookkeeping Support Australia | SOL",
+    "description": "Bookkeeping referrals, BAS and tax guidance, and accounting partner connections for Australian businesses."
+   },
+   {
+    "title": "Accounting Consultancy & Bookkeeping Support Australia | SOL",
+    "description": "Bookkeeping referrals, BAS and tax guidance, and accounting partner connections for Australian businesses."
+   },
+   {
+    "title": "Accounting Consultancy & Bookkeeping Support Australia | SOL",
+    "description": "Bookkeeping referrals, BAS and tax guidance, and accounting partner connections for Australian businesses."
+   }
+  ],
   "page:home": [
    {
     "title": "NDIS Registration & Business Consultants Australia | SOL",
@@ -15437,80 +15944,6 @@
    {
     "title": "About SOL Business Consultant | Australian NDIS & Business Support",
     "description": "Learn how SOL Business Consultant supports Australian providers, small businesses, and learners with NDIS registration, compliance, training, digital operations, and finance support."
-   }
-  ],
-  "page:services/bookkeeping-bas-lodgement": [
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement Services Australia | SOL",
-    "description": "Accurate, BAS-ready books with Xero, MYOB and QuickBooks bookkeeping, bank reconciliations, monthly reports and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
-    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
-    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
-    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
-    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
-   },
-   {
-    "title": "Bookkeeping & BAS Lodgement | SOL Business Consultant",
-    "description": "Stay on top of your books with practical support for QuickBooks, Xero, MYOB, reconciliations, monthly reporting, and BAS lodgement coordination."
    }
   ],
   "page:contact": [
@@ -16063,50 +16496,6 @@
     "description": "12-module NDIS Support Coordinator training with 1,500+ quiz questions for individuals, teams and RTOs."
    }
   ],
-  "page:services/company-business-registration": [
-   {
-    "title": "Company & Business Registration | SOL Business Consultant",
-    "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
-   },
-   {
-    "title": "Company & Business Registration | SOL Business Consultant",
-    "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
-   },
-   {
-    "title": "Company & Business Registration | SOL Business Consultant",
-    "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
-   },
-   {
-    "title": "Company & Business Registration | SOL Business Consultant",
-    "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
-   },
-   {
-    "title": "Company & Business Registration | SOL Business Consultant",
-    "description": "Turn your idea into an Australian business with clear ASIC and ATO setup support. SOL helps new founders and restructuring businesses prepare the details they need to start trading with confidence."
-   }
-  ],
-  "page:services/payroll-services": [
-   {
-    "title": "Payroll Services | SOL Business Consultant",
-    "description": "SOL helps businesses reduce payroll pressure with practical support for payroll cycles, PAYG, superannuation, Single Touch Payroll, and compliant onboarding."
-   },
-   {
-    "title": "Payroll Services | SOL Business Consultant",
-    "description": "SOL helps businesses reduce payroll pressure with practical support for payroll cycles, PAYG, superannuation, Single Touch Payroll, and compliant onboarding."
-   },
-   {
-    "title": "Payroll Services | SOL Business Consultant",
-    "description": "SOL helps businesses reduce payroll pressure with practical support for payroll cycles, PAYG, superannuation, Single Touch Payroll, and compliant onboarding."
-   },
-   {
-    "title": "Payroll Services | SOL Business Consultant",
-    "description": "SOL helps businesses reduce payroll pressure with practical support for payroll cycles, PAYG, superannuation, Single Touch Payroll, and compliant onboarding."
-   },
-   {
-    "title": "Payroll Services | SOL Business Consultant",
-    "description": "SOL helps businesses reduce payroll pressure with practical support for payroll cycles, PAYG, superannuation, Single Touch Payroll, and compliant onboarding."
-   }
-  ],
   "page:services/website-development": [
    {
     "title": "Website Development for NDIS Providers & Businesses | SOL",
@@ -16127,50 +16516,6 @@
    {
     "title": "Website Development for NDIS Providers & Businesses | SOL",
     "description": "Custom website and app development for Australian businesses and NDIS providers."
-   }
-  ],
-  "page:services/business-personal-loan-support": [
-   {
-    "title": "Business & Personal Loan Support | SOL Business Consultant",
-    "description": "Become loan-ready with organised financial packs, document preparation, credit guidance, and introductions to trusted lender and broker networks where appropriate."
-   },
-   {
-    "title": "Business & Personal Loan Support | SOL Business Consultant",
-    "description": "Become loan-ready with organised financial packs, document preparation, credit guidance, and introductions to trusted lender and broker networks where appropriate."
-   },
-   {
-    "title": "Business & Personal Loan Support | SOL Business Consultant",
-    "description": "Become loan-ready with organised financial packs, document preparation, credit guidance, and introductions to trusted lender and broker networks where appropriate."
-   },
-   {
-    "title": "Business & Personal Loan Support | SOL Business Consultant",
-    "description": "Become loan-ready with organised financial packs, document preparation, credit guidance, and introductions to trusted lender and broker networks where appropriate."
-   },
-   {
-    "title": "Business & Personal Loan Support | SOL Business Consultant",
-    "description": "Become loan-ready with organised financial packs, document preparation, credit guidance, and introductions to trusted lender and broker networks where appropriate."
-   }
-  ],
-  "page:services/accountancy-partnerships": [
-   {
-    "title": "Accountancy Partnerships | SOL Business Consultant",
-    "description": "SOL connects business consulting with experienced accounting partners so clients can access compliance reporting, tax planning coordination, financial insight, and strategic growth support."
-   },
-   {
-    "title": "Accountancy Partnerships | SOL Business Consultant",
-    "description": "SOL connects business consulting with experienced accounting partners so clients can access compliance reporting, tax planning coordination, financial insight, and strategic growth support."
-   },
-   {
-    "title": "Accountancy Partnerships | SOL Business Consultant",
-    "description": "SOL connects business consulting with experienced accounting partners so clients can access compliance reporting, tax planning coordination, financial insight, and strategic growth support."
-   },
-   {
-    "title": "Accountancy Partnerships | SOL Business Consultant",
-    "description": "SOL connects business consulting with experienced accounting partners so clients can access compliance reporting, tax planning coordination, financial insight, and strategic growth support."
-   },
-   {
-    "title": "Accountancy Partnerships | SOL Business Consultant",
-    "description": "SOL connects business consulting with experienced accounting partners so clients can access compliance reporting, tax planning coordination, financial insight, and strategic growth support."
    }
   ],
   "page:services/search-engine-optimization": [
@@ -16277,28 +16622,6 @@
    {
     "title": "AI & Machine Learning Solutions Australia | Automation",
     "description": "AI implementation, machine learning solutions and business automation for Australian organisations seeking operational efficiency"
-   }
-  ],
-  "page:services/accountancy": [
-   {
-    "title": "Accounting Consultancy & Bookkeeping Support Australia | SOL",
-    "description": "Bookkeeping referrals, BAS and tax guidance, and accounting partner connections for Australian businesses."
-   },
-   {
-    "title": "Accounting Consultancy & Bookkeeping Support Australia | SOL",
-    "description": "Bookkeeping referrals, BAS and tax guidance, and accounting partner connections for Australian businesses."
-   },
-   {
-    "title": "Accounting Consultancy & Bookkeeping Support Australia | SOL",
-    "description": "Bookkeeping referrals, BAS and tax guidance, and accounting partner connections for Australian businesses."
-   },
-   {
-    "title": "Accounting Consultancy & Bookkeeping Support Australia | SOL",
-    "description": "Bookkeeping referrals, BAS and tax guidance, and accounting partner connections for Australian businesses."
-   },
-   {
-    "title": "Accounting Consultancy & Bookkeeping Support Australia | SOL",
-    "description": "Bookkeeping referrals, BAS and tax guidance, and accounting partner connections for Australian businesses."
    }
   ],
   "post:ndis-provider-registration-australia": [
@@ -16456,5 +16779,5 @@
    }
   ]
  },
- "build": "8631108a509728ae"
+ "build": "f4f91b5738b32bb0"
 }
