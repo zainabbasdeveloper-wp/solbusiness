@@ -132,7 +132,13 @@
 		var status = $('.sol-form__status', form);
 		if (form.classList.contains('is-sending')) { return Promise.resolve(); } // double click
 		form.classList.add('is-sending');
-		if (status) { status.className = 'sol-form__status'; status.textContent = 'Sending…'; }
+		// Show progress on the button itself, where the visitor is looking, and the result just below it.
+		var btn = form.querySelector('button[type="submit"]');
+		var label = btn ? btn.innerHTML : '';
+		var restore = function () { if (btn) { btn.innerHTML = label; btn.disabled = false; btn.removeAttribute('aria-busy'); } };
+		if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); btn.textContent = 'Checking and sending…'; }
+		var show = function () { if (status && status.scrollIntoView) { try { status.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) { /* old browser */ } } };
+		if (status) { status.className = 'sol-form__status'; status.textContent = 'Sending your enquiry… this can take a few seconds.'; }
 		// Spam check first when reCAPTCHA is on (assets/js/sol-recaptcha.js).
 		var variant = form.querySelector('input[name="form_variant"]');
 		var check = window.SOLRC && SOLRC.sol ? SOLRC.token(form, 'form_' + (variant ? variant.value : 'contact')) : Promise.resolve();
@@ -145,6 +151,7 @@
 			.then(function (r) { return r.json().catch(function () { return { success: false, data: { message: 'Something went wrong. Please try again.' } }; }); })
 			.then(function (res) {
 				form.classList.remove('is-sending');
+				restore();
 				if (res && res.success) {
 					var msg = form.getAttribute('data-success') || (res.data && res.data.message) || (window.SOL && SOL.success);
 					if (status) { status.className = 'sol-form__status is-success'; status.textContent = msg; }
@@ -154,9 +161,12 @@
 					status.className = 'sol-form__status is-error';
 					status.textContent = (res && res.data && res.data.message) || 'Please check the form and try again.';
 				}
+				show();
 			})
 			.catch(function () {
 				form.classList.remove('is-sending');
+				restore();
+				show();
 				if (status) { status.className = 'sol-form__status is-error'; status.textContent = 'Network error. Please try again or call us.'; }
 			});
 	}

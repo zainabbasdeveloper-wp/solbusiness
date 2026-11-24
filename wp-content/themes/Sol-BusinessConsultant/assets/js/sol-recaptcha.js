@@ -25,6 +25,19 @@
 		return loading;
 	}
 
+	// Set when Google's service couldn't be reached from this browser (blocked network, extension or outage), so
+	// the server can still accept the enquiry with its other spam checks and mark it as unchecked.
+	function unavailable(form, on) {
+		var u = form.querySelector('input[name="sol_rc_unavailable"]');
+		if (!u) {
+			u = document.createElement('input');
+			u.type = 'hidden';
+			u.name = 'sol_rc_unavailable';
+			form.appendChild(u);
+		}
+		u.value = on ? '1' : '';
+	}
+
 	function field(form) {
 		var f = form.querySelector('input[name="sol_rc_token"]');
 		if (!f) {
@@ -44,8 +57,8 @@
 		return load().then(function () {
 			return new Promise(function (resolve) {
 				var done = false;
-				var finish = function (t) { if (!done) { done = true; f.value = t || ''; resolve(f.value); } };
-				setTimeout(function () { finish(''); }, 10000);
+				var finish = function (t) { if (!done) { done = true; f.value = t || ''; unavailable(form, !f.value); resolve(f.value); } };
+				setTimeout(function () { finish(''); }, 6000);
 				if (!window.grecaptcha || !window.grecaptcha.ready) { finish(''); return; }
 				window.grecaptcha.ready(function () {
 					try {

@@ -309,7 +309,10 @@ function sol_handle_form() {
 	// Google reCAPTCHA v3 (inc/recaptcha.php), when it's set up under SOL Site → Spam protection.
 	if ( function_exists( 'sol_rc_active' ) && sol_rc_active( 'forms' ) ) {
 		$rc = sol_rc_verify( 'forms', 'form' );
-		if ( ! $rc['ok'] ) {
+		// Google couldn't be reached from the visitor's browser (no token at all): accept the enquiry, since the
+		// honeypot, time trap and rate limit above have passed, and mark it so the team can see it wasn't checked.
+		$rc_skipped = ! $rc['ok'] && 'missing' === $rc['reason'] && ! empty( $_POST['sol_rc_unavailable'] );
+		if ( ! $rc['ok'] && ! $rc_skipped ) {
 			$fail( 'missing' === $rc['reason'] ? 'captcha_missing' : 'captcha', 403 );
 		}
 	}
@@ -333,6 +336,7 @@ function sol_handle_form() {
 		'marketing_consent' => ! empty( $_POST['marketing_consent'] ) ? 'Yes' : 'No',
 		// Not saved as a field: tells the CRM forwarding (inc/crm-forward.php) whether the privacy notice was on the form.
 		'privacy_notice_shown' => ! empty( $_POST['_sol_pn'] ),
+		'spam_check'        => empty( $rc_skipped ) ? '' : 'Not run: Google reCAPTCHA could not be reached from the visitor’s browser (other spam checks passed)',
 	);
 	// phpcs:enable
 
@@ -387,12 +391,12 @@ function sol_handle_form() {
 function sol_save_enquiry( $variant, $data, $back ) {
 	$data = wp_parse_args( $data, array(
 		'name' => '', 'email' => '', 'phone' => '', 'company' => '', 'service' => '', 'selection' => '', 'reference' => '',
-		'preferred_date' => '', 'preferred_time' => '', 'learners' => '', 'message' => '', 'summary' => '', 'marketing_consent' => 'No',
+		'preferred_date' => '', 'preferred_time' => '', 'learners' => '', 'message' => '', 'summary' => '', 'marketing_consent' => 'No', 'spam_check' => '',
 	) );
 	$labels = array(
 		'name' => 'Name', 'email' => 'Email', 'phone' => 'Phone', 'company' => 'Business / organisation', 'service' => 'Service page',
 		'selection' => 'Selection', 'reference' => 'Reference', 'preferred_date' => 'Preferred date', 'preferred_time' => 'Preferred time',
-		'learners' => 'Learners', 'message' => 'Message', 'summary' => 'Quiz result', 'marketing_consent' => 'Marketing consent',
+		'learners' => 'Learners', 'message' => 'Message', 'summary' => 'Quiz result', 'marketing_consent' => 'Marketing consent', 'spam_check' => 'Spam check',
 	);
 	$rows = array( 'Form' => ucfirst( $variant ), 'Page' => $back );
 	foreach ( $labels as $k => $label ) {
