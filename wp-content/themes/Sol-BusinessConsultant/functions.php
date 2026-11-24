@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * SOL Training Academy design for WordPress, built with Secure Custom Fields (no Elementor).
  * Setup: Appearance → SOL Setup. Field reference: _dev/FIELD-REFERENCE.md
  */
-define( 'SOL_THEME_VERSION', '2.23.1' );
+define( 'SOL_THEME_VERSION', '2.24.0' );
 
 // Never print PHP notices and warnings on screen (admin or public), even if WP_DEBUG_DISPLAY is on in
 // wp-config.php: plugin notices were showing at the top of the dashboard. Errors still go to the server's
@@ -44,4 +44,5 @@ require_once SOL_DIR . 'inc/updates.php';
 require_once SOL_DIR . 'inc/home-options.php';
 add_action( 'after_setup_theme', function () {
 	require_once SOL_DIR . 'inc/woocommerce.php';
+	require_once SOL_DIR . 'inc/gst.php';
 } );

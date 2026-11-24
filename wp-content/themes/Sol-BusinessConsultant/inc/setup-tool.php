@@ -106,7 +106,7 @@ function sol_setup_page() {
 		<p>Applies the SOL Training Academy design and content to this site. Pages keep their URLs. Checkout stays on WooCommerce; after payment, customers continue on the training site.</p>
 		<?php if ( ! $scf ) : ?><div class="notice notice-error"><p>Install and activate <strong>Secure Custom Fields</strong> first.</p></div><?php endif; ?>
 		<?php if ( ! $woo ) : ?><div class="notice notice-warning"><p>WooCommerce is not active, so products and checkout buttons will be skipped.</p></div><?php endif; ?>
-		<?php if ( $woo && 'yes' !== get_option( 'woocommerce_calc_taxes' ) ) : ?><div class="notice notice-warning"><p>WooCommerce taxes are off. Package prices are entered ex-GST, so turn on taxes (10% GST) under <a href="<?php echo esc_url( admin_url( 'admin.php?page=wc-settings' ) ); ?>">WooCommerce → Settings</a> before taking payments.</p></div><?php endif; ?>
+		<?php if ( function_exists( 'sol_gst_box' ) ) { sol_gst_box(); } ?>
 
 		<?php if ( $report ) : ?>
 			<div class="notice notice-<?php echo $report['errors'] ? 'warning' : 'success'; ?>"><p><strong>Done.</strong></p>
