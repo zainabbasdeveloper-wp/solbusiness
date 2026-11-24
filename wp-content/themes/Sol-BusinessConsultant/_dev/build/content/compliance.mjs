@@ -288,8 +288,62 @@ const SWAP = {
   'Sensitive client data (documents, invoices, personal information) is encrypted at rest on our secure servers. Only authorised staff can decrypt and access.': 'Sensitive client data (documents, invoices, personal information) is kept on secure, access-controlled systems. Only authorised staff can access it.',
   'We provide free credit monitoring or other support as appropriate. We also implement changes to prevent recurrence.': 'We tell affected people what happened and what they can do to protect themselves, and we make changes to prevent it happening again.',
   // Training: a "was" price must be a genuine former price.
-  'Complete the full NDIS Support Coordinator pathway, from Foundation to Advanced, and take your career further. AUD $1,097 (was $1,297).': 'Complete the full NDIS Support Coordinator pathway, from Foundation to Advanced, and take your career further. AUD $1,097.',
+  // The three levels cost $325 + $460 + $599 = $1,384 separately, so the bundle saves $287 (not "$200 off $1,297").
+  'Complete the full NDIS Support Coordinator pathway, from Foundation to Advanced, and take your career further. AUD $1,097 (was $1,297).': 'Complete the full NDIS Support Coordinator pathway, from Foundation to Advanced, and take your career further. AUD $1,097 incl. GST for all three levels, a saving of $287 on buying them separately ($1,384).',
+  // One entry price for finance support: Monthly Finance Support, $350 a month.
+  'From $300/mo': 'From $350/mo',
+  '$300-$800/month depending on transaction volume': 'From $350/month (Monthly Finance Support); higher transaction volumes are quoted',
+  // Individual learners take Levels 1-3; the 12-module curriculum is the team and enterprise licence.
+  'Yes. Individual learners receive a SOL Certificate of Completion after finishing all 12 modules and assessments. Team and Enterprise packages include completion certificate templates your organisation can issue to staff under its own branding. This is a completion certificate, not a nationally accredited qualification, unless delivered by an authorised RTO within its own scope.': 'Yes. Individual learners receive a SOL Certificate of Completion for each level they finish. Team and Enterprise packages include completion certificate templates your organisation can issue to staff under its own branding. This is a completion certificate, not a nationally accredited qualification, unless delivered by an authorised RTO within its own scope.',
 };
+
+/* ---------- pricing that must agree across the site ---------- */
+// Individual learners: the online Levels 1-3 (WooCommerce course products, prices include GST).
+// Teams and organisations: the 12-module curriculum licence (unchanged). The $1,200 "Individual Learner"
+// product stays in WooCommerce but is no longer advertised, because Levels 1-3 cost less for more access.
+const INDIVIDUAL = {
+  name: 'Individual Learner',
+  tag: 'Levels 1–3',
+  price: '$325',
+  price_note: 'per level, incl. GST',
+  features: [
+    { item: 'Three self-paced online levels: Foundation, Professional and Advanced' },
+    { item: 'Level 1 $325 · Level 2 $460 · Level 3 $599' },
+    { item: 'All three levels for $1,097 (save $287)' },
+    { item: 'Lifetime access to your course content' },
+    { item: 'Certificate of completion for each level' },
+  ],
+  cta: { title: 'View Courses', url: '/training-courses/', target: '' },
+};
+
+function applyPricing(seed) {
+  let n = 0;
+  const walk = (v) => {
+    if (Array.isArray(v)) return v.forEach(walk);
+    if (!v || typeof v !== 'object') return;
+    if (v.name === 'Individual Learner' && v.cta && /SOL-SCT-INDIVIDUAL/.test(v.cta.url || '')) {
+      Object.assign(v, INDIVIDUAL, { features: INDIVIDUAL.features.map((f) => ({ ...f })), cta: { ...INDIVIDUAL.cta } });
+      n++;
+    }
+    if (v.name === 'Support Coordination Training' && v.price === 'From $1,200 +GST') {
+      v.price = 'From $325';
+      v.tagline = 'Online levels for individual learners and a 12-module curriculum licence for teams.';
+      v.features = [
+        { item: 'Levels 1–3 for individuals, lifetime access' },
+        { item: '12-module curriculum licence for teams' },
+        { item: '1,500+ quiz questions' },
+        { item: 'Scenario-based assessments' },
+        { item: 'Certificate on completion' },
+      ];
+      n++;
+    }
+    Object.values(v).forEach(walk);
+  };
+  for (const g of ['pages', 'services', 'blocks']) walk(seed[g]);
+  // Refund policy price range.
+  seed.pages = deep(seed.pages, (t) => (typeof t === 'string' ? t.split('Support Coordination Training ($1,200–$3,800)').join('Support Coordination Training ($325–$3,800)') : t));
+  return n;
+}
 
 /* ---------- substring fixes inside longer text (legal pages, blog) ---------- */
 const PARTS = [
@@ -392,6 +446,9 @@ export function applyCompliance(seed) {
       bas.content += `\n\n<!-- wp:paragraph -->\n<p><strong>${FINANCE_NOTICE}</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Your BAS must be lodged by you or a registered BAS or tax agent.</p>\n<!-- /wp:paragraph -->`;
     }
   }
+
+  // 6. Prices that must agree everywhere.
+  n += applyPricing(seed);
   return n;
 }
 
@@ -403,7 +460,7 @@ const BANNED = [
   'BAS & Tax Guidance', 'Introductions to CPA partners', 'handles ASIC, ABN, TFN', 'ABN, TFN and GST registration',
   'Sole trader, partnership or company advice', 'Advice on the right business structure', 'Specialist NDIS service planning',
   'Accountancy & Bookkeeping', 'Loan packs', 'CPA network', 'free credit monitoring', 'encrypted at rest', '181) or ASIC',
-  'NDIS-aligned processes', '(was $', 'ABN / company setup', 'STP (Single Touch Payroll) lodgement', 'BAS preparation & lodgement',
+  'NDIS-aligned processes', '(was $', '$1,297', 'From $300/mo', 'From $1,200 +GST', 'ABN / company setup', 'STP (Single Touch Payroll) lodgement', 'BAS preparation & lodgement',
 ];
 
 /** Removed claims still present (blog posts may discuss BAS lodgement as general information). */

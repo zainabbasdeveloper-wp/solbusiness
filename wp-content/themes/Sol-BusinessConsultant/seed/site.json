@@ -923,37 +923,34 @@
           "icon": "",
           "category": "",
           "name": "Individual Learner",
-          "tag": "Self-Paced",
+          "tag": "Levels 1–3",
           "badge": "",
           "highlight": false,
-          "price": "$1,200",
+          "price": "$325",
           "period": "",
-          "price_note": "+GST",
+          "price_note": "per level, incl. GST",
           "tagline": "",
           "features": [
            {
-            "item": "Full 12-module online curriculum"
+            "item": "Three self-paced online levels: Foundation, Professional and Advanced"
            },
            {
-            "item": "1,500+ quiz questions with answers"
+            "item": "Level 1 $325 · Level 2 $460 · Level 3 $599"
            },
            {
-            "item": "6-month flexible access"
+            "item": "All three levels for $1,097 (save $287)"
            },
            {
-            "item": "Participant workbook (PDF)"
+            "item": "Lifetime access to your course content"
            },
            {
-            "item": "Certificate of completion"
-           },
-           {
-            "item": "Email Q&A support"
+            "item": "Certificate of completion for each level"
            }
           ],
           "extra_lines": [],
           "cta": {
-           "title": "Enrol Now",
-           "url": "woo:sku:SOL-SCT-INDIVIDUAL",
+           "title": "View Courses",
+           "url": "/training-courses/",
            "target": ""
           },
           "cta_2": {
@@ -1467,22 +1464,22 @@
           "tag": "",
           "badge": "Best Value",
           "highlight": false,
-          "price": "From $1,200 +GST",
+          "price": "From $325",
           "period": "",
           "price_note": "",
-          "tagline": "NDIS-aligned 12-module training packages for learners and teams.",
+          "tagline": "Online levels for individual learners and a 12-module curriculum licence for teams.",
           "features": [
            {
-            "item": "12 comprehensive modules"
+            "item": "Levels 1–3 for individuals, lifetime access"
+           },
+           {
+            "item": "12-module curriculum licence for teams"
            },
            {
             "item": "1,500+ quiz questions"
            },
            {
-            "item": "Video scripts & slide decks"
-           },
-           {
-            "item": "NDIS-aligned assessments"
+            "item": "Scenario-based assessments"
            },
            {
             "item": "Certificate on completion"
@@ -1503,7 +1500,7 @@
           "tag": "",
           "badge": "",
           "highlight": false,
-          "price": "From $300/mo",
+          "price": "From $350/mo",
           "period": "",
           "price_note": "",
           "tagline": "Bookkeeping setup, payroll processes, reporting guidance and referrals to registered practitioners where required.",
@@ -2450,7 +2447,7 @@
        },
        {
         "question": "Do I receive a certificate when I finish?",
-        "answer": "Yes. Individual learners receive a SOL Certificate of Completion after finishing all 12 modules and assessments. Team and Enterprise packages include completion certificate templates your organisation can issue to staff under its own branding. This is a completion certificate, not a nationally accredited qualification, unless delivered by an authorised RTO within its own scope."
+        "answer": "Yes. Individual learners receive a SOL Certificate of Completion for each level they finish. Team and Enterprise packages include completion certificate templates your organisation can issue to staff under its own branding. This is a completion certificate, not a nationally accredited qualification, unless delivered by an authorised RTO within its own scope."
        },
        {
         "question": "Can we white-label the content for our RTO or organisation?",
@@ -5507,7 +5504,7 @@
       "style": "dark",
       "eyebrow": "Best Value",
       "heading": "Enrol in All 3 Levels and Save",
-      "text": "Complete the full NDIS Support Coordinator pathway, from Foundation to Advanced, and take your career further. AUD $1,097.",
+      "text": "Complete the full NDIS Support Coordinator pathway, from Foundation to Advanced, and take your career further. AUD $1,097 incl. GST for all three levels, a saving of $287 on buying them separately ($1,384).",
       "buttons": [
        {
         "link": {
@@ -7917,7 +7914,7 @@
          }
         ],
         "timeline": "Ongoing monthly service (setup 1-2 weeks)",
-        "price": "$300-$800/month depending on transaction volume",
+        "price": "From $350/month (Monthly Finance Support); higher transaction volumes are quoted",
         "deliverables": [
          {
           "item": "Monthly reconciliation reports"
@@ -8903,7 +8900,7 @@
        },
        {
         "title": "Service-Specific Refunds",
-        "content": "<ul><li><strong>NDIS Registration (SOL START | SOL CERTIFIED | SOL COMPLETE)</strong> — Refund window: 14 days before documents sent</li><li><strong>Support Coordination Training ($1,200–$3,800)</strong> — Refund window: 7 days before course access granted</li><li><strong>Website Development ($1,500–$3,500)</strong> — 100% refund before launch | 50% after design approval | Non-refundable after launch</li><li><strong>Monthly Bookkeeping ($350)</strong> — 100% refund within 30 days of first payment; then non-refundable per month</li></ul>"
+        "content": "<ul><li><strong>NDIS Registration (SOL START | SOL CERTIFIED | SOL COMPLETE)</strong> — Refund window: 14 days before documents sent</li><li><strong>Support Coordination Training ($325–$3,800)</strong> — Refund window: 7 days before course access granted</li><li><strong>Website Development ($1,500–$3,500)</strong> — 100% refund before launch | 50% after design approval | Non-refundable after launch</li><li><strong>Monthly Bookkeeping ($350)</strong> — 100% refund within 30 days of first payment; then non-refundable per month</li></ul>"
        },
        {
         "title": "Refund Processing",
@@ -10723,37 +10720,34 @@
           "icon": "",
           "category": "",
           "name": "Individual Learner",
-          "tag": "Self-Paced",
+          "tag": "Levels 1–3",
           "badge": "",
           "highlight": false,
-          "price": "$1,200",
+          "price": "$325",
           "period": "",
-          "price_note": "+GST",
+          "price_note": "per level, incl. GST",
           "tagline": "",
           "features": [
            {
-            "item": "Full 12-module online curriculum"
+            "item": "Three self-paced online levels: Foundation, Professional and Advanced"
            },
            {
-            "item": "1,500+ quiz questions with answers"
+            "item": "Level 1 $325 · Level 2 $460 · Level 3 $599"
            },
            {
-            "item": "Self-paced flexible access (6 months)"
+            "item": "All three levels for $1,097 (save $287)"
            },
            {
-            "item": "Participant workbook (PDF)"
+            "item": "Lifetime access to your course content"
            },
            {
-            "item": "Certificate of completion"
-           },
-           {
-            "item": "Email Q&A support"
+            "item": "Certificate of completion for each level"
            }
           ],
           "extra_lines": [],
           "cta": {
-           "title": "Enrol Now",
-           "url": "woo:sku:SOL-SCT-INDIVIDUAL",
+           "title": "View Courses",
+           "url": "/training-courses/",
            "target": ""
           },
           "cta_2": {
@@ -14770,8 +14764,8 @@
   "photos/blog-bas-lodgement.webp": "Business owner preparing a BAS lodgement with a calculator"
  },
  "fingerprints": {
-  "sol_block:pricing-tabs": "5eb502db24e0c4af",
-  "sol_block:consulting-packages": "eed4b9c15b556e9d",
+  "sol_block:pricing-tabs": "ca760fbfad78d4b4",
+  "sol_block:consulting-packages": "67b8e9246301839c",
   "sol_block:marketing-packages": "1290a2446c0f4f0e",
   "sol_block:about-sol": "f10e3b8129d514e1",
   "sol_block:compliance": "1dabb230f12cd0d4",
@@ -14779,7 +14773,7 @@
   "sol_block:service-trust": "70ece52810735cd2",
   "sol_block:service-journey": "db42bbf2a50fe9e3",
   "sol_block:general-faq": "60559749527dd765",
-  "sol_block:training-faq": "ed6ea5866639c433",
+  "sol_block:training-faq": "8d9886d4924c0de0",
   "sol_block:contact": "3841f3f7c0d55a0b",
   "sol_block:service-comparison": "a8bc97567e04f3df",
   "page:home": "b92efe5c307fbb25",
@@ -14792,24 +14786,24 @@
   "page:case-studies": "58c2c8b8cc0076ef",
   "page:use-cases": "05964b2488471f14",
   "page:marketing-packages": "0553a9b1e3c6e42c",
-  "page:training-2": "d78ecc9c62918402",
+  "page:training-2": "46f977524ac0eb93",
   "page:ndis-packages": "faf58b21ac1e4f6a",
   "page:get-started": "983fec375a6cb221",
   "page:book-consultation": "d551cb3d24150644",
   "page:readiness-quiz": "98ce4f06e06ed46e",
   "page:ndis-readiness-calculator": "31eb1fc9f961cb3e",
   "page:data-privacy-and-security": "2a2d12a92e31f8cb",
-  "page:service-inclusions": "c97454db013f1a35",
+  "page:service-inclusions": "a11f429e35035bfa",
   "page:support-and-availability": "102c3e4f5335c1d9",
   "page:after-payment": "c3c084e088e5b662",
   "page:privacy-policy": "8b635ec76ce7bcb2",
-  "page:refunds-cancellation-policy": "721f1664ade3d37b",
+  "page:refunds-cancellation-policy": "a6a6ba8428bae4dd",
   "page:terms-conditions": "31bb466dcc470f92",
   "page:accessibility": "871e09d07242ced2",
   "page:complaints-feedback": "ac70fc3da012b748",
   "page:services": "ca2bd81e6938bbf8",
   "page:services/ndis-registration": "6da140bd5278b095",
-  "page:services/ndis-support-coordination-training": "48689f3db7d4da70",
+  "page:services/ndis-support-coordination-training": "07a7fe75346c7ff5",
   "page:services/company-business-registration": "a8e9066d59b05e26",
   "page:services/bookkeeping-support": "ca56213f6cfb099d",
   "page:services/payroll-services": "18eb35610e9f0c74",
@@ -14897,14 +14891,46 @@
  },
  "history": {
   "sol_block:pricing-tabs": [
+   "5eb502db24e0c4af",
    "b634806850bcdf7d",
    "3460e5a7863ce268",
    "d30f827c7699d52d",
    "74f4a589c432a1fc"
   ],
   "sol_block:consulting-packages": [
+   "eed4b9c15b556e9d",
    "fb20ff919b519ba8",
    "91bf3a1ba5720c67"
+  ],
+  "sol_block:training-faq": [
+   "ed6ea5866639c433",
+   "97cab551a5635596"
+  ],
+  "page:training-2": [
+   "d78ecc9c62918402",
+   "0bf364b916c87b1a",
+   "1fdcffa233aff1eb",
+   "149b510c5702322a",
+   "d9b571a3be95060d"
+  ],
+  "page:service-inclusions": [
+   "c97454db013f1a35",
+   "fa749d4d1d0b03df",
+   "c7cf969c67a2eaed",
+   "e3eae3a3e84c91a6",
+   "82c7777202be63ad"
+  ],
+  "page:refunds-cancellation-policy": [
+   "721f1664ade3d37b",
+   "fe74ff57760c6f2c"
+  ],
+  "page:services/ndis-support-coordination-training": [
+   "48689f3db7d4da70",
+   "9728c1a707aebd06",
+   "bd632f420ec690c4",
+   "4331006dd9ac0982",
+   "fea3d25c24c9ec72",
+   "c0701a939035f13f"
   ],
   "sol_block:service-trust": [
    "42b5087ca2e8c75a",
@@ -14926,24 +14952,9 @@
    "244910b67a13ac66",
    "1876663c2c32a128"
   ],
-  "page:training-2": [
-   "0bf364b916c87b1a",
-   "1fdcffa233aff1eb",
-   "149b510c5702322a",
-   "d9b571a3be95060d"
-  ],
   "page:data-privacy-and-security": [
    "6811e120491f1537",
    "38b7d28be213219a"
-  ],
-  "page:service-inclusions": [
-   "fa749d4d1d0b03df",
-   "c7cf969c67a2eaed",
-   "e3eae3a3e84c91a6",
-   "82c7777202be63ad"
-  ],
-  "page:refunds-cancellation-policy": [
-   "fe74ff57760c6f2c"
   ],
   "page:terms-conditions": [
    "7335038a79c6a56f"
@@ -15089,13 +15100,6 @@
    "fb2412fae390eeb0",
    "e52be39fa396a44c"
   ],
-  "page:services/ndis-support-coordination-training": [
-   "9728c1a707aebd06",
-   "bd632f420ec690c4",
-   "4331006dd9ac0982",
-   "fea3d25c24c9ec72",
-   "c0701a939035f13f"
-  ],
   "page:services/website-development": [
    "ca12cb2ede21a89c",
    "f4a1b505e8783265",
@@ -15199,9 +15203,6 @@
   ],
   "sol_block:general-faq": [
    "6a63958fff97089e"
-  ],
-  "sol_block:training-faq": [
-   "97cab551a5635596"
   ],
   "sol_block:contact": [
    "d36d19b08a1b5038"
@@ -16779,5 +16780,5 @@
    }
   ]
  },
- "build": "f4f91b5738b32bb0"
+ "build": "5eb0e679880ca5d3"
 }
