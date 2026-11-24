@@ -138,7 +138,7 @@ $sol_is_cur = function ( $l ) {
 								<button type="button" class="sol-menu__link" aria-expanded="false" data-sol-drop-toggle>
 									<?php echo esc_html( $item['label'] ); ?> <?php echo sol_icon( 'chevron-down', 'sol-menu__chev' ); // phpcs:ignore ?>
 								</button>
-								<div class="sol-dd" data-sol-drop-panel>
+								<div class="sol-dd<?php echo count( $item['children'] ) > 6 ? ' sol-dd--wide' : ''; ?>" data-sol-drop-panel>
 									<?php if ( $item['url'] ) : ?>
 										<a class="sol-dd__link sol-dd__link--top" href="<?php echo esc_url( $item['url'] ); ?>"<?php echo $sol_target( $item ); // phpcs:ignore ?>><?php echo esc_html( $item['label'] ); ?> overview</a>
 									<?php endif; ?>

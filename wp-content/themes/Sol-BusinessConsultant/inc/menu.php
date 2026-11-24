@@ -40,7 +40,7 @@ function sol_menu_data() {
 	}
 	$data = sol_menu_from_wp();
 	if ( null === $data ) {
-		$data = sol_menu_from_options();
+		$data = sol_menu_from_layout();
 	}
 	$data = sol_menu_add_directory( $data );
 	$data = sol_menu_compliance_labels( $data );
@@ -344,15 +344,10 @@ function sol_build_wp_menu( $rebuild = false ) {
 			}
 			return $id;
 		};
-		foreach ( sol_menu_from_options() as $top ) {
+		foreach ( sol_menu_layout() as $top ) {
 			$top_id = $add( $top['label'], $top['url'] );
-			if ( 'mega' === $top['type'] && $top_id ) {
-				foreach ( $top['columns'] as $col ) {
-					$col_id = $add( $col['label'], $col['url'], $top_id, $col );
-					foreach ( $col['items'] as $l ) {
-						$add( $l['label'], $l['url'], $col_id, $l );
-					}
-				}
+			foreach ( $top_id ? (array) ( $top['children'] ?? array() ) : array() as $c ) {
+				$add( $c['label'], $c['url'], $top_id, $c );
 			}
 		}
 	}
@@ -364,6 +359,103 @@ function sol_build_wp_menu( $rebuild = false ) {
 	update_option( 'sol_menu_built', SOL_THEME_VERSION, false );
 	return $menu_id;
 }
+
+/**
+ * The main menu (v2.23.0): one small dropdown per area, as approved on 24 Nov 2026.
+ * Home | AI Automation | NDIS Services | Training Academy | Business Services | Digital Marketing | About | Contact
+ * A dropdown's own link is shown first as "<label> overview". Edit later in Appearance → Menus.
+ */
+function sol_menu_layout() {
+	$c = function ( $label, $url, $icon, $desc ) {
+		return array( 'label' => $label, 'url' => $url, 'icon' => $icon, 'desc' => $desc );
+	};
+	$training = 'https://training.solbusinessconsultant.com.au';
+	$dir      = function_exists( 'sol_directory_url' ) ? sol_directory_url() : '';
+	$ndis     = array(
+		$c( 'NDIS Registration', '/services/ndis-registration/', 'shield-check', 'Registration preparation and audit readiness' ),
+		$c( 'Readiness Quiz', '/readiness-quiz/', 'list-checks', '8 questions, personalised result' ),
+		$c( 'Readiness Calculator', '/ndis-readiness-calculator/', 'calculator', 'See how ready you are for registration' ),
+	);
+	if ( $dir ) {
+		$ndis[] = $c( 'NDIS and aged care provider directory', $dir, 'search', 'Find registered providers near you' );
+	}
+	return (array) apply_filters( 'sol_menu_layout', array(
+		array( 'label' => 'Home', 'url' => '/' ),
+		array( 'label' => 'AI Automation', 'url' => '/services/software-automation/', 'children' => array(
+			$c( 'AI & Machine Learning', '/ai-machine-learning/', 'brain-circuit', 'Data annotation and AI projects' ),
+			$c( 'Easy Compliance platform', '/#compliance', 'clipboard-check', 'Compliance software for NDIS providers' ),
+		) ),
+		array( 'label' => 'NDIS Services', 'url' => '/ndis-packages/', 'children' => $ndis ),
+		array( 'label' => 'Training Academy', 'url' => '/training-2/', 'children' => array(
+			$c( 'Support Coordination Training', '/services/ndis-support-coordination-training/', 'graduation-cap', 'Online NDIS Support Coordinator course' ),
+			$c( 'Verify Certificate', $training . '/verify-certificate', 'badge-check', 'Check a SOL completion certificate' ),
+			$c( 'Student Dashboard', $training . '/student-dashboard', 'layout-dashboard', 'Continue your course' ),
+		) ),
+		array( 'label' => 'Business Services', 'url' => '/services/', 'children' => array(
+			$c( 'Business Setup Support', '/services/company-business-registration/', 'building-2', 'ASIC and ABN applications' ),
+			$c( 'Bookkeeping Support', '/services/bookkeeping-support/', 'receipt-text', 'Xero and QuickBooks support' ),
+			$c( 'Payroll Admin Support', '/services/payroll-services/', 'users', 'Payroll software and records' ),
+			$c( 'Business Finance Guidance', '/services/accountancy/', 'calculator', 'Finance admin and record keeping' ),
+			$c( 'Accounting Partners', '/services/accountancy-partnerships/', 'handshake', 'Accountant referrals' ),
+			$c( 'Finance Broker Referrals', '/services/finance-broker-referrals/', 'briefcase-business', 'Funding document packs' ),
+			$c( 'Admin & Back-Office Support', '/services/admin-back-office-support/', 'folder-kanban', 'Day-to-day admin handled' ),
+			$c( 'Offshore Staffing', '/services/offshore-outsourcing-staff-solutions/', 'earth', 'Remote professionals by the hour' ),
+		) ),
+		array( 'label' => 'Digital Marketing', 'url' => '/marketing-packages/', 'children' => array(
+			$c( 'Website Development', '/services/website-development/', 'globe', 'Custom business websites' ),
+			$c( 'Social Media Marketing', '/services/social-media-marketing/', 'megaphone', 'Content and campaigns' ),
+			$c( 'Search Engine Optimization', '/services/search-engine-optimization/', 'search', 'Rank higher on Google' ),
+			$c( 'Google Ads', '/services/google-adwords/', 'mouse-pointer-click', 'Paid search campaigns' ),
+		) ),
+		array( 'label' => 'About', 'url' => '/about/', 'children' => array(
+			$c( 'Pricing', '/pricing/', 'tag', 'Packages and prices' ),
+			$c( 'Blog', '/blog/', 'newspaper', 'Guides and updates' ),
+			$c( 'Case Studies', '/case-studies/', 'briefcase', 'Engagement examples' ),
+			$c( 'FAQ', '/faq/', 'circle-help', 'Common questions' ),
+			$c( 'Trust & Security', '/data-privacy-and-security/', 'lock', 'How we protect your data' ),
+		) ),
+		array( 'label' => 'Contact', 'url' => '/contact/' ),
+	) );
+}
+
+/** Menu in the sol_menu_data() shape, used when no WordPress menu is assigned. */
+function sol_menu_from_layout() {
+	$node = function ( $it ) {
+		return array( 'label' => $it['label'], 'url' => sol_url( $it['url'] ), 'icon' => $it['icon'] ?? '', 'desc' => $it['desc'] ?? '', 'badge' => '', 'target' => '', 'current' => false );
+	};
+	$out = array();
+	foreach ( sol_menu_layout() as $top ) {
+		$entry = $node( $top );
+		if ( ! empty( $top['children'] ) ) {
+			$entry['type']     = 'dropdown';
+			$entry['children'] = array_map( $node, $top['children'] );
+		} else {
+			$entry['type'] = 'link';
+		}
+		$out[] = $entry;
+	}
+	return $out;
+}
+
+/*
+ * Switch to the new menu once: the current "SOL Main Menu" is kept, renamed "SOL Main Menu (backup before
+ * v2.23.0)", and a new one is built from sol_menu_layout() and assigned to the header. To go back, assign the
+ * backup to "Main menu (SOL header)" in Appearance → Menus → Manage Locations.
+ */
+add_action( 'init', function () {
+	if ( 'v2' === get_option( 'sol_menu_layout_version' ) || get_transient( 'sol_menu_v2_lock' ) ) {
+		return;
+	}
+	set_transient( 'sol_menu_v2_lock', 1, MINUTE_IN_SECONDS );
+	$old = wp_get_nav_menu_object( 'SOL Main Menu' );
+	if ( $old ) {
+		wp_update_nav_menu_object( $old->term_id, array( 'menu-name' => 'SOL Main Menu (backup before v2.23.0)' ) );
+	}
+	if ( sol_build_wp_menu( true ) ) {
+		update_option( 'sol_menu_layout_version', 'v2', false );
+	}
+	delete_transient( 'sol_menu_v2_lock' );
+}, 20 );
 
 /** Page ID for an internal link, so menu items follow the page if its slug changes. */
 function sol_menu_page_for_url( $url ) {

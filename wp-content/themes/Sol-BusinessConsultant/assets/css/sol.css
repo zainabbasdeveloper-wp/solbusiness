@@ -130,7 +130,7 @@ i.sol-icon { font-style: normal; }
 .sol-nav__buttons { flex-wrap: nowrap; gap: 8px; }
 .sol-nav__buttons .sol-btn { padding: 10px 14px; font-size: .86rem; white-space: nowrap; box-shadow: none; }
 .sol-nav__buttons .sol-btn__icon { display: none; }
-@media (max-width: 1399px) { .sol-nav__buttons .sol-btn:not(:last-child), .sol-nav__portal { display: none; } }
+@media (max-width: 1599px) { .sol-nav__buttons .sol-btn:not(:last-child), .sol-nav__portal { display: none; } }
 .sol-chrome [id] { scroll-margin-top: 130px; }
 /* The spot a #link scrolled to: a short amber ring so it's clear which card was picked (assets/js/sol.js anchors()). */
 .sol-target { outline: none; animation: sol-target 2.6s ease-out; }
@@ -147,7 +147,7 @@ section.sol-target { animation: none; } /* whole sections just scroll into place
 .sol-drawer__link, .sol-drawer__group summary { padding: 12px 4px; border-bottom: 1px solid var(--sol-border); font-weight: 600; cursor: pointer; }
 .sol-drawer__group a { display: block; padding: 8px 12px; font-size: .92rem; color: var(--sol-ink-2); }
 .sol-drawer__buttons { margin-top: 16px; flex-direction: column; }
-@media (min-width: 1180px) {
+@media (min-width: 1340px) {
 	.sol-menu, .sol-nav__actions { display: flex; }
 	.sol-burger, .sol-drawer { display: none !important; }
 }

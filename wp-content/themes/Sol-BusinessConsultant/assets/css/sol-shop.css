@@ -14,7 +14,7 @@
 .sol-cart-count.is-empty { display: none; }
 .sol-cart-link--mobile { margin-left: auto; }
 .sol-cart-link--mobile + .sol-burger { margin-left: 8px; }
-@media (min-width: 1180px) { .sol-cart-link--mobile { display: none; } }
+@media (min-width: 1340px) { .sol-cart-link--mobile { display: none; } }
 
 /* ---------- Single product ---------- */
 .sol-product-hero { background: var(--sol-ink); color: #fff; padding: 40px 0 48px; position: relative; overflow: hidden; }

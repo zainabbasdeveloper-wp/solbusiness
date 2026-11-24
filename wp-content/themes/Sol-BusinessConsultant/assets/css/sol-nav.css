@@ -127,3 +127,21 @@
 .sol-mega__promo .sol-mega__promo-btn { width: 100%; margin-top: 6px; padding: 13px 18px; font-size: .95rem; }
 .sol-mega__call { margin-top: auto; padding: 12px; border: 1px solid rgba(255, 255, 255, .1); border-radius: 14px; background: rgba(255, 255, 255, .04); transition: background .2s, border-color .2s; }
 .sol-mega__call:hover { background: rgba(255, 255, 255, .08); border-color: rgba(251, 191, 36, .35); }
+
+/* ---------- Main menu v2.23.0: eight areas, each a small dropdown ----------
+   Full menu from 1340px (the mobile menu below that). Portal, Student and Find My Plan join it from 1600px,
+   where the header gets a wider container so everything fits on one line. */
+.sol-menu__link { white-space: nowrap; }
+@media (min-width: 1340px) {
+	.sol-menu__list { gap: 0; }
+	.sol-menu__link { padding: 8px 7px; font-size: .86rem; gap: 2px; }
+	.sol-menu__chev { width: 14px; height: 14px; }
+	.sol-nav__inner { gap: 16px; }
+}
+@media (min-width: 1600px) {
+	.sol-header .sol-nav__inner.sol-container, .sol-header .sol-container.sol-nav__inner { max-width: 1560px; }
+}
+/* Long lists (Business Services) in two columns; the last dropdowns open towards the left so they stay on screen. */
+.sol-dd--wide { min-width: 560px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 4px; }
+.sol-dd--wide .sol-dd__link--top { grid-column: 1 / -1; }
+.sol-menu__item--dd:nth-last-child(-n+3) .sol-dd { left: auto; right: 0; }
