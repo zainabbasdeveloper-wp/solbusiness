@@ -170,3 +170,11 @@ function sol_gst_box() {
 	</div>
 	<?php
 }
+
+// Shop, product and course cards: say the price includes GST (prices are shown including GST when it's on).
+add_filter( 'woocommerce_get_price_suffix', function ( $suffix, $product ) {
+	if ( '' !== trim( (string) $suffix ) || ! function_exists( 'wc_tax_enabled' ) || ! wc_tax_enabled() || 'incl' !== get_option( 'woocommerce_tax_display_shop' ) || ! $product || ! $product->is_taxable() ) {
+		return $suffix;
+	}
+	return ' <small class="woocommerce-price-suffix">incl. GST</small>';
+}, 10, 2 );

@@ -163,3 +163,19 @@ add_filter( 'pre_get_document_title', function ( $title ) {
 	$seo = defined( 'WPSEO_VERSION' ) ? null : sol_compliance_seo();
 	return $seo ? $seo['title'] : $title;
 }, 99 );
+
+/* ------------------------------------------------------------------ */
+/* BAS blog post: general information, ends with the disclaimer        */
+/* ------------------------------------------------------------------ */
+
+// The post's stored text may be hand-edited (kept by Theme updates), so the closing disclaimer is added when shown.
+add_filter( 'the_content', function ( $content ) {
+	if ( ! is_singular( 'post' ) || ! in_the_loop() || 'bas-lodgement-australian-businesses' !== get_post_field( 'post_name', get_the_ID() ) ) {
+		return $content;
+	}
+	if ( false !== strpos( $content, 'registered BAS or tax agent.</p>' ) ) {
+		return $content;
+	}
+	$notice = 'Please note: SOL is a business consultancy, not a registered tax or BAS agent, accountant, financial adviser or credit provider. Tax, BAS and payroll lodgements are handled by a registered tax or BAS agent. Loans are arranged only by a licensed finance broker. Each partner is responsible for their own advice and fees. If SOL receives a referral fee, we’ll tell you before you proceed.';
+	return $content . '<p><strong>' . esc_html( $notice ) . '</strong></p><p>Your BAS must be lodged by you or a registered BAS or tax agent.</p>';
+}, 20 );
