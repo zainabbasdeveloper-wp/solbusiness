@@ -107,6 +107,7 @@ function sol_setup_page() {
 		<?php if ( ! $scf ) : ?><div class="notice notice-error"><p>Install and activate <strong>Secure Custom Fields</strong> first.</p></div><?php endif; ?>
 		<?php if ( ! $woo ) : ?><div class="notice notice-warning"><p>WooCommerce is not active, so products and checkout buttons will be skipped.</p></div><?php endif; ?>
 		<?php if ( function_exists( 'sol_gst_box' ) ) { sol_gst_box(); } ?>
+		<?php if ( function_exists( 'sol_old_pages_box' ) ) { sol_old_pages_box(); } ?>
 
 		<?php if ( $report ) : ?>
 			<div class="notice notice-<?php echo $report['errors'] ? 'warning' : 'success'; ?>"><p><strong>Done.</strong></p>
