@@ -16,6 +16,7 @@ $top_text = sol_opt( 'topbar_text' );
 $top_link = sol_opt( 'topbar_link' );
 $phone    = sol_opt( 'phone' );
 $phone_l  = preg_replace( '/[^0-9+]/', '', (string) sol_opt( 'phone_link', $phone ) );
+$support  = function_exists( 'sol_support_phone' ) ? sol_support_phone() : '';
 
 $sol_target = function ( $l ) {
 	return ! empty( $l['target'] ) ? ' target="_blank" rel="noopener"' : '';
@@ -34,10 +35,11 @@ $sol_is_cur = function ( $l ) {
 <?php wp_body_open(); ?>
 <a class="sol-skip" href="#sol-main">Skip to content</a>
 <header class="sol-header" data-sol-header>
-	<?php if ( $top_text ) : ?>
+	<?php if ( $top_text || $support ) : ?>
 		<div class="sol-topbar">
 			<div class="sol-container sol-topbar__inner">
-				<span><?php echo esc_html( $top_text ); ?></span>
+				<?php if ( $top_text ) : ?><span><?php echo esc_html( $top_text ); ?></span><?php endif; ?>
+				<?php if ( $support ) : ?><a class="sol-topbar__support" href="tel:<?php echo esc_attr( sol_tel( $support ) ); ?>"><?php echo sol_icon( 'headset' ); // phpcs:ignore ?> Support <?php echo esc_html( $support ); ?></a><?php endif; ?>
 				<?php
 				$tl = sol_link( $top_link );
 				if ( $tl ) :
@@ -206,9 +208,10 @@ $sol_is_cur = function ( $l ) {
 			<?php endforeach; ?>
 			<?php echo sol_buttons( $buttons, 'sol-drawer__buttons' ); // phpcs:ignore ?>
 			<?php $pay_url = sol_url( sol_opt( 'payment_page_url', '/sol-service-payment-form/' ) ); ?>
-			<?php if ( $phone || $pay_url ) : ?>
+			<?php if ( $phone || $support || $pay_url ) : ?>
 				<div class="sol-drawer__contact">
 					<?php if ( $phone ) : ?><a href="tel:<?php echo esc_attr( $phone_l ); ?>"><?php echo sol_icon( 'phone' ); // phpcs:ignore ?><span>Call <?php echo esc_html( $phone ); ?></span></a><?php endif; ?>
+					<?php if ( $support ) : ?><a href="tel:<?php echo esc_attr( sol_tel( $support ) ); ?>"><?php echo sol_icon( 'headset' ); // phpcs:ignore ?><span>Support <?php echo esc_html( $support ); ?></span></a><?php endif; ?>
 					<?php if ( $pay_url ) : ?><a href="<?php echo esc_url( $pay_url ); ?>"><?php echo sol_icon( 'credit-card' ); // phpcs:ignore ?><span>Make a payment</span></a><?php endif; ?>
 				</div>
 			<?php endif; ?>

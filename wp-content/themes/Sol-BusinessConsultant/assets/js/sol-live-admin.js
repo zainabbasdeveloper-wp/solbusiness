@@ -158,13 +158,22 @@
     ta.placeholder = 'Type your reply… (Enter to send, Shift + Enter for a new line)';
     var sendBtn = el('button', 'button button-primary', 'Send');
     sendBtn.type = 'submit';
+    var mailLbl = el('label', 'sol-live__bymail');
+    var mail = el('input');
+    mail.type = 'checkbox';
+    mailLbl.appendChild(mail);
+    mailLbl.appendChild(document.createTextNode(' Send by email'));
+    mailLbl.title = 'Also email this reply to the visitor now';
+    var side = el('div', 'sol-live__send');
+    side.appendChild(sendBtn);
+    side.appendChild(mailLbl);
     form.appendChild(ta);
-    form.appendChild(sendBtn);
+    form.appendChild(side);
     convEl.appendChild(head);
     convEl.appendChild(log);
     convEl.appendChild(typing);
     convEl.appendChild(form);
-    cur.els = { head: head, log: log, typing: typing, form: form, ta: ta, send: sendBtn };
+    cur.els = { head: head, log: log, typing: typing, form: form, ta: ta, send: sendBtn, mail: mail, mailLbl: mailLbl };
 
     ta.addEventListener('input', function () { cur.typedAt = Date.now(); });
     ta.addEventListener('keydown', function (e) {
@@ -175,9 +184,10 @@
       var text = ta.value.trim();
       if (!text || !cur || cur.id !== id) return;
       sendBtn.disabled = true;
-      api('send', { id: id, text: text }).then(function (res) {
+      var byMail = mail.checked;
+      api('send', { id: id, text: text, email: byMail ? 1 : 0 }).then(function (res) {
         sendBtn.disabled = false;
-        if (res.ok) { ta.value = ''; pollChat(); loadList(); } else { window.alert(res.d.message || 'Not sent. Please try again.'); }
+        if (res.ok) { ta.value = ''; if (!(cur.chat && cur.chat.status === 'closed')) mail.checked = false; pollChat(); loadList(); } else { window.alert(res.d.message || 'Not sent. Please try again.'); }
         ta.focus();
       });
     });
@@ -214,16 +224,19 @@
         if (window.confirm('End this chat? The visitor will see that the chat has ended.')) api('close', { id: c.id }).then(function () { pollChat(); loadList(); });
       });
       tools.appendChild(end);
-    } else if (c.email) {
-      var mail = el('a', 'button', 'Reply by email');
-      mail.href = 'mailto:' + c.email + '?subject=' + encodeURIComponent('Your chat with SOL Business Consultant');
-      tools.appendChild(mail);
     }
     h.appendChild(tools);
     var closed = c.status === 'closed';
-    cur.els.ta.disabled = closed;
-    cur.els.send.disabled = closed;
-    cur.els.ta.placeholder = closed ? 'This chat has ended. Use “Reply by email” to follow up.' : 'Type your reply… (Enter to send, Shift + Enter for a new line)';
+    var canMail = !!c.email;
+    cur.els.ta.disabled = closed && !canMail;
+    cur.els.send.disabled = closed && !canMail;
+    cur.els.mailLbl.hidden = !canMail;
+    if (closed && canMail) cur.els.mail.checked = true;
+    cur.els.mail.disabled = closed;
+    cur.els.send.textContent = closed ? 'Send email' : 'Send';
+    cur.els.ta.placeholder = closed
+      ? (canMail ? 'This chat has ended. Your reply will be emailed to ' + c.email + '.' : 'This chat has ended and the visitor left no email address.')
+      : 'Type your reply… (Enter to send, Shift + Enter for a new line)' + (canMail && !c.here ? '. The visitor has left: replies they don’t read within 2 minutes are emailed to them.' : '');
   }
   function addMsg(m) {
     var log = cur.els.log;

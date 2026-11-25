@@ -369,6 +369,7 @@ function sol_email_templates() {
 		'form_confirmation'         => array( 'Website forms', 'Form received', 'Contact, training, feedback, newsletter and readiness-check forms (sent to the visitor).', array( 'name' => 'Jane', 'variant' => 'contact' ) ),
 		'enquiry_notification'      => array( 'Website forms', 'New enquiry (team)', 'Every website form (sent to the SOL team).', array( 'variant' => 'contact', 'fields' => array( 'Form' => 'Contact', 'Page' => home_url( '/contact/' ), 'Name' => 'Jane Citizen', 'Email' => 'jane@example.com', 'Phone' => '0400 000 000', 'Message' => "Hi, I'd like help with NDIS registration.\nWhat documents do I need?" ) ) ),
 		'live_chat_request'         => array( 'Website forms', 'Live chat request (team)', 'When a visitor asks the chat to talk to a person (sent to the SOL team).', array( 'name' => 'Jane Citizen', 'email' => 'jane@example.com', 'phone' => '0400 000 000', 'message' => 'Can someone check my NDIS registration quote?', 'page' => home_url( '/services/' ), 'offline' => false, 'url' => admin_url( 'admin.php?page=sol-live-chat' ) ) ),
+		'live_chat_reply'           => array( 'Website forms', 'Chat reply (visitor)', 'Help Desk replies a visitor hasn\'t read in the chat, or sent with “Send by email”.', array( 'name' => 'Jane Citizen', 'agent' => 'Sam', 'messages' => array( 'Thanks for waiting, Jane. Yes, we can help with your NDIS registration.', 'I have sent our packages below.' ) ) ),
 		'test'                      => array( 'Website forms', 'Test email', 'SOL Site → Email test button.', array() ),
 	);
 	$out = array();
@@ -917,6 +918,22 @@ function sol_email_tpl_live_chat_request( $d ) {
 			array( 'rows', $rows ),
 			array( 'button', 'Open Live Chat inbox', sol_get( $d, 'url', admin_url( 'admin.php?page=sol-live-chat' ) ) ),
 		),
+	);
+}
+
+function sol_email_tpl_live_chat_reply( $d ) {
+	$agent  = sol_email_value( sol_get( $d, 'agent', '' ) );
+	$blocks = array( array( 'p', sol_email_hello( sol_get( $d, 'name', '' ) ) ), array( 'p', 'You have a reply from ' . ( $agent ? '**' . $agent . '** at ' : '' ) . sol_email_company() . ' to your website chat:' ) );
+	foreach ( (array) sol_get( $d, 'messages', array() ) as $m ) {
+		$blocks[] = array( 'p', '“' . sol_email_value( $m ) . '”' );
+	}
+	$blocks[] = array( 'p', 'Just reply to this email to continue the conversation, or call our support line on **' . sol_email_value( function_exists( 'sol_support_phone' ) ? sol_support_phone() : sol_opt( 'phone' ) ) . '**.' );
+	return array(
+		'subject'   => 'Reply to your chat with ' . sol_email_company(),
+		'title'     => 'A reply from our team',
+		'preheader' => ( $agent ? $agent : 'Our team' ) . ' replied to your website chat.',
+		'note'      => 'You are receiving this because you asked to talk to our team in the website chat.',
+		'blocks'    => $blocks,
 	);
 }
 

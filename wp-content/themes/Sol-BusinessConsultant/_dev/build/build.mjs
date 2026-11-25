@@ -21,6 +21,7 @@ import { applyPhotos, PHOTO_ALT } from './content/photos.mjs';
 import { brandText, brandProblems } from './content/brand.mjs';
 import { applyCompliance, complianceProblems } from './content/compliance.mjs';
 import { applyCurriculum, curriculumProblems, MODULES } from './content/curriculum.mjs';
+import { applyEasyCompliance } from './content/easy-compliance.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const THEME = join(HERE, '..', '..');
@@ -194,6 +195,9 @@ let seed = routeUrls({
   }
   console.log(`    Training curriculum: ${MODULES} modules, ${changed} changes`);
 }
+
+/* ---------- Easy Compliance page (content/easy-compliance.mjs) ---------- */
+console.log(`    Easy Compliance page: ${applyEasyCompliance(seed)} changes`);
 
 /* ---------- photos (content/photos.mjs) ---------- */
 console.log(`    Photos: ${applyPhotos(seed)} items use the new photography`);

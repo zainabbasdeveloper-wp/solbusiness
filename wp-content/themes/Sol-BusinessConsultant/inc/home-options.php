@@ -189,7 +189,7 @@ function sol_ho_data() {
 					array( 'NDIS Packages & Pricing', '/ndis-packages/' ),
 					array( 'NDIS Readiness Quiz', '/readiness-quiz/' ),
 					array( 'Support Coordination Training', '/services/ndis-support-coordination-training/' ),
-					array( 'Easy Compliance', '/about/#compliance' ),
+					array( 'Easy Compliance', '/easy-compliance/' ),
 				),
 			),
 			array(

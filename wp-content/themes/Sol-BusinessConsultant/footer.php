@@ -69,6 +69,8 @@ if ( ! $has_dir && function_exists( 'sol_directory_url' ) && '' !== sol_director
 			<p class="sol-footer__tagline"><?php echo esc_html( sol_opt( 'tagline' ) ); ?></p>
 			<ul class="sol-footer__reach">
 				<?php if ( $phone ) : ?><li><a href="tel:<?php echo esc_attr( $phone_l ); ?>"><span><?php echo sol_icon( 'phone' ); // phpcs:ignore ?></span><?php echo esc_html( $phone ); ?></a></li><?php endif; ?>
+				<?php $support = function_exists( 'sol_support_phone' ) ? sol_support_phone() : ''; ?>
+				<?php if ( $support ) : ?><li><a href="tel:<?php echo esc_attr( sol_tel( $support ) ); ?>"><span><?php echo sol_icon( 'headset' ); // phpcs:ignore ?></span>Support line <?php echo esc_html( $support ); ?></a></li><?php endif; ?>
 				<?php if ( $email ) : ?><li><a href="mailto:<?php echo esc_attr( antispambot( $email ) ); ?>"><span><?php echo sol_icon( 'mail' ); // phpcs:ignore ?></span><?php echo esc_html( antispambot( $email ) ); ?></a></li><?php endif; ?>
 				<?php if ( $address ) : ?><li><span><?php echo sol_icon( 'map-pin' ); // phpcs:ignore ?></span><?php echo esc_html( $address ); ?></li><?php endif; ?>
 				<?php if ( $hours ) : ?><li><span><?php echo sol_icon( 'clock' ); // phpcs:ignore ?></span><?php echo esc_html( $hours ); ?></li><?php endif; ?>

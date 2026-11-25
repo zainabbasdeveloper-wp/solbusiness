@@ -129,7 +129,7 @@
    },
    {
     "label": "Compliance",
-    "url": "/#compliance",
+    "url": "/easy-compliance/",
     "type": "link"
    },
    {
@@ -439,27 +439,27 @@
     "links": [
      {
       "label": "Easy Compliance Platform",
-      "url": "/#compliance"
+      "url": "/easy-compliance/"
      },
      {
       "label": "HR Compliance",
-      "url": "/#compliance-onboarding-training"
+      "url": "/easy-compliance/#compliance-onboarding-training"
      },
      {
       "label": "Participant Management",
-      "url": "/#compliance-setup-configuration"
+      "url": "/easy-compliance/#compliance-setup-configuration"
      },
      {
       "label": "Compliance Registers",
-      "url": "/#compliance-ongoing-compliance"
+      "url": "/easy-compliance/#compliance-ongoing-compliance"
      },
      {
       "label": "AI Document Validation",
-      "url": "/#compliance-ai-document-validation"
+      "url": "/easy-compliance/#compliance-ai-document-validation"
      },
      {
       "label": "Internal Audits",
-      "url": "/#compliance-internal-audits"
+      "url": "/easy-compliance/#compliance-internal-audits"
      }
     ]
    },
@@ -9386,6 +9386,82 @@
      }
     ]
    }
+  },
+  {
+   "post_type": "page",
+   "path": "easy-compliance",
+   "title": "Easy Compliance",
+   "menu_order": 30,
+   "front_page": false,
+   "template": "page-templates/sol-builder.php",
+   "yoast": {
+    "title": "Easy Compliance for NDIS Providers | SOL Business Consultant",
+    "description": "Easy Compliance helps NDIS providers keep policies, registers, staff records and internal audits in one place, with support from the SOL team."
+   },
+   "fields": {
+    "page_sections": [
+     {
+      "acf_fc_layout": "page_header",
+      "eyebrow": "Easy Compliance",
+      "heading": "NDIS Compliance, Kept in One Place",
+      "text": "Policies, registers, staff records and internal audits in one system, set up and supported by the SOL team.",
+      "info_cards": [],
+      "buttons": [
+       {
+        "link": {
+         "title": "Book a Free Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "primary"
+       },
+       {
+        "link": {
+         "title": "Open Easy Compliance",
+         "url": "https://sol.easycompliance.org",
+         "target": "_blank"
+        },
+        "style": "light"
+       }
+      ]
+     },
+     {
+      "acf_fc_layout": "reusable_block",
+      "block": "ref:sol_block:compliance"
+     },
+     {
+      "acf_fc_layout": "cta_banner",
+      "section_id": "",
+      "style": "soft",
+      "eyebrow": "Free consultation",
+      "heading": "See Easy Compliance\nWith Your Own Documents",
+      "text": "Tell us how you manage compliance today and we will show you how Easy Compliance fits. No pressure, no jargon.",
+      "buttons": [
+       {
+        "link": {
+         "title": "Book a Free Consultation",
+         "url": "/book-consultation/",
+         "target": ""
+        },
+        "style": "primary"
+       }
+      ],
+      "list": [
+       {
+        "item": "Free 30-minute call"
+       },
+       {
+        "item": "Reply within one business day"
+       },
+       {
+        "item": "No obligation"
+       }
+      ],
+      "image": "",
+      "note": ""
+     }
+    ]
+   }
   }
  ],
  "services": [
@@ -14589,6 +14665,7 @@
   "page:accessibility": "871e09d07242ced2",
   "page:complaints-feedback": "ac70fc3da012b748",
   "page:services": "ca2bd81e6938bbf8",
+  "page:easy-compliance": "452b048b5629029e",
   "page:services/ndis-registration": "6da140bd5278b095",
   "page:services/ndis-support-coordination-training": "0652064fbbca590f",
   "page:services/company-business-registration": "a8e9066d59b05e26",
@@ -14645,7 +14722,7 @@
   "option:abn": "cd06de349f2488d1",
   "option:website_label": "e5b69164fcf109f5",
   "option:business_hours": "2f725cfa8b964188",
-  "option:nav_items": "884337fb7d7e99f4",
+  "option:nav_items": "8eee1eccee254f5b",
   "option:mega_menu": "4f3099b2279978a3",
   "option:mega_promo": "d661c647fc478723",
   "option:header_buttons": "ad19c15dd586ab4d",
@@ -14656,7 +14733,7 @@
   "option:newsletter_enabled": "5ffe533b830f08a0",
   "option:newsletter_label": "79cdd94608dbbe77",
   "option:newsletter_note": "aa377ccac640c2db",
-  "option:footer_columns": "6d359127883a9848",
+  "option:footer_columns": "37224a375170054f",
   "option:footer_copyright": "9c113bb045c437d1",
   "option:app_url": "015218d6fc454ec4",
   "option:payment_page_url": "b3381b66f2a05d88",
@@ -14677,6 +14754,17 @@
   "option:chat_instructions": "dd29ecf524b030a6"
  },
  "history": {
+  "option:nav_items": [
+   "884337fb7d7e99f4",
+   "80629a1d91bb9a60"
+  ],
+  "option:footer_columns": [
+   "6d359127883a9848",
+   "b559db99dd7df4f5",
+   "357af69f88135647",
+   "00786a3c1c122e79",
+   "c65563ed95e44410"
+  ],
   "sol_block:pricing-tabs": [
    "ca760fbfad78d4b4",
    "5eb502db24e0c4af",
@@ -14832,12 +14920,6 @@
    "9599ef842ba69325",
    "cdd63d1ecec03dc4"
   ],
-  "option:footer_columns": [
-   "b559db99dd7df4f5",
-   "357af69f88135647",
-   "00786a3c1c122e79",
-   "c65563ed95e44410"
-  ],
   "option:footer_copyright": [
    "2097dea66a5c08ff",
    "6a336234d9cdb0bd",
@@ -14941,9 +15023,6 @@
    "c40018bc38d7f15e",
    "6c357e2f574e54f3",
    "2082dc041d199b85"
-  ],
-  "option:nav_items": [
-   "80629a1d91bb9a60"
   ],
   "course:3255": [
    "34f91b35de92a235",
@@ -16573,5 +16652,5 @@
    }
   ]
  },
- "build": "8d62cd8ee29fbb8e"
+ "build": "2139907ae40ee4f2"
 }

@@ -56,7 +56,8 @@ function sol_url( $url ) {
 		}
 		$url = home_url( $url );
 	}
-	return function_exists( 'sol_moved_link' ) ? sol_moved_link( $url ) : $url;
+	$url = function_exists( 'sol_moved_link' ) ? sol_moved_link( $url ) : $url;
+	return function_exists( 'sol_compliance_link' ) ? sol_compliance_link( $url ) : $url;
 }
 
 /** The training courses page. It was "training-2" on the old site and is "training-courses" now. */

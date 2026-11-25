@@ -383,7 +383,7 @@ function sol_menu_layout() {
 		array( 'label' => 'Home', 'url' => '/' ),
 		array( 'label' => 'AI Automation', 'url' => '/services/software-automation/', 'children' => array(
 			$c( 'AI & Machine Learning', '/ai-machine-learning/', 'brain-circuit', 'Data annotation and AI projects' ),
-			$c( 'Easy Compliance platform', '/#compliance', 'clipboard-check', 'Compliance software for NDIS providers' ),
+			$c( 'Easy Compliance platform', '/easy-compliance/', 'clipboard-check', 'Compliance software for NDIS providers' ),
 		) ),
 		array( 'label' => 'NDIS Services', 'url' => '/ndis-packages/', 'children' => $ndis ),
 		array( 'label' => 'Training Academy', 'url' => '/training-2/', 'children' => array(

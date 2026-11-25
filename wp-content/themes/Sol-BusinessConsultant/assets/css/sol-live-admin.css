@@ -50,3 +50,18 @@
 .sol-live__typing[hidden] { display: none; }
 .sol-live__compose { display: flex; gap: 8px; align-items: flex-end; padding: 10px 12px; border-top: 1px solid #dcdcde; }
 .sol-live__compose textarea { flex: 1; min-height: 52px; resize: vertical; }
+
+/* Help Desk (v2.26.0): summary cards, latest enquiries, "Send by email". */
+.sol-hd { margin: 14px 0 6px; }
+.sol-hd__cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.sol-hd__card { background: #fff; border: 1px solid #dcdcde; border-radius: 8px; padding: 12px 14px; display: grid; gap: 2px; }
+.sol-hd__card strong { font-size: 24px; line-height: 1.1; color: #1d2327; }
+.sol-hd__card span { color: #50575e; font-size: 12px; }
+.sol-hd__card.is-warn strong { color: #b26200; }
+.sol-hd__card--info { background: #f6f7f7; }
+.sol-hd__card--info .sol-hd__phone { font-size: 18px; }
+.sol-hd__enq { margin-top: 10px; background: #fff; border: 1px solid #dcdcde; border-radius: 8px; padding: 8px 12px; }
+.sol-hd__enq summary { cursor: pointer; font-weight: 600; }
+.sol-hd__enq table { margin-top: 8px; }
+.sol-live__send { display: grid; gap: 6px; justify-items: stretch; }
+.sol-live__bymail { font-size: 12px; white-space: nowrap; }

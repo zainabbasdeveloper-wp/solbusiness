@@ -537,20 +537,34 @@ function sol_live_r_agent_send( WP_REST_Request $req ) {
 	if ( ! $chat ) {
 		return sol_live_error( 'Chat not found.', 404 );
 	}
-	if ( 'closed' === sol_live_status( $chat->ID ) ) {
-		return sol_live_error( 'This chat has ended. Reply by email instead.', 409 );
+	$by_email = (bool) $req->get_param( 'email' );
+	$closed   = 'closed' === sol_live_status( $chat->ID );
+	if ( $closed && ! $by_email ) {
+		return sol_live_error( 'This chat has ended. Send your reply by email instead.', 409 );
+	}
+	if ( $by_email && ! is_email( (string) get_post_meta( $chat->ID, '_sc_email', true ) ) ) {
+		return sol_live_error( 'This visitor did not leave an email address.', 400 );
 	}
 	$text = mb_substr( sanitize_textarea_field( (string) $req->get_param( 'text' ) ), 0, 4000 );
 	if ( '' === trim( $text ) ) {
 		return sol_live_error( 'Please type a message.', 400 );
 	}
-	if ( 'waiting' === sol_live_status( $chat->ID ) || ! get_post_meta( $chat->ID, '_sc_agent', true ) ) {
+	if ( ! $closed && ( 'waiting' === sol_live_status( $chat->ID ) || ! get_post_meta( $chat->ID, '_sc_agent', true ) ) ) {
 		sol_live_join( $chat );
 	}
 	$pub = sol_live_agent_public( get_current_user_id() );
 	$mid = sol_live_add( $chat->ID, 'agent', $text, $pub['name'] );
 	delete_post_meta( $chat->ID, '_sc_atyping' );
-	return new WP_REST_Response( array( 'id' => $mid ), 200 );
+	$emailed = false;
+	if ( $by_email ) {
+		$emailed = sol_live_email_replies( $chat->ID, array( $mid ) );
+		if ( ! $emailed ) {
+			return sol_live_error( 'Saved in the chat, but the email could not be sent. Please email ' . get_post_meta( $chat->ID, '_sc_email', true ) . ' directly.', 502 );
+		}
+	} elseif ( time() - (int) get_post_meta( $chat->ID, '_sc_vseen', true ) > 30 ) {
+		sol_live_schedule_email( $chat->ID ); // the visitor has left: email the reply if they don't come back
+	}
+	return new WP_REST_Response( array( 'id' => $mid, 'emailed' => (bool) $emailed ), 200 );
 }
 
 function sol_live_r_agent_close( WP_REST_Request $req ) {
@@ -595,8 +609,8 @@ add_action( 'admin_menu', function () {
 		return;
 	}
 	$n     = sol_live_waiting_cached();
-	$title = 'Live Chat' . ( $n ? ' <span class="awaiting-mod count-' . $n . '"><span class="pending-count">' . $n . '</span></span>' : '' );
-	add_menu_page( 'Live Chat', $title, sol_live_agent_cap(), SOL_LIVE_PAGE, 'sol_live_admin_page', 'dashicons-format-chat', 3 );
+	$title = 'Help Desk' . ( $n ? ' <span class="awaiting-mod count-' . $n . '"><span class="pending-count">' . $n . '</span></span>' : '' );
+	add_menu_page( 'Help Desk', $title, sol_live_agent_cap(), SOL_LIVE_PAGE, 'sol_live_admin_page', 'dashicons-format-chat', 3 );
 } );
 
 add_action( 'admin_enqueue_scripts', function ( $hook ) {
@@ -621,12 +635,13 @@ function sol_live_admin_page() {
 	?>
 	<div class="wrap sol-live">
 		<div class="sol-live__top">
-			<h1>Live Chat</h1>
+			<h1>Help Desk</h1>
 			<label class="sol-live__avail"><input type="checkbox" data-live-avail checked> <span>I'm available to chat</span></label>
 			<span class="sol-live__online" data-live-online></span>
 			<button type="button" class="button" data-live-notify hidden>Turn on desktop alerts</button>
 		</div>
-		<p class="sol-live__help">Visitors reach you here when they ask the SOL Assistant to talk to a person. Keep this page open (in any tab) to show as online; you'll hear a sound when someone is waiting. When no one is online, visitors leave their details and the request is emailed to <?php echo esc_html( sol_opt( 'notification_email', get_option( 'admin_email' ) ) ); ?>.</p>
+		<?php if ( function_exists( 'sol_help_desk_summary' ) ) { sol_help_desk_summary(); } ?>
+		<p class="sol-live__help">Visitors reach you here when they ask the SOL Assistant to talk to a person. Keep this page open (in any tab) to show as online; you'll hear a sound when someone is waiting. When no one is online, visitors leave their details and the request is emailed to <?php echo esc_html( sol_opt( 'notification_email', get_option( 'admin_email' ) ) ); ?>. Replies a visitor doesn't read within 2 minutes are emailed to them; tick “Send by email” to email a reply straight away, also after the chat has ended. Open this page any time at <?php echo esc_html( home_url( '/help-desk/' ) ); ?>.</p>
 		<div class="sol-live__app">
 			<aside class="sol-live__list" data-live-list aria-label="Chats"><p class="sol-live__empty">Loading…</p></aside>
 			<section class="sol-live__conv" data-live-conv>
