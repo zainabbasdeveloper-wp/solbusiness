@@ -33,6 +33,10 @@ function sol_share_card_key() {
 	if ( is_home() ) {
 		return 'blog';
 	}
+	// The WooCommerce shop page (Training Courses) is a product archive, not a singular page.
+	if ( function_exists( 'is_shop' ) && is_shop() && function_exists( 'wc_get_page_id' ) && wc_get_page_id( 'shop' ) > 0 ) {
+		return str_replace( '/', '--', get_page_uri( wc_get_page_id( 'shop' ) ) );
+	}
 	if ( ! is_singular() ) {
 		return '';
 	}
@@ -63,7 +67,11 @@ function sol_share_image() {
 	$rel = '';
 	if ( $key && preg_match( '/^[a-z0-9-]+$/', $key ) && file_exists( SOL_DIR . 'assets/images/share/' . $key . '.jpg' ) ) {
 		$rel = 'assets/images/share/' . $key . '.jpg';
-		$alt = is_front_page() ? $alt . ': NDIS registration, training and business consulting across Australia' : wp_strip_all_tags( single_post_title( '', false ) ) . ' | ' . $alt;
+		$page = single_post_title( '', false );
+		if ( ! $page && function_exists( 'is_shop' ) && is_shop() ) {
+			$page = get_the_title( wc_get_page_id( 'shop' ) );
+		}
+		$alt = is_front_page() ? $alt . ': NDIS registration, training and business consulting across Australia' : wp_strip_all_tags( (string) $page ) . ' | ' . $alt;
 	}
 	// Pages without a card: their featured image when it is a JPG or PNG (some apps skip WebP).
 	if ( ! $rel && is_singular() && has_post_thumbnail() ) {
