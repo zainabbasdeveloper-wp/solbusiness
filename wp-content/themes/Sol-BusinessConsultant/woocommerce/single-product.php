@@ -22,11 +22,8 @@ while ( have_posts() ) :
 	$id        = $product->get_id();
 	$is_course = sol_is_course_product( $id );
 	$color     = $is_course ? preg_replace( '/[^a-z]/', '', (string) get_field( 'color', $id ) ) : 'amber';
-	$curr      = $is_course ? sol_rows( get_field( 'curriculum', $id ) ) : array();
-	$topics    = 0;
-	foreach ( $curr as $m ) {
-		$topics += count( sol_list( sol_get( $m, 'topics', array() ) ) );
-	}
+	$curr      = $is_course ? sol_course_outline( $id ) : array();
+	$topics    = sol_course_topic_total( $curr );
 	$level     = $is_course ? get_field( 'level', $id ) : '';
 	$badge     = $is_course ? get_field( 'badge', $id ) : '';
 	$popular   = $is_course && get_field( 'popular', $id );
@@ -80,19 +77,13 @@ while ( have_posts() ) :
 						<?php if ( $curr ) : ?>
 							<div class="sol-product-block">
 								<h2>Course Curriculum</h2>
-								<p class="sol-muted"><?php echo (int) count( $curr ); ?> modules · <?php echo (int) $topics; ?> video topics · 10 min per topic</p>
+								<p class="sol-muted"><?php echo (int) count( $curr ); ?> modules · <?php echo (int) $topics; ?> video topics</p>
 								<div class="sol-accordion sol-curriculum">
-									<?php foreach ( $curr as $n => $m ) : ?>
-										<?php $tps = sol_list( sol_get( $m, 'topics', array() ) ); ?>
-										<details class="sol-accordion__item" <?php echo 0 === $n ? 'open' : ''; ?>>
-											<summary>
-												<span class="sol-course__num"><?php echo (int) $n + 1; ?></span>
-												<span class="sol-curriculum__title"><?php echo esc_html( sol_get( $m, 'title' ) ); ?><small><?php echo (int) count( $tps ); ?> topics</small></span>
-												<?php echo sol_icon( 'chevron-down', 'sol-accordion__chev' ); // phpcs:ignore ?>
-											</summary>
-											<ul class="sol-course__topics"><?php foreach ( $tps as $t ) : ?><li><?php echo sol_icon( 'play' ); // phpcs:ignore ?> <span><?php echo esc_html( $t ); ?></span> <small>10 min</small></li><?php endforeach; ?></ul>
-										</details>
-									<?php endforeach; ?>
+									<?php
+									foreach ( $curr as $n => $m ) {
+										sol_course_module_row( $n, $m, '<span class="sol-course__num">' . ( (int) $n + 1 ) . '</span><span class="sol-curriculum__title">' . esc_html( $m['title'] ) . '<small>' . (int) $m['count'] . ' ' . ( 1 === (int) $m['count'] ? 'topic' : 'topics' ) . '</small></span>', 'play' );
+									}
+									?>
 								</div>
 							</div>
 						<?php endif; ?>

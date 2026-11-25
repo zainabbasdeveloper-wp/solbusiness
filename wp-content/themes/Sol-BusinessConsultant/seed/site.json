@@ -709,7 +709,7 @@
    "sku": "SOL-SCT-INDIVIDUAL",
    "name": "Support Coordination Training — Individual Learner",
    "price": 1200,
-   "short": "The full 12-module online curriculum, self-paced, with 6 months of access.",
+   "short": "The full 25-module online curriculum (Levels 1–3), self-paced, with 6 months of access.",
    "features": [],
    "category": "Training Packages"
   },
@@ -972,7 +972,7 @@
           "tagline": "",
           "features": [
            {
-            "item": "Full 12-module curriculum for up to 10 staff"
+            "item": "Full 25-module curriculum (Levels 1–3) for up to 10 staff"
            },
            {
             "item": "1,500+ quiz questions with answers"
@@ -1467,13 +1467,13 @@
           "price": "From $325",
           "period": "",
           "price_note": "",
-          "tagline": "Online levels for individual learners and a 12-module curriculum licence for teams.",
+          "tagline": "Online levels for individual learners and the full 25-module curriculum licence for teams.",
           "features": [
            {
             "item": "Levels 1–3 for individuals, lifetime access"
            },
            {
-            "item": "12-module curriculum licence for teams"
+            "item": "25-module curriculum licence for teams"
            },
            {
             "item": "1,500+ quiz questions"
@@ -2438,8 +2438,8 @@
         "answer": "The curriculum is designed for Support Coordinators, Specialist Support Coordinators, NDIS providers onboarding new staff and RTOs that need a comprehensive, audit-ready training package. It also suits plan managers and allied health professionals who work alongside Support Coordinators."
        },
        {
-        "question": "What are the 12 modules and how long does each take?",
-        "answer": "The 12 modules cover: (1) Introduction to the NDIS, (2) Role & Responsibilities of a Support Coordinator, (3) NDIS Practice Standards & Code of Conduct, (4) Plan Implementation & Budget Management, (5) Goal Setting & Participant-Centred Practice, (6) Stakeholder & Provider Coordination, (7) Documentation & Reporting Requirements, (8) Risk Management & Incident Response, (9) Complex Needs & Specialist Support Coordination, (10) Cultural Safety & Diversity, (11) Workforce Development & Self-Care, and (12) Audit Readiness & Continuous Improvement. Each module is designed for approximately 2–3 hours of self-paced learning, totalling 24–36 hours across the full curriculum."
+        "question": "What modules are in the course and how long does it take?",
+        "answer": "The course has three levels and 25 modules (272 topics). Level 1 Foundation (3 modules, 52 topics, about 4–6 hours): Introduction to the NDIS, Person-Centered Support Principles, Rights and Responsibilities. Level 2 Professional (16 modules, 145 topics, about 8–10 hours): Advanced Person-Centered Practice, Complex Support Needs, Specialist Communication Approaches, Advanced Rights and Advocacy, Positive Behavior Support, Community Inclusion and Capacity Building, Professional Practice and Leadership, NDIS Quality and Safeguards Framework, Real-World Scenarios, Assessment Components, Cultural Competence and Diversity, Complex Communication Support - Special Requirements, Practice Leadership Development, Integration with Qualification Frameworks, Supplementary Resources, Practical Tools and Templates. Level 3 Advanced (6 modules, 75 topics, about 12–15 hours): Introduction to Level 3 NDIS Support, Complex Support Needs, Advanced Person-Centered Practice Level 3, Medication Management and Health Support, Leadership in Support Settings, Resource Materials. Each level is self-paced, so you can take it at your own speed."
        },
        {
         "question": "Is the curriculum aligned with the NDIS Practice Standards?",
@@ -2692,7 +2692,7 @@
           "values": "yes | no | no"
          },
          {
-          "label": "Training curriculum (12 modules)",
+          "label": "Training curriculum (25 modules)",
           "values": "no | yes | no"
          },
          {
@@ -10242,7 +10242,7 @@
     "service_type": "support_coordination_training",
     "eyebrow": "NDIS Training",
     "hero_heading": "NDIS Support Coordinator\nTraining That\n[Builds Careers]",
-    "hero_intro": "Learn support coordination the practical way: 12 modules, 1,500+ quiz questions and course content aligned with the NDIS Practice Standards. Built for individuals, teams and RTOs.",
+    "hero_intro": "Learn support coordination the practical way: 25 modules across 3 levels, 1,500+ quiz questions and course content aligned with the NDIS Practice Standards. Built for individuals, teams and RTOs.",
     "hero_stats": [
      {
       "value": "12",
@@ -10281,7 +10281,7 @@
      },
      {
       "link": {
-       "title": "View All 12 Modules",
+       "title": "View All 25 Modules",
        "url": "#modules",
        "target": ""
       },
@@ -10367,321 +10367,108 @@
       "eyebrow": "Full Curriculum",
       "background": "chalk",
       "align": "center",
-      "heading": "12 Modules: The Complete Support Coordination Curriculum",
-      "intro": "Each module includes written learning content, quiz questions, PowerPoint slide decks, scenario-based assessments and facilitator guides.",
+      "heading": "25 Modules: The Complete Support Coordination Curriculum",
+      "intro": "Three self-paced levels, 25 modules and 272 topics, from NDIS foundations to advanced practice.",
       "source": "manual",
-      "columns": "2",
+      "columns": "3",
       "card_style": "tagged",
       "cards": [
        {
-        "icon": "brain",
-        "tag": "Module 01",
-        "title": "Introduction to the NDIS",
-        "text": "A clear introduction to the National Disability Insurance Scheme: its history, legislation, guiding principles and how it works across Australia.",
+        "icon": "book-open",
+        "tag": "Level 1 · Foundation",
+        "title": "3 modules · 52 topics",
+        "text": "About 4–6 hours of self-paced learning.",
         "list": [
          {
-          "item": "NDIS Act 2013 — purpose, objects, and principles"
+          "item": "Introduction to the NDIS (17 topics)"
          },
          {
-          "item": "How the NDIS differs from other disability support systems"
+          "item": "Person-Centered Support Principles (22 topics)"
          },
          {
-          "item": "Participant eligibility criteria and access requirements"
-         },
-         {
-          "item": "The role of the NDIS Commission and Quality & Safeguards framework"
-         },
-         {
-          "item": "Key NDIS terminology and funding definitions"
-         },
-         {
-          "item": "Overview of NDIS participant planning and review cycles"
+          "item": "Rights and Responsibilities (13 topics)"
          }
         ]
        },
        {
         "icon": "users",
-        "tag": "Module 02",
-        "title": "The Role of a Support Coordinator",
-        "text": "What support coordinators do day to day, their legal and ethical responsibilities under the NDIS Practice Standards, and how to work professionally.",
+        "tag": "Level 2 · Professional",
+        "title": "16 modules · 145 topics",
+        "text": "About 8–10 hours of self-paced learning.",
         "list": [
          {
-          "item": "Difference between Support Coordinator, Specialist SC, and Plan Manager"
+          "item": "Advanced Person-Centered Practice (17 topics)"
          },
          {
-          "item": "NDIS Practice Standards — SC-specific obligations"
+          "item": "Complex Support Needs (15 topics)"
          },
          {
-          "item": "NDIS Code of Conduct — 7 requirements explained"
+          "item": "Specialist Communication Approaches (15 topics)"
          },
          {
-          "item": "Conflict of interest identification and management"
+          "item": "Advanced Rights and Advocacy (15 topics)"
          },
          {
-          "item": "Duty of care and professional boundaries"
+          "item": "Positive Behavior Support (14 topics)"
          },
          {
-          "item": "Record-keeping and reporting obligations"
-         }
-        ]
-       },
-       {
-        "icon": "file-text",
-        "tag": "Module 03",
-        "title": "Reading & Implementing NDIS Plans",
-        "text": "How to read and action a participant's NDIS plan: budgets, funding categories and a practical implementation roadmap.",
-        "list": [
-         {
-          "item": "Three NDIS budget types: Core, Capital, Capacity Building"
+          "item": "Community Inclusion and Capacity Building (15 topics)"
          },
          {
-          "item": "Understanding support categories and line items"
+          "item": "Professional Practice and Leadership (15 topics)"
          },
          {
-          "item": "Navigating the NDIS Pricing Arrangements & Price Limits"
+          "item": "NDIS Quality and Safeguards Framework (16 topics)"
          },
          {
-          "item": "Creating a plan implementation roadmap with the participant"
+          "item": "Real-World Scenarios (7 topics)"
          },
          {
-          "item": "Service bookings and budget tracking in the myplace portal"
+          "item": "Assessment Components (5 topics)"
          },
          {
-          "item": "Monitoring plan utilisation and managing underspend/overspend"
-         }
-        ]
-       },
-       {
-        "icon": "heart",
-        "tag": "Module 04",
-        "title": "Participant-Centred Practice",
-        "text": "Put choice, control and human rights at the centre of every support decision, using culturally responsive and trauma-informed approaches.",
-        "list": [
-         {
-          "item": "Principles of person-centred and strengths-based practice"
+          "item": "Cultural Competence and Diversity (3 topics)"
          },
          {
-          "item": "Supporting genuine choice and control in decision-making"
+          "item": "Complex Communication Support - Special Requirements (1 topic)"
          },
          {
-          "item": "Goal setting with participants — SMART goals for NDIS"
+          "item": "Practice Leadership Development (2 topics)"
          },
          {
-          "item": "Cultural and linguistic diversity considerations"
+          "item": "Integration with Qualification Frameworks (1 topic)"
          },
          {
-          "item": "Trauma-informed practice in disability support"
+          "item": "Supplementary Resources (1 topic)"
          },
          {
-          "item": "Advocacy — when and how to act on behalf of participants"
-         }
-        ]
-       },
-       {
-        "icon": "shield",
-        "tag": "Module 05",
-        "title": "Risk, Safeguarding & Reportable Incidents",
-        "text": "Identify and manage risk, understand mandatory incident reporting obligations and keep participants safe.",
-        "list": [
-         {
-          "item": "Risk assessment frameworks for NDIS providers"
-         },
-         {
-          "item": "The 5 categories of NDIS reportable incidents"
-         },
-         {
-          "item": "Internal incident reporting — process and timelines"
-         },
-         {
-          "item": "External reporting to the NDIS Commission"
-         },
-         {
-          "item": "Worker screening — NDIS Worker Screening Check explained"
-         },
-         {
-          "item": "Preventing and responding to abuse, neglect, and exploitation"
-         }
-        ]
-       },
-       {
-        "icon": "bar-chart-3",
-        "tag": "Module 06",
-        "title": "Service Agreements & Provider Connections",
-        "text": "Source quality providers, draft compliant service agreements and build a strong local provider network for participants.",
-        "list": [
-         {
-          "item": "What must be included in an NDIS service agreement"
-         },
-         {
-          "item": "Service agreement templates and customisation"
-         },
-         {
-          "item": "Finding and vetting registered vs unregistered providers"
-         },
-         {
-          "item": "Navigating the NDIS provider marketplace"
-         },
-         {
-          "item": "Monitoring provider performance and handling complaints"
-         },
-         {
-          "item": "Managing provider transitions and plan changes"
-         }
-        ]
-       },
-       {
-        "icon": "book-open",
-        "tag": "Module 07",
-        "title": "Documentation & Record Keeping",
-        "text": "Best-practice case notes, progress reports and audit-ready file management for support coordinators.",
-        "list": [
-         {
-          "item": "NDIS case note standards — what to include and exclude"
-         },
-         {
-          "item": "Writing effective progress reports for NDIS planners"
-         },
-         {
-          "item": "File management systems for audit readiness"
-         },
-         {
-          "item": "Privacy Act obligations and consent requirements"
-         },
-         {
-          "item": "Confidentiality — what can and cannot be shared"
-         },
-         {
-          "item": "Retention periods for NDIS participant records"
-         }
-        ]
-       },
-       {
-        "icon": "clock",
-        "tag": "Module 08",
-        "title": "Crisis & Complex Support",
-        "text": "Respond to crisis situations, support participants with complex needs and understand how mental health and the NDIS intersect.",
-        "list": [
-         {
-          "item": "Identifying early warning signs of participant crisis"
-         },
-         {
-          "item": "Crisis response planning and documentation"
-         },
-         {
-          "item": "Mental health and psychosocial disability in the NDIS"
-         },
-         {
-          "item": "Behaviour Support Practitioners — role and referral"
-         },
-         {
-          "item": "Overview of restrictive practices and authorisation"
-         },
-         {
-          "item": "Escalation pathways and emergency contacts"
+          "item": "Practical Tools and Templates (3 topics)"
          }
         ]
        },
        {
         "icon": "award",
-        "tag": "Module 09",
-        "title": "Plan Reviews & Appeals",
-        "text": "Prepare participants for plan reviews, gather supporting evidence and navigate internal reviews and appeals.",
+        "tag": "Level 3 · Advanced",
+        "title": "6 modules · 75 topics",
+        "text": "About 12–15 hours of self-paced learning.",
         "list": [
          {
-          "item": "Types of NDIS plan reviews — scheduled and unscheduled"
+          "item": "Introduction to Level 3 NDIS Support (14 topics)"
          },
          {
-          "item": "Preparing a plan review submission with evidence"
+          "item": "Complex Support Needs (13 topics)"
          },
          {
-          "item": "Writing supporting letters for allied health and SC"
+          "item": "Advanced Person-Centered Practice Level 3 (13 topics)"
          },
          {
-          "item": "Internal NDIS review process — steps and timeframes"
+          "item": "Medication Management and Health Support (15 topics)"
          },
          {
-          "item": "AAT appeals — when and how to apply"
+          "item": "Leadership in Support Settings (17 topics)"
          },
          {
-          "item": "Participant rights in the review and appeals process"
-         }
-        ]
-       },
-       {
-        "icon": "users",
-        "tag": "Module 10",
-        "title": "Working with Allied Health & Therapists",
-        "text": "Coordinate therapy supports, understand Assistive Technology, SDA and SIL, and work effectively with allied health professionals.",
-        "list": [
-         {
-          "item": "Role of Allied Health in NDIS participant outcomes"
-         },
-         {
-          "item": "Assistive Technology (AT) — low, mid, and high cost pathways"
-         },
-         {
-          "item": "AT assessment, quotes, and portal approval process"
-         },
-         {
-          "item": "Specialist Disability Accommodation (SDA) overview"
-         },
-         {
-          "item": "Supported Independent Living (SIL) assessment and funding"
-         },
-         {
-          "item": "Building effective referral relationships with therapists"
-         }
-        ]
-       },
-       {
-        "icon": "brain",
-        "tag": "Module 11",
-        "title": "Business Skills for Support Coordinators",
-        "text": "The business skills to run an independent support coordination practice or work within an organisation, including compliance, billing and professional development.",
-        "list": [
-         {
-          "item": "Setting up as an independent SC — ABN, registration, insurance"
-         },
-         {
-          "item": "NDIS Portal and myplace — essential navigation skills"
-         },
-         {
-          "item": "Claiming and invoicing correctly — avoiding common errors"
-         },
-         {
-          "item": "Managing a SC caseload — tools and time management"
-         },
-         {
-          "item": "CPD obligations and professional development planning"
-         },
-         {
-          "item": "Employment vs contractor models for SC workers"
-         }
-        ]
-       },
-       {
-        "icon": "check-circle",
-        "tag": "Module 12",
-        "title": "Competency Assessment & Certification",
-        "text": "The final module brings it together with scenario-based assessments, a 1,500+ question quiz bank and competency evaluations aligned with the NDIS Practice Standards.",
-        "list": [
-         {
-          "item": "Written scenario assessments across all 11 prior modules"
-         },
-         {
-          "item": "1,500+ multiple-choice quiz questions with answer explanations"
-         },
-         {
-          "item": "Competency-based evaluation mapped to NDIS Practice Standards"
-         },
-         {
-          "item": "Short-answer and case study responses"
-         },
-         {
-          "item": "Trainer-marked assessment (Team/Enterprise packages)"
-         },
-         {
-          "item": "Certificate of completion issued upon passing all assessments"
+          "item": "Resource Materials (3 topics)"
          }
         ]
        }
@@ -10769,7 +10556,7 @@
           "tagline": "",
           "features": [
            {
-            "item": "Full 12-module curriculum (up to 10 staff)"
+            "item": "Full 25-module curriculum, Levels 1–3 (up to 10 staff)"
            },
            {
             "item": "1,500+ quiz questions with answers"
@@ -14764,8 +14551,8 @@
   "photos/blog-bas-lodgement.webp": "Business owner preparing a BAS lodgement with a calculator"
  },
  "fingerprints": {
-  "sol_block:pricing-tabs": "ca760fbfad78d4b4",
-  "sol_block:consulting-packages": "67b8e9246301839c",
+  "sol_block:pricing-tabs": "a4f00455d75c571a",
+  "sol_block:consulting-packages": "f15de98886324b63",
   "sol_block:marketing-packages": "1290a2446c0f4f0e",
   "sol_block:about-sol": "f10e3b8129d514e1",
   "sol_block:compliance": "1dabb230f12cd0d4",
@@ -14773,9 +14560,9 @@
   "sol_block:service-trust": "70ece52810735cd2",
   "sol_block:service-journey": "db42bbf2a50fe9e3",
   "sol_block:general-faq": "60559749527dd765",
-  "sol_block:training-faq": "8d9886d4924c0de0",
+  "sol_block:training-faq": "ecdc32b3dfb6e826",
   "sol_block:contact": "3841f3f7c0d55a0b",
-  "sol_block:service-comparison": "a8bc97567e04f3df",
+  "sol_block:service-comparison": "29378a8db22034b8",
   "page:home": "b92efe5c307fbb25",
   "page:home-new": "3b6f46b13cbb6bcd",
   "page:about": "572d2249b867b71a",
@@ -14803,7 +14590,7 @@
   "page:complaints-feedback": "ac70fc3da012b748",
   "page:services": "ca2bd81e6938bbf8",
   "page:services/ndis-registration": "6da140bd5278b095",
-  "page:services/ndis-support-coordination-training": "07a7fe75346c7ff5",
+  "page:services/ndis-support-coordination-training": "0652064fbbca590f",
   "page:services/company-business-registration": "a8e9066d59b05e26",
   "page:services/bookkeeping-support": "ca56213f6cfb099d",
   "page:services/payroll-services": "18eb35610e9f0c74",
@@ -14831,7 +14618,7 @@
   "product:SOL-NDIS-CERTIFIED-FULL": "e277866ec022ed69",
   "product:SOL-NDIS-COMPLETE-DEPOSIT": "fe406d115d22b943",
   "product:SOL-NDIS-COMPLETE-FULL": "70ae06e4faa9508d",
-  "product:SOL-SCT-INDIVIDUAL": "3e94a065fa776ee8",
+  "product:SOL-SCT-INDIVIDUAL": "0f75de46f015b07d",
   "product:SOL-SCT-TEAM": "34cab54bcd19402a",
   "product:SOL-AUTO-STARTER": "32856361d643c4f5",
   "product:SOL-AUTO-PRO": "e757669829f52aac",
@@ -14891,6 +14678,7 @@
  },
  "history": {
   "sol_block:pricing-tabs": [
+   "ca760fbfad78d4b4",
    "5eb502db24e0c4af",
    "b634806850bcdf7d",
    "3460e5a7863ce268",
@@ -14898,13 +14686,33 @@
    "74f4a589c432a1fc"
   ],
   "sol_block:consulting-packages": [
+   "67b8e9246301839c",
    "eed4b9c15b556e9d",
    "fb20ff919b519ba8",
    "91bf3a1ba5720c67"
   ],
   "sol_block:training-faq": [
+   "8d9886d4924c0de0",
    "ed6ea5866639c433",
    "97cab551a5635596"
+  ],
+  "sol_block:service-comparison": [
+   "a8bc97567e04f3df",
+   "93ae8fca5c000b7b",
+   "a8669c0d25ba0cea"
+  ],
+  "page:services/ndis-support-coordination-training": [
+   "07a7fe75346c7ff5",
+   "48689f3db7d4da70",
+   "9728c1a707aebd06",
+   "bd632f420ec690c4",
+   "4331006dd9ac0982",
+   "fea3d25c24c9ec72",
+   "c0701a939035f13f"
+  ],
+  "product:SOL-SCT-INDIVIDUAL": [
+   "3e94a065fa776ee8",
+   "af27bfa33f719c15"
   ],
   "page:training-2": [
    "d78ecc9c62918402",
@@ -14923,14 +14731,6 @@
   "page:refunds-cancellation-policy": [
    "721f1664ade3d37b",
    "fe74ff57760c6f2c"
-  ],
-  "page:services/ndis-support-coordination-training": [
-   "48689f3db7d4da70",
-   "9728c1a707aebd06",
-   "bd632f420ec690c4",
-   "4331006dd9ac0982",
-   "fea3d25c24c9ec72",
-   "c0701a939035f13f"
   ],
   "sol_block:service-trust": [
    "42b5087ca2e8c75a",
@@ -15207,10 +15007,6 @@
   "sol_block:contact": [
    "d36d19b08a1b5038"
   ],
-  "sol_block:service-comparison": [
-   "93ae8fca5c000b7b",
-   "a8669c0d25ba0cea"
-  ],
   "page:contact": [
    "b6cdbcb728e71e9a"
   ],
@@ -15264,9 +15060,6 @@
   ],
   "product:SOL-NDIS-COMPLETE-FULL": [
    "631064a7309a910c"
-  ],
-  "product:SOL-SCT-INDIVIDUAL": [
-   "af27bfa33f719c15"
   ],
   "product:SOL-SCT-TEAM": [
    "52a3a7fe43748c56"
@@ -16780,5 +16573,5 @@
    }
   ]
  },
- "build": "5eb0e679880ca5d3"
+ "build": "8d62cd8ee29fbb8e"
 }

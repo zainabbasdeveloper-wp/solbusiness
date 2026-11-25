@@ -32,11 +32,8 @@ sol_section_open( $s, 'course_levels' );
 
 		<?php foreach ( $ids as $i => $id ) : ?>
 			<?php
-			$curr   = sol_rows( get_field( 'curriculum', $id ) );
-			$topics = 0;
-			foreach ( $curr as $m ) {
-				$topics += count( sol_list( sol_get( $m, 'topics', array() ) ) );
-			}
+			$curr   = sol_course_outline( $id );
+			$topics = sol_course_topic_total( $curr );
 			$color = preg_replace( '/[^a-z]/', '', (string) get_field( 'color', $id ) );
 			$wc    = function_exists( 'wc_get_product' ) ? wc_get_product( $id ) : null;
 			$price = $wc && '' !== $wc->get_price() ? $wc->get_price_html() : '';
@@ -56,15 +53,13 @@ sol_section_open( $s, 'course_levels' );
 					<h3>What You'll Learn</h3>
 					<?php echo sol_checks( sol_list( get_field( 'outcomes', $id ) ), 'sol-checks--cols-2 sol-checks--sm' ); // phpcs:ignore ?>
 					<h3>Course Curriculum</h3>
-					<p class="sol-muted"><?php echo (int) count( $curr ); ?> modules · <?php echo (int) $topics; ?> video topics · 10 min per topic</p>
+					<p class="sol-muted"><?php echo (int) count( $curr ); ?> modules · <?php echo (int) $topics; ?> video topics</p>
 					<div class="sol-accordion">
-						<?php foreach ( $curr as $n => $m ) : ?>
-							<?php $tps = sol_list( sol_get( $m, 'topics', array() ) ); ?>
-							<details class="sol-accordion__item" <?php echo 0 === $n ? 'open' : ''; ?>>
-								<summary><span class="sol-course__num"><?php echo (int) $n + 1; ?></span> <?php echo esc_html( sol_get( $m, 'title' ) ); ?> <small><?php echo (int) count( $tps ); ?> topics</small><?php echo sol_icon( 'chevron-down', 'sol-accordion__chev' ); // phpcs:ignore ?></summary>
-								<ul class="sol-course__topics"><?php foreach ( $tps as $t ) : ?><li><?php echo sol_icon( 'play-circle' ); // phpcs:ignore ?> <span><?php echo esc_html( $t ); ?></span> <small>10 min</small></li><?php endforeach; ?></ul>
-							</details>
-						<?php endforeach; ?>
+						<?php
+						foreach ( $curr as $n => $m ) {
+							sol_course_module_row( $n, $m, '<span class="sol-course__num">' . ( (int) $n + 1 ) . '</span> ' . esc_html( $m['title'] ) . ' <small>' . (int) $m['count'] . ' ' . ( 1 === (int) $m['count'] ? 'topic' : 'topics' ) . '</small>' );
+						}
+						?>
 					</div>
 				</div>
 				<aside class="sol-course__aside">

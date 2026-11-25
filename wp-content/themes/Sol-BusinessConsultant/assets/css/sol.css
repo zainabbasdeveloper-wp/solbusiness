@@ -722,3 +722,9 @@ body.sol-chrome:not(.sol-site) { margin: 0; }
 .sol-compare-more > summary .sol-accordion__chev { margin: 0; transition: transform .2s; }
 .sol-compare-more[open] > summary .sol-accordion__chev { transform: rotate(180deg); }
 .sol-compare-more .sol-table-wrap { border: 0; border-top: 1px solid var(--sol-border); border-radius: 0 0 var(--sol-radius-lg) var(--sol-radius-lg); }
+
+/* Curriculum module without a topic list (v2.25.2). */
+.sol-accordion__item--static .sol-accordion__row { display: flex; align-items: center; gap: 12px; padding: 18px 20px; font-family: var(--sol-display); font-weight: 600; font-size: .98rem; }
+.sol-accordion__item--static .sol-accordion__row small { margin-left: auto; font-family: var(--sol-font); font-weight: 500; color: var(--sol-mist); font-size: .78rem; white-space: nowrap; }
+.sol-curriculum .sol-accordion__item--static .sol-accordion__row { align-items: flex-start; }
+.sol-curriculum .sol-accordion__item--static .sol-curriculum__title small { margin: 2px 0 0; }

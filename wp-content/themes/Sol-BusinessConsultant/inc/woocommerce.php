@@ -54,6 +54,90 @@ function sol_courses_url() {
 	return $page ? get_permalink( $page ) : wc_get_page_permalink( 'shop' );
 }
 
+/**
+ * The real course outline (v2.25.2), as set up on the training platform: Level 1 has 3 modules, Level 2 has 16 and
+ * Level 3 has 6 (25 modules, 272 topics). Product ID => module title => number of topics.
+ * Topic names are listed only where the course fields hold every topic of that module.
+ */
+function sol_course_modules() {
+	return (array) apply_filters( 'sol_course_modules', array(
+		3255 => array(
+			'Introduction to the NDIS'                  => 17,
+			'Person-Centered Support Principles'        => 22,
+			'Rights and Responsibilities'               => 13,
+		),
+		495  => array(
+			'Advanced Person-Centered Practice'         => 17,
+			'Complex Support Needs'                     => 15,
+			'Specialist Communication Approaches'       => 15,
+			'Advanced Rights and Advocacy'              => 15,
+			'Positive Behavior Support'                 => 14,
+			'Community Inclusion and Capacity Building' => 15,
+			'Professional Practice and Leadership'      => 15,
+			'NDIS Quality and Safeguards Framework'     => 16,
+			'Real-World Scenarios'                      => 7,
+			'Assessment Components'                     => 5,
+			'Cultural Competence and Diversity'         => 3,
+			'Complex Communication Support - Special Requirements' => 1,
+			'Practice Leadership Development'           => 2,
+			'Integration with Qualification Frameworks' => 1,
+			'Supplementary Resources'                   => 1,
+			'Practical Tools and Templates'             => 3,
+		),
+		499  => array(
+			'Introduction to Level 3 NDIS Support'      => 14,
+			'Complex Support Needs'                     => 13,
+			'Advanced Person-Centered Practice Level 3' => 13,
+			'Medication Management and Health Support'  => 15,
+			'Leadership in Support Settings'            => 17,
+			'Resource Materials'                        => 3,
+		),
+	) );
+}
+
+/**
+ * A course's modules: list of array( title, count, topics ). Uses sol_course_modules() when the product is listed
+ * there, otherwise the curriculum field.
+ */
+function sol_course_outline( $product_id ) {
+	$fields = array();
+	foreach ( sol_rows( get_field( 'curriculum', $product_id ) ) as $m ) {
+		$title            = trim( preg_replace( '/^Module\s+\d+\s*:\s*/i', '', (string) sol_get( $m, 'title' ) ) );
+		$fields[ $title ] = sol_list( sol_get( $m, 'topics', array() ) );
+	}
+	$real = sol_course_modules();
+	$out  = array();
+	if ( isset( $real[ (int) $product_id ] ) ) {
+		foreach ( $real[ (int) $product_id ] as $title => $count ) {
+			$names = isset( $fields[ $title ] ) && count( $fields[ $title ] ) === (int) $count ? $fields[ $title ] : array();
+			$out[] = array( 'title' => $title, 'count' => (int) $count, 'topics' => $names );
+		}
+		return $out;
+	}
+	foreach ( $fields as $title => $names ) {
+		$out[] = array( 'title' => $title, 'count' => count( $names ), 'topics' => $names );
+	}
+	return $out;
+}
+
+/** Total topics in a course outline. */
+function sol_course_topic_total( $outline ) {
+	return (int) array_sum( wp_list_pluck( $outline, 'count' ) );
+}
+
+/** One curriculum row: expandable when the topic names are known, a plain row otherwise. */
+function sol_course_module_row( $n, $m, $title_html, $icon = 'play-circle' ) {
+	if ( $m['topics'] ) {
+		echo '<details class="sol-accordion__item"' . ( 0 === $n ? ' open' : '' ) . '><summary>' . $title_html . sol_icon( 'chevron-down', 'sol-accordion__chev' ) . '</summary><ul class="sol-course__topics">'; // phpcs:ignore
+		foreach ( $m['topics'] as $t ) {
+			echo '<li>' . sol_icon( $icon ) . ' <span>' . esc_html( $t ) . '</span></li>'; // phpcs:ignore
+		}
+		echo '</ul></details>';
+		return;
+	}
+	echo '<div class="sol-accordion__item sol-accordion__item--static"><div class="sol-accordion__row">' . $title_html . '</div></div>'; // phpcs:ignore
+}
+
 /** Course / product card used on the shop, categories and "other levels". */
 function sol_course_card( $product_id ) {
 	$product = wc_get_product( $product_id );
@@ -62,11 +146,8 @@ function sol_course_card( $product_id ) {
 	}
 	$is_course = sol_is_course_product( $product_id );
 	$color     = $is_course ? preg_replace( '/[^a-z]/', '', (string) get_field( 'color', $product_id ) ) : 'amber';
-	$curr      = $is_course ? sol_rows( get_field( 'curriculum', $product_id ) ) : array();
-	$topics    = 0;
-	foreach ( $curr as $m ) {
-		$topics += count( sol_list( sol_get( $m, 'topics', array() ) ) );
-	}
+	$curr      = $is_course ? sol_course_outline( $product_id ) : array();
+	$topics    = sol_course_topic_total( $curr );
 	$level   = $is_course ? get_field( 'level', $product_id ) : '';
 	$badge   = $is_course ? get_field( 'badge', $product_id ) : '';
 	$desc    = $is_course && get_field( 'description', $product_id ) ? get_field( 'description', $product_id ) : wp_strip_all_tags( $product->get_short_description() );

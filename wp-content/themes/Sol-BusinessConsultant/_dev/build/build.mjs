@@ -20,6 +20,7 @@ import { applyCopy, mapSeedText, loadCopy } from './copy.mjs';
 import { applyPhotos, PHOTO_ALT } from './content/photos.mjs';
 import { brandText, brandProblems } from './content/brand.mjs';
 import { applyCompliance, complianceProblems } from './content/compliance.mjs';
+import { applyCurriculum, curriculumProblems, MODULES } from './content/curriculum.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const THEME = join(HERE, '..', '..');
@@ -181,6 +182,17 @@ let seed = routeUrls({
     process.exit(1);
   }
   console.log(`    Compliance wording: ${changed} changes`);
+}
+
+/* ---------- training curriculum (content/curriculum.mjs) ---------- */
+{
+  const changed = applyCurriculum(seed);
+  const problems = curriculumProblems(seed);
+  if (problems.length) {
+    console.error('Old module counts are still on the site: ' + problems.join(', '));
+    process.exit(1);
+  }
+  console.log(`    Training curriculum: ${MODULES} modules, ${changed} changes`);
 }
 
 /* ---------- photos (content/photos.mjs) ---------- */
