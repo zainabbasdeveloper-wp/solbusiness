@@ -46,6 +46,9 @@ function sol_share_card_key() {
 	if ( 'post' === $post->post_type ) {
 		return 'post--' . $post->post_name;
 	}
+	if ( 'product' === $post->post_type ) {
+		return 'product--' . $post->post_name;
+	}
 	return '';
 }
 

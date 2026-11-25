@@ -158,5 +158,37 @@ for lst in ('pages', 'services', 'posts'):
         title = TITLES.get(path, it['title'])
         card(photo, EYEBROW[lst], title, os.path.join(OUT, key + '.jpg'))
         made.append(key)
+# Live pages that aren't in the seed.
+EXTRA = {
+    'training-courses': ('training-workshop-room.webp', 'SOL Training Academy', 'NDIS Support Coordinator Training Courses'),
+}
+for key, (photo, eyebrow, title) in EXTRA.items():
+    card(photo, eyebrow, title, os.path.join(OUT, key + '.jpg'))
+    made.append(key)
+
+# WooCommerce package products (product page address = WordPress slug of the product name).
+import re
+PRODUCT_PHOTO = {
+    'SOL-NDIS': 'ndis-registration-support-worker.webp', 'SOL-SCT': 'support-coordination-training.webp',
+    'SOL-AUTO': 'software-automation-spreadsheet.webp', 'SOL-FIN': 'bookkeeping-bas-desk.webp', 'SOL-MKT': 'marketing-packages-team.webp',
+}
+def slug(name):
+    return re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-', name.lower())).strip('-')
+for pr in seed.get('products', []):
+    photo = next((v for k, v in PRODUCT_PHOTO.items() if pr['sku'].startswith(k)), DEFAULT_PHOTO)
+    title = re.sub(r'\s*\([^)]*\)\s*$', '', pr['name']).replace(' – ', ': ')
+    key = 'product--' + slug(pr['name'])
+    card(photo, 'SOL Packages', title, os.path.join(OUT, key + '.jpg'))
+    made.append(key)
+card('home-one-stop-partner.webp', 'SOL Payments', 'Make a Service Payment', os.path.join(OUT, 'product--service-payment.jpg'))
+made.append('product--service-payment')
+
 card(DEFAULT_PHOTO, 'Australian-owned consultancy', 'NDIS Registration, Training & Business Consulting', os.path.join(OUT, 'default.jpg'))
-print(len(made) + 1, 'cards')
+made.append('default')
+
+# Remove cards for pages that no longer exist under that address (e.g. renamed services).
+for f in os.listdir(OUT):
+    if f.endswith('.jpg') and f[:-4] not in made:
+        os.remove(os.path.join(OUT, f))
+        print('removed', f)
+print(len(made), 'cards')
